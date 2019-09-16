@@ -28,6 +28,7 @@
 #include <vector>
 #include <sys/stat.h>
 #include "cdrom.h"
+#include "cdrom_sound.h"
 #include "drives.h"
 #include "support.h"
 #include "setup.h"
@@ -37,6 +38,7 @@
 #else
 #include <string.h>
 #endif
+
 
 using namespace std;
 
@@ -745,14 +747,10 @@ void CDROM_Interface_Image::ClearTracks()
 }
 
 void CDROM_Image_Destroy(Section*) {
-#if defined(C_SDL_SOUND)
-	Sound_Quit();
-#endif
+	sound::Quit();
 }
 
 void CDROM_Image_Init(Section* section) {
-#if defined(C_SDL_SOUND)
-	Sound_Init();
-	section->AddDestroyFunction(CDROM_Image_Destroy, false);
-#endif
+	sound::Init();
+ 	section->AddDestroyFunction(CDROM_Image_Destroy, false);
 }
