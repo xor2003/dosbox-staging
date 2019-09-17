@@ -25,26 +25,19 @@
 
 namespace {
 
-	// SDL_sound Sound_DecoderInfo
-	//
-	struct DecoderInfo {
-		const char **extensions; // File extensions, list ends with NULL.
-		const char *description; // Human readable description of decoder.
-		const char *author;      // "Name Of Author <email@emailhost.dom>"
-		const char *url;         // URL specific to this decoder.
-	};
-
 	// function pointer types:
 	//
 	using sdl_sound_init_t = int (*)();
 	using sdl_sound_quit_t = int (*)();
-	using sdl_sound_available_decoders_t = const DecoderInfo ** (*)();
+	using sdl_sound_available_decoders_t = const sound::DecoderInfo ** (*)();
+	using sdl_sound_new_sample_from_file_t = sound::Sample * (*)(const char *, sound::AudioInfo *, uint32_t);
 
 	// SDL_sound function pointers:
 	//
 	sdl_sound_init_t sdl_sound_init = nullptr;
 	sdl_sound_quit_t sdl_sound_quit = nullptr;
 	sdl_sound_available_decoders_t sdl_sound_available_decoders = nullptr;
+	sdl_sound_new_sample_from_file_t sdl_sound_new_sample_from_file = nullptr;
 
 	// template functions:
 	//
@@ -73,6 +66,8 @@ int sound::Init() {
 		return 0;
 	if (!load_symbol(sdl_sound, "Sound_AvailableDecoders", sdl_sound_available_decoders))
 		return 0;
+	if (!load_symbol(sdl_sound, "Sound_NewSampleFromFile", sdl_sound_new_sample_from_file))
+		return 0;
 	return sdl_sound_init();
 }
 
@@ -86,6 +81,17 @@ bool sound::SupportsType(const std::string &type) {
 			if (type == *ext)
 				return true;
 	return false;
+}
+
+sound::Sample * sound::NewSampleFromFile(const char *fname, uint32_t buffer_size) {
+	if (!sdl_sound_new_sample_from_file) {
+		fprintf(stderr, "SDL_sound: Sound_NewSampleFromFile symbol missing\n");
+		return nullptr;
+	}
+	// value of AUDIO_S16 copied from SDL_audio 1.x:
+	constexpr uint16_t AUDIO_S16 = 0x8010; // signed 16-bit samples
+	sound::AudioInfo desired = {AUDIO_S16, 2, 44100};
+	return sdl_sound_new_sample_from_file(fname, &desired, buffer_size);
 }
 
 int sound::Quit() {

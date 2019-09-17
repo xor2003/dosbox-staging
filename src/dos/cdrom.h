@@ -28,6 +28,7 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include "cdrom_sound.h"
 #include "dosbox.h"
 #include "mem.h"
 #include "mixer.h"
@@ -161,7 +162,7 @@ private:
 		int getLength();
 	private:
 		AudioFile();
-		Sound_Sample *sample;
+		sound::Sample *sample;
 		int lastCount;
 		int lastSeek;
 	};

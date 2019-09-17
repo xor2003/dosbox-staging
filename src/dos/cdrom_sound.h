@@ -25,11 +25,48 @@
 
 namespace sound {
 
+enum SampleFlags {
+	SOUND_SAMPLEFLAG_NONE    = 0,       // No special attributes.
+	SOUND_SAMPLEFLAG_CANSEEK = 1,       // Sample can seek to arbitrary points.
+	SOUND_SAMPLEFLAG_EOF     = 1 << 29, // End of input stream.
+	SOUND_SAMPLEFLAG_ERROR   = 1 << 30, // Unrecoverable error.
+	SOUND_SAMPLEFLAG_EAGAIN  = 1 << 31  // Function would block, or temp error.
+};
+
+// SDL_sound Sound_DecoderInfo
+//
+struct DecoderInfo {
+	const char **extensions; // File extensions, list ends with NULL.
+	const char *description; // Human readable description of decoder.
+	const char *author;      // "Name Of Author <email@emailhost.dom>"
+	const char *url;         // URL specific to this decoder.
+};
+
+// SDL_sound Sound_AudioInfo
+//
+struct AudioInfo {
+	uint16_t format;  // Equivalent of SDL_AudioSpec.format.
+	uint8_t channels; // Number of sound channels. 1 == mono, 2 == stereo.
+	uint32_t rate;    // Sample rate; frequency of sample points per second.
+};
+
+// SDL_sound Sound_Sample
+//
+struct Sample {
+	void *opaque;                // Internal use only. Don't touch.
+	const DecoderInfo *decoder;  // Decoder used for this sample.
+	AudioInfo desired;           // Desired audio format for conversion.
+	AudioInfo actual;            // Actual audio format of sample.
+	void *buffer;                // Decoded sound data lands in here.
+	uint32_t buffer_size;        // Current size of (buffer), in bytes (Uint8).
+	SampleFlags flags;           // Flags relating to this sample.
+};
+
 /* Dynamically load SDL_sound library, and initialize it.
  *
  * See SDL_sound documentation for Sound_Init.
  *
- * Returns nonzero on success, zero on error (to be consistent with Sound_Init.
+ * Returns nonzero on success, zero on error (to be consistent with Sound_Init).
  */
 int Init();
 
@@ -41,9 +78,15 @@ bool SupportsType(const std::string &type);
  *
  * See SDL_sound documentation for Sound_Quit.
  *
- * Returns nonzero on success, zero on error (to be consistent with Sound_Quit.
+ * Returns nonzero on success, zero on error (to be consistent with Sound_Quit).
  */
 int Quit();
+
+/* Start decoding a new sound sample from a file on disk.
+ *
+ * See SDL_sound documentation for Sound_NewSampleFromFile.
+ */
+Sample * NewSampleFromFile(const char *fname, uint32_t buffer_size);
 
 }; // namespace sound
 

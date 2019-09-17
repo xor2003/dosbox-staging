@@ -75,30 +75,29 @@ int CDROM_Interface_Image::BinaryFile::getLength()
 #if defined(C_SDL_SOUND)
 CDROM_Interface_Image::AudioFile::AudioFile(const char *filename, bool &error)
 {
-	Sound_AudioInfo desired = {AUDIO_S16, 2, 44100};
-	sample = Sound_NewSampleFromFile(filename, &desired, RAW_SECTOR_SIZE);
+	sample = sound::NewSampleFromFile(filename, RAW_SECTOR_SIZE);
 	lastCount = RAW_SECTOR_SIZE;
 	lastSeek = 0;
-	error = (sample == NULL);
+	error = (sample == nullptr);
 }
 
 CDROM_Interface_Image::AudioFile::~AudioFile()
 {
-	Sound_FreeSample(sample);
+	Sound_FreeSample((Sound_Sample *)sample);
 }
 
 bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)
 {
 	if (lastCount != count) {
-		int success = Sound_SetBufferSize(sample, count);
+		int success = Sound_SetBufferSize((Sound_Sample *)sample, count);
 		if (!success) return false;
 	}
 	if (lastSeek != (seek - count)) {
-		int success = Sound_Seek(sample, (int)((double)(seek) / 176.4f));
+		int success = Sound_Seek((Sound_Sample *)sample, (int)((double)(seek) / 176.4f));
 		if (!success) return false;
 	}
 	lastSeek = seek;
-	int bytes = Sound_Decode(sample);
+	int bytes = Sound_Decode((Sound_Sample *)sample);
 	if (bytes < count) {
 		memcpy(buffer, sample->buffer, bytes);
 		memset(buffer + bytes, 0, count - bytes);
@@ -116,7 +115,7 @@ int CDROM_Interface_Image::AudioFile::getLength()
 	if (!(sample->flags & SOUND_SAMPLEFLAG_CANSEEK)) return -1;
 	
 	while (true) {
-		int success = Sound_Seek(sample, (unsigned int)(shift + time));
+		int success = Sound_Seek((Sound_Sample *)sample, (unsigned int)(shift + time));
 		if (!success) {
 			if (time == 1) return lround((double)shift * 176.4f);
 			shift += time >> 1;
