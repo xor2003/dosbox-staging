@@ -286,9 +286,11 @@ int CMscdex::AddDrive(Bit16u _drive, char* physicalPath, Bit8u& subUnit)
 		}
 #endif
 #if defined (LINUX) || defined(OS2)
+#if 0
 		// Always use IOCTL in Linux or OS/2
 		cdrom[numDrives] = new CDROM_Interface_Ioctl();
 		LOG(LOG_MISC,LOG_NORMAL)("MSCDEX: IOCTL Interface.");
+#endif // 0
 #else
 		// Default case windows and other oses
 		cdrom[numDrives] = new CDROM_Interface_SDL();

@@ -30,6 +30,7 @@
 #include "support.h"
 #include "cdrom.h"
 
+#if 0
 CDROM_Interface_SDL::CDROM_Interface_SDL(void) {
 	driveID		= 0;
 	oldLeadOut	= 0;
@@ -142,6 +143,7 @@ bool CDROM_Interface_SDL::LoadUnloadMedia(bool unload) {
 	bool success = (SDL_CDEject(cd)==0);
 	return success;
 }
+#endif // 0
 
 int CDROM_GetMountType(char* path, int forceCD) {
 // 0 - physical CDROM
@@ -157,6 +159,8 @@ int CDROM_GetMountType(char* path, int forceCD) {
 	upcase(buffer);
 #endif
 
+#if 0
+
 	int num = SDL_CDNumDrives();
 	// If cd drive is forced then check if its in range and return 0
 	if ((forceCD>=0) && (forceCD<num)) {
@@ -169,7 +173,8 @@ int CDROM_GetMountType(char* path, int forceCD) {
 		cdName = SDL_CDName(i);
 		if (strcmp(buffer,cdName)==0) return 0;
 	};
-	
+#endif // 0
+
 	// Detect ISO
 	struct stat file_stat;
 	if ((stat(path, &file_stat) == 0) && (file_stat.st_mode & S_IFREG)) return 1; 
