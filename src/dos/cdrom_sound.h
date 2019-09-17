@@ -100,6 +100,12 @@ void FreeSample(Sample *sample);
  */
 int Seek(Sample *sample, uint32_t ms);
 
+/* Change the current buffer size for a sample.
+ *
+ * See SDL_sound documentation for Sound_SetBufferSize.
+ */
+int SetBufferSize(Sample *sample, uint32_t new_size);
+
 }; // namespace sound
 
 #endif

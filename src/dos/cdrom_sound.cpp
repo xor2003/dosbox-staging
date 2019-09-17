@@ -33,6 +33,7 @@ namespace {
 	using sdl_sound_new_sample_from_file_t = sound::Sample * (*)(const char *, sound::AudioInfo *, uint32_t);
 	using sdl_sound_free_sample_t = void (*)(sound::Sample *);
 	using sdl_sound_seek_t = int (*)(sound::Sample *, uint32_t);
+	using sdl_sound_set_buffer_size_t = int (*)(sound::Sample *, uint32_t);
 
 	// SDL_sound function pointers:
 	//
@@ -42,6 +43,7 @@ namespace {
 	sdl_sound_new_sample_from_file_t sdl_sound_new_sample_from_file = nullptr;
 	sdl_sound_free_sample_t sdl_sound_free_sample = nullptr;
 	sdl_sound_seek_t sdl_sound_seek = nullptr;
+	sdl_sound_set_buffer_size_t sdl_sound_set_buffer_size = nullptr;
 
 	// template functions:
 	//
@@ -75,6 +77,8 @@ int sound::Init() {
 	if (!load_symbol(sdl_sound, "Sound_FreeSample", sdl_sound_free_sample))
 		return 0;
 	if (!load_symbol(sdl_sound, "Sound_Seek", sdl_sound_seek))
+		return 0;
+	if (!load_symbol(sdl_sound, "Sound_SetBufferSize", sdl_sound_set_buffer_size))
 		return 0;
 	return sdl_sound_init();
 }
@@ -124,4 +128,12 @@ int sound::Quit() {
 		return 0;
 	}
 	return sdl_sound_quit();
+}
+
+int sound::SetBufferSize(sound::Sample *sample, uint32_t new_size) {
+	if (!sdl_sound_set_buffer_size) {
+		fprintf(stderr, "SDL_sound: Sound_SetBufferSize symbol missing\n");
+		return 0;
+	}
+	return sdl_sound_set_buffer_size(sample, new_size);
 }

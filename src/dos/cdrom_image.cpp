@@ -89,7 +89,7 @@ CDROM_Interface_Image::AudioFile::~AudioFile()
 bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)
 {
 	if (lastCount != count) {
-		int success = Sound_SetBufferSize((Sound_Sample *)sample, count);
+		int success = sound::SetBufferSize(sample, count);
 		if (!success) return false;
 	}
 	if (lastSeek != (seek - count)) {
