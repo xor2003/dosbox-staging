@@ -23,41 +23,43 @@
 #include <cstdlib>
 #include <dlfcn.h>
 
-
-// function pointer types:
-//
-typedef int (*sdl_sound_init_t)();
-typedef int (*sdl_sound_quit_t)();
-
 namespace {
 
+	// function pointer types:
+	//
+	using sdl_sound_init_t = int (*)();
+	using sdl_sound_quit_t = int (*)();
+
+	// SDL_sound function pointers:
+	//
 	sdl_sound_init_t sdl_sound_init = nullptr;
 	sdl_sound_quit_t sdl_sound_quit = nullptr;
+
+	// template functions:
+	//
+	template <typename F>
+	bool load_symbol(void *lib, const char *name, F &fptr) {
+		fptr = (F)dlsym(lib, name);
+		const char *err = nullptr;
+		if ((err = dlerror()) != nullptr) {
+			fprintf(stderr, "dlerror: %s\n", err);
+			return false;
+		}
+		return true;
+	}
 
 } // anonymous namespace
 
 int sound::Init() {
-	char *err = nullptr;
-	void *sdl_sound_handle = nullptr;
-
-	sdl_sound_handle = dlopen("libSDL_sound-1.0.so.1", RTLD_LAZY);
-	if (!sdl_sound_handle) {
+	void *sdl_sound = dlopen("libSDL_sound-1.0.so.1", RTLD_LAZY);
+	if (!sdl_sound) {
 		fprintf(stderr, "Couldn't load SDL_sound library.\n");
 		return 0;
 	}
-
-	sdl_sound_init = (sdl_sound_init_t)dlsym(sdl_sound_handle, "Sound_Init");
-	if ((err = dlerror()) != nullptr) {
-		fprintf(stderr, "dlerror: %s\n", err);
+	if (!load_symbol(sdl_sound, "Sound_Init", sdl_sound_init))
 		return 0;
-	}
-
-	sdl_sound_quit = (sdl_sound_quit_t)dlsym(sdl_sound_handle, "Sound_Quit");
-	if ((err = dlerror()) != nullptr) {
-		fprintf(stderr, "dlerror: %s\n", err);
+	if (!load_symbol(sdl_sound, "Sound_Quit", sdl_sound_quit))
 		return 0;
-	}
-
 	return sdl_sound_init();
 }
 
