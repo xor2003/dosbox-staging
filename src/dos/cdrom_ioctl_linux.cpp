@@ -29,6 +29,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#if 0
+
 CDROM_Interface_Ioctl::CDROM_Interface_Ioctl(void) : CDROM_Interface_SDL()
 {
 	strcpy(device_name, "");
@@ -93,5 +95,7 @@ bool CDROM_Interface_Ioctl::SetDevice(char* path, int forceCD)
 	
 	return success;
 }
+
+#endif // 0
 
 #endif

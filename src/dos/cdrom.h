@@ -100,6 +100,7 @@ public:
 	virtual void	InitNewMedia		(void) {};
 };	
 
+#if 0
 class CDROM_Interface_SDL : public CDROM_Interface
 {
 public:
@@ -128,6 +129,7 @@ private:
 	int		driveID;
 	Uint32	oldLeadOut;
 };
+#endif
 
 class CDROM_Interface_Fake : public CDROM_Interface
 {
@@ -415,6 +417,7 @@ private:
 
 #if defined (LINUX) || defined(OS2)
 
+#if 0
 class CDROM_Interface_Ioctl : public CDROM_Interface_SDL
 {
 public:
@@ -427,6 +430,7 @@ public:
 private:
 	char	device_name[512];
 };
+#endif //0
 
 #endif /* LINUX */
 
