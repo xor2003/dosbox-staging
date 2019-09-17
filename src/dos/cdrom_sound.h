@@ -94,6 +94,12 @@ Sample * NewSampleFromFile(const char *fname, uint32_t buffer_size);
  */
 void FreeSample(Sample *sample);
 
+/* Seek to a different point in a sample.
+ *
+ * See SDL_sound documentation for Sound_Seek.
+ */
+int Seek(Sample *sample, uint32_t ms);
+
 }; // namespace sound
 
 #endif

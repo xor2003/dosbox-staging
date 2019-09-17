@@ -93,7 +93,7 @@ bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)
 		if (!success) return false;
 	}
 	if (lastSeek != (seek - count)) {
-		int success = Sound_Seek((Sound_Sample *)sample, (int)((double)(seek) / 176.4f));
+		int success = sound::Seek(sample, (int)((double)(seek) / 176.4f));
 		if (!success) return false;
 	}
 	lastSeek = seek;
@@ -115,7 +115,7 @@ int CDROM_Interface_Image::AudioFile::getLength()
 	if (!(sample->flags & SOUND_SAMPLEFLAG_CANSEEK)) return -1;
 	
 	while (true) {
-		int success = Sound_Seek((Sound_Sample *)sample, (unsigned int)(shift + time));
+		int success = sound::Seek(sample, (unsigned int)(shift + time));
 		if (!success) {
 			if (time == 1) return lround((double)shift * 176.4f);
 			shift += time >> 1;

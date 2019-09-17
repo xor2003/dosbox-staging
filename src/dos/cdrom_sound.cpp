@@ -31,7 +31,8 @@ namespace {
 	using sdl_sound_quit_t = int (*)();
 	using sdl_sound_available_decoders_t = const sound::DecoderInfo ** (*)();
 	using sdl_sound_new_sample_from_file_t = sound::Sample * (*)(const char *, sound::AudioInfo *, uint32_t);
-	using sdl_sound_free_sample_t = void (*)(sound::Sample *sample);
+	using sdl_sound_free_sample_t = void (*)(sound::Sample *);
+	using sdl_sound_seek_t = int (*)(sound::Sample *, uint32_t);
 
 	// SDL_sound function pointers:
 	//
@@ -40,6 +41,7 @@ namespace {
 	sdl_sound_available_decoders_t sdl_sound_available_decoders = nullptr;
 	sdl_sound_new_sample_from_file_t sdl_sound_new_sample_from_file = nullptr;
 	sdl_sound_free_sample_t sdl_sound_free_sample = nullptr;
+	sdl_sound_seek_t sdl_sound_seek = nullptr;
 
 	// template functions:
 	//
@@ -71,6 +73,8 @@ int sound::Init() {
 	if (!load_symbol(sdl_sound, "Sound_NewSampleFromFile", sdl_sound_new_sample_from_file))
 		return 0;
 	if (!load_symbol(sdl_sound, "Sound_FreeSample", sdl_sound_free_sample))
+		return 0;
+	if (!load_symbol(sdl_sound, "Sound_Seek", sdl_sound_seek))
 		return 0;
 	return sdl_sound_init();
 }
@@ -104,6 +108,14 @@ void sound::FreeSample(sound::Sample *sample) {
 		return;
 	}
 	sdl_sound_free_sample(sample);
+}
+
+int sound::Seek(sound::Sample *sample, uint32_t ms) {
+	if (!sdl_sound_seek) {
+		fprintf(stderr, "SDL_sound: Sound_Seek symbol missing\n");
+		return 0;
+	}
+	return sdl_sound_seek(sample, ms);
 }
 
 int sound::Quit() {
