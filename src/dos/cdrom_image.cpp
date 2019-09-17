@@ -97,7 +97,7 @@ bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)
 		if (!success) return false;
 	}
 	lastSeek = seek;
-	int bytes = Sound_Decode((Sound_Sample *)sample);
+	int bytes = sound::Decode(sample);
 	if (bytes < count) {
 		memcpy(buffer, sample->buffer, bytes);
 		memset(buffer + bytes, 0, count - bytes);

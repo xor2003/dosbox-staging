@@ -106,6 +106,9 @@ int Seek(Sample *sample, uint32_t ms);
  */
 int SetBufferSize(Sample *sample, uint32_t new_size);
 
+// * \brief Decode more of the sound data in a Sound_Sample.
+uint32_t Decode(Sample *sample);
+
 }; // namespace sound
 
 #endif

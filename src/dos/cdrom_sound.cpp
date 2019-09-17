@@ -34,6 +34,7 @@ namespace {
 	using sdl_sound_free_sample_t = void (*)(sound::Sample *);
 	using sdl_sound_seek_t = int (*)(sound::Sample *, uint32_t);
 	using sdl_sound_set_buffer_size_t = int (*)(sound::Sample *, uint32_t);
+	using sdl_sound_decode_t = uint32_t (*)(sound::Sample *);
 
 	// SDL_sound function pointers:
 	//
@@ -44,6 +45,7 @@ namespace {
 	sdl_sound_free_sample_t sdl_sound_free_sample = nullptr;
 	sdl_sound_seek_t sdl_sound_seek = nullptr;
 	sdl_sound_set_buffer_size_t sdl_sound_set_buffer_size = nullptr;
+	sdl_sound_decode_t sdl_sound_decode = nullptr;
 
 	// template functions:
 	//
@@ -79,6 +81,8 @@ int sound::Init() {
 	if (!load_symbol(sdl_sound, "Sound_Seek", sdl_sound_seek))
 		return 0;
 	if (!load_symbol(sdl_sound, "Sound_SetBufferSize", sdl_sound_set_buffer_size))
+		return 0;
+	if (!load_symbol(sdl_sound, "Sound_Decode", sdl_sound_decode))
 		return 0;
 	return sdl_sound_init();
 }
@@ -136,4 +140,12 @@ int sound::SetBufferSize(sound::Sample *sample, uint32_t new_size) {
 		return 0;
 	}
 	return sdl_sound_set_buffer_size(sample, new_size);
+}
+
+uint32_t sound::Decode(sound::Sample *sample) {
+	if (!sdl_sound_decode) {
+		fprintf(stderr, "SDL_sound: Sound_Decode symbol missing\n");
+		return 0;
+	}
+	return sdl_sound_decode(sample);
 }
