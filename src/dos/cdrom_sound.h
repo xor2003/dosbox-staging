@@ -21,6 +21,8 @@
 #ifndef DOSBOX_CDROM_SOUND_H
 #define DOSBOX_CDROM_SOUND_H
 
+#include <string>
+
 namespace sound {
 
 /* Dynamically load SDL_sound library, and initialize it.
@@ -30,6 +32,10 @@ namespace sound {
  * Returns nonzero on success, zero on error (to be consistent with Sound_Init.
  */
 int Init();
+
+/* Return true iff type (extension) is supported by one of SDL_sound decoders.
+ */
+bool SupportsType(const std::string &type);
 
 /* Shutdown SDL_sound.
  *

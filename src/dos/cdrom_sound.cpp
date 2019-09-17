@@ -25,15 +25,26 @@
 
 namespace {
 
+	// SDL_sound Sound_DecoderInfo
+	//
+	struct DecoderInfo {
+		const char **extensions; // File extensions, list ends with NULL.
+		const char *description; // Human readable description of decoder.
+		const char *author;      // "Name Of Author <email@emailhost.dom>"
+		const char *url;         // URL specific to this decoder.
+	};
+
 	// function pointer types:
 	//
 	using sdl_sound_init_t = int (*)();
 	using sdl_sound_quit_t = int (*)();
+	using sdl_sound_available_decoders_t = const DecoderInfo ** (*)();
 
 	// SDL_sound function pointers:
 	//
 	sdl_sound_init_t sdl_sound_init = nullptr;
 	sdl_sound_quit_t sdl_sound_quit = nullptr;
+	sdl_sound_available_decoders_t sdl_sound_available_decoders = nullptr;
 
 	// template functions:
 	//
@@ -60,7 +71,21 @@ int sound::Init() {
 		return 0;
 	if (!load_symbol(sdl_sound, "Sound_Quit", sdl_sound_quit))
 		return 0;
+	if (!load_symbol(sdl_sound, "Sound_AvailableDecoders", sdl_sound_available_decoders))
+		return 0;
 	return sdl_sound_init();
+}
+
+bool sound::SupportsType(const std::string &type) {
+	if (!sdl_sound_available_decoders) {
+		fprintf(stderr, "SDL_sound: Sound_AvailableDecoders symbol missing\n");
+		return false;
+	}
+	for (const auto **i = sdl_sound_available_decoders(); *i != nullptr; ++i)
+		for (const char **ext = (*i)->extensions; *ext != nullptr; ++ext)
+			if (type == *ext)
+				return true;
+	return false;
 }
 
 int sound::Quit() {
