@@ -83,7 +83,7 @@ CDROM_Interface_Image::AudioFile::AudioFile(const char *filename, bool &error)
 
 CDROM_Interface_Image::AudioFile::~AudioFile()
 {
-	Sound_FreeSample((Sound_Sample *)sample);
+	sound::FreeSample(sample);
 }
 
 bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)

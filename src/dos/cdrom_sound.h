@@ -88,6 +88,12 @@ int Quit();
  */
 Sample * NewSampleFromFile(const char *fname, uint32_t buffer_size);
 
+/* Dispose of a Sample.
+ *
+ * See SDL_sound documentation for Sound_FreeSample.
+ */
+void FreeSample(Sample *sample);
+
 }; // namespace sound
 
 #endif
