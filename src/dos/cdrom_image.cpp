@@ -72,7 +72,6 @@ int CDROM_Interface_Image::BinaryFile::getLength()
 	return length;
 }
 
-#if defined(C_SDL_SOUND)
 CDROM_Interface_Image::AudioFile::AudioFile(const char *filename, bool &error)
 {
 	sample = sound::NewSampleFromFile(filename, RAW_SECTOR_SIZE);
@@ -104,16 +103,17 @@ bool CDROM_Interface_Image::AudioFile::read(Bit8u *buffer, int seek, int count)
 	} else {
 		memcpy(buffer, sample->buffer, count);
 	}
-	
-	return !(sample->flags & SOUND_SAMPLEFLAG_ERROR);
+
+	return !(sample->flags & sound::SOUND_SAMPLEFLAG_ERROR);
 }
 
 int CDROM_Interface_Image::AudioFile::getLength()
 {
 	int time = 1;
 	int shift = 0;
-	if (!(sample->flags & SOUND_SAMPLEFLAG_CANSEEK)) return -1;
-	
+	if (!(sample->flags & sound::SOUND_SAMPLEFLAG_CANSEEK))
+		return -1;
+
 	while (true) {
 		int success = sound::Seek(sample, (unsigned int)(shift + time));
 		if (!success) {
@@ -126,7 +126,6 @@ int CDROM_Interface_Image::AudioFile::getLength()
 		}
 	}
 }
-#endif
 
 // initialize static members
 int CDROM_Interface_Image::refCount = 0;
@@ -530,16 +529,17 @@ bool CDROM_Interface_Image::LoadCueSheet(char *cuefile)
 			bool error = true;
 			if (type == "BINARY") {
 				track.file = new BinaryFile(filename.c_str(), error);
-			}
-#if defined(C_SDL_SOUND)
-			//The next if has been surpassed by the else, but leaving it in as not 
-			//to break existing cue sheets that depend on this.(mine with OGG tracks specifying MP3 as type)
-			else if (type == "WAVE" || type == "AIFF" || type == "MP3") {
+			} else if (type == "WAVE" || type == "AIFF" || type == "MP3" || sound::SupportsType(type)) {
+				// "WAVE" is not correct type name (correct one is "WAV"),
+				// but it might appear in some .cue sheets.
+				//
+				// Also, some .cue sheets incorrectly set file type, it
+				// usually happens for .ogg files specified with "MP3"
+				// type.  This problem appears in some games distributed
+				// through Steam and GOG.
+				//
 				track.file = new AudioFile(filename.c_str(), error);
-			} else if (sound::SupportsType(type)) {
-				track.file = new AudioFile(filename.c_str(), error);
 			}
-#endif
 			if (error) {
 				delete track.file;
 				track.file = NULL;

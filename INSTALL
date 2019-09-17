@@ -32,16 +32,20 @@ SDL_Net (optional)
     For modem/ipx support. Get it from http://www.libsdl.org/projects/SDL_net/
     Licensed under LGPL
 
-SDL_Sound 
-    For compressed audio on diskimages. (optional)
-    This is for cue/bin cdrom images with compressed (mp3/ogg) audio tracks.
-    Get it from http://icculus.org/SDL_sound
-    Licenced under LGPL
-
 ALSA_Headers
     (optional)
     for Alsa support under linux. Part of the linux kernel sources
     Licensed under LGPL
+
+
+Runtime dependencies
+
+SDL_Sound (optional)
+    For compressed audio on diskimages.
+    This is for cue/bin cdrom images with compressed (mp3/ogg) audio tracks.
+    Get it from http://icculus.org/SDL_sound
+    Licenced under LGPL
+
 
 If you want compile from developer sources (SVN) under a unix system, you'll also need 
 automake (>=1.6), autoconf(>=2.50). Should be available at http://www.gnu.org
