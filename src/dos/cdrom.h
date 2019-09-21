@@ -55,7 +55,7 @@ typedef struct SCtrl {
 	Bit8u	vol[4];			// channel volume
 } TCtrl;
 
-inline void frames_to_msf(int frames, int *m, int *s, int *f) {
+inline void frames_to_msf(int frames, unsigned char *m, unsigned char *s, unsigned char *f) {
 	constexpr int cd_fps = 75;
 	*f = frames % cd_fps;
 	frames /= cd_fps;
