@@ -30,27 +30,13 @@ if test x$host = xi386-pc-os2-emx ; then
 fi
 
 dnl Check for SDL
-SDL_VERSION=1.2.0
+SDL_VERSION=2.0.0
 AM_PATH_SDL($SDL_VERSION,
             :,
 	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
 )
 LIBS="$LIBS $SDL_LIBS"
 CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
-
-dnl Check if SDL is 1.2.x (1.3 not supported)
-AC_MSG_CHECKING([SDL version only being 1.2.X])
-AC_COMPILE_IFELSE([AC_LANG_SOURCE([
-#include "SDL.h"
-void blah(){
-#if SDL_MINOR_VERSION != 2
-#error "Only SDL 1.2 supported"
-#endif
-;
-}
-])],AC_MSG_RESULT([yes]),[
- AC_MSG_RESULT([no]) 
- AC_MSG_ERROR([Only libSDL 1.2.X supported])])
 
 dnl Checks for header files.
 
@@ -431,27 +417,27 @@ else
   AC_MSG_RESULT([no])
 fi
 
-AH_TEMPLATE(C_MODEM,[Define to 1 to enable internal modem support, requires SDL_net])
-AH_TEMPLATE(C_IPX,[Define to 1 to enable IPX over Internet networking, requires SDL_net])
-AC_CHECK_HEADER(SDL_net.h,have_sdl_net_h=yes,)
+AH_TEMPLATE(C_MODEM,[Define to 1 to enable internal modem support, requires SDL2_net])
+AH_TEMPLATE(C_IPX,[Define to 1 to enable IPX over Internet networking, requires SDL2_net])
+AC_CHECK_HEADER(SDL2_net.h,have_sdl_net_h=yes,)
 
 if test x$host = xi386-pc-os2-emx ; then
-  AC_MSG_CHECKING(for SDLNet_Init in SDL_net);
+  AC_MSG_CHECKING(for SDLNet_Init in SDL2_net);
   LIBS_BACKUP=$LIBS;
-  LIBS="$LIBS -lSDL_Net";
+  LIBS="$LIBS -lSDL2_Net";
   AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <SDL_Net.h>]],[[
 	SDLNet_Init ();
   ]])], [AC_MSG_RESULT(yes); have_sdl_net_lib=yes], AC_MSG_RESULT(no))
   LIBS=$LIBS_BACKUP
 else
-AC_CHECK_LIB(SDL_net, SDLNet_Init, have_sdl_net_lib=yes, , )
+AC_CHECK_LIB(SDL2_net, SDLNet_Init, have_sdl_net_lib=yes, , )
 fi
 if test x$have_sdl_net_lib = xyes -a x$have_sdl_net_h = xyes ; then
-   LIBS="$LIBS -lSDL_net"
+   LIBS="$LIBS -lSDL2_net"
    AC_DEFINE(C_MODEM,1)
    AC_DEFINE(C_IPX,1)
 else 
-   AC_MSG_WARN([Can't find SDL_net, internal modem and ipx disabled])
+   AC_MSG_WARN([Can't find SDL2_net, internal modem and ipx disabled])
 fi
 
 # Check for required Opus decoding libraries
