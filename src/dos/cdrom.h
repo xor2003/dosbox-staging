@@ -55,6 +55,20 @@ typedef struct SCtrl {
 	Bit8u	vol[4];			// channel volume
 } TCtrl;
 
+inline void frames_to_msf(int frames, int *m, int *s, int *f) {
+	constexpr int cd_fps = 75;
+	*f = frames % cd_fps;
+	frames /= cd_fps;
+	*s = frames % 60;
+	frames /= 60;
+	*m = frames;
+}
+
+inline int msf_to_frames(unsigned char m, unsigned char s, unsigned char f) {
+	constexpr int cd_fps = 75;
+	return m * 60 * cd_fps + s * cd_fps + f;
+}
+
 extern int CDROM_GetMountType(char* path, int force);
 
 class CDROM_Interface
