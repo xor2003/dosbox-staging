@@ -56,7 +56,7 @@ typedef struct SCtrl {
 } TCtrl;
 
 inline void frames_to_msf(int frames, unsigned char *m, unsigned char *s, unsigned char *f) {
-	constexpr int cd_fps = 75;
+	const int cd_fps = 75;
 	*f = frames % cd_fps;
 	frames /= cd_fps;
 	*s = frames % 60;
@@ -65,7 +65,7 @@ inline void frames_to_msf(int frames, unsigned char *m, unsigned char *s, unsign
 }
 
 inline int msf_to_frames(unsigned char m, unsigned char s, unsigned char f) {
-	constexpr int cd_fps = 75;
+	const int cd_fps = 75;
 	return m * 60 * cd_fps + s * cd_fps + f;
 }
 
