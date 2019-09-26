@@ -18,11 +18,14 @@
 
 
 #include "dosbox.h"
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <memory>
 #include <string>
 #include <vector>
+
 #include "programs.h"
 #include "support.h"
 #include "drives.h"
@@ -1226,8 +1229,7 @@ public:
 			return;
 		}
 		DOS_Drive * newdrive = NULL;
-		imageDisk * newImage = NULL;
-		Bit32u imagesize;
+		std::unique_ptr<imageDisk> new_image = nullptr;
 		char drive;
 		std::string label;
 		std::vector<std::string> paths;
@@ -1512,21 +1514,25 @@ public:
 					return;
 				}
 				fseek(newDisk,0L, SEEK_END);
-				imagesize = (ftell(newDisk) / 1024);
-
-				newImage = new imageDisk(newDisk, temp_line.c_str(), imagesize, (imagesize > 2880));
-				if(imagesize>2880) newImage->Set_Geometry(sizes[2],sizes[3],sizes[1],sizes[0]);
+				const Bit32u image_size = (ftell(newDisk) / 1024);
+				const auto name = temp_line.c_str();
+				const auto is_hdd = (image_size > 2880);
+				new_image.reset(new imageDisk(newDisk, name, image_size, is_hdd));
+				if (is_hdd)
+					new_image->Set_Geometry(sizes[2], sizes[3], sizes[1], sizes[0]);
 			}
 		} else {
 			WriteOut(MSG_Get("PROGRAM_IMGMOUNT_TYPE_UNSUPPORTED"),type.c_str());
 			return;
 		}
 
-		if (fstype=="none") {
-			if(imageDiskList[drive-'0'] != NULL) delete imageDiskList[drive-'0'];
-			imageDiskList[drive-'0'] = newImage;
+		if (fstype == "none") {
+			const auto drive_num = drive - '0';
+			if (imageDiskList[drive_num] != nullptr)
+				delete imageDiskList[drive_num];
+			imageDiskList[drive_num] = new_image.release();
 			updateDPT();
-			WriteOut(MSG_Get("PROGRAM_IMGMOUNT_MOUNT_NUMBER"),drive-'0',temp_line.c_str());
+			WriteOut(MSG_Get("PROGRAM_IMGMOUNT_MOUNT_NUMBER"), drive_num, temp_line.c_str());
 		}
 
 		// check if volume label is given. be careful for cdrom
