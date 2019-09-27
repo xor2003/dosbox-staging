@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
+      - run: sudo apt update
       - name: "Install packages"
         run: sudo apt-get install g++-9 libsdl2-dev
       - name: Build
@@ -30,6 +31,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
+      - run: sudo apt update
       - name: "Install packages"
         run: sudo apt-get install g++-8 libsdl2-dev
       - name: Build
@@ -54,6 +56,7 @@ jobs:
         os: [ubuntu-18.04, ubuntu-16.04]
     steps:
       - uses: actions/checkout@v1
+      - run: sudo apt update
       - name: "Install packages"
         run: sudo apt-get install libsdl2-dev
       - name: Build
@@ -72,6 +75,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
+      - run: sudo apt update
       - name: "Install packages"
         run: sudo apt-get install libsdl2-dev
       - name: Build
