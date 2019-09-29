@@ -19,6 +19,9 @@ AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_RANLIB
 
+dnl Require compiler with C++11 support, do not use GNU extensions.
+AX_CXX_COMPILE_STDCXX_11(noext, mandatory)
+
 dnl Some needed libaries for OS2
 dnl perharps join this with the other target depended checks. move them upwards
 if test x$host = xi386-pc-os2-emx ; then

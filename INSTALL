@@ -44,7 +44,7 @@ ALSA_Headers (optional)
     License: LGPLv2+
 
 If you want compile from developer sources (SVN) under a unix system, you'll
-also need automake (>=1.6) and autoconf(>=2.50).
+also need automake (>=1.6), autoconf(>=2.50), and autoconf-archive.
 Should be available at https://www.gnu.org/software/
 
 For building on unix systems.
