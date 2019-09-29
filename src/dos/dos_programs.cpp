@@ -714,7 +714,7 @@ public:
 				FILE *usefile = getFSFile(temp_line.c_str(), &floppysize, &rombytesize);
 				if(usefile != NULL) {
 					if(diskSwap[i] != NULL) delete diskSwap[i];
-					diskSwap[i] = new imageDisk(usefile, (Bit8u *)temp_line.c_str(), floppysize, false);
+					diskSwap[i] = new imageDisk(usefile, temp_line.c_str(), floppysize, false);
 					if (usefile_1==NULL) {
 						usefile_1=usefile;
 						rombytesize_1=rombytesize;
@@ -1514,7 +1514,7 @@ public:
 				fseek(newDisk,0L, SEEK_END);
 				imagesize = (ftell(newDisk) / 1024);
 
-				newImage = new imageDisk(newDisk, (Bit8u *)temp_line.c_str(), imagesize, (imagesize > 2880));
+				newImage = new imageDisk(newDisk, temp_line.c_str(), imagesize, (imagesize > 2880));
 				if(imagesize>2880) newImage->Set_Geometry(sizes[2],sizes[3],sizes[1],sizes[0]);
 			}
 		} else {
