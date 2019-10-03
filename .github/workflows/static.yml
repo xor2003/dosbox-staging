@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: sudo apt update
       - name: "Install packages"
-        run: sudo apt-get install libsdl1.2-dev libsdl-net1.2-dev libopusfile-dev libspeexdsp-dev python3-setuptools autoconf-archive
+        run: sudo apt-get install libsdl2-dev libopusfile-dev libspeexdsp-dev python3-setuptools autoconf-archive
       - name: "Install scan-build (Python version)"
         run: sudo pip3 install scan-build beautifulsoup4 html5lib
       - name: Build
