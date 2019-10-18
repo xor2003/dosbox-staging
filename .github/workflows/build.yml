@@ -77,7 +77,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: brew update
       - name: "Install packages"
-        run: brew install automake libpng sdl2 sdl2_net opusfile speexdsp autoconf-archive
+        run: brew install automake pkg-config libpng sdl2 sdl2_net opusfile speexdsp autoconf-archive
       - name: "Build"
         run: |
           # build steps
