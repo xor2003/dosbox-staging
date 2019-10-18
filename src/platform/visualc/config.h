@@ -13,10 +13,10 @@
 #define C_OPENGL 1
 
 /* Define to 1 to enable internal modem support, requires SDL_net */
-#define C_MODEM 1
+#define C_MODEM 0
 
 /* Define to 1 to enable IPX networking support, requires SDL_net */
-#define C_IPX 1
+#define C_IPX 0
 
 /* Enable some heavy debugging options */
 #define C_HEAVY_DEBUG 0
