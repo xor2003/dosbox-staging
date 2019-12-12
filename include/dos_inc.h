@@ -27,7 +27,8 @@
 #include "mem.h"
 #endif
 
-#include <stddef.h> //for offsetof
+#include <cstddef>
+#include <typeinfo>
 
 #ifdef _MSC_VER
 #pragma pack (1)
@@ -249,9 +250,11 @@ static INLINE Bit16u DOS_PackDate(Bit16u year,Bit16u mon,Bit16u day) {
 
 
 /* Remains some classes used to access certain things */
-#define sOffset(s,m) ((char*)&(((s*)NULL)->m)-(char*)NULL)
-#define sGet(s,m) GetIt(sizeof(((s *)&pt)->m),(PhysPt)sOffset(s,m))
-#define sSave(s,m,val) SaveIt(sizeof(((s *)&pt)->m),(PhysPt)sOffset(s,m),val)
+
+#define sGet(s, m)       GetIt(sizeof(s::m), (PhysPt)offsetof(s, m))
+#define sGetA(s, a, i)   GetIt(sizeof(s::a[0]), (PhysPt)(offsetof(s, a) + i * sizeof(s::a[0])))
+#define sSave(s, m, val) SaveIt(sizeof(s::m), (PhysPt)offsetof(s, m), val)
+
 
 class MemStruct {
 public:
@@ -564,9 +567,9 @@ public:
 	void SetType(Bit8u _type) { sSave(sMCB,type,_type);}
 	void SetSize(Bit16u _size) { sSave(sMCB,size,_size);}
 	void SetPSPSeg(Bit16u _pspseg) { sSave(sMCB,psp_segment,_pspseg);}
-	Bit8u GetType(void) { return (Bit8u)sGet(sMCB,type);}
-	Bit16u GetSize(void) { return (Bit16u)sGet(sMCB,size);}
-	Bit16u GetPSPSeg(void) { return (Bit16u)sGet(sMCB,psp_segment);}
+	Bit8u GetType(void)    { static_assert(std::is_standard_layout<sMCB>::value, "sMCB"); return (Bit8u)sGet(sMCB,type); }
+	Bit16u GetSize(void)   { static_assert(std::is_standard_layout<sMCB>::value, "sMCB"); return (Bit16u)sGet(sMCB,size); }
+	Bit16u GetPSPSeg(void) { static_assert(std::is_standard_layout<sMCB>::value, "sMCB"); return (Bit16u)sGet(sMCB,psp_segment); }
 private:
 	#ifdef _MSC_VER
 	#pragma pack (1)
