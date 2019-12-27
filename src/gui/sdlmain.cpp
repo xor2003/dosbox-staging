@@ -301,12 +301,15 @@ static void PauseDOSBox(bool pressed) {
 				}
 #if defined (MACOSX)
 				const auto ksym = event.key.keysym;
-				if (ksym.sym == SDLK_q && (ksym.mod | KMOD_GUI)) {
+				if (ksym.sym == SDLK_q && (ksym.mod & KMOD_GUI)) {
 					/* On macs, all aps exit when pressing cmd-q */
 					KillSwitch(true);
 					break;
 				}
 #endif
+			}
+			case SDL_DROPFILE: {
+				break;
 			}
 		}
 	}
@@ -1683,6 +1686,12 @@ void GFX_Events() {
 				break;
 			}
 #endif
+		case SDL_DROPFILE: {
+			char *f = event.drop.file;
+			fprintf(stderr, "> %s\n", f);
+			SDL_free(f);
+			break;
+		}
 		default:
 			void MAPPER_CheckEvent(SDL_Event * event);
 			MAPPER_CheckEvent(&event);
