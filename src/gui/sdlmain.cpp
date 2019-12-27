@@ -280,12 +280,12 @@ static void PauseDOSBox(bool pressed) {
 	while (SDL_PollEvent(&event)) {
 		// flush event queue.
 	}
-	/* NOTE: This is one of the few places where we use SDL key codes
-	with SDL 2.0, rather than scan codes. Is that the correct behavior? */
 	while (paused) {
 		SDL_WaitEvent(&event);    // since we're not polling, cpu usage drops to 0.
 		switch (event.type) {
-			case SDL_QUIT: KillSwitch(true); break;
+			case SDL_QUIT:
+				KillSwitch(true);
+				break;
 			case SDL_WINDOWEVENT:
 				if (event.window.event == SDL_WINDOWEVENT_RESTORED) {
 					// We may need to re-create a texture and more
@@ -293,21 +293,21 @@ static void PauseDOSBox(bool pressed) {
 				}
 				break;
 			case SDL_KEYDOWN:   // Must use Pause/Break Key to resume.
-			case SDL_KEYUP:
-			if(event.key.keysym.sym == SDLK_PAUSE) {
-
-				paused = false;
-				GFX_SetTitle(-1,-1,false);
-				break;
-			}
+			case SDL_KEYUP: {
+				if (event.key.keysym.sym == SDLK_PAUSE) {
+					paused = false;
+					GFX_SetTitle(-1,-1,false);
+					break;
+				}
 #if defined (MACOSX)
-			if (event.key.keysym.sym == SDLK_q &&
-			   (event.key.keysym.mod == KMOD_RGUI || event.key.keysym.mod == KMOD_LGUI)) {
-				/* On macs, all aps exit when pressing cmd-q */
-				KillSwitch(true);
-				break;
-			}
+				const auto ksym = event.key.keysym;
+				if (ksym.sym == SDLK_q && (ksym.mod | KMOD_GUI)) {
+					/* On macs, all aps exit when pressing cmd-q */
+					KillSwitch(true);
+					break;
+				}
 #endif
+			}
 		}
 	}
 }
