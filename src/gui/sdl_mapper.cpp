@@ -2472,7 +2472,8 @@ void MAPPER_Run(bool pressed) {
 	PIC_AddEvent(MAPPER_RunEvent,0);	//In case mapper deletes the key object that ran it
 }
 
-SDL_Surface* SDL_SetVideoMode_Wrap(int width,int height,int bpp,Bit32u flags);
+// TODO remove
+// SDL_Surface* SDL_SetVideoMode_Wrap(int width,int height,int bpp,Bit32u flags);
 
 void MAPPER_RunInternal() {
 	int cursor = SDL_ShowCursor(SDL_QUERY);

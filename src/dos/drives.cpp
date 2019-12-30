@@ -192,6 +192,11 @@ void DriveManager::CycleAllDisks(void) {
 }
 
 int DriveManager::UnmountDrive(int drive) {
+	if (drive < 0) // TODO: implement proper range check…
+		return 3; // TODO: 0-ok 1-virtual drive 2-"multiple cdroms?!"
+	if (!Drives[drive])
+		return 4;
+
 	int result = 0;
 	// unmanaged drive
 	if (driveInfos[drive].disks.size() == 0) {

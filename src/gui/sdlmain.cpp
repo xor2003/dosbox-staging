@@ -39,19 +39,21 @@
 #include <SDL_opengl.h>
 #endif
 
+#include "control.h"
+#include "cpu.h"
 #include "cross.h"
-#include "video.h"
+#include "debug.h"
+#include "keyboard.h"
+#include "mapper.h"
 #include "mouse.h"
 #include "pic.h"
-#include "timer.h"
 #include "setup.h"
 #include "support.h"
-#include "debug.h"
-#include "mapper.h"
+#include "timer.h"
 #include "vga.h"
-#include "keyboard.h"
-#include "cpu.h"
-#include "control.h"
+#include "video.h"
+
+#include "../dos/drives.h"
 
 #define MAPPERFILE "mapper-sdl2-" VERSION ".map"
 //#define DISABLE_JOYSTICK
@@ -1538,6 +1540,18 @@ void GFX_HandleVideoResize(int width, int height)
 	sdl.resizing_window = false;
 }
 
+static void InsertFloppy(const char *path)
+{
+	constexpr size_t drive_a = 0;
+	const int err = DriveManager::UnmountDrive(drive_a);
+	if (err == 0) {
+		Drives[drive_a] = nullptr;
+		LOG_MSG("Unmount: ok");
+	} else {
+		LOG_MSG("Unmount: err %d", err);
+	}
+}
+
 void GFX_Events() {
 	//Don't poll too often. This can be heavy on the OS, especially Macs.
 	//In idle mode 3000-4000 polls are done per second without this check.
@@ -1689,6 +1703,7 @@ void GFX_Events() {
 		case SDL_DROPFILE: {
 			char *f = event.drop.file;
 			fprintf(stderr, "> %s\n", f);
+			InsertFloppy(f);
 			SDL_free(f);
 			break;
 		}
