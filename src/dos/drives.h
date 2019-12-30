@@ -23,9 +23,11 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include <sys/types.h>
-#include "dos_system.h"
-#include "shell.h" /* for DOS_Shell */
+//#include <sys/types.h>
+//#include "dos_system.h" //?
+
+#include "dos_inc.h"
+/* #include "shell.h" */ /* for DOS_Shell */
 
 bool WildFileCmp(const char * file, const char * wild);
 void Set_Label(char const * const input, char * const output, bool cdrom);
@@ -76,7 +78,7 @@ public:
 protected:
 	char basedir[CROSS_LEN];
 private:
-	friend void DOS_Shell::CMD_SUBST(char* args);
+	//friend void DOS_Shell::CMD_SUBST(char* args);
 protected:
 	struct {
 		char srch_dir[CROSS_LEN];
@@ -197,7 +199,7 @@ private:
 	bool addDirectoryEntry(Bit32u dirClustNumber, direntry useEntry);
 	void zeroOutCluster(Bit32u clustNumber);
 	bool getEntryName(char *fullname, char *entname);
-	friend void DOS_Shell::CMD_SUBST(char* args); 	
+	//friend void DOS_Shell::CMD_SUBST(char* args); 	
 	struct {
 		char srch_dir[CROSS_LEN];
 	} srchInfo[MAX_OPENDIRS];

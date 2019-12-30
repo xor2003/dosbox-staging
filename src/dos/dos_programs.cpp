@@ -39,6 +39,7 @@
 #include "inout.h"
 #include "dma.h"
 
+#include "shell.h"
 
 
 #if defined(WIN32)
@@ -1298,6 +1299,7 @@ public:
 
 		if(fstype=="fat") {
 			if (imgsizedetect) {
+				fprintf(stderr, ">> fat -> imgsizedetect\n");
 				FILE * diskfile = fopen_wrap(temp_line.c_str(), "rb+");
 				if (!diskfile) {
 					WriteOut(MSG_Get("PROGRAM_IMGMOUNT_INVALID_IMAGE"));
