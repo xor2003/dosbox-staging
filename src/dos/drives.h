@@ -200,8 +200,9 @@ private:
 	void zeroOutCluster(Bit32u clustNumber);
 	bool getEntryName(char *fullname, char *entname);
 	//friend void DOS_Shell::CMD_SUBST(char* args); 	
+#if 0
 	struct {
-		char srch_dir[CROSS_LEN];
+	 	char srch_dir[CROSS_LEN];
 	} srchInfo[MAX_OPENDIRS];
 
 	struct {
@@ -211,6 +212,7 @@ private:
 		Bit16u free_clusters;
 		Bit8u mediaid;
 	} allocation;
+#endif
 	
 	bootstrap bootbuffer;
 	bool absolute;
@@ -221,7 +223,7 @@ private:
 	Bit32u firstRootDirSect;
 
 	Bit32u cwdDirCluster;
-	Bit32u dirPosition; /* Position in directory search */
+	// Bit32u dirPosition; /* Position in directory search */
 
 	Bit8u fatSectBuffer[1024];
 	Bit32u curFatSect;
