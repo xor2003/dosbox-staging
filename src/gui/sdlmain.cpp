@@ -1550,6 +1550,32 @@ static void InsertFloppy(const char *path)
 	} else {
 		LOG_MSG("Unmount: err %d", err);
 	}
+
+	FILE * diskfile = fopen_wrap(path, "rb");
+	fseek(diskfile, 0L, SEEK_END); // use fseeko (!)
+	long fcsize = ftell(diskfile) / 512;
+
+	uint32_t sectors = fcsize / (16*63);
+	// hmm, fatDrive expects 32-bit :/
+	// it's a problem if fseek shows big size
+	
+	fclose(diskfile);
+
+	const uint32_t bytes_sector = 512;
+	const uint32_t cyl_sector = 63;
+	const uint32_t heads_cyl = 16;
+	const uint32_t cylinders = sectors; // ??
+	const uint32_t start_sec = 0;
+	DOS_Drive *new_drive = new fatDrive(path,
+	                                    bytes_sector,
+	                                    cyl_sector,
+	                                    heads_cyl,
+	                                    cylinders,
+	                                    start_sec);
+	// if created successfully…
+	
+	DriveManager::AppendDisk(drive_a, new_drive);
+	DriveManager::InitializeDrive(drive_a);
 }
 
 void GFX_Events() {
