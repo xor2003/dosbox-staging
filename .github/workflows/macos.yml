@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install C++ compiler and libraries
-        run:  brew install $(./scripts/list-build-dependencies.sh -m brew -c clang)
+        run:  brew install librsvg $(./scripts/list-build-dependencies.sh -m brew -c clang)
       - name: Log environment
         run:  ./scripts/log-env.sh
       - name: Inject version string
