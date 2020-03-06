@@ -13,7 +13,7 @@ version=$(git describe --abbrev=5)
 dst=dist/dosbox-staging.app/Contents/
 
 # Generate icon
-make -C contrib/icons/ dosbox-staging.icn
+make -C contrib/icons/ dosbox-staging.icns
 
 # Prepare content
 install -d "$dst/MacOS/"
@@ -40,9 +40,15 @@ sed -i -e "s|%GIT_COMMIT%|$GITHUB_SHA|"               "$dst/SharedSupport/README
 sed -i -e "s|%GIT_BRANCH%|${GITHUB_REF#refs/heads/}|" "$dst/SharedSupport/README"
 sed -i -e "s|%GITHUB_REPO%|$GITHUB_REPOSITORY|"       "$dst/SharedSupport/README"
 
+cp contrib/macos/ds_store/.DS_Store dist/
 ln -s /Applications dist/
 
-hdiutil create \
-    -volname "dosbox-staging" \
-    -srcfolder dist \
-    -ov -format UDZO "dosbox-staging $version.dmg"
+#hdiutil create \
+#    -volname "dosbox-staging" \
+#    -srcfolder dist \
+#    -keep-mac-specific \
+#    -ov -format UDZO "dosbox-staging $version.dmg"
+
+hdiutil makehybrid -hfs -hfs-volume-name "dosbox-staging" -keep-mac-specific -hfs-openfolder -o TMP.dmg dist
+hdiutil convert -format UDZO TMP.dmg -o "dosbox-staging-$version.dmg"
+hdiutil makehybrid -o TMP.dmg -hfs -hfs-volume-name "d-s" -keep-mac-specific dist
