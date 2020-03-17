@@ -2353,9 +2353,10 @@ void Config_Add_SDL() {
 	Pstring->Set_help("What resolution to use for fullscreen: 'original', 'desktop' or\n"
 	                  "a fixed size (e.g. 1024x768).");
 
-	Pstring = sdl_sec->Add_string("windowresolution",Property::Changeable::Always,"original");
-	Pstring->Set_help("Scale the window to this size IF the output device supports hardware scaling.\n"
-	                  "(output=surface does not!)");
+	Pstring = sdl_sec->Add_string("windowresolution", Property::Changeable::Always, "original");
+	Pstring->Set_help("Scale the window to this size. Value 'original' will resize\n"
+	                  "window to the resolution picked by the emulated program.\n"
+	                  "Not supported when 'output' is set to 'surface'.");
 
 	const char *outputs[] = {
 		"surface",
