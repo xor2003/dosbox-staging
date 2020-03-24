@@ -222,14 +222,21 @@ string Value::ToString() const {
 	return oss.str();
 }
 
-bool Property::CheckValue(Value const& in, bool warn){
-	if (suggested_values.empty()) return true;
-	for(const_iter it = suggested_values.begin();it != suggested_values.end();++it) {
-		if ( (*it) == in) { //Match!
+bool Property::CheckValue(const Value &in, bool warn) const
+{
+	if (suggested_values.empty())
+		return true;
+	for (const auto &v : suggested_values) {
+		if (v == in)
 			return true;
-		}
 	}
-	if (warn) LOG_MSG("\"%s\" is not a valid value for variable: %s.\nIt might now be reset to the default value: %s",in.ToString().c_str(),propname.c_str(),default_value.ToString().c_str());
+	if (warn) {
+		LOG_MSG("\"%s\" is not a valid value for variable: %s.\n"
+		        "It might now be reset to the default value: %s",
+		        in.ToString().c_str(),
+		        propname.c_str(),
+		        default_value.ToString().c_str());
+	}
 	return false;
 }
 
@@ -279,9 +286,11 @@ bool Prop_int::SetVal(Value const& in, bool forced, bool warn) {
 		return true;
 		}
 }
-bool Prop_int::CheckValue(Value const& in, bool warn) {
-//	if(!suggested_values.empty() && Property::CheckValue(in,warn)) return true;
-	if(!suggested_values.empty()) return Property::CheckValue(in,warn);
+
+bool Prop_int::CheckValue(const Value &in, bool warn) const
+{
+	if (!suggested_values.empty())
+		return Property::CheckValue(in,warn);
 	LOG_MSG("still used ?");
 	//No >= and <= in Value type and == is ambigious
 	int mi = min;
@@ -319,20 +328,27 @@ bool Prop_string::SetValue(std::string const& input) {
 	Value val(temp,Value::V_STRING);
 	return SetVal(val,false,true);
 }
-bool Prop_string::CheckValue(Value const& in, bool warn) {
-	if (suggested_values.empty()) return true;
-	for(const_iter it = suggested_values.begin();it != suggested_values.end();++it) {
-		if ( (*it) == in) { //Match!
+
+bool Prop_string::CheckValue(const Value &in, bool warn) const
+{
+	if (suggested_values.empty())
+		return true;
+	for (const auto &v : suggested_values) {
+		if (in == v)
 			return true;
-		}
-		if ((*it).ToString() == "%u") {
+		if (v.ToString() == "%u") {
 			unsigned int value;
-			if(sscanf(in.ToString().c_str(),"%u",&value) == 1) {
+			if (sscanf(in.ToString().c_str(), "%u", &value) == 1)
 				return true;
-			}
 		}
 	}
-	if (warn) LOG_MSG("\"%s\" is not a valid value for variable: %s.\nIt might now be reset to the default value: %s",in.ToString().c_str(),propname.c_str(),default_value.ToString().c_str());
+	if (warn) {
+		LOG_MSG("\"%s\" is not a valid value for variable: %s.\n"
+		        "It might now be reset to the default value: %s",
+		        in.ToString().c_str(),
+		        propname.c_str(),
+		        default_value.ToString().c_str());
+	}
 	return false;
 }
 

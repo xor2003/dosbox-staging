@@ -139,7 +139,7 @@ public:
 	//CheckValue returns true, if value is in suggested_values;
 	//Type specific properties are encouraged to override this and check for type
 	//specific features.
-	virtual bool CheckValue(Value const& in, bool warn);
+	virtual bool CheckValue(const Value &in, bool warn) const;
 
 	Changeable::Value GetChange() const { return change; }
 	bool IsDeprecated() const { return (change == Changeable::Value::Deprecated); }
@@ -159,7 +159,6 @@ protected:
 	}
 	Value value;
 	std::vector<Value> suggested_values;
-	typedef std::vector<Value>::const_iterator const_iter;
 	Value default_value;
 	const Changeable::Value change;
 };
@@ -182,7 +181,7 @@ public:
 	void SetMinMax(Value const& _min,Value const& _max) {this->min = _min; this->max=_max;}
 	bool SetValue(std::string const& in);
 	~Prop_int(){ }
-	virtual bool CheckValue(Value const& in, bool warn);
+	bool CheckValue(const Value &in, bool warn) const override;
 	// Override SetVal, so it takes min,max in account when there are no suggested values
 	virtual bool SetVal(Value const& in, bool forced,bool warn=true);
 
@@ -217,9 +216,10 @@ public:
 		default_value = value = _value;
 	}
 	bool SetValue(std::string const& in);
-	virtual bool CheckValue(Value const& in, bool warn);
+	bool CheckValue(const Value &in, bool warn) const override;
 	~Prop_string(){ }
 };
+
 class Prop_path:public Prop_string{
 public:
 	std::string realpath;
