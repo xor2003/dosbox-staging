@@ -200,7 +200,7 @@ bool Overlay_Drive::TestDir(char * dir) {
 
 class OverlayFile: public localFile {
 public:
-	OverlayFile(const char* name, FILE * handle):localFile(name,handle){
+	OverlayFile(const char* name, FILE * handle, const char *basedir):localFile(name,handle,basedir){
 		overlay_active = false;
 		if (logoverlay) LOG_MSG("constructing OverlayFile: %s",name);
 	}
@@ -294,7 +294,7 @@ static OverlayFile* ccc(DOS_File* file) {
 	localFile* l = dynamic_cast<localFile*>(file);
 	if (!l) E_Exit("overlay input file is not a localFile");
 	//Create an overlayFile
-	OverlayFile* ret = new OverlayFile(l->GetName(),l->fhandle);
+	OverlayFile* ret = new OverlayFile(l->GetName(),l->fhandle,l->GetBaseDir());
 	ret->flags = l->flags;
 	ret->refCtr = l->refCtr;
 	delete l;
@@ -427,7 +427,7 @@ bool Overlay_Drive::FileOpen(DOS_File * * file,char * name,Bit32u flags) {
 	bool fileopened = false;
 	if (hand) {
 		if (logoverlay) LOG_MSG("overlay file opened %s",newname);
-		*file=new localFile(name,hand);
+		*file=new localFile(name,hand,overlaydir);
 		(*file)->flags=flags;
 		fileopened = true;
 	} else {
@@ -465,7 +465,7 @@ bool Overlay_Drive::FileCreate(DOS_File * * file,char * name,Bit16u /*attributes
 		if (logoverlay) LOG_MSG("File creation in overlay system failed %s",name);
 		return false;
 	}
-	*file = new localFile(name,f);
+	*file = new localFile(name,f,overlaydir);
 	(*file)->flags = OPEN_READWRITE;
 	OverlayFile* of = ccc(*file);
 	of->overlay_active = true;
@@ -473,7 +473,7 @@ bool Overlay_Drive::FileCreate(DOS_File * * file,char * name,Bit16u /*attributes
 	*file = of;
 	//create fake name for the drive cache
 	char fakename[CROSS_LEN];
-	strcpy(fakename,basedir);
+	strcpy(fakename,overlaydir);
 	strcat(fakename,name);
 	CROSS_FILENAME(fakename);
 	dirCache.AddEntry(fakename,true); //add it.

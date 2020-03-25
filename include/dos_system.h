@@ -55,7 +55,18 @@ class DOS_DTA;
 
 class DOS_File {
 public:
-	DOS_File():flags(0),time(0),date(0),attr(0),refCtr(0),open(false),name(0),hdrive(0xff) { };
+	DOS_File() :
+		flags(0),
+		time(0),
+		date(0),
+		attr(0),
+		refCtr(0),
+		open(false),
+		name(0),
+		newtime(false),
+		hdrive(0xff)
+	{
+	};
 	DOS_File(const DOS_File& orig);
 	DOS_File & operator= (const DOS_File & orig);
 	virtual	~DOS_File(){if(name) delete [] name;};
@@ -81,6 +92,7 @@ public:
 	Bits refCtr;
 	bool open;
 	char* name;
+	bool newtime;
 /* Some Device Specific Stuff */
 private:
 	Bit8u hdrive;
@@ -115,7 +127,7 @@ private:
 
 class localFile : public DOS_File {
 public:
-	localFile                   (const char* name, FILE * handle);
+	localFile                   (const char* name, FILE * handle, const char * _basedir);
 	localFile                   (const localFile&) = delete; // prevent copying
 	localFile& operator=        (const localFile&) = delete; // prevent assignment
 	bool Read                   (Bit8u * data,Bit16u * size);
@@ -126,8 +138,10 @@ public:
 	bool UpdateDateTimeFromHost (void);
 	void Flush                  (void);
 	void SetFlagReadOnlyMedium  () { read_only_medium = true; }
+	const char *GetBaseDir      () { return basedir; }
 	FILE * fhandle; //todo handle this properly
 private:
+	const char *basedir;
 	bool read_only_medium;
 	enum { NONE,READ,WRITE } last_action;
 };

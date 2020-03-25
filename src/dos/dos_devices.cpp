@@ -100,6 +100,7 @@ DOS_File::DOS_File(const DOS_File& orig) {
 	attr=orig.attr;
 	refCtr=orig.refCtr;
 	open=orig.open;
+	newtime=orig.newtime;
 	hdrive=orig.hdrive;
 	name=0;
 	if(orig.name) {
