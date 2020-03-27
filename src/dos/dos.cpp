@@ -879,7 +879,7 @@ static Bitu DOS_21Handler(void) {
 				CALLBACK_SCF(true);
 			}
 		} else if (reg_al==0x01) {
-			if (DOS_SetFileDate(reg_bx,reg_cx,reg_dx)) {
+			if (DOS_SetFileDate(reg_bx, reg_cx, reg_dx)) {
 				CALLBACK_SCF(false);
 			} else {
 				CALLBACK_SCF(true);

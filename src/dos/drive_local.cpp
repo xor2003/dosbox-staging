@@ -569,13 +569,13 @@ bool localFile::Close() {
 
 	if (newtime) {
 		// backport from DOS_PackDate() and DOS_PackTime()
-		struct tm tim = { 0 };
-		tim.tm_sec  = (time&0x1f)*2;
-		tim.tm_min  = (time>>5)&0x3f;
-		tim.tm_hour = (time>>11)&0x1f;
-		tim.tm_mday = date&0x1f;
-		tim.tm_mon  = ((date>>5)&0x0f)-1;
-		tim.tm_year = (date>>9)+1980-1900;
+		tm tim = { 0 };
+		tim.tm_sec = (time & 0x1f) * 2;
+		tim.tm_min = (time >> 5) & 0x3f;
+		tim.tm_hour = (time >> 11) & 0x1f;
+		tim.tm_mday = date & 0x1f;
+		tim.tm_mon = ((date >> 5) & 0x0f) - 1;
+		tim.tm_year = (date >> 9) + 1980 - 1900;
 		//  have the C run-time library code compute whether standard time or daylight saving time is in effect.
 		tim.tm_isdst = -1;
 		// serialize time
