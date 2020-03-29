@@ -316,6 +316,7 @@ struct SDL_Block {
 		MouseControlType control_choice = Seamless;
 		bool middle_will_release = true;
 		bool has_focus = false;
+		bool raw_input = false;
 	} mouse;
 	int  ppscale_x, ppscale_y; /* x and y scales for pixel-perfect     */
 	bool double_h, double_w;   /* double-height and double-width flags */
@@ -1308,6 +1309,7 @@ void GFX_ToggleMouseCapture(void) {
 	        "SDL: Mouse capture is invalid when NoMouse is configured [Logic Bug]");
 
 	mouse_is_captured = mouse_is_captured ? SDL_FALSE : SDL_TRUE;
+	SDL_SetHint(SDL_HINT_MOUSE_RELATIVE_MODE_WARP, sdl.mouse.raw_input ? "0" : "1");
 	if (SDL_SetRelativeMouseMode(mouse_is_captured) != 0) {
 		SDL_ShowCursor(SDL_ENABLE);
 		E_Exit("SDL: failed to %s relative-mode [SDL Bug]",
@@ -2065,6 +2067,9 @@ static void GUI_StartUp(Section * sec) {
 	sdl.mouse.xsensitivity = p3->GetSection()->Get_int("xsens");
 	sdl.mouse.ysensitivity = p3->GetSection()->Get_int("ysens");
 
+	// Apply raw mouse input setting
+	sdl.mouse.raw_input = section->Get_bool("rawmouseinput");
+
 	/* Get some Event handlers */
 	MAPPER_AddHandler(KillSwitch,MK_f9,MMOD1,"shutdown","ShutDown");
 	MAPPER_AddHandler(SwitchFullScreen,MK_return,MMOD2,"fullscr","Fullscreen");
@@ -2493,6 +2498,9 @@ void Config_Add_SDL() {
 	Pint->SetMinMax(-1000,1000);
 	Pint = Pmulti->GetSection()->Add_int("ysens",Property::Changeable::Always,100);
 	Pint->SetMinMax(-1000,1000);
+
+	Pbool = sdl_sec->Add_bool("rawmouseinput", always, false);
+	Pbool->Set_help("Mouse is routed through OS API by default. Enable this to poll mouse directly which bypasses OS mouse settings.");
 
 	Pbool = sdl_sec->Add_bool("waitonerror",Property::Changeable::Always, true);
 	Pbool->Set_help("Wait before closing the console if dosbox has an error.");
