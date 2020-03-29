@@ -32,7 +32,7 @@ m4_pattern_forbid([^AH_])
 m4_pattern_forbid([^AX_])
 
 dnl Check for SDL
-SDL_VERSION=2.0.0
+SDL_VERSION=2.0.2
 AM_PATH_SDL($SDL_VERSION,
             :,
 	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])

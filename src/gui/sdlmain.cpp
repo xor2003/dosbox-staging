@@ -2787,6 +2787,7 @@ int main(int argc, char* argv[]) {
 	 * with this variable they will work correctly. I've only tested the 1.2.14 behaviour against the windows version
 	 * of libsdl
 	 */
+	static_assert(SDL_VERSION_ATLEAST(2, 0, 2), "SDL version below minimum.");
 	putenv(const_cast<char*>("SDL_DISABLE_LOCK_KEYS=1"));
 	if (SDL_Init_Wrapper() < 0)
 		E_Exit("Can't init SDL %s", SDL_GetError());
