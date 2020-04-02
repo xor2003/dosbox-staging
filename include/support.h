@@ -62,34 +62,64 @@ inline constexpr T1 ceil_sdivide(const T1 x, const T2 y) noexcept {
 // Use (void) to silent unused warnings.
 // https://en.cppreference.com/w/cpp/error/assert
 
-/// Copy a string into C array
-///
-/// This function copies string pointed by src to fixed-size buffer dst.
-/// At most N bytes from src are copied, where N is size of dst.
-/// If exactly N bytes are copied, then terminating null byte is put
-/// into buffer, thus buffer overrun is prevented.
-///
-/// Function returns pointer to buffer to be compatible with std::strcpy.
-///
-/// Usage:
-///
-///     char buffer[2];
-///     safe_strcpy(buffer, "abc");
-///     // buffer is filled with "a"
+/*
+Copy a string into C array
 
-template<size_t N>
-char * safe_strcpy(char (& dst)[N], const char * src) noexcept {
+ This function copies string pointed by src to fixed-size buffer dst.
+ At most N bytes from src are copied, where N is size of dst.
+ If exactly N bytes are copied, then terminating null byte is put
+ into buffer, thus buffer overrun is prevented.
+
+ Function returns pointer to buffer to be compatible with std::strcpy.
+
+Usage:
+
+        char buffer[2];
+        safe_strcpy(buffer, "abc");
+        buffer is filled with "a"
+*/
+// doc for nonnull
+// https://releases.llvm.org/6.0.0/tools/clang/docs/AttributeReference.html#id258
+template <size_t N>
+char *safe_strcpy(char (&dst)[N], const char *src) noexcept // __attribute__((nonnull))
+{
+#if defined(_MSC_VER)
+	// TODO, after reading cppreference and MSDN, I am not
+	// freaking sure if this is still correct or not
+	const errno_t err = strncpy_s(dst, N, src, _TRUNCATE);
+	assert(!err);
+#else
 	snprintf(dst, N, "%s", src);
-	return & dst[0];
+#endif
+	return &dst[0];
 }
 
+// WIP replacement for old safe_strncpy(a, b, n) macro
+// use safe_strcpy(a, b) with statically-known buffer size instead.
+//
+INLINE void safe_strncpy(char *dst,
+                         const char *src,
+                         size_t count) noexcept // [[gnu::nonnull]] //
+                                                // __attribute__((nonnull))
+                                                // "attribute gnu::nonnull" is
+                                                // not recognized
+{
+#if defined(_MSC_VER)
+	const errno_t err = strncpy_s(dst, count, src, count - 1);
+	assert(!err);
+#else
+	// This is exactly behaviour of old macro:
+	strncpy(dst, src, count - 1);
+	dst[count - 1] = '\0';
+#endif
+}
+
+// TODO update this function as well
 template<size_t N>
 char * safe_strcat(char (& dst)[N], const char * src) noexcept {
 	strncat(dst, src, N - strnlen(dst, N) - 1);
 	return & dst[0];
 }
-
-#define safe_strncpy(a,b,n) do { strncpy((a),(b),(n)-1); (a)[(n)-1] = 0; } while (0)
 
 #ifdef HAVE_STRINGS_H
 #include <strings.h>
