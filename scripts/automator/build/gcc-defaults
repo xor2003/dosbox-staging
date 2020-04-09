@@ -9,7 +9,7 @@ ranlib="gcc-ranlib${postfix}"
 TYPES+=(release debug warnmore pgotrain fdotrain optinfo)
 
 cflags+=(-fstack-protector -fdiagnostics-color=auto)
-cflags_debug+=("${cflags[@]}" -g -fno-omit-frame-pointer)
+cflags_debug+=("${cflags[@]}" -g -DDEBUG -fno-omit-frame-pointer)
 
 # Note: associative-math is needed for vectorization of floating point
 #       calculations, which also relies on no-signed-zeros and

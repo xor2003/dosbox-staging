@@ -13,7 +13,7 @@ TYPES+=(release debug warnmore pgotrain optinfo)
 # Note: -fno-math-errno allows better optimization of C/C++ math library functions
 cflags_release+=("${cflags[@]}" -DNDEBUG -O3 -fno-math-errno -fno-strict-aliasing)
 
-cflags_debug+=("${cflags[@]}" -g -fno-omit-frame-pointer)
+cflags_debug+=("${cflags[@]}" -g -DDEBUG -fno-omit-frame-pointer)
 cflags_pgotrain+=("${cflags_debug[@]}" -fprofile-instr-generate -fcoverage-mapping)
 cflags_warnmore+=("${cflags_debug[@]}" -Wextra -Wshadow -Wcast-align -Wunused
                   -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion
