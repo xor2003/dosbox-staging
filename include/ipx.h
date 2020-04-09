@@ -118,10 +118,14 @@ public:
 	Bitu buflen;		// by Interrupt
 
 #ifdef IPX_DEBUGMSG 
-	Bitu SerialNumber;
+	Bitu SerialNumber = 0;
 #endif
 
-	ECBClass(Bit16u segment, Bit16u offset);
+	ECBClass(uint16_t segment, uint16_t offset);
+	ECBClass(const ECBClass &) = delete; // prevent copy
+	ECBClass &operator=(const ECBClass &) = delete; // prevent assignment
+	virtual ~ECBClass();
+
 	Bit16u getSocket(void);
 
 	Bit8u getInUseFlag(void);
@@ -142,8 +146,6 @@ public:
 
 	void setImmAddress(Bit8u *immAddr);
 	void getImmAddress(Bit8u* immAddr);
-
-	~ECBClass();
 };
 
 // The following routines may not be needed on all systems.  On my build of SDL the IPaddress structure is 8 octects 

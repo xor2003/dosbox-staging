@@ -87,10 +87,17 @@ Bitu ECBSerialNumber = 0;
 Bitu ECBAmount = 0;
 #endif
 
-
-ECBClass::ECBClass(Bit16u segment, Bit16u offset) {
+ECBClass::ECBClass(uint16_t segment, uint16_t offset)
+        : ECBAddr(0),
+          isInESRList(false),
+          prevECB(nullptr),
+          nextECB(nullptr),
+          iuflag(0),
+          mysocket(0),
+          databuffer(nullptr),
+          buflen(0)
+{
 	ECBAddr = RealMake(segment, offset);
-	databuffer = 0;
 	
 #ifdef IPX_DEBUGMSG
 	SerialNumber = ECBSerialNumber;
@@ -104,9 +111,6 @@ ECBClass::ECBClass(Bit16u segment, Bit16u offset) {
 		real_readw(RealSeg(ECBAddr),
 		RealOff(ECBAddr)+4),segment,offset);
 #endif
-	isInESRList = false;
-	prevECB = NULL;
-	nextECB = NULL;
 	
 	if (ECBList == NULL)
 		ECBList = this;
@@ -124,6 +128,7 @@ ECBClass::ECBClass(Bit16u segment, Bit16u offset) {
 	iuflag = getInUseFlag();
 	mysocket = getSocket();
 }
+
 void ECBClass::writeDataBuffer(Bit8u* buffer, Bit16u length) {
 	if(databuffer!=0) delete [] databuffer;
 	databuffer = new Bit8u[length];
@@ -258,8 +263,6 @@ ECBClass::~ECBClass() {
 	}
 	if(databuffer!=0) delete [] databuffer;
 }
-
-
 
 static bool sockInUse(Bit16u sockNum) {
 	for(Bitu i=0;i<socketCount;i++) {
