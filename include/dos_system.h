@@ -66,7 +66,7 @@ public:
 		newtime(false),
 		hdrive(0xff)
 	{
-	};
+	}
 	DOS_File(const DOS_File& orig);
 	DOS_File & operator= (const DOS_File & orig);
 	virtual	~DOS_File(){if(name) delete [] name;};
@@ -138,7 +138,7 @@ public:
 	bool UpdateDateTimeFromHost (void);
 	void Flush                  (void);
 	void SetFlagReadOnlyMedium  () { read_only_medium = true; }
-	const char *GetBaseDir      () { return basedir; }
+	const char *GetBaseDir      () const { return basedir; }
 	FILE * fhandle; //todo handle this properly
 private:
 	const char *basedir;

@@ -872,6 +872,7 @@ static Bitu DOS_21Handler(void) {
 		}
 		break;		
 	case 0x57:					/* Get/Set File's Date and Time */
+		// FIXME: check if AX registry needs to be updated here
 		if (reg_al==0x00) {
 			if (DOS_GetFileDate(reg_bx,&reg_cx,&reg_dx)) {
 				CALLBACK_SCF(false);
