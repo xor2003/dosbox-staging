@@ -583,10 +583,22 @@ bool CMscdex::GetVolumeName(Bit8u subUnit, char* data) {
 	if (success) {
 		MEM_StrCopy(ptoc+offset+40,data,31);
 		data[31] = 0;
+		LOG_MSG("CMscdex::GetVolumeName = %s", data);
 		rtrim(data);
-	};
-
-	return success; 
+	} else {
+		static int i = 0;
+		const std::string labels[3] = {"DC1", "DC2", "DC3"};
+		memcpy(data, labels[i++].c_str(), 31);
+		data[31] = 0;
+		rtrim(data);
+		LOG_MSG("CMscdex::GetVolumeName = %s", data);
+		if (i == 3)
+			i = 0;
+		success = true;
+	}
+	LOG_MSG("CMscdex::GetVolumeName called; success = %s",
+	        success ? "true" : "false");
+	return success;
 }
 
 bool CMscdex::GetFileName(Bit16u drive, Bit16u pos, PhysPt data) {
@@ -1325,6 +1337,8 @@ bool MSCDEX_HasMediaChanged(Bit8u subUnit)
 		leadOut[subUnit].sec = 0;
 		leadOut[subUnit].fr	 = 0;
 	}
+	LOG_MSG("MSCDEX_HasMediaChanged on %u", subUnit);
+	return true;
 	return has_changed;
 }
 
