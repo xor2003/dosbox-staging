@@ -63,9 +63,7 @@ jobs:
       - name: Install build dependencies
         run: |
           # build libs from source, otherwise non-native deployment target will break binaries
-          # brew install --build-from-source sdl2 sdl2_net libpng opusfile
-          # last test with normal install
-          brew install sdl2 sdl2_net libpng opusfile
+          brew install --build-from-source sdl2 sdl2_net libpng opusfile
           # everything else can be installed normally
           brew install librsvg coreutils autogen autoconf automake make pkg-config
       - name: Select Xcode version
