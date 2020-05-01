@@ -76,6 +76,11 @@ jobs:
           key:  ccache-macos-release-${{ steps.prep-ccache.outputs.today }}
           restore-keys: |
             ccache-macos-release-${{ steps.prep-ccache.outputs.yesterday }}
+      - name: Select Xcode version
+        run: |
+          set -x
+          ls -n /Applications/ | grep Xcode*
+          xcode-select -p
       - name: Log environment
         run:  ./scripts/log-env.sh
       - name: Build Opus libraries
