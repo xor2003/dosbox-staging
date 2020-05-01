@@ -54,6 +54,7 @@ jobs:
     runs-on: macos-latest
     if: github.event_name != 'pull_request' || contains('dreamer,kcgen,ant-222', github.actor) == false
     env:
+      MACOSX_DEPLOYMENT_TARGET: 10.14
       CC: clang
       CXX: clang++
       FLAGS: -DNDEBUG -O3 -fno-math-errno -fstrict-aliasing -march=nehalem -flto=thin -pipe
