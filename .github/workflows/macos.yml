@@ -81,6 +81,8 @@ jobs:
           set -x
           ls -n /Applications/ | grep Xcode*
           xcode-select -p
+          sudo xcode-select -s /Applications/Xcode_10.3.app/Contents/Developer
+          xcode-select -p
       - name: Log environment
         run:  ./scripts/log-env.sh
       - name: Build Opus libraries
