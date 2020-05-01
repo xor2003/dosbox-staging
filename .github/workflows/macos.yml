@@ -91,7 +91,7 @@ jobs:
           cd contrib/static-opus
           export CFLAGS="$FLAGS"
           export CXXFLAGS="$FLAGS"
-          gmake -j "$(sysctl -n hw.physicalcpu)"
+          #gmake -j "$(sysctl -n hw.physicalcpu)"
       - name: Inject version string
         run: |
           set -x
@@ -111,6 +111,7 @@ jobs:
             --enable-sdl-static \
             --disable-screenshots \
             --disable-network \
+            --disable-opus-cdda \
             CFLAGS="$FLAGS" CXXFLAGS="$FLAGS"
           gmake -j "$(sysctl -n hw.physicalcpu)"
           strip src/dosbox
