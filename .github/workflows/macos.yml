@@ -60,23 +60,14 @@ jobs:
       FLAGS: -DNDEBUG -O3 -fno-math-errno -fstrict-aliasing -march=nehalem -flto=thin -pipe
     steps:
       - uses: actions/checkout@v2
-      - name: Install C++ compiler and libraries
-        run:  brew install librsvg $(./scripts/list-build-dependencies.sh -m brew -c clang)
-      - name:  Prepare compiler cache
-        id:    prep-ccache
-        shell: bash
+      - name: Install build dependencies
         run: |
-          mkdir -p "${CCACHE_DIR}"
-          echo "::set-output name=dir::$CCACHE_DIR"
-          echo "::set-output name=today::$(date -I)"
-          echo "::set-output name=yesterday::$(date --date=yesterday -I)"
-      - uses:  actions/cache@v1
-        id:    cache-ccache
-        with:
-          path: ${{ steps.prep-ccache.outputs.dir }}
-          key:  ccache-macos-release-${{ steps.prep-ccache.outputs.today }}
-          restore-keys: |
-            ccache-macos-release-${{ steps.prep-ccache.outputs.yesterday }}
+          # build libs from source, otherwise non-native deployment target will break binaries
+          # brew install --build-from-source sdl2 sdl2_net libpng opusfile
+          # last test with normal install
+          brew install sdl2 sdl2_net libpng opusfile
+          # everything else can be installed normally
+          brew install librsvg coreutils autogen autoconf automake make pkg-config
       - name: Select Xcode version
         run: |
           set -x
@@ -86,13 +77,6 @@ jobs:
           xcode-select -p
       - name: Log environment
         run:  ./scripts/log-env.sh
-      - name: Build Opus libraries
-        run: |
-          set -x
-          cd contrib/static-opus
-          export CFLAGS="$FLAGS"
-          export CXXFLAGS="$FLAGS"
-          #gmake -j "$(sysctl -n hw.physicalcpu)"
       - name: Inject version string
         run: |
           set -x
@@ -101,9 +85,6 @@ jobs:
           sed -i -e "s/AC_INIT(dosbox,git)/AC_INIT(dosbox,$VERSION)/" configure.ac
           echo ::set-env name=VERSION::$VERSION
       - name: Build
-        env:
-          OPUSFILE_CFLAGS: -I${{ github.workspace }}/contrib/static-opus/include -I${{ github.workspace }}/contrib/static-opus/include/opus
-          OPUSFILE_LIBS: ${{ github.workspace }}/contrib/static-opus/lib/libopusfile.a ${{ github.workspace }}/contrib/static-opus/lib/libogg.a ${{ github.workspace }}/contrib/static-opus/lib/libopus.a -lm
         run: |
           set -x
           ./autogen.sh
