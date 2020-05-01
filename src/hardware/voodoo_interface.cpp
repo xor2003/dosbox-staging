@@ -113,9 +113,9 @@ static void Voodoo_VerticalTimer(Bitu /*val*/) {
 
 	if (v->fbi.vblank_flush_pending) {
 		voodoo_vblank_flush();
-		if (GFX_LazyFullscreenRequested()) {
+		/*if (GFX_LazyFullscreenRequested()) {
 			v->ogl_dimchange = true;
-		}
+		}*/
 	}
 
 	if (!v->ogl) {

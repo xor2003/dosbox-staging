@@ -355,6 +355,16 @@ struct SDL_Block {
 
 static SDL_Block sdl;
 
+SDL_Window* GetSDLWindowPtr()
+{
+	return sdl.window;
+}
+
+int GetSDLScreenType()
+{
+	return (int)(sdl.desktop.want_type);
+}
+
 static SDL_Rect CalculateViewport(int win_width, int win_height);
 static void CleanupSDLResources();
 static void HandleVideoResize(int width, int height);

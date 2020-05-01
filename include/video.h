@@ -59,7 +59,7 @@ Bitu GFX_SetSize(Bitu width, Bitu height, Bitu flags,
                  double scalex, double scaley,
                  GFX_CallBack_t callback,
                  double pixel_aspect);
-void GFX_TearDown(void);
+//void GFX_TearDown(void);
 
 void GFX_ResetScreen(void);
 void GFX_Start(void);
@@ -71,11 +71,11 @@ void GFX_GetSize(int &width, int &height, bool &fullscreen);
 void GFX_LosingFocus(void);
 
 bool GFX_IsFullscreen(void);
-void GFX_SwitchLazyFullscreen(bool lazy);
+/*void GFX_SwitchLazyFullscreen(bool lazy);
 bool GFX_LazyFullscreenRequested(void);
 void GFX_SwitchFullscreenNoReset(void);
 void GFX_RestoreMode(void);
-void GFX_UpdateSDLCaptureState(void);
+void GFX_UpdateSDLCaptureState(void);*/
 
 #if defined (REDUCE_JOYSTICK_POLLING)
 void MAPPER_UpdateJoysticks(void);

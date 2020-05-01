@@ -101,6 +101,9 @@ static UINT8 dither2_lookup[256*16*2];
 UINT32 voodoo_reciplog[(2 << RECIPLOG_LOOKUP_BITS) + 2];
 
 
+// HACK (tocheck: is save/restore of fpu state with dyn still required?)
+void CPU_Core_Dyn_X86_SaveDHFPUState(void) {}
+void CPU_Core_Dyn_X86_RestoreDHFPUState(void) {}
 
 /*************************************
  *
