@@ -62,7 +62,7 @@ static bool has_stencil = false;
 static bool has_alpha = false;
 
 
-static INT32 current_begin_mode = -1;
+static int32_t current_begin_mode = -1;
 
 static Bit32s current_depth_mode = -1;
 static Bit32s current_depth_func = -1;
@@ -325,7 +325,7 @@ void VOGL_FlagFeature(Bit32u feat) {
 }
 
 
-void VOGL_BeginMode(INT32 new_mode) {
+void VOGL_BeginMode(int32_t new_mode) {
 	if (current_begin_mode > -1) {
 		if (new_mode != current_begin_mode) {
 			glEnd();

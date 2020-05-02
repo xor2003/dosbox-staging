@@ -566,7 +566,7 @@ void init_fbi(voodoo_state *v, fbi_state *f, int fbmem)
 	v->fbi.clut[32] = MAKE_ARGB(32,0xff,0xff,0xff); */
 
 	/* allocate a VBLANK timer */
-	f->vblank = FALSE;
+	f->vblank = false;
 
 	/* initialize the memory FIFO */
 	f->fifo.size = 0;
@@ -2784,7 +2784,7 @@ UINT32 register_r(UINT32 offset)
 		case fbiZfuncFail:
 		case fbiAfuncFail:
 		case fbiPixelsOut:
-			update_statistics(v, TRUE);
+			update_statistics(v, true);
 		case fbiTrianglesOut:
 			result = v->reg[regnum].u & 0xffffff;
 			break;

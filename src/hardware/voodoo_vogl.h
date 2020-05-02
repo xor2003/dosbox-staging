@@ -106,7 +106,7 @@ bool VOGL_Initialize(void);
 bool VOGL_CheckFeature(Bit32u feat);
 void VOGL_FlagFeature(Bit32u feat);
 
-void VOGL_BeginMode(INT32 new_mode);
+void VOGL_BeginMode(int32_t new_mode);
 void VOGL_ClearBeginMode(void);
 
 void VOGL_SetDepthMode(Bit32s mode, Bit32s func);
