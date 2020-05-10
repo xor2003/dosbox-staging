@@ -552,19 +552,8 @@ public:
 		// initialize binding lists and position data
 		pos_axis_lists = new CBindList[MAXAXIS];
 		neg_axis_lists = new CBindList[MAXAXIS];
-		button_lists=new CBindList[MAXBUTTON];
-		hat_lists=new CBindList[4];
-
-		for (auto &val : button_autofire)
-			val = 0;
-		for (auto &val : old_button_state)
-			val = false;
-		for (auto &val : old_pos_axis_state)
-			val = false;
-		for (auto &val : old_neg_axis_state)
-			val = false;
-		for (auto &val : old_hat_state)
-			val = 0;
+		button_lists = new CBindList[MAXBUTTON];
+		hat_lists = new CBindList[4];
 
 		// initialize emulated joystick state
 		emulated_axes=2;
@@ -875,11 +864,11 @@ protected:
 	Bitu emustick;
 	SDL_Joystick *sdl_joystick = nullptr;
 	char configname[10];
-	unsigned button_autofire[MAXBUTTON];
-	bool old_button_state[MAXBUTTON];
-	bool old_pos_axis_state[MAXAXIS];
-	bool old_neg_axis_state[MAXAXIS];
-	uint8_t old_hat_state[MAXHAT];
+	unsigned button_autofire[MAXBUTTON] = {};
+	bool old_button_state[MAXBUTTON] = {};
+	bool old_pos_axis_state[MAXAXIS] = {};
+	bool old_neg_axis_state[MAXAXIS] = {};
+	uint8_t old_hat_state[MAXHAT] = {};
 	bool is_dummy;
 };
 
