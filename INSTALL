@@ -17,6 +17,12 @@ Opusfile, by Xiph
     video distribution platforms such as YouTube.
     License: three-clause BSD
 
+FluidSynth 2.1 (optional)
+    TODO describe
+
+    http://www.fluidsynth.org/
+    License: GNU LGPL v2.1
+
 Curses (optional)
     If you want to enable the debugger you need a curses library.
     On Linux, install ncurses-devel via your distro package manager.
