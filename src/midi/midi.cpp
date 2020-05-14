@@ -33,6 +33,7 @@
 #include "pic.h"
 #include "hardware.h"
 #include "timer.h"
+#include "midi_fluidsynth.h"
 
 #define RAWBUF	1024
 

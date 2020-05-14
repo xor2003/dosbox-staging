@@ -579,6 +579,9 @@ void DOSBOX_Init(void) {
 	pstring = secprop->Add_string("mididevice", when_idle, "default");
 	const char *midi_devices[] = {
 		"default",
+#if C_FLUIDSYNTH
+		"fluidsynth",
+#endif
 #if defined(MACOSX)
 #ifdef C_SUPPORTS_COREMIDI
 		"coremidi",
@@ -607,6 +610,9 @@ void DOSBOX_Init(void) {
 	                  "When using a Roland MT-32 rev. 0 as midi output device, some games may require a delay in order to prevent 'buffer overflow' issues.\n"
 	                  "In that case, add 'delaysysex', for example: midiconfig=2 delaysysex\n"
 	                  "See the README/Manual for more details.");
+#if C_FLUIDSYNTH
+	init_fluid_dosbox_settings(*secprop);
+#endif
 
 #if C_DEBUG
 	secprop=control->AddSection_prop("debug",&DEBUG_Init);
