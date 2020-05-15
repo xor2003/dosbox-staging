@@ -100,7 +100,7 @@ jobs:
       - name:  Install packages
         shell: pwsh
         run: |
-          vcpkg install libpng sdl2 sdl2-net opusfile
+          vcpkg install libpng sdl2 sdl2-net opusfile fluidsynth
           vcpkg integrate install
       - name:  Log environment
         shell: pwsh
@@ -128,7 +128,7 @@ jobs:
       - name:  Install packages
         shell: pwsh
         run: |
-          vcpkg install libpng sdl2 sdl2-net opusfile
+          vcpkg install libpng sdl2 sdl2-net opusfile fluidsynth
           vcpkg integrate install
       - name:  Log environment
         shell: pwsh
