@@ -116,12 +116,9 @@ bool MidiHandlerFluidsynth::Open(const char *const /*conf*/)
 		try {
 			return std::stod(section->Get_string(propname));
 		} catch (const std::exception &e) {
-			/*
-			log_cb(RETRO_LOG_WARN,
-			       "[dosbox] error reading floating point '%s' "
+			fprintf(stderr, "[dosbox] error reading floating point '%s' "
 			       "conf setting: %s\n",
 			       e.what());
-		       */
 			return 0.0;
 		}
 	};
@@ -157,7 +154,7 @@ bool MidiHandlerFluidsynth::Open(const char *const /*conf*/)
 
 	fsynth_ptr_t fluid_synth(new_fluid_synth(settings.get()), delete_fluid_synth);
 	if (!synth) {
-		// log_cb(RETRO_LOG_WARN, "[dosbox] Error creating fluidsynth synthesiser\n");
+		fprintf(stderr, "[dosbox] Error creating fluidsynth synthesiser\n");
 		return false;
 	}
 
@@ -228,7 +225,7 @@ void MidiHandlerFluidsynth::PlayMsg(Bit8u *msg)
 	default: {
 		uint64_t tmp;
 		memcpy(&tmp, msg, sizeof(tmp));
-		// log_cb(RETRO_LOG_WARN, "[dosbox] fluidsynth: unknown MIDI command: %08lx", tmp);
+		fprintf(stderr, "[dosbox] fluidsynth: unknown MIDI command: %08lx", tmp);
 		break;
 	}
 	}
