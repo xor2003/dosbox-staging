@@ -111,17 +111,17 @@ bool MidiHandlerFluidsynth::Open(const char *const /*conf*/)
 	        control->GetSection("midi"));
 
 	fluid_settings_ptr_t settings(new_fluid_settings(), delete_fluid_settings);
+	if (!settings) {
+		LOG_MSG("MIDI: new_fluid_settings failed");
+		return false;
+	}
 
-	auto get_double = [section](const char *const propname) {
+	auto get_double = [section](const char *propname) {
 		try {
 			return std::stod(section->Get_string(propname));
 		} catch (const std::exception &e) {
-			/*
-			log_cb(RETRO_LOG_WARN,
-			       "[dosbox] error reading floating point '%s' "
-			       "conf setting: %s\n",
-			       e.what());
-		       */
+			LOG_MSG("MIDI: error reading '%s' setting: %s\n",
+			        propname, e.what());
 			return 0.0;
 		}
 	};
@@ -156,14 +156,14 @@ bool MidiHandlerFluidsynth::Open(const char *const /*conf*/)
 	                      get_double("fluid.chorus.depth"));
 
 	fsynth_ptr_t fluid_synth(new_fluid_synth(settings.get()), delete_fluid_synth);
-	if (!synth) {
-		// log_cb(RETRO_LOG_WARN, "[dosbox] Error creating fluidsynth synthesiser\n");
+	if (!fluid_synth) {
+		LOG_MSG("MIDI: Failed to create the FluidSynth synthesizer (2)");
 		return false;
 	}
 
 	std::string soundfont = section->Get_string("fluid.soundfont");
 	if (!soundfont.empty() && fluid_synth_sfcount(fluid_synth.get()) == 0) {
-		fluid_synth_sfload(synth.get(), soundfont.data(), true);
+		fluid_synth_sfload(fluid_synth.get(), soundfont.data(), true);
 	}
 
 	MixerChannel_ptr_t mixer_channel(
@@ -181,9 +181,8 @@ bool MidiHandlerFluidsynth::Open(const char *const /*conf*/)
 
 void MidiHandlerFluidsynth::Close()
 {
-	if (!is_open) {
+	if (!is_open)
 		return;
-	}
 
 	channel->Enable(false);
 	channel = nullptr;
@@ -228,7 +227,7 @@ void MidiHandlerFluidsynth::PlayMsg(Bit8u *msg)
 	default: {
 		uint64_t tmp;
 		memcpy(&tmp, msg, sizeof(tmp));
-		// log_cb(RETRO_LOG_WARN, "[dosbox] fluidsynth: unknown MIDI command: %08lx", tmp);
+		LOG_MSG("MIDI: unknown MIDI command: %08lx", tmp);
 		break;
 	}
 	}
