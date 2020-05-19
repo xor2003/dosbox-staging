@@ -51,7 +51,7 @@ jobs:
       - name:  Install packages
         shell: pwsh
         run: |
-          vcpkg install libpng sdl2 sdl2-net opusfile
+          vcpkg install --triplet x86-windows libpng sdl2 sdl2-net opusfile
           vcpkg integrate install
       - name:  Log environment
         shell: pwsh
@@ -75,6 +75,7 @@ jobs:
         shell: bash
         run: |
           set -x
+          tree vs
           # Prepare content
           mkdir -p dest/doc
           cp vs/Win32/Release/dosbox.exe           dest/
