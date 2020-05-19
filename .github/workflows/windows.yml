@@ -83,7 +83,7 @@ jobs:
           cp docs/README.video                     dest/doc/video.txt
           cp README                                dest/doc/manual.txt
           cp vs/Win32/Release/libpng16.dll         dest/
-          cp vs/Win32/Release/ogg.dll              dest/
+          # cp vs/Win32/Release/ogg.dll              dest/
           cp vs/Win32/Release/opus.dll             dest/
           cp vs/Win32/Release/SDL2.dll             dest/
           cp vs/Win32/Release/SDL2_net.dll         dest/
