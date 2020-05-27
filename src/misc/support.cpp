@@ -197,21 +197,6 @@ char * StripWord(char *&line) {
 	return begin;
 }
 
-Bits ConvDecWord(char * word) {
-	bool negative=false;Bitu ret=0;
-	if (*word=='-') {
-		negative=true;
-		word++;
-	}
-	while (char c=*word) {
-		ret*=10;
-		ret+=c-'0';
-		word++;
-	}
-	if (negative) return 0-ret;
-	else return ret;
-}
-
 Bits ConvHexWord(char * word) {
 	Bitu ret=0;
 	while (char c=toupper(*reinterpret_cast<unsigned char*>(word))) {
@@ -222,11 +207,6 @@ Bits ConvHexWord(char * word) {
 	}
 	return ret;
 }
-
-double ConvDblWord(char * word) {
-	return 0.0f;
-}
-
 
 static char buf[1024];           //greater scope as else it doesn't always gets thrown right (linux/gcc2.95)
 void E_Exit(const char * format,...) {
