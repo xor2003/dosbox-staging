@@ -29,6 +29,7 @@
 #define SPKR_POSITIVE_VOLTAGE 5000.0f
 #define SPKR_NEUTRAL_VOLTAGE  0.0f
 #define SPKR_NEGATIVE_VOLTAGE -SPKR_POSITIVE_VOLTAGE
+#define SPKR_FADE_PEAK_STEP 100
 #define SPKR_SPEED (SPKR_POSITIVE_VOLTAGE * 2.0f / 0.070f)
 
 enum SPKR_MODES {
@@ -51,12 +52,18 @@ static struct {
 	float pit_max,pit_half;
 	float pit_index;
 	float volwant,volcur;
-	Bitu last_ticks;
+	uint8_t fade_step = 0u;
 	float last_index;
 	Bitu min_tr;
 	DelayEntry entries[SPKR_ENTRIES];
 	Bitu used;
 } spkr;
+
+bool SpeakerExists(){
+	// If the mixer's channel doesn't exist, then dosbox
+	// hasn't created the device yet (so return false).
+	return spkr.chan != nullptr;
+}
 
 static void AddDelayEntry(float index,float vol) {
 	if (spkr.used==SPKR_ENTRIES) {
@@ -66,7 +73,6 @@ static void AddDelayEntry(float index,float vol) {
 	spkr.entries[spkr.used].vol=vol;
 	spkr.used++;
 }
-
 
 static void ForwardPIT(float newindex) {
 	float passed=(newindex-spkr.last_index);
@@ -158,12 +164,12 @@ static void ForwardPIT(float newindex) {
 	}
 }
 
+// PIT-mode activation
 void PCSPEAKER_SetCounter(Bitu cntr,Bitu mode) {
-	if (!spkr.last_ticks) {
-		if(spkr.chan) spkr.chan->Enable(true);
-		spkr.last_index=0;
-	}
-	spkr.last_ticks=PIC_Ticks;
+	// Guard
+	if (!SpeakerExists())
+		return;
+
 	float newindex=PIC_TickIndex();
 	ForwardPIT(newindex);
 	switch (mode) {
@@ -211,14 +217,17 @@ void PCSPEAKER_SetCounter(Bitu cntr,Bitu mode) {
 		return;
 	}
 	spkr.pit_mode=mode;
+
+	// Activate the channel after queuing new speaker entries
+	spkr.chan->Enable(true);
 }
 
+// PWM-mode activation
 void PCSPEAKER_SetType(Bitu mode) {
-	if (!spkr.last_ticks) {
-		if(spkr.chan) spkr.chan->Enable(true);
-		spkr.last_index=0;
-	}
-	spkr.last_ticks=PIC_Ticks;
+	// Guard
+	if (!SpeakerExists())
+		return;
+
 	float newindex=PIC_TickIndex();
 	ForwardPIT(newindex);
 	switch (mode) {
@@ -246,14 +255,30 @@ void PCSPEAKER_SetType(Bitu mode) {
 		}
 		break;
 	};
+
+	// Activate the channel after queuing new speaker entries
+	spkr.chan->Enable(true);
+}
+
+void FadeVolume(uint16_t num_actions) {
+	spkr.fade_step = num_actions ? SPKR_FADE_PEAK_STEP : spkr.fade_step - 1;
+	spkr.volwant *= GetFadeScalar(spkr.fade_step);
+	if (!spkr.fade_step) {
+		assert(spkr.chan);
+		spkr.chan->Enable(false);
+	}
 }
 
 static void PCSPEAKER_CallBack(Bitu len) {
+	// Guard
+	if (!SpeakerExists())
+		return;
+
 	Bit16s * stream=(Bit16s*)MixTemp;
 	ForwardPIT(1);
 	spkr.last_index=0;
 	Bitu count=len;
-	Bitu pos=0;
+	uint16_t pos = 0;
 	float sample_base=0;
 	float sample_add=(1.0001f)/len;
 	while (count--) {
@@ -303,24 +328,8 @@ static void PCSPEAKER_CallBack(Bitu len) {
 		}
 		*stream++=(Bit16s)(value/sample_add);
 	}
-	if(spkr.chan) spkr.chan->AddSamples_m16(len,(Bit16s*)MixTemp);
-
-	//Turn off speaker after 10 seconds of idle or one second idle when in off mode
-	bool turnoff = false;
-	Bitu test_ticks = PIC_Ticks;
-	if ((spkr.last_ticks + 10000) < test_ticks) turnoff = true;
-	if((spkr.mode == SPKR_OFF) && ((spkr.last_ticks + 1000) < test_ticks)) turnoff = true;
-
-	if(turnoff){
-		if(spkr.volwant == 0) { 
-			spkr.last_ticks = 0;
-			if(spkr.chan) spkr.chan->Enable(false);
-		} else {
-			if(spkr.volwant > 0) spkr.volwant--; else spkr.volwant++;
-		
-		}
-	} 
-
+	spkr.chan->AddSamples_m16(len,(Bit16s*)MixTemp);
+	FadeVolume(pos);
 }
 class PCSPEAKER:public Module_base {
 private:
@@ -331,7 +340,6 @@ public:
 		Section_prop * section=static_cast<Section_prop *>(configuration);
 		if(!section->Get_bool("pcspeaker")) return;
 		spkr.mode=SPKR_OFF;
-		spkr.last_ticks=0;
 		spkr.last_index=0;
 		spkr.rate = std::max(section->Get_int("pcrate"), 8000);
 		spkr.pit_mode=3;
