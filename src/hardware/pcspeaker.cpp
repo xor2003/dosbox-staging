@@ -222,6 +222,24 @@ void PCSPEAKER_SetCounter(Bitu cntr,Bitu mode) {
 	spkr.chan->Enable(true);
 }
 
+// Returns the neutral voltage if the speaker's  fully faded,
+// otherwise returns the fallback if the speaker is active.
+float NeutralOr(float fallback)
+{
+	return !spkr.fade_step ? SPKR_NEUTRAL_VOLTAGE : fallback;
+}
+
+// Returns, in order of preference:
+// - Neutral voltage, if the speaker's fully faded
+// - The last active PIT voltage to stitch on-going playback
+// - The fallback voltage to kick start a new sound pattern 
+float NeutralLastPitOr(float fallback)
+{
+	return NeutralOr(std::isgreater(fabs(spkr.pit_last), SPKR_NEUTRAL_VOLTAGE)
+	                         ? spkr.pit_last
+	                         : fallback);
+}
+
 // PWM-mode activation
 void PCSPEAKER_SetType(Bitu mode) {
 	// Guard
@@ -233,26 +251,19 @@ void PCSPEAKER_SetType(Bitu mode) {
 	switch (mode) {
 	case 0:
 		spkr.mode=SPKR_OFF;
-		AddDelayEntry(newindex, SPKR_NEUTRAL_VOLTAGE);
+		AddDelayEntry(newindex, NeutralOr(SPKR_NEGATIVE_VOLTAGE));
 		break;
 	case 1:
 		spkr.mode=SPKR_PIT_OFF;
-		AddDelayEntry(newindex, SPKR_NEUTRAL_VOLTAGE);
+		AddDelayEntry(newindex, NeutralLastPitOr(SPKR_NEGATIVE_VOLTAGE));
 		break;
 	case 2:
 		spkr.mode=SPKR_ON;
-		AddDelayEntry(newindex, SPKR_NEUTRAL_VOLTAGE);
+		AddDelayEntry(newindex, NeutralOr(SPKR_POSITIVE_VOLTAGE));
 		break;
 	case 3:
-		if (spkr.mode != SPKR_PIT_ON) {
-			// Carry the last value forward if it was something,
-			// otherwise fallback to the positive voltage
-			const float voltage = fabs(spkr.pit_last) > SPKR_NEUTRAL_VOLTAGE
-			                              ? spkr.pit_last
-			                              : SPKR_POSITIVE_VOLTAGE;
-			AddDelayEntry(newindex, voltage);
-			spkr.mode = SPKR_PIT_ON;
-		}
+		spkr.mode = SPKR_PIT_ON;
+		AddDelayEntry(newindex, NeutralLastPitOr(SPKR_POSITIVE_VOLTAGE));
 		break;
 	};
 
