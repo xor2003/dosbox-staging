@@ -24,7 +24,9 @@
 #include "dosbox.h"
 #endif
 
-typedef void (*MIXER_MixHandler)(Bit8u * sampdate,Bit32u len);
+#include "envelope.h"
+
+typedef void (*MIXER_MixHandler)(Bit8u *sampdate, Bit32u len);
 typedef void (*MIXER_Handler)(Bitu len);
 
 enum BlahModes {
@@ -96,6 +98,7 @@ public:
 
 private:
 	MixerChannel();
+	Envelope envelope;
 	MIXER_Handler handler = nullptr;
 	Bitu freq_add = 0u; // This gets added the frequency counter each mixer
 	                    // step
