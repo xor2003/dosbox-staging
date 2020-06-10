@@ -15,26 +15,26 @@ jobs:
     strategy:
       matrix:
         conf:
-          - name: GCC-5 (Ubuntu 16.04)
+          - name: GCC (Ubuntu 16.04)
             os: ubuntu-16.04
             flags: -c gcc
             max_warnings: 24
-          - name: GCC-7 (Ubuntu 18.04)
+          - name: GCC (Ubuntu 18.04)
             os: ubuntu-18.04
             flags: -c gcc
             max_warnings: 26
-          - name: GCC-9 (Ubuntu 18.04)
-            os: ubuntu-18.04
-            flags: -c gcc -v 9
+          - name: GCC (Ubuntu 20.04)
+            os: ubuntu-20.04
+            flags: -c gcc
             max_warnings: 26
-          - name: GCC-9 (Ubuntu 18.04) +debug
-            os: ubuntu-18.04
-            flags: -c gcc -v 9
+          - name: GCC (Ubuntu 20.04) +debug
+            os: ubuntu-20.04
+            flags: -c gcc
             config_flags: --enable-debug
-            max_warnings: 139
-          - name: Clang-8 (Ubuntu 18.04)
-            os: ubuntu-18.04
-            flags: -c clang -v 8
+            max_warnings: 137
+          - name: Clang (Ubuntu 20.04)
+            os: ubuntu-20.04
+            flags: -c clang -v 9
             max_warnings: 7
     steps:
       - uses: actions/checkout@v2
