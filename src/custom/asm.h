@@ -32,7 +32,7 @@
 #include <timer.h>
 #include <vector>
 
-extern Bit32u ticksRemain;
+extern int ticksRemain;
 extern volatile bool from_callf;
 extern volatile bool from_interpreter;
 extern bool trace_instructions;

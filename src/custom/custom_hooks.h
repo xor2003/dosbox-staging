@@ -1,6 +1,6 @@
 #define DOSBOX_masm2c_H
 
-#ifdef DOSBOX_CUSTOM_CUSTOM
+#ifdef DOSBOX_CUSTOM
 
 /* prototypes for Execution operations */
 bool masm2c_init(char *, unsigned short, unsigned short, unsigned short);

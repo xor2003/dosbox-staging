@@ -1,6 +1,6 @@
 #include "dosbox.h"
 
-#ifdef DOSBOX_CUSTOM_CUSTOM
+#ifdef DOSBOX_CUSTOM
 #include "circular_buffer.h"
 
 #include "setup.h"
@@ -49,7 +49,7 @@ static int init = 0;
 void init_entrypoint (Bit16u relocate);
 
 //bool __dispatch_call (m2c::_offsets __i, struct m2c::_STATE * _state, db source=0);
-#ifndef __WIN32__
+#ifndef _WIN32
 extern void print_backtrace(uintptr_t pc);
 #endif
 
@@ -58,7 +58,7 @@ namespace m2c
   extern void Initializer ();
 }
 
-#if __WIN32__
+#if _WIN32
 void *
 memmem (const void *haystack, size_t haystack_len, const void *const needle, const size_t needle_len)
 {
@@ -486,7 +486,7 @@ namespace m2c
   void stackDump()//struct _STATE *_state)
   {
     m2c::print_traces();
-#ifndef __WIN32__
+#ifndef _WIN32
 print_backtrace(0);
 #endif
     shadow_stack.print (0);
