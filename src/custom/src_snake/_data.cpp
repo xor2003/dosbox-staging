@@ -1,0 +1,85 @@
+#include "_data.h"
+namespace m2c{
+struct Memory m;
+
+struct Memory types;
+
+db(& stack)[STACK_SIZE]=m.stack;
+db(& heap)[HEAP_SIZE]=m.heap;
+}
+db& default_seg=*((db*)&m2c::m+0x0);
+db& data=*((db*)&m2c::m+0x1a20);
+char (& msg)[28] = m2c::m.msg;
+db& instructions = m2c::m.instructions;
+char (& dummyb_1a3d)[41] = m2c::m.dummyb_1a3d;
+char (& dummyb_1a66)[24] = m2c::m.dummyb_1a66;
+char (& dummyb_1a7e)[26] = m2c::m.dummyb_1a7e;
+char (& athanksforplayi)[37] = m2c::m.athanksforplayi;
+char (& gameovermsg)[28] = m2c::m.gameovermsg;
+char (& scoremsg)[8] = m2c::m.scoremsg;
+char (& head)[1] = m2c::m.head;
+db& dummyb_1ae2 = m2c::m.dummyb_1ae2;
+db& dummyb_1ae3 = m2c::m.dummyb_1ae3;
+char (& body)[1] = m2c::m.body;
+db& dummyb_1ae5 = m2c::m.dummyb_1ae5;
+db& dummyb_1ae6 = m2c::m.dummyb_1ae6;
+db& dummyb_1ae7 = m2c::m.dummyb_1ae7;
+db& dummyb_1ae8 = m2c::m.dummyb_1ae8;
+db& dummyb_1ae9 = m2c::m.dummyb_1ae9;
+db& dummyb_1aea = m2c::m.dummyb_1aea;
+db& dummyb_1aeb = m2c::m.dummyb_1aeb;
+db& dummyb_1aec = m2c::m.dummyb_1aec;
+db& dummyb_1aed = m2c::m.dummyb_1aed;
+db& dummyb_1aee = m2c::m.dummyb_1aee;
+db& dummyb_1aef = m2c::m.dummyb_1aef;
+db& dummyb_1af0 = m2c::m.dummyb_1af0;
+db& dummyb_1af1 = m2c::m.dummyb_1af1;
+db& dummyb_1af2 = m2c::m.dummyb_1af2;
+db& dummyb_1af3 = m2c::m.dummyb_1af3;
+db& dummyb_1af4 = m2c::m.dummyb_1af4;
+db& dummyb_1af5 = m2c::m.dummyb_1af5;
+db& dummyb_1af6 = m2c::m.dummyb_1af6;
+db& dummyb_1af7 = m2c::m.dummyb_1af7;
+db& dummyb_1af8 = m2c::m.dummyb_1af8;
+db& dummyb_1af9 = m2c::m.dummyb_1af9;
+db& dummyb_1afa = m2c::m.dummyb_1afa;
+db& dummyb_1afb = m2c::m.dummyb_1afb;
+db& dummyb_1afc = m2c::m.dummyb_1afc;
+db& dummyb_1afd = m2c::m.dummyb_1afd;
+db& dummyb_1afe = m2c::m.dummyb_1afe;
+db& dummyb_1aff = m2c::m.dummyb_1aff;
+db& dummyb_1b00 = m2c::m.dummyb_1b00;
+db& dummyb_1b01 = m2c::m.dummyb_1b01;
+db& dummyb_1b02 = m2c::m.dummyb_1b02;
+db& dummyb_1b03 = m2c::m.dummyb_1b03;
+db& dummyb_1b04 = m2c::m.dummyb_1b04;
+db& dummyb_1b05 = m2c::m.dummyb_1b05;
+db& dummyb_1b06 = m2c::m.dummyb_1b06;
+db& dummyb_1b07 = m2c::m.dummyb_1b07;
+db& dummyb_1b08 = m2c::m.dummyb_1b08;
+db& dummyb_1b09 = m2c::m.dummyb_1b09;
+db& dummyb_1b0a = m2c::m.dummyb_1b0a;
+db& dummyb_1b0b = m2c::m.dummyb_1b0b;
+db& dummyb_1b0c = m2c::m.dummyb_1b0c;
+db& dummyb_1b0d = m2c::m.dummyb_1b0d;
+db& dummyb_1b0e = m2c::m.dummyb_1b0e;
+db& dummyb_1b0f = m2c::m.dummyb_1b0f;
+db& dummyb_1b10 = m2c::m.dummyb_1b10;
+db& dummyb_1b11 = m2c::m.dummyb_1b11;
+db& dummyb_1b12 = m2c::m.dummyb_1b12;
+db& dummyb_1b13 = m2c::m.dummyb_1b13;
+db& segmentcount = m2c::m.segmentcount;
+db& fruitactive = m2c::m.fruitactive;
+db& fruitx = m2c::m.fruitx;
+db& fruity = m2c::m.fruity;
+db& gameover = m2c::m.gameover;
+db& quit = m2c::m.quit;
+db& delaytime = m2c::m.delaytime;
+db& dummyb_1b1b = m2c::m.dummyb_1b1b;
+db& dummyb_1b1c = m2c::m.dummyb_1b1c;
+db& dummyb_1b1d = m2c::m.dummyb_1b1d;
+db& dummyb_1b1e = m2c::m.dummyb_1b1e;
+db& dummyb_1b1f = m2c::m.dummyb_1b1f;
+db& seg001=*((db*)&m2c::m+0x1b20);
+
+        

@@ -30,6 +30,7 @@
 #include "paging.h"
 #include "lazyflags.h"
 #include "support.h"
+#include "custom.h"
 
 extern void GFX_SetTitle(Bit32s cycles ,int frameskip,bool paused);
 
@@ -595,6 +596,12 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 		Segs.val[cs]=mem_readw(base+(num << 2)+2);
 		Segs.phys[cs]=Segs.val[cs]<<4;
 		cpu.code.big=false;
+
+		printf("Want to execute interrupt %x cs:IP=%x:%x\n",num,Segs.val[cs],reg_eip);
+		defered_custom_call=true;
+		CPU_CycleLeft=CPU_Cycles;
+		CPU_Cycles=0;
+
 		return;
 	} else {
 		/* Protected Mode Interrupt */
@@ -1087,6 +1094,26 @@ CODE_jmp:
 
 
 void CPU_CALL(bool use32,Bitu selector,Bitu offset,Bitu oldeip) {
+/*
+	if custom_callf() returns true we set the IP to the next instruction
+	and bypass the call
+*/
+from_interpreter = true;
+	if (!doing_single_step && custom_callf(selector, offset)) {
+             from_interpreter = false;
+		/* handle different call instructions */
+		Bit8u inst = real_readb(SegValue(cs), reg_ip);
+
+		switch (inst) {
+			case 0x9a: reg_ip += 5; break;
+			case 0xff: reg_ip += 3; break;
+			case 0x26: reg_ip += 4; break;
+			default: E_Exit("Unknown call instruction 0x%x\n,", inst);
+		}
+		return;
+	}
+ from_interpreter = false;
+
 	if (!cpu.pmode || (reg_flags & FLAG_VM)) {
 		if (!use32) {
 			CPU_Push16(SegValue(cs));

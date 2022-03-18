@@ -202,7 +202,7 @@ void MixerChannel::SetScale(float _left, float _right) {
 		scale[0] = _left;
 		scale[1] = _right;
 		UpdateVolume();
-#ifdef DEBUG
+#ifdef DDEBUG
 		LOG_MSG("MIXER %-7s channel: application changed left and right volumes to %3.0f%% and %3.0f%%, respectively",
 		        name, scale[0] * 100, scale[1] * 100);
 #endif
@@ -218,7 +218,7 @@ void MixerChannel::MapChannels(Bit8u _left, Bit8u _right) {
 	if (channel_map[0] != _left || channel_map[1] != _right) {
 		channel_map[0] = _left;
 		channel_map[1] = _right;
-#ifdef DEBUG
+#ifdef DDEBUG
 		LOG_MSG("MIXER %-7s channel: application changed audio-channel mapping to left=>%s and right=>%s",
 		        name,
 		        channel_map[0] == 0 ? "left" : "right",

@@ -565,6 +565,10 @@ void MEM_PreparePCJRCartRom()
 
 HostPt GetMemBase(void) { return MemBase; }
 
+namespace m2c {
+extern struct Memory m;
+}
+
 class MEMORY final : public Module_base {
 private:
 	IO_ReadHandleObject ReadHandler{};
@@ -577,7 +581,8 @@ public:
 		Section_prop * section=static_cast<Section_prop *>(configuration);
 	
 		/* Setup the Physical Page Links */
-		auto memsize = static_cast<uint16_t>(section->Get_int("memsize"));
+		//auto memsize = static_cast<uint16_t>(section->Get_int("memsize"));
+		uint16_t memsize=16;//section->Get_int("memsize");
 
 		if (memsize < 1) memsize = 1;
 		/* max 63 to solve problems with certain xms handlers */
@@ -589,7 +594,7 @@ public:
 			LOG_MSG("Memory sizes above %d MB are NOT recommended.",SAFE_MEMORY - 1);
 			LOG_MSG("Stick with the default values unless you are absolutely certain.");
 		}
-		MemBase = new (std::nothrow) Bit8u[memsize * 1024 * 1024];
+		MemBase = (HostPt)&m2c::m; //new (std::nothrow) Bit8u[memsize*1024*1024];
 		if (!MemBase) {
 			E_Exit("Can't allocate main memory of %u MB", memsize);
 		}
@@ -640,7 +645,7 @@ public:
 
 	~MEMORY()
 	{
-		delete [] MemBase;
+//		delete [] MemBase;
 		delete [] memory.phandlers;
 		delete [] memory.mhandles;
 	}
