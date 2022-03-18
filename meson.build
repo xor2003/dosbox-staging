@@ -41,9 +41,7 @@ prefers_static_libs = (get_option('default_library') == 'static')
 summary('Build type',     get_option('buildtype'), section : 'Build Summary')
 summary('Install prefix', get_option('prefix'),    section : 'Build Summary')
 
-# compiler flags
-#
-extra_flags = ['-Wmaybe-uninitialized', '-Weffc++', '-Wextra-semi']
+extra_flags = ['-Wmaybe-uninitialized', '-Weffc++', '-Wextra-semi','-DDOSBOX_CUSTOM', '-DM2CDEBUG=1']
 if host_machine.system() == 'windows'
   extra_flags += '-Wno-pedantic-ms-format'
 endif
@@ -401,6 +399,8 @@ subdir('src/ints')
 subdir('src/midi')
 subdir('src/misc')
 subdir('src/shell')
+subdir('src/custom')
+subdir('src/custom/src')
 
 
 # generate config.h
@@ -430,7 +430,9 @@ executable('dosbox', dosbox_sources,
                            libwhereami_dep]
                           + internal_deps,
            include_directories : incdir,
-           install : true)
+           install : true,
+           link_args : '-rdynamic',
+           )
 # create a library so we can test things inside DOSBOX dep path
 libdosbox = static_library('dosbox', ['src/main.cpp', 'src/dosbox.cpp', version_file],
                         include_directories : incdir,

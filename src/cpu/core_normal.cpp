@@ -27,6 +27,7 @@
 #include "pic.h"
 #include "fpu.h"
 #include "paging.h"
+#include "custom.h"
 
 #if C_DEBUG
 #include "debug.h"
@@ -138,9 +139,39 @@ static inline Bit32u Fetchd() {
 
 #define EALookupTable (core.ea_table)
 
+extern Bitu DasmI386(char* buffer, PhysPt pc, Bitu cur_ip, bool bit32);
+
+namespace m2c {
+extern void log_regs_dbx(const char * file,int line, const char * instr, const CPU_Regs& r, const Segments& s);
+}
+
+void print_instruction(Bit16u newcs, Bit32u newip)
+{
+  char dline[120];
+//  static std::unordered_set<std::string> instr_names;
+  DasmI386(dline,(newcs<<4)+newip,newip,false);
+//  const char * instr = instr_names.insert(dline).first->c_str();
+  m2c::log_regs_dbx("",-1, dline ,cpu_regs,Segs);
+}
+
 Bits CPU_Core_Normal_Run(void) {
 	while (CPU_Cycles-->0) {
 		LOADIP;
+
+		if (!return_point.empty() && return_point.top()==(SegBase(cs)<<12)+cpu_regs.ip.word[0])
+		{
+                  SAVEIP;
+		  FillFlags();
+		  return CBRET_NONE;
+                } // stop interpretation
+
+if (SegBase(cs)!=0xf0000 && trace_instructions)
+{
+  print_instruction(SegBase(cs)>>4,cpu_regs.ip.dword[0]);
+//printf("i%x:%x %s\n",SegBase(cs)>>4,cpu_regs.ip.dword[0], dline);
+}
+//    compare_jump = false;
+
 		core.opcode_index=cpu.code.big*0x200;
 		core.prefixes=cpu.code.big;
 		core.ea_table=&EATable[cpu.code.big*256];

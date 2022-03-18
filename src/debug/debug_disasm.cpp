@@ -63,7 +63,7 @@ Any comments/updates/bug reports to:
 
 */
 #include "dosbox.h"
-#if C_DEBUG
+//#if C_DEBUG
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
@@ -78,7 +78,7 @@ typedef Bit8s  INT8;
 typedef Bit16s INT16;
 typedef Bit32s INT32;
 
-
+extern Bitu DasmI386(char* buffer, PhysPt pc, Bitu cur_ip, bool bit32);
 /* Little endian uint read */
 #define	le_uint8(ptr) (*(UINT8*)ptr)
 
@@ -1116,4 +1116,4 @@ int DasmLastOperandSize()
 	return opsize;
 }
 
-#endif
+//#endif

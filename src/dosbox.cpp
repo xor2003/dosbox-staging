@@ -54,6 +54,7 @@
 #include "midi.h"
 #include "hardware.h"
 #include "ne2000.h"
+#include "custom.h"
 
 Config * control;
 bool shutdown_requested = false;
@@ -132,7 +133,7 @@ void INT10_Init(Section*);
 
 static LoopHandler * loop;
 
-static int ticksRemain;
+int ticksRemain;
 static int64_t ticksLast;
 static int ticksAdded;
 int ticksDone;
@@ -146,10 +147,20 @@ void Null_Init([[maybe_unused]] Section *sec) {
 	// do nothing
 }
 
-static Bitu Normal_Loop() {
+Bitu Normal_Loop() {
 	Bits ret;
 	while (1) {
 		if (PIC_RunQueue()) {
+
+			if (defered_custom_call) {
+//				printf("defered_custom_call = false;\n");
+                                defered_custom_call = false;
+				from_callf = false;
+				printf("Executing interrupt %x:%x\n",Segs.val[cs], reg_eip);
+			        custom_callf(Segs.val[cs], reg_eip);
+				printf("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
+                        } 
+
 			ret = (*cpudecoder)();
 			if (GCC_UNLIKELY(ret<0)) return 1;
 			if (ret>0) {
@@ -160,6 +171,7 @@ static Bitu Normal_Loop() {
 #if C_DEBUG
 			if (DEBUG_ExitLoop()) return 0;
 #endif
+			if (!return_point.empty() && return_point.top()==((Segs.val[cs]<<16) + (reg_eip&0xffff))) return 0;
 		} else {
 			if (!GFX_Events())
 				return 0;
@@ -974,6 +986,10 @@ void DOSBOX_Init() {
 	secprop=control->AddSection_prop("ipx",&IPX_Init,true);
 	Pbool = secprop->Add_bool("ipx", when_idle,  false);
 	Pbool->Set_help("Enable ipx over UDP/IP emulation.");
+#endif
+
+#if DOSBOX_CUSTOM
+	secprop->AddInitFunction(&custom_init);
 #endif
 
 #if C_SLIRP
