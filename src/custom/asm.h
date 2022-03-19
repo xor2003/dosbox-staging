@@ -614,7 +614,7 @@ static void setdata(dd* d, dd s)
 #define realAddress(offset, segment) m2c::raddr_(segment,offset)
 
 
-#define seg_offset(segment) ((dw)((offset(m2c::m,(segment)))>>4))
+#define seg_offset(segment) ((dw)(((db*)(&segment)-(db*)(&m2c::m))>>4))
 
 // DJGPP
 #define MASK_LINEAR(addr)     (((size_t)addr) & 0x000FFFFF)
@@ -1575,7 +1575,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
             m2c::_indent += 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-
+        _state = (_STATE *)2;
         label(_i, _state);
     }
 
