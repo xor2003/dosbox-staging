@@ -1,4 +1,4 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include -Wall -pedantic -DDOSBOX -mno-ms-bitfields -Wno-multichar -Wno-address-of-packed-member -I/include/ncurses  -I. -L.  -ggdb3 -lSDL -Wno-unused-variable -Wno-strict-aliasing -I./src/ -DM2CM2CDEBUG=1
+AM_CPPFLAGS = -I$(top_srcdir)/include -Wall -pedantic -DDOSBOX -mno-ms-bitfields -Wno-multichar -Wno-address-of-packed-member -I/include/ncurses  -I. -L.  -ggdb3 -lSDL -Wno-unused-variable -Wno-strict-aliasing -I./src/ -DM2CDEBUG=1
 
 SUBDIRS = src
 

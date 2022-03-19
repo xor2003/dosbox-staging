@@ -29,6 +29,7 @@
 #include "programs.h"
 #include "regs.h"
 #include "string_utils.h"
+#include "custom.h"
 
 const char * RunningProgram="DOSBOX";
 
@@ -436,6 +437,8 @@ bool DOS_Execute(char * name,PhysPt block_pt,Bit8u flags) {
 		Program::ResetLastWrittenChar('\0'); // triggers newline injection after DOS programs
 	}
 
+	custom_init_prog(name,loadseg,RealSeg(csip)-loadseg,RealOff(csip));
+
 	if ((flags==LOAD) || (flags==LOADNGO)) {
 		/* Get Caller's program CS:IP of the stack and set termination address to that */
 		RealSetVec(0x22,RealMake(mem_readw(SegPhys(ss)+reg_sp+2),mem_readw(SegPhys(ss)+reg_sp)));
@@ -523,6 +526,9 @@ bool DOS_Execute(char * name,PhysPt block_pt,Bit8u flags) {
 		/* Started from debug.com, then set breakpoint at start */
 		DEBUG_CheckExecuteBreakpoint(RealSeg(csip),RealOff(csip));
 #endif
+	printf("\n~Binary loaded to entry point cs=%x eip=%x\n",RealSeg(csip),RealOff(csip));
+		custom_init_entrypoint(name,loadseg);
+
 		return true;
 	}
 	return false;

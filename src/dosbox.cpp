@@ -156,9 +156,9 @@ Bitu Normal_Loop() {
 //				printf("defered_custom_call = false;\n");
                                 defered_custom_call = false;
 				from_callf = false;
-				printf("Executing interrupt %x:%x\n",Segs.val[cs], reg_eip);
+//				printf("Executing interrupt %x:%x\n",Segs.val[cs], reg_eip);
 			        custom_callf(Segs.val[cs], reg_eip);
-				printf("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
+//				printf("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
                         } 
 
 			ret = (*cpudecoder)();
