@@ -215,8 +215,8 @@ namespace m2c
 {
   extern void Initializer ();
 
-#ifdef M2CM2CDEBUG
-  size_t debug = M2CM2CDEBUG;
+#ifdef M2CDEBUG
+  size_t debug = M2CDEBUG;
 #else
   size_t debug = 0;
 #endif
@@ -267,7 +267,7 @@ namespace m2c
         already_in_hw_int = true;
 
         {
-#if M2CM2CDEBUG
+#if M2CDEBUG
 //              log_debug ("Start hw int\n");
 #endif
           fix_segs ();
@@ -275,7 +275,7 @@ namespace m2c
           CPU_CycleAutoAdjust = true;   // So the CPU_Cycles won't be set to 0
           CALLBACK_Idle ();
           CPU_CycleAutoAdjust = oldCPU_CycleAutoAdjust;
-#if M2CM2CDEBUG
+#if M2CDEBUG
 //              log_debug ("Stop hw int\n");
 #endif
         }
@@ -339,7 +339,7 @@ namespace m2c
 
   void mycopy (db * d, db * s, size_t size, const char *name)
   {
-#if M2CM2CDEBUG
+#if M2CDEBUG
     int res = memcmp (d, s, size);
     if (res)
       {

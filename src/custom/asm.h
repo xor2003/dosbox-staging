@@ -335,7 +335,7 @@ dd _source;
     template<class S>
     inline void check_type(const S &) {
 /*
-#if M2CM2CDEBUG >=4
+#if M2CDEBUG >=4
   size_t addr = (((db*)&s)-((db*)&m2c::m));
   if (addr >= (0x1920+0x100) && addr < (0x1920+0x10000) && ( *(S*)(((db*)&m2c::types)+addr) )==0 && s !=0)
      log_debug("Read of uninit addr:%zx size:%zd %zx\n",addr-0x1920,(size_t)sizeof(S),(*(S*)(((db*)&m2c::types)+addr)) );
@@ -418,7 +418,7 @@ dd _source;
     template<class S>
     inline void set_type(const S &) {
 /*
-#if M2CM2CDEBUG>0
+#if M2CDEBUG>0
   size_t addr = (((db*)&s)-((db*)&m2c::m));
   if (addr<0xf0000)
   memset((((db*)&m2c::types)+addr),0xff,sizeof(S));
@@ -1383,7 +1383,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 //#define JP(label) if (GET_PF()) GOTOLABEL(label)
 //#define JNP(label) if (!GET_PF()) GOTOLABEL(label)
 /*
-#if M2CM2CDEBUG >= 3
+#if M2CDEBUG >= 3
  #define MOV(dest,src) {log_debug("%s := %x\n",#dest, src); dest = src;}
 #else
  #define MOV(dest,src) {dest = src;}
@@ -1603,7 +1603,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     void run_hw_interrupts();
 
 
-#if M2CM2CDEBUG //== 1 || M2CDEBUG==2 || M2CDEBUG==3
+#if M2CDEBUG //== 1 || M2CDEBUG==2 || M2CDEBUG==3
 // clean format
 //    #define R(a) {log_debug("%s%x:%d:%s eax: %x ebx: %x ecx: %x edx: %x ebp: %x ds: %x esi: %x es: %x edi: %x fs: %x esp: %x\n",_state->_str,cs/*pthread_self()*/,__LINE__,#a, \
 //eax, ebx, ecx, edx, ebp, ds, esi, es, edi, fs, esp);} \
@@ -1616,7 +1616,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 //    #define T(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;}}
 //    #define X(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;}}
 
-//#elif M2CM2CDEBUG>=4
+//#elif M2CDEBUG>=4
 // clean format
 //    #define R(a) {log_debug("%s%x:%d:%s eax: %x ebx: %x ecx: %x edx: %x ebp: %x ds: %x esi: %x es: %x edi: %x fs: %x esp: %x\n",_state->_str,cs/*pthread_self()*/,__LINE__,#a, \
 //eax, ebx, ecx, edx, ebp, ds, esi, es, edi, fs, esp);} \

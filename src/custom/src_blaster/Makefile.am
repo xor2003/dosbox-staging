@@ -1,4 +1,4 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include -Wall -DDOSBOX -I../ -mno-ms-bitfields -Wno-multichar -Wno-address-of-packed-member -I/include/ncurses  -I. -L.  -ggdb3 -lSDL -std=c++11 -Wno-unused-variable  -Wno-strict-aliasing -Wno-narrowing -fpermissive -O2 # -O0 -DM2CM2CDEBUG=3
+AM_CPPFLAGS = -I$(top_srcdir)/include -Wall -DDOSBOX -I../ -mno-ms-bitfields -Wno-multichar -Wno-address-of-packed-member -I/include/ncurses  -I. -L.  -ggdb3 -lSDL -std=c++11 -Wno-unused-variable  -Wno-strict-aliasing -Wno-narrowing -fpermissive -O2 # -O0 -DM2CDEBUG=3
 
 SUBDIRS = 
 
