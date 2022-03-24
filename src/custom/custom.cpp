@@ -17,6 +17,7 @@
 namespace m2c
 {
   extern size_t debug;
+  extern void load_drivers();
 }
 
 bool compare_instructions = m2c::debug == 1 || m2c::debug == 2;
@@ -48,7 +49,7 @@ static int init = 0;
 
 void init_entrypoint (Bit16u relocate);
 
-//bool __dispatch_call (m2c::_offsets __i, struct m2c::_STATE * _state, db source=0);
+extern bool __dispatch_call (m2c::_offsets __disp, struct m2c::_STATE * _state);
 #ifndef _WIN32
 extern void print_backtrace(uintptr_t pc);
 #endif
@@ -91,7 +92,6 @@ masm2c_exit (unsigned char exit)
 }
 
 
-extern bool __dispatch_call (m2c::_offsets __disp, struct m2c::_STATE * _state);
 // Is the game running?
 /**
 	init_get_fname - copies the filename from src to dst
@@ -213,7 +213,6 @@ custom_init_entrypoint (char *name, Bit16u relocate)
 
 namespace m2c
 {
-  extern void Initializer ();
 
 #ifdef M2CDEBUG
   size_t debug = M2CDEBUG;
@@ -774,6 +773,7 @@ stackDump();
 
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
+
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
         log_info ("~self-modified instruction %x:%x\n", seg, ip1);
@@ -884,6 +884,7 @@ stackDump();
 
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
+
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
         log_info ("~self-modified instruction %x:%x\n", seg, ip1);
@@ -1094,6 +1095,8 @@ init_entrypoint (Bit16u relocate)
 
 //   memset(((db*)&m2c::m)+0x1920+0x100,0,0xfef0);
   m2c::Initializer ();
+
+  m2c::load_drivers();
 
   memcpy (m2c::lm, &m2c::m, COMPARE_SIZE);      // backup memory after program loaded
 /*
