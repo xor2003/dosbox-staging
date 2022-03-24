@@ -101,7 +101,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\include;..\src\libs\ghc;..\src\libs\loguru;..\src\libs\whereami;..\src\platform\visualc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);DOSBOX_CUSTOM;DEBUG=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);DOSBOX_CUSTOM;M2CDEBUG=1</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -279,7 +279,7 @@
     <ClCompile Include="..\src\custom\src_dune\dnprgdrv_seg000.cpp" />
     <ClCompile Include="..\src\custom\src_dune\dnprgdrv_seg002.cpp" />
     <ClCompile Include="..\src\custom\src_dune\dnprgdrv_seg003.cpp" />
-    <ClCompile Include="..\src\custom\src_dune\dnprgdrv_seg004.cpp" />
+    <ClCompile Include="..\src\custom\src_dune\dnprgdrv_seg005.cpp" />
     <ClCompile Include="..\src\dosbox.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\cpu\callback.cpp" />
