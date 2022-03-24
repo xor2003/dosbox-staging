@@ -1529,7 +1529,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
         POP(ip);
         if (ip != 'xy') {
             log_error("Emulated stack corruption detected (found %x)\n", ip);
-            m2c::stackDump();
+//            m2c::stackDump();
         }
         esp += i;
         if (debug>2) {
@@ -1647,6 +1647,14 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     {a;} \
         m2c::Xend(__FILE__,__LINE__,#a);} \
         }
+
+
+#elif M2CDEBUG == -1
+
+#define R(a) {a;}
+#define J(a) {a;}
+#define T(a) {a;}
+#define X(a) {a;}
 
 #else
 

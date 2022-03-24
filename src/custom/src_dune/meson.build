@@ -4,7 +4,7 @@ libsrc_sources = files([
   'dnprgdrv_seg000.cpp',
   'dnprgdrv_seg002.cpp',
   'dnprgdrv_seg003.cpp',
-  'dnprgdrv_seg004.cpp',
+  'dnprgdrv_seg005.cpp',
   'init.cpp',
   '_data.cpp',
 ])
