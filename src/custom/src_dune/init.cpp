@@ -1,4 +1,6 @@
+#include "../asm.h"
 #include <cstring>
+#include <cstdio>
 
 void init_get_fname(char *dst, char *src);
 
@@ -18,3 +20,14 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 }
 
 
+namespace m2c
+{
+  void load_drivers()
+  {
+    fread(raddr(0x24ed,0x100),0xffff,1,fopen("DN386.HSQ","r"));
+    fread(raddr(0x47d8,0x100),0xffff,1,fopen("DNSBP.HSQ","r"));
+    fread(raddr(0x4d44,0x100),0xffff,1,fopen("DNMID.HSQ","r"));
+    
+
+  }
+}
