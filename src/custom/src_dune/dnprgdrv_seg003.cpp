@@ -679,14 +679,8 @@ cs=0x47d8;eip=0x0005a1; 	T(MOV(al, 0x20));	// 71268 mov     al, 20h ; ' ' ;~ 47D
 cs=0x47d8;eip=0x0005a3; 	T(CMP(*(&byte_565e7), 8));	// 71269 cmp     cs:byte_565E7, 8 ;~ 47D8:05A3
 cs=0x47d8;eip=0x0005a9; 	J(JC(loc_5690f));	// 71270 jb      short loc_5690F ;~ 47D8:05A9
 cs=0x47d8;eip=0x0005ab; 	R(OUT(0x0A0, al));	// 71271 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 47D8:05AB
-<<<<<<< HEAD
 cs=0x47d8;eip=0x0005ad; 	R(
 );	// 71272 jmp     short $+2 ;~ 47D8:05AD
-=======
-cs = 0x47d8;
-eip = 0x0005ad;
-R({ ; });	// 71272 jmp     short $+2 ;~ 47D8:05AD
->>>>>>> dc9d5c3e (win fixes)
 loc_5690f:
 	// 8721 
 cs=0x47d8;eip=0x0005af; 	R(OUT(0x20, al));	// 71277 out     20h, al         ; Interrupt controller, 8259A. ;~ 47D8:05AF

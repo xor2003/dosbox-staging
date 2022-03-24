@@ -29426,14 +29426,8 @@ cs=0x1a2;eip=0x00d884; 	J(JNZ(loc_1d893));	// 34462 jnz     short loc_1D893 ;~ 0
 cs=0x1a2;eip=0x00d886; 	J(CALL(sub_1d50f,0));	// 34463 call    sub_1D50F ;~ 01A2:D886
 cs=0x1a2;eip=0x00d889; 	T(MOV(ax, cx));	// 34464 mov     ax, cx ;~ 01A2:D889
 cs=0x1a2;eip=0x00d88b; 	T(OR(ax, di));	// 34465 or      ax, di ;~ 01A2:D88B
-<<<<<<< HEAD
 cs=0x1a2;eip=0x00d88d; 	R(
 );	// 34466 jz      short $+2 ;~ 01A2:D88D
-=======
-cs = 0x1a2;
-eip = 0x00d88d;
-R({ ; }); // 34466 jz      short $+2 ;~ 01A2:D88D
->>>>>>> dc9d5c3e (win fixes)
 loc_1d88f:
 	// 7461 
 cs=0x1a2;eip=0x00d88f; 	J(CALL(__dispatch_call,*(dw*)(raddr(ds,si))));	// 34469 call    word ptr [si] ;~ 01A2:D88F
