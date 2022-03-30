@@ -1840,6 +1840,7 @@ dw _source;
 }
 
 extern void print_instruction(Bit16u newcs, Bit32u newip);
+extern void print_instruction_direct(Bit16u newcs, Bit32u newip);
 
 extern struct SDL_Renderer *renderer;
 
