@@ -6098,6 +6098,7 @@ ret_1a2_34ca:
 	// 4970 
 cs=0x1a2;eip=0x0034ca; 	X(MOV(*(dw*)(raddr(ds,0x7A)), bx));	// 6826 mov     ds:7Ah, bx ;~ 01A2:34CA
 cs=0x1a2;eip=0x0034ce; 	X(ADD(*(dw*)(raddr(ds,0x7A)), 2));	// 6827 add     word ptr ds:7Ah, 2 ;~ 01A2:34CE
+ret_1a2_34d3:
 cs=0x1a2;eip=0x0034d3; 	T(MOV(bx, *(dw*)(raddr(es,bx))));	// 6828 mov     bx, es:[bx] ;~ 01A2:34D3
 cs=0x1a2;eip=0x0034d6; 	R(RETN(0));	// 6829 retn ;~ 01A2:34D6
 ret_1a2_34d7:
@@ -15731,6 +15732,7 @@ cs=0x1a2;eip=0x007a5b; 	R(RETN(0));	// 16005 retn ;~ 01A2:7A5B
         case m2c::kret_1a2_3485: 	goto ret_1a2_3485;
         case m2c::kret_1a2_348a: 	goto ret_1a2_348a;
         case m2c::kret_1a2_34ca: 	goto ret_1a2_34ca;
+        case m2c::kret_1a2_34d3: 	goto ret_1a2_34d3;
         case m2c::kret_1a2_34d7: 	goto ret_1a2_34d7;
         case m2c::kret_1a2_34dc: 	goto ret_1a2_34dc;
         case m2c::kret_1a2_356: 	goto ret_1a2_356;

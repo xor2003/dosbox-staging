@@ -1568,7 +1568,9 @@ cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();if (from_callf) m2c::interpret_unkno
         case m2c::kret_1a2_4909: 	_group1(__disp, _state); break;
         case m2c::kloc_15b22: 	_group1(__disp, _state); break;
         case m2c::klocret_178f0: 	_group1(__disp, _state); break;
+
         case m2c::kret_1a2_34ca: 	_group1(__disp, _state); break;
+        case m2c::kret_1a2_34d3: 	_group1(__disp, _state); break;
         case m2c::kloc_10ec9: 	_group1(__disp, _state); break;
         case m2c::kloc_15886: 	_group1(__disp, _state); break;
         case m2c::kloc_11780: 	_group1(__disp, _state); break;
