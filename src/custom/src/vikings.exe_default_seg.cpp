@@ -4,7 +4,7 @@
  *
  */
 
-                #include "dnprgdrv.h"
+                #include "vikings.exe.h"
 
                 
 
@@ -16,7 +16,7 @@
     else goto __dispatch_call;
     mainproc:
     _begin:
-	R(CALL(start,0));	R(RETN(0));
+	J(CALL(start,0));	R(RETN(0));
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
