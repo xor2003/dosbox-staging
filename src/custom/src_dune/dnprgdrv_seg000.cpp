@@ -28057,6 +28057,7 @@ sub_1cf70:
 	// 32858 
 cs=0x1a2;eip=0x00cf70; 	X(PUSH(bx));	// 32860 push    bx ;~ 01A2:CF70
 ret_1a2_cf71:
+printf("string id %x ",si);
 	// 7318 
 cs=0x1a2;eip=0x00cf71; 	T(DEC(si));	// 32861 dec     si ;~ 01A2:CF71
 cs=0x1a2;eip=0x00cf72; 	T(TEST(si, 0x800));	// 32862 test    si, 800h ;~ 01A2:CF72
@@ -28070,6 +28071,11 @@ cs=0x1a2;eip=0x00cf88; 	T(MOV(bx, *(dw*)(raddr(es,bx))));	// 32869 mov     bx, e
 cs=0x1a2;eip=0x00cf8b; 	T(MOV(bx, *(dw*)(raddr(es,bx-2))));	// 32870 mov     bx, es:[bx-2] ;~ 01A2:CF8B
 cs=0x1a2;eip=0x00cf8f; 	X(MOV(*(dw*)(((db*)&word_23c64)), bx));	// 32871 mov     ds:word_23C64, bx ;~ 01A2:CF8F
 cs=0x1a2;eip=0x00cf93; 	X(POP(bx));	// 32872 pop     bx ;~ 01A2:CF93
+{
+size_t ii=0;
+while (*raddr(es,si+ii)!=0xff) putchar(*raddr(es,si+ ii++));
+putchar('\n');
+}
 cs=0x1a2;eip=0x00cf94; 	R(RETN(0));	// 32873 retn ;~ 01A2:CF94
 loc_1cf95:
 	// 7319 
@@ -28077,6 +28083,11 @@ cs=0x1a2;eip=0x00cf95; 	T(SHL(si, 1));	// 32877 shl     si, 1 ;~ 01A2:CF95
 cs=0x1a2;eip=0x00cf97; 	T(LES(bx, *(dd*)(((db*)&dword_23c5c))));	// 32878 les     bx, ds:dword_23C5C ;~ 01A2:CF97
 cs=0x1a2;eip=0x00cf9b; 	T(MOV(si, *(dw*)(raddr(es,bx+si))));	// 32879 mov     si, es:[bx+si] ;~ 01A2:CF9B
 cs=0x1a2;eip=0x00cf9e; 	X(POP(bx));	// 32880 pop     bx ;~ 01A2:CF9E
+{
+size_t ii=0;
+while (*raddr(es,si+ii)!=0xff) putchar(*raddr(es,si+ ii++));
+putchar('\n');
+}
 cs=0x1a2;eip=0x00cf9f; 	R(RETN(0));	// 32881 retn ;~ 01A2:CF9F
 _sub_1cfa0_check_amr_or_eng_language:
 	// 32888 
@@ -28840,23 +28851,30 @@ cs=0x1a2;eip=0x00d453; 	R(RETN(0));	// 33780 retn ;~ 01A2:D453
 sub_1d454:
 	// 33785 
 cs=0x1a2;eip=0x00d454; 	T(MOV(si, *(dw*)(raddr(ds,0x21DA))));	// 33787 mov     si, ds:21DAh ;~ 01A2:D454
-printf("menu offset %x\n",si);
+printf("\n~1 ds:21da %x:%x\n",ds,si);
 ret_1a2_d458:
 	// 7400 
 cs=0x1a2;eip=0x00d458; 	T(MOV(si, *(dw*)(raddr(ds,si))));	// 33788 mov     si, [si] ;~ 01A2:D458
+printf("~1.5 menu strct off %x\n",si);
 cs=0x1a2;eip=0x00d45a; 	T(INC(si));	// 33789 inc     si ;~ 01A2:D45A
 cs=0x1a2;eip=0x00d45b; 	T(XOR(ch, ch));	// 33790 xor     ch, ch ;~ 01A2:D45B
+printf("~2 buttonnr cl %x\n",cl);
+
 cs=0x1a2;eip=0x00d45d; 	T(CMP(cl, *(raddr(ds,0x0DCE5))));	// 33791 cmp     cl, ds:0DCE5h ;~ 01A2:D45D
 cs=0x1a2;eip=0x00d461; 	J(JZ(loc_1d475));	// 33792 jz      short loc_1D475 ;~ 01A2:D461
 cs=0x1a2;eip=0x00d463; 	T(LODSB);	// 33793 lodsb ;~ 01A2:D463
 cs=0x1a2;eip=0x00d464; 	T(CBW);	// 33794 cbw ;~ 01A2:D464
+printf("~3 al %x\n",al);
+
 cs=0x1a2;eip=0x00d465; 	T(ADD(si, ax));	// 33795 add     si, ax ;~ 01A2:D465
 cs=0x1a2;eip=0x00d467; 	T(MOV(ax, cx));	// 33796 mov     ax, cx ;~ 01A2:D467
 cs=0x1a2;eip=0x00d469; 	T(SHL(ax, 1));	// 33797 shl     ax, 1 ;~ 01A2:D469
 cs=0x1a2;eip=0x00d46b; 	T(SHL(ax, 1));	// 33798 shl     ax, 1 ;~ 01A2:D46B
 cs=0x1a2;eip=0x00d46d; 	T(ADD(si, ax));	// 33799 add     si, ax ;~ 01A2:D46D
+printf("~4 si %x\n",si);
 cs=0x1a2;eip=0x00d46f; 	T(MOV(ax, *(dw*)(raddr(ds,si))));	// 33800 mov     ax, [si] ;~ 01A2:D46F
 cs=0x1a2;eip=0x00d471; 	T(MOV(bx, *(dw*)(raddr(ds,si+2))));	// 33801 mov     bx, [si+2] ;~ 01A2:D471
+printf("~5 string id %x proc offs %x\n",ax,bx);
 cs=0x1a2;eip=0x00d474; 	R(RETN(0));	// 33802 retn ;~ 01A2:D474
 loc_1d475:
 	// 7401 
@@ -28871,7 +28889,7 @@ locret_1d489:
 	// 7402 
 cs=0x1a2;eip=0x00d489; 	R(RETN(0));	// 33816 retn ;~ 01A2:D489
 sub_1d48a:
-printf("string id %x\n",ax);
+//printf("string id %x\n",ax);
 	// 33823 
 cs=0x1a2;eip=0x00d48a; 	X(PUSH(*(dw*)(((db*)&_word_2d08a_framebuffer_active))));	// 33825 push    ds:_word_2D08A_framebuffer_active ;~ 01A2:D48A
 ret_1a2_d48e:
