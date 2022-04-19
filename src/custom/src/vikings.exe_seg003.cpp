@@ -2905,7 +2905,7 @@ cs=0xe25;eip=0x0018f4; 	T(MOV(di, *(dw*)(raddr(ds,di-0x7608))));	// 36504 mov   
 cs=0xe25;eip=0x0018f8; 	T(ADD(dx, 4));	// 36505 add     dx, 4 ;~ 0E25:18F8
 cs=0xe25;eip=0x0018fb; 	T(SHL(dx, 1));	// 36506 shl     dx, 1 ;~ 0E25:18FB
 cs=0xe25;eip=0x0018fd; 	T(ADD(di, dx));	// 36507 add     di, dx ;~ 0E25:18FD
-cs=0xe25;eip=0x0018ff; 	X(PUSH(0x0A000));	// 36508 push    0A000h ;~ 0E25:18FF
+cs=0xe25;eip=0x0018ff; 	X(PUSH((dw)0x0A000));	// 36508 push    0A000h ;~ 0E25:18FF
 cs=0xe25;eip=0x001902; 	X(POP(es));	// 36509 pop     es ;~ 0E25:1902
 loc_1e133:
 	// 6299 
