@@ -154,6 +154,15 @@ void print_instruction(Bit16u newcs, Bit32u newip)
   m2c::log_regs_dbx("",-1, dline ,cpu_regs,Segs);
 }
 
+void print_instruction_direct(Bit16u newcs, Bit32u newip)
+{
+  char dline[120];
+//  static std::unordered_set<std::string> instr_names;
+  DasmI386(dline,(newcs<<4)+newip,newip,false);
+//  const char * instr = instr_names.insert(dline).first->c_str();
+  puts(dline);puts("\n");
+}
+
 Bits CPU_Core_Normal_Run(void) {
 	while (CPU_Cycles-->0) {
 		LOADIP;

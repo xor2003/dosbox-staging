@@ -491,7 +491,7 @@ print_backtrace(0);
     shadow_stack.print (0);
   }
 
-  void log_regs_dbx_real (size_t counter_, const char *file, int line, db indent, const char *instr, const CPU_Regs & r,
+  void log_regs_dbx_direct (size_t counter_, const char *file, int line, db indent, const char *instr, const CPU_Regs & r,
                                  const Segments & s)
   {
 /*
@@ -553,7 +553,7 @@ struct CPU_Regs {
     while (!trace_store.empty ())
       {
         CPU_State& cs = trace_store.front ();
-        log_regs_dbx_real (cs.counter, cs.file, cs.line, cs.indent, cs.instr.c_str(), cs.regs, cs.segs);
+        log_regs_dbx_direct (cs.counter, cs.file, cs.line, cs.indent, cs.instr.c_str(), cs.regs, cs.segs);
         trace_store.pop_front ();
       }
   }
@@ -572,7 +572,7 @@ struct CPU_Regs {
           }
         else
           {
-        log_regs_dbx_real(counter, file, line, _indent, instr, r, s);
+        log_regs_dbx_direct(counter, file, line, _indent, instr, r, s);
           }
       }
   }
@@ -660,7 +660,7 @@ else if (op1 == 0x0f) //j
         printf ("~self-modified instruction %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction (seg, ip1);
+        ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
         compare_jump = false;
       }
@@ -699,15 +699,15 @@ stackDump();
         bool regs_ch = memcmp (&cpu_regs, &realcpu_regs, sizeof (CPU_Regs));
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
         printf ("before ");
-        log_regs_dbx_real (0,"", 0, 0, instr, oldcpu_regs, oldSegs);
+        log_regs_dbx_direct (0,"", 0, 0, instr, oldcpu_regs, oldSegs);
         printf ("/j-----------------------------Error-----------------------------------------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
-        ::print_instruction (oldSegs.val[1], oldip);
+        ::print_instruction_direct (oldSegs.val[1], oldip);
         hexDump (raddr (Segs.val[1], oldip), 8);
 
         printf ("~m2c ");
-        log_regs_dbx_real (0,"", 0, 0, instr, cpu_regs, Segs);
+        log_regs_dbx_direct (0,"", 0, 0, instr, cpu_regs, Segs);
 
         if (regs_ch)
           {
@@ -724,7 +724,7 @@ stackDump();
         cpu_regs = realcpu_regs;
 
         printf ("~dbx ");
-        log_regs_dbx_real (0,"", 0, 0, instr, realcpu_regs, realSegs);
+        log_regs_dbx_direct (0,"", 0, 0, instr, realcpu_regs, realSegs);
         if (regs_ch)
           {
             printf ("reg ");
@@ -779,7 +779,7 @@ stackDump();
         log_info ("~self-modified instruction %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction (seg, ip1);
+        ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
         return false;
       }
@@ -811,15 +811,15 @@ stackDump();
         bool regs_ch = memcmp (&cpu_regs, &realcpu_regs, sizeof (CPU_Regs));
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
         printf ("before ");
-        log_regs_dbx_real (0,"", line, 0, instr, oldcpu_regs, oldSegs);
+        log_regs_dbx_direct (0,"", line, 0, instr, oldcpu_regs, oldSegs);
         printf ("/t-----------------------------Error-----------------------------------------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
-        ::print_instruction (oldSegs.val[1], oldip);
+        ::print_instruction_direct (oldSegs.val[1], oldip);
         hexDump (raddr (Segs.val[1], oldip), 8);
 
         printf ("~m2c ");
-        log_regs_dbx_real (0, file, line, 0, instr, cpu_regs, Segs);
+        log_regs_dbx_direct (0, file, line, 0, instr, cpu_regs, Segs);
 
         if (regs_ch)
           {
@@ -836,7 +836,7 @@ stackDump();
         cpu_regs = realcpu_regs;
 
         printf ("~dbx ");
-        log_regs_dbx_real (0,file, line, 0, instr, realcpu_regs, realSegs);
+        log_regs_dbx_direct (0,file, line, 0, instr, realcpu_regs, realSegs);
         if (regs_ch)
           {
             printf ("reg ");
@@ -890,7 +890,7 @@ stackDump();
         log_info ("~self-modified instruction %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction (seg, ip1);
+        ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
         return false;
       }
@@ -927,14 +927,14 @@ stackDump();
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
         bool mem_ch = memcmp (&m, rm, COMPARE_SIZE);
         printf ("before ");
-        log_regs_dbx_real (0,"", line, 0, instr, oldcpu_regs, oldSegs);
+        log_regs_dbx_direct (0,"", line, 0, instr, oldcpu_regs, oldSegs);
         printf ("/x-----------------------------Error-----------------------------------------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
-        ::print_instruction (oldSegs.val[1], oldip);
+        ::print_instruction_direct (oldSegs.val[1], oldip);
         hexDump (raddr (Segs.val[1], oldip), 8);
         printf ("~m2c ");
-        log_regs_dbx_real (0, file, line, 0, instr, cpu_regs, Segs);
+        log_regs_dbx_direct (0, file, line, 0, instr, cpu_regs, Segs);
         if (regs_ch)
           {
             printf ("reg ");
@@ -949,7 +949,7 @@ stackDump();
         Segs = realSegs;
         cpu_regs = realcpu_regs;
         printf ("~dbx ");
-        log_regs_dbx_real (0,file, line, 0, instr, realcpu_regs, realSegs);
+        log_regs_dbx_direct (0,file, line, 0, instr, realcpu_regs, realSegs);
         if (regs_ch)
           {
             printf ("reg ");
