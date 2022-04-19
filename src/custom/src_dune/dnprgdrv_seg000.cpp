@@ -28840,6 +28840,7 @@ cs=0x1a2;eip=0x00d453; 	R(RETN(0));	// 33780 retn ;~ 01A2:D453
 sub_1d454:
 	// 33785 
 cs=0x1a2;eip=0x00d454; 	T(MOV(si, *(dw*)(raddr(ds,0x21DA))));	// 33787 mov     si, ds:21DAh ;~ 01A2:D454
+printf("menu offset %x\n",si);
 ret_1a2_d458:
 	// 7400 
 cs=0x1a2;eip=0x00d458; 	T(MOV(si, *(dw*)(raddr(ds,si))));	// 33788 mov     si, [si] ;~ 01A2:D458
@@ -28870,6 +28871,7 @@ locret_1d489:
 	// 7402 
 cs=0x1a2;eip=0x00d489; 	R(RETN(0));	// 33816 retn ;~ 01A2:D489
 sub_1d48a:
+printf("string id %x\n",ax);
 	// 33823 
 cs=0x1a2;eip=0x00d48a; 	X(PUSH(*(dw*)(((db*)&_word_2d08a_framebuffer_active))));	// 33825 push    ds:_word_2D08A_framebuffer_active ;~ 01A2:D48A
 ret_1a2_d48e:
@@ -29426,9 +29428,8 @@ cs=0x1a2;eip=0x00d884; 	J(JNZ(loc_1d893));	// 34462 jnz     short loc_1D893 ;~ 0
 cs=0x1a2;eip=0x00d886; 	J(CALL(sub_1d50f,0));	// 34463 call    sub_1D50F ;~ 01A2:D886
 cs=0x1a2;eip=0x00d889; 	T(MOV(ax, cx));	// 34464 mov     ax, cx ;~ 01A2:D889
 cs=0x1a2;eip=0x00d88b; 	T(OR(ax, di));	// 34465 or      ax, di ;~ 01A2:D88B
-cs = 0x1a2;
-eip = 0x00d88d;
-R({ ; });	// 34466 jz      short $+2 ;~ 01A2:D88D
+cs=0x1a2;eip=0x00d88d; 	R(
+);	// 34466 jz      short $+2 ;~ 01A2:D88D
 loc_1d88f:
 	// 7461 
 cs=0x1a2;eip=0x00d88f; 	J(CALL(__dispatch_call,*(dw*)(raddr(ds,si))));	// 34469 call    word ptr [si] ;~ 01A2:D88F
