@@ -657,7 +657,7 @@ else if (op1 == 0x0f) //j
 
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
-        printf ("~self-modified instruction %x:%x\n", seg, ip1);
+        printf ("~self-modified instruction at %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
@@ -700,7 +700,7 @@ stackDump();
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
         printf ("before ");
         log_regs_dbx_direct (0,"", 0, 0, instr, oldcpu_regs, oldSegs);
-        printf ("/j-----------------------------Error-----------------------------------------\\\n");
+        printf ("/j-------------Error-during-jump-or-call-result-was-different-to-dosbox-interpreter-------------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
         ::print_instruction_direct (oldSegs.val[1], oldip);
@@ -776,7 +776,7 @@ stackDump();
 
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
-        log_info ("~self-modified instruction %x:%x\n", seg, ip1);
+        log_info ("~self-modified instruction at %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
@@ -812,7 +812,7 @@ stackDump();
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
         printf ("before ");
         log_regs_dbx_direct (0,"", line, 0, instr, oldcpu_regs, oldSegs);
-        printf ("/t-----------------------------Error-----------------------------------------\\\n");
+        printf ("/t-----------------Error-results-of-instruction-was-different-within-regs-if-compare-with-dosbox-interpreter------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
         ::print_instruction_direct (oldSegs.val[1], oldip);
@@ -887,7 +887,7 @@ stackDump();
 
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
-        log_info ("~self-modified instruction %x:%x\n", seg, ip1);
+        log_info ("~self-modified instruction at %x:%x\n", seg, ip1);
         //hexDump (m2c::lm+(seg<<4)+ip1, 5);
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
@@ -928,7 +928,7 @@ stackDump();
         bool mem_ch = memcmp (&m, rm, COMPARE_SIZE);
         printf ("before ");
         log_regs_dbx_direct (0,"", line, 0, instr, oldcpu_regs, oldSegs);
-        printf ("/x-----------------------------Error-----------------------------------------\\\n");
+        printf ("/x------Error-results-of-instruction-was-different-within-regs--or-memory-if-compare-with-dosbox-interpreter------\\\n");
 //        cpu_regs.ip.word[0] = oldip;
         printf ("cs:ip: ");
         ::print_instruction_direct (oldSegs.val[1], oldip);
