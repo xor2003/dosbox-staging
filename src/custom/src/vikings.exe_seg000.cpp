@@ -981,8 +981,8 @@ sub_108b8:
 cs=0x1a2;eip=0x0008b8; 	J(CALL(sub_12ce4,0));	// 1146 call    sub_12CE4 ;~ 01A2:08B8
 ret_1a2_8bb:
 	// 4480 
-cs=0x1a2;eip=0x0008bb; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_124c9)), 0x27));	// 1147 mov     word ptr ds:loc_124C9, 27h ; ''' ;~ 01A2:08BB
-cs=0x1a2;eip=0x0008c1; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_102bd+5)), 0));	// 1148 mov     word ptr ds:loc_102BD+5, 0 ;~ 01A2:08C1
+cs=0x1a2;eip=0x0008bb; 	X(MOV(*(dw*)(raddr(ds,0x25c9)), 0x27));	// 1147 mov     word ptr ds:loc_124C9, 27h ; ''' ;~ 01A2:08BB
+cs=0x1a2;eip=0x0008c1; 	X(MOV(*(dw*)(raddr(ds,0x3c2)), 0));	// 1148 mov     word ptr ds:loc_102BD+5, 0 ;~ 01A2:08C1
 cs=0x1a2;eip=0x0008c7; 	R(RETN(0));	// 1149 retn ;~ 01A2:08C7
 sub_108c8:
 	// 1156 
