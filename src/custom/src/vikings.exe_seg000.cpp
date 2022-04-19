@@ -127,7 +127,7 @@ loc_1012d:
 cs=0x1a2;eip=0x00012d; 	J(JMP(loc_1001e));	// 141 jmp     loc_1001E ;~ 01A2:012D
 sub_10130:
 	// 148 
-cs=0x1a2;eip=0x000130; 	T(CMP(*(dw*)(((db*)&word_1a29c)), 1));	// 150 cmp     ds:word_1A29C, 1 ;~ 01A2:0130
+cs=0x1a2;eip=0x000130; 	T(CMP(*(dw*)raddr(ds,0xa39c), 1));	// 150 cmp     ds:word_1A29C, 1 ;~ 01A2:0130
 ret_1a2_135:
 	// 4377 
 cs=0x1a2;eip=0x000135; 	J(JGE(sub_10130));	// 151 jge     short sub_10130 ;~ 01A2:0135
