@@ -60,6 +60,8 @@ static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) +
 #define LODSW {ax = mem_readw((db*)m2c::raddr_(ds,si)-(db*)&m2c::m); si+=(GET_DF()==0)?2:-2;}
 #define LODSD {eax = mem_readd((db*)m2c::raddr_(ds,si)-(db*)&m2c::m); si+=(GET_DF()==0)?4:-4;}
 
+#define OUTSB {OUT(dx,(db)mem_readb((db*)m2c::raddr_(ds,si)-(db*)&m2c::m)); si+=(GET_DF()==0)?1:-1;}
+#define OUTSW {OUT(dx,(dw)mem_readw((db*)m2c::raddr_(ds,si)-(db*)&m2c::m)); si+=(GET_DF()==0)?2:-2;}
 
  #ifdef MSB_FIRST
   #define STOSB STOS(1,3)
