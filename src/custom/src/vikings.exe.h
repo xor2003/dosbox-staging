@@ -5228,6 +5228,7 @@ static const dd kloc_1349c = 0x1a2349c;
 static const dd kloc_134ac = 0x1a234ac;
 static const dd kloc_134b6 = 0x1a234b6;
 static const dd kret_1a2_34ca = 0x1a234ca;
+static const dd kret_1a2_34d3 = 0x1a234d3;
 static const dd kret_1a2_34d7 = 0x1a234d7;
 static const dd kret_1a2_34dc = 0x1a234dc;
 static const dd kloc_1352c = 0x1a2352c;
