@@ -652,7 +652,8 @@ m_needtoskipcall(0) {}
         void print(_STATE *_state);
         void itiscall() {m_itiscall=true;}
         void itisret() {m_itisret=true;}
-        size_t needtoskipcalls(){return m_needtoskipcall;}
+        bool doneedtoskipcalls(){return m_needtoskipcall;}
+        size_t needtoskipcalls(){size_t ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
 
     };
 
@@ -1555,7 +1556,7 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        if (shadow_stack.needtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
+        if (shadow_stack.doneedtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
     }
 
 #define RETF(i) {m2c::RETF_(i); return true;}
@@ -1579,7 +1580,7 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        if (shadow_stack.needtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
+        if (shadow_stack.doneedtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
     }
 
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
@@ -1603,7 +1604,7 @@ struct StackPop
         }
         catch(const StackPop& ex)
         {
-             if (ex.deep>0)
+             if (ex.deep-1 > 0)
 		throw StackPop(ex.deep-1);
         }
     }
