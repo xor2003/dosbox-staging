@@ -633,18 +633,21 @@ static void setdata(dd* d, dd s)
             dw *pointer_;
             size_t addcounter;
             size_t remcounter;
+            bool itwascall;
         };
 
         std::vector<Frame> m_ss;
         size_t m_current;
+        bool m_itiscall;
     public:
-        ShadowStack() : m_current(0) {}
+        ShadowStack() : m_current(0),m_itiscall(false) {}
 
         void push(_STATE *_state, dd value);
 
         void pop(_STATE *_state);
 
         void print(_STATE *_state);
+        void itiscall() {m_itiscall=true;}
 
     };
 
@@ -1521,6 +1524,15 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #else
 // Multiproc
 
+struct StackPop
+{
+   explicit StackPop(size_t deep=1)
+    :deep(deep)
+   {}
+
+   size_t deep;
+};
+
 #define RETN(i) {m2c::RETN_(i); if (ip=='xy') return true; else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 
     static void RETN_(size_t i) {
@@ -1576,7 +1588,14 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
         _state = (_STATE *)2;
-        label(_i, _state);
+        try{
+            label(_i, _state);
+        }
+        catch(const StackPop& ex)
+        {
+             if (ex.deep>0)
+		throw StackPop(ex.deep-1);
+        }
     }
 
 
