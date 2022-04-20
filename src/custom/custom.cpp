@@ -1031,6 +1031,7 @@ if (debug > 0)
         f.addcounter = m2c::counter;
         f.remcounter = 0;
         f.pointer_ = (dw *) m2c::raddr_ (ss, sp);
+        f.itwascall = m_itiscall;
         if (m_current == m_ss.size ())
           m_ss.resize (m_current + 1);
         m_ss[m_current++] = f;
