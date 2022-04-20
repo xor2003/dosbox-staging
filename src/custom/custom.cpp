@@ -221,7 +221,7 @@ namespace m2c
 #endif
 
   size_t counter = 0;
-  ShadowStack shadow_stack;;
+  ShadowStack shadow_stack;
 
   db om[COMPARE_SIZE];          // for instruction trace compare
   db rm[COMPARE_SIZE];
@@ -1032,6 +1032,7 @@ if (debug > 0)
         f.remcounter = 0;
         f.pointer_ = (dw *) m2c::raddr_ (ss, sp);
         f.itwascall = m_itiscall;
+        m_itiscall = false;
         if (m_current == m_ss.size ())
           m_ss.resize (m_current + 1);
         m_ss[m_current++] = f;
@@ -1056,10 +1057,18 @@ if (debug > 0)
                   log_error ("uncontrolled pop was before %x\n", tsp);
                 if (tsp <= sp)
                   m_ss[--m_current].remcounter = m2c::counter;
+                  if (m_ss[m_current].itwascall && !m_itisret)
+                  {
+                    log_error ("It was call. It should be ret now but it is pop %x\n", tsp);
+                    ++m_needtoskipcall;
+                  }
+
               }
+
             while (tsp < sp);
           }
       }
+      m_itisret = false;
   }
 
   void ShadowStack::print (_STATE * _state)
