@@ -639,8 +639,11 @@ static void setdata(dd* d, dd s)
         std::vector<Frame> m_ss;
         size_t m_current;
         bool m_itiscall;
+        bool m_itisret;
+        size_t m_needtoskipcall;
     public:
-        ShadowStack() : m_current(0),m_itiscall(false) {}
+        ShadowStack() : m_current(0),m_itiscall(false),m_itisret(false),
+m_needtoskipcall(0) {}
 
         void push(_STATE *_state, dd value);
 
@@ -648,6 +651,8 @@ static void setdata(dd* d, dd s)
 
         void print(_STATE *_state);
         void itiscall() {m_itiscall=true;}
+        void itisret() {m_itisret=true;}
+        size_t needtoskipcalls(){return m_needtoskipcall;}
 
     };
 
@@ -1538,6 +1543,7 @@ struct StackPop
     static void RETN_(size_t i) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
+        shadow_stack.itisret();
         POP(ip);
         if (ip != 'xy') {
             log_error("Emulated stack corruption detected (found %x)\n", ip);
@@ -1549,6 +1555,7 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+        if (shadow_stack.needtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
     }
 
 #define RETF(i) {m2c::RETF_(i); return true;}
@@ -1556,6 +1563,7 @@ struct StackPop
     static void RETF_(size_t i) {
         X86_REGREF
         if (debug>2) log_debug("before retf %x\n", stackPointer);
+        shadow_stack.itisret();
         m2c::MWORDSIZE averytemporary9 = 0;
         POP(averytemporary9);
         if (averytemporary9 != 'xy') {
@@ -1571,6 +1579,7 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+        if (shadow_stack.needtoskipcalls()) throw StackPop(shadow_stack.needtoskipcalls());
     }
 
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
@@ -1578,6 +1587,7 @@ struct StackPop
     static void CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
+        shadow_stack.itiscall();
         m2c::MWORDSIZE averytemporary8 = 'xy';
         PUSH(averytemporary8);
 
