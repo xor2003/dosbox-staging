@@ -1059,7 +1059,7 @@ if (debug > 0)
                   m_ss[--m_current].remcounter = m2c::counter;
                   if (m_ss[m_current].itwascall && !m_itisret)
                   {
-                    log_error ("It was call. It should be ret now but it is pop %x\n", tsp);
+                    log_error ("~~It was call. It should be ret now but it is pop %x\n", tsp);
                     ++m_needtoskipcall;
                   }
 
