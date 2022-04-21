@@ -11,6 +11,9 @@ make.log
 .current_build
 *.defines
 missed.txt
+*.am
+*.in
+Makefile
 
 # Common names for meson build dirs
 build
