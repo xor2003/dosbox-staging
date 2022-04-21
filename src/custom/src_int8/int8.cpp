@@ -15,12 +15,12 @@
 namespace m2c{ m2cf* _ENTRY_POINT_ = &_main;}
 
 
- void _main(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::k_main, _state);}
+ bool _main(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::k_main, _state);}
 
- void _int8(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::k_int8, _state);}
+ bool _int8(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::k_int8, _state);}
 
 
- void mainproc(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool mainproc(m2c::_offsets _i, struct m2c::_STATE* _state){
     mainproc:
     X86_REGREF
     __disp = _i;
@@ -30,17 +30,17 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &_main;}
     _begin:
 	R(CALL(_main,0));
 
-    return;
+    return true;
     __dispatch_call:
     switch (__disp) {
         case m2c::kmainproc: 	goto mainproc;
-        default: log_error("Jump to nowhere to 0x%x. See line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+        default: m2c::log_error("Jump to nowhere to 0x%x. See line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
 
 
 
- void _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
     _group1:
     X86_REGREF
     __disp = _i;
@@ -101,13 +101,13 @@ cs=0x192;eip=0x000151; 	X(POPA);	// 63 popa ;~ 0192:0151
 cs=0x192;eip=0x000152; 	T(STI);	// 64 sti ;~ 0192:0152
 cs=0x192;eip=0x000153; 	R(IRET);	// 65 iret ;~ 0192:0153
 
-    return;
+    return true;
     __dispatch_call:
     switch (__disp) {
         case m2c::k_int8: 	goto _int8;
         case m2c::k_main: 	goto _main;
         case m2c::kloc_10154: 	goto loc_10154;
-        default: log_error("Jump to nowhere to 0x%x. See line %d\n", __disp, __LINE__);/*stackDump();*/ abort();
+        default: m2c::log_error("Jump to nowhere to 0x%x. See line %d\n", __disp, __LINE__);/*stackDump();*/ abort();
     };
 }
 

@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <iterator>
 
-#include "asm.h"
+#include "../asm.h"
 
 //namespace int8_ {
 
@@ -27,10 +27,10 @@ static const dd kloc_10154 = 0x1920144;
 static const dd k_group1 = 0x1920100;
 void   Initializer();
 }
-static void mainproc(m2c::_offsets, struct m2c::_STATE*);
-void _group1(m2c::_offsets, struct m2c::_STATE*);
-void _main(m2c::_offsets, struct m2c::_STATE*);
-void _int8(m2c::_offsets, struct m2c::_STATE*);
+bool mainproc(m2c::_offsets, struct m2c::_STATE*);
+bool _group1(m2c::_offsets, struct m2c::_STATE*);
+bool _main(m2c::_offsets, struct m2c::_STATE*);
+bool _int8(m2c::_offsets, struct m2c::_STATE*);
 bool __dispatch_call(m2c::_offsets __disp, struct m2c::_STATE* _state);
 
 //};
