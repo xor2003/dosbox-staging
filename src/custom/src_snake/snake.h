@@ -173,7 +173,7 @@ bool draw(m2c::_offsets, struct m2c::_STATE*);
 bool fruitgeneration(m2c::_offsets, struct m2c::_STATE*);
 bool keyboardfunctions(m2c::_offsets, struct m2c::_STATE*);
 bool asmmain(m2c::_offsets, struct m2c::_STATE*);
-static bool mainproc(m2c::_offsets, struct m2c::_STATE*);
+bool mainproc(m2c::_offsets, struct m2c::_STATE*);
 bool printbox(m2c::_offsets, struct m2c::_STATE*);
 bool readchar(m2c::_offsets, struct m2c::_STATE*);
 bool readcharat(m2c::_offsets, struct m2c::_STATE*);
