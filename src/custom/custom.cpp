@@ -1060,11 +1060,11 @@ if (debug > 0)
                 if (tsp <= sp)
                   m_ss[--m_current].remcounter = m2c::counter;
 
-                  if (m_ss[m_current].itwascall)
+                  if (m_ss[m_current].itwascall && m_ss[m_current].value=='xy')
                   {
-                    log_error ("~~It was call %d\n",m_ss[m_current].itwascall);
+                    log_error ("~~It was call %d\n",m_ss[m_current].itwascall && m_ss[m_current].value=='xy');
                   }
-                  calls += m_ss[m_current].itwascall;
+                  calls += m_ss[m_current].itwascall && m_ss[m_current].value=='xy';
                   log_error ("~~calls %zu\n",calls);
 
               }
@@ -1074,7 +1074,7 @@ if (debug > 0)
                   if (m_itisret)
                   {
                     log_error ("~~It is ret\n");
-                    calls -= m_ss[m_current].itwascall;
+                    calls -= m_ss[m_current].itwascall && m_ss[m_current].value=='xy';
                   }
 
             log_error ("~~Skipped calls %zu\n",calls);
