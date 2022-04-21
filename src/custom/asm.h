@@ -502,37 +502,12 @@ static void setdata(dd* d, dd s)
         va_start(args, format);
         char str[256];
         result = vsprintf(str, format, args);
+//        printf(format, args);
         log_regs_dbx("", 0, str, cpu_regs, Segs);
-        //printf("\n");
         va_end(args);
 
         return result;
     }
-/*
-    static int log_error(const char *format, ...) {
-        int result;
-        va_list args;
-
-        va_start(args, format);
-        result = vfprintf(stdout, format, args);
-        //printf("\n");
-        va_end(args);
-
-        return result;
-    }
-
-    static int log_info(const char *format, ...) {
-        int result;
-        va_list args;
-
-        va_start(args, format);
-        result = vfprintf(stdout, format, args);
-        //printf("\n");
-        va_end(args);
-
-        return result;
-    }
-*/
 //#define log_debug printf
 #define log_error log_debug
 #define log_info log_debug
@@ -1606,7 +1581,7 @@ struct StackPop
         }
         catch(const StackPop& ex)
         {
-             if (ex.deep-1 > 0)
+             if (ex.deep > 0)
              {  log_error("~~Throwing up\n");
 		throw StackPop(ex.deep-1);
              }
