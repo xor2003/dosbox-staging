@@ -608,27 +608,30 @@ static void setdata(dd* d, dd s)
             dw *pointer_;
             size_t addcounter;
             size_t remcounter;
-            bool itwascall;
+//            bool itwascall;
+            size_t call_deep;
         };
 
         std::vector<Frame> m_ss;
         size_t m_current;
         bool m_itiscall;
-        bool m_itisret;
+        size_t m_deep;
         size_t m_needtoskipcall;
     public:
-        ShadowStack() : m_current(0),m_itiscall(false),m_itisret(false),
-m_needtoskipcall(0) {}
+        size_t m_currentdeep;
+
+        ShadowStack() : m_current(0),m_itiscall(false),
+m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
 
         void push(_STATE *_state, dd value);
 
         void pop(_STATE *_state);
 
         void print(_STATE *_state);
-        void itiscall() {m_itiscall=true;}
-        void itisret() {m_itisret=true;}
-        bool needtoskipcalls(){return m_needtoskipcall;}
-        size_t getneedtoskipcallnumndclean(){size_t ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
+        void itiscall() {m_itiscall=true;++m_deep;}
+
+        bool needtoskipcalls(){m_needtoskipcall=m_deep-m_currentdeep; m_deep=m_currentdeep-1; return m_needtoskipcall;}
+        size_t getneedtoskipcall(){return m_needtoskipcall;}
 
     };
 
@@ -1519,7 +1522,7 @@ struct StackPop
     static void RETN_(size_t i) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
-        shadow_stack.itisret();
+
         POP(ip);
         if (ip != 'xy') {
             log_error("Emulated stack corruption detected (found %x)\n", ip);
@@ -1532,7 +1535,7 @@ struct StackPop
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
         if (shadow_stack.needtoskipcalls()) 
-          {log_error("~~will throw exception skip call\n");throw StackPop(shadow_stack.getneedtoskipcallnumndclean());}
+          {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());throw StackPop(shadow_stack.getneedtoskipcall());}
     }
 
 #define RETF(i) {m2c::RETF_(i); return true;}
@@ -1540,7 +1543,7 @@ struct StackPop
     static void RETF_(size_t i) {
         X86_REGREF
         if (debug>2) log_debug("before retf %x\n", stackPointer);
-        shadow_stack.itisret();
+
         m2c::MWORDSIZE averytemporary9 = 0;
         POP(averytemporary9);
         if (averytemporary9 != 'xy') {
@@ -1548,6 +1551,7 @@ struct StackPop
 //            m2c::stackDump();
             exit(1);
         }
+        bool need = shadow_stack.needtoskipcalls();
         dw averytemporary11;
         POP(averytemporary11);
         esp += i;
@@ -1556,8 +1560,8 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        if (shadow_stack.needtoskipcalls()) 
-          {log_error("~~will throw exception skip calll\n");throw StackPop(shadow_stack.getneedtoskipcallnumndclean());}
+        if (need) 
+          {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());throw StackPop(shadow_stack.getneedtoskipcall());}
     }
 
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}

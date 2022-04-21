@@ -1032,7 +1032,8 @@ if (debug > 0)
         f.remcounter = 0;
         f.pointer_ = (dw *) m2c::raddr_ (ss, sp);
      m2c::log_info("m_itiscall=%d\n",m_itiscall);
-        f.itwascall = m_itiscall;
+//        f.itwascall = m_itiscall;
+        f.call_deep = m_itiscall?m_deep:0;
         if (m_current == m_ss.size ())
           m_ss.resize (m_current + 1);
         m_ss[m_current++] = f;
@@ -1043,7 +1044,6 @@ if (debug > 0)
 
   void ShadowStack::pop (_STATE * _state)
   {
-    size_t calls=0;
     if (m2c::debug)
       {
         X86_REGREF
@@ -1059,36 +1059,13 @@ if (debug > 0)
                   log_error ("uncontrolled pop was before %x\n", tsp);
                 if (tsp <= sp)
                   m_ss[--m_current].remcounter = m2c::counter;
-
-                  if (m_ss[m_current].itwascall && m_ss[m_current].value=='xy')
-                  {
-                    log_error ("~~It was call %d\n",m_ss[m_current].itwascall && m_ss[m_current].value=='xy');
-                  }
-                  calls += m_ss[m_current].itwascall && m_ss[m_current].value=='xy';
-                  log_error ("~~calls %zu\n",calls);
-
               }
 
             while (tsp < sp);
-
-                  if (m_itisret)
-                  {
-                    log_error ("~~It is ret\n");
-                    calls -= m_ss[m_current].itwascall && m_ss[m_current].value=='xy';
-                  }
-
-            log_error ("~~Skipped calls %zu\n",calls);
-
-            if (calls)
-               {
-                    log_error ("~~It was call. It should be ret now but it is pop %x\n", tsp);
-                    m_needtoskipcall+=calls;
-                    log_error ("~~m_needtoskipcall=%d\n", m_needtoskipcall);
-               }
-
           }
+      
       }
-      m_itisret = false;
+      m_currentdeep = m_ss[m_current].call_deep;
   }
 
   void ShadowStack::print (_STATE * _state)
@@ -1103,7 +1080,7 @@ if (debug > 0)
             Frame f = m_ss[i];
             if (i == m_current - 1)
               printf ("  ");
-            printf ("%4d %8x %8x %04x:%04x %4x %4x", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value);
+            printf ("%4d %8x %8x %04x:%04x %4x %4x", f.call_deep, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value);
             if (*f.pointer_ != f.value)
               printf (" %4x\n", *f.pointer_);
             else
