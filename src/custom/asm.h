@@ -501,9 +501,9 @@ static void setdata(dd* d, dd s)
 
         va_start(args, format);
         char str[256];
-        result = vsprintf(str, format, args);
-//        printf(format, args);
-        log_regs_dbx("", 0, str, cpu_regs, Segs);
+//        result = vsprintf(str, format, args);
+        printf(format, args);
+//        log_regs_dbx("", 0, str, cpu_regs, Segs);
         va_end(args);
 
         return result;
