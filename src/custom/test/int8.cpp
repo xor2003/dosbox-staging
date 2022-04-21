@@ -29,7 +29,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &mainproc;}
     else goto __dispatch_call;
     _begin:
 cs=0x192;eip=0x0000; _main:	// 12 
-	R(PUSH(cs));
+//	R(PUSH(cs));
 	R(CALL(_main,0));
 printf("exit %d\n", __LINE__);
 exit(0);
@@ -56,19 +56,19 @@ _main:	// 12
 cs=0x192;eip=0x000100; 
 printf("begin %d\n", __LINE__);
 
-	R(PUSH(cs));
+//	R(PUSH(cs));
 	R(CALL(_int8,0));
 printf("begin2!!! %d\n", __LINE__);
 
-cs=0x192;eip=0x00012a; 	R(RETF(0));	// 32 RETN(0) ;~ 0192:012A
+cs=0x192;eip=0x00012a; 	R(RETN(0));	// 32 RETN(0) ;~ 0192:012A
 
 
 _int8:	// 40 
 printf("int8 %d\n", __LINE__);
+cs=0x192;eip=0x00012b; 	R(POP(ax));	// 32 RETN(0) ;~ 0192:012A
 //cs=0x192;eip=0x00012b; 	R(POP(ax));	// 32 RETN(0) ;~ 0192:012A
-//cs=0x192;eip=0x00012b; 	R(POP(ax));	// 32 RETN(0) ;~ 0192:012A
-cs=0x192;eip=0x00012b; 	R(ADD(sp,4));	// 32 RETN(0) ;~ 0192:012A
-cs=0x192;eip=0x00012c; 	R(RETF(0));	// 32 RETN(0) ;~ 0192:012A
+//cs=0x192;eip=0x00012b; 	R(ADD(sp,4));	// 32 RETN(0) ;~ 0192:012A
+cs=0x192;eip=0x00012c; 	R(RETN(0));	// 32 RETN(0) ;~ 0192:012A
 
     return true;
     __dispatch_call:
