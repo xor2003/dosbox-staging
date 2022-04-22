@@ -1546,7 +1546,7 @@ struct StackPop
         }
         if (shadow_stack.needtoskipcalls()) 
           {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());
-shadow_stack.print(0);
+//shadow_stack.print(0);
 throw StackPop(shadow_stack.getneedtoskipcall());}
     }
 
@@ -1578,7 +1578,7 @@ throw StackPop(shadow_stack.getneedtoskipcall());}
         }
         if (need) 
           {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());
-shadow_stack.print(0);
+//shadow_stack.print(0);
 throw StackPop(shadow_stack.getneedtoskipcall());}
     }
 
