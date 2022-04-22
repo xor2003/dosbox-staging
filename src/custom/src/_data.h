@@ -14,7 +14,7 @@ db dummy7_1bcc[2004];
 dw word_10980; // 01a2:0980
 db dummy7_23a2[6967];
 db dummy7_3ed9; // 01a2:24b9
-db byte_124ba; // 01a2:24ba
+db dummy7_3eda; // 01a2:24ba
 db dummy7_3edb[1005];
 db byte_128a8; // 01a2:28a8
 db dummy7_42c9[2805];
@@ -90,12 +90,12 @@ db dummy7_981a; // 0948:039a
 db dummy7_981b; // 0948:039b
 db dummy7_981c; // 0948:039c
 db dummy7_981d; // 0948:039d
-dw word_17dfe; // 0948:039e
+dw dummy7_981e; // 0948:039e
 dw dummy7_9820; // 0948:03a0
 char avingme[9]; // 0948:03a2
-db byte_17e0b; // 0948:03ab
-db byte_17e0c; // 0948:03ac
-db byte_17e0d; // 0948:03ad
+db dummy7_982b; // 0948:03ab
+db dummy7_982c; // 0948:03ac
+db dummy7_982d; // 0948:03ad
 char aoescapefromthi[53]; // 0948:03ae
 char dummy7_9863[17]; // 0948:03ae
 db dummy7_9874[32]; // 0948:03f4
@@ -159,8 +159,8 @@ db dummy7_9e20; // 0948:09a0
 db dummy7_9e21; // 0948:09a1
 db dummy7_9e22; // 0948:09a2
 db dummy7_9e23; // 0948:09a3
-dw word_18404; // 0948:09a4
-db byte_18406; // 0948:09a6
+dw dummy7_9e24; // 0948:09a4
+db dummy7_9e26; // 0948:09a6
 char aviveifyouworka[28]; // 0948:09a7
 db dummy7_9e43[32]; // 0948:09c3
 db dummy7_9e63[32]; // 0948:09e3
@@ -215,7 +215,7 @@ db dummy7_a050; // 0948:0bd0
 db dummy7_a051; // 0948:0bd1
 db dummy7_a052; // 0948:0bd2
 db dummy7_a053; // 0948:0bd3
-dw word_18634; // 0948:0bd4
+dw dummy7_a054; // 0948:0bd4
 char arlivesyouwilln[47]; // 0948:0bd6
 char dummy7_a085[2]; // 0948:0bd6
 db dummy7_a087[32]; // 0948:0c07
@@ -298,43 +298,12 @@ db dummy7_aa07[32]; // 0948:1587
 db dummy7_aa27[32]; // 0948:15a7
 db dummy7_aa47[32]; // 0948:15c7
 db dummy7_aa67[32]; // 0948:15e7
-db dummy7_aa87; // 0948:1607
-db dummy7_aa88; // 0948:1608
-db dummy7_aa89;
-db dummy7_aa8a; // 0948:160a
-db dummy7_aa8b; // 0948:160b
-db dummy7_aa8c; // 0948:160c
-db dummy7_aa8d; // 0948:160d
-db dummy7_aa8e; // 0948:160e
-db dummy7_aa8f; // 0948:160f
-db dummy7_aa90; // 0948:1610
-db dummy7_aa91; // 0948:1611
-db dummy7_aa92; // 0948:1612
-db dummy7_aa93; // 0948:1613
-db dummy7_aa94; // 0948:1614
-db dummy7_aa95; // 0948:1615
-db dummy7_aa96; // 0948:1616
-db dummy7_aa97; // 0948:1617
-db dummy7_aa98; // 0948:1618
-db dummy7_aa99; // 0948:1619
-db dummy7_aa9a; // 0948:161a
-db dummy7_aa9b; // 0948:161b
-db byte_1907c; // 0948:161c
-db dummy7_aa9d; // 0948:161d
-db dummy7_aa9e; // 0948:161e
-db dummy7_aa9f; // 0948:161f
-db dummy7_aaa0; // 0948:1620
-db byte_19081; // 0948:1621
-db dummy7_aaa2; // 0948:1622
-db dummy7_aaa3; // 0948:1623
-db dummy7_aaa4; // 0948:1624
-db dummy7_aaa5; // 0948:1625
-db dummy7_aaa6; // 0948:1626
+db dummy7_aa87[32]; // 0948:1607
 db dummy7_aaa7; // 0948:1627
 db dummy7_aaa8; // 0948:1628
 db dummy7_aaa9; // 0948:1629
 db dummy7_aaaa; // 0948:162a
-db byte_1908b; // 0948:162b
+db dummy7_aaab; // 0948:162b
 db dummy7_aaac; // 0948:162c
 db dummy7_aaad; // 0948:162d
 db dummy7_aaae; // 0948:162e
@@ -348,26 +317,26 @@ db dummy7_aab5; // 0948:1635
 db dummy7_aab6; // 0948:1636
 db dummy7_aab7; // 0948:1637
 db dummy7_aab8; // 0948:1638
-db byte_19099; // 0948:1639
+db dummy7_aab9; // 0948:1639
 db dummy7_aaba; // 0948:163a
 db dummy7_aabb; // 0948:163b
 db dummy7_aabc; // 0948:163c
-db byte_1909d; // 0948:163d
-db byte_1909e; // 0948:163e
+db dummy7_aabd; // 0948:163d
+db dummy7_aabe; // 0948:163e
 db dummy7_aabf; // 0948:163f
 db dummy7_aac0; // 0948:1640
 db dummy7_aac1; // 0948:1641
 db dummy7_aac2; // 0948:1642
 db dummy7_aac3; // 0948:1643
-db byte_190a4; // 0948:1644
+db dummy7_aac4; // 0948:1644
 char aers[5]; // 0948:1645
-db byte_190aa; // 0948:164a
-db byte_190ab; // 0948:164b
-db byte_190ac; // 0948:164c
+db dummy7_aaca; // 0948:164a
+db dummy7_aacb; // 0948:164b
+db dummy7_aacc; // 0948:164c
 db dummy7_aacd; // 0948:164d
 db dummy7_aace; // 0948:164e
 db dummy7_aacf; // 0948:164f
-db byte_190b0; // 0948:1650
+db dummy7_aad0; // 0948:1650
 char aurprisedthatbu[39]; // 0948:1651
 db dummy7_aaf8[32]; // 0948:1678
 db dummy7_ab18[32]; // 0948:1698
@@ -442,8 +411,8 @@ db dummy7_ae85; // 0948:1a05
 db dummy7_ae86;
 db dummy7_ae87; // 0948:1a07
 db dummy7_ae88; // 0948:1a08
-dw word_19469; // 0948:1a09
-db byte_1946b; // 0948:1a0b
+dw dummy7_ae89; // 0948:1a09
+db dummy7_ae8b; // 0948:1a0b
 char aatfightingbale[21]; // 0948:1a0c
 db dummy7_aea1[32]; // 0948:1a21
 db dummy7_aec1[32]; // 0948:1a41
@@ -498,17 +467,17 @@ db dummy7_b1f8; // 0948:1d78
 db dummy7_b1f9; // 0948:1d79
 db dummy7_b1fa; // 0948:1d7a
 db dummy7_b1fb; // 0948:1d7b
-dw word_197dc; // 0948:1d7c
+dw dummy7_b1fc; // 0948:1d7c
 char aight[6]; // 0948:1d7e
 db dummy7_b204; // 0948:1d84
 db dummy7_b205; // 0948:1d85
-dw word_197e6; // 0948:1d86
+dw dummy7_b206; // 0948:1d86
 db dummy7_b208[32]; // 0948:1d88
 db dummy7_b228; // 0948:1da8
 db dummy7_b229; // 0948:1da9
 db dummy7_b22a; // 0948:1daa
 db dummy7_b22b; // 0948:1dab
-dw word_1980c; // 0948:1dac
+dw dummy7_b22c; // 0948:1dac
 char abeingwatched[16]; // 0948:1dae
 db dummy7_b23e[32]; // 0948:1dbe
 db dummy7_b25e[32]; // 0948:1dde
@@ -623,7 +592,7 @@ db dummy7_bcb8; // 0948:2838
 db dummy7_bcb9; // 0948:2839
 db dummy7_bcba; // 0948:283a
 db dummy7_bcbb; // 0948:283b
-dw word_1a29c; // 0948:283c
+dw dummy7_bcbc; // 0948:283c
 db dummy7_bcbe[32]; // 0948:283e
 db dummy7_bcde[32]; // 0948:285e
 db dummy7_bcfe[32]; // 0948:287e
@@ -2370,30 +2339,29 @@ db dummy7_1a070[32]; // 19f0:0170
 db dummy7_1a090[32]; // 19f0:0190
 db dummy7_1a0b0[32]; // 19f0:01b0
 db dummy7_1a0d0[32]; // 19f0:01d0
-db dummy7_1a0f0[32]; // 19f0:01f0
-db dummy7_1a110[32]; // 19f0:0210
-db dummy7_1a130[32]; // 19f0:0230
-db dummy7_1a150[32]; // 19f0:0250
-db dummy7_1a170;
-db dummy7_1a171;
-db dummy7_1a172;
-db dummy7_1a173;
-db dummy7_1a174;
-db dummy7_1a175;
-db dummy7_1a176;
-db dummy7_1a177;
-db dummy7_1a178;
-db dummy7_1a179;
-db dummy7_1a17a;
-db dummy7_1a17b;
-db dummy7_1a17c;
-db dummy7_1a17d;
-db dummy7_1a17e;
-db dummy7_1a17f;
-db dummy7_1a180;
-db dummy7_1a181;
-db dummy7_1a182;
-db dummy7_1a183;
+db dummy7_1a0f0;
+db dummy7_1a0f1;
+db dummy7_1a0f2;
+db dummy7_1a0f3;
+db dummy7_1a0f4;
+db dummy7_1a0f5;
+db dummy7_1a0f6;
+db dummy7_1a0f7;
+db dummy7_1a0f8;
+db dummy7_1a0f9;
+db dummy7_1a0fa;
+db dummy7_1a0fb;
+db dummy7_1a0fc;
+db dummy7_1a0fd;
+db dummy7_1a0fe;
+db dummy7_1a0ff;
+db dummy7_1a100;
+db dummy7_1a101;
+dw word_286e2; // 19f0:0202
+db dummy7_1a104[32]; // 19f0:0204
+db dummy7_1a124[32]; // 19f0:0224
+db dummy7_1a144[32]; // 19f0:0244
+db dummy7_1a164[32]; // 19f0:0264
 db dummy7_1a184;
 db dummy7_1a185;
 db dummy7_1a186;
@@ -2426,10 +2394,8 @@ db dummy7_1a1fe;
 db dummy7_1a1ff;
 db dummy7_1a200;
 db dummy7_1a201;
-db dummy7_1a202;
-db dummy7_1a203;
-db dummy7_1a204;
-db dummy7_1a205;
+dw word_287e2; // 19f0:0302
+dw word_287e4; // 19f0:0304
 db dummy7_1a206;
 db dummy7_1a207;
 db byte_287e8; // 19f0:0308
@@ -2484,10 +2450,8 @@ db dummy7_1a24a;
 db dummy7_1a24b;
 db dummy7_1a24c;
 db dummy7_1a24d;
-db dummy7_1a24e;
-db dummy7_1a24f;
-db dummy7_1a250;
-db dummy7_1a251;
+dw word_2882e; // 19f0:034e
+dw word_28830; // 19f0:0350
 dw word_28832; // 19f0:0352
 db dummy7_1a254;
 db dummy7_1a255;
@@ -2597,15 +2561,11 @@ dw word_288b0; // 19f0:03d0
 db dummy7_1a2d2[2];
 dw word_288b4; // 19f0:03d4
 dw word_288b6; // 19f0:03d6
-db dummy7_1a2d8[32]; // 19f0:03d8
-db dummy7_1a2f8;
-db dummy7_1a2f9;
-db dummy7_1a2fa;
-db dummy7_1a2fb;
-db dummy7_1a2fc;
-db dummy7_1a2fd;
-db dummy7_1a2fe;
-db dummy7_1a2ff;
+dw word_288b8; // 19f0:03d8
+dw word_288ba; // 19f0:03da
+dw word_288bc; // 19f0:03dc
+dw word_288be; // 19f0:03de
+db dummy7_1a2e0[32]; // 19f0:03e0
 db dummy7_1a300;
 db dummy7_1a301;
 db dummy7_1a302;
@@ -3133,27 +3093,58 @@ db dummy7_1caaf; // 19f0:2baf
 db dummy7_1cab0; // 19f0:2bb0
 db dummy7_1cab1; // 19f0:2bb1
 dw word_2b092; // 19f0:2bb2
-db dummy7_1cab4[32]; // 19f0:2bb4
-db dummy7_1cad4[32]; // 19f0:2bd4
-db dummy7_1caf4[32]; // 19f0:2bf4
-db dummy7_1cb14[32]; // 19f0:2c14
-db dummy7_1cb34[32]; // 19f0:2c34
-db dummy7_1cb54[32]; // 19f0:2c54
-db dummy7_1cb74[32]; // 19f0:2c74
-db dummy7_1cb94[32]; // 19f0:2c94
-db dummy7_1cbb4[32]; // 19f0:2cb4
-db dummy7_1cbd4[32]; // 19f0:2cd4
-db dummy7_1cbf4[32]; // 19f0:2cf4
-db dummy7_1cc14[32]; // 19f0:2d14
-db dummy7_1cc34[32]; // 19f0:2d34
-db dummy7_1cc54[32]; // 19f0:2d54
-db dummy7_1cc74[32]; // 19f0:2d74
-db dummy7_1cc94[32]; // 19f0:2d94
-db dummy7_1ccb4[32]; // 19f0:2db4
-db dummy7_1ccd4[32]; // 19f0:2dd4
-db dummy7_1ccf4[32]; // 19f0:2df4
-db dummy7_1cd14[32]; // 19f0:2e14
-db dummy7_1cd34[32]; // 19f0:2e34
+db dummy7_1cab4;
+db dummy7_1cab5;
+db dummy7_1cab6;
+db dummy7_1cab7;
+db dummy7_1cab8;
+db dummy7_1cab9;
+db dummy7_1caba;
+db dummy7_1cabb;
+db dummy7_1cabc;
+db dummy7_1cabd;
+db unk_2b09e; // 19f0:2bbe
+db dummy7_1cabf[32]; // 19f0:2bbf
+db dummy7_1cadf[32]; // 19f0:2bdf
+db dummy7_1caff[32]; // 19f0:2bff
+db dummy7_1cb1f[32]; // 19f0:2c1f
+db dummy7_1cb3f[32]; // 19f0:2c3f
+db dummy7_1cb5f[32]; // 19f0:2c5f
+db dummy7_1cb7f[32]; // 19f0:2c7f
+db dummy7_1cb9f[32]; // 19f0:2c9f
+db dummy7_1cbbf[32]; // 19f0:2cbf
+db dummy7_1cbdf[32]; // 19f0:2cdf
+db dummy7_1cbff[32]; // 19f0:2cff
+db dummy7_1cc1f[32]; // 19f0:2d1f
+db dummy7_1cc3f[32]; // 19f0:2d3f
+db dummy7_1cc5f[32]; // 19f0:2d5f
+db dummy7_1cc7f[32]; // 19f0:2d7f
+db dummy7_1cc9f[32]; // 19f0:2d9f
+db dummy7_1ccbf[32]; // 19f0:2dbf
+db dummy7_1ccdf[32]; // 19f0:2ddf
+db dummy7_1ccff[32]; // 19f0:2dff
+db dummy7_1cd1f[32]; // 19f0:2e1f
+db dummy7_1cd3f; // 19f0:2e3f
+db dummy7_1cd40; // 19f0:2e40
+db dummy7_1cd41; // 19f0:2e41
+db dummy7_1cd42; // 19f0:2e42
+db dummy7_1cd43; // 19f0:2e43
+db dummy7_1cd44; // 19f0:2e44
+db dummy7_1cd45; // 19f0:2e45
+db dummy7_1cd46; // 19f0:2e46
+db dummy7_1cd47; // 19f0:2e47
+db dummy7_1cd48; // 19f0:2e48
+db dummy7_1cd49; // 19f0:2e49
+db dummy7_1cd4a; // 19f0:2e4a
+db dummy7_1cd4b; // 19f0:2e4b
+db dummy7_1cd4c; // 19f0:2e4c
+db dummy7_1cd4d; // 19f0:2e4d
+db dummy7_1cd4e; // 19f0:2e4e
+db dummy7_1cd4f; // 19f0:2e4f
+db dummy7_1cd50; // 19f0:2e50
+db dummy7_1cd51; // 19f0:2e51
+db dummy7_1cd52; // 19f0:2e52
+db dummy7_1cd53; // 19f0:2e53
 db dummy7_1cd54; // 19f0:2e54
 db dummy7_1cd55; // 19f0:2e55
 db byte_2b336; // 19f0:2e56
@@ -3171,8 +3162,7 @@ dw word_2b345; // 19f0:2e65
 dw word_2b347; // 19f0:2e67
 db dummy7_1cd69;
 db dummy7_1cd6a;
-db dummy7_1cd6b;
-db dummy7_1cd6c;
+dw word_2b34b; // 19f0:2e6b
 db dummy7_1cd6d;
 db dummy7_1cd6e;
 db dummy7_1cd6f;
@@ -4067,16 +4057,46 @@ db dummy7_22376[32]; // 19f0:8476
 db dummy7_22396[32]; // 19f0:8496
 db dummy7_223b6[32]; // 19f0:84b6
 db dummy7_223d6[32]; // 19f0:84d6
-db dummy7_223f6[32]; // 19f0:84f6
-db dummy7_22416[32]; // 19f0:8516
-db dummy7_22436[32]; // 19f0:8536
-db dummy7_22456[32]; // 19f0:8556
-db dummy7_22476[32]; // 19f0:8576
-db dummy7_22496[32]; // 19f0:8596
-db dummy7_224b6[32]; // 19f0:85b6
-db dummy7_224d6[32]; // 19f0:85d6
-db dummy7_224f6[32]; // 19f0:85f6
-db dummy7_22516[32]; // 19f0:8616
+db dummy7_223f6;
+db dummy7_223f7;
+db dummy7_223f8;
+db dummy7_223f9;
+db dummy7_223fa;
+db dummy7_223fb;
+db dummy7_223fc;
+db dummy7_223fd;
+db dummy7_223fe;
+db dummy7_223ff;
+db dummy7_22400;
+db dummy7_22401;
+db dummy7_22402;
+db dummy7_22403;
+dw word_309e4; // 19f0:8504
+db byte_309e6; // 19f0:8506
+db dummy7_22407[32]; // 19f0:8507
+db dummy7_22427[32]; // 19f0:8527
+db dummy7_22447[32]; // 19f0:8547
+db dummy7_22467[32]; // 19f0:8567
+db dummy7_22487[32]; // 19f0:8587
+db dummy7_224a7[32]; // 19f0:85a7
+db dummy7_224c7[32]; // 19f0:85c7
+db dummy7_224e7[32]; // 19f0:85e7
+db dummy7_22507[32]; // 19f0:8607
+db dummy7_22527; // 19f0:8627
+db dummy7_22528; // 19f0:8628
+db dummy7_22529; // 19f0:8629
+db dummy7_2252a; // 19f0:862a
+db dummy7_2252b; // 19f0:862b
+db dummy7_2252c; // 19f0:862c
+db dummy7_2252d; // 19f0:862d
+db dummy7_2252e; // 19f0:862e
+db dummy7_2252f; // 19f0:862f
+db dummy7_22530; // 19f0:8630
+db dummy7_22531; // 19f0:8631
+db dummy7_22532; // 19f0:8632
+db dummy7_22533; // 19f0:8633
+db dummy7_22534; // 19f0:8634
+db dummy7_22535; // 19f0:8635
 db dummy7_22536; // 19f0:8636
 db dummy7_22537; // 19f0:8637
 db dummy7_22538; // 19f0:8638
@@ -4461,12 +4481,12 @@ db dummy7_23078;
 db dummy7_23079;
 db dummy7_2307a;
 db dummy7_2307b;
-db dummy7_2307c;
+db byte_3165c; // 19f0:917c
 db dummy7_2307d;
 db dummy7_2307e;
 db byte_3165f; // 19f0:917f
 db dummy7_23080;
-db dummy7_23081;
+db byte_31661; // 19f0:9181
 db dummy7_23082;
 db dummy7_23083;
 db dummy7_23084;
@@ -4476,7 +4496,7 @@ db dummy7_23087;
 db dummy7_23088;
 db byte_31669; // 19f0:9189
 db byte_3166a; // 19f0:918a
-db dummy7_2308b;
+db byte_3166b; // 19f0:918b
 db dummy7_2308c;
 db dummy7_2308d;
 db dummy7_2308e;
@@ -4490,12 +4510,12 @@ db dummy7_23095;
 db dummy7_23096;
 db dummy7_23097;
 db dummy7_23098;
-db dummy7_23099;
+db byte_31679; // 19f0:9199
 db dummy7_2309a;
 db dummy7_2309b;
 db dummy7_2309c;
-db dummy7_2309d;
-db dummy7_2309e;
+db byte_3167d; // 19f0:919d
+db byte_3167e; // 19f0:919e
 db dummy7_2309f;
 db dummy7_230a0;
 db dummy7_230a1;
@@ -4507,13 +4527,13 @@ db dummy7_230a6;
 db dummy7_230a7;
 db dummy7_230a8;
 db dummy7_230a9;
-db dummy7_230aa;
-db dummy7_230ab;
-db dummy7_230ac;
+db byte_3168a; // 19f0:91aa
+db byte_3168b; // 19f0:91ab
+db byte_3168c; // 19f0:91ac
 db dummy7_230ad;
 db dummy7_230ae;
 db dummy7_230af;
-db dummy7_230b0;
+db byte_31690; // 19f0:91b0
 db dummy7_230b1;
 db dummy7_230b2;
 db dummy7_230b3;
@@ -4637,107 +4657,105 @@ db dummy7_237d9;
 db dummy7_237da;
 db dummy7_237db;
 dw word_31dbc; // 19f0:98dc
-db dummy7_237de[32]; // 19f0:98de
-db dummy7_237fe[32]; // 19f0:98fe
-db dummy7_2381e[32]; // 19f0:991e
-db dummy7_2383e[32]; // 19f0:993e
-db dummy7_2385e[32]; // 19f0:995e
-db dummy7_2387e[32]; // 19f0:997e
-db dummy7_2389e[32]; // 19f0:999e
-db dummy7_238be[32]; // 19f0:99be
-db dummy7_238de[32]; // 19f0:99de
-db dummy7_238fe[32]; // 19f0:99fe
-db dummy7_2391e[32]; // 19f0:9a1e
-db dummy7_2393e[32]; // 19f0:9a3e
-db dummy7_2395e[32]; // 19f0:9a5e
-db dummy7_2397e[32]; // 19f0:9a7e
-db dummy7_2399e[32]; // 19f0:9a9e
-db dummy7_239be[32]; // 19f0:9abe
-db dummy7_239de[32]; // 19f0:9ade
-db dummy7_239fe[32]; // 19f0:9afe
-db dummy7_23a1e[32]; // 19f0:9b1e
-db dummy7_23a3e[32]; // 19f0:9b3e
-db dummy7_23a5e[32]; // 19f0:9b5e
-db dummy7_23a7e[32]; // 19f0:9b7e
-db dummy7_23a9e[32]; // 19f0:9b9e
-db dummy7_23abe[32]; // 19f0:9bbe
-db dummy7_23ade[32]; // 19f0:9bde
-db dummy7_23afe[32]; // 19f0:9bfe
-db dummy7_23b1e[32]; // 19f0:9c1e
-db dummy7_23b3e[32]; // 19f0:9c3e
-db dummy7_23b5e[32]; // 19f0:9c5e
-db dummy7_23b7e[32]; // 19f0:9c7e
-db dummy7_23b9e[32]; // 19f0:9c9e
-db dummy7_23bbe[32]; // 19f0:9cbe
-db dummy7_23bde[32]; // 19f0:9cde
-db dummy7_23bfe[32]; // 19f0:9cfe
-db dummy7_23c1e[32]; // 19f0:9d1e
-db dummy7_23c3e[32]; // 19f0:9d3e
-db dummy7_23c5e[32]; // 19f0:9d5e
-db dummy7_23c7e[32]; // 19f0:9d7e
-db dummy7_23c9e[32]; // 19f0:9d9e
-db dummy7_23cbe[32]; // 19f0:9dbe
-db dummy7_23cde[32]; // 19f0:9dde
-db dummy7_23cfe[32]; // 19f0:9dfe
-db dummy7_23d1e[32]; // 19f0:9e1e
-db dummy7_23d3e[32]; // 19f0:9e3e
-db dummy7_23d5e[32]; // 19f0:9e5e
-db dummy7_23d7e[32]; // 19f0:9e7e
-db dummy7_23d9e[32]; // 19f0:9e9e
-db dummy7_23dbe[32]; // 19f0:9ebe
-db dummy7_23dde[32]; // 19f0:9ede
-db dummy7_23dfe[32]; // 19f0:9efe
-db dummy7_23e1e[32]; // 19f0:9f1e
-db dummy7_23e3e[32]; // 19f0:9f3e
-db dummy7_23e5e[32]; // 19f0:9f5e
-db dummy7_23e7e[32]; // 19f0:9f7e
-db dummy7_23e9e[32]; // 19f0:9f9e
-db dummy7_23ebe[32]; // 19f0:9fbe
-db dummy7_23ede[32]; // 19f0:9fde
-db dummy7_23efe[32]; // 19f0:9ffe
-db dummy7_23f1e[32]; // 19f0:a01e
-db dummy7_23f3e[32]; // 19f0:a03e
-db dummy7_23f5e[32]; // 19f0:a05e
-db dummy7_23f7e[32]; // 19f0:a07e
-db dummy7_23f9e[32]; // 19f0:a09e
-db dummy7_23fbe[32]; // 19f0:a0be
-db dummy7_23fde[32]; // 19f0:a0de
-db dummy7_23ffe[32]; // 19f0:a0fe
-db dummy7_2401e[32]; // 19f0:a11e
-db dummy7_2403e[32]; // 19f0:a13e
-db dummy7_2405e[32]; // 19f0:a15e
-db dummy7_2407e[32]; // 19f0:a17e
-db dummy7_2409e[32]; // 19f0:a19e
-db dummy7_240be[32]; // 19f0:a1be
-db dummy7_240de[32]; // 19f0:a1de
-db dummy7_240fe[32]; // 19f0:a1fe
-db dummy7_2411e[32]; // 19f0:a21e
-db dummy7_2413e[32]; // 19f0:a23e
-db dummy7_2415e[32]; // 19f0:a25e
-db dummy7_2417e[32]; // 19f0:a27e
-db dummy7_2419e[32]; // 19f0:a29e
-db dummy7_241be[32]; // 19f0:a2be
-db dummy7_241de[32]; // 19f0:a2de
-db dummy7_241fe[32]; // 19f0:a2fe
-db dummy7_2421e[32]; // 19f0:a31e
-db dummy7_2423e[32]; // 19f0:a33e
-db dummy7_2425e[32]; // 19f0:a35e
-db dummy7_2427e; // 19f0:a37e
-db dummy7_2427f; // 19f0:a37f
-db dummy7_24280; // 19f0:a380
-db dummy7_24281; // 19f0:a381
-db dummy7_24282; // 19f0:a382
-db dummy7_24283; // 19f0:a383
-db dummy7_24284; // 19f0:a384
-db dummy7_24285; // 19f0:a385
-db dummy7_24286; // 19f0:a386
-db dummy7_24287; // 19f0:a387
-db dummy7_24288; // 19f0:a388
-db dummy7_24289; // 19f0:a389
-db dummy7_2428a; // 19f0:a38a
-db dummy7_2428b; // 19f0:a38b
-db dummy7_2428c; // 19f0:a38c
-db dummy7_2428d; // 19f0:a38d
+db dummy7_237de;
+db dummy7_237df;
+db dummy7_237e0;
+db dummy7_237e1;
+db dummy7_237e2;
+db dummy7_237e3;
+db dummy7_237e4;
+db dummy7_237e5;
+dw word_31dc6; // 19f0:98e6
+db dummy7_237e8[32]; // 19f0:98e8
+db dummy7_23808;
+db dummy7_23809;
+db dummy7_2380a;
+db dummy7_2380b;
+dw word_31dec; // 19f0:990c
+db dummy7_2380e[32]; // 19f0:990e
+db dummy7_2382e[32]; // 19f0:992e
+db dummy7_2384e[32]; // 19f0:994e
+db dummy7_2386e[32]; // 19f0:996e
+db dummy7_2388e[32]; // 19f0:998e
+db dummy7_238ae[32]; // 19f0:99ae
+db dummy7_238ce[32]; // 19f0:99ce
+db dummy7_238ee[32]; // 19f0:99ee
+db dummy7_2390e[32]; // 19f0:9a0e
+db dummy7_2392e[32]; // 19f0:9a2e
+db dummy7_2394e[32]; // 19f0:9a4e
+db dummy7_2396e[32]; // 19f0:9a6e
+db dummy7_2398e[32]; // 19f0:9a8e
+db dummy7_239ae[32]; // 19f0:9aae
+db dummy7_239ce[32]; // 19f0:9ace
+db dummy7_239ee[32]; // 19f0:9aee
+db dummy7_23a0e[32]; // 19f0:9b0e
+db dummy7_23a2e[32]; // 19f0:9b2e
+db dummy7_23a4e[32]; // 19f0:9b4e
+db dummy7_23a6e[32]; // 19f0:9b6e
+db dummy7_23a8e[32]; // 19f0:9b8e
+db dummy7_23aae[32]; // 19f0:9bae
+db dummy7_23ace[32]; // 19f0:9bce
+db dummy7_23aee[32]; // 19f0:9bee
+db dummy7_23b0e[32]; // 19f0:9c0e
+db dummy7_23b2e[32]; // 19f0:9c2e
+db dummy7_23b4e[32]; // 19f0:9c4e
+db dummy7_23b6e[32]; // 19f0:9c6e
+db dummy7_23b8e[32]; // 19f0:9c8e
+db dummy7_23bae[32]; // 19f0:9cae
+db dummy7_23bce[32]; // 19f0:9cce
+db dummy7_23bee[32]; // 19f0:9cee
+db dummy7_23c0e[32]; // 19f0:9d0e
+db dummy7_23c2e[32]; // 19f0:9d2e
+db dummy7_23c4e[32]; // 19f0:9d4e
+db dummy7_23c6e[32]; // 19f0:9d6e
+db dummy7_23c8e[32]; // 19f0:9d8e
+db dummy7_23cae[32]; // 19f0:9dae
+db dummy7_23cce[32]; // 19f0:9dce
+db dummy7_23cee[32]; // 19f0:9dee
+db dummy7_23d0e[32]; // 19f0:9e0e
+db dummy7_23d2e[32]; // 19f0:9e2e
+db dummy7_23d4e[32]; // 19f0:9e4e
+db dummy7_23d6e[32]; // 19f0:9e6e
+db dummy7_23d8e[32]; // 19f0:9e8e
+db dummy7_23dae[32]; // 19f0:9eae
+db dummy7_23dce[32]; // 19f0:9ece
+db dummy7_23dee[32]; // 19f0:9eee
+db dummy7_23e0e[32]; // 19f0:9f0e
+db dummy7_23e2e[32]; // 19f0:9f2e
+db dummy7_23e4e[32]; // 19f0:9f4e
+db dummy7_23e6e[32]; // 19f0:9f6e
+db dummy7_23e8e[32]; // 19f0:9f8e
+db dummy7_23eae[32]; // 19f0:9fae
+db dummy7_23ece[32]; // 19f0:9fce
+db dummy7_23eee[32]; // 19f0:9fee
+db dummy7_23f0e[32]; // 19f0:a00e
+db dummy7_23f2e[32]; // 19f0:a02e
+db dummy7_23f4e[32]; // 19f0:a04e
+db dummy7_23f6e[32]; // 19f0:a06e
+db dummy7_23f8e[32]; // 19f0:a08e
+db dummy7_23fae[32]; // 19f0:a0ae
+db dummy7_23fce[32]; // 19f0:a0ce
+db dummy7_23fee[32]; // 19f0:a0ee
+db dummy7_2400e[32]; // 19f0:a10e
+db dummy7_2402e[32]; // 19f0:a12e
+db dummy7_2404e[32]; // 19f0:a14e
+db dummy7_2406e[32]; // 19f0:a16e
+db dummy7_2408e[32]; // 19f0:a18e
+db dummy7_240ae[32]; // 19f0:a1ae
+db dummy7_240ce[32]; // 19f0:a1ce
+db dummy7_240ee[32]; // 19f0:a1ee
+db dummy7_2410e[32]; // 19f0:a20e
+db dummy7_2412e[32]; // 19f0:a22e
+db dummy7_2414e[32]; // 19f0:a24e
+db dummy7_2416e[32]; // 19f0:a26e
+db dummy7_2418e[32]; // 19f0:a28e
+db dummy7_241ae[32]; // 19f0:a2ae
+db dummy7_241ce[32]; // 19f0:a2ce
+db dummy7_241ee[32]; // 19f0:a2ee
+db dummy7_2420e[32]; // 19f0:a30e
+db dummy7_2422e[32]; // 19f0:a32e
+db dummy7_2424e[32]; // 19f0:a34e
+db dummy7_2426e[32]; // 19f0:a36e
 db dummy7_2428e; // 19f0:a38e
 db dummy7_2428f; // 19f0:a38f
 db dummy7_24290; // 19f0:a390
