@@ -1676,37 +1676,39 @@ loc_10e30:
 	// 4534 
 cs=0x1a2;eip=0x000e30; 	T(MOV(ax, 0x4C00));	// 1889 mov     ax, 4C00h ;~ 01A2:0E30
 cs=0x1a2;eip=0x000e33; 	R(_INT(0x21));	// 1890 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 01A2:0E33
+exit(0);
 seg000_e35_proc:
 	// 1898 
 loc_10e35:
 	// 4535 
 cs=0x1a2;eip=0x000e35; 	J(CALL(sub_16546,0));	// 1900 call    sub_16546 ;~ 01A2:0E35
 cs=0x1a2;eip=0x000e38; 	J(CALL(sub_1754c,0));	// 1901 call    sub_1754C ;~ 01A2:0E38
-cs=0x1a2;eip=0x000e3b; 	T(MOV(es, word_2b33f));	// 1902 mov     es, word_2B33F ;~ 01A2:0E3B
+cs=0x1a2;eip=0x000e3b; 	T(MOV(es, *(dw*)raddr(ds,0x2E5F)));	// 1902 mov     es, word_2B33F ;~ 01A2:0E3B
 cs=0x1a2;eip=0x000e3f; 	T(MOV(ax, 0x4900));	// 1904 mov     ax, 4900h ;~ 01A2:0E3F
 cs=0x1a2;eip=0x000e42; 	R(_INT(0x21));	// 1905 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E42
-cs=0x1a2;eip=0x000e44; 	T(MOV(es, word_2b33d));	// 1907 mov     es, word_2B33D ;~ 01A2:0E44
+cs=0x1a2;eip=0x000e44; 	T(MOV(es, *(dw*)raddr(ds,0x2E5D)));	// 1907 mov     es, word_2B33D ;~ 01A2:0E44
 cs=0x1a2;eip=0x000e48; 	T(MOV(ax, 0x4900));	// 1908 mov     ax, 4900h ;~ 01A2:0E48
 cs=0x1a2;eip=0x000e4b; 	R(_INT(0x21));	// 1909 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E4B
-cs=0x1a2;eip=0x000e4d; 	T(MOV(es, word_2b341));	// 1911 mov     es, word_2B341 ;~ 01A2:0E4D
+cs=0x1a2;eip=0x000e4d; 	T(MOV(es, *(dw*)raddr(ds,0x2E61)));	// 1911 mov     es, word_2B341 ;~ 01A2:0E4D
 cs=0x1a2;eip=0x000e51; 	T(MOV(ax, 0x4900));	// 1912 mov     ax, 4900h ;~ 01A2:0E51
 cs=0x1a2;eip=0x000e54; 	R(_INT(0x21));	// 1913 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E54
-cs=0x1a2;eip=0x000e56; 	T(MOV(es, word_2b343));	// 1915 mov     es, word_2B343 ;~ 01A2:0E56
+cs=0x1a2;eip=0x000e56; 	T(MOV(es, *(dw*)raddr(ds,0x2E63)));	// 1915 mov     es, word_2B343 ;~ 01A2:0E56
 cs=0x1a2;eip=0x000e5a; 	T(MOV(ax, 0x4900));	// 1916 mov     ax, 4900h ;~ 01A2:0E5A
 cs=0x1a2;eip=0x000e5d; 	R(_INT(0x21));	// 1917 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E5D
-cs=0x1a2;eip=0x000e5f; 	T(MOV(es, word_2b347));	// 1919 mov     es, word_2B347 ;~ 01A2:0E5F
+cs=0x1a2;eip=0x000e5f; 	T(MOV(es, *(dw*)raddr(ds,0x2E67)));	// 1919 mov     es, word_2B347 ;~ 01A2:0E5F
 cs=0x1a2;eip=0x000e63; 	T(MOV(ax, 0x4900));	// 1920 mov     ax, 4900h ;~ 01A2:0E63
 cs=0x1a2;eip=0x000e66; 	R(_INT(0x21));	// 1921 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E66
-cs=0x1a2;eip=0x000e68; 	T(MOV(es, word_2b357));	// 1923 mov     es, word_2B357 ;~ 01A2:0E68
+cs=0x1a2;eip=0x000e68; 	T(MOV(es, *(dw*)raddr(ds,0x2E77)));	// 1923 mov     es, word_2B357 ;~ 01A2:0E68
 cs=0x1a2;eip=0x000e6c; 	T(MOV(ax, 0x4900));	// 1924 mov     ax, 4900h ;~ 01A2:0E6C
 cs=0x1a2;eip=0x000e6f; 	R(_INT(0x21));	// 1925 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:0E6F
 cs=0x1a2;eip=0x000e71; 	T(MOV(ax, 0x3E00));	// 1927 mov     ax, 3E00h ;~ 01A2:0E71
-cs=0x1a2;eip=0x000e74; 	T(MOV(bx, word_2b092));	// 1928 mov     bx, word_2B092 ;~ 01A2:0E74
+cs=0x1a2;eip=0x000e74; 	T(MOV(bx, *(dw*)raddr(ds,0x2BB2)));	// 1928 mov     bx, word_2B092 ;~ 01A2:0E74
 cs=0x1a2;eip=0x000e78; 	R(_INT(0x21));	// 1929 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:0E78
 cs=0x1a2;eip=0x000e7a; 	J(CALL(sub_1686f,0));	// 1931 call    sub_1686F ;~ 01A2:0E7A
 cs=0x1a2;eip=0x000e7d; 	J(CALL(sub_1292f,0));	// 1932 call    sub_1292F ;~ 01A2:0E7D
 cs=0x1a2;eip=0x000e80; 	T(MOV(ax, 0x4C00));	// 1933 mov     ax, 4C00h ;~ 01A2:0E80
 cs=0x1a2;eip=0x000e83; 	R(_INT(0x21));	// 1934 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 01A2:0E83
+exit(0);
 sub_10e85:
 	// 1940 
 cs=0x1a2;eip=0x000e85; 	X(PUSH(ax));	// 1942 push    ax ;~ 01A2:0E85
