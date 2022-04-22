@@ -7,7 +7,7 @@
  *
  */
 
-#include "asm.h"
+#include "../asm.h"
 
 
 
@@ -9097,6 +9097,7 @@ static const dd kloc_284c8 = 0xe25bc98;
 static const dd k_group1 = 0x1a20000;
 static const dd k_group2 = 0xd4f03ba;
 static const dd k_group3 = 0xe2500c1;
+static const dd kseg002_756_proc = 0xd4f0756;
 }
 bool _group1(m2c::_offsets, struct m2c::_STATE*);
 bool _group2(m2c::_offsets, struct m2c::_STATE*);
