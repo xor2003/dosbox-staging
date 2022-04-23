@@ -22,6 +22,7 @@
 #ifdef DOSBOX_CUSTOM
 #include <typeinfo>
 
+#include "custom.h"
 #include "regs.h"
 #include "cpu.h"
 #include "mem.h"
@@ -585,50 +586,12 @@ static void setdata(dd* d, dd s)
 #define RM_OFFSET(addr)       (((size_t)addr) & 0xF)
 #define RM_SEGMENT(addr)      ((((size_t)addr) >> 4) & 0xFFFF)
 
-    class ShadowStack {
-        struct Frame {
-            const char *file;
-            size_t line;
-            dd sp;
-            dw cs;
-            dd ip;
-            dd value;
-            dw *pointer_;
-            size_t addcounter;
-            size_t remcounter;
-//            bool itwascall;
-            size_t call_deep;
-        };
-
-        std::vector<Frame> m_ss;
-        size_t m_current;
-        bool m_itiscall;
-        size_t m_deep;
-        int m_needtoskipcall;
-    public:
-        size_t m_currentdeep;
-
-        ShadowStack() : m_current(0),m_itiscall(false),
-m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
-
-        void push(_STATE *_state, dd value);
-
-        void pop(_STATE *_state);
-
-        void print(_STATE *_state);
-        void itiscall() {m_itiscall=true;}
-
-        void decreasedeep();
-        bool needtoskipcalls();
-        size_t getneedtoskipcall(){return m_needtoskipcall;}
-
-    };
 
     extern ShadowStack shadow_stack;
 
 
 #ifdef DOSBOX_CUSTOM
-#define PUSH(a) {m2c::PUSH_(a);m2c::shadow_stack.push(0,(dd)(a));}
+#define PUSH(a) {m2c::PUSH_(a);}
 
     template<typename S>
     void PUSH_(S a);
@@ -645,7 +608,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
     template<>
     inline void PUSH_<int>(int a) { CPU_Push32(a); }
 
-#define POP(a) {m2c::shadow_stack.pop(0); m2c::POP_(a);}
+#define POP(a) {m2c::POP_(a);}
 
     inline void POP_(dw &a) { a = CPU_Pop16(); }
 

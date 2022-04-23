@@ -138,21 +138,25 @@ void CPU_Push16(Bitu value) {
 	Bit32u new_esp=(reg_esp&cpu.stack.notmask)|((reg_esp-2)&cpu.stack.mask);
 	mem_writew(SegPhys(ss) + (new_esp & cpu.stack.mask) ,value);
 	reg_esp=new_esp;
+        m2c::shadow_stack.push(0,(dd)(value));
 }
 
 void CPU_Push32(Bitu value) {
 	Bit32u new_esp=(reg_esp&cpu.stack.notmask)|((reg_esp-4)&cpu.stack.mask);
 	mem_writed(SegPhys(ss) + (new_esp & cpu.stack.mask) ,value);
 	reg_esp=new_esp;
+        m2c::shadow_stack.push(0,(dd)(value));
 }
 
 Bitu CPU_Pop16(void) {
+        m2c::shadow_stack.pop(0);
 	Bitu val=mem_readw(SegPhys(ss) + (reg_esp & cpu.stack.mask));
 	reg_esp=(reg_esp&cpu.stack.notmask)|((reg_esp+2)&cpu.stack.mask);
 	return val;
 }
 
 Bitu CPU_Pop32(void) {
+        m2c::shadow_stack.pop(0);
 	Bitu val=mem_readd(SegPhys(ss) + (reg_esp & cpu.stack.mask));
 	reg_esp=(reg_esp&cpu.stack.notmask)|((reg_esp+4)&cpu.stack.mask);
 	return val;
