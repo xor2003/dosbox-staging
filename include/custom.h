@@ -3,10 +3,60 @@
 
 #include "dosbox.h"
 #include <stack>
+#include <vector>
+
+typedef Bit16u dw;
+typedef Bit32u dd;
 
 namespace m2c {
+
+class _STATE;
     extern int log_debug(const char *format, ...);
+
+    class ShadowStack {
+        struct Frame {
+            const char *file;
+            size_t line;
+            dd sp;
+            dw cs;
+            dd ip;
+            dd value;
+            dw *pointer_;
+            size_t addcounter;
+            size_t remcounter;
+//            bool itwascall;
+            size_t call_deep;
+        };
+
+        std::vector<Frame> m_ss;
+        size_t m_current;
+        bool m_itiscall;
+        size_t m_deep;
+        int m_needtoskipcall;
+    public:
+        size_t m_currentdeep;
+
+        ShadowStack() : m_current(0),m_itiscall(false),
+m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
+
+        void push(_STATE *_state, dd value);
+
+        void pop(_STATE *_state);
+
+        void print(_STATE *_state);
+        void itiscall() {m_itiscall=true;}
+
+        void decreasedeep();
+        bool needtoskipcalls();
+        size_t getneedtoskipcall(){return m_needtoskipcall;}
+
+    };
+
+    extern ShadowStack shadow_stack;
+
 }
+
+
 
 class custom_prog {
 	public:
