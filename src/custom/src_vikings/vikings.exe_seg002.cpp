@@ -249,7 +249,7 @@ cs=0xd4f;eip=0x000554; 	T(MOV(cx, 0x22));	// 32553 mov     cx, 22h ; '"' ;~ 0D4F
 cs=0xd4f;eip=0x000557; 	X(	REP STOSW);	// 32554 rep stosw ;~ 0D4F:0557
 loc_1c029:
 	// 5949 
-//cs=0xd4f;eip=0x000559; 	T(OR(bh, 0));	// 32557 or      bh, 0 ;~ 0D4F:0559
+cs=0xd4f;eip=0x000559; //  	T(OR(bh, 0));	// 32557 or      bh, 0 ;~ 0D4F:0559
 seg002_55c_proc:
 	// 32560 
 //cs=0xd4f;eip=0x00055c; 	X(PUSH(cs));	// 32560 push    cs ;~ 0D4F:055C
@@ -297,7 +297,7 @@ cs=0xd4f;eip=0x0005a2; 	X(MOV(*(dw*)(raddr(es,0x20)), dx));	// 32598 mov     es:
 cs=0xd4f;eip=0x0005a7; 	X(MOV(*(dw*)(raddr(es,0x22)), ds));	// 32599 mov     word ptr es:22h, ds ;~ 0D4F:05A7
 loc_1c07c:
 	// 5952 
-//cs=0xd4f;eip=0x0005ac; 	T(OR(bh, 0));	// 32602 or      bh, 0 ;~ 0D4F:05AC
+cs=0xd4f;eip=0x0005ac; //  	T(OR(bh, 0));	// 32602 or      bh, 0 ;~ 0D4F:05AC
 seg002_5af_proc:
 	// 32605 
 //cs=0xd4f;eip=0x0005af; 	X(PUSH(cs));	// 32605 push    cs ;~ 0D4F:05AF
@@ -328,7 +328,7 @@ cs=0xd4f;eip=0x0005d2; 	X(MOV(*(dw*)(raddr(es,0x20)), dx));	// 32627 mov     es:
 cs=0xd4f;eip=0x0005d7; 	X(MOV(*(dw*)(raddr(es,0x22)), ds));	// 32628 mov     word ptr es:22h, ds ;~ 0D4F:05D7
 loc_1c0ac:
 	// 5954 
-//cs=0xd4f;eip=0x0005dc; 	T(OR(bh, 0));	// 32631 or      bh, 0 ;~ 0D4F:05DC
+cs=0xd4f;eip=0x0005dc; //  	T(OR(bh, 0));	// 32631 or      bh, 0 ;~ 0D4F:05DC
 seg002_5df_proc:
 	// 32634 
 //cs=0xd4f;eip=0x0005df; 	X(PUSH(cs));	// 32634 push    cs ;~ 0D4F:05DF
@@ -368,7 +368,7 @@ loc_1c0d2:
 cs=0xd4f;eip=0x000602; 	R(OUT(0x40, al));	// 32671 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 0D4F:0602
 loc_1c0d4:
 	// 5958 
-//cs=0xd4f;eip=0x000604; 	T(OR(bh, 0));	// 32674 or      bh, 0 ;~ 0D4F:0604
+cs=0xd4f;eip=0x000604; //  	T(OR(bh, 0));	// 32674 or      bh, 0 ;~ 0D4F:0604
 seg002_607_proc:
 	// 32677 
 //cs=0xd4f;eip=0x000607; 	X(PUSH(cs));	// 32677 push    cs ;~ 0D4F:0607
@@ -551,7 +551,7 @@ cs=0xd4f;eip=0x00070a; 	T(MOV(ax, 0));	// 32846 mov     ax, 0 ;~ 0D4F:070A
 cs=0xd4f;eip=0x00070d; 	X(	REP STOSW);	// 32847 rep stosw ;~ 0D4F:070D
 loc_1c1df:
 	// 5973 
-//cs=0xd4f;eip=0x00070f; 	T(OR(bh, 0));	// 32851 or      bh, 0 ;~ 0D4F:070F
+cs=0xd4f;eip=0x00070f; //  	T(OR(bh, 0));	// 32851 or      bh, 0 ;~ 0D4F:070F
 seg002_712_proc:
 	// 32854 
 //cs=0xd4f;eip=0x000712; 	X(PUSH(cs));	// 32854 push    cs ;~ 0D4F:0712
@@ -594,7 +594,7 @@ cs=0xd4f;eip=0x00074e; 	T(MOV(ax, 0));	// 32885 mov     ax, 0 ;~ 0D4F:074E
 cs=0xd4f;eip=0x000751; 	X(	REP STOSW);	// 32886 rep stosw ;~ 0D4F:0751
 loc_1c223:
 	// 5975 
-//cs=0xd4f;eip=0x000753; 	T(OR(bh, 0));	// 32889 or      bh, 0 ;~ 0D4F:0753
+cs=0xd4f;eip=0x000753; //  	T(OR(bh, 0));	// 32889 or      bh, 0 ;~ 0D4F:0753
 seg002_756_proc:
 	// 32892 
 //cs=0xd4f;eip=0x000756; 	X(PUSH(cs));	// 32892 push    cs ;~ 0D4F:0756
@@ -659,7 +659,7 @@ cs=0xd4f;eip=0x0007b3; 	X(PUSH(cs));	// 32944 push    cs ;~ 0D4F:07B3
 cs=0xd4f;eip=0x0007b4; 	J(CALL(sub_1c3a7,0));	// 32945 call    sub_1C3A7 ;~ 0D4F:07B4
 loc_1c287:
 	// 5980 
-//cs=0xd4f;eip=0x0007b7; 	T(OR(bh, 0));	// 32948 or      bh, 0 ;~ 0D4F:07B7
+cs=0xd4f;eip=0x0007b7; //  	T(OR(bh, 0));	// 32948 or      bh, 0 ;~ 0D4F:07B7
 seg002_7ba_proc:
 	// 32951 
 //cs=0xd4f;eip=0x0007ba; 	X(PUSH(cs));	// 32951 push    cs ;~ 0D4F:07BA
@@ -754,7 +754,7 @@ cs=0xd4f;eip=0x000874; 	X(MOV(*(dw*)(raddr(cs,bx+0x0D0)), 0x0FFFF));	// 33039 mo
 cs=0xd4f;eip=0x00087b; 	X(MOV(*(dw*)(raddr(cs,bx+0x0D2)), 0x0FFFF));	// 33040 mov     word ptr cs:[bx+0D2h], 0FFFFh ;~ 0D4F:087B
 loc_1c352:
 	// 5984 
-//cs=0xd4f;eip=0x000882; 	T(OR(bh, 0));	// 33044 or      bh, 0 ;~ 0D4F:0882
+cs=0xd4f;eip=0x000882; //  	T(OR(bh, 0));	// 33044 or      bh, 0 ;~ 0D4F:0882
 seg002_885_proc:
 	// 33047 
 //cs=0xd4f;eip=0x000885; 	X(PUSH(cs));	// 33047 push    cs ;~ 0D4F:0885
@@ -801,7 +801,7 @@ cs=0xd4f;eip=0x0008c7; 	X(PUSH(cs));	// 33088 push    cs ;~ 0D4F:08C7
 cs=0xd4f;eip=0x0008c8; 	J(CALL(sub_1c087,0));	// 33089 call    sub_1C087 ;~ 0D4F:08C8
 loc_1c39b:
 	// 5986 
-//cs=0xd4f;eip=0x0008cb; 	T(OR(bh, 0));	// 33093 or      bh, 0 ;~ 0D4F:08CB
+cs=0xd4f;eip=0x0008cb;// 	T(OR(bh, 0));	// 33093 or      bh, 0 ;~ 0D4F:08CB
 seg002_8ce_proc:
 	// 33096 
 //cs=0xd4f;eip=0x0008ce; 	X(PUSH(cs));	// 33096 push    cs ;~ 0D4F:08CE
@@ -832,7 +832,7 @@ cs=0xd4f;eip=0x0008e7; 	T(DEC(si));	// 33120 dec     si ;~ 0D4F:08E7
 cs=0xd4f;eip=0x0008e8; 	J(JGE(loc_1c3af));	// 33121 jge     short loc_1C3AF ;~ 0D4F:08E8
 loc_1c3ba:
 	// 5989 
-//cs=0xd4f;eip=0x0008ea; 	T(OR(bh, 0));	// 33124 or      bh, 0 ;~ 0D4F:08EA
+cs=0xd4f;eip=0x0008ea; //  	T(OR(bh, 0));	// 33124 or      bh, 0 ;~ 0D4F:08EA
 seg002_8ed_proc:
 	// 33127 
 //cs=0xd4f;eip=0x0008ed; 	X(PUSH(cs));	// 33127 push    cs ;~ 0D4F:08ED
@@ -863,7 +863,7 @@ cs=0xd4f;eip=0x000908; 	J(JNZ(loc_1c3e1));	// 33153 jnz     short loc_1C3E1 ;~ 0
 cs=0xd4f;eip=0x00090a; 	X(MOV(*(dw*)(raddr(cs,bx+0x6A)), 2));	// 33154 mov     word ptr cs:[bx+6Ah], 2 ;~ 0D4F:090A
 loc_1c3e1:
 	// 5991 
-//cs=0xd4f;eip=0x000911; 	T(OR(bh, 0));	// 33158 or      bh, 0 ;~ 0D4F:0911
+cs=0xd4f;eip=0x000911; //  	T(OR(bh, 0));	// 33158 or      bh, 0 ;~ 0D4F:0911
 seg002_914_proc:
 	// 33161 
 //cs=0xd4f;eip=0x000914; 	X(PUSH(cs));	// 33161 push    cs ;~ 0D4F:0914
@@ -892,7 +892,7 @@ cs=0xd4f;eip=0x00092d; 	T(DEC(si));	// 33181 dec     si ;~ 0D4F:092D
 cs=0xd4f;eip=0x00092e; 	J(JGE(loc_1c3f5));	// 33182 jge     short loc_1C3F5 ;~ 0D4F:092E
 loc_1c400:
 	// 5994 
-//cs=0xd4f;eip=0x000930; 	T(OR(bh, 0));	// 33185 or      bh, 0 ;~ 0D4F:0930
+cs=0xd4f;eip=0x000930; //  	T(OR(bh, 0));	// 33185 or      bh, 0 ;~ 0D4F:0930
 //cs=0xd4f;eip=0x000933; 	X(PUSH(cs));	// 33186 push    cs ;~ 0D4F:0933
 //cs=0xd4f;eip=0x000934; 	J(CALL(_group2,m2c::kloc_1c400));	// 33187 call    near ptr loc_1C400+1 ;~ 0D4F:0934
 R(POPF);
@@ -921,7 +921,7 @@ cs=0xd4f;eip=0x00094e; 	J(JNZ(loc_1c427));	// 33211 jnz     short loc_1C427 ;~ 0
 cs=0xd4f;eip=0x000950; 	X(MOV(*(dw*)(raddr(cs,bx+0x6A)), 1));	// 33212 mov     word ptr cs:[bx+6Ah], 1 ;~ 0D4F:0950
 loc_1c427:
 	// 5996 
-//cs=0xd4f;eip=0x000957; 	T(OR(bh, 0));	// 33216 or      bh, 0 ;~ 0D4F:0957
+cs=0xd4f;eip=0x000957; //  	T(OR(bh, 0));	// 33216 or      bh, 0 ;~ 0D4F:0957
 //cs=0xd4f;eip=0x00095a; 	X(PUSH(cs));	// 33217 push    cs ;~ 0D4F:095A
 //cs=0xd4f;eip=0x00095b; 	J(CALL(_group2,m2c::kloc_1c427));	// 33218 call    near ptr loc_1C427+1 ;~ 0D4F:095B
 R(POPF);
@@ -950,7 +950,7 @@ cs=0xd4f;eip=0x000973; 	T(DEC(si));	// 33239 dec     si ;~ 0D4F:0973
 cs=0xd4f;eip=0x000974; 	J(JGE(loc_1c43b));	// 33240 jge     short loc_1C43B ;~ 0D4F:0974
 loc_1c446:
 	// 5999 
-//cs=0xd4f;eip=0x000976; 	T(OR(bh, 0));	// 33243 or      bh, 0 ;~ 0D4F:0976
+cs=0xd4f;eip=0x000976; //  	T(OR(bh, 0));	// 33243 or      bh, 0 ;~ 0D4F:0976
 //cs=0xd4f;eip=0x000979; 	X(PUSH(cs));	// 33244 push    cs ;~ 0D4F:0979
 //cs=0xd4f;eip=0x00097a; 	J(CALL(_group2,m2c::kloc_1c446));	// 33245 call    near ptr loc_1C446+1 ;~ 0D4F:097A
 R(POPF);
@@ -998,7 +998,7 @@ cs=0xd4f;eip=0x0009c3; 	T(SHL(bx, 1));	// 33285 shl     bx, 1 ;~ 0D4F:09C3
 cs=0xd4f;eip=0x0009c5; 	X(MOV(*(dw*)(raddr(cs,bx+0x6A)), ax));	// 33286 mov     cs:[bx+6Ah], ax ;~ 0D4F:09C5
 loc_1c49a:
 	// 6001 
-//cs=0xd4f;eip=0x0009ca; 	T(OR(bh, 0));	// 33289 or      bh, 0 ;~ 0D4F:09CA
+cs=0xd4f;eip=0x0009ca; //  	T(OR(bh, 0));	// 33289 or      bh, 0 ;~ 0D4F:09CA
 seg002_9cd_proc:
 	// 33292 
 //cs=0xd4f;eip=0x0009cd; 	X(PUSH(cs));	// 33292 push    cs ;~ 0D4F:09CD
@@ -1052,7 +1052,7 @@ cs=0xd4f;eip=0x000a05; 	J(CALL(sub_1c451,0));	// 33337 call    sub_1C451 ;~ 0D4F
 cs=0xd4f;eip=0x000a08; 	T(ADD(sp, 6));	// 33338 add     sp, 6 ;~ 0D4F:0A08
 loc_1c4db:
 	// 6003 
-//cs=0xd4f;eip=0x000a0b; 	T(OR(bh, 0));	// 33341 or      bh, 0 ;~ 0D4F:0A0B
+cs=0xd4f;eip=0x000a0b; //  	T(OR(bh, 0));	// 33341 or      bh, 0 ;~ 0D4F:0A0B
 seg002_a0e_proc:
 	// 33344 
 //cs=0xd4f;eip=0x000a0e; 	X(PUSH(cs));	// 33344 push    cs ;~ 0D4F:0A0E
@@ -1094,7 +1094,7 @@ cs=0xd4f;eip=0x000a41; 	J(CALL(sub_1c451,0));	// 33378 call    sub_1C451 ;~ 0D4F
 cs=0xd4f;eip=0x000a44; 	T(ADD(sp, 6));	// 33379 add     sp, 6 ;~ 0D4F:0A44
 loc_1c517:
 	// 6007 
-//cs=0xd4f;eip=0x000a47; 	T(OR(bh, 0));	// 33382 or      bh, 0 ;~ 0D4F:0A47
+cs=0xd4f;eip=0x000a47; //  	T(OR(bh, 0));	// 33382 or      bh, 0 ;~ 0D4F:0A47
 //cs=0xd4f;eip=0x000a4a; 	X(PUSH(cs));	// 33383 push    cs ;~ 0D4F:0A4A
 //cs=0xd4f;eip=0x000a4b; 	J(CALL(_group2,m2c::kloc_1c517));	// 33384 call    near ptr loc_1C517+1 ;~ 0D4F:0A4B
 R(POPF);
@@ -1114,7 +1114,7 @@ cs=0xd4f;eip=0x000a57; 	T(CLI);	// 33395 cli ;~ 0D4F:0A57
 cs=0xd4f;eip=0x000a58; 	T(MOV(ax, *(dw*)(((db*)&word_1bbf2))));	// 33396 mov     ax, cs:word_1BBF2 ;~ 0D4F:0A58
 loc_1c52c:
 	// 6009 
-//cs=0xd4f;eip=0x000a5c; 	T(OR(bh, 0));	// 33399 or      bh, 0 ;~ 0D4F:0A5C
+cs=0xd4f;eip=0x000a5c; //  	T(OR(bh, 0));	// 33399 or      bh, 0 ;~ 0D4F:0A5C
 //cs=0xd4f;eip=0x000a5f; 	X(PUSH(cs));	// 33400 push    cs ;~ 0D4F:0A5F
 //cs=0xd4f;eip=0x000a60; 	J(CALL(_group2,m2c::kloc_1c52c));	// 33401 call    near ptr loc_1C52C+1 ;~ 0D4F:0A60
 R(POPF);
@@ -1183,7 +1183,7 @@ cs=0xd4f;eip=0x000adf; 	J(JA(loc_1c5b5));	// 33460 ja      short loc_1C5B5 ;~ 0D
 cs=0xd4f;eip=0x000ae1; 	T(MOV(ax, *(dw*)(((db*)&word_1bc78))));	// 33461 mov     ax, cs:word_1BC78 ;~ 0D4F:0AE1
 loc_1c5b5:
 	// 6013 
-//cs=0xd4f;eip=0x000ae5; 	T(OR(bh, 0));	// 33465 or      bh, 0 ;~ 0D4F:0AE5
+cs=0xd4f;eip=0x000ae5; //  	T(OR(bh, 0));	// 33465 or      bh, 0 ;~ 0D4F:0AE5
 seg002_ae8_proc:
 	// 33468 
 //cs=0xd4f;eip=0x000ae8; 	X(PUSH(cs));	// 33468 push    cs ;~ 0D4F:0AE8
@@ -1212,7 +1212,7 @@ cs=0xd4f;eip=0x000b05; 	X(MOV(*(dw*)(raddr(cs,bx+0x124)), 0));	// 33488 mov     
 cs=0xd4f;eip=0x000b0c; 	X(MOV(*(dw*)(raddr(cs,bx+0x126)), 0));	// 33489 mov     word ptr cs:[bx+126h], 0 ;~ 0D4F:0B0C
 loc_1c5e3:
 	// 6015 
-//cs=0xd4f;eip=0x000b13; 	T(OR(bh, 0));	// 33493 or      bh, 0 ;~ 0D4F:0B13
+cs=0xd4f;eip=0x000b13; //  	T(OR(bh, 0));	// 33493 or      bh, 0 ;~ 0D4F:0B13
 //cs=0xd4f;eip=0x000b16; 	X(PUSH(cs));	// 33494 push    cs ;~ 0D4F:0B16
 //cs=0xd4f;eip=0x000b17; 	J(CALL(_group2,m2c::kloc_1c5e3));	// 33495 call    near ptr loc_1C5E3+1 ;~ 0D4F:0B17
 R(POPF);
@@ -1349,7 +1349,7 @@ cs=0xd4f;eip=0x000bee; 	J(CALL(sub_1c3c5,0));	// 33625 call    sub_1C3C5 ;~ 0D4F
 cs=0xd4f;eip=0x000bf1; 	T(ADD(sp, 2));	// 33626 add     sp, 2 ;~ 0D4F:0BF1
 loc_1c6c4:
 	// 6021 
-//cs=0xd4f;eip=0x000bf4; 	T(OR(bh, 0));	// 33630 or      bh, 0 ;~ 0D4F:0BF4
+cs=0xd4f;eip=0x000bf4; //  	T(OR(bh, 0));	// 33630 or      bh, 0 ;~ 0D4F:0BF4
 seg002_bf7_proc:
 	// 33633 
 //cs=0xd4f;eip=0x000bf7; 	X(PUSH(cs));	// 33633 push    cs ;~ 0D4F:0BF7
