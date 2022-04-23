@@ -1488,9 +1488,10 @@ struct StackPop
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
         if (shadow_stack.needtoskipcalls()) 
-          {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());
+          {int skip = shadow_stack.getneedtoskipcall();
+log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
-throw StackPop(shadow_stack.getneedtoskipcall());}
+throw StackPop(skip);}
     }
 
 #define RETF(i) {m2c::RETF_(i); m2c::shadow_stack.decreasedeep();return true;}
@@ -1521,9 +1522,10 @@ throw StackPop(shadow_stack.getneedtoskipcall());}
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
         if (need) 
-          {log_error("~~will throw exception skip call=%d\n",shadow_stack.getneedtoskipcall());
+          {int skip = shadow_stack.getneedtoskipcall();
+log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
-throw StackPop(shadow_stack.getneedtoskipcall());}
+throw StackPop(skip);}
     }
 
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
