@@ -1070,6 +1070,26 @@ if (debug > 0)
       }
   }
 
+        void ShadowStack::decreasedeep(){
+log_error("decreasedeep m_deep=%d ",m_deep);
+pop(0);
+//m_deep=m_currentdeep-1;
+--m_deep;
+log_error("m_deep=%d ",m_deep);
+}
+        bool ShadowStack::needtoskipcalls(){
+log_error("ret m_currentdeep=%d ",m_currentdeep);
+m_needtoskipcall=m_currentdeep?m_deep-m_currentdeep:0; 
+if (m_needtoskipcall<0) {m_needtoskipcall=0;}
+log_error("m_needtoskipcall=%d ",m_needtoskipcall);
+//m_deep=m_currentdeep?m_currentdeep-1:m_deep; 
+--m_deep;
+log_error("m_deep=%d ",m_deep);
+m_currentdeep=0;
+log_error("m_currentdeep=%d\n",m_currentdeep);
+return m_needtoskipcall;}
+
+
   void ShadowStack::print (_STATE * _state)
   {
     if (m2c::debug)
@@ -1090,6 +1110,20 @@ if (debug > 0)
           }
       }
   }
+
+    int log_debug(const char *format, ...) {
+        int result;
+        va_list args;
+
+        va_start(args, format);
+        char str[256];
+        result = vsprintf(str, format, args);
+//        result = vprintf(format, args);
+        log_regs_dbx("", 0, str, cpu_regs, Segs);
+        va_end(args);
+
+        return result;
+    }
 
 }
 

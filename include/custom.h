@@ -4,6 +4,10 @@
 #include "dosbox.h"
 #include <stack>
 
+namespace m2c {
+    extern int log_debug(const char *format, ...);
+}
+
 class custom_prog {
 	public:
 		virtual bool probe(char *name, Bit16u relocate,

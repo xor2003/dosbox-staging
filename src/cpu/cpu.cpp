@@ -597,7 +597,7 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 		Segs.phys[cs]=Segs.val[cs]<<4;
 		cpu.code.big=false;
 
-//		printf("Want to execute interrupt %x cs:IP=%x:%x\n",num,Segs.val[cs],reg_eip);
+		m2c::log_debug("Want to execute interrupt %x cs:IP=%x:%x\n",num,Segs.val[cs],reg_eip);
 		defered_custom_call=true;
 		CPU_CycleLeft=CPU_Cycles;
 		CPU_Cycles=0;
