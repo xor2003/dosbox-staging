@@ -33,11 +33,15 @@ class _STATE;
         bool m_itiscall;
         size_t m_deep;
         int m_needtoskipcall;
+        bool m_active;
     public:
         size_t m_currentdeep;
 
         ShadowStack() : m_current(0),m_itiscall(false),
-m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
+m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true) {}
+
+        void enable() {m_active=true;}
+        void disable() {m_active=false;}
 
         void push(_STATE *_state, dd value);
 

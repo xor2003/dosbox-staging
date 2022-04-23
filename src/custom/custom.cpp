@@ -322,6 +322,7 @@ namespace m2c
     dd neweip (oldeip);
     Bits nc_retcode;
     doing_single_step=true;
+    shadow_stack.disable();
 //log_debug("s1 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     do
       {
@@ -330,6 +331,7 @@ namespace m2c
         neweip = (Segs.val[1] << 16) + cpu_regs.ip.word[0];
       }
     while (neweip == oldeip);   // to handle REP*
+    shadow_stack.enable();
     doing_single_step=false;
 //log_debug("s2 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     CPU_Cycles = old_cycles;
