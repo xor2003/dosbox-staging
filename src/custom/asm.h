@@ -330,7 +330,7 @@ dd _source;
 
     extern struct Memory types;
 
-    static int log_debug(const char *format, ...);
+//    static int log_debug(const char *format, ...);
 
     template<class S>
     inline void check_type(const S &) {
@@ -495,19 +495,7 @@ static void setdata(dd* d, dd s)
 #ifdef DOSBOX_CUSTOM
 
 
-    static int log_debug(const char *format, ...) {
-        int result;
-        va_list args;
-
-        va_start(args, format);
-        char str[256];
-        result = vsprintf(str, format, args);
-//        result = vprintf(format, args);
-        log_regs_dbx("", 0, str, cpu_regs, Segs);
-        va_end(args);
-
-        return result;
-    }
+    extern int log_debug(const char *format, ...);
 //#define log_debug printf
 #define log_error log_debug
 #define log_info log_debug
@@ -630,17 +618,8 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0) {}
         void print(_STATE *_state);
         void itiscall() {m_itiscall=true;}
 
-        void decreasedeep(){pop(0);m_deep=m_currentdeep-1;}
-        bool needtoskipcalls(){
-log_error("ret m_currentdeep=%d ",m_currentdeep);
-m_needtoskipcall=m_currentdeep?m_deep-m_currentdeep:0; 
-if (m_needtoskipcall<0) {m_needtoskipcall=0;}
-log_error("m_needtoskipcall=%d ",m_needtoskipcall);
-m_deep=m_currentdeep?m_currentdeep-1:m_deep; 
-log_error("m_deep=%d ",m_deep);
-m_currentdeep=0;
-log_error("m_currentdeep=%d\n",m_currentdeep);
-return m_needtoskipcall;}
+        void decreasedeep();
+        bool needtoskipcalls();
         size_t getneedtoskipcall(){return m_needtoskipcall;}
 
     };
@@ -1605,6 +1584,7 @@ throw StackPop(shadow_stack.getneedtoskipcall());}
         {
              if (ex.deep > 0)
              {  log_error("~~Throwing up\n");
+shadow_stack.decreasedeep();
 		throw StackPop(ex.deep-1);
              }
              else

@@ -5,7 +5,7 @@
  */
 
                 #include "vikings.exe.h"
-
+ #include <unistd.h>
                 
 
  bool _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
@@ -1064,6 +1064,7 @@ cs=0x1a2;eip=0x000997; 	T(MOV(bx, ax));	// 1242 mov     bx, ax ;~ 01A2:0997
 cs=0x1a2;eip=0x000999; 	T(MOV(ax, 0x2CE7));	// 1243 mov     ax, 2CE7h ;~ 01A2:0999
 cs=0x1a2;eip=0x00099c; 	J(CALL(sub_10dba,0));	// 1244 call    sub_10DBA ;~ 01A2:099C
 loc_1099f:
+printf("~! Loading chunk %x\n",ax);
 	// 4485 
 cs=0x1a2;eip=0x00099f; 	T(MOV(dx, ax));	// 1248 mov     dx, ax ;~ 01A2:099F
 cs=0x1a2;eip=0x0009a1; 	T(SHL(dx, 2));	// 1249 shl     dx, 2 ;~ 01A2:09A1
@@ -1608,6 +1609,7 @@ sub_10d9f:
 	// 1806 
 cs=0x1a2;eip=0x000d9f; 	T(MOV(ah, 0x48));	// 1808 mov     ah, 48h ;~ 01A2:0D9F
 cs=0x1a2;eip=0x000da1; 	R(_INT(0x21));	// 1809 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 01A2:0DA1
+printf("memory alloc CF %d\n",GET_CF());
 cs=0x1a2;eip=0x000da3; 	J(JC(loc_10da6));	// 1811 jb      short loc_10DA6 ;~ 01A2:0DA3
 cs=0x1a2;eip=0x000da5; 	R(RETN(0));	// 1812 retn ;~ 01A2:0DA5
 loc_10da6:
