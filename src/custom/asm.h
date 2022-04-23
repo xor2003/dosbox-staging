@@ -1469,12 +1469,13 @@ struct StackPop
    size_t deep;
 };
 
-#define RETN(i) {m2c::RETN_(i); if (ip=='xy') return true; else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#define RETN(i) {m2c::RETN_(i); if (ip=='xy') {m2c::shadow_stack.decreasedeep(); return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 
     static void RETN_(size_t i) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
+        shadow_stack.itisret();
         POP(ip);
         if (ip != 'xy') {
             log_error("Emulated stack corruption detected (found %x)\n", ip);
@@ -1492,7 +1493,7 @@ struct StackPop
 throw StackPop(shadow_stack.getneedtoskipcall());}
     }
 
-#define RETF(i) {m2c::RETF_(i); return true;}
+#define RETF(i) {m2c::RETF_(i); m2c::shadow_stack.decreasedeep();return true;}
 
     static void RETF_(size_t i) {
         X86_REGREF
@@ -1500,6 +1501,7 @@ throw StackPop(shadow_stack.getneedtoskipcall());}
 
         m2c::MWORDSIZE averytemporary9 = 0;
         log_error("~~RETF before 1pop\n");
+        shadow_stack.itisret();
         POP(averytemporary9);
         if (averytemporary9 != 'xy') {
             log_error("Emulated stack corruption detected (found %x)\n", averytemporary9);
@@ -1545,9 +1547,9 @@ throw StackPop(shadow_stack.getneedtoskipcall());}
         }
         catch(const StackPop& ex)
         {
+shadow_stack.decreasedeep();
              if (ex.deep > 0)
              {  log_error("~~Throwing up\n");
-shadow_stack.decreasedeep();
 		throw StackPop(ex.deep-1);
              }
              else

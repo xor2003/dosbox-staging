@@ -31,6 +31,7 @@ class _STATE;
         std::vector<Frame> m_ss;
         size_t m_current;
         bool m_itiscall;
+        bool m_itisret;
         size_t m_deep;
         int m_needtoskipcall;
         bool m_active;
@@ -49,10 +50,11 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true) {}
 
         void print(_STATE *_state);
         void itiscall() {m_itiscall=true;}
+        void itisret() {m_itisret=true;}
 
         void decreasedeep();
         bool needtoskipcalls();
-        size_t getneedtoskipcall(){return m_needtoskipcall;}
+        size_t getneedtoskipcall(){int ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
 
     };
 
