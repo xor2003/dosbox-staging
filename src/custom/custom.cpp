@@ -629,7 +629,7 @@ else if (op1 == 0xff) //jmpf
 {
   db op2 = *(b+1);
   if (op2>=0x10 && op2 <= 0x2f ) //call/jmp 
-    instr_size += 2;
+    instr_size += 4;
   else if (op2>=0x50 && op2 <= 0x6f ) //call/jmp 
     instr_size += 3;
   else if (op2 >= 0x90 && op2<=0xAf) //call/jmp 
@@ -641,6 +641,9 @@ else if (op1 == 0x0f) //j
   if (op2>=0x80 && op2 <= 0x8f ) //call/jmp r/m16
     instr_size += 4;
 }
+log_debug ("instr size %x\n", instr_size);
+
+assert(instr_size);
  return instr_size;
 }
 
