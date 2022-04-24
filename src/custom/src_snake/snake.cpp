@@ -27,7 +27,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &asmmain;}
     mainproc:
     _begin:
 	R(CALL(asmmain,0));
-	R(RETN(0));
+	J(RETN(0));
 
     assert(0);
     __dispatch_call:
@@ -102,7 +102,7 @@ cs=0x1b2;eip=0x00011a; 		J(JZ(loc_101ab));	// 283 jz      short loc_101AB ;~ 01B
 cs=0x1b2;eip=0x00011c; 	T(CMP(bl, 'v'));	// 284 cmp     bl, 'v' ;~ 01B2:011C
 cs=0x1b2;eip=0x00011f; 		J(JZ(loc_101ab));	// 285 jz      short loc_101AB ;~ 01B2:011F
 cs=0x1b2;eip=0x000121; locret_10221:	// 4388 
-cs=0x1b2;eip=0x000121; 	R(RETN(0));	// 288 retn ;~ 01B2:0121
+cs=0x1b2;eip=0x000121; 	J(RETN(0));	// 288 retn ;~ 01B2:0121
 
     assert(0);
     __dispatch_call:
@@ -134,7 +134,7 @@ cs=0x1b2;eip=0x000121; 	R(RETN(0));	// 288 retn ;~ 01B2:0121
 cs=0x1b2;eip=0x000122; 	T(ADD(dl, 0x30));	// 296 add     dl, 30h ; '0' ;~ 01B2:0122
 cs=0x1b2;eip=0x000125; 	T(MOV(ah, 2));	// 297 mov     ah, 2 ;~ 01B2:0125
 cs=0x1b2;eip=0x000127; 	R(_INT(0x21));	// 298 int     21h             ; DOS - DISPLAY OUTPUT ;~ 01B2:0127
-cs=0x1b2;eip=0x000129; 	R(RETN(0));	// 300 retn ;~ 01B2:0129
+cs=0x1b2;eip=0x000129; 	J(RETN(0));	// 300 retn ;~ 01B2:0129
 
     assert(0);
     __dispatch_call:
@@ -170,10 +170,10 @@ cs=0x1b2;eip=0x000139; ret_1b2_139:	// 4389
 cs=0x1b2;eip=0x000139; 	X(POP(dx));	// 316 pop     dx ;~ 01B2:0139
 cs=0x1b2;eip=0x00013a; 	J(CALL(dispdigit,0));	// 317 call    dispdigit ;~ 01B2:013A
 cs=0x1b2;eip=0x00013d; ret_1b2_13d:	// 4390 
-cs=0x1b2;eip=0x00013d; 	R(RETN(0));	// 318 retn ;~ 01B2:013D
+cs=0x1b2;eip=0x00013d; 	J(RETN(0));	// 318 retn ;~ 01B2:013D
 cs=0x1b2;eip=0x00013e; loc_1023e:	// 4391 
 cs=0x1b2;eip=0x00013e; 	T(MOV(ah, 2));	// 322 mov     ah, 2 ;~ 01B2:013E
-cs=0x1b2;eip=0x000140; 	R(RETN(0));	// 323 retn ;~ 01B2:0140
+cs=0x1b2;eip=0x000140; 	J(RETN(0));	// 323 retn ;~ 01B2:0140
 
     assert(0);
     __dispatch_call:
@@ -206,7 +206,7 @@ cs=0x1b2;eip=0x000143; 	X(PUSH(bx));	// 332 push    bx ;~ 01B2:0143
 cs=0x1b2;eip=0x000144; 	T(MOV(bh, 0));	// 333 mov     bh, 0 ;~ 01B2:0144
 cs=0x1b2;eip=0x000146; 	R(_INT(0x10));	// 334 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 01B2:0146
 cs=0x1b2;eip=0x000148; 	X(POP(bx));	// 337 pop     bx ;~ 01B2:0148
-cs=0x1b2;eip=0x000149; 	R(RETN(0));	// 338 retn ;~ 01B2:0149
+cs=0x1b2;eip=0x000149; 	J(RETN(0));	// 338 retn ;~ 01B2:0149
 
     assert(0);
     __dispatch_call:
@@ -260,7 +260,7 @@ cs=0x1b2;eip=0x00017f; 	T(MOV(dl, fruitx));	// 370 mov     dl, fruitx ;~ 01B2:01
 cs=0x1b2;eip=0x000183; 	J(CALL(writecharat,0));	// 371 call    writecharat ;~ 01B2:0183
 cs=0x1b2;eip=0x000186; ret_1b2_186:	// 4398 
 cs=0x1b2;eip=0x000186; 	X(MOV(fruitactive, 1));	// 372 mov     fruitactive, 1 ;~ 01B2:0186
-cs=0x1b2;eip=0x00018b; 	R(RETN(0));	// 373 retn ;~ 01B2:018B
+cs=0x1b2;eip=0x00018b; 	J(RETN(0));	// 373 retn ;~ 01B2:018B
 
     assert(0);
     __dispatch_call:
@@ -296,12 +296,12 @@ cs=0x1b2;eip=0x00018c; 	T(MOV(ah, 1));	// 381 mov     ah, 1 ;~ 01B2:018C
 cs=0x1b2;eip=0x00018e; 	R(_INT(0x16));	// 382 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01B2:018E
 cs=0x1b2;eip=0x000190; 		J(JNZ(loc_10295));	// 386 jnz     short loc_10295 ;~ 01B2:0190
 cs=0x1b2;eip=0x000192; 	T(XOR(dl, dl));	// 387 xor     dl, dl ;~ 01B2:0192
-cs=0x1b2;eip=0x000194; 	R(RETN(0));	// 388 retn ;~ 01B2:0194
+cs=0x1b2;eip=0x000194; 	J(RETN(0));	// 388 retn ;~ 01B2:0194
 cs=0x1b2;eip=0x000195; loc_10295:	// 4399 
 cs=0x1b2;eip=0x000195; 	T(MOV(ah, 0));	// 392 mov     ah, 0 ;~ 01B2:0195
 cs=0x1b2;eip=0x000197; 	R(_INT(0x16));	// 393 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01B2:0197
 cs=0x1b2;eip=0x000199; 	T(MOV(dl, al));	// 395 mov     dl, al ;~ 01B2:0199
-cs=0x1b2;eip=0x00019b; 	R(RETN(0));	// 396 retn ;~ 01B2:019B
+cs=0x1b2;eip=0x00019b; 	J(RETN(0));	// 396 retn ;~ 01B2:019B
 
     assert(0);
     __dispatch_call:
@@ -337,7 +337,7 @@ printf("\n\n%x ~ %x\n\n",head[0], 'v');
 cs=0x1b2;eip=0x0001a9; 	T(CMP(head[0], 'v'));	// 409 cmp     head, 'v' ;~ 01B2:01A9
 cs=0x1b2;eip=0x0001ae; 		J(JZ(loc_102eb));	// 410 jz      short loc_102EB ;~ 01B2:01AE
 cs=0x1b2;eip=0x0001b0; 	X(MOV(head[0], '^'));	// 411 mov     head, '^' ;~ 01B2:01B0
-cs=0x1b2;eip=0x0001b5; 	R(RETN(0));	// 412 retn ;~ 01B2:01B5
+cs=0x1b2;eip=0x0001b5; 	J(RETN(0));	// 412 retn ;~ 01B2:01B5
 cs=0x1b2;eip=0x0001b6; loc_102b6:	// 4401 
 cs=0x1b2;eip=0x0001b6; 	T(CMP(dl, 's'));	// 416 cmp     dl, 's' ;~ 01B2:01B6
 cs=0x1b2;eip=0x0001b9; 		J(JNZ(loc_102c8));	// 417 jnz     short loc_102C8 ;~ 01B2:01B9
@@ -345,14 +345,14 @@ printf("\n\n%x ~ %x\n\n",head[0], '^');
 cs=0x1b2;eip=0x0001bb; 	T(CMP(head[0], '^'));	// 418 cmp     head, '^' ;~ 01B2:01BB
 cs=0x1b2;eip=0x0001c0; 		J(JZ(loc_102eb));	// 419 jz      short loc_102EB ;~ 01B2:01C0
 cs=0x1b2;eip=0x0001c2; 	X(MOV(head[0], 'v'));	// 420 mov     head, 'v' ;~ 01B2:01C2
-cs=0x1b2;eip=0x0001c7; 	R(RETN(0));	// 421 retn ;~ 01B2:01C7
+cs=0x1b2;eip=0x0001c7; 	J(RETN(0));	// 421 retn ;~ 01B2:01C7
 cs=0x1b2;eip=0x0001c8; loc_102c8:	// 4402 
 cs=0x1b2;eip=0x0001c8; 	T(CMP(dl, 'a'));	// 425 cmp     dl, 'a' ;~ 01B2:01C8
 cs=0x1b2;eip=0x0001cb; 		J(JNZ(loc_102da));	// 426 jnz     short loc_102DA ;~ 01B2:01CB
 cs=0x1b2;eip=0x0001cd; 	T(CMP(head[0], '>'));	// 427 cmp     head, '>' ;~ 01B2:01CD
 cs=0x1b2;eip=0x0001d2; 		J(JZ(loc_102eb));	// 428 jz      short loc_102EB ;~ 01B2:01D2
 cs=0x1b2;eip=0x0001d4; 	X(MOV(head[0], '<'));	// 429 mov     head, '<' ;~ 01B2:01D4
-cs=0x1b2;eip=0x0001d9; 	R(RETN(0));	// 430 retn ;~ 01B2:01D9
+cs=0x1b2;eip=0x0001d9; 	J(RETN(0));	// 430 retn ;~ 01B2:01D9
 cs=0x1b2;eip=0x0001da; loc_102da:	// 4403 
 cs=0x1b2;eip=0x0001da; 	T(CMP(dl, 'd'));	// 434 cmp     dl, 'd' ;~ 01B2:01DA
 cs=0x1b2;eip=0x0001dd; 		J(JNZ(loc_102eb));	// 435 jnz     short loc_102EB ;~ 01B2:01DD
@@ -362,10 +362,10 @@ cs=0x1b2;eip=0x0001e6; 	X(MOV(head[0], '>'));	// 438 mov     head, '>' ;~ 01B2:0
 cs=0x1b2;eip=0x0001eb; loc_102eb:	// 4404 
 cs=0x1b2;eip=0x0001eb; 	T(CMP(dl, 'q'));	// 442 cmp     dl, 'q' ;~ 01B2:01EB
 cs=0x1b2;eip=0x0001ee; 		J(JZ(loc_102f1));	// 443 jz      short loc_102F1 ;~ 01B2:01EE
-cs=0x1b2;eip=0x0001f0; 	R(RETN(0));	// 444 retn ;~ 01B2:01F0
+cs=0x1b2;eip=0x0001f0; 	J(RETN(0));	// 444 retn ;~ 01B2:01F0
 cs=0x1b2;eip=0x0001f1; loc_102f1:	// 4405 
 cs=0x1b2;eip=0x0001f1; 	T(INC(quit));	// 448 inc     quit ;~ 01B2:01F1
-cs=0x1b2;eip=0x0001f5; 	R(RETN(0));	// 449 retn ;~ 01B2:01F5
+cs=0x1b2;eip=0x0001f5; 	J(RETN(0));	// 449 retn ;~ 01B2:01F5
 
     assert(0);
     __dispatch_call:
@@ -463,10 +463,10 @@ cs=0x1b2;eip=0x000261; 	T(CMP(dl, 0));	// 529 cmp     dl, 0 ;~ 01B2:0261
 cs=0x1b2;eip=0x000264; 		J(JZ(loc_1036c));	// 530 jz      short loc_1036C ;~ 01B2:0264
 cs=0x1b2;eip=0x000266; 	T(CMP(dl, 0x28));	// 531 cmp     dl, 28h ; '(' ;~ 01B2:0266
 cs=0x1b2;eip=0x000269; 		J(JZ(loc_1036c));	// 532 jz      short loc_1036C ;~ 01B2:0269
-cs=0x1b2;eip=0x00026b; 	R(RETN(0));	// 533 retn ;~ 01B2:026B
+cs=0x1b2;eip=0x00026b; 	J(RETN(0));	// 533 retn ;~ 01B2:026B
 cs=0x1b2;eip=0x00026c; loc_1036c:	// 4414 
 cs=0x1b2;eip=0x00026c; 	X(INC(gameover));	// 538 inc     gameover ;~ 01B2:026C
-cs=0x1b2;eip=0x000270; 	R(RETN(0));	// 539 retn ;~ 01B2:0270
+cs=0x1b2;eip=0x000270; 	J(RETN(0));	// 539 retn ;~ 01B2:0270
 cs=0x1b2;eip=0x000271; loc_10371:	// 4415 
 cs=0x1b2;eip=0x000271; 	T(MOV(al, segmentcount));	// 543 mov     al, segmentcount ;~ 01B2:0271
 cs=0x1b2;eip=0x000274; 	T(XOR(ah, ah));	// 544 xor     ah, ah ;~ 01B2:0274
@@ -484,7 +484,7 @@ cs=0x1b2;eip=0x000294; 	T(MOV(bl, 0));	// 555 mov     bl, 0 ;~ 01B2:0294
 cs=0x1b2;eip=0x000296; 	J(CALL(writecharat,0));	// 556 call    writecharat ;~ 01B2:0296
 cs=0x1b2;eip=0x000299; ret_1b2_299:	// 4416 
 cs=0x1b2;eip=0x000299; 	R(MOV(fruitactive, 0));	// 557 mov     fruitactive, 0 ;~ 01B2:0299
-cs=0x1b2;eip=0x00029e; 	R(RETN(0));	// 558 retn ;~ 01B2:029E
+cs=0x1b2;eip=0x00029e; 	J(RETN(0));	// 558 retn ;~ 01B2:029E
 
     assert(0);
     __dispatch_call:
@@ -547,7 +547,7 @@ cs=0x1b2;eip=0x0002c6; 	J(CALL(writecharat,0));	// 590 call    writecharat ;~ 01
 cs=0x1b2;eip=0x0002c9; ret_1b2_2c9:	// 4424 
 cs=0x1b2;eip=0x0002c9; 	T(DEC(dh));	// 591 dec     dh ;~ 01B2:02C9
 cs=0x1b2;eip=0x0002cb; 		R(LOOP(loc_103c6));	// 592 loop    loc_103C6 ;~ 01B2:02CB
-cs=0x1b2;eip=0x0002cd; 	R(RETN(0));	// 593 retn ;~ 01B2:02CD
+cs=0x1b2;eip=0x0002cd; 	J(RETN(0));	// 593 retn ;~ 01B2:02CD
 
     assert(0);
     __dispatch_call:
@@ -601,7 +601,7 @@ cs=0x1b2;eip=0x0002f0; 	T(ADD(ax, dx));	// 619 add     ax, dx ;~ 01B2:02F0
 cs=0x1b2;eip=0x0002f2; 	T(MOV(di, ax));	// 620 mov     di, ax ;~ 01B2:02F2
 cs=0x1b2;eip=0x0002f4; 	X(MOV(*(raddr(es,di)), bl));	// 621 mov     es:[di], bl ;~ 01B2:02F4
 cs=0x1b2;eip=0x0002f7; 	X(POP(dx));	// 622 pop     dx ;~ 01B2:02F7
-cs=0x1b2;eip=0x0002f8; 	R(RETN(0));	// 623 retn ;~ 01B2:02F8
+cs=0x1b2;eip=0x0002f8; 	J(RETN(0));	// 623 retn ;~ 01B2:02F8
 
     assert(0);
     __dispatch_call:
@@ -647,7 +647,7 @@ cs=0x1b2;eip=0x00031b; 	T(ADD(ax, dx));	// 649 add     ax, dx ;~ 01B2:031B
 cs=0x1b2;eip=0x00031d; 	T(MOV(di, ax));	// 650 mov     di, ax ;~ 01B2:031D
 cs=0x1b2;eip=0x00031f; 	T(MOV(bl, *(raddr(es,di))));	// 651 mov     bl, es:[di] ;~ 01B2:031F
 cs=0x1b2;eip=0x000322; 	X(POP(dx));	// 652 pop     dx ;~ 01B2:0322
-cs=0x1b2;eip=0x000323; 	R(RETN(0));	// 653 retn ;~ 01B2:0323
+cs=0x1b2;eip=0x000323; 	J(RETN(0));	// 653 retn ;~ 01B2:0323
 
     assert(0);
     __dispatch_call:
@@ -702,7 +702,7 @@ cs=0x1b2;eip=0x000355; 	T(INC(bx));	// 689 inc     bx ;~ 01B2:0355
 cs=0x1b2;eip=0x000356; 		J(JMP(loc_1044a));	// 690 jmp     short loc_1044A ;~ 01B2:0356
 cs=0x1b2;eip=0x000358; loc_10458:	// 4426 
 cs=0x1b2;eip=0x000358; 	X(POP(dx));	// 694 pop     dx ;~ 01B2:0358
-cs=0x1b2;eip=0x000359; 	R(RETN(0));	// 695 retn ;~ 01B2:0359
+cs=0x1b2;eip=0x000359; 	J(RETN(0));	// 695 retn ;~ 01B2:0359
 
     assert(0);
     __dispatch_call:
@@ -810,7 +810,7 @@ cs=0x1b2;eip=0x000098; 	R(_INT(0x1A));	// 217 int     1Ah ;~ 01B2:0098
 cs=0x1b2;eip=0x00009a; 	T(SUB(dx, bx));	// 218 sub     dx, bx ;~ 01B2:009A
 cs=0x1b2;eip=0x00009c; 	R(CMP(dx, delaytime));	// 219 cmp     dl, delaytime ;~ 01B2:009C
 cs=0x1b2;eip=0x0000a0; 		J(JL(loc_10198));	// 220 jl      short loc_10198 ;~ 01B2:00A0
-cs=0x1b2;eip=0x0000a2; 	R(RETN(0));	// 221 retn ;~ 01B2:00A2
+cs=0x1b2;eip=0x0000a2; 	J(RETN(0));	// 221 retn ;~ 01B2:00A2
 
     assert(0);
     __dispatch_call:
