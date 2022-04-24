@@ -579,6 +579,71 @@ struct CPU_Regs {
       }
   }
 
+size_t inst_size(db* b)
+{
+size_t instr_size=0;
+db op1 = *b;
+
+switch (op1)
+{
+case 0x26:
+case 0x2E:
+case 0x36:
+case 0x3E:
+case 0x64:
+case 0x65:
+case 0x66:
+case 0x67:
+case 0xF0:
+case 0xF2:
+case 0xF3:
+  {
+    ++b; ++instr_size;
+  }
+}
+ op1 = *b;
+
+if (op1>=0x70 && op1<=0x7f) //j
+  instr_size += 2;
+else if (op1 == 0x9a) //callf
+  instr_size += 5;
+else if (op1 == 0xc2) //retn n
+  instr_size += 3;
+else if (op1 == 0xc3) //retn
+  instr_size += 1;
+else if (op1 == 0xca) //retf n
+  instr_size += 3;
+else if (op1 == 0xcb) //retf
+  instr_size += 1;
+else if (op1 == 0xcf) //iret
+  instr_size += 1;
+else if (op1>=0xe0 && op1<=0xe3) //loop
+  instr_size += 2;
+else if (op1 == 0xe8 || op1 == 0xe9) //jmp
+  instr_size += 3;
+else if (op1 == 0xea) //jmpf
+  instr_size += 5;
+else if (op1 == 0xeb) //jmpf
+  instr_size += 2;
+else if (op1 == 0xff) //jmpf
+{
+  db op2 = *(b+1);
+  if (op2>=0x10 && op2 <= 0x2f ) //call/jmp 
+    instr_size += 2;
+  else if (op2>=0x50 && op2 <= 0x6f ) //call/jmp 
+    instr_size += 3;
+  else if (op2 >= 0x90 && op2<=0xAf) //call/jmp 
+    instr_size += 4;
+}
+else if (op1 == 0x0f) //j
+{
+  db op2 = *(b+1);
+  if (op2>=0x80 && op2 <= 0x8f ) //call/jmp r/m16
+    instr_size += 4;
+}
+ return instr_size;
+}
+
 char jump_name[100]="";
   bool Jstart (const char *file, int line, const char *instr)
   {
@@ -617,47 +682,7 @@ char jump_name[100]="";
 */
     already_checked[(seg << 4) + ip1] = true;
 
-    size_t instr_size = 1;
-db op1 = *raddr(seg,ip1);
-if (op1>=0x70 && op1<=0x7f) //j
-  instr_size = 2;
-else if (op1 == 0x9a) //callf
-  instr_size = 5;
-else if (op1 == 0xc2) //retn n
-  instr_size = 3;
-else if (op1 == 0xc3) //retn
-  instr_size = 1;
-else if (op1 == 0xca) //retf n
-  instr_size = 3;
-else if (op1 == 0xcb) //retf
-  instr_size = 1;
-else if (op1 == 0xcf) //iret
-  instr_size = 1;
-else if (op1>=0xe0 && op1<=0xe3) //loop
-  instr_size = 2;
-else if (op1 == 0xe8 || op1 == 0xe9) //jmp
-  instr_size = 3;
-else if (op1 == 0xea) //jmpf
-  instr_size = 5;
-else if (op1 == 0xeb) //jmpf
-  instr_size = 2;
-else if (op1 == 0xff) //jmpf
-{
-  db op2 = *raddr(seg,ip1+1);
-  if (op2>=0x10 && op2 <= 0x2f ) //call/jmp 
-    instr_size = 2;
-  else if (op2>=0x50 && op2 <= 0x6f ) //call/jmp 
-    instr_size = 3;
-  else if (op2 >= 0x90 && op2<=0xAf) //call/jmp 
-    instr_size = 4;
-}
-else if (op1 == 0x0f) //j
-{
-  db op2 = *raddr(seg,ip1+1);
-  if (op2>=0x80 && op2 <= 0x8f ) //call/jmp r/m16
-    instr_size = 4;
-}
-
+    size_t instr_size = inst_size(raddr(seg,ip1));
 
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
