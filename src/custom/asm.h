@@ -1492,7 +1492,7 @@ struct StackPop
           {int skip = shadow_stack.getneedtoskipcall();
 log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
-//throw StackPop(skip);
+throw StackPop(skip);
 }
 	return(ret);
     }
@@ -1530,7 +1530,7 @@ log_debug("new %x:%x\n", cs,ip);
           {int skip = shadow_stack.getneedtoskipcall();
 log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
-//throw StackPop(skip);
+throw StackPop(skip);
           }
 
         return ret;
