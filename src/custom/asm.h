@@ -1520,6 +1520,7 @@ log_error("~~will throw exception skip call=%d\n",skip);
         POP(cs);
 //        log_error("~~RETF after 2pop\n");
         esp += i;
+log_debug("new %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after retf %x\n", stackPointer);
             m2c::_indent -= 1;
