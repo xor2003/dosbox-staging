@@ -4088,7 +4088,7 @@ sub_1237f:
 cs=0x1a2;eip=0x00237f; 	T(MOV(cx, 0x100));	// 4636 mov     cx, 100h ;~ 01A2:237F
 loc_12382:
 	// 4752 
-cs=0x1a2;eip=0x002382; 	J(LOOP(loc_12382));	// 4639 loop    loc_12382 ;~ 01A2:2382
+cs=0x1a2;eip=0x002382; 	R(LOOP(loc_12382));	// 4639 loop    loc_12382 ;~ 01A2:2382
 cs=0x1a2;eip=0x002384; 	T(DEC(di));	// 4640 dec     di ;~ 01A2:2384
 cs=0x1a2;eip=0x002385; 	J(JNZ(sub_1237f));	// 4641 jnz     short sub_1237F ;~ 01A2:2385
 cs=0x1a2;eip=0x002387; 	R(RETN(0));	// 4642 retn ;~ 01A2:2387

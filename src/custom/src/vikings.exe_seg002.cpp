@@ -63,6 +63,9 @@ cs=0xd4f;eip=0x000401; 	T(CMP(dx, 0));	// 32364 cmp     dx, 0 ;~ 0D4F:0401
 cs=0xd4f;eip=0x000404; 	J(JZ(locret_1bed9));	// 32365 jz      short locret_1BED9 ;~ 0D4F:0404
 loc_1bed6:
 	// 5931 
+__disp=(dx<<16)+ax;
+cs=0xd4f;eip=0x000406; R(JMP(__dispatch_call));
+
 cs=0xd4f;eip=0x000406; 	X(PUSH(dx));	// 32368 push    dx ;~ 0D4F:0406
 cs=0xd4f;eip=0x000407; 	X(PUSH(ax));	// 32369 push    ax ;~ 0D4F:0407
 cs=0xd4f;eip=0x000408; 	R(RETF(0));	// 32370 retf ;~ 0D4F:0408
@@ -1808,7 +1811,7 @@ cs=0xd4f;eip=0x000d50; 	J(JMP(sub_1bec2));	// 33877 jmp     near ptr sub_1BEC2 ;
         case m2c::ksub_1c79f: 	goto sub_1c79f;
         case m2c::ksub_1c7ab: 	goto sub_1c7ab;
         case m2c::ksub_1c7bd: 	goto sub_1c7bd;
-        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);return __dispatch_call(__disp,_state);//m2c::stackDump(); abort();
     };
 }
 

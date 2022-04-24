@@ -1494,6 +1494,7 @@ log_error("~~will throw exception skip call=%d\n",skip);
 throw StackPop(skip);}
     }
 
+//#define RETF(i) {m2c::RETF_(i); if (ip=='xy') {m2c::shadow_stack.decreasedeep(); return true;} else  {return __dispatch_call((cs<<16)+eip,0);}}
 #define RETF(i) {m2c::RETF_(i); m2c::shadow_stack.decreasedeep();return true;}
 
     static void RETF_(size_t i) {
@@ -1501,7 +1502,7 @@ throw StackPop(skip);}
         if (debug>2) log_debug("before retf %x\n", stackPointer);
 
         m2c::MWORDSIZE averytemporary9 = 0;
-        log_error("~~RETF before 1pop\n");
+//        log_error("~~RETF before 1pop\n");
         shadow_stack.itisret();
         POP(averytemporary9);
         if (averytemporary9 != 'xy') {
@@ -1509,12 +1510,12 @@ throw StackPop(skip);}
 //            m2c::stackDump();
             exit(1);
         }
-        log_error("~~RETF after 1pop\n");
+//        log_error("~~RETF after 1pop\n");
         bool need = shadow_stack.needtoskipcalls();
-        log_error("~~RETF before 2pop\n");
-        dw averytemporary11;
-        POP(averytemporary11);
-        log_error("~~RETF after 2pop\n");
+//        log_error("~~RETF before 2pop\n");
+//        dw seg;
+        POP(cs);
+//        log_error("~~RETF after 2pop\n");
         esp += i;
         if (debug>2) {
             log_debug("after retf %x\n", stackPointer);
