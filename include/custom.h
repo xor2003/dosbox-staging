@@ -51,6 +51,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true) {}
         void print(_STATE *_state);
         void itiscall() {m_itiscall=true;}
         void itisret() {m_itisret=true;}
+        bool itwascall() {return m_ss[m_current].call_deep;}
 
         void decreasedeep();
         bool needtoskipcalls();

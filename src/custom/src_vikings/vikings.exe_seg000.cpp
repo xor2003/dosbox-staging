@@ -1609,11 +1609,11 @@ sub_10d9f:
 	// 1806 
 cs=0x1a2;eip=0x000d9f; 	T(MOV(ah, 0x48));	// 1808 mov     ah, 48h ;~ 01A2:0D9F
 cs=0x1a2;eip=0x000da1; 	R(_INT(0x21));	// 1809 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 01A2:0DA1
-printf("memory alloc CF %d\n",GET_CF());
 cs=0x1a2;eip=0x000da3; 	J(JC(loc_10da6));	// 1811 jb      short loc_10DA6 ;~ 01A2:0DA3
 cs=0x1a2;eip=0x000da5; 	R(RETN(0));	// 1812 retn ;~ 01A2:0DA5
 loc_10da6:
 	// 4531 
+printf("!!! not enought memory\n");
 cs=0x1a2;eip=0x000da6; 	T(XOR(bx, bx));	// 1816 xor     bx, bx ;~ 01A2:0DA6
 cs=0x1a2;eip=0x000da8; 	T(MOV(ax, 0x2BF8));	// 1817 mov     ax, 2BF8h ;~ 01A2:0DA8
 cs=0x1a2;eip=0x000dab; 	J(CALL(sub_10dba,0));	// 1818 call    sub_10DBA ;~ 01A2:0DAB
@@ -4088,7 +4088,7 @@ sub_1237f:
 cs=0x1a2;eip=0x00237f; 	T(MOV(cx, 0x100));	// 4636 mov     cx, 100h ;~ 01A2:237F
 loc_12382:
 	// 4752 
-cs=0x1a2;eip=0x002382; 	J(LOOP(loc_12382));	// 4639 loop    loc_12382 ;~ 01A2:2382
+cs=0x1a2;eip=0x002382; 	R(LOOP(loc_12382));	// 4639 loop    loc_12382 ;~ 01A2:2382
 cs=0x1a2;eip=0x002384; 	T(DEC(di));	// 4640 dec     di ;~ 01A2:2384
 cs=0x1a2;eip=0x002385; 	J(JNZ(sub_1237f));	// 4641 jnz     short sub_1237F ;~ 01A2:2385
 cs=0x1a2;eip=0x002387; 	R(RETN(0));	// 4642 retn ;~ 01A2:2387

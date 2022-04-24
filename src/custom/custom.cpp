@@ -601,6 +601,8 @@ char jump_name[100]="";
 
     if (compare)
       {
+        memcpy (om, &m, COMPARE_SIZE); // maybe always?
+
         strcpy(jump_name,instr);
         compare_jump = true;
       }
@@ -673,9 +675,13 @@ else if (op1 == 0x0f) //j
 //          return true;}
         realSegs = Segs;
         realcpu_regs = cpu_regs;
+        if (compare) memcpy (rm, &m, COMPARE_SIZE); // maybe always?
       }
         Segs = oldSegs;
         cpu_regs = oldcpu_regs;
+
+        if (compare) memcpy (&m, om, COMPARE_SIZE); // maybe always?
+
 cpu_regs.ip.word[0] += instr_size; // for call
         return true;
   }
@@ -694,12 +700,14 @@ cpu_regs.ip.word[0] += instr_size; // for call
     cpu_regs.flags &= FLAG_CF | FLAG_SF | FLAG_ZF | FLAG_OF;
 //    cpu_regs.ip = realcpu_regs.ip;
 
-    if (memcmp (&cpu_regs, &realcpu_regs, sizeof (CPU_Regs)) != 0 || memcmp (&Segs, &realSegs, sizeof (Segments)) != 0)
+    if (memcmp (&cpu_regs, &realcpu_regs, sizeof (CPU_Regs)) != 0 ||
+        memcmp (&Segs, &realSegs, sizeof (Segments)) != 0 || memcmp (&m, rm, COMPARE_SIZE) != 0)
       {
 stackDump();
         trace_instructions = true;
         bool regs_ch = memcmp (&cpu_regs, &realcpu_regs, sizeof (CPU_Regs));
         bool segs_ch = memcmp (&Segs, &realSegs, sizeof (Segments));
+        bool mem_ch = memcmp (&m, rm, COMPARE_SIZE);
         printf ("before ");
         log_regs_dbx_direct (0,"", 0, 0, instr, oldcpu_regs, oldSegs);
         printf ("/j-------------Error-during-jump-or-call-result-was-different-to-dosbox-interpreter-------------\\\n");
@@ -736,6 +744,11 @@ stackDump();
           {
             printf ("seg ");
             hexDump (&Segs, sizeof (Segments));
+          }
+        if (mem_ch)
+          {
+            printf ("~mem m2c / dbx\n");
+            cmpHexDump (&m, rm, COMPARE_SIZE);
           }
         printf ("\\j-----------------------------Error-----------------------------------------/\n");
         exit (1);
@@ -1023,6 +1036,9 @@ if (debug > 0)
 
   void ShadowStack::push (_STATE * _state, dd value)
   {
+     if (!m_active) return;
+//     m2c::log_info("+++ShadowStack::push %x\n",value);
+
     if (m2c::debug)
       {
         X86_REGREF Frame f;
@@ -1042,10 +1058,12 @@ if (debug > 0)
 //     m2c::log_info("ssize=%d\n",m_ss.size());
       }
       m_itiscall = false;
+//     m2c::log_info("---ShadowStack::push\n");
   }
 
   void ShadowStack::pop (_STATE * _state)
   {
+    if (!m_active) return;
     if (m2c::debug)
       {
         X86_REGREF
@@ -1059,7 +1077,7 @@ if (debug > 0)
               {
                 tsp = m_ss[m_current - 1].sp;
                 if ((tcount++) > 0)
-                  log_error ("uncontrolled pop was before %x\n", tsp);
+                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss[m_current - 1].addcounter, tsp);
                 if (tsp <= sp)
                   m_ss[--m_current].remcounter = counter;
                   if (m_ss[m_current].call_deep) ++m_needtoskipcall;
