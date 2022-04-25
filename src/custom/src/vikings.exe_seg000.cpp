@@ -4834,7 +4834,7 @@ cs=0x1a2;eip=0x00292a; 	X(POP(di));	// 5512 pop     di ;~ 01A2:292A
 cs=0x1a2;eip=0x00292b; 	X(POP(si));	// 5513 pop     si ;~ 01A2:292B
 cs=0x1a2;eip=0x00292c; 	X(POP(es));	// 5514 pop     es ;~ 01A2:292C
 cs=0x1a2;eip=0x00292d; 	X(POP(ds));	// 5515 pop     ds ;~ 01A2:292D
-cs=0x1a2;eip=0x00292e; 	R(IRET);	// 5517 iret ;~ 01A2:292E
+cs=0x1a2;eip=0x00292e; 	J(IRET);	// 5517 iret ;~ 01A2:292E
 sub_1292f:
 	// 5522 
 cs=0x1a2;eip=0x00292f; 	T(MOV(ax, *(dw*)(raddr(ds,0x86AC))));	// 5524 mov     ax, ds:86ACh ;~ 01A2:292F
@@ -12512,7 +12512,7 @@ cs=0x1a2;eip=0x0064c2; 	R(OUT(0x61, al));	// 15032 out     61h, al         ; PC/
 cs=0x1a2;eip=0x0064c4; 	T(MOV(al, 0x20));	// 15040 mov     al, 20h ; ' ' ;~ 01A2:64C4
 cs=0x1a2;eip=0x0064c6; 	R(OUT(0x20, al));	// 15041 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:64C6
 cs=0x1a2;eip=0x0064c8; 	X(POP(ax));	// 15042 pop     ax ;~ 01A2:64C8
-cs=0x1a2;eip=0x0064c9; 	R(IRET);	// 15043 iret ;~ 01A2:64C9
+cs=0x1a2;eip=0x0064c9; 	J(IRET);	// 15043 iret ;~ 01A2:64C9
 loc_164ca:
 	// 5714 
 cs=0x1a2;eip=0x0064ca; 	T(CMP(ax, 0x1D));	// 15047 cmp     ax, 1Dh ;~ 01A2:64CA

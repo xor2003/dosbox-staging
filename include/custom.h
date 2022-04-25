@@ -10,6 +10,8 @@ typedef Bit32u dd;
 
 namespace m2c {
 
+extern void Jend();
+
 class _STATE;
     extern int log_debug(const char *format, ...);
 
