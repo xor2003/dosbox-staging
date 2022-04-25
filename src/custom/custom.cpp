@@ -648,6 +648,8 @@ else if (op1 == 0xff) //jmpf
     instr_size += 3;
   else if (op2 >= 0x90 && op2<=0xAf) //call/jmp 
     instr_size += 4;
+  else if (op2 >= 0xd0 && op2<=0xef) //call/jmp 
+    instr_size += 2;
 }
 else if (op1 == 0x0f) //j
 {
