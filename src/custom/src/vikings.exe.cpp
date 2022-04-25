@@ -1185,8 +1185,8 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     __disp=__i;
     if ((__disp >> 16) == 0xf000)
 	{m2c::log_debug("Calling BIOS %x\n",__disp);
-cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();
-if (from_callf) m2c::interpret_unknown_callf(cs,eip,1);
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
 m2c::log_debug("doing return1\n");return true;}
     switch (__i) {
         case m2c::kmainproc: 	mainproc(0, _state); break;
