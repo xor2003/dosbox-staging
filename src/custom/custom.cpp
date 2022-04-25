@@ -657,7 +657,7 @@ else if (op1 == 0x0f) //j
 }
 log_debug ("instr size %x\n", instr_size);
 
-assert(instr_size);
+if (instr_size==0) exit(1);
  return instr_size;
 }
 
