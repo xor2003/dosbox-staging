@@ -1478,7 +1478,7 @@ struct StackPop
         shadow_stack.itisret();
         POP(ip);
         bool ret = shadow_stack.itwascall();
-        int skip = shadow_stack.getneedtoskipcall();
+        int skip = shadow_stack.getneedtoskipcallndclean();
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
@@ -1517,7 +1517,7 @@ throw StackPop(skip);
         }
 //        log_error("~~RETF after 1pop\n");
 //        bool need = shadow_stack.needtoskipcalls();
-        int skip = shadow_stack.getneedtoskipcall();
+        int skip = shadow_stack.getneedtoskipcallndclean();
 //        log_error("~~RETF before 2pop\n");
         POP(cs);
 //        log_error("~~RETF after 2pop\n");

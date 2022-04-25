@@ -35,8 +35,8 @@ class _STATE;
         bool m_itiscall;
         bool m_itisret;
         size_t m_deep;
-        int m_needtoskipcall;
     public:
+        int m_needtoskipcall;
         bool m_active;
         bool m_forceactive;
 
@@ -63,7 +63,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true),m_forceactive(fals
 
         void decreasedeep();
         bool needtoskipcalls();
-        size_t getneedtoskipcall(){int ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
+        size_t getneedtoskipcallndclean(){int ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
         void noneedreturn(){--m_needtoskipcall;}
     };
 

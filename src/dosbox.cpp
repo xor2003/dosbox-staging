@@ -156,9 +156,14 @@ Bitu Normal_Loop() {
 //				printf("defered_custom_call = false;\n");
                                 defered_custom_call = false;
 				from_callf = false;
+
+                                int need = m2c::shadow_stack.m_needtoskipcall; m2c::shadow_stack.m_needtoskipcall = 0;
+
 				m2c::log_debug("Executing interrupt by calling %x:%x\n",Segs.val[cs], reg_eip);
 			        custom_callf(Segs.val[cs], reg_eip);
 				m2c::log_debug("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
+
+				m2c::shadow_stack.m_needtoskipcall = need;
                         } 
     if (compare_jump && !doing_single_step) m2c::Jend();
 
