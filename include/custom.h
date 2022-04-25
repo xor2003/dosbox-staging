@@ -24,7 +24,7 @@ class _STATE;
             dw *pointer_;
             size_t addcounter;
             size_t remcounter;
-//            bool itwascall;
+            bool itwascall;
             size_t call_deep;
         };
 
@@ -49,9 +49,11 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true) {}
         void pop(_STATE *_state);
 
         void print(_STATE *_state);
+        void print_frame(const Frame& f);
+
         void itiscall() {m_itiscall=true;}
         void itisret() {m_itisret=true;}
-        bool itwascall() {return m_ss[m_current].call_deep;}
+        bool itwascall() {return m_ss[m_current].itwascall;}
 
         void decreasedeep();
         bool needtoskipcalls();
