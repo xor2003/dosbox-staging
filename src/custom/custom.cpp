@@ -20,7 +20,7 @@ namespace m2c
   extern void load_drivers();
 }
 
-bool compare_instructions = m2c::debug == 1 || m2c::debug == 2;
+bool compare_instructions = m2c::debug > 0;// 1 || m2c::debug == 2 || m2c::debug == 3;
 bool
   trace_instructions = m2c::debug > 1;
 
@@ -822,7 +822,7 @@ stackDump();
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
 
-    bool compare (compare_instructions && !already_checked[(seg << 4) + ip1]);
+    bool compare (compare_instructions /* && !already_checked[(seg << 4) + ip1]*/);
     if (compare)
       {
         oldSegs = Segs;
@@ -936,7 +936,7 @@ stackDump();
 
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
-    bool already = !already_checked[(seg << 4) + ip1];
+    bool already = false; //!already_checked[(seg << 4) + ip1];
     bool compare (compare_instructions && !already);
     if (compare)
       {
@@ -1182,7 +1182,7 @@ return m_needtoskipcall;}
 
   void ShadowStack::print_frame(const Frame& f)
   {
-            log_debug("~~ %4d %8x %8x %04x:%04x %4x %4x", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value);
+            log_debug("~~ %4d %8x %8x %04x:%04x %4x %4x %4x\n", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value, *f.pointer_);
   }
 
   void ShadowStack::print (_STATE * _state)

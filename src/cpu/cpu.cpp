@@ -800,9 +800,11 @@ void CPU_IRET(bool use32,Bitu oldeip) {
 			SegSet16(cs,CPU_Pop32());
 			CPU_SetFlags(CPU_Pop32(),FMASK_ALL);
 		} else {
+//				m2c::log_debug("Exited interrupt SS:SP %x:%x\n",Segs.val[ss], reg_esp);
 			reg_eip=CPU_Pop16();
 			SegSet16(cs,CPU_Pop16());
 			CPU_SetFlags(CPU_Pop16(),FMASK_ALL & 0xffff);
+//				m2c::log_debug("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
 		}
 		cpu.code.big=false;
 		DestroyConditionFlags();
