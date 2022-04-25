@@ -323,7 +323,8 @@ namespace m2c
     Bits nc_retcode;
     doing_single_step=true;
     shadow_stack.disable();
-//log_debug("s1 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
+try{
+//printf("~~s1 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     do
       {
         CPU_Cycles = 1;
@@ -331,10 +332,23 @@ namespace m2c
         neweip = (Segs.val[1] << 16) + cpu_regs.ip.word[0];
       }
     while (neweip == oldeip);   // to handle REP*
+}
+catch(...)
+{
+printf("~~!exception catched %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
+log_error("~~!exception catched %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     shadow_stack.enable();
     doing_single_step=false;
-//log_debug("s2 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     CPU_Cycles = old_cycles;
+
+    compare_jump = false;
+
+throw;
+}
+    shadow_stack.enable();
+    doing_single_step=false;
+    CPU_Cycles = old_cycles;
+//printf("~~s2 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     // // log_debug ("CPU_Cycles=%d CPU_CycleLeft=%d\n", CPU_Cycles, CPU_CycleLeft);
   }
 
@@ -648,8 +662,10 @@ assert(instr_size);
 }
 
 char jump_name[100]="";
+
   bool Jstart (const char *file, int line, const char *instr)
   {
+assert(shadow_stack.m_active);
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -674,7 +690,10 @@ char jump_name[100]="";
         strcpy(jump_name,instr);
         compare_jump = true;
       }
+assert(shadow_stack.m_active);
     single_step ();
+assert(shadow_stack.m_active);
+
 /*
     if (!compare)
       {
@@ -713,6 +732,7 @@ char jump_name[100]="";
 cpu_regs.ip.word[0] += instr_size; // for call
         return true;
   }
+
 
   void Jend()
   {
@@ -786,6 +806,7 @@ stackDump();
 
   bool Tstart (const char *file, int line, const char *instr)
   {
+assert(shadow_stack.m_active);
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -805,7 +826,10 @@ stackDump();
         oldSegs = Segs;
         oldcpu_regs = cpu_regs;
       }
+assert(shadow_stack.m_active);
     single_step ();
+assert(shadow_stack.m_active);
+
     if (!compare)
       {
         if (CPU_Cycles > 0)
@@ -898,6 +922,7 @@ stackDump();
 
   bool Xstart (const char *file, int line, const char *instr)
   {
+assert(shadow_stack.m_active);
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -916,7 +941,9 @@ stackDump();
         oldcpu_regs = cpu_regs;
         memcpy (om, &m, COMPARE_SIZE);
       }
+assert(shadow_stack.m_active);
     single_step ();
+assert(shadow_stack.m_active);
     if (!compare)
       {
         if (CPU_Cycles > 0)
@@ -1064,7 +1091,9 @@ if (debug > 0)
 
   void ShadowStack::push (_STATE * _state, dd value)
   {
-     if (!m_active) return;
+     
+     if (!m_active) {m2c::log_info("push m_active=false\n");return;}
+m2c::log_info("push m_active=true\n");
 //     m2c::log_info("+++ShadowStack::push %x\n",value);
 
     if (m2c::debug)
@@ -1092,7 +1121,8 @@ if (debug > 0)
 
   void ShadowStack::pop (_STATE * _state)
   {
-    if (!m_active) return;
+     if (!m_active) {m2c::log_info("pop m_active=false\n");return;}
+m2c::log_info("pop m_active=true\n");
     if (m2c::debug)
       {
         X86_REGREF
