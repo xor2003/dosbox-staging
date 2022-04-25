@@ -1129,6 +1129,8 @@ if (debug > 0)
     if (m2c::debug)
       {
         X86_REGREF
+//       m_needtoskipcall=0;
+                  log_error ("m_needtoskipcall %d\n", m_needtoskipcall);
 //    m2c::log_info("ssize=%d\n",m_ss.size() );
           if (!m_ss.empty () && m_current)
           {

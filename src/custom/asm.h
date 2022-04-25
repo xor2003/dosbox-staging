@@ -1480,7 +1480,7 @@ struct StackPop
         bool ret = shadow_stack.itwascall();
         int skip = shadow_stack.getneedtoskipcall();
         if (!ret) {
-            log_error("Emulated stack corruption detected (found %x)\n", ip);
+            log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
         }
         esp += i;
@@ -1505,13 +1505,13 @@ throw StackPop(skip);
         X86_REGREF
         if (debug>2) log_debug("before retf %x\n", stackPointer);
 
-        m2c::MWORDSIZE averytemporary9 = 0;
+//        m2c::MWORDSIZE averytemporary9 = 0;
 //        log_error("~~RETF before 1pop\n");
         shadow_stack.itisret();
         POP(ip);
         bool ret = shadow_stack.itwascall();
         if (!ret) {
-            log_error("Emulated stack corruption detected (found %x)\n", averytemporary9);
+            log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
             exit(1);
         }
