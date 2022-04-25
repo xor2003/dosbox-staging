@@ -1478,6 +1478,7 @@ struct StackPop
         shadow_stack.itisret();
         POP(ip);
         bool ret = shadow_stack.itwascall();
+        int skip = shadow_stack.getneedtoskipcall();
         if (!ret) {
             log_error("Emulated stack corruption detected (found %x)\n", ip);
 //            m2c::stackDump();
@@ -1488,8 +1489,8 @@ struct StackPop
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        if (shadow_stack.needtoskipcalls()) 
-          {int skip = shadow_stack.getneedtoskipcall();
+        if (skip>0) 
+          {
 log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
 throw StackPop(skip);
@@ -1515,7 +1516,8 @@ throw StackPop(skip);
             exit(1);
         }
 //        log_error("~~RETF after 1pop\n");
-        bool need = shadow_stack.needtoskipcalls();
+//        bool need = shadow_stack.needtoskipcalls();
+        int skip = shadow_stack.getneedtoskipcall();
 //        log_error("~~RETF before 2pop\n");
         POP(cs);
 //        log_error("~~RETF after 2pop\n");
@@ -1526,8 +1528,8 @@ log_debug("new %x:%x\n", cs,ip);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        if (need) 
-          {int skip = shadow_stack.getneedtoskipcall();
+        if (skip>0) 
+          {
 log_error("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
 throw StackPop(skip);
