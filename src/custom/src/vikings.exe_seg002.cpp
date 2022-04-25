@@ -264,10 +264,10 @@ cs=0xd4f;eip=0x000562; 	X(POP(ds));	// 32564 pop     ds ;~ 0D4F:0562
 cs=0xd4f;eip=0x000563; 	J(RETF(0));	// 32565 retf ;~ 0D4F:0563
 ret_d4f_564:
 	// 5950 
-//cs=0xd4f;eip=0x000564; 	X(PUSHF);	// 32567 pushf ;~ 0D4F:0564
+cs=0xd4f;eip=0x000564; 	X(PUSHF);	// 32567 pushf ;~ 0D4F:0564
 	cs=seg_offset(seg002);
 //x0r
-//cs=0xd4f;eip=0x000565; 	J(CALLF(__dispatch_call,*(dd*)(((db*)&dword_1bbe8))));	// 32568 call    cs:dword_1BBE8 ;~ 0D4F:0565
+cs=0xd4f;eip=0x000565; 	J(CALLF(__dispatch_call,*(dd*)(((db*)&dword_1bbe8))));	// 32568 call    cs:dword_1BBE8 ;~ 0D4F:0565
 cs=0xd4f;eip=0x00056a; 	J(RETF(0));	// 32569 retf ;~ 0D4F:056A
 sub_1c03b:
 	// 32574 

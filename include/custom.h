@@ -34,8 +34,8 @@ class _STATE;
         bool m_itisret;
         size_t m_deep;
         int m_needtoskipcall;
-        bool m_active;
     public:
+        bool m_active;
         size_t m_currentdeep;
 
         ShadowStack() : m_current(0),m_itiscall(false),
