@@ -58,7 +58,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true) {}
         void decreasedeep();
         bool needtoskipcalls();
         size_t getneedtoskipcall(){int ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
-
+        void noneedreturn(){--m_needtoskipcall;}
     };
 
     extern ShadowStack shadow_stack;
