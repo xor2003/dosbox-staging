@@ -680,7 +680,7 @@ char jump_name[100]="";
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
 
-    bool compare (compare_instructions /* && !already_checked[(seg << 4) + ip1]*/);
+    bool compare (compare_instructions  && !already_checked[(seg << 4) + ip1]);
 
         oldSegs = Segs;
         oldcpu_regs = cpu_regs;
@@ -822,7 +822,7 @@ stackDump();
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
 
-    bool compare (compare_instructions /* && !already_checked[(seg << 4) + ip1]*/);
+    bool compare (compare_instructions  && !already_checked[(seg << 4) + ip1]);
     if (compare)
       {
         oldSegs = Segs;
@@ -936,7 +936,7 @@ stackDump();
 
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
-    bool already = false; //!already_checked[(seg << 4) + ip1];
+    bool already = !already_checked[(seg << 4) + ip1];
     bool compare (compare_instructions && !already);
     if (compare)
       {
