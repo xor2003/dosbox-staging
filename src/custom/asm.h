@@ -1583,7 +1583,7 @@ shadow_stack.decreasedeep();
         POPF; \
 	return;}
 */
-#define IRET {CPU_IRET(false,0);m2c::execute_irqs();/*m2c::shadow_stack.pop(0);m2c::shadow_stack.pop(0);m2c::shadow_stack.pop(0);*/return true;}
+#define IRET {m2c::fix_segs();CPU_IRET(false,0);m2c::execute_irqs();/*m2c::shadow_stack.pop(0);m2c::shadow_stack.pop(0);m2c::shadow_stack.pop(0);*/return true;}
 
 #define BSWAP(op1)                                                        \
     op1 = (op1>>24)|((op1>>8)&0xFF00)|((op1<<8)&0xFF0000)|((op1<<24)&0xFF000000);
