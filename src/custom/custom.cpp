@@ -665,7 +665,7 @@ char jump_name[100]="";
 
   bool Jstart (const char *file, int line, const char *instr)
   {
-assert(shadow_stack.m_active);
+
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -690,9 +690,9 @@ assert(shadow_stack.m_active);
         strcpy(jump_name,instr);
         compare_jump = true;
       }
-assert(shadow_stack.m_active);
+
     single_step ();
-assert(shadow_stack.m_active);
+
 
 /*
     if (!compare)
@@ -806,7 +806,7 @@ stackDump();
 
   bool Tstart (const char *file, int line, const char *instr)
   {
-assert(shadow_stack.m_active);
+
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -826,9 +826,9 @@ assert(shadow_stack.m_active);
         oldSegs = Segs;
         oldcpu_regs = cpu_regs;
       }
-assert(shadow_stack.m_active);
+
     single_step ();
-assert(shadow_stack.m_active);
+
 
     if (!compare)
       {
@@ -922,7 +922,7 @@ stackDump();
 
   bool Xstart (const char *file, int line, const char *instr)
   {
-assert(shadow_stack.m_active);
+
     if (compare_jump) Jend();
 
     run_hw_interrupts ();
@@ -934,16 +934,16 @@ assert(shadow_stack.m_active);
 
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
-    bool compare (compare_instructions && !already_checked[(seg << 4) + ip1]);
+    bool compare (compare_instructions /*&& !already_checked[(seg << 4) + ip1]*/);
     if (compare)
       {
         oldSegs = Segs;
         oldcpu_regs = cpu_regs;
         memcpy (om, &m, COMPARE_SIZE);
       }
-assert(shadow_stack.m_active);
+
     single_step ();
-assert(shadow_stack.m_active);
+
     if (!compare)
       {
         if (CPU_Cycles > 0)
@@ -1082,9 +1082,9 @@ if (debug > 0)
 
     if (oldsp + 4 != sp && cs != 0xf000)
       {
-        log_error ("Error it should consume 4 bytes from stack\n");
+        log_error ("Error it should consume 4 bytes from stack\n"); // callf to bios consumes 0 bytes
         //stackDump ();
-        exit (1);
+//        exit (1);
       }
     return_point.pop ();
   }
