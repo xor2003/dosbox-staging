@@ -934,7 +934,8 @@ stackDump();
 
     dd ip1 = cpu_regs.ip.word[0];
     dw seg = Segs.val[1];
-    bool compare (compare_instructions /*&& !already_checked[(seg << 4) + ip1]*/);
+    bool already = !already_checked[(seg << 4) + ip1];
+    bool compare (compare_instructions && !already);
     if (compare)
       {
         oldSegs = Segs;
@@ -942,7 +943,9 @@ stackDump();
         memcpy (om, &m, COMPARE_SIZE);
       }
 
+    if (already) shadow_stack.forceenable(); // So if instruction was already compare then make .push/.pop execute anyway
     single_step ();
+    if (already) shadow_stack.forcedisable();
 
     if (!compare)
       {
@@ -1092,8 +1095,7 @@ if (debug > 0)
   void ShadowStack::push (_STATE * _state, dd value)
   {
      
-     if (!m_active) {m2c::log_info("push m_active=false\n");return;}
-m2c::log_info("push m_active=true\n");
+     if (!m_active && !m_forceactive) return;
 //     m2c::log_info("+++ShadowStack::push %x\n",value);
 
     if (m2c::debug)
@@ -1121,8 +1123,7 @@ m2c::log_info("push m_active=true\n");
 
   void ShadowStack::pop (_STATE * _state)
   {
-     if (!m_active) {m2c::log_info("pop m_active=false\n");return;}
-m2c::log_info("pop m_active=true\n");
+     if (!m_active && !m_forceactive) return;
     if (m2c::debug)
       {
         X86_REGREF
