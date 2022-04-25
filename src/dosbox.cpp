@@ -160,7 +160,7 @@ Bitu Normal_Loop() {
 			        custom_callf(Segs.val[cs], reg_eip);
 				m2c::log_debug("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
                         } 
-    if (compare_jump) m2c::Jend();
+    if (compare_jump && !doing_single_step) m2c::Jend();
 
 			ret = (*cpudecoder)();
 			if (GCC_UNLIKELY(ret<0)) return 1;
