@@ -214,7 +214,7 @@ cs=0xd4f;eip=0x00050d; 	T(CMP(*(dw*)((atest)+2), 0x7473));	// 32516 cmp     word
 cs=0xd4f;eip=0x000514; 	J(JNZ(loc_1bfec));	// 32517 jnz     short loc_1BFEC ;~ 0D4F:0514
 	cs=seg_offset(seg002);
 cs=0xd4f;eip=0x000516; 	X(DEC(*(dw*)(((db*)&word_1bad2))));	// 32518 dec     cs:word_1BAD2 ;~ 0D4F:0516
-cs=0xd4f;eip=0x00051b; 	J(IRET);	// 32519 iret ;~ 0D4F:051B
+cs=0xd4f;eip=0x00051b; 	R(IRET);	// 32519 iret ;~ 0D4F:051B
 loc_1bfec:
 	// 5947 
 cs=0xd4f;eip=0x00051c; 	T(MOV(ax, 0x2DBA));	// 32524 mov     ax, 2DBAh ;~ 0D4F:051C

@@ -152,6 +152,8 @@ Bitu Normal_Loop() {
 	while (1) {
 		if (PIC_RunQueue()) {
 
+    if (compare_jump && !doing_single_step) m2c::Jend();
+
 			if (defered_custom_call) {
 //				printf("defered_custom_call = false;\n");
                                 defered_custom_call = false;
