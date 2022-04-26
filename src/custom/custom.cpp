@@ -20,9 +20,9 @@ namespace m2c
   extern void load_drivers();
 }
 
-bool compare_instructions = m2c::debug > 0;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool
-  trace_instructions = m2c::debug > 1;
+bool trace_instructions = m2c::debug >= 1;
+bool compare_instructions = m2c::debug >= 2;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool trace_instructions_to_stdout = m2c::debug >= 1;
 
 static const size_t
   COMPARE_SIZE = 0xf0000;
@@ -584,7 +584,7 @@ struct CPU_Regs {
     if (trace_instructions)
       {
 
-        if (debug == 2 || debug == 1)
+        if (!trace_instructions_to_stdout)
           {
         CPU_State cs={counter, file, line, _indent, instr, r, s};
         
@@ -1104,7 +1104,7 @@ if (debug > 0)
      if (!m_active && !m_forceactive) return;
 //     m2c::log_info("+++ShadowStack::push %x\n",value);
 
-    if (m2c::debug)
+//    if (m2c::debug)
       {
         X86_REGREF Frame f;
         f.cs = cs;
@@ -1120,7 +1120,7 @@ if (debug > 0)
           m_ss.resize (m_current + 1);
         print_frame(f);
         m_ss[m_current++] = f;
-     m2c::log_info("m_itiscall=%d m_deep=%d\n",m_itiscall,m_deep);
+     m2c::log_debug("m_itiscall=%d m_deep=%d\n",m_itiscall,m_deep);
 //     m2c::log_info("ssize=%d\n",m_ss.size());
       }
       m_itiscall = false;
@@ -1130,7 +1130,7 @@ if (debug > 0)
   void ShadowStack::pop (_STATE * _state)
   {
      if (!m_active && !m_forceactive) return;
-    if (m2c::debug)
+//    if (m2c::debug)
       {
         X86_REGREF
 //       m_needtoskipcall=0;

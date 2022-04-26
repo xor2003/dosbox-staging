@@ -106,6 +106,8 @@ extern volatile bool compare_jump;
 
 namespace m2c {
 
+    bool fix_segs();
+
     extern void log_regs_dbx(const char *file, int line, const char *instr, const CPU_Regs &r, const Segments &s);
 
     extern size_t debug;
@@ -597,22 +599,22 @@ static void setdata(dd* d, dd s)
     void PUSH_(S a);
 
     template<>
-    inline void PUSH_<dw>(dw a) { CPU_Push16(a); }
+    inline void PUSH_<dw>(dw a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<dd>(dd a) { CPU_Push32(a); }
+    inline void PUSH_<dd>(dd a) { fix_segs();CPU_Push32(a); }
 
     template<>
-    inline void PUSH_<short int>(short int a) { CPU_Push16(a); }
+    inline void PUSH_<short int>(short int a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<int>(int a) { CPU_Push32(a); }
+    inline void PUSH_<int>(int a) { fix_segs();CPU_Push32(a); }
 
 #define POP(a) {m2c::POP_(a);}
 
-    inline void POP_(dw &a) { a = CPU_Pop16(); }
+    inline void POP_(dw &a) { fix_segs();a = CPU_Pop16(); }
 
-    inline void POP_(dd &a) { a = CPU_Pop32(); }
+    inline void POP_(dd &a) { fix_segs();a = CPU_Pop32(); }
 
 #else
 
@@ -1591,12 +1593,18 @@ shadow_stack.decreasedeep();
 #define RDTSC {dq averytemporary = realElapsedTime(); eax=averytemporary&0xffffffff; edx=(averytemporary>32)&0xffffffff;}
 
 
-    bool fix_segs();
 
     void run_hw_interrupts();
 
 
-#if M2CDEBUG //== 1 || M2CDEBUG==2 || M2CDEBUG==3
+#if M2CDEBUG == 1
+#define R(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
+#define T(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
+#define X(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
+#define J(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
+
+#elif M2CDEBUG > 1
+
 // clean format
 //    #define R(a) {log_debug("%s%x:%d:%s eax: %x ebx: %x ecx: %x edx: %x ebp: %x ds: %x esi: %x es: %x edi: %x fs: %x esp: %x\n",_state->_str,cs/*pthread_self()*/,__LINE__,#a, \
 //eax, ebx, ecx, edx, ebp, ds, esi, es, edi, fs, esp);} \
