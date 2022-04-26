@@ -316,6 +316,7 @@ namespace m2c
 
   void single_step ()
   {
+    X86_REGREF
     m2c::fix_segs ();
     old_cycles = CPU_Cycles;
     dd oldeip = (Segs.val[1] << 16) + cpu_regs.ip.word[0];
@@ -323,6 +324,8 @@ namespace m2c
     Bits nc_retcode;
     doing_single_step=true;
     shadow_stack.disable();
+//    bool intflag = GET_IF();
+//    AFFECT_IF(false);
 try{
 //printf("~~s1 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     do
@@ -342,12 +345,13 @@ log_error("~~!exception catched %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     CPU_Cycles = old_cycles;
 
     compare_jump = false;
-
+//    AFFECT_IF(GET_IF()?true:intflag);
 throw;
 }
     shadow_stack.enable();
     doing_single_step=false;
     CPU_Cycles = old_cycles;
+//    AFFECT_IF(GET_IF()?true:intflag);
 //printf("~~s2 %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
     // // log_debug ("CPU_Cycles=%d CPU_CycleLeft=%d\n", CPU_Cycles, CPU_CycleLeft);
   }
