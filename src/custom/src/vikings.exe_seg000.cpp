@@ -7,7 +7,7 @@
                 #include "vikings.exe.h"
  #include <unistd.h>
                 
-
+/*
  bool _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
@@ -16959,3 +16959,564 @@ cs=0x1a2;eip=0x007a5b; 	J(RETN(0));	// 17781 retn ;~ 01A2:7A5B
     };
 }
 
+
+*/
+
+
+
+
+
+
+X86_REGREF
+
+extern dw word_2b09c;
+extern dd dword_2b09;
+extern dd dword_2b094;
+extern dw word_2b349;
+extern dd dword_2b098;
+          
+
+ bool sub_10982_(m2c::_offsets _i, struct m2c::_STATE* _state){
+//    X86_REGREF
+m2c::eflags m2cflags;
+
+dw cs;         
+dw ds;         
+dw es;         
+dw fs;         
+dw gs;         
+dw ss;         
+
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10982:
+    _begin:
+ 	X(PUSH(ds));	// 24 push    ds ;~ 01A2:0982
+ret_1a2_983:
+	// 4369 
+ 	X(PUSH(si));	// 25 push    si ;~ 01A2:0983
+ 	T(CMP(ax, 0x0FFFA));	// 26 cmp     ax, 0FFFAh ;~ 01A2:0984
+ 	J(JNZ(loc_1099f));	// 27 jnz     short loc_1099F ;~ 01A2:0987
+loc_10989:
+	// 4370 
+ 	T(MOV(ax, es));	// 31 mov     ax, es ;~ 01A2:0989
+ 	X(POP(si));	// 32 pop     si ;~ 01A2:098B
+ 	X(POP(ds));	// 33 pop     ds ;~ 01A2:098C
+ 	R(RETN(0));	// 35 retn ;~ 01A2:098D
+loc_1098e:
+	// 4371 
+ 	T(MOV(bx, 0));	// 40 mov     bx, 0 ;~ 01A2:098E
+ 	T(MOV(ax, 0x2D05));	// 41 mov     ax, 2D05h ;~ 01A2:0991
+ 	J(CALL(sub_10dba,0));	// 42 call    sub_10DBA ;~ 01A2:0994
+loc_10997:
+	// 4372 
+ 	T(MOV(bx, ax));	// 47 mov     bx, ax ;~ 01A2:0997
+ 	T(MOV(ax, 0x2CE7));	// 48 mov     ax, 2CE7h ;~ 01A2:0999
+ 	J(CALL(sub_10dba,0));	// 49 call    sub_10DBA ;~ 01A2:099C
+loc_1099f:
+	// 4373 
+ 	T(MOV(dx, ax));	// 53 mov     dx, ax ;~ 01A2:099F
+ 	T(SHL(dx, 2));	// 54 shl     dx, 2 ;~ 01A2:09A1
+ 	T(MOV(cx, 0));	// 55 mov     cx, 0 ;~ 01A2:09A4
+ 	T(MOV(bx, word_2b092));	// 56 mov     bx, word_2B092 ;~ 01A2:09A7
+ 	T(MOV(ax, 0x4200));	// 57 mov     ax, 4200h ;~ 01A2:09AB
+ 	J(CALL(sub_128a9,0));	// 58 call    sub_128A9 ;~ 01A2:09AE
+ 	J(JC(loc_10997));	// 59 jb      short loc_10997 ;~ 01A2:09B1
+ 	T(MOV(ah, 0x3F));	// 60 mov     ah, 3Fh ; '?' ;~ 01A2:09B3
+ 	T(MOV(cx, 8));	// 61 mov     cx, 8 ;~ 01A2:09B5
+ 	T(MOV(dx, 0x2BB4));	// 62 mov     dx, 2BB4h ;~ 01A2:09B8
+ 	J(CALL(sub_128a9,0));	// 63 call    sub_128A9 ;~ 01A2:09BB
+ 	J(JC(loc_10997));	// 64 jb      short loc_10997 ;~ 01A2:09BE
+ 	T(MOV(ax, 0x4200));	// 65 mov     ax, 4200h ;~ 01A2:09C0
+ 	T(MOV(cx, *(dw*)(((db*)&dword_2b094)+2)));	// 66 mov     cx, word ptr dword_2B094+2 ;~ 01A2:09C3
+ 	T(MOV(dx, *(dw*)(((db*)&dword_2b094))));	// 67 mov     dx, word ptr dword_2B094 ;~ 01A2:09C7
+ 	J(CALL(sub_128a9,0));	// 68 call    sub_128A9 ;~ 01A2:09CB
+ 	J(JC(loc_10997));	// 69 jb      short loc_10997 ;~ 01A2:09CE
+ 	T(MOV(ah, 0x3F));	// 70 mov     ah, 3Fh ; '?' ;~ 01A2:09D0
+ 	T(MOV(cx, 2));	// 71 mov     cx, 2 ;~ 01A2:09D2
+ 	T(MOV(dx, 0x2BBC));	// 72 mov     dx, 2BBCh ;~ 01A2:09D5
+ 	J(CALL(sub_128a9,0));	// 73 call    sub_128A9 ;~ 01A2:09D8
+ 	J(JC(loc_10997));	// 74 jb      short loc_10997 ;~ 01A2:09DB
+ 	T(MOV(ax, word_2b09c));	// 75 mov     ax, word_2B09C ;~ 01A2:09DD
+	cs=seg_offset(seg000);
+ 	X(MOV(*(dw*)(((db*)&word_10980)), ax));	// 76 mov     cs:word_10980, ax ;~ 01A2:09E0
+ 	T(MOV(ecx, dword_2b098));	// 77 mov     ecx, dword_2B098 ;~ 01A2:09E4
+ 	T(SUB(ecx, dword_2b094));	// 78 sub     ecx, dword_2B094 ;~ 01A2:09E9
+ 	T(MOV(eax, ecx));	// 79 mov     eax, ecx ;~ 01A2:09EE
+ 	T(SHR(eax, 4));	// 80 shr     eax, 4 ;~ 01A2:09F1
+ 	T(CMP(eax, 0x0B08));	// 81 cmp     eax, 0B08h ;~ 01A2:09F5
+ 	J(JGE(loc_1098e));	// 82 jge     short loc_1098E ;~ 01A2:09FB
+ 	T(MOV(ds, word_2b349));	// 83 mov     ds, word_2B349 ;~ 01A2:09FD
+ 	T(MOV(dx, 0x1000));	// 85 mov     dx, 1000h ;~ 01A2:0A01
+ 	T(MOV(ah, 0x3F));	// 86 mov     ah, 3Fh ; '?' ;~ 01A2:0A04
+ 	J(CALL(sub_128a9,0));	// 87 call    sub_128A9 ;~ 01A2:0A06
+ 	J(JC(loc_10997));	// 88 jb      short loc_10997 ;~ 01A2:0A09
+ 	T(MOV(si, 0));	// 89 mov     si, 0 ;~ 01A2:0A0B
+ 	T(MOV(cx, 0x800));	// 90 mov     cx, 800h ;~ 01A2:0A0E
+loc_10a11:
+	// 4374 
+ 	X(MOV(*(dw*)(raddr(ds,si)), 0));	// 93 mov     word ptr [si], 0 ;~ 01A2:0A11
+ 	T(ADD(si, 2));	// 94 add     si, 2 ;~ 01A2:0A15
+ 	J(LOOP(loc_10a11));	// 95 loop    loc_10A11 ;~ 01A2:0A18
+ 	T(MOV(bx, 0));	// 96 mov     bx, 0 ;~ 01A2:0A1A
+	cs=seg_offset(seg000);
+ 	T(MOV(dx, *(dw*)(((db*)&word_10980))));	// 97 mov     dx, cs:word_10980 ;~ 01A2:0A1D
+loc_10a22:
+	// 4375 
+ 	T(MOV(al, *(raddr(ds,si))));	// 100 mov     al, [si] ;~ 01A2:0A22
+ 	T(INC(si));	// 101 inc     si ;~ 01A2:0A24
+ 	T(RCR(al, 1));	// 102 rcr     al, 1 ;~ 01A2:0A25
+ 	J(JNC(loc_10a44));	// 103 jnb     short loc_10A44 ;~ 01A2:0A27
+ 	T(MOV(ah, *(raddr(ds,si))));	// 104 mov     ah, [si] ;~ 01A2:0A29
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 105 mov     [bx], ah ;~ 01A2:0A2B
+ 	T(INC(bx));	// 106 inc     bx ;~ 01A2:0A2D
+ 	T(AND(bx, 0x0FFF));	// 107 and     bx, 0FFFh ;~ 01A2:0A2E
+ 	X(MOV(*(raddr(es,di)), ah));	// 108 mov     es:[di], ah ;~ 01A2:0A32
+ 	T(INC(di));	// 109 inc     di ;~ 01A2:0A35
+ 	T(DEC(dx));	// 110 dec     dx ;~ 01A2:0A36
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 111 cmp     dx, cs:word_10980 ;~ 01A2:0A37
+ 	J(JC(loc_10a41));	// 112 jb      short loc_10A41 ;~ 01A2:0A3C
+ 	J(JMP(loc_10989));	// 113 jmp     loc_10989 ;~ 01A2:0A3E
+loc_10a41:
+	// 4376 
+ 	T(INC(si));	// 117 inc     si ;~ 01A2:0A41
+ 	J(JMP(loc_10a7b));	// 118 jmp     short loc_10A7B ;~ 01A2:0A42
+loc_10a44:
+	// 4377 
+ 	T(ADD(si, 2));	// 122 add     si, 2 ;~ 01A2:0A44
+ 	X(PUSH(si));	// 123 push    si ;~ 01A2:0A47
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 124 mov     si, [si-2] ;~ 01A2:0A48
+ 	T(MOV(cx, 0x0F000));	// 125 mov     cx, 0F000h ;~ 01A2:0A4B
+ 	T(AND(cx, si));	// 126 and     cx, si ;~ 01A2:0A4E
+ 	T(SHR(cx, 0x0C));	// 127 shr     cx, 0Ch ;~ 01A2:0A50
+ 	T(ADD(cx, 3));	// 128 add     cx, 3 ;~ 01A2:0A53
+ 	T(AND(si, 0x0FFF));	// 129 and     si, 0FFFh ;~ 01A2:0A56
+loc_10a5a:
+	// 4378 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 132 mov     ah, [si] ;~ 01A2:0A5A
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 133 mov     [bx], ah ;~ 01A2:0A5C
+ 	T(INC(bx));	// 134 inc     bx ;~ 01A2:0A5E
+ 	T(AND(bx, 0x0FFF));	// 135 and     bx, 0FFFh ;~ 01A2:0A5F
+ 	X(MOV(*(raddr(es,di)), ah));	// 136 mov     es:[di], ah ;~ 01A2:0A63
+ 	T(INC(di));	// 137 inc     di ;~ 01A2:0A66
+ 	T(DEC(dx));	// 138 dec     dx ;~ 01A2:0A67
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 139 cmp     dx, cs:word_10980 ;~ 01A2:0A68
+ 	J(JC(loc_10a73));	// 140 jb      short loc_10A73 ;~ 01A2:0A6D
+ 	X(POP(si));	// 141 pop     si ;~ 01A2:0A6F
+ 	J(JMP(loc_10989));	// 142 jmp     loc_10989 ;~ 01A2:0A70
+loc_10a73:
+	// 4379 
+ 	T(INC(si));	// 146 inc     si ;~ 01A2:0A73
+ 	T(AND(si, 0x0FFF));	// 147 and     si, 0FFFh ;~ 01A2:0A74
+ 	J(LOOP(loc_10a5a));	// 148 loop    loc_10A5A ;~ 01A2:0A78
+ 	X(POP(si));	// 149 pop     si ;~ 01A2:0A7A
+loc_10a7b:
+	// 4380 
+ 	T(RCR(al, 1));	// 152 rcr     al, 1 ;~ 01A2:0A7B
+ 	J(JNC(loc_10a9a));	// 153 jnb     short loc_10A9A ;~ 01A2:0A7D
+ 	T(MOV(ah, *(raddr(ds,si))));	// 154 mov     ah, [si] ;~ 01A2:0A7F
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 155 mov     [bx], ah ;~ 01A2:0A81
+ 	T(INC(bx));	// 156 inc     bx ;~ 01A2:0A83
+ 	T(AND(bx, 0x0FFF));	// 157 and     bx, 0FFFh ;~ 01A2:0A84
+ 	X(MOV(*(raddr(es,di)), ah));	// 158 mov     es:[di], ah ;~ 01A2:0A88
+ 	T(INC(di));	// 159 inc     di ;~ 01A2:0A8B
+ 	T(DEC(dx));	// 160 dec     dx ;~ 01A2:0A8C
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 161 cmp     dx, cs:word_10980 ;~ 01A2:0A8D
+ 	J(JC(loc_10a97));	// 162 jb      short loc_10A97 ;~ 01A2:0A92
+ 	J(JMP(loc_10989));	// 163 jmp     loc_10989 ;~ 01A2:0A94
+loc_10a97:
+	// 4381 
+ 	T(INC(si));	// 167 inc     si ;~ 01A2:0A97
+ 	J(JMP(loc_10ad1));	// 168 jmp     short loc_10AD1 ;~ 01A2:0A98
+loc_10a9a:
+	// 4382 
+ 	T(ADD(si, 2));	// 172 add     si, 2 ;~ 01A2:0A9A
+ 	X(PUSH(si));	// 173 push    si ;~ 01A2:0A9D
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 174 mov     si, [si-2] ;~ 01A2:0A9E
+ 	T(MOV(cx, 0x0F000));	// 175 mov     cx, 0F000h ;~ 01A2:0AA1
+ 	T(AND(cx, si));	// 176 and     cx, si ;~ 01A2:0AA4
+ 	T(SHR(cx, 0x0C));	// 177 shr     cx, 0Ch ;~ 01A2:0AA6
+ 	T(ADD(cx, 3));	// 178 add     cx, 3 ;~ 01A2:0AA9
+ 	T(AND(si, 0x0FFF));	// 179 and     si, 0FFFh ;~ 01A2:0AAC
+loc_10ab0:
+	// 4383 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 182 mov     ah, [si] ;~ 01A2:0AB0
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 183 mov     [bx], ah ;~ 01A2:0AB2
+ 	T(INC(bx));	// 184 inc     bx ;~ 01A2:0AB4
+ 	T(AND(bx, 0x0FFF));	// 185 and     bx, 0FFFh ;~ 01A2:0AB5
+ 	X(MOV(*(raddr(es,di)), ah));	// 186 mov     es:[di], ah ;~ 01A2:0AB9
+ 	T(INC(di));	// 187 inc     di ;~ 01A2:0ABC
+ 	T(DEC(dx));	// 188 dec     dx ;~ 01A2:0ABD
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 189 cmp     dx, cs:word_10980 ;~ 01A2:0ABE
+ 	J(JC(loc_10ac9));	// 190 jb      short loc_10AC9 ;~ 01A2:0AC3
+ 	X(POP(si));	// 191 pop     si ;~ 01A2:0AC5
+ 	J(JMP(loc_10989));	// 192 jmp     loc_10989 ;~ 01A2:0AC6
+loc_10ac9:
+	// 4384 
+ 	T(INC(si));	// 196 inc     si ;~ 01A2:0AC9
+ 	T(AND(si, 0x0FFF));	// 197 and     si, 0FFFh ;~ 01A2:0ACA
+ 	J(LOOP(loc_10ab0));	// 198 loop    loc_10AB0 ;~ 01A2:0ACE
+ 	X(POP(si));	// 199 pop     si ;~ 01A2:0AD0
+loc_10ad1:
+	// 4385 
+ 	T(RCR(al, 1));	// 202 rcr     al, 1 ;~ 01A2:0AD1
+ 	J(JNC(loc_10af0));	// 203 jnb     short loc_10AF0 ;~ 01A2:0AD3
+ 	T(MOV(ah, *(raddr(ds,si))));	// 204 mov     ah, [si] ;~ 01A2:0AD5
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 205 mov     [bx], ah ;~ 01A2:0AD7
+ 	T(INC(bx));	// 206 inc     bx ;~ 01A2:0AD9
+ 	T(AND(bx, 0x0FFF));	// 207 and     bx, 0FFFh ;~ 01A2:0ADA
+ 	X(MOV(*(raddr(es,di)), ah));	// 208 mov     es:[di], ah ;~ 01A2:0ADE
+ 	T(INC(di));	// 209 inc     di ;~ 01A2:0AE1
+ 	T(DEC(dx));	// 210 dec     dx ;~ 01A2:0AE2
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 211 cmp     dx, cs:word_10980 ;~ 01A2:0AE3
+ 	J(JC(loc_10aed));	// 212 jb      short loc_10AED ;~ 01A2:0AE8
+ 	J(JMP(loc_10989));	// 213 jmp     loc_10989 ;~ 01A2:0AEA
+loc_10aed:
+	// 4386 
+ 	T(INC(si));	// 217 inc     si ;~ 01A2:0AED
+ 	J(JMP(loc_10b27));	// 218 jmp     short loc_10B27 ;~ 01A2:0AEE
+loc_10af0:
+	// 4387 
+ 	T(ADD(si, 2));	// 222 add     si, 2 ;~ 01A2:0AF0
+ 	X(PUSH(si));	// 223 push    si ;~ 01A2:0AF3
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 224 mov     si, [si-2] ;~ 01A2:0AF4
+ 	T(MOV(cx, 0x0F000));	// 225 mov     cx, 0F000h ;~ 01A2:0AF7
+ 	T(AND(cx, si));	// 226 and     cx, si ;~ 01A2:0AFA
+ 	T(SHR(cx, 0x0C));	// 227 shr     cx, 0Ch ;~ 01A2:0AFC
+ 	T(ADD(cx, 3));	// 228 add     cx, 3 ;~ 01A2:0AFF
+ 	T(AND(si, 0x0FFF));	// 229 and     si, 0FFFh ;~ 01A2:0B02
+loc_10b06:
+	// 4388 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 232 mov     ah, [si] ;~ 01A2:0B06
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 233 mov     [bx], ah ;~ 01A2:0B08
+ 	T(INC(bx));	// 234 inc     bx ;~ 01A2:0B0A
+ 	T(AND(bx, 0x0FFF));	// 235 and     bx, 0FFFh ;~ 01A2:0B0B
+ 	X(MOV(*(raddr(es,di)), ah));	// 236 mov     es:[di], ah ;~ 01A2:0B0F
+ 	T(INC(di));	// 237 inc     di ;~ 01A2:0B12
+ 	T(DEC(dx));	// 238 dec     dx ;~ 01A2:0B13
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 239 cmp     dx, cs:word_10980 ;~ 01A2:0B14
+ 	J(JC(loc_10b1f));	// 240 jb      short loc_10B1F ;~ 01A2:0B19
+ 	X(POP(si));	// 241 pop     si ;~ 01A2:0B1B
+ 	J(JMP(loc_10989));	// 242 jmp     loc_10989 ;~ 01A2:0B1C
+loc_10b1f:
+	// 4389 
+ 	T(INC(si));	// 246 inc     si ;~ 01A2:0B1F
+ 	T(AND(si, 0x0FFF));	// 247 and     si, 0FFFh ;~ 01A2:0B20
+ 	J(LOOP(loc_10b06));	// 248 loop    loc_10B06 ;~ 01A2:0B24
+ 	X(POP(si));	// 249 pop     si ;~ 01A2:0B26
+loc_10b27:
+	// 4390 
+ 	T(RCR(al, 1));	// 252 rcr     al, 1 ;~ 01A2:0B27
+ 	J(JNC(loc_10b46));	// 253 jnb     short loc_10B46 ;~ 01A2:0B29
+ 	T(MOV(ah, *(raddr(ds,si))));	// 254 mov     ah, [si] ;~ 01A2:0B2B
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 255 mov     [bx], ah ;~ 01A2:0B2D
+ 	T(INC(bx));	// 256 inc     bx ;~ 01A2:0B2F
+ 	T(AND(bx, 0x0FFF));	// 257 and     bx, 0FFFh ;~ 01A2:0B30
+ 	X(MOV(*(raddr(es,di)), ah));	// 258 mov     es:[di], ah ;~ 01A2:0B34
+ 	T(INC(di));	// 259 inc     di ;~ 01A2:0B37
+ 	T(DEC(dx));	// 260 dec     dx ;~ 01A2:0B38
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 261 cmp     dx, cs:word_10980 ;~ 01A2:0B39
+ 	J(JC(loc_10b43));	// 262 jb      short loc_10B43 ;~ 01A2:0B3E
+ 	J(JMP(loc_10989));	// 263 jmp     loc_10989 ;~ 01A2:0B40
+loc_10b43:
+	// 4391 
+ 	T(INC(si));	// 267 inc     si ;~ 01A2:0B43
+ 	J(JMP(loc_10b7d));	// 268 jmp     short loc_10B7D ;~ 01A2:0B44
+loc_10b46:
+	// 4392 
+ 	T(ADD(si, 2));	// 272 add     si, 2 ;~ 01A2:0B46
+ 	X(PUSH(si));	// 273 push    si ;~ 01A2:0B49
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 274 mov     si, [si-2] ;~ 01A2:0B4A
+ 	T(MOV(cx, 0x0F000));	// 275 mov     cx, 0F000h ;~ 01A2:0B4D
+ 	T(AND(cx, si));	// 276 and     cx, si ;~ 01A2:0B50
+ 	T(SHR(cx, 0x0C));	// 277 shr     cx, 0Ch ;~ 01A2:0B52
+ 	T(ADD(cx, 3));	// 278 add     cx, 3 ;~ 01A2:0B55
+ 	T(AND(si, 0x0FFF));	// 279 and     si, 0FFFh ;~ 01A2:0B58
+loc_10b5c:
+	// 4393 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 282 mov     ah, [si] ;~ 01A2:0B5C
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 283 mov     [bx], ah ;~ 01A2:0B5E
+ 	T(INC(bx));	// 284 inc     bx ;~ 01A2:0B60
+ 	T(AND(bx, 0x0FFF));	// 285 and     bx, 0FFFh ;~ 01A2:0B61
+ 	X(MOV(*(raddr(es,di)), ah));	// 286 mov     es:[di], ah ;~ 01A2:0B65
+ 	T(INC(di));	// 287 inc     di ;~ 01A2:0B68
+ 	T(DEC(dx));	// 288 dec     dx ;~ 01A2:0B69
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 289 cmp     dx, cs:word_10980 ;~ 01A2:0B6A
+ 	J(JC(loc_10b75));	// 290 jb      short loc_10B75 ;~ 01A2:0B6F
+ 	X(POP(si));	// 291 pop     si ;~ 01A2:0B71
+ 	J(JMP(loc_10989));	// 292 jmp     loc_10989 ;~ 01A2:0B72
+loc_10b75:
+	// 4394 
+ 	T(INC(si));	// 296 inc     si ;~ 01A2:0B75
+ 	T(AND(si, 0x0FFF));	// 297 and     si, 0FFFh ;~ 01A2:0B76
+ 	J(LOOP(loc_10b5c));	// 298 loop    loc_10B5C ;~ 01A2:0B7A
+ 	X(POP(si));	// 299 pop     si ;~ 01A2:0B7C
+loc_10b7d:
+	// 4395 
+ 	T(RCR(al, 1));	// 302 rcr     al, 1 ;~ 01A2:0B7D
+ 	J(JNC(loc_10b9c));	// 303 jnb     short loc_10B9C ;~ 01A2:0B7F
+ 	T(MOV(ah, *(raddr(ds,si))));	// 304 mov     ah, [si] ;~ 01A2:0B81
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 305 mov     [bx], ah ;~ 01A2:0B83
+ 	T(INC(bx));	// 306 inc     bx ;~ 01A2:0B85
+ 	T(AND(bx, 0x0FFF));	// 307 and     bx, 0FFFh ;~ 01A2:0B86
+ 	X(MOV(*(raddr(es,di)), ah));	// 308 mov     es:[di], ah ;~ 01A2:0B8A
+ 	T(INC(di));	// 309 inc     di ;~ 01A2:0B8D
+ 	T(DEC(dx));	// 310 dec     dx ;~ 01A2:0B8E
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 311 cmp     dx, cs:word_10980 ;~ 01A2:0B8F
+ 	J(JC(loc_10b99));	// 312 jb      short loc_10B99 ;~ 01A2:0B94
+ 	J(JMP(loc_10989));	// 313 jmp     loc_10989 ;~ 01A2:0B96
+loc_10b99:
+	// 4396 
+ 	T(INC(si));	// 317 inc     si ;~ 01A2:0B99
+ 	J(JMP(loc_10bd3));	// 318 jmp     short loc_10BD3 ;~ 01A2:0B9A
+loc_10b9c:
+	// 4397 
+ 	T(ADD(si, 2));	// 322 add     si, 2 ;~ 01A2:0B9C
+ 	X(PUSH(si));	// 323 push    si ;~ 01A2:0B9F
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 324 mov     si, [si-2] ;~ 01A2:0BA0
+ 	T(MOV(cx, 0x0F000));	// 325 mov     cx, 0F000h ;~ 01A2:0BA3
+ 	T(AND(cx, si));	// 326 and     cx, si ;~ 01A2:0BA6
+ 	T(SHR(cx, 0x0C));	// 327 shr     cx, 0Ch ;~ 01A2:0BA8
+ 	T(ADD(cx, 3));	// 328 add     cx, 3 ;~ 01A2:0BAB
+ 	T(AND(si, 0x0FFF));	// 329 and     si, 0FFFh ;~ 01A2:0BAE
+loc_10bb2:
+	// 4398 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 332 mov     ah, [si] ;~ 01A2:0BB2
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 333 mov     [bx], ah ;~ 01A2:0BB4
+ 	T(INC(bx));	// 334 inc     bx ;~ 01A2:0BB6
+ 	T(AND(bx, 0x0FFF));	// 335 and     bx, 0FFFh ;~ 01A2:0BB7
+ 	X(MOV(*(raddr(es,di)), ah));	// 336 mov     es:[di], ah ;~ 01A2:0BBB
+ 	T(INC(di));	// 337 inc     di ;~ 01A2:0BBE
+ 	T(DEC(dx));	// 338 dec     dx ;~ 01A2:0BBF
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 339 cmp     dx, cs:word_10980 ;~ 01A2:0BC0
+ 	J(JC(loc_10bcb));	// 340 jb      short loc_10BCB ;~ 01A2:0BC5
+ 	X(POP(si));	// 341 pop     si ;~ 01A2:0BC7
+ 	J(JMP(loc_10989));	// 342 jmp     loc_10989 ;~ 01A2:0BC8
+loc_10bcb:
+	// 4399 
+ 	T(INC(si));	// 346 inc     si ;~ 01A2:0BCB
+ 	T(AND(si, 0x0FFF));	// 347 and     si, 0FFFh ;~ 01A2:0BCC
+ 	J(LOOP(loc_10bb2));	// 348 loop    loc_10BB2 ;~ 01A2:0BD0
+ 	X(POP(si));	// 349 pop     si ;~ 01A2:0BD2
+loc_10bd3:
+	// 4400 
+ 	T(RCR(al, 1));	// 352 rcr     al, 1 ;~ 01A2:0BD3
+ 	J(JNC(loc_10bf2));	// 353 jnb     short loc_10BF2 ;~ 01A2:0BD5
+ 	T(MOV(ah, *(raddr(ds,si))));	// 354 mov     ah, [si] ;~ 01A2:0BD7
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 355 mov     [bx], ah ;~ 01A2:0BD9
+ 	T(INC(bx));	// 356 inc     bx ;~ 01A2:0BDB
+ 	T(AND(bx, 0x0FFF));	// 357 and     bx, 0FFFh ;~ 01A2:0BDC
+ 	X(MOV(*(raddr(es,di)), ah));	// 358 mov     es:[di], ah ;~ 01A2:0BE0
+ 	T(INC(di));	// 359 inc     di ;~ 01A2:0BE3
+ 	T(DEC(dx));	// 360 dec     dx ;~ 01A2:0BE4
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 361 cmp     dx, cs:word_10980 ;~ 01A2:0BE5
+ 	J(JC(loc_10bef));	// 362 jb      short loc_10BEF ;~ 01A2:0BEA
+ 	J(JMP(loc_10989));	// 363 jmp     loc_10989 ;~ 01A2:0BEC
+loc_10bef:
+	// 4401 
+ 	T(INC(si));	// 367 inc     si ;~ 01A2:0BEF
+ 	J(JMP(loc_10c29));	// 368 jmp     short loc_10C29 ;~ 01A2:0BF0
+loc_10bf2:
+	// 4402 
+ 	T(ADD(si, 2));	// 372 add     si, 2 ;~ 01A2:0BF2
+ 	X(PUSH(si));	// 373 push    si ;~ 01A2:0BF5
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 374 mov     si, [si-2] ;~ 01A2:0BF6
+ 	T(MOV(cx, 0x0F000));	// 375 mov     cx, 0F000h ;~ 01A2:0BF9
+ 	T(AND(cx, si));	// 376 and     cx, si ;~ 01A2:0BFC
+ 	T(SHR(cx, 0x0C));	// 377 shr     cx, 0Ch ;~ 01A2:0BFE
+ 	T(ADD(cx, 3));	// 378 add     cx, 3 ;~ 01A2:0C01
+ 	T(AND(si, 0x0FFF));	// 379 and     si, 0FFFh ;~ 01A2:0C04
+loc_10c08:
+	// 4403 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 382 mov     ah, [si] ;~ 01A2:0C08
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 383 mov     [bx], ah ;~ 01A2:0C0A
+ 	T(INC(bx));	// 384 inc     bx ;~ 01A2:0C0C
+ 	T(AND(bx, 0x0FFF));	// 385 and     bx, 0FFFh ;~ 01A2:0C0D
+ 	X(MOV(*(raddr(es,di)), ah));	// 386 mov     es:[di], ah ;~ 01A2:0C11
+ 	T(INC(di));	// 387 inc     di ;~ 01A2:0C14
+ 	T(DEC(dx));	// 388 dec     dx ;~ 01A2:0C15
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 389 cmp     dx, cs:word_10980 ;~ 01A2:0C16
+ 	J(JC(loc_10c21));	// 390 jb      short loc_10C21 ;~ 01A2:0C1B
+ 	X(POP(si));	// 391 pop     si ;~ 01A2:0C1D
+ 	J(JMP(loc_10989));	// 392 jmp     loc_10989 ;~ 01A2:0C1E
+loc_10c21:
+	// 4404 
+ 	T(INC(si));	// 396 inc     si ;~ 01A2:0C21
+ 	T(AND(si, 0x0FFF));	// 397 and     si, 0FFFh ;~ 01A2:0C22
+ 	J(LOOP(loc_10c08));	// 398 loop    loc_10C08 ;~ 01A2:0C26
+ 	X(POP(si));	// 399 pop     si ;~ 01A2:0C28
+loc_10c29:
+	// 4405 
+ 	T(RCR(al, 1));	// 402 rcr     al, 1 ;~ 01A2:0C29
+ 	J(JNC(loc_10c48));	// 403 jnb     short loc_10C48 ;~ 01A2:0C2B
+ 	T(MOV(ah, *(raddr(ds,si))));	// 404 mov     ah, [si] ;~ 01A2:0C2D
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 405 mov     [bx], ah ;~ 01A2:0C2F
+ 	T(INC(bx));	// 406 inc     bx ;~ 01A2:0C31
+ 	T(AND(bx, 0x0FFF));	// 407 and     bx, 0FFFh ;~ 01A2:0C32
+ 	X(MOV(*(raddr(es,di)), ah));	// 408 mov     es:[di], ah ;~ 01A2:0C36
+ 	T(INC(di));	// 409 inc     di ;~ 01A2:0C39
+ 	T(DEC(dx));	// 410 dec     dx ;~ 01A2:0C3A
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 411 cmp     dx, cs:word_10980 ;~ 01A2:0C3B
+ 	J(JC(loc_10c45));	// 412 jb      short loc_10C45 ;~ 01A2:0C40
+ 	J(JMP(loc_10989));	// 413 jmp     loc_10989 ;~ 01A2:0C42
+loc_10c45:
+	// 4406 
+ 	T(INC(si));	// 417 inc     si ;~ 01A2:0C45
+ 	J(JMP(loc_10c7f));	// 418 jmp     short loc_10C7F ;~ 01A2:0C46
+loc_10c48:
+	// 4407 
+ 	T(ADD(si, 2));	// 422 add     si, 2 ;~ 01A2:0C48
+ 	X(PUSH(si));	// 423 push    si ;~ 01A2:0C4B
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 424 mov     si, [si-2] ;~ 01A2:0C4C
+ 	T(MOV(cx, 0x0F000));	// 425 mov     cx, 0F000h ;~ 01A2:0C4F
+ 	T(AND(cx, si));	// 426 and     cx, si ;~ 01A2:0C52
+ 	T(SHR(cx, 0x0C));	// 427 shr     cx, 0Ch ;~ 01A2:0C54
+ 	T(ADD(cx, 3));	// 428 add     cx, 3 ;~ 01A2:0C57
+ 	T(AND(si, 0x0FFF));	// 429 and     si, 0FFFh ;~ 01A2:0C5A
+loc_10c5e:
+	// 4408 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 432 mov     ah, [si] ;~ 01A2:0C5E
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 433 mov     [bx], ah ;~ 01A2:0C60
+ 	T(INC(bx));	// 434 inc     bx ;~ 01A2:0C62
+ 	T(AND(bx, 0x0FFF));	// 435 and     bx, 0FFFh ;~ 01A2:0C63
+ 	X(MOV(*(raddr(es,di)), ah));	// 436 mov     es:[di], ah ;~ 01A2:0C67
+ 	T(INC(di));	// 437 inc     di ;~ 01A2:0C6A
+ 	T(DEC(dx));	// 438 dec     dx ;~ 01A2:0C6B
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 439 cmp     dx, cs:word_10980 ;~ 01A2:0C6C
+ 	J(JC(loc_10c77));	// 440 jb      short loc_10C77 ;~ 01A2:0C71
+ 	X(POP(si));	// 441 pop     si ;~ 01A2:0C73
+ 	J(JMP(loc_10989));	// 442 jmp     loc_10989 ;~ 01A2:0C74
+loc_10c77:
+	// 4409 
+ 	T(INC(si));	// 446 inc     si ;~ 01A2:0C77
+ 	T(AND(si, 0x0FFF));	// 447 and     si, 0FFFh ;~ 01A2:0C78
+ 	J(LOOP(loc_10c5e));	// 448 loop    loc_10C5E ;~ 01A2:0C7C
+ 	X(POP(si));	// 449 pop     si ;~ 01A2:0C7E
+loc_10c7f:
+	// 4410 
+ 	T(RCR(al, 1));	// 452 rcr     al, 1 ;~ 01A2:0C7F
+ 	J(JNC(loc_10c9e));	// 453 jnb     short loc_10C9E ;~ 01A2:0C81
+ 	T(MOV(ah, *(raddr(ds,si))));	// 454 mov     ah, [si] ;~ 01A2:0C83
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 455 mov     [bx], ah ;~ 01A2:0C85
+ 	T(INC(bx));	// 456 inc     bx ;~ 01A2:0C87
+ 	T(AND(bx, 0x0FFF));	// 457 and     bx, 0FFFh ;~ 01A2:0C88
+ 	X(MOV(*(raddr(es,di)), ah));	// 458 mov     es:[di], ah ;~ 01A2:0C8C
+ 	T(INC(di));	// 459 inc     di ;~ 01A2:0C8F
+ 	T(DEC(dx));	// 460 dec     dx ;~ 01A2:0C90
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 461 cmp     dx, cs:word_10980 ;~ 01A2:0C91
+ 	J(JC(loc_10c9b));	// 462 jb      short loc_10C9B ;~ 01A2:0C96
+ 	J(JMP(loc_10989));	// 463 jmp     loc_10989 ;~ 01A2:0C98
+loc_10c9b:
+	// 4411 
+ 	T(INC(si));	// 467 inc     si ;~ 01A2:0C9B
+ 	J(JMP(loc_10cd5));	// 468 jmp     short loc_10CD5 ;~ 01A2:0C9C
+loc_10c9e:
+	// 4412 
+ 	T(ADD(si, 2));	// 472 add     si, 2 ;~ 01A2:0C9E
+ 	X(PUSH(si));	// 473 push    si ;~ 01A2:0CA1
+ 	T(MOV(si, *(dw*)(raddr(ds,si-2))));	// 474 mov     si, [si-2] ;~ 01A2:0CA2
+ 	T(MOV(cx, 0x0F000));	// 475 mov     cx, 0F000h ;~ 01A2:0CA5
+ 	T(AND(cx, si));	// 476 and     cx, si ;~ 01A2:0CA8
+ 	T(SHR(cx, 0x0C));	// 477 shr     cx, 0Ch ;~ 01A2:0CAA
+ 	T(ADD(cx, 3));	// 478 add     cx, 3 ;~ 01A2:0CAD
+ 	T(AND(si, 0x0FFF));	// 479 and     si, 0FFFh ;~ 01A2:0CB0
+loc_10cb4:
+	// 4413 
+ 	T(MOV(ah, *(raddr(ds,si))));	// 482 mov     ah, [si] ;~ 01A2:0CB4
+ 	X(MOV(*(raddr(ds,bx)), ah));	// 483 mov     [bx], ah ;~ 01A2:0CB6
+ 	T(INC(bx));	// 484 inc     bx ;~ 01A2:0CB8
+ 	T(AND(bx, 0x0FFF));	// 485 and     bx, 0FFFh ;~ 01A2:0CB9
+ 	X(MOV(*(raddr(es,di)), ah));	// 486 mov     es:[di], ah ;~ 01A2:0CBD
+ 	T(INC(di));	// 487 inc     di ;~ 01A2:0CC0
+ 	T(DEC(dx));	// 488 dec     dx ;~ 01A2:0CC1
+	cs=seg_offset(seg000);
+ 	T(CMP(dx, *(dw*)(((db*)&word_10980))));	// 489 cmp     dx, cs:word_10980 ;~ 01A2:0CC2
+ 	J(JC(loc_10ccd));	// 490 jb      short loc_10CCD ;~ 01A2:0CC7
+ 	X(POP(si));	// 491 pop     si ;~ 01A2:0CC9
+ 	J(JMP(loc_10989));	// 492 jmp     loc_10989 ;~ 01A2:0CCA
+loc_10ccd:
+	// 4414 
+ 	T(INC(si));	// 496 inc     si ;~ 01A2:0CCD
+ 	T(AND(si, 0x0FFF));	// 497 and     si, 0FFFh ;~ 01A2:0CCE
+ 	J(LOOP(loc_10cb4));	// 498 loop    loc_10CB4 ;~ 01A2:0CD2
+ 	X(POP(si));	// 499 pop     si ;~ 01A2:0CD4
+loc_10cd5:
+	// 4415 
+ 	J(JMP(loc_10a22));	// 502 jmp     loc_10A22 ;~ 01A2:0CD5
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10989: 	goto loc_10989;
+        case m2c::kloc_1098e: 	goto loc_1098e;
+        case m2c::kloc_10997: 	goto loc_10997;
+        case m2c::kloc_1099f: 	goto loc_1099f;
+        case m2c::kloc_10a11: 	goto loc_10a11;
+        case m2c::kloc_10a22: 	goto loc_10a22;
+        case m2c::kloc_10a41: 	goto loc_10a41;
+        case m2c::kloc_10a44: 	goto loc_10a44;
+        case m2c::kloc_10a5a: 	goto loc_10a5a;
+        case m2c::kloc_10a73: 	goto loc_10a73;
+        case m2c::kloc_10a7b: 	goto loc_10a7b;
+        case m2c::kloc_10a97: 	goto loc_10a97;
+        case m2c::kloc_10a9a: 	goto loc_10a9a;
+        case m2c::kloc_10ab0: 	goto loc_10ab0;
+        case m2c::kloc_10ac9: 	goto loc_10ac9;
+        case m2c::kloc_10ad1: 	goto loc_10ad1;
+        case m2c::kloc_10aed: 	goto loc_10aed;
+        case m2c::kloc_10af0: 	goto loc_10af0;
+        case m2c::kloc_10b06: 	goto loc_10b06;
+        case m2c::kloc_10b1f: 	goto loc_10b1f;
+        case m2c::kloc_10b27: 	goto loc_10b27;
+        case m2c::kloc_10b43: 	goto loc_10b43;
+        case m2c::kloc_10b46: 	goto loc_10b46;
+        case m2c::kloc_10b5c: 	goto loc_10b5c;
+        case m2c::kloc_10b75: 	goto loc_10b75;
+        case m2c::kloc_10b7d: 	goto loc_10b7d;
+        case m2c::kloc_10b99: 	goto loc_10b99;
+        case m2c::kloc_10b9c: 	goto loc_10b9c;
+        case m2c::kloc_10bb2: 	goto loc_10bb2;
+        case m2c::kloc_10bcb: 	goto loc_10bcb;
+        case m2c::kloc_10bd3: 	goto loc_10bd3;
+        case m2c::kloc_10bef: 	goto loc_10bef;
+        case m2c::kloc_10bf2: 	goto loc_10bf2;
+        case m2c::kloc_10c08: 	goto loc_10c08;
+        case m2c::kloc_10c21: 	goto loc_10c21;
+        case m2c::kloc_10c29: 	goto loc_10c29;
+        case m2c::kloc_10c45: 	goto loc_10c45;
+        case m2c::kloc_10c48: 	goto loc_10c48;
+        case m2c::kloc_10c5e: 	goto loc_10c5e;
+        case m2c::kloc_10c77: 	goto loc_10c77;
+        case m2c::kloc_10c7f: 	goto loc_10c7f;
+        case m2c::kloc_10c9b: 	goto loc_10c9b;
+        case m2c::kloc_10c9e: 	goto loc_10c9e;
+        case m2c::kloc_10cb4: 	goto loc_10cb4;
+        case m2c::kloc_10ccd: 	goto loc_10ccd;
+        case m2c::kloc_10cd5: 	goto loc_10cd5;
+        case m2c::kret_1a2_983: 	goto ret_1a2_983;
+        case m2c::ksub_10982: 	goto sub_10982;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
