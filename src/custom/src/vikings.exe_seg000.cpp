@@ -16974,7 +16974,59 @@ extern dd dword_2b09;
 extern dd dword_2b094;
 extern dw word_2b349;
 extern dd dword_2b098;
-          
+
+extern dw _word_2d0b6_hnm_file_offset_hi;
+extern dw _word_2d0b6_hnm_file_offset_lo;
+
+extern dw _word_22a56_hnm_file_handle;
+extern dd _dword_2d0bc_hnm_file_read_buf_seg;
+extern dd _dword_2d0b8_hnm_file_remain;
+extern dd _dword_2d0b4_hnm_file_offset;
+extern dw word_2d0ca;
+
+ bool sub_(m2c::_offsets _i, struct m2c::_STATE* _state){
+//    X86_REGREF
+m2c::eflags m2cflags;
+
+dw cs;         
+dw ds;         
+dw es;         
+dw fs;         
+dw gs;         
+dw ss;         
+
+cs=0x1a2;eip=0x00cdbf; 	T(MOV(bx, *(dw*)(((db*)&_word_22a56_hnm_file_handle))));	// 32552 mov     bx, ds:_word_22A56_hnm_file_handle ;~ 01A2:CDBF
+cs=0x1a2;eip=0x00cdc3; 	T(CMP(bx, 1));	// 32553 cmp     bx, 1 ;~ 01A2:CDC3
+cs=0x1a2;eip=0x00cdc6; 	J(JC(locret_1ce00));	// 32554 jb      short locret_1CE00 ;~ 01A2:CDC6
+loc_1cdc8:
+	// 7291 
+cs=0x1a2;eip=0x00cdc8; 	X(PUSH(cx));	// 32557 push    cx ;~ 01A2:CDC8
+cs=0x1a2;eip=0x00cdc9; 	T(MOV(cx, *(dw*)(((db*)&_dword_2d0b4_hnm_file_offset)+2)));	// 32558 mov     cx, ds:_word_2D0B6_hnm_file_offset_hi ;~ 01A2:CDC9
+cs=0x1a2;eip=0x00cdcd; 	T(MOV(dx, *(dw*)(((db*)&_dword_2d0b4_hnm_file_offset))));	// 32559 mov     dx, ds:_word_2D0B4_hnm_file_offset_lo ;~ 01A2:CDCD
+cs=0x1a2;eip=0x00cdd1; 	T(MOV(ax, 0x4200));	// 32560 mov     ax, 4200h ;~ 01A2:CDD1
+cs=0x1a2;eip=0x00cdd4; 	R(_INT(0x21));	// 32561 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:CDD4
+cs=0x1a2;eip=0x00cdd6; 	X(POP(cx));	// 32563 pop     cx ;~ 01A2:CDD6
+cs=0x1a2;eip=0x00cdd7; 	X(PUSH(ds));	// 32564 push    ds ;~ 01A2:CDD7
+cs=0x1a2;eip=0x00cdd8; 	T(LDS(dx, *(dd*)(((db*)&_dword_2d0bc_hnm_file_read_buf_seg))));	// 32565 lds     dx, ds:_dword_2D0BC_hnm_file_read_buf_seg ;~ 01A2:CDD8
+cs=0x1a2;eip=0x00cddc; 	T(MOV(ah, 0x3F));	// 32566 mov     ah, 3Fh ;~ 01A2:CDDC
+cs=0x1a2;eip=0x00cdde; 	R(_INT(0x21));	// 32567 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:CDDE
+cs=0x1a2;eip=0x00cde0; 	X(POP(ds));	// 32570 pop     ds ;~ 01A2:CDE0
+cs=0x1a2;eip=0x00cde1; 	T(CMP(ax, cx));	// 32571 cmp     ax, cx ;~ 01A2:CDE1
+cs=0x1a2;eip=0x00cde3; 	J(JC(loc_1cdc8));	// 32572 jb      short loc_1CDC8 ;~ 01A2:CDE3
+cs=0x1a2;eip=0x00cde5; 	X(SUB(*(dw*)(((db*)&_dword_2d0b8_hnm_file_remain)), ax));	// 32573 sub     ds:_word_2D0B8_hnm_file_remain_lo, ax ;~ 01A2:CDE5
+cs=0x1a2;eip=0x00cde9; 	X(SBB(*(dw*)(((db*)&_dword_2d0b8_hnm_file_remain)+2), 0));	// 32574 sbb     ds:_word_2D0BA_hnm_file_remain_hi, 0 ;~ 01A2:CDE9
+cs=0x1a2;eip=0x00cdee; 	X(ADD(*(dw*)(((db*)&_dword_2d0b4_hnm_file_offset)), ax));	// 32575 add     ds:_word_2D0B4_hnm_file_offset_lo, ax ;~ 01A2:CDEE
+cs=0x1a2;eip=0x00cdf2; 	X(ADC(*(dw*)(((db*)&_dword_2d0b4_hnm_file_offset)+2), 0));	// 32576 adc     ds:_word_2D0B6_hnm_file_offset_hi, 0 ;~ 01A2:CDF2
+sub_1cdf7:
+	// 32583 
+cs=0x1a2;eip=0x00cdf7; 	X(ADD(*(dw*)(((db*)&_dword_2d0bc_hnm_file_read_buf_seg)), ax));	// 32585 add     word ptr ds:_dword_2D0BC_hnm_file_read_buf_seg, ax ;~ 01A2:CDF7
+cs=0x1a2;eip=0x00cdfb; 	X(ADD(*(dw*)(((db*)&word_2d0ca)), ax));	// 32586 add     ds:word_2D0CA, ax ;~ 01A2:CDFB
+cs=0x1a2;eip=0x00cdff; 	T(CLC);	// 32587 clc ;~ 01A2:CDFF
+locret_1ce00:
+	// 7292 
+cs=0x1a2;eip=0x00ce00; 	R(RETN(0));	// 32591 retn ;~ 01A2:CE00
+
+}          
 
  bool sub_10982_(m2c::_offsets _i, struct m2c::_STATE* _state){
 //    X86_REGREF
