@@ -1,6 +1,12 @@
-
 #ifndef __asm_h__
 #define __asm_h__
+
+#include <type_traits>
+#if M2CDEBUG == -1
+#define MYINLINE __attribute__((always_inline))
+#else
+#define MYINLINE inline
+#endif
 
 
 #include <cstdlib>
@@ -126,7 +132,7 @@ namespace m2c {
     typedef dd _offsets;
 
 // Regs
-    struct _STATE {
+    struct _STATE {  // masm2c
         _STATE() {
             _str = "";
             _indent = 0;
@@ -212,6 +218,122 @@ dw _source;
 
 #else
 
+// #define m2cflags cpu_regs.flags
+#if M2CDEBUG == -1
+
+
+    class eflags {
+        bool _CF=0;
+        bool _PF=0; 
+        bool _AF=0;  
+        bool _ZF=0;   
+        bool _SF=0;    
+        bool _TF=0;     
+        bool _IF=0;      
+        bool _DF=0;       
+        bool _OF=0;
+    public:
+#define REGDEF_flags(Z) \
+    MYINLINE bool set##Z##F(bool i){return (_##Z##F=i);} \
+    MYINLINE bool get##Z##F() {return _##Z##F;}
+
+        MYINLINE void reset() {
+            _CF = false;
+            _PF = false;
+            _AF = false;
+            _ZF = false;
+            _SF = false;
+            _TF = false;
+            _IF = false;
+            _DF = false;
+            _OF = false;
+        }
+
+        REGDEF_flags(C)
+
+        REGDEF_flags(P)
+
+        REGDEF_flags(A)
+
+        REGDEF_flags(Z)
+
+        REGDEF_flags(S)
+
+        REGDEF_flags(T)
+
+        REGDEF_flags(I)
+
+        REGDEF_flags(D)
+
+        REGDEF_flags(O)
+    };
+
+
+#define REGDEF_hl(Z)   \
+static uint32_t e##Z##x; \
+uint16_t& Z##x = *(uint16_t *)& e##Z##x; \
+uint8_t& Z##l = *(uint8_t *)& e##Z##x; \
+uint8_t& Z##h = *(((uint8_t *)& e##Z##x)+1);
+
+#define REGDEF_l(Z) \
+static uint32_t e##Z; \
+uint16_t& Z = *(uint16_t *)& e##Z ; \
+uint8_t&  Z##l = *(uint8_t *)& e##Z ;
+
+#define REGDEF_nol(Z) \
+static uint32_t e##Z; \
+uint16_t& Z = *(uint16_t *)& e##Z ;
+
+#define X86_REGREF \
+    REGDEF_hl(a);     \
+    REGDEF_hl(b);     \
+    REGDEF_hl(c);     \
+    REGDEF_hl(d);     \
+                      \
+    REGDEF_l(si);     \
+    REGDEF_l(di);     \
+    REGDEF_l(sp);     \
+    REGDEF_l(bp);     \
+                      \
+    REGDEF_nol(ip);   \
+                      \
+dd& stackPointer = esp;\
+m2c::_offsets __disp; \
+dd _source;
+
+
+/*
+m2c::eflags m2cflags; \
+dw cs;         
+dw ds;         
+dw es;         
+dw fs;         
+dw gs;         
+dw ss;         
+*/
+#define GET_DF() m2cflags.getDF()
+#define GET_CF() m2cflags.getCF()
+#define GET_AF() m2cflags.getAF()
+#define GET_OF() m2cflags.getOF()
+#define GET_SF() m2cflags.getSF()
+#define GET_ZF() m2cflags.getZF()
+#define GET_PF() m2cflags.getPF()
+#define GET_IF() m2cflags.getIF()
+#define AFFECT_DF(a) m2cflags.setDF(a)
+#define AFFECT_CF(a) m2cflags.setCF(a)
+#define AFFECT_AF(a) m2cflags.setAF(a)
+#define AFFECT_OF(a) m2cflags.setOF(a)
+#define AFFECT_IF(a) m2cflags.setIF(a)
+#define ISNEGATIVE(f, a) ( (a) & (1 << (m2c::bitsizeof(f)-1)) )
+#define AFFECT_SF(a) m2cflags.setSF(a)
+#define AFFECT_SF_(f, a) {AFFECT_SF(ISNEGATIVE(f,a));}
+#define AFFECT_ZF(a) m2cflags.setZF(a)
+#define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
+#define AFFECT_PF(a) m2cflags.setPF(a)
+
+
+#else
+
     class fBits {
         unsigned int _CF: 1,
                 unused1: 1,
@@ -227,10 +349,10 @@ dw _source;
                 _OF: 1;
     public:
 #define REGDEF_flags(Z) \
-    inline bool set##Z##F(bool i){return (_##Z##F=i);} \
-    inline bool get##Z##F(){return _##Z##F;}
+    MYINLINE bool set##Z##F(bool i){return (_##Z##F=i);} \
+    MYINLINE bool get##Z##F(){return _##Z##F;}
 
-        inline void reset() {
+        MYINLINE void reset() {
             _CF = false;
             _PF = false;
             _AF = false;
@@ -265,7 +387,6 @@ dw _source;
         fBits bits;
         dd value;
     };
-// #define m2cflags cpu_regs.flags
 
 #define X86_REGREF \
 db& al =  cpu_regs.regs[REGI_AX].byte[BL_INDEX]; \
@@ -314,6 +435,27 @@ dd& stackPointer = esp;\
 m2c::_offsets __disp; \
 dd _source;
 
+#define GET_DF() m2cflags.bits.getDF()
+#define GET_CF() m2cflags.bits.getCF()
+#define GET_AF() m2cflags.bits.getAF()
+#define GET_OF() m2cflags.bits.getOF()
+#define GET_SF() m2cflags.bits.getSF()
+#define GET_ZF() m2cflags.bits.getZF()
+#define GET_PF() m2cflags.bits.getPF()
+#define GET_IF() m2cflags.bits.getIF()
+#define AFFECT_DF(a) m2cflags.bits.setDF(a)
+#define AFFECT_CF(a) m2cflags.bits.setCF(a)
+#define AFFECT_AF(a) m2cflags.bits.setAF(a)
+#define AFFECT_OF(a) m2cflags.bits.setOF(a)
+#define AFFECT_IF(a) m2cflags.bits.setIF(a)
+#define ISNEGATIVE(f, a) ( (a) & (1 << (m2c::bitsizeof(f)-1)) )
+#define AFFECT_SF(a) m2cflags.bits.setSF(a)
+#define AFFECT_SF_(f, a) {AFFECT_SF(ISNEGATIVE(f,a));}
+#define AFFECT_ZF(a) m2cflags.bits.setZF(a)
+#define AFFECT_ZFifz(a) m2cflags.bits.setZF((a)==0)
+#define AFFECT_PF(a) m2cflags.bits.setPF(a)
+
+#endif
     extern db _indent;
     extern const char *_str;
 
@@ -336,7 +478,7 @@ dd _source;
 //    static int log_debug(const char *format, ...);
 
     template<class S>
-    inline void check_type(const S &) {
+    MYINLINE void check_type(const S &) {
 /*
 #if M2CDEBUG >=4
   size_t addr = (((db*)&s)-((db*)&m2c::m));
@@ -346,8 +488,38 @@ dd _source;
 */
     }
 
+
+#if M2CDEBUG == -1
+
+static MYINLINE db getdata(const db& s)
+{ return s; }
+static MYINLINE dw getdata(const dw& s)
+{ return s; }
+static MYINLINE dd getdata(const dd& s)
+{ return s; }
+static MYINLINE char getdata(const char& s)
+{ return s; }
+static MYINLINE short int getdata(const short int& s)
+{ return s; }
+static MYINLINE int getdata(const int& s)
+{ return s; }
+static MYINLINE long getdata(const long& s)
+{ return s; }
+
+static MYINLINE void setdata(db* d, db s)
+{ *d = s; }
+static MYINLINE void setdata(dw* d, dw s)
+{ *d = s; }
+static MYINLINE void setdata(dd* d, dd s)
+{ *d = s; }
+
+    template<class S>
+    MYINLINE void set_type(const S &) {
+    }
+
+#else
 //    template<>
-    inline db getdata(const db &s) {
+    static MYINLINE db getdata(const db &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readb((db *) &s - (db *) &m);
@@ -356,7 +528,7 @@ dd _source;
     }
 
 //    template<>
-    inline dw getdata(const dw &s) {
+    static MYINLINE dw getdata(const dw &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readw((db *) &s - (db *) &m);
@@ -365,7 +537,7 @@ dd _source;
     }
 
   //  template<>
-    inline dd getdata(const dd &s) {
+    static MYINLINE dd getdata(const dd &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -374,7 +546,7 @@ dd _source;
     }
 
 //    template<>
-    inline db getdata(const char &s) {
+    static MYINLINE db getdata(const char &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readb((db *) &s - (db *) &m);
@@ -383,7 +555,7 @@ dd _source;
     }
 
 //    template<>
-    inline dw getdata(const short int &s) {
+    static MYINLINE dw getdata(const short int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readw((db *) &s - (db *) &m);
@@ -392,7 +564,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const int &s) {
+    static MYINLINE dd getdata(const int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -401,7 +573,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const long &s) {
+    static MYINLINE dd getdata(const long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -410,7 +582,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const long long &s) {
+    static MYINLINE dd getdata(const long long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -419,17 +591,15 @@ dd _source;
     }
 
     template<class S>
-    inline void set_type(const S &) {
-/*
-#if M2CDEBUG>0
-  size_t addr = (((db*)&s)-((db*)&m2c::m));
-  if (addr<0xf0000)
-  memset((((db*)&m2c::types)+addr),0xff,sizeof(S));
-#endif
-*/
+    MYINLINE void set_type(const S &) {
+//#if M2CDEBUG>0
+//  size_t addr = (((db*)&s)-((db*)&m2c::m));
+//  if (addr<0xf0000)
+//  memset((((db*)&m2c::types)+addr),0xff,sizeof(S));
+//#endif
     }
 
-    static void setdata(db *d, db s) {
+    static MYINLINE void setdata(db *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writeb((db *) d - (db *) &m, s);
@@ -437,7 +607,7 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(char *d, db s) {
+    static MYINLINE void setdata(char *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writeb((db *) d - (db *) &m, s);
@@ -445,7 +615,7 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(dw *d, dw s) {
+    static MYINLINE void setdata(dw *d, dw s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writew((db *) d - (db *) &m, s);
@@ -453,44 +623,14 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(dd *d, dd s) {
+    static MYINLINE void setdata(dd *d, dd s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writed((db *) d - (db *) &m, s);
         }
         else *d = s;
     }
-
-/*
-template<>
-inline db getdata<db>(const db& s)
-{ return s; }
-template<>
-inline dw getdata<dw>(const dw& s)
-{ return s; }
-template<>
-inline dd getdata<dd>(const dd& s)
-{ return s; }
-template<>
-inline char getdata<char>(const char& s)
-{ return s; }
-template<>
-inline short int getdata<short int>(const short int& s)
-{ return s; }
-template<>
-inline int getdata<int>(const int& s)
-{ return s; }
-template<>
-inline long getdata<long>(const long& s)
-{ return s; }
-
-static void setdata(db* d, db s)
-{ *d = s; }
-static void setdata(dw* d, dw s)
-{ *d = s; }
-static void setdata(dd* d, dd s)
-{ *d = s; }
-*/
+#endif
 
     extern FILE *logDebug;
 
@@ -537,25 +677,25 @@ static void setdata(dd* d, dd s)
     { return 8 * sizeof(D); }
 
     template<class D>
-    inline size_t getbit(D dest, int bit)  // get specific bit
+    MYINLINE size_t getbit(D dest, int bit)  // get specific bit
     { return ((bit >= 0) ? (((dest) >> bit) & 1) : 0); }
 
     template<class D>
-    inline size_t shiftmodule(D dest, size_t shift)  // get module of shift steps based on destiantion size in bits
+    MYINLINE size_t shiftmodule(D dest, size_t shift)  // get module of shift steps based on destiantion size in bits
     { return shift & (bitsizeof(dest) - 1); }
 
     template<class D>
-    inline dd nthbitone(D dest, size_t bit)  // return n-th bit with 1
+    MYINLINE dd nthbitone(D dest, size_t bit)  // return n-th bit with 1
     { return ((dd) 1 << shiftmodule(dest, bit)); }
 
     template<class D, class S>
-    inline void bitset(D &dest, S src, size_t bit)  // set n-th bit to 1
+    MYINLINE void bitset(D &dest, S src, size_t bit)  // set n-th bit to 1
     { dest = (bit >= 0) ? (((dest) & (~nthbitone(dest, bit))) | ((src & 1) << bit)) : dest; }
 
-    inline static db LSB(dd a) { return a & 1; }  // get lower bit
+    MYINLINE static db LSB(dd a) { return a & 1; }  // get lower bit
 
     template<class D>
-    inline db MSB(D a)  // get highest bit
+    MYINLINE db MSB(D a)  // get highest bit
     { return ((a) >> (m2c::bitsizeof(a) - 1)) & 1; }
 
 #if defined(_WIN32) || defined(__INTEL_COMPILER)
@@ -591,39 +731,39 @@ static void setdata(dd* d, dd s)
 
     extern ShadowStack shadow_stack;
 
+/*
+#if M2CDEBUG == -1
+#define PUSH(a) {dd averytemporary=a;stackPointer-=sizeof(a); \
+        memcpy (m2c::raddr_(ss,stackPointer), &averytemporary, sizeof (a));}
 
-#ifdef DOSBOX_CUSTOM
+#define POP(a) {memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);}
+
+#else
+*/
 #define PUSH(a) {m2c::PUSH_(a);}
 
     template<typename S>
     void PUSH_(S a);
 
     template<>
-    inline void PUSH_<dw>(dw a) { fix_segs();CPU_Push16(a); }
+    MYINLINE void PUSH_<dw>(dw a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<dd>(dd a) { fix_segs();CPU_Push32(a); }
+    MYINLINE void PUSH_<dd>(dd a) { fix_segs();CPU_Push32(a); }
 
     template<>
-    inline void PUSH_<short int>(short int a) { fix_segs();CPU_Push16(a); }
+    MYINLINE void PUSH_<short int>(short int a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<int>(int a) { fix_segs();CPU_Push32(a); }
+    MYINLINE void PUSH_<int>(int a) { fix_segs();CPU_Push32(a); }
 
 #define POP(a) {m2c::POP_(a);}
 
-    inline void POP_(dw &a) { fix_segs();a = CPU_Pop16(); }
+    MYINLINE void POP_(dw &a) { fix_segs();a = CPU_Pop16(); }
 
-    inline void POP_(dd &a) { fix_segs();a = CPU_Pop32(); }
+    MYINLINE void POP_(dd &a) { fix_segs();a = CPU_Pop32(); }
 
-#else
-
-#define PUSH(a) {dd averytemporary=a;stackPointer-=sizeof(a); \
-        memcpy (m2c::raddr_(ss,stackPointer), &averytemporary, sizeof (a));}
-
-#define POP(a) {memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);}
-
-#endif
+//#endif
 
 #define PUSHAD m2c::PUSHAD_()
 
@@ -657,49 +797,42 @@ static void setdata(dd* d, dd s)
 #define PUSHA {dw oldsp=sp;PUSH(ax);PUSH(cx);PUSH(dx);PUSH(bx); PUSH(oldsp);PUSH(bp);PUSH(si);PUSH(di);}
 #define POPA {POP(di);POP(si);POP(bp); POP(bx); POP(bx);POP(dx);POP(cx);POP(ax); }
 
-#define GET_DF() m2cflags.bits.getDF()
-#define GET_CF() m2cflags.bits.getCF()
-#define GET_AF() m2cflags.bits.getAF()
-#define GET_OF() m2cflags.bits.getOF()
-#define GET_SF() m2cflags.bits.getSF()
-#define GET_ZF() m2cflags.bits.getZF()
-#define GET_PF() m2cflags.bits.getPF()
-#define GET_IF() m2cflags.bits.getIF()
-#define AFFECT_DF(a) m2cflags.bits.setDF(a)
-#define AFFECT_CF(a) m2cflags.bits.setCF(a)
-#define AFFECT_AF(a) m2cflags.bits.setAF(a)
-#define AFFECT_OF(a) m2cflags.bits.setOF(a)
-#define AFFECT_IF(a) m2cflags.bits.setIF(a)
-#define ISNEGATIVE(f, a) ( (a) & (1 << (m2c::bitsizeof(f)-1)) )
-#define AFFECT_SF(a) m2cflags.bits.setSF(a)
-#define AFFECT_SF_(f, a) {AFFECT_SF(ISNEGATIVE(f,a));}
-#define AFFECT_ZF(a) m2cflags.bits.setZF(a)
-#define AFFECT_ZFifz(a) m2cflags.bits.setZF((a)==0)
-#define AFFECT_PF(a) m2cflags.bits.setPF(a)
 #define STI {CPU_STI();}
 #define CLI {CPU_CLI();}
-
+/*
 #define CMP(a, b) m2c::CMP_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void CMP_(const D &dest_, const S &src_, m2c::eflags &m2cflags) {
-//printf("\n\n%s %s ",typeid(D).name(),typeid(S).name());
+    MYINLINE void CMP_(const D &dest_, const S &src_, m2c::eflags &m2cflags) {
         auto dest = m2c::getdata(dest_);
         auto src = m2c::getdata(src_);
         decltype(dest) result = dest - src;
         AFFECT_CF(result > dest);
-//printf("%x %x - %x %x ~~ %x %x %x\n\n",dest_,dest,src_,src, result ,result > dest,GET_CF());
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         AFFECT_ZFifz(result);
         AFFECT_SF_(result, result);
     }
+*/
+#define CMP(a, b) m2c::CMP_(a, static_cast<std::remove_reference<decltype(a)>::type>(b), m2cflags)
+    template<class D>
+    MYINLINE void CMP_(const D &dest, const D &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"cmp %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf)
+                 : [src] "r" (src),[dest] "r" (dest));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
 
 
 #define OR(a, b) m2c::OR_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void OR_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void OR_(D &dest, const S &src, m2c::eflags &m2cflags) {
         D result = m2c::getdata(dest) | static_cast<D>(m2c::getdata(src));
         m2c::setdata(&dest, result);
         AFFECT_ZFifz(result);
@@ -711,7 +844,7 @@ static void setdata(dd* d, dd s)
 #define XOR(a, b) m2c::XOR_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void XOR_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void XOR_(D &dest, const S &src, m2c::eflags &m2cflags) {
         D result = m2c::getdata(dest) ^ static_cast<D>(m2c::getdata(src));
         m2c::setdata(&dest, result);
         AFFECT_ZFifz(result);
@@ -719,11 +852,11 @@ static void setdata(dd* d, dd s)
         AFFECT_CF(0);
         AFFECT_OF(0);
     }
-
+/*
 #define AND(a, b) m2c::AND_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void AND_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void AND_(D &dest, const S &src, m2c::eflags &m2cflags) {
         D result = m2c::getdata(dest) & static_cast<D>(m2c::getdata(src));
         m2c::setdata(&dest, result);
         AFFECT_ZFifz(result);
@@ -731,11 +864,26 @@ static void setdata(dd* d, dd s)
         AFFECT_CF(0);
         AFFECT_OF(0);
     }
+*/
+#define AND(a, b) m2c::AND_(a, static_cast<std::remove_reference<decltype(a)>::type>(b), m2cflags)
+    template<class D>
+    MYINLINE void AND_(D &dest, const D &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"and %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "r" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
 
 #define NEG(a) m2c::NEG_(a, m2cflags)
 
     template<class D>
-    inline void NEG_(D &a, m2c::eflags &m2cflags) {
+    MYINLINE void NEG_(D &a, m2c::eflags &m2cflags) {
         AFFECT_CF((a) != 0);
         D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
         AFFECT_OF(a == highestbitset);
@@ -747,20 +895,20 @@ static void setdata(dd* d, dd s)
 #define TEST(a, b) m2c::TEST_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void TEST_(D &a, const S &b, m2c::eflags &m2cflags) {
+    MYINLINE void TEST_(D &a, const S &b, m2c::eflags &m2cflags) {
         AFFECT_ZFifz((a) & (b));
         AFFECT_CF(0);
         AFFECT_SF_(a, (a) & (b));
         AFFECT_OF(0);
     }
-
+/*
 #define SHR(a, b) m2c::SHR_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void SHR_(D &a, const S &b, m2c::eflags &m2cflags) {
+    MYINLINE void SHR_(D &a, const S &b, m2c::eflags &m2cflags) {
         if (b) {
             AFFECT_CF((a >> (b - 1)) & 1);
-            static const D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
+            const D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
             D res = a >> b;
             AFFECT_OF((b & 0x1f) == 1 ? (a & highestbitset) != 0 : false);
             AFFECT_ZFifz(res);
@@ -769,11 +917,55 @@ static void setdata(dd* d, dd s)
             a = res;
         }
     }
+*/
+#define SHR(a, b) m2c::SHR_(a, b, m2cflags)
+    template<class D>
+    MYINLINE void SHR_(D &dest, const db &src, m2c::eflags &m2cflags);
 
+    template<>
+    MYINLINE void SHR_<dd>(dd &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shrl %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
+    template<>
+    MYINLINE void SHR_<dw>(dw &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shrw %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
+    template<>
+    MYINLINE void SHR_<db>(db &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shrb %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
+/*
 #define SHL(a, b) m2c::SHL_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void SHL_(D &a, const S &b, m2c::eflags &m2cflags) {
+    MYINLINE void SHL_(D &a, const S &b, m2c::eflags &m2cflags) {
         if (b) {
             AFFECT_CF((a) & (1 << (m2c::bitsizeof(a) - (b))));
             D olda = a;
@@ -784,11 +976,54 @@ static void setdata(dd* d, dd s)
             AFFECT_OF((a ^ olda) & highestbitset);
         }
     }
+*/
+#define SHL(a, b) m2c::SHL_(a, b, m2cflags)
+    template<class D>
+    MYINLINE void SHL_(D &dest, const db &src, m2c::eflags &m2cflags);
+
+    template<>
+    MYINLINE void SHL_<dd>(dd &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shll %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
+    template<>
+    MYINLINE void SHL_<dw>(dw &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shlw %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
+    template<>
+    MYINLINE void SHL_<db>(db &dest, const db &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"shlb %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "c" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
 
 #define ROR(a, b) m2c::ROR_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void ROR_(D &a, S b, m2c::eflags &m2cflags) {
+    MYINLINE void ROR_(D &a, S b, m2c::eflags &m2cflags) {
         if (b) {
             AFFECT_CF(((a) >> (m2c::shiftmodule(a, b) - 1)) & 1);\
         a = ((a) >> (m2c::shiftmodule(a, b)) | a << (m2c::bitsizeof(a) - (m2c::shiftmodule(a, b))));
@@ -800,7 +1035,7 @@ static void setdata(dd* d, dd s)
 #define ROL(a, b) m2c::ROL_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void ROL_(D &a, S b, m2c::eflags &m2cflags) {
+    MYINLINE void ROL_(D &a, S b, m2c::eflags &m2cflags) {
         if (b) {
             a = (((a) << (shiftmodule(a, b))) | (a) >> (bitsizeof(a) - (shiftmodule(a, b))));\
         AFFECT_CF(LSB(a));
@@ -812,7 +1047,7 @@ static void setdata(dd* d, dd s)
 #define RCL(a, b) m2c::RCL_(a, b, m2cflags)
 
     template<class D, class C>
-    inline void RCL_(D &op1, C op2, m2c::eflags &m2cflags) {
+    MYINLINE void RCL_(D &op1, C op2, m2c::eflags &m2cflags) {
         db lf_var2b = op2 % (m2c::bitsizeof(op1) + 1);
         if (!lf_var2b) return;
         D cf = GET_CF() & 1;
@@ -834,7 +1069,10 @@ static void setdata(dd* d, dd s)
 #define RCR(a, b) m2c::RCR_(a, b, m2cflags)
 
     template<class D, class C>
-    inline void RCR_(D &op1, C op2, m2c::eflags &m2cflags) {
+#if M2CDEBUG != -1
+    MYINLINE 
+#endif
+void RCR_(D &op1, C op2, m2c::eflags &m2cflags) {
         db lf_var2b = op2 % (m2c::bitsizeof(op1) + 1);
         if (!lf_var2b) return;
         D cf = GET_CF() & 1;
@@ -852,11 +1090,12 @@ static void setdata(dd* d, dd s)
         AFFECT_OF((lf_resw ^ (lf_resw << 1)) & highestbitset);
     }
 
+
     template<class D>
     void SHLD_(D &Destination, D Source, size_t Count, m2c::eflags &m2cflags);
 
     template<class D>
-    inline void SHRD_(D &Destination, D Source, size_t Count, m2c::eflags &m2cflags) {
+    MYINLINE void SHRD_(D &Destination, D Source, size_t Count, m2c::eflags &m2cflags) {
         if (Count != 0) {
             size_t TCount = Count & (2 * m2c::bitsizeof(Destination) - 1);
 
@@ -944,7 +1183,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define SAR(a, b) m2c::SAR_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void SAR_(D &op1, const S &op2, m2c::eflags &m2cflags) {
+    MYINLINE void SAR_(D &op1, const S &op2, m2c::eflags &m2cflags) {
         if (op2) {
             D lf_var1w = op1;
             db lf_var2b = op2;
@@ -1094,19 +1333,33 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
 #define AAD AAD1(10)
 
-#define ADD(a, b) m2c::ADD_(a, b, m2cflags)
+#define ADD(a, b) m2c::ADD_(a, static_cast<std::remove_reference<decltype(a)>::type>(b), m2cflags)
 
-    template<class D, class S>
-    inline void ADD_(D &dest, const S &src, m2c::eflags &m2cflags) {
+//    template<class D>
+//    MYINLINE void ADD_(D &dest, const D &src, m2c::eflags &m2cflags);
+/* {
         D result = dest + (D) src;
         AFFECT_CF(result < dest);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src ^ highestbitset) & (result ^ src)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
         AFFECT_SF_(dest, dest);
     }
+*/
 
+    template<class D>
+    MYINLINE void ADD_(D &dest, const D &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"add %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "r" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
 
 #define XADD(a, b) {dq averytemporary=(dq)a+(dq)b; \
         AFFECT_CF((averytemporary)>m2c::MASK[sizeof(a)]); \
@@ -1115,26 +1368,42 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
         AFFECT_ZFifz(b); \
         AFFECT_SF_(b,b);}
 
+/*
 #define SUB(a, b) m2c::SUB_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void SUB_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void SUB_(D &dest, const S &src, m2c::eflags &m2cflags) {
         dd result = (dest - src) & m2c::MASK[sizeof(dest)];
         AFFECT_CF(result > dest);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
         AFFECT_SF_(dest, dest);
     }
+*/
+#define SUB(a, b) m2c::SUB_(a, static_cast<std::remove_reference<decltype(a)>::type>(b), m2cflags)
+    template<class D>
+    MYINLINE void SUB_(D &dest, const D &src, m2c::eflags &m2cflags) {
+    bool cf, of, zf, sf;
+    asm volatile(
+"sub %[src],%[dest]"
+                 : "=@ccc" (cf), "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf), [dest] "+r" (dest)
+                 : [src] "r" (src));
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_CF(cf);
+        AFFECT_ZF(zf);
+}
+
 
 #define ADC(a, b) m2c::ADC_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void ADC_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void ADC_(D &dest, const S &src, m2c::eflags &m2cflags) {
         dq result = (dq) dest + (dq) src + (dq) GET_CF();
         AFFECT_CF((result) > m2c::MASK[sizeof(dest)]);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src ^ highestbitset) & (result ^ src)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1144,11 +1413,11 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define SBB(a, b) m2c::SBB_(a, b, m2cflags)
 
     template<class D, class S>
-    inline void SBB_(D &dest, const S &src, m2c::eflags &m2cflags) {
+    MYINLINE void SBB_(D &dest, const S &src, m2c::eflags &m2cflags) {
         bool oldCF = GET_CF();
         dq result = ((dq) dest - (dq) src - (dq) GET_CF()) & m2c::MASK[sizeof(dest)];
         AFFECT_CF(result > dest || (oldCF && (src == m2c::MASK[sizeof(dest)])));
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1157,26 +1426,50 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
 // TODO: should affects OF, SF, ZF, AF, and PF
 #define INC(a) m2c::INC_(a, m2cflags)
-
+/*
     template<class D>
-    inline void INC_(D &a, m2c::eflags &m2cflags) {
+    MYINLINE void INC_(D &a, m2c::eflags &m2cflags) {
         a += 1;
         AFFECT_ZFifz(a);
         AFFECT_SF_(a, a);
         D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
         AFFECT_OF(a == highestbitset);
     }
+*/
+    template<class D>
+    MYINLINE void INC_(D &dest, m2c::eflags &m2cflags) {
+    bool of=0, zf=0, sf=0;
+    asm volatile(
+"inc %[dest]"
+                 : "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf),[dest] "+r" (dest)
+                 : );
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_ZF(zf);
+}
 
 #define DEC(a) m2c::DEC_(a, m2cflags)
-
+/*
     template<class D>
-    inline void DEC_(D &a, m2c::eflags &m2cflags) {
+    MYINLINE void DEC_(D &a, m2c::eflags &m2cflags) {
         a -= 1;
         AFFECT_ZFifz(a);
         AFFECT_SF_(a, a);
         D a7fff = (1 << (m2c::bitsizeof(a) - 1)) - 1;
         AFFECT_OF(a == a7fff);
     }
+ */
+    template<class D>
+    MYINLINE void DEC_(D &dest, m2c::eflags &m2cflags) {
+    bool of=0, zf=0, sf=0;
+    asm volatile(
+"dec %[dest]"
+                 : "=@cco" (of), "=@ccz" (zf), "=@ccs" (sf),[dest] "+r" (dest)
+                 : );
+        AFFECT_SF(sf);
+        AFFECT_OF(of);
+        AFFECT_ZF(zf);
+}
 
 
 // #num_args _ #bytes
@@ -1335,7 +1628,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define MOV(dest, src) {m2c::MOV_(&dest,src);}
 
     template<class D, class S>
-    inline void MOV_(D *dest, const S &src) { m2c::setdata(dest, static_cast<D>(m2c::getdata(src))); }
+    MYINLINE void MOV_(D *dest, const S &src) { m2c::setdata(dest, static_cast<D>(m2c::getdata(src))); }
 //{ *dest = static_cast<D>(src); }
 
 #define LEAVE {MOV(esp, ebp));POP(ebp);}
@@ -1358,7 +1651,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define XCHG(dest, src) m2c::XCHG_(dest,src)
 
     template<class D>
-    inline void XCHG_(D &dest, D &src) {
+    MYINLINE void XCHG_(D &dest, D &src) {
         D t = dest;
         dest = src;
         src = t;
@@ -1393,8 +1686,12 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
 // JMP - Unconditional Jump
 #define JMP(label) GOTOLABEL(label)
-#define GOTOLABEL(a) {_source=__LINE__;goto a;}
 
+#if M2CDEBUG==-1
+#define GOTOLABEL(a) {goto a;}
+#else
+#define GOTOLABEL(a) {_source=__LINE__;goto a;}
+#endif
 
 #define CLD {AFFECT_DF(0);}
 #define STD {AFFECT_DF(1);}
@@ -1417,7 +1714,13 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
 #define CALLF(label, disp) {PUSH(cs);CALL(label, disp);}
 
-#if SINGLEPROC
+#if M2CDEBUG == -1
+
+#define RETN(i) {sp+=2+i;m2cflags.reset();return true;}
+#define RETF(i) {sp+=4+i;m2cflags.reset();return true;}
+#define CALL(label, disp) {m2cflags.reset();label(disp,0);}
+
+#elif defined(SINGLEPROC)
 
 #define RETN(i) {m2c::RETN_(i); __disp=(cs<<16)+eip;goto __dispatch_call;}
     static void RETN_(size_t i)
@@ -1596,14 +1899,14 @@ shadow_stack.decreasedeep();
 
     void run_hw_interrupts();
 
-
+/*
 #if M2CDEBUG == 1
 #define R(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define T(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define X(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define J(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
-
-#elif M2CDEBUG > 1
+*/
+#if M2CDEBUG > 0
 
 // clean format
 //    #define R(a) {log_debug("%s%x:%d:%s eax: %x ebx: %x ecx: %x edx: %x ebp: %x ds: %x esi: %x es: %x edi: %x fs: %x esp: %x\n",_state->_str,cs/*pthread_self()*/,__LINE__,#a, \
@@ -1652,10 +1955,10 @@ shadow_stack.decreasedeep();
 
 #elif M2CDEBUG == -1
 
-#define R(a) {a;}
-#define J(a) {a;}
-#define T(a) {a;}
-#define X(a) {a;}
+#define R(a) {cs=0;eip=0;a;}
+#define J(a) {cs=0;eip=0;a;}
+#define T(a) {cs=0;eip=0;a;}
+#define X(a) {cs=0;eip=0;a;}
 
 #else
 

@@ -8,7 +8,11 @@
 static inline db* raddr_(dw segment,dw offset) {return ((db *)&m+(dw)(offset)+selectors[segment]);}
 #else
  //#define raddr(segment,offset) (((db *)&m2c::m + ((segment)<<4) + (offset) ))
-static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) + offset;}
+static 
+#if M2CDEBUG != -1
+inline 
+#endif
+db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) + offset;}
 #endif
 
  #define offset(segment,name) (static_cast<dw>((db*)(&name)-(db*)(&segment)))
