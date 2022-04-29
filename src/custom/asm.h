@@ -126,7 +126,7 @@ namespace m2c {
     typedef dd _offsets;
 
 // Regs
-    struct _STATE {
+    struct _STATE {  // masm2c
         _STATE() {
             _str = "";
             _indent = 0;
@@ -347,7 +347,7 @@ dd _source;
     }
 
 //    template<>
-    inline db getdata(const db &s) {
+    static inline db getdata(const db &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readb((db *) &s - (db *) &m);
@@ -356,7 +356,7 @@ dd _source;
     }
 
 //    template<>
-    inline dw getdata(const dw &s) {
+    static inline dw getdata(const dw &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readw((db *) &s - (db *) &m);
@@ -365,7 +365,7 @@ dd _source;
     }
 
   //  template<>
-    inline dd getdata(const dd &s) {
+    static inline dd getdata(const dd &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -374,7 +374,7 @@ dd _source;
     }
 
 //    template<>
-    inline db getdata(const char &s) {
+    static inline db getdata(const char &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readb((db *) &s - (db *) &m);
@@ -383,7 +383,7 @@ dd _source;
     }
 
 //    template<>
-    inline dw getdata(const short int &s) {
+    static inline dw getdata(const short int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readw((db *) &s - (db *) &m);
@@ -392,7 +392,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const int &s) {
+    static inline dd getdata(const int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -401,7 +401,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const long &s) {
+    static inline dd getdata(const long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -410,7 +410,7 @@ dd _source;
     }
 
 //    template<>
-    inline dd getdata(const long long &s) {
+    static inline dd getdata(const long long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
             return mem_readd((db *) &s - (db *) &m);
@@ -429,7 +429,7 @@ dd _source;
 */
     }
 
-    static void setdata(db *d, db s) {
+    static inline void setdata(db *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writeb((db *) d - (db *) &m, s);
@@ -437,7 +437,7 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(char *d, db s) {
+    static inline void setdata(char *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writeb((db *) d - (db *) &m, s);
@@ -445,7 +445,7 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(dw *d, dw s) {
+    static inline void setdata(dw *d, dw s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writew((db *) d - (db *) &m, s);
@@ -453,7 +453,7 @@ dd _source;
         else *d = s;
     }
 
-    static void setdata(dd *d, dd s) {
+    static inline void setdata(dd *d, dd s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
             mem_writed((db *) d - (db *) &m, s);
@@ -688,8 +688,7 @@ static void setdata(dd* d, dd s)
         auto src = m2c::getdata(src_);
         decltype(dest) result = dest - src;
         AFFECT_CF(result > dest);
-//printf("%x %x - %x %x ~~ %x %x %x\n\n",dest_,dest,src_,src, result ,result > dest,GET_CF());
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         AFFECT_ZFifz(result);
         AFFECT_SF_(result, result);
@@ -760,7 +759,7 @@ static void setdata(dd* d, dd s)
     inline void SHR_(D &a, const S &b, m2c::eflags &m2cflags) {
         if (b) {
             AFFECT_CF((a >> (b - 1)) & 1);
-            static const D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
+            const D highestbitset = (1 << (m2c::bitsizeof(a) - 1));
             D res = a >> b;
             AFFECT_OF((b & 0x1f) == 1 ? (a & highestbitset) != 0 : false);
             AFFECT_ZFifz(res);
@@ -1100,7 +1099,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     inline void ADD_(D &dest, const S &src, m2c::eflags &m2cflags) {
         D result = dest + (D) src;
         AFFECT_CF(result < dest);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src ^ highestbitset) & (result ^ src)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1121,7 +1120,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     inline void SUB_(D &dest, const S &src, m2c::eflags &m2cflags) {
         dd result = (dest - src) & m2c::MASK[sizeof(dest)];
         AFFECT_CF(result > dest);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1134,7 +1133,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     inline void ADC_(D &dest, const S &src, m2c::eflags &m2cflags) {
         dq result = (dq) dest + (dq) src + (dq) GET_CF();
         AFFECT_CF((result) > m2c::MASK[sizeof(dest)]);
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src ^ highestbitset) & (result ^ src)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1148,7 +1147,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
         bool oldCF = GET_CF();
         dq result = ((dq) dest - (dq) src - (dq) GET_CF()) & m2c::MASK[sizeof(dest)];
         AFFECT_CF(result > dest || (oldCF && (src == m2c::MASK[sizeof(dest)])));
-        static const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
+        const D highestbitset = (1 << (m2c::bitsizeof(dest) - 1));
         AFFECT_OF(((dest ^ src) & (dest ^ result)) & highestbitset);
         dest = result;
         AFFECT_ZFifz(dest);
@@ -1596,14 +1595,14 @@ shadow_stack.decreasedeep();
 
     void run_hw_interrupts();
 
-
+/*
 #if M2CDEBUG == 1
 #define R(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define T(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define X(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
 #define J(a) { m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); {a;} }
-
-#elif M2CDEBUG > 1
+*/
+#if M2CDEBUG > 0
 
 // clean format
 //    #define R(a) {log_debug("%s%x:%d:%s eax: %x ebx: %x ecx: %x edx: %x ebp: %x ds: %x esi: %x es: %x edi: %x fs: %x esp: %x\n",_state->_str,cs/*pthread_self()*/,__LINE__,#a, \
