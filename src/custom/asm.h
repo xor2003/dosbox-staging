@@ -270,18 +270,15 @@ dw _source;
 
 
 #define REGDEF_hl(Z)   \
-static uint32_t e##Z##x; \
 uint16_t& Z##x = *(uint16_t *)& e##Z##x; \
 uint8_t& Z##l = *(uint8_t *)& e##Z##x; \
 uint8_t& Z##h = *(((uint8_t *)& e##Z##x)+1);
 
 #define REGDEF_l(Z) \
-static uint32_t e##Z; \
 uint16_t& Z = *(uint16_t *)& e##Z ; \
 uint8_t&  Z##l = *(uint8_t *)& e##Z ;
 
 #define REGDEF_nol(Z) \
-static uint32_t e##Z; \
 uint16_t& Z = *(uint16_t *)& e##Z ;
 
 #define X86_REGREF \
@@ -297,7 +294,7 @@ uint16_t& Z = *(uint16_t *)& e##Z ;
                       \
     REGDEF_nol(ip);   \
                       \
-dd& stackPointer = esp;\
+dw& stackPointer = sp;\
 m2c::_offsets __disp; \
 dd _source;
 
@@ -768,6 +765,7 @@ static MYINLINE void setdata(dd* d, dd s)
 #define PUSHAD m2c::PUSHAD_()
 
     static void PUSHAD_() {
+/*
         X86_REGREF
         dw oldesp = esp;
         PUSH(eax);
@@ -778,11 +776,13 @@ static MYINLINE void setdata(dd* d, dd s)
         PUSH(ebp);
         PUSH(esi);
         PUSH(edi);
+*/
     }
 
 #define POPAD m2c::POPAD_()
 
     static void POPAD_() {
+/*
         X86_REGREF
         POP(edi);
         POP(esi);
@@ -792,6 +792,7 @@ static MYINLINE void setdata(dd* d, dd s)
         POP(edx);
         POP(ecx);
         POP(eax);
+*/
     }
 
 #define PUSHA {dw oldsp=sp;PUSH(ax);PUSH(cx);PUSH(dx);PUSH(bx); PUSH(oldsp);PUSH(bp);PUSH(si);PUSH(di);}
