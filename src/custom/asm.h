@@ -12,6 +12,9 @@
 
 #include <cstring>
 
+#include <unordered_set>
+#include <unordered_map>
+
 #ifndef NOSDL
 #ifdef __LIBSDL2__
 #include <SDL2/SDL.h>
@@ -118,7 +121,8 @@ namespace m2c {
 
     extern void single_step();
 
-    void stackDump(/*struct _STATE *_state*/);
+    struct _STATE;
+    void stackDump(_STATE *_state=0);
 
     extern struct /*__attribute__((__packed__))*/ Memory m;
 //    extern Memory &m;
@@ -1770,14 +1774,53 @@ enum  _offsets;
 
 #define XLATP(x) {al = *(x + al);}
 
-/*
-#define X86_REGREF \
-dw __disp; \
-dw _source;
-*/
-    void mycopy(db *, db *, size_t, const char *);
 
-    void stackDump(struct _STATE *state);
+// -------------------------
+ struct Byte
+ {
+   enum class SegNames {
+	es = 0,
+	cs,
+	ss,
+	ds,
+	fs,
+	gs,
+   };
+
+   size_t size;
+ };
+
+ struct Data: public Byte
+ {
+ };
+
+ struct Code: public Byte
+ {
+   std::unordered_set<dw> m_segs[5]; // all segs values faced for current instruction
+ };
+
+ class ShadowMemory
+ {
+   std::unordered_map< dd, std::shared_ptr<Byte> > m_mem;
+
+   void collect_segs()
+   {
+     X86_REGREF
+     dd target = (cs<<16)+eip;
+     if (m_mem.find(target) == m_mem.end())
+        m_mem[target]=std::make_shared<Code>();
+     Code& c(*static_cast<Code*>(m_mem.find(target)->second.get()));
+     c.m_segs[(size_t)Byte::SegNames::es].insert(es);
+     c.m_segs[(size_t)Byte::SegNames::ss].insert(ss);
+     c.m_segs[(size_t)Byte::SegNames::ds].insert(ds);
+     c.m_segs[(size_t)Byte::SegNames::fs].insert(fs);
+     c.m_segs[(size_t)Byte::SegNames::gs].insert(gs);
+   }
+
+ };
+// -------------------------
+
+    void mycopy(db *, db *, size_t, const char *);
 
     void hexDump(void *addr, int len);
 

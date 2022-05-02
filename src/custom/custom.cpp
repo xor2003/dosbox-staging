@@ -1,6 +1,5 @@
 #include "dosbox.h"
 
-#ifdef DOSBOX_CUSTOM
 #include "circular_buffer.h"
 
 #include "setup.h"
@@ -12,7 +11,6 @@
 
 #include <stdio.h>
 #include <unistd.h>
-
 
 namespace m2c
 {
@@ -121,6 +119,12 @@ init_get_fname (char *dst, char *src)
 
 namespace m2c{
 static void print_traces ();
+
+  void stackDumpZ()
+  {
+	stackDump(0);
+  }
+
 }
 
 void
@@ -131,7 +135,7 @@ custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
     {
       custom_runs++;
       init_runs++;
-      atexit (m2c::stackDump);
+      atexit (m2c::stackDumpZ);
     }
 }
 
@@ -502,7 +506,7 @@ throw;
       }
   }
 
-  void stackDump()//struct _STATE *_state)
+  void stackDump(_STATE* _state)
   {
     m2c::print_traces();
 #ifndef _WIN32
@@ -1226,6 +1230,7 @@ return m_needtoskipcall;}
         return result;
     }
 
+
 }
 
 
@@ -1254,5 +1259,3 @@ if((file_to_write = fopen("goody.com", "wb")) != 0){
   (*m2c::_ENTRY_POINT_) (0, 0);
 }
 
-
-#endif /* DOSBOX_CUSTOM */
