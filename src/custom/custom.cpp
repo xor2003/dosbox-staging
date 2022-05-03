@@ -1320,20 +1320,34 @@ using json = nlohmann::json;
 
        json j;
        j = *this;
+
+       std::string s=j.dump();
+       FILE *f = fopen("rt_data.json","w");
+       fwrite(s.c_str(),s.size(),1,f);
+       fclose(f);
+
        printf("%s\n",j.dump(3).c_str());
    }
 
     void to_json(nlohmann::json& nlohmann_json_j, const Code& c)
     {
-//        nlohmann_json_j["Type"] = "Ins";
-        nlohmann_json_j["Segs"] = c.m_segs;
-        if (c.m_video)
+        nlohmann_json_j["es"] = c.m_segs[(size_t)Byte::SegNames::es];
+        nlohmann_json_j["cs"] = c.m_segs[(size_t)Byte::SegNames::cs];
+        nlohmann_json_j["ss"] = c.m_segs[(size_t)Byte::SegNames::ss];
+        nlohmann_json_j["ds"] = c.m_segs[(size_t)Byte::SegNames::ds];
+        nlohmann_json_j["ss"] = c.m_segs[(size_t)Byte::SegNames::ss];
+//        if (!c.m_segs[(size_t)Byte::SegNames::fs].empty())
+           nlohmann_json_j["fs"] = c.m_segs[(size_t)Byte::SegNames::fs];
+//        if (!c.m_segs[(size_t)Byte::SegNames::gs].empty())
+           nlohmann_json_j["gs"] = c.m_segs[(size_t)Byte::SegNames::gs];
+
+//        if (c.m_video)
            nlohmann_json_j["Video"] = c.m_video;
-        if (c.m_selfmodified)
+//        if (c.m_selfmodified)
            nlohmann_json_j["Self"] = c.m_selfmodified;
-        if (c.size)
+//        if (c.size)
            nlohmann_json_j["Size"] = c.size;
-        if (c.m_modsize)
+//        if (c.m_modsize)
            nlohmann_json_j["Modsize"] = c.m_modsize;
 //        nlohmann_json_j["Accdat"] = c.accessingdata;
 
@@ -1341,9 +1355,8 @@ using json = nlohmann::json;
 
     void to_json(nlohmann::json& nlohmann_json_j, const Data& nlohmann_json_t)
     {
-//        nlohmann_json_j["Type"] = "Dat";
         nlohmann_json_j["Sizes"] = nlohmann_json_t.sizes;
-	if (nlohmann_json_t.m_array)
+//	if (nlohmann_json_t.m_array)
             nlohmann_json_j["Array"] = nlohmann_json_t.m_array;
     }
 
