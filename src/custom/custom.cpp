@@ -447,6 +447,13 @@ throw;
     printf ("  %s\n", buff);
   }
 
+  size_t countEqual(const db *addr1, const db *addr2, int len)
+  {
+    size_t bytes=0;
+    while (len && *(addr1++) == *(addr2++)) {++bytes;}
+    return bytes;
+  }
+
   void cmpHexDump (void *addr1, void *addr2, int len)
   {
     int i, j;
@@ -466,7 +473,6 @@ throw;
         printf ("  NEGATIVE LENGTH: %i\n", len);
         return;
       }
-
     // Process every byte in the data.
     for (i = 0; i < len; i++)
       {
@@ -729,6 +735,7 @@ char jump_name[100]="";
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
+        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
         compare_jump = false;
       }
     else
@@ -864,6 +871,7 @@ stackDump();
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
+        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
         return false;
       }
     else
@@ -981,6 +989,7 @@ stackDump();
         //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
         ::print_instruction_direct (seg, ip1);
         cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
+        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
         return false;
       }
     else
@@ -1240,35 +1249,102 @@ using json = nlohmann::json;
    void ShadowMemory::collect_segs()
    {
      X86_REGREF
-     dd target = (cs<<16)+eip;
-     if (m_mem.find(target) == m_mem.end())
-        m_mem[target]=std::make_shared<Code>();
-     Code& c(*static_cast<Code*>(m_mem.find(target)->second.get()));
+     dd target = (cs<<4)+eip;
+     if (target >= 0x1920 && target <= 0xa0000)
+    {
+     if (m_code.find(target) == m_code.end())
+        m_code[target]=std::make_shared<Code>();
+     Code& c(*static_cast<Code*>(m_code.find(target)->second.get()));
+     c.m_segs[(size_t)Byte::SegNames::cs].insert(cs);
      c.m_segs[(size_t)Byte::SegNames::es].insert(es);
      c.m_segs[(size_t)Byte::SegNames::ss].insert(ss);
      c.m_segs[(size_t)Byte::SegNames::ds].insert(ds);
      if (fs) c.m_segs[(size_t)Byte::SegNames::fs].insert(fs);
      if (gs) c.m_segs[(size_t)Byte::SegNames::gs].insert(gs);
+    }
    }
 
-   void ShadowMemory::collect_vga()
+   void ShadowMemory::collect_selfmod(dw seg, dd ip, size_t modsize, size_t size)
    {
-       X86_REGREF
-       dd target = (cs<<16)+eip;
-       if (m_mem.find(target) == m_mem.end())
-         m_mem[target]=std::make_shared<Data>();
+     dd target = (seg<<4)+ip;
+     if (target >= 0x1920 && target <= 0xa0000)
+    {
+     if (m_code.find(target) == m_code.end())
+        m_code[target]=std::make_shared<Code>();
+     Code& c(*static_cast<Code*>(m_code.find(target)->second.get()));
+     c.m_selfmodified=true;
+     c.size = size;
+     c.m_modsize = modsize;
+    }
+   }
+
+   void ShadowMemory::collect_data(const db *b, size_t size)
+   {
+      X86_REGREF
+
+     dd target = b - (db*)&m2c::m;
+     if (target >= 0x1920 && target <= 0xa0000)
+    {
+     if (m_data.find(target) == m_data.end())
+        m_data[target]=std::make_shared<Data>();
+     Data& d(*static_cast<Data*>(m_data.find(target)->second.get()));
+     d.sizes.insert(size);
+    }
+
+      dd csip = (cs<<4)+eip;
+     if (csip >= 0x1920 && csip <= 0xa0000)
+    {
+      if (m_code.find(csip) == m_code.end())
+         m_code[csip]=std::make_shared<Code>();
+     Code& c(*static_cast<Code*>(m_code.find(csip)->second.get()));
+     c.m_video = isaddrbelongtovga(b);
+
+     c.accessingdata.insert(target);
+    }
    }
 
    void ShadowMemory::dump()
    {
+        for(auto& [key, value]: m_code)
+         {
+              const Byte* b = value.get();
+              const Code* c = static_cast<const Code*>(b);
+              if (c->accessingdata.size()>1)
+                  for (auto& i: c->accessingdata)
+                      try {
+                      m_data.at(i)->m_array = true;
+                      }
+                      catch(...)
+                      {}
+         }
+
        json j;
        j = *this;
        printf("%s\n",j.dump(3).c_str());
    }
 
-    void to_json(nlohmann::json& nlohmann_json_j, const Code& nlohmann_json_t)
+    void to_json(nlohmann::json& nlohmann_json_j, const Code& c)
     {
-        nlohmann_json_j["Ins"] = nlohmann_json_t.m_segs;
+//        nlohmann_json_j["Type"] = "Ins";
+        nlohmann_json_j["Segs"] = c.m_segs;
+        if (c.m_video)
+           nlohmann_json_j["Video"] = c.m_video;
+        if (c.m_selfmodified)
+           nlohmann_json_j["Self"] = c.m_selfmodified;
+        if (c.size)
+           nlohmann_json_j["Size"] = c.size;
+        if (c.m_modsize)
+           nlohmann_json_j["Modsize"] = c.m_modsize;
+//        nlohmann_json_j["Accdat"] = c.accessingdata;
+
+    }
+
+    void to_json(nlohmann::json& nlohmann_json_j, const Data& nlohmann_json_t)
+    {
+//        nlohmann_json_j["Type"] = "Dat";
+        nlohmann_json_j["Sizes"] = nlohmann_json_t.sizes;
+	if (nlohmann_json_t.m_array)
+            nlohmann_json_j["Array"] = nlohmann_json_t.m_array;
     }
 
 template< typename T >
@@ -1276,15 +1352,25 @@ std::string int_to_hex( T i )
 {
   std::stringstream stream;
   stream << "0x" 
-         << std::setfill ('0') << std::setw(sizeof(T)*2) 
+//         << std::setfill ('0') << std::setw(sizeof(T)*2) 
          << std::hex << i;
   return stream.str();
 }
 
    void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t)
     {
-        for(auto& [key, value]: nlohmann_json_t.m_mem)
-              nlohmann_json_j[int_to_hex(key)] = *static_cast<const Code*>(value.get());
+        for(auto& [key, value]: nlohmann_json_t.m_code)
+         {
+              const Byte* b = value.get();
+              const Code* c = static_cast<const Code*>(b);
+                 nlohmann_json_j["Code"][int_to_hex(key)] = *c;
+         }
+        for(auto& [key, value]: nlohmann_json_t.m_data)
+         {
+              const Byte* b = value.get();
+              const Data* d = static_cast<const Data*>(b);
+                 nlohmann_json_j["Data"][int_to_hex(key)] = *d;
+         }
     }
 
 }

@@ -14,7 +14,7 @@
 
 #include "json.hpp"
 #include <unordered_set>
-#include <map>
+#include <unordered_map>
 
 #ifndef NOSDL
 #ifdef __LIBSDL2__
@@ -143,31 +143,43 @@ namespace m2c {
 	gs,
    };
 //   virtual void to_json(nlohmann::json& nlohmann_json_j, const Byte& nlohmann_json_t)=0;
-//   virtual ~Byte();
+   virtual ~Byte(){};
 
-   size_t size;
  };
 
  struct Data: public Byte
  {
-//   void to_json(nlohmann::json& nlohmann_json_j, const Byte& nlohmann_json_t) override {}
-//   virtual ~Data(){}
+   std::unordered_set<size_t> sizes;
+   bool m_array = false;
+//   std::unordered_set<dd> referedcsip;
+
+   friend void to_json(nlohmann::json& nlohmann_json_j, const Data& nlohmann_json_t);
+   virtual ~Data(){}
  };
 
  struct Code: public Byte
  {
    std::array<std::unordered_set<dw>, 6> m_segs; // all segs values faced for current instruction
+   bool m_video = false;
+   std::unordered_set<dd> accessingdata;
+
+   bool m_selfmodified = false;
+   size_t m_modsize = 0;
+   size_t size = 0;
+  
    friend void to_json(nlohmann::json& nlohmann_json_j, const Code& nlohmann_json_t);
    virtual ~Code(){}
  };
 
  class ShadowMemory
  {
-   std::map< dd, std::shared_ptr<Byte> > m_mem;
+   std::unordered_map< dd, std::shared_ptr<Data> > m_data;
+   std::unordered_map< dd, std::shared_ptr<Code> > m_code;
 
    public:
    void collect_segs();
-   void collect_vga();
+   void collect_data(const db* b, size_t s);
+   void collect_selfmod(dw seg, dd ip, size_t modsize, size_t size);
    void dump();
    friend void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t);
    
@@ -406,7 +418,7 @@ dd _source;
     static inline db getdata(const db &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readb((db *) &s - (db *) &m);
         }
         else return s;
@@ -416,7 +428,7 @@ dd _source;
     static inline dw getdata(const dw &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readw((db *) &s - (db *) &m);
         }
         else return s;
@@ -426,7 +438,7 @@ dd _source;
     static inline dd getdata(const dd &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -436,7 +448,7 @@ dd _source;
     static inline db getdata(const char &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readb((db *) &s - (db *) &m);
         }
         else return s;
@@ -446,7 +458,7 @@ dd _source;
     static inline dw getdata(const short int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readw((db *) &s - (db *) &m);
         }
         else return s;
@@ -456,7 +468,7 @@ dd _source;
     static inline dd getdata(const int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, sizeof(s));
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -466,7 +478,7 @@ dd _source;
     static inline dd getdata(const long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, 4);
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -476,7 +488,7 @@ dd _source;
     static inline dd getdata(const long long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)&s, 4);
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -496,7 +508,7 @@ dd _source;
     static inline void setdata(db *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)d, sizeof(*d));
             mem_writeb((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -505,7 +517,7 @@ dd _source;
     static inline void setdata(char *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)d, sizeof(*d));
             mem_writeb((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -514,7 +526,7 @@ dd _source;
     static inline void setdata(dw *d, dw s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)d, sizeof(*d));
             mem_writew((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -523,7 +535,7 @@ dd _source;
     static inline void setdata(dd *d, dd s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
-            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
+            if (collect_rt_info) m2c::shadow_memory.collect_data((db*)d, sizeof(*d));
             mem_writed((db *) d - (db *) &m, s);
         }
         else *d = s;
