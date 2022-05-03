@@ -1,5 +1,7 @@
 #include "dosbox.h"
 
+#include "json.hpp"
+
 #include "circular_buffer.h"
 
 #include "setup.h"
@@ -18,9 +20,10 @@ namespace m2c
   extern void load_drivers();
 }
 
-bool trace_instructions = m2c::debug >= 1;
-bool compare_instructions = m2c::debug >= 2;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool trace_instructions_to_stdout = m2c::debug >= 1;
+bool trace_instructions = false; //m2c::debug >= 1;
+bool compare_instructions = false; //m2c::debug >= 2;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
+bool collect_rt_info = true;
 
 static const size_t
   COMPARE_SIZE = 0xf0000;
@@ -55,6 +58,7 @@ extern void print_backtrace(uintptr_t pc);
 namespace m2c
 {
   extern void Initializer ();
+  ShadowMemory shadow_memory;
 }
 
 #if _WIN32
@@ -122,6 +126,7 @@ static void print_traces ();
 
   void stackDumpZ()
   {
+      m2c::shadow_memory.dump();
 	stackDump(0);
   }
 
@@ -303,6 +308,7 @@ namespace m2c
 
   void run_hw_interrupts ()
   {
+    if (collect_rt_info) shadow_memory.collect_segs();
 //    X86_REGREF
 //    log_debug ("CPU_Cycles %d\n", CPU_Cycles);
     if (CPU_Cycles > 0)
@@ -1230,6 +1236,56 @@ return m_needtoskipcall;}
         return result;
     }
 
+using json = nlohmann::json;
+   void ShadowMemory::collect_segs()
+   {
+     X86_REGREF
+     dd target = (cs<<16)+eip;
+     if (m_mem.find(target) == m_mem.end())
+        m_mem[target]=std::make_shared<Code>();
+     Code& c(*static_cast<Code*>(m_mem.find(target)->second.get()));
+     c.m_segs[(size_t)Byte::SegNames::es].insert(es);
+     c.m_segs[(size_t)Byte::SegNames::ss].insert(ss);
+     c.m_segs[(size_t)Byte::SegNames::ds].insert(ds);
+     if (fs) c.m_segs[(size_t)Byte::SegNames::fs].insert(fs);
+     if (gs) c.m_segs[(size_t)Byte::SegNames::gs].insert(gs);
+   }
+
+   void ShadowMemory::collect_vga()
+   {
+       X86_REGREF
+       dd target = (cs<<16)+eip;
+       if (m_mem.find(target) == m_mem.end())
+         m_mem[target]=std::make_shared<Data>();
+   }
+
+   void ShadowMemory::dump()
+   {
+       json j;
+       j = *this;
+       printf("%s\n",j.dump(3).c_str());
+   }
+
+    void to_json(nlohmann::json& nlohmann_json_j, const Code& nlohmann_json_t)
+    {
+        nlohmann_json_j["Ins"] = nlohmann_json_t.m_segs;
+    }
+
+template< typename T >
+std::string int_to_hex( T i )
+{
+  std::stringstream stream;
+  stream << "0x" 
+         << std::setfill ('0') << std::setw(sizeof(T)*2) 
+         << std::hex << i;
+  return stream.str();
+}
+
+   void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t)
+    {
+        for(auto& [key, value]: nlohmann_json_t.m_mem)
+              nlohmann_json_j[int_to_hex(key)] = *static_cast<const Code*>(value.get());
+    }
 
 }
 

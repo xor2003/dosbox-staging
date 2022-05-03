@@ -12,8 +12,9 @@
 
 #include <cstring>
 
+#include "json.hpp"
 #include <unordered_set>
-#include <unordered_map>
+#include <map>
 
 #ifndef NOSDL
 #ifdef __LIBSDL2__
@@ -40,6 +41,7 @@ extern int ticksRemain;
 extern volatile bool from_callf;
 extern volatile bool from_interpreter;
 extern bool trace_instructions;
+extern bool collect_rt_info;
 
 void increaseticks();
 
@@ -128,6 +130,52 @@ namespace m2c {
 //    extern Memory &m;
 
     typedef dd _offsets;
+
+// -------------------------
+ struct Byte
+ {
+   enum class SegNames {
+	es = 0,
+	cs,
+	ss,
+	ds,
+	fs,
+	gs,
+   };
+//   virtual void to_json(nlohmann::json& nlohmann_json_j, const Byte& nlohmann_json_t)=0;
+//   virtual ~Byte();
+
+   size_t size;
+ };
+
+ struct Data: public Byte
+ {
+//   void to_json(nlohmann::json& nlohmann_json_j, const Byte& nlohmann_json_t) override {}
+//   virtual ~Data(){}
+ };
+
+ struct Code: public Byte
+ {
+   std::array<std::unordered_set<dw>, 6> m_segs; // all segs values faced for current instruction
+   friend void to_json(nlohmann::json& nlohmann_json_j, const Code& nlohmann_json_t);
+   virtual ~Code(){}
+ };
+
+ class ShadowMemory
+ {
+   std::map< dd, std::shared_ptr<Byte> > m_mem;
+
+   public:
+   void collect_segs();
+   void collect_vga();
+   void dump();
+   friend void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t);
+   
+
+ };
+
+  extern ShadowMemory shadow_memory;
+// -------------------------
 
 // Regs
     struct _STATE {  // masm2c
@@ -332,6 +380,10 @@ dd _source;
                                                                 (const db *const) a);
     }
 
+    static bool isaddrbelongtovga(const void * a) {
+        return ((const db *const) &m + 0xa0000 <= (const db *const) a) && ((const db *const) &m + 0xc0000  >
+                                                                (const db *const) a);
+    }
     //template<class S>
     //S getdata(const S &s);
 
@@ -354,6 +406,7 @@ dd _source;
     static inline db getdata(const db &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readb((db *) &s - (db *) &m);
         }
         else return s;
@@ -363,6 +416,7 @@ dd _source;
     static inline dw getdata(const dw &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readw((db *) &s - (db *) &m);
         }
         else return s;
@@ -372,6 +426,7 @@ dd _source;
     static inline dd getdata(const dd &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -381,6 +436,7 @@ dd _source;
     static inline db getdata(const char &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readb((db *) &s - (db *) &m);
         }
         else return s;
@@ -390,6 +446,7 @@ dd _source;
     static inline dw getdata(const short int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readw((db *) &s - (db *) &m);
         }
         else return s;
@@ -399,6 +456,7 @@ dd _source;
     static inline dd getdata(const int &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -408,6 +466,7 @@ dd _source;
     static inline dd getdata(const long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -417,6 +476,7 @@ dd _source;
     static inline dd getdata(const long long &s) {
         if (m2c::isaddrbelongtom(&s)) {
             check_type(s);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             return mem_readd((db *) &s - (db *) &m);
         }
         else return s;
@@ -436,6 +496,7 @@ dd _source;
     static inline void setdata(db *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             mem_writeb((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -444,6 +505,7 @@ dd _source;
     static inline void setdata(char *d, db s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             mem_writeb((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -452,6 +514,7 @@ dd _source;
     static inline void setdata(dw *d, dw s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             mem_writew((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -460,6 +523,7 @@ dd _source;
     static inline void setdata(dd *d, dd s) {
         if (m2c::isaddrbelongtom(d)) {
             set_type(*d);
+            if (collect_rt_info && m2c::isaddrbelongtovga(&s)) m2c::shadow_memory.collect_vga();
             mem_writed((db *) d - (db *) &m, s);
         }
         else *d = s;
@@ -1775,50 +1839,6 @@ enum  _offsets;
 #define XLATP(x) {al = *(x + al);}
 
 
-// -------------------------
- struct Byte
- {
-   enum class SegNames {
-	es = 0,
-	cs,
-	ss,
-	ds,
-	fs,
-	gs,
-   };
-
-   size_t size;
- };
-
- struct Data: public Byte
- {
- };
-
- struct Code: public Byte
- {
-   std::unordered_set<dw> m_segs[5]; // all segs values faced for current instruction
- };
-
- class ShadowMemory
- {
-   std::unordered_map< dd, std::shared_ptr<Byte> > m_mem;
-
-   void collect_segs()
-   {
-     X86_REGREF
-     dd target = (cs<<16)+eip;
-     if (m_mem.find(target) == m_mem.end())
-        m_mem[target]=std::make_shared<Code>();
-     Code& c(*static_cast<Code*>(m_mem.find(target)->second.get()));
-     c.m_segs[(size_t)Byte::SegNames::es].insert(es);
-     c.m_segs[(size_t)Byte::SegNames::ss].insert(ss);
-     c.m_segs[(size_t)Byte::SegNames::ds].insert(ds);
-     c.m_segs[(size_t)Byte::SegNames::fs].insert(fs);
-     c.m_segs[(size_t)Byte::SegNames::gs].insert(gs);
-   }
-
- };
-// -------------------------
 
     void mycopy(db *, db *, size_t, const char *);
 
