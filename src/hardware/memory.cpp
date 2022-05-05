@@ -27,6 +27,8 @@
 #include "regs.h"
 #include "support.h"
 
+#include "custom.h"
+
 #define PAGES_IN_BLOCK	((1024*1024)/MEM_PAGE_SIZE)
 #define SAFE_MEMORY	32
 #define MAX_MEMORY	64
@@ -510,26 +512,32 @@ bool mem_unalignedwrited_checked(PhysPt address, Bit32u val) {
 }
 
 Bit8u mem_readb(PhysPt address) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
 	return mem_readb_inline(address);
 }
 
 Bit16u mem_readw(PhysPt address) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
 	return mem_readw_inline(address);
 }
 
 Bit32u mem_readd(PhysPt address) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
 	return mem_readd_inline(address);
 }
 
 void mem_writeb(PhysPt address,Bit8u val) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
 	mem_writeb_inline(address,val);
 }
 
 void mem_writew(PhysPt address,Bit16u val) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
 	mem_writew_inline(address,val);
 }
 
 void mem_writed(PhysPt address,Bit32u val) {
+        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
 	mem_writed_inline(address,val);
 }
 

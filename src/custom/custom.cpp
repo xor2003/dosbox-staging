@@ -1249,9 +1249,9 @@ using json = nlohmann::json;
    void ShadowMemory::collect_segs()
    {
      X86_REGREF
-     dd target = (cs<<4)+eip;
-     if (target >= 0x1920 && target <= 0xa0000)
+     if (cs >= 0x192 && cs < 0xa000)
     {
+     dd target = (cs<<4)+eip;
      if (m_code.find(target) == m_code.end())
         m_code[target]=std::make_shared<Code>();
      Code& c(*static_cast<Code*>(m_code.find(target)->second.get()));
@@ -1266,9 +1266,9 @@ using json = nlohmann::json;
 
    void ShadowMemory::collect_selfmod(dw seg, dd ip, size_t modsize, size_t size)
    {
-     dd target = (seg<<4)+ip;
-     if (target >= 0x1920 && target <= 0xa0000)
+     if (seg >= 0x192 && seg < 0xa000)
     {
+     dd target = (seg<<4)+ip;
      if (m_code.find(target) == m_code.end())
         m_code[target]=std::make_shared<Code>();
      Code& c(*static_cast<Code*>(m_code.find(target)->second.get()));
@@ -1278,12 +1278,12 @@ using json = nlohmann::json;
     }
    }
 
-   void ShadowMemory::collect_data(const db *b, size_t size)
+   void ShadowMemory::collect_data(dd b, size_t size)
    {
       X86_REGREF
 
-     dd target = b - (db*)&m2c::m;
-     if (target >= 0x1920 && target <= 0xa0000)
+     dd target = b;// - (db*)&m2c::m;
+     if (target >= 0x1920 && target < 0xa0000)
     {
      if (m_data.find(target) == m_data.end())
         m_data[target]=std::make_shared<Data>();
@@ -1291,9 +1291,9 @@ using json = nlohmann::json;
      d.sizes.insert(size);
     }
 
-      dd csip = (cs<<4)+eip;
-     if (csip >= 0x1920 && csip <= 0xa0000)
+     if (cs >= 0x192 && cs < 0xa000)
     {
+      dd csip = (cs<<4)+eip;
       if (m_code.find(csip) == m_code.end())
          m_code[csip]=std::make_shared<Code>();
      Code& c(*static_cast<Code*>(m_code.find(csip)->second.get()));

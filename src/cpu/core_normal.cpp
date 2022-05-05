@@ -180,6 +180,7 @@ if (SegBase(cs)!=0xf0000 && trace_instructions)
 //printf("i%x:%x %s\n",SegBase(cs)>>4,cpu_regs.ip.dword[0], dline);
 }
 //    compare_jump = false;
+                if (collect_rt_info) m2c::shadow_memory.collect_segs();
 
 		core.opcode_index=cpu.code.big*0x200;
 		core.prefixes=cpu.code.big;
