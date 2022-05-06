@@ -1185,9 +1185,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     __disp=__i;
     if ((__disp >> 16) == 0xf000)
 	{m2c::log_debug("Calling BIOS %x\n",__disp);
-cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();
-if (from_callf) m2c::interpret_unknown_callf(cs,eip,1);
-m2c::log_debug("doing return1\n");return true;}
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+m2c::log_debug("doing return1\n");
+m2c::shadow_stack.noneedreturn();return true;}
     switch (__i) {
         case m2c::kmainproc: 	mainproc(0, _state); break;
         case m2c::kstart: 	_group1(__disp, _state); break;
@@ -5698,7 +5699,9 @@ m2c::log_debug("doing return1\n");return true;}
         case m2c::kloc_27dda: 	_group3(__disp, _state); break;
         default: m2c::log_error("cs=%x ip=%x Don't know how to call to 0x%x. See " __FILE__ " line %d\n", cs,ip,__disp, __LINE__);
 if (_state==(m2c::_STATE*)3) return false;
-m2c::interpret_unknown_callf(__disp>>16,__disp&0xffff,2);m2c::log_debug("doing return2\n");return true;
+m2c::interpret_unknown_callf(__disp>>16,__disp&0xffff,2);
+m2c::shadow_stack.getneedtoskipcallndclean(); // Put inside interpret_unknown_callf??
+m2c::log_debug("doing return2\n");return true;
 //m2c::stackDump(_state); abort();
      };
      return true;
