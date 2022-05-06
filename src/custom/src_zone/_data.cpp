@@ -1,10 +1,6 @@
 #include "_data.h"
 namespace m2c{
-static struct Memory mm;
-struct Memory& m = mm;
-
-static struct Memory t;
-struct Memory& types = t;
+struct Memory m;
 
 db(& stack)[STACK_SIZE]=m.stack;
 db(& heap)[HEAP_SIZE]=m.heap;

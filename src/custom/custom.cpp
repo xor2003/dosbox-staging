@@ -21,9 +21,9 @@ namespace m2c
 }
 
 bool trace_instructions = false; //m2c::debug >= 1;
-bool compare_instructions = false; //m2c::debug >= 2;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool compare_instructions = m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
-bool collect_rt_info = true;
+bool collect_rt_info = false;
 
 static const size_t
   COMPARE_SIZE = 0xf0000;
@@ -126,6 +126,7 @@ static void print_traces ();
 
   void stackDumpZ()
   {
+      printf("Executing at exit\n");
       m2c::shadow_memory.dump();
 	stackDump(0);
   }
@@ -135,12 +136,16 @@ static void print_traces ();
 void
 custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
 {
+  static bool registered=false;
+  if (!registered) {
+    atexit (m2c::stackDumpZ);
+    registered = true;
+}
   /* run all detectors */
   if (masm2c_init (name, relocate, init_cs, init_ip))
     {
       custom_runs++;
       init_runs++;
-      atexit (m2c::stackDumpZ);
     }
 }
 
@@ -159,6 +164,7 @@ custom_exit_prog (Bit8u exitcode)
 
       init_runs--;
     }
+      m2c::shadow_memory.dump();
 }
 
 int

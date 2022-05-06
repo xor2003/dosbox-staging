@@ -10,129 +10,129 @@
 #include <curses.h>
 
 
-                 void loc_1d70(m2c::_offsets, struct m2c::_STATE* _state){mainproc(m2c::kloc_1d70, _state);}
+                 bool loc_1d70(m2c::_offsets, struct m2c::_STATE* _state){return mainproc(m2c::kloc_1d70, _state);}
                 namespace m2c{ m2cf* _ENTRY_POINT_ = &loc_1d70;}
 
 
- void mainproc(m2c::_offsets o, struct m2c::_STATE* _state){_group1(o, _state);}
+ bool mainproc(m2c::_offsets o, struct m2c::_STATE* _state){return _group1(o, _state);}
 
- void sub_2018(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2018, _state);}
+ bool sub_2018(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2018, _state);}
 
- void sub_201e(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_201e, _state);}
+ bool sub_201e(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_201e, _state);}
 
- void sub_2022(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2022, _state);}
+ bool sub_2022(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2022, _state);}
 
- void sub_202a(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_202a, _state);}
+ bool sub_202a(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_202a, _state);}
 
- void sub_202f(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_202f, _state);}
+ bool sub_202f(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_202f, _state);}
 
- void sub_2034(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2034, _state);}
+ bool sub_2034(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2034, _state);}
 
- void sub_2045(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2045, _state);}
+ bool sub_2045(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2045, _state);}
 
- void sub_204d(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_204d, _state);}
+ bool sub_204d(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_204d, _state);}
 
- void sub_2055(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2055, _state);}
+ bool sub_2055(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2055, _state);}
 
- void sub_205d(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_205d, _state);}
+ bool sub_205d(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_205d, _state);}
 
- void sub_2065(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_2065, _state);}
+ bool sub_2065(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_2065, _state);}
 
- void sub_206d(m2c::_offsets, struct m2c::_STATE* _state){_group2(m2c::ksub_206d, _state);}
+ bool sub_206d(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_206d, _state);}
 
- void sub_20af(m2c::_offsets, struct m2c::_STATE* _state){_group3(m2c::ksub_20af, _state);}
+ bool sub_20af(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_20af, _state);}
 
- void sub_20d2(m2c::_offsets, struct m2c::_STATE* _state){_group4(m2c::ksub_20d2, _state);}
+ bool sub_20d2(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_20d2, _state);}
 
- void sub_2101(m2c::_offsets, struct m2c::_STATE* _state){_group4(m2c::ksub_2101, _state);}
+ bool sub_2101(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_2101, _state);}
 
- void sub_212f(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_212f, _state);}
+ bool sub_212f(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_212f, _state);}
 
- void sub_21d0(m2c::_offsets, struct m2c::_STATE* _state){_group5(m2c::ksub_21d0, _state);}
+ bool sub_21d0(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::ksub_21d0, _state);}
 
- void sub_21d6(m2c::_offsets, struct m2c::_STATE* _state){_group5(m2c::ksub_21d6, _state);}
+ bool sub_21d6(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::ksub_21d6, _state);}
 
- void sub_2687(m2c::_offsets, struct m2c::_STATE* _state){_group6(m2c::ksub_2687, _state);}
+ bool sub_2687(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::ksub_2687, _state);}
 
- void sub_26f8(m2c::_offsets, struct m2c::_STATE* _state){_group6(m2c::ksub_26f8, _state);}
+ bool sub_26f8(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::ksub_26f8, _state);}
 
- void sub_270b(m2c::_offsets, struct m2c::_STATE* _state){_group7(m2c::ksub_270b, _state);}
+ bool sub_270b(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_270b, _state);}
 
- void sub_2735(m2c::_offsets, struct m2c::_STATE* _state){_group7(m2c::ksub_2735, _state);}
+ bool sub_2735(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_2735, _state);}
 
- void sub_2bf7(m2c::_offsets, struct m2c::_STATE* _state){_group8(m2c::ksub_2bf7, _state);}
+ bool sub_2bf7(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_2bf7, _state);}
 
- void sub_2bfa(m2c::_offsets, struct m2c::_STATE* _state){_group8(m2c::ksub_2bfa, _state);}
+ bool sub_2bfa(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_2bfa, _state);}
 
- void sub_2c1a(m2c::_offsets, struct m2c::_STATE* _state){_group9(m2c::ksub_2c1a, _state);}
+ bool sub_2c1a(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_2c1a, _state);}
 
- void sub_2c1f(m2c::_offsets, struct m2c::_STATE* _state){_group9(m2c::ksub_2c1f, _state);}
+ bool sub_2c1f(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_2c1f, _state);}
 
- void sub_2c24(m2c::_offsets, struct m2c::_STATE* _state){_group9(m2c::ksub_2c24, _state);}
+ bool sub_2c24(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_2c24, _state);}
 
- void sub_2c29(m2c::_offsets, struct m2c::_STATE* _state){_group9(m2c::ksub_2c29, _state);}
+ bool sub_2c29(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_2c29, _state);}
 
- void sub_2c42(m2c::_offsets, struct m2c::_STATE* _state){_group10(m2c::ksub_2c42, _state);}
+ bool sub_2c42(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::ksub_2c42, _state);}
 
- void sub_2c45(m2c::_offsets, struct m2c::_STATE* _state){_group10(m2c::ksub_2c45, _state);}
+ bool sub_2c45(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::ksub_2c45, _state);}
 
- void sub_2fff(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_2fff, _state);}
+ bool sub_2fff(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_2fff, _state);}
 
- void sub_3585(m2c::_offsets, struct m2c::_STATE* _state){_group11(m2c::ksub_3585, _state);}
+ bool sub_3585(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_3585, _state);}
 
- void sub_3594(m2c::_offsets, struct m2c::_STATE* _state){_group11(m2c::ksub_3594, _state);}
+ bool sub_3594(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_3594, _state);}
 
- void sub_363d(m2c::_offsets, struct m2c::_STATE* _state){_group12(m2c::ksub_363d, _state);}
+ bool sub_363d(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::ksub_363d, _state);}
 
- void sub_48a0(m2c::_offsets, struct m2c::_STATE* _state){_group13(m2c::ksub_48a0, _state);}
+ bool sub_48a0(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_48a0, _state);}
 
- void sub_4902(m2c::_offsets, struct m2c::_STATE* _state){_group13(m2c::ksub_4902, _state);}
+ bool sub_4902(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_4902, _state);}
 
- void sub_4f20(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_4f20, _state);}
+ bool sub_4f20(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_4f20, _state);}
 
- void sub_4f51(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_4f51, _state);}
+ bool sub_4f51(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_4f51, _state);}
 
- void sub_517d(m2c::_offsets, struct m2c::_STATE* _state){_group14(m2c::ksub_517d, _state);}
+ bool sub_517d(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::ksub_517d, _state);}
 
- void sub_519f(m2c::_offsets, struct m2c::_STATE* _state){_group14(m2c::ksub_519f, _state);}
+ bool sub_519f(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::ksub_519f, _state);}
 
- void sub_51a5(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_51a5, _state);}
+ bool sub_51a5(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_51a5, _state);}
 
- void sub_5289(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_5289, _state);}
+ bool sub_5289(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_5289, _state);}
 
- void sub_5351(m2c::_offsets, struct m2c::_STATE* _state){_group12(m2c::ksub_5351, _state);}
+ bool sub_5351(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::ksub_5351, _state);}
 
- void sub_55e0(m2c::_offsets, struct m2c::_STATE* _state){_group15(m2c::ksub_55e0, _state);}
+ bool sub_55e0(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_55e0, _state);}
 
- void sub_5618(m2c::_offsets, struct m2c::_STATE* _state){_group15(m2c::ksub_5618, _state);}
+ bool sub_5618(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_5618, _state);}
 
- void sub_561d(m2c::_offsets, struct m2c::_STATE* _state){_group16(m2c::ksub_561d, _state);}
+ bool sub_561d(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::ksub_561d, _state);}
 
- void sub_5637(m2c::_offsets, struct m2c::_STATE* _state){_group16(m2c::ksub_5637, _state);}
+ bool sub_5637(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::ksub_5637, _state);}
 
- void sub_56d8(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_56d8, _state);}
+ bool sub_56d8(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_56d8, _state);}
 
- void sub_586a(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_586a, _state);}
+ bool sub_586a(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_586a, _state);}
 
- void sub_58ad(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_58ad, _state);}
+ bool sub_58ad(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_58ad, _state);}
 
- void sub_5bb2(m2c::_offsets, struct m2c::_STATE* _state){_group17(m2c::ksub_5bb2, _state);}
+ bool sub_5bb2(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_5bb2, _state);}
 
- void sub_5c84(m2c::_offsets, struct m2c::_STATE* _state){_group17(m2c::ksub_5c84, _state);}
+ bool sub_5c84(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_5c84, _state);}
 
- void sub_5d78(m2c::_offsets, struct m2c::_STATE* _state){_group3(m2c::ksub_5d78, _state);}
+ bool sub_5d78(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_5d78, _state);}
 
- void sub_5e1e(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_5e1e, _state);}
+ bool sub_5e1e(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_5e1e, _state);}
 
- void sub_5f26(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_5f26, _state);}
+ bool sub_5f26(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_5f26, _state);}
 
- void sub_6036(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_6036, _state);}
+ bool sub_6036(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_6036, _state);}
 
- void sub_6082(m2c::_offsets, struct m2c::_STATE* _state){_group1(m2c::ksub_6082, _state);}
+ bool sub_6082(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_6082, _state);}
 
 
 
- void sub_1df0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1df0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -203,13 +203,13 @@ cs=0x1c2;eip=0x000217; 	X(DEC(byte_6f52))	// 214 dec     byte_6F52 ;~ 01C2:0217
 cs=0x1c2;eip=0x00021b; 	R(JNZ(locret_1e90))	// 215 jnz     short locret_1E90 ;~ 01C2:021B
 cs=0x1c2;eip=0x00021d; 	R(CALL(sub_536c,0))	// 216 call    sub_536C ;~ 01C2:021D
 locret_1e90:	// 4385 
-cs=0x1c2;eip=0x000220; 	R(RETN)	// 220 retn ;~ 01C2:0220
+cs=0x1c2;eip=0x000220; 	R(RETN(0))	// 220 retn ;~ 01C2:0220
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -235,7 +235,7 @@ cs=0x1c2;eip=0x000220; 	R(RETN)	// 220 retn ;~ 01C2:0220
 
 
 
- void sub_1e91(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1e91(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -252,13 +252,13 @@ cs=0x1c2;eip=0x00022c; 	X(MOVSB)	// 235 movsb ;~ 01C2:022C
 cs=0x1c2;eip=0x00022d; 	X(MOV(*(raddr(ds,si-1)), ah))	// 236 mov     [si-1], ah ;~ 01C2:022D
 cs=0x1c2;eip=0x000230; 	R(LOOP(loc_1e9a))	// 237 loop    loc_1E9A ;~ 01C2:0230
 cs=0x1c2;eip=0x000232; 	X(XOR(byte_61d5, 3))	// 238 xor     byte_61D5, 3 ;~ 01C2:0232
-cs=0x1c2;eip=0x000237; 	R(RETN)	// 239 retn ;~ 01C2:0237
+cs=0x1c2;eip=0x000237; 	R(RETN(0))	// 239 retn ;~ 01C2:0237
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -270,7 +270,7 @@ cs=0x1c2;eip=0x000237; 	R(RETN)	// 239 retn ;~ 01C2:0237
 
 
 
- void sub_1ea8(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1ea8(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -283,13 +283,13 @@ cs=0x1c2;eip=0x00023b; 	T(CMP(ax, word_61db))	// 249 cmp     ax, word_61DB ;~ 01
 cs=0x1c2;eip=0x00023f; 	R(JBE(locret_1eb4))	// 250 jbe     short locret_1EB4 ;~ 01C2:023F
 cs=0x1c2;eip=0x000241; 	X(MOV(word_61db, ax))	// 251 mov     word_61DB, ax ;~ 01C2:0241
 locret_1eb4:	// 4387 
-cs=0x1c2;eip=0x000244; 	R(RETN)	// 254 retn ;~ 01C2:0244
+cs=0x1c2;eip=0x000244; 	R(RETN(0))	// 254 retn ;~ 01C2:0244
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -301,7 +301,7 @@ cs=0x1c2;eip=0x000244; 	R(RETN)	// 254 retn ;~ 01C2:0244
 
 
 
- void sub_1eb5(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1eb5(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -342,13 +342,13 @@ ret_1c2_28c:	// 4391
 cs=0x1c2;eip=0x00028c; 	X(INC(word_61c8))	// 292 inc     word_61C8 ;~ 01C2:028C
 loc_1f00:	// 4392 
 cs=0x1c2;eip=0x000290; 	X(POP(bx))	// 296 pop     bx ;~ 01C2:0290
-cs=0x1c2;eip=0x000291; 	R(RETN)	// 297 retn ;~ 01C2:0291
+cs=0x1c2;eip=0x000291; 	R(RETN(0))	// 297 retn ;~ 01C2:0291
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -364,7 +364,7 @@ cs=0x1c2;eip=0x000291; 	R(RETN)	// 297 retn ;~ 01C2:0291
 
 
 
- void sub_1f02(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1f02(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -379,13 +379,13 @@ cs=0x1c2;eip=0x000295; 	R(LOOP(loc_1f05))	// 310 loop    loc_1F05 ;~ 01C2:0295
 cs=0x1c2;eip=0x000297; 	T(DEC(bl))	// 311 dec     bl ;~ 01C2:0297
 cs=0x1c2;eip=0x000299; 	R(JNZ(loc_1f05))	// 312 jnz     short loc_1F05 ;~ 01C2:0299
 cs=0x1c2;eip=0x00029b; 	X(POP(cx))	// 313 pop     cx ;~ 01C2:029B
-cs=0x1c2;eip=0x00029c; 	R(RETN)	// 314 retn ;~ 01C2:029C
+cs=0x1c2;eip=0x00029c; 	R(RETN(0))	// 314 retn ;~ 01C2:029C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -397,7 +397,7 @@ cs=0x1c2;eip=0x00029c; 	R(RETN)	// 314 retn ;~ 01C2:029C
 
 
 
- void sub_1f0d(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1f0d(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -424,7 +424,7 @@ cs=0x1c2;eip=0x0002c0; 	R(CALL(sub_1f44,0))	// 333 call    sub_1F44 ;~ 01C2:02C0
 ret_1c2_2c3:	// 4398 
 cs=0x1c2;eip=0x0002c3; 	R(CALL(sub_206d,0))	// 334 call    sub_206D ;~ 01C2:02C3
 locret_1f36:	// 4399 
-cs=0x1c2;eip=0x0002c6; 	R(RETN)	// 337 retn ;~ 01C2:02C6
+cs=0x1c2;eip=0x0002c6; 	R(RETN(0))	// 337 retn ;~ 01C2:02C6
 loc_1f37:	// 4400 
 cs=0x1c2;eip=0x0002c7; 	R(CALL(sub_206d,0))	// 341 call    sub_206D ;~ 01C2:02C7
 ret_1c2_2ca:	// 4401 
@@ -433,13 +433,13 @@ cs=0x1c2;eip=0x0002cd; 	R(CALL(sub_1f44,0))	// 343 call    sub_1F44 ;~ 01C2:02CD
 ret_1c2_2d0:	// 4402 
 cs=0x1c2;eip=0x0002d0; 	R(CALL(sub_205d,0))	// 344 call    sub_205D ;~ 01C2:02D0
 ret_1c2_2d3:	// 4403 
-cs=0x1c2;eip=0x0002d3; 	R(RETN)	// 345 retn ;~ 01C2:02D3
+cs=0x1c2;eip=0x0002d3; 	R(RETN(0))	// 345 retn ;~ 01C2:02D3
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -460,7 +460,7 @@ cs=0x1c2;eip=0x0002d3; 	R(RETN)	// 345 retn ;~ 01C2:02D3
 
 
 
- void sub_1f44(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1f44(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -474,7 +474,7 @@ cs=0x1c2;eip=0x0002d9; 	R(JNZ(loc_1f54))	// 356 jnz     short loc_1F54 ;~ 01C2:0
 cs=0x1c2;eip=0x0002db; 	T(MOV(cx, 7))	// 357 mov     cx, 7 ;~ 01C2:02DB
 cs=0x1c2;eip=0x0002de; 	T(MOV(si, offset(seg002,a0)))	// 358 mov     si, offset a0   ; "      0\b" ;~ 01C2:02DE	// 359 rep movsb ;~ 01C2:02E1
 cs=0x1c2;eip=0x0002e1; 	X(	REP MOVSB)	// 359 rep movsb ;~ 01C2:02E1
-cs=0x1c2;eip=0x0002e3; 	R(RETN)	// 360 retn ;~ 01C2:02E3
+cs=0x1c2;eip=0x0002e3; 	R(RETN(0))	// 360 retn ;~ 01C2:02E3
 loc_1f54:	// 4404 
 cs=0x1c2;eip=0x0002e4; 	T(CMP(ah, 0x0A))	// 365 cmp     ah, 0Ah ;~ 01C2:02E4
 cs=0x1c2;eip=0x0002e7; 	R(JNC(loc_1f7e))	// 366 jnb     short loc_1F7E ;~ 01C2:02E7
@@ -496,7 +496,7 @@ cs=0x1c2;eip=0x000303; 	R(JNS(loc_1f5c))	// 386 jns     short loc_1F5C ;~ 01C2:0
 cs=0x1c2;eip=0x000305; 	T(MOV(al, 0x30))	// 387 mov     al, 30h ; '0' ;~ 01C2:0305
 cs=0x1c2;eip=0x000307; 	X(MOV(*(raddr(ds,di+4)), al))	// 388 mov     [di+4], al ;~ 01C2:0307
 cs=0x1c2;eip=0x00030a; 	X(MOV(*(raddr(ds,di+5)), al))	// 389 mov     [di+5], al ;~ 01C2:030A
-cs=0x1c2;eip=0x00030d; 	R(RETN)	// 390 retn ;~ 01C2:030D
+cs=0x1c2;eip=0x00030d; 	R(RETN(0))	// 390 retn ;~ 01C2:030D
 loc_1f7e:	// 4408 
 cs=0x1c2;eip=0x00030e; 	T(XOR(dx, dx))	// 394 xor     dx, dx ;~ 01C2:030E
 cs=0x1c2;eip=0x000310; 	X(DIV2(word_61c1))	// 395 div     word_61C1 ;~ 01C2:0310
@@ -512,7 +512,7 @@ cs=0x1c2;eip=0x000322; 	R(JMP(loc_1f5c))	// 402 jmp     short loc_1F5C ;~ 01C2:0
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -528,7 +528,7 @@ cs=0x1c2;eip=0x000322; 	R(JMP(loc_1f5c))	// 402 jmp     short loc_1F5C ;~ 01C2:0
 
 
 
- void sub_1f94(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1f94(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -550,13 +550,13 @@ cs=0x1c2;eip=0x000337; 	R(CALL(sub_2101,0))	// 416 call    sub_2101 ;~ 01C2:0337
 ret_1c2_33a:	// 4413 
 cs=0x1c2;eip=0x00033a; 	R(CALL(sub_2075,0))	// 417 call    sub_2075 ;~ 01C2:033A
 locret_1fad:	// 4414 
-cs=0x1c2;eip=0x00033d; 	R(RETN)	// 420 retn ;~ 01C2:033D
+cs=0x1c2;eip=0x00033d; 	R(RETN(0))	// 420 retn ;~ 01C2:033D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -573,7 +573,7 @@ cs=0x1c2;eip=0x00033d; 	R(RETN)	// 420 retn ;~ 01C2:033D
 
 
 
- void sub_1fae(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_1fae(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -634,13 +634,13 @@ cs=0x1c2;eip=0x0003a0; 	R(CALL(sub_2034,0))	// 489 call    sub_2034 ;~ 01C2:03A0
 ret_1c2_3a3:	// 4426 
 cs=0x1c2;eip=0x0003a3; 	X(DEC(byte_61dd))	// 490 dec     byte_61DD ;~ 01C2:03A3
 locret_2017:	// 4427 
-cs=0x1c2;eip=0x0003a7; 	R(RETN)	// 493 retn ;~ 01C2:03A7
+cs=0x1c2;eip=0x0003a7; 	R(RETN(0))	// 493 retn ;~ 01C2:03A7
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -664,7 +664,7 @@ cs=0x1c2;eip=0x0003a7; 	R(RETN)	// 493 retn ;~ 01C2:03A7
 
 
 
- void sub_2075(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2075(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -692,13 +692,13 @@ cs=0x1c2;eip=0x00042b; 	T(ADD(di, 0x0E04C))	// 645 add     di, 0E04Ch ;~ 01C2:04
 cs=0x1c2;eip=0x00042f; 	T(DEC(bl))	// 646 dec     bl ;~ 01C2:042F
 cs=0x1c2;eip=0x000431; 	R(JNZ(loc_208d))	// 647 jnz     short loc_208D ;~ 01C2:0431
 cs=0x1c2;eip=0x000433; 	X(POP(es))	// 648 pop     es ;~ 01C2:0433
-cs=0x1c2;eip=0x000434; 	R(RETN)	// 650 retn ;~ 01C2:0434
+cs=0x1c2;eip=0x000434; 	R(RETN(0))	// 650 retn ;~ 01C2:0434
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -711,7 +711,7 @@ cs=0x1c2;eip=0x000434; 	R(RETN)	// 650 retn ;~ 01C2:0434
 
 
 
- void sub_20a5(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_20a5(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -723,13 +723,13 @@ cs=0x1c2;eip=0x000435; 	T(MOV(si, 0x20D))	// 658 mov     si, 20Dh ;~ 01C2:0435
 cs=0x1c2;eip=0x000438; 	T(MOV(di, 0x1CC6))	// 659 mov     di, 1CC6h ;~ 01C2:0438
 cs=0x1c2;eip=0x00043b; 	R(CALL(sub_20af,0))	// 660 call    sub_20AF ;~ 01C2:043B
 ret_1c2_43e:	// 4433 
-cs=0x1c2;eip=0x00043e; 	R(RETN)	// 661 retn ;~ 01C2:043E
+cs=0x1c2;eip=0x00043e; 	R(RETN(0))	// 661 retn ;~ 01C2:043E
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -741,7 +741,7 @@ cs=0x1c2;eip=0x00043e; 	R(RETN)	// 661 retn ;~ 01C2:043E
 
 
 
- void sub_2119(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2119(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -760,13 +760,13 @@ cs=0x1c2;eip=0x0004b5; 	X(MOVSW)	// 767 movsw ;~ 01C2:04B5
 cs=0x1c2;eip=0x0004b6; 	T(ADD(di, 0x1FFC))	// 768 add     di, 1FFCh ;~ 01C2:04B6
 cs=0x1c2;eip=0x0004ba; 	T(DEC(bl))	// 769 dec     bl ;~ 01C2:04BA
 cs=0x1c2;eip=0x0004bc; 	R(JNZ(loc_211e))	// 770 jnz     short loc_211E ;~ 01C2:04BC
-cs=0x1c2;eip=0x0004be; 	R(RETN)	// 771 retn ;~ 01C2:04BE
+cs=0x1c2;eip=0x0004be; 	R(RETN(0))	// 771 retn ;~ 01C2:04BE
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -778,7 +778,7 @@ cs=0x1c2;eip=0x0004be; 	R(RETN)	// 771 retn ;~ 01C2:04BE
 
 
 
- void sub_2174(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2174(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -800,7 +800,7 @@ cs=0x1c2;eip=0x000519; 	X(MOV(word_7156, 0))	// 835 mov     word_7156, 0 ;~ 01C2
 loc_218f:	// 4453 
 cs=0x1c2;eip=0x00051f; 	T(CMP(word_7156, 0x12C))	// 838 cmp     word_7156, 12Ch ;~ 01C2:051F
 cs=0x1c2;eip=0x000525; 	R(JC(loc_218f))	// 839 jb      short loc_218F ;~ 01C2:0525
-cs=0x1c2;eip=0x000527; 	R(RETN)	// 840 retn ;~ 01C2:0527
+cs=0x1c2;eip=0x000527; 	R(RETN(0))	// 840 retn ;~ 01C2:0527
 ret_1c2_528:	// 4454 
 cs=0x1c2;eip=0x000528; 	X(MOV(byte_6f32, 8))	// 844 mov     byte_6F32, 8 ;~ 01C2:0528
 cs=0x1c2;eip=0x00052d; 	R(CALL(sub_5de2,0))	// 845 call    sub_5DE2 ;~ 01C2:052D
@@ -814,13 +814,13 @@ cs=0x1c2;eip=0x00053d; 	T(ADD(al, 0x30))	// 851 add     al, 30h ; '0' ;~ 01C2:05
 cs=0x1c2;eip=0x00053f; 	X(MOV(*(raddr(ds,di)), al))	// 852 mov     [di], al ;~ 01C2:053F
 cs=0x1c2;eip=0x000541; 	R(CALL(sub_5d64,0))	// 853 call    sub_5D64 ;~ 01C2:0541
 ret_1c2_544:	// 4456 
-cs=0x1c2;eip=0x000544; 	R(RETN)	// 854 retn ;~ 01C2:0544
+cs=0x1c2;eip=0x000544; 	R(RETN(0))	// 854 retn ;~ 01C2:0544
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -837,7 +837,7 @@ cs=0x1c2;eip=0x000544; 	R(RETN)	// 854 retn ;~ 01C2:0544
 
 
 
- void sub_21b5(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_21b5(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -856,13 +856,13 @@ cs=0x1c2;eip=0x000551; 	X(STOSW)	// 867 stosw ;~ 01C2:0551
 cs=0x1c2;eip=0x000552; 	T(ADD(di, 0x14))	// 868 add     di, 14h ;~ 01C2:0552
 cs=0x1c2;eip=0x000555; 	T(DEC(bl))	// 869 dec     bl ;~ 01C2:0555
 cs=0x1c2;eip=0x000557; 	R(JNZ(loc_21bc))	// 870 jnz     short loc_21BC ;~ 01C2:0557
-cs=0x1c2;eip=0x000559; 	R(RETN)	// 871 retn ;~ 01C2:0559
+cs=0x1c2;eip=0x000559; 	R(RETN(0))	// 871 retn ;~ 01C2:0559
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -875,7 +875,7 @@ cs=0x1c2;eip=0x000559; 	R(RETN)	// 871 retn ;~ 01C2:0559
 
 
 
- void sub_2214(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2214(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -940,7 +940,7 @@ cs=0x1c2;eip=0x00061b; 	R(JNZ(loc_2228))	// 1005 jnz     short loc_2228 ;~ 01C2:
 loc_228d:	// 4474 
 cs=0x1c2;eip=0x00061d; 	X(MOV(byte_631c, 0x0FF))	// 1008 mov     byte_631C, 0FFh ;~ 01C2:061D
 cs=0x1c2;eip=0x000622; 	T(CLC)	// 1009 clc ;~ 01C2:0622
-cs=0x1c2;eip=0x000623; 	R(RETN)	// 1010 retn ;~ 01C2:0623
+cs=0x1c2;eip=0x000623; 	R(RETN(0))	// 1010 retn ;~ 01C2:0623
 loc_2294:	// 4475 
 cs=0x1c2;eip=0x000624; 	X(POP(cx))	// 1014 pop     cx ;~ 01C2:0624
 cs=0x1c2;eip=0x000625; 	T(SUB(bx, bp))	// 1015 sub     bx, bp ;~ 01C2:0625
@@ -954,13 +954,13 @@ cs=0x1c2;eip=0x00063d; 	X(MOV(word_62f8, 3))	// 1022 mov     word_62F8, 3 ;~ 01C
 loc_22b3:	// 4476 
 cs=0x1c2;eip=0x000643; 	X(POP(si))	// 1025 pop     si ;~ 01C2:0643
 cs=0x1c2;eip=0x000644; 	T(STC)	// 1026 stc ;~ 01C2:0644
-cs=0x1c2;eip=0x000645; 	R(RETN)	// 1027 retn ;~ 01C2:0645
+cs=0x1c2;eip=0x000645; 	R(RETN(0))	// 1027 retn ;~ 01C2:0645
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -982,7 +982,7 @@ cs=0x1c2;eip=0x000645; 	R(RETN)	// 1027 retn ;~ 01C2:0645
 
 
 
- void sub_22b6(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_22b6(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1026,7 +1026,7 @@ cs=0x1c2;eip=0x000688; 	X(INC(byte_631b))	// 1076 inc     byte_631B ;~ 01C2:0688
 cs=0x1c2;eip=0x00068c; 	T(CMP(byte_631b, 4))	// 1077 cmp     byte_631B, 4 ;~ 01C2:068C
 cs=0x1c2;eip=0x000691; 	R(JC(loc_22c6))	// 1078 jb      short loc_22C6 ;~ 01C2:0691
 cs=0x1c2;eip=0x000693; 	T(CLC)	// 1079 clc ;~ 01C2:0693
-cs=0x1c2;eip=0x000694; 	R(RETN)	// 1080 retn ;~ 01C2:0694
+cs=0x1c2;eip=0x000694; 	R(RETN(0))	// 1080 retn ;~ 01C2:0694
 loc_2305:	// 4483 
 cs=0x1c2;eip=0x000695; 	T(MOV(cl, 3))	// 1084 mov     cl, 3 ;~ 01C2:0695
 cs=0x1c2;eip=0x000697; 	T(MOV(ax, word_6580))	// 1085 mov     ax, word_6580 ;~ 01C2:0697
@@ -1091,13 +1091,13 @@ cs=0x1c2;eip=0x00072b; 	X(MOV(word_62f6, si))	// 1151 mov     word_62F6, si ;~ 0
 cs=0x1c2;eip=0x00072f; 	X(MOV(word_62f8, 3))	// 1152 mov     word_62F8, 3 ;~ 01C2:072F
 loc_23a5:	// 4491 
 cs=0x1c2;eip=0x000735; 	T(STC)	// 1155 stc ;~ 01C2:0735
-cs=0x1c2;eip=0x000736; 	R(RETN)	// 1156 retn ;~ 01C2:0736
+cs=0x1c2;eip=0x000736; 	R(RETN(0))	// 1156 retn ;~ 01C2:0736
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1123,7 +1123,7 @@ cs=0x1c2;eip=0x000736; 	R(RETN)	// 1156 retn ;~ 01C2:0736
 
 
 
- void sub_23a7(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_23a7(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1160,7 +1160,7 @@ cs=0x1c2;eip=0x000777; 	R(JZ(locret_241c))	// 1193 jz      short locret_241C ;~ 
 cs=0x1c2;eip=0x000779; 	X(DEC(byte_62fb))	// 1194 dec     byte_62FB ;~ 01C2:0779
 cs=0x1c2;eip=0x00077d; 	R(JNZ(loc_23f5))	// 1195 jnz     short loc_23F5 ;~ 01C2:077D
 cs=0x1c2;eip=0x00077f; 	X(MOV(byte_64a3, 0))	// 1196 mov     byte_64A3, 0 ;~ 01C2:077F
-cs=0x1c2;eip=0x000784; 	R(RETN)	// 1197 retn ;~ 01C2:0784
+cs=0x1c2;eip=0x000784; 	R(RETN(0))	// 1197 retn ;~ 01C2:0784
 loc_23f5:	// 4497 
 cs=0x1c2;eip=0x000785; 	R(CALL(sub_2743,0))	// 1201 call    sub_2743 ;~ 01C2:0785
 ret_1c2_788:	// 4498 
@@ -1179,13 +1179,13 @@ cs=0x1c2;eip=0x0007a6; 	R(CALL(sub_5500,0))	// 1215 call    sub_5500 ;~ 01C2:07A
 ret_1c2_7a9:	// 4500 
 cs=0x1c2;eip=0x0007a9; 	X(MOV(*(dw*)(raddr(ds,si+0x0A)), ax))	// 1216 mov     [si+0Ah], ax ;~ 01C2:07A9
 locret_241c:	// 4501 
-cs=0x1c2;eip=0x0007ac; 	R(RETN)	// 1220 retn ;~ 01C2:07AC
+cs=0x1c2;eip=0x0007ac; 	R(RETN(0))	// 1220 retn ;~ 01C2:07AC
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1206,7 +1206,7 @@ cs=0x1c2;eip=0x0007ac; 	R(RETN)	// 1220 retn ;~ 01C2:07AC
 
 
 
- void sub_241d(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_241d(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1216,15 +1216,15 @@ cs=0x1c2;eip=0x0007ac; 	R(RETN)	// 1220 retn ;~ 01C2:07AC
     _begin:
 cs=0x1c2;eip=0x0007ad; 	T(TEST(byte_62fb, 0x0FF))	// 1228 test    byte_62FB, 0FFh ;~ 01C2:07AD
 cs=0x1c2;eip=0x0007b2; 	R(JZ(loc_2425))	// 1229 jz      short loc_2425 ;~ 01C2:07B2
-cs=0x1c2;eip=0x0007b4; 	R(RETN)	// 1230 retn ;~ 01C2:07B4
+cs=0x1c2;eip=0x0007b4; 	R(RETN(0))	// 1230 retn ;~ 01C2:07B4
 loc_2425:	// 4502 
 cs=0x1c2;eip=0x0007b5; 	T(TEST(byte_61cb, 0x0FF))	// 1234 test    byte_61CB, 0FFh ;~ 01C2:07B5
 cs=0x1c2;eip=0x0007ba; 	R(JZ(loc_242d))	// 1235 jz      short loc_242D ;~ 01C2:07BA
-cs=0x1c2;eip=0x0007bc; 	R(RETN)	// 1236 retn ;~ 01C2:07BC
+cs=0x1c2;eip=0x0007bc; 	R(RETN(0))	// 1236 retn ;~ 01C2:07BC
 loc_242d:	// 4503 
 cs=0x1c2;eip=0x0007bd; 	T(TEST(byte_6368, 0x0FF))	// 1240 test    byte_6368, 0FFh ;~ 01C2:07BD
 cs=0x1c2;eip=0x0007c2; 	R(JZ(loc_2435))	// 1241 jz      short loc_2435 ;~ 01C2:07C2
-cs=0x1c2;eip=0x0007c4; 	R(RETN)	// 1242 retn ;~ 01C2:07C4
+cs=0x1c2;eip=0x0007c4; 	R(RETN(0))	// 1242 retn ;~ 01C2:07C4
 loc_2435:	// 4504 
 cs=0x1c2;eip=0x0007c5; 	T(MOV(di, 0x3F3))	// 1246 mov     di, 3F3h ;~ 01C2:07C5
 cs=0x1c2;eip=0x0007c8; 	T(MOV(al, 0x0F))	// 1247 mov     al, 0Fh ;~ 01C2:07C8
@@ -1272,13 +1272,13 @@ cs=0x1c2;eip=0x000829; 	X(POP(si))	// 1288 pop     si ;~ 01C2:0829
 cs=0x1c2;eip=0x00082a; 	T(MOV(al, 0x0A))	// 1289 mov     al, 0Ah ;~ 01C2:082A
 cs=0x1c2;eip=0x00082c; 	R(CALL(sub_5a85,0))	// 1290 call    sub_5A85 ;~ 01C2:082C
 ret_1c2_82f:	// 4509 
-cs=0x1c2;eip=0x00082f; 	R(RETN)	// 1291 retn ;~ 01C2:082F
+cs=0x1c2;eip=0x00082f; 	R(RETN(0))	// 1291 retn ;~ 01C2:082F
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1297,7 +1297,7 @@ cs=0x1c2;eip=0x00082f; 	R(RETN)	// 1291 retn ;~ 01C2:082F
 
 
 
- void sub_24a0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_24a0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1307,7 +1307,7 @@ cs=0x1c2;eip=0x00082f; 	R(RETN)	// 1291 retn ;~ 01C2:082F
     _begin:
 cs=0x1c2;eip=0x000830; 	T(TEST(byte_62fc, 0x0FF))	// 1300 test    byte_62FC, 0FFh ;~ 01C2:0830
 cs=0x1c2;eip=0x000835; 	R(JZ(loc_24a8))	// 1301 jz      short loc_24A8 ;~ 01C2:0835
-cs=0x1c2;eip=0x000837; 	R(RETN)	// 1302 retn ;~ 01C2:0837
+cs=0x1c2;eip=0x000837; 	R(RETN(0))	// 1302 retn ;~ 01C2:0837
 loc_24a8:	// 4510 
 cs=0x1c2;eip=0x000838; 	T(MOV(di, 0x3E6))	// 1306 mov     di, 3E6h ;~ 01C2:0838
 cs=0x1c2;eip=0x00083b; 	T(MOV(al, 0x0E))	// 1307 mov     al, 0Eh ;~ 01C2:083B
@@ -1346,13 +1346,13 @@ ret_1c2_889:	// 4513
 cs=0x1c2;eip=0x000889; 	T(MOV(al, 0x0A))	// 1337 mov     al, 0Ah ;~ 01C2:0889
 cs=0x1c2;eip=0x00088b; 	R(CALL(sub_5a85,0))	// 1338 call    sub_5A85 ;~ 01C2:088B
 ret_1c2_88e:	// 4514 
-cs=0x1c2;eip=0x00088e; 	R(RETN)	// 1339 retn ;~ 01C2:088E
+cs=0x1c2;eip=0x00088e; 	R(RETN(0))	// 1339 retn ;~ 01C2:088E
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1368,7 +1368,7 @@ cs=0x1c2;eip=0x00088e; 	R(RETN)	// 1339 retn ;~ 01C2:088E
 
 
 
- void sub_24ff(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_24ff(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1418,10 +1418,10 @@ loc_2554:	// 4522
 cs=0x1c2;eip=0x0008e4; 	T(TEST(byte_6320, 0x0FF))	// 1396 test    byte_6320, 0FFh ;~ 01C2:08E4
 cs=0x1c2;eip=0x0008e9; 	R(JZ(loc_255d))	// 1397 jz      short loc_255D ;~ 01C2:08E9
 cs=0x1c2;eip=0x0008eb; 	T(STC)	// 1398 stc ;~ 01C2:08EB
-cs=0x1c2;eip=0x0008ec; 	R(RETN)	// 1399 retn ;~ 01C2:08EC
+cs=0x1c2;eip=0x0008ec; 	R(RETN(0))	// 1399 retn ;~ 01C2:08EC
 loc_255d:	// 4523 
 cs=0x1c2;eip=0x0008ed; 	T(CLC)	// 1403 clc ;~ 01C2:08ED
-cs=0x1c2;eip=0x0008ee; 	R(RETN)	// 1404 retn ;~ 01C2:08EE
+cs=0x1c2;eip=0x0008ee; 	R(RETN(0))	// 1404 retn ;~ 01C2:08EE
 loc_255f:	// 4524 
 cs=0x1c2;eip=0x0008ef; 	T(CMP(*(dw*)(raddr(ds,si+5)), 5))	// 1408 cmp     word ptr [si+5], 5 ;~ 01C2:08EF
 cs=0x1c2;eip=0x0008f3; 	R(JNC(loc_2539))	// 1409 jnb     short loc_2539 ;~ 01C2:08F3
@@ -1503,7 +1503,7 @@ cs=0x1c2;eip=0x00099e; 	R(JMP(loc_259f))	// 1484 jmp     short loc_259F ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1539,7 +1539,7 @@ cs=0x1c2;eip=0x00099e; 	R(JMP(loc_259f))	// 1484 jmp     short loc_259F ;~ 01C2:
 
 
 
- void sub_2610(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2610(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1598,13 +1598,13 @@ cs=0x1c2;eip=0x000a0d; 	T(CLC)	// 1550 clc ;~ 01C2:0A0D
 loc_267e:	// 4549 
 cs=0x1c2;eip=0x000a0e; 	T(MOV(bx, word_6323))	// 1553 mov     bx, word_6323 ;~ 01C2:0A0E
 cs=0x1c2;eip=0x000a12; 	T(MOV(dx, word_6325))	// 1554 mov     dx, word_6325 ;~ 01C2:0A12
-cs=0x1c2;eip=0x000a16; 	R(RETN)	// 1555 retn ;~ 01C2:0A16
+cs=0x1c2;eip=0x000a16; 	R(RETN(0))	// 1555 retn ;~ 01C2:0A16
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1625,7 +1625,7 @@ cs=0x1c2;eip=0x000a16; 	R(RETN)	// 1555 retn ;~ 01C2:0A16
 
 
 
- void sub_2743(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2743(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1647,7 +1647,7 @@ cs=0x1c2;eip=0x000af0; 	X(MOV(word_6dc7, ax))	// 1702 mov     word_6DC7, ax ;~ 0
 cs=0x1c2;eip=0x000af3; 	X(MOV(byte_6db6, 1))	// 1703 mov     byte_6DB6, 1 ;~ 01C2:0AF3
 cs=0x1c2;eip=0x000af8; 	R(CALL(sub_28f7,0))	// 1704 call    sub_28F7 ;~ 01C2:0AF8
 locret_276b:	// 4562 
-cs=0x1c2;eip=0x000afb; 	R(RETN)	// 1707 retn ;~ 01C2:0AFB
+cs=0x1c2;eip=0x000afb; 	R(RETN(0))	// 1707 retn ;~ 01C2:0AFB
 loc_276c:	// 4563 
 cs=0x1c2;eip=0x000afc; 	T(MOV(si, 0x3F3))	// 1711 mov     si, 3F3h ;~ 01C2:0AFC
 cs=0x1c2;eip=0x000aff; 	T(MOV(bx, *(dw*)(raddr(ds,si+1))))	// 1712 mov     bx, [si+1] ;~ 01C2:0AFF
@@ -1675,7 +1675,7 @@ ret_1c2_b29:	// 4568
 cs=0x1c2;eip=0x000b29; 	R(JC(loc_27f1))	// 1736 jb      short loc_27F1 ;~ 01C2:0B29
 loc_279b:	// 4569 
 cs=0x1c2;eip=0x000b2b; 	T(CLC)	// 1739 clc ;~ 01C2:0B2B
-cs=0x1c2;eip=0x000b2c; 	R(RETN)	// 1740 retn ;~ 01C2:0B2C
+cs=0x1c2;eip=0x000b2c; 	R(RETN(0))	// 1740 retn ;~ 01C2:0B2C
 loc_279d:	// 4570 
 cs=0x1c2;eip=0x000b2d; 	X(MOV(word_6323, bx))	// 1744 mov     word_6323, bx ;~ 01C2:0B2D
 cs=0x1c2;eip=0x000b31; 	X(MOV(word_6325, dx))	// 1745 mov     word_6325, dx ;~ 01C2:0B31
@@ -1713,7 +1713,7 @@ cs=0x1c2;eip=0x000b76; 	T(MOV(al, *(raddr(ds,si))))	// 1772 mov     al, [si] ;~ 
 cs=0x1c2;eip=0x000b78; 	X(MOV(byte_61cb, al))	// 1773 mov     byte_61CB, al ;~ 01C2:0B78	// 1774 nop ;~ 01C2:0B7B	// 1775 nop ;~ 01C2:0B7C	// 1776 nop ;~ 01C2:0B7D	// 1777 nop ;~ 01C2:0B7E
 loc_27ef:	// 4578 
 cs=0x1c2;eip=0x000b7f; 	T(STC)	// 1780 stc ;~ 01C2:0B7F
-cs=0x1c2;eip=0x000b80; 	R(RETN)	// 1781 retn ;~ 01C2:0B80
+cs=0x1c2;eip=0x000b80; 	R(RETN(0))	// 1781 retn ;~ 01C2:0B80
 loc_27f1:	// 4579 
 cs=0x1c2;eip=0x000b81; 	T(MOV(di, 0x3F3))	// 1786 mov     di, 3F3h ;~ 01C2:0B81
 cs=0x1c2;eip=0x000b84; 	T(MOV(ax, *(dw*)(raddr(ds,di+1))))	// 1787 mov     ax, [di+1] ;~ 01C2:0B84
@@ -1734,7 +1734,7 @@ cs=0x1c2;eip=0x000ba3; 	R(JMP(loc_27dc))	// 1800 jmp     short loc_27DC ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1766,7 +1766,7 @@ cs=0x1c2;eip=0x000ba3; 	R(JMP(loc_27dc))	// 1800 jmp     short loc_27DC ;~ 01C2:
 
 
 
- void sub_2815(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2815(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1815,13 +1815,13 @@ cs=0x1c2;eip=0x000bfd; 	T(CLC)	// 1852 clc ;~ 01C2:0BFD
 loc_286e:	// 4588 
 cs=0x1c2;eip=0x000bfe; 	T(MOV(bx, word_6323))	// 1855 mov     bx, word_6323 ;~ 01C2:0BFE
 cs=0x1c2;eip=0x000c02; 	T(MOV(dx, word_6325))	// 1856 mov     dx, word_6325 ;~ 01C2:0C02
-cs=0x1c2;eip=0x000c06; 	R(RETN)	// 1857 retn ;~ 01C2:0C06
+cs=0x1c2;eip=0x000c06; 	R(RETN(0))	// 1857 retn ;~ 01C2:0C06
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1839,7 +1839,7 @@ cs=0x1c2;eip=0x000c06; 	R(RETN)	// 1857 retn ;~ 01C2:0C06
 
 
 
- void sub_2877(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2877(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1856,7 +1856,7 @@ cs=0x1c2;eip=0x000c15; 	T(OR(al, al))	// 1870 or      al, al ;~ 01C2:0C15
 cs=0x1c2;eip=0x000c17; 	R(JNZ(loc_288b))	// 1871 jnz     short loc_288B ;~ 01C2:0C17
 loc_2889:	// 4589 
 cs=0x1c2;eip=0x000c19; 	T(CLC)	// 1875 clc ;~ 01C2:0C19
-cs=0x1c2;eip=0x000c1a; 	R(RETN)	// 1876 retn ;~ 01C2:0C1A
+cs=0x1c2;eip=0x000c1a; 	R(RETN(0))	// 1876 retn ;~ 01C2:0C1A
 loc_288b:	// 4590 
 cs=0x1c2;eip=0x000c1b; 	T(MOV(ax, *(dw*)(raddr(ds,si+1))))	// 1880 mov     ax, [si+1] ;~ 01C2:0C1B
 cs=0x1c2;eip=0x000c1e; 	T(SUB(ax, bx))	// 1881 sub     ax, bx ;~ 01C2:0C1E
@@ -1906,16 +1906,16 @@ cs=0x1c2;eip=0x000c7d; 	X(DEC(byte_631d))	// 1932 dec     byte_631D ;~ 01C2:0C7D
 cs=0x1c2;eip=0x000c81; 	R(JNZ(loc_28ba))	// 1933 jnz     short loc_28BA ;~ 01C2:0C81
 loc_28f3:	// 4598 
 cs=0x1c2;eip=0x000c83; 	T(CLC)	// 1936 clc ;~ 01C2:0C83
-cs=0x1c2;eip=0x000c84; 	R(RETN)	// 1937 retn ;~ 01C2:0C84
+cs=0x1c2;eip=0x000c84; 	R(RETN(0))	// 1937 retn ;~ 01C2:0C84
 loc_28f5:	// 4599 
 cs=0x1c2;eip=0x000c85; 	T(STC)	// 1941 stc ;~ 01C2:0C85
-cs=0x1c2;eip=0x000c86; 	R(RETN)	// 1942 retn ;~ 01C2:0C86
+cs=0x1c2;eip=0x000c86; 	R(RETN(0))	// 1942 retn ;~ 01C2:0C86
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1937,7 +1937,7 @@ cs=0x1c2;eip=0x000c86; 	R(RETN)	// 1942 retn ;~ 01C2:0C86
 
 
 
- void sub_28f7(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_28f7(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -1967,13 +1967,13 @@ cs=0x1c2;eip=0x000ca9; 	T(MOV(cl, 6))	// 1972 mov     cl, 6 ;~ 01C2:0CA9
 cs=0x1c2;eip=0x000cab; 	T(SHR(ax, cl))	// 1973 shr     ax, cl ;~ 01C2:0CAB
 cs=0x1c2;eip=0x000cad; 	X(MOV(word_6321, ax))	// 1974 mov     word_6321, ax ;~ 01C2:0CAD
 cs=0x1c2;eip=0x000cb0; 	X(POP(si))	// 1975 pop     si ;~ 01C2:0CB0
-cs=0x1c2;eip=0x000cb1; 	R(RETN)	// 1976 retn ;~ 01C2:0CB1
+cs=0x1c2;eip=0x000cb1; 	R(RETN(0))	// 1976 retn ;~ 01C2:0CB1
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -1989,7 +1989,7 @@ cs=0x1c2;eip=0x000cb1; 	R(RETN)	// 1976 retn ;~ 01C2:0CB1
 
 
 
- void sub_2922(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2922(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2025,13 +2025,13 @@ cs=0x1c2;eip=0x000cdd; 	X(POP(di))	// 2008 pop     di ;~ 01C2:0CDD
 cs=0x1c2;eip=0x000cde; 	T(ADD(di, dx))	// 2009 add     di, dx ;~ 01C2:0CDE
 cs=0x1c2;eip=0x000ce0; 	X(POP(dx))	// 2010 pop     dx ;~ 01C2:0CE0
 cs=0x1c2;eip=0x000ce1; 	X(POP(bx))	// 2011 pop     bx ;~ 01C2:0CE1
-cs=0x1c2;eip=0x000ce2; 	R(RETN)	// 2012 retn ;~ 01C2:0CE2
+cs=0x1c2;eip=0x000ce2; 	R(RETN(0))	// 2012 retn ;~ 01C2:0CE2
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2046,7 +2046,7 @@ cs=0x1c2;eip=0x000ce2; 	R(RETN)	// 2012 retn ;~ 01C2:0CE2
 
 
 
- void sub_2960(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2960(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2209,13 +2209,13 @@ cs=0x1c2;eip=0x000e31; 	R(JMP(loc_2983))	// 2205 jmp     loc_2983 ;~ 01C2:0E31
 loc_2aa4:	// 4643 
 cs=0x1c2;eip=0x000e34; 	X(POP(di))	// 2209 pop     di ;~ 01C2:0E34
 cs=0x1c2;eip=0x000e35; 	X(POP(si))	// 2210 pop     si ;~ 01C2:0E35
-cs=0x1c2;eip=0x000e36; 	R(RETN)	// 2211 retn ;~ 01C2:0E36
+cs=0x1c2;eip=0x000e36; 	R(RETN(0))	// 2211 retn ;~ 01C2:0E36
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2261,7 +2261,7 @@ cs=0x1c2;eip=0x000e36; 	R(RETN)	// 2211 retn ;~ 01C2:0E36
 
 
 
- void sub_2aa7(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2aa7(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2279,16 +2279,16 @@ cs=0x1c2;eip=0x000e44; 	R(JNS(loc_2abc))	// 2227 jns     short loc_2ABC ;~ 01C2:
 cs=0x1c2;eip=0x000e46; 	T(ADD(dx, ax))	// 2228 add     dx, ax ;~ 01C2:0E46
 cs=0x1c2;eip=0x000e48; 	R(JS(loc_2abc))	// 2229 js      short loc_2ABC ;~ 01C2:0E48
 cs=0x1c2;eip=0x000e4a; 	T(STC)	// 2230 stc ;~ 01C2:0E4A
-cs=0x1c2;eip=0x000e4b; 	R(RETN)	// 2231 retn ;~ 01C2:0E4B
+cs=0x1c2;eip=0x000e4b; 	R(RETN(0))	// 2231 retn ;~ 01C2:0E4B
 loc_2abc:	// 4645 
 cs=0x1c2;eip=0x000e4c; 	T(CLC)	// 2236 clc ;~ 01C2:0E4C
-cs=0x1c2;eip=0x000e4d; 	R(RETN)	// 2237 retn ;~ 01C2:0E4D
+cs=0x1c2;eip=0x000e4d; 	R(RETN(0))	// 2237 retn ;~ 01C2:0E4D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2301,7 +2301,7 @@ cs=0x1c2;eip=0x000e4d; 	R(RETN)	// 2237 retn ;~ 01C2:0E4D
 
 
 
- void sub_2abe(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2abe(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2327,13 +2327,13 @@ cs=0x1c2;eip=0x000e67; 	T(MOV(bp, si))	// 2262 mov     bp, si ;~ 01C2:0E67
 loc_2ad9:	// 4648 
 cs=0x1c2;eip=0x000e69; 	T(ADD(si, 2))	// 2265 add     si, 2 ;~ 01C2:0E69
 cs=0x1c2;eip=0x000e6c; 	R(LOOP(loc_2ac8))	// 2266 loop    loc_2AC8 ;~ 01C2:0E6C
-cs=0x1c2;eip=0x000e6e; 	R(RETN)	// 2267 retn ;~ 01C2:0E6E
+cs=0x1c2;eip=0x000e6e; 	R(RETN(0))	// 2267 retn ;~ 01C2:0E6E
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2347,7 +2347,7 @@ cs=0x1c2;eip=0x000e6e; 	R(RETN)	// 2267 retn ;~ 01C2:0E6E
 
 
 
- void sub_2adf(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2adf(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2382,13 +2382,13 @@ cs=0x1c2;eip=0x000e98; 	T(SUB(ax, 3))	// 2297 sub     ax, 3 ;~ 01C2:0E98
 cs=0x1c2;eip=0x000e9b; 	T(MOV(bx, ax))	// 2298 mov     bx, ax ;~ 01C2:0E9B
 cs=0x1c2;eip=0x000e9d; 	T(MOV(dx, *(dw*)((&unk_11c53))))	// 2299 mov     dx, word ptr unk_11C53 ;~ 01C2:0E9D
 cs=0x1c2;eip=0x000ea1; 	T(ADD(dx, 3))	// 2300 add     dx, 3 ;~ 01C2:0EA1
-cs=0x1c2;eip=0x000ea4; 	R(RETN)	// 2301 retn ;~ 01C2:0EA4
+cs=0x1c2;eip=0x000ea4; 	R(RETN(0))	// 2301 retn ;~ 01C2:0EA4
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2400,7 +2400,7 @@ cs=0x1c2;eip=0x000ea4; 	R(RETN)	// 2301 retn ;~ 01C2:0EA4
 
 
 
- void sub_2b20(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2b20(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2412,7 +2412,7 @@ cs=0x1c2;eip=0x000eb0; 	T(TEST(byte_6cb2, 0x0FF))	// 2311 test    byte_6CB2, 0FF
 cs=0x1c2;eip=0x000eb5; 	R(JZ(loc_2b2b))	// 2312 jz      short loc_2B2B ;~ 01C2:0EB5
 cs=0x1c2;eip=0x000eb7; 	R(CALL(sub_48a0,0))	// 2313 call    sub_48A0 ;~ 01C2:0EB7
 ret_1c2_eba:	// 4650 
-cs=0x1c2;eip=0x000eba; 	R(RETN)	// 2314 retn ;~ 01C2:0EBA
+cs=0x1c2;eip=0x000eba; 	R(RETN(0))	// 2314 retn ;~ 01C2:0EBA
 loc_2b2b:	// 4651 
 cs=0x1c2;eip=0x000ebb; 	T(TEST(byte_62fc, 0x0FF))	// 2318 test    byte_62FC, 0FFh ;~ 01C2:0EBB
 cs=0x1c2;eip=0x000ec0; 	R(JZ(loc_2b3c))	// 2319 jz      short loc_2B3C ;~ 01C2:0EC0
@@ -2420,7 +2420,7 @@ cs=0x1c2;eip=0x000ec2; 	T(MOV(al, byte_62fc))	// 2320 mov     al, byte_62FC ;~ 0
 cs=0x1c2;eip=0x000ec5; 	T(SHR(al, 1))	// 2321 shr     al, 1 ;~ 01C2:0EC5
 cs=0x1c2;eip=0x000ec7; 	T(TEST(al, 1))	// 2322 test    al, 1 ;~ 01C2:0EC7
 cs=0x1c2;eip=0x000ec9; 	R(JNZ(loc_2b3c))	// 2323 jnz     short loc_2B3C ;~ 01C2:0EC9
-cs=0x1c2;eip=0x000ecb; 	R(RETN)	// 2324 retn ;~ 01C2:0ECB
+cs=0x1c2;eip=0x000ecb; 	R(RETN(0))	// 2324 retn ;~ 01C2:0ECB
 loc_2b3c:	// 4652 
 cs=0x1c2;eip=0x000ecc; 	X(PUSH(es))	// 2329 push    es ;~ 01C2:0ECC
 cs=0x1c2;eip=0x000ecd; 	T(MOV(ax, seg_offset(seg1277)))	// 2330 mov     ax, seg seg1277 ;~ 01C2:0ECD
@@ -2469,7 +2469,7 @@ cs=0x1c2;eip=0x000f2a; 	T(MOV(ah, 0x0C0))	// 2368 mov     ah, 0C0h ; 'À' ;~ 01C2
 cs=0x1c2;eip=0x000f2c; 	R(CALL(sub_2bfa,0))	// 2369 call    sub_2BFA ;~ 01C2:0F2C
 ret_1c2_f2f:	// 4658 
 cs=0x1c2;eip=0x000f2f; 	X(POP(es))	// 2370 pop     es ;~ 01C2:0F2F
-cs=0x1c2;eip=0x000f30; 	R(RETN)	// 2372 retn ;~ 01C2:0F30
+cs=0x1c2;eip=0x000f30; 	R(RETN(0))	// 2372 retn ;~ 01C2:0F30
 loc_2ba1:	// 4659 
 cs=0x1c2;eip=0x000f31; 	T(MOV(cx, 5))	// 2376 mov     cx, 5 ;~ 01C2:0F31
 cs=0x1c2;eip=0x000f34; 	T(MOV(di, dx))	// 2377 mov     di, dx ;~ 01C2:0F34
@@ -2509,13 +2509,13 @@ cs=0x1c2;eip=0x000f7d; 	R(CALL(sub_2c97,0))	// 2405 call    sub_2C97 ;~ 01C2:0F7
 ret_1c2_f80:	// 4665 
 cs=0x1c2;eip=0x000f80; 	X(POP(es))	// 2406 pop     es ;~ 01C2:0F80
 cs=0x1c2;eip=0x000f81; 	X(MOV(byte_636a, 0))	// 2407 mov     byte_636A, 0 ;~ 01C2:0F81
-cs=0x1c2;eip=0x000f86; 	R(RETN)	// 2408 retn ;~ 01C2:0F86
+cs=0x1c2;eip=0x000f86; 	R(RETN(0))	// 2408 retn ;~ 01C2:0F86
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2542,7 +2542,7 @@ cs=0x1c2;eip=0x000f86; 	R(RETN)	// 2408 retn ;~ 01C2:0F86
 
 
 
- void sub_2c65(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2c65(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2567,13 +2567,13 @@ cs=0x1c2;eip=0x00101a; 	T(MOV(al, *(raddr(es,di-1))))	// 2549 mov     al, es:[di
 cs=0x1c2;eip=0x00101e; 	T(OR(al, 3))	// 2550 or      al, 3 ;~ 01C2:101E
 cs=0x1c2;eip=0x001020; 	X(MOV(*(raddr(es,di-1)), al))	// 2551 mov     es:[di-1], al ;~ 01C2:1020
 cs=0x1c2;eip=0x001024; 	R(LOOP(loc_2c68))	// 2552 loop    loc_2C68 ;~ 01C2:1024
-cs=0x1c2;eip=0x001026; 	R(RETN)	// 2553 retn ;~ 01C2:1026
+cs=0x1c2;eip=0x001026; 	R(RETN(0))	// 2553 retn ;~ 01C2:1026
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2585,7 +2585,7 @@ cs=0x1c2;eip=0x001026; 	R(RETN)	// 2553 retn ;~ 01C2:1026
 
 
 
- void sub_2c97(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2c97(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2610,13 +2610,13 @@ cs=0x1c2;eip=0x00104c; 	T(MOV(al, *(raddr(es,di-1))))	// 2575 mov     al, es:[di
 cs=0x1c2;eip=0x001050; 	T(OR(al, 3))	// 2576 or      al, 3 ;~ 01C2:1050
 cs=0x1c2;eip=0x001052; 	X(MOV(*(raddr(es,di-1)), al))	// 2577 mov     es:[di-1], al ;~ 01C2:1052
 cs=0x1c2;eip=0x001056; 	R(LOOP(loc_2c9a))	// 2578 loop    loc_2C9A ;~ 01C2:1056
-cs=0x1c2;eip=0x001058; 	R(RETN)	// 2579 retn ;~ 01C2:1058
+cs=0x1c2;eip=0x001058; 	R(RETN(0))	// 2579 retn ;~ 01C2:1058
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2628,7 +2628,7 @@ cs=0x1c2;eip=0x001058; 	R(RETN)	// 2579 retn ;~ 01C2:1058
 
 
 
- void sub_2cc9(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2cc9(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2755,13 +2755,13 @@ cs=0x1c2;eip=0x001174; 	R(CALL(sub_4ab0,0))	// 2711 call    sub_4AB0 ;~ 01C2:117
 ret_1c2_1177:	// 4681 
 cs=0x1c2;eip=0x001177; 	X(POP(ax))	// 2712 pop     ax ;~ 01C2:1177
 cs=0x1c2;eip=0x001178; 	X(MOV(word_6e2e, ax))	// 2713 mov     word_6E2E, ax ;~ 01C2:1178
-cs=0x1c2;eip=0x00117b; 	R(RETN)	// 2714 retn ;~ 01C2:117B
+cs=0x1c2;eip=0x00117b; 	R(RETN(0))	// 2714 retn ;~ 01C2:117B
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2782,7 +2782,7 @@ cs=0x1c2;eip=0x00117b; 	R(RETN)	// 2714 retn ;~ 01C2:117B
 
 
 
- void sub_2dec(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2dec(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2799,7 +2799,7 @@ cs=0x1c2;eip=0x001185; 	R(JNZ(loc_2e02))	// 2728 jnz     short loc_2E02 ;~ 01C2:
 cs=0x1c2;eip=0x001187; 	T(ADD(si, 0x0C))	// 2729 add     si, 0Ch ;~ 01C2:1187
 cs=0x1c2;eip=0x00118a; 	R(LOOP(loc_2df2))	// 2730 loop    loc_2DF2 ;~ 01C2:118A
 cs=0x1c2;eip=0x00118c; 	X(MOV(byte_6368, 0x0FF))	// 2731 mov     byte_6368, 0FFh ;~ 01C2:118C
-cs=0x1c2;eip=0x001191; 	R(RETN)	// 2732 retn ;~ 01C2:1191
+cs=0x1c2;eip=0x001191; 	R(RETN(0))	// 2732 retn ;~ 01C2:1191
 loc_2e02:	// 4683 
 cs=0x1c2;eip=0x001192; 	T(MOV(ax, word_6566))	// 2736 mov     ax, word_6566 ;~ 01C2:1192
 cs=0x1c2;eip=0x001195; 	R(CALL(sub_563c,0))	// 2737 call    sub_563C ;~ 01C2:1195
@@ -2838,23 +2838,23 @@ cs=0x1c2;eip=0x0011de; 	R(CALL(sub_2e6f,0))	// 2770 call    sub_2E6F ;~ 01C2:11D
 ret_1c2_11e1:	// 4687 
 cs=0x1c2;eip=0x0011e1; 	T(TEST(byte_6368, 0x0FF))	// 2771 test    byte_6368, 0FFh ;~ 01C2:11E1
 cs=0x1c2;eip=0x0011e6; 	R(JNZ(loc_2e59))	// 2772 jnz     short loc_2E59 ;~ 01C2:11E6
-cs=0x1c2;eip=0x0011e8; 	R(RETN)	// 2773 retn ;~ 01C2:11E8
+cs=0x1c2;eip=0x0011e8; 	R(RETN(0))	// 2773 retn ;~ 01C2:11E8
 loc_2e59:	// 4688 
 cs=0x1c2;eip=0x0011e9; 	X(MOV(byte_6368, 0))	// 2777 mov     byte_6368, 0 ;~ 01C2:11E9
 cs=0x1c2;eip=0x0011ee; 	X(MOV(byte_6369, 0x0FF))	// 2778 mov     byte_6369, 0FFh ;~ 01C2:11EE
 cs=0x1c2;eip=0x0011f3; 	T(MOV(al, 2))	// 2779 mov     al, 2 ;~ 01C2:11F3
 cs=0x1c2;eip=0x0011f5; 	R(CALL(sub_5a85,0))	// 2780 call    sub_5A85 ;~ 01C2:11F5
 ret_1c2_11f8:	// 4689 
-cs=0x1c2;eip=0x0011f8; 	R(RETN)	// 2781 retn ;~ 01C2:11F8
+cs=0x1c2;eip=0x0011f8; 	R(RETN(0))	// 2781 retn ;~ 01C2:11F8
 loc_2e69:	// 4690 
 cs=0x1c2;eip=0x0011f9; 	X(MOV(byte_6368, 0x0FF))	// 2785 mov     byte_6368, 0FFh ;~ 01C2:11F9
-cs=0x1c2;eip=0x0011fe; 	R(RETN)	// 2786 retn ;~ 01C2:11FE
+cs=0x1c2;eip=0x0011fe; 	R(RETN(0))	// 2786 retn ;~ 01C2:11FE
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2874,7 +2874,7 @@ cs=0x1c2;eip=0x0011fe; 	R(RETN)	// 2786 retn ;~ 01C2:11FE
 
 
 
- void sub_2e6f(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2e6f(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2919,7 +2919,7 @@ cs=0x1c2;eip=0x00124e; 	T(AND(al, *(raddr(ds,bx+0x2C3))))	// 2834 and     al, [b
 cs=0x1c2;eip=0x001252; 	T(OR(al, *(raddr(ds,bx+0x2BF))))	// 2835 or      al, [bx+2BFh] ;~ 01C2:1252
 cs=0x1c2;eip=0x001256; 	X(MOV(*(raddr(es,di)), al))	// 2836 mov     es:[di], al ;~ 01C2:1256
 cs=0x1c2;eip=0x001259; 	X(POP(es))	// 2837 pop     es ;~ 01C2:1259
-cs=0x1c2;eip=0x00125a; 	R(RETN)	// 2839 retn ;~ 01C2:125A
+cs=0x1c2;eip=0x00125a; 	R(RETN(0))	// 2839 retn ;~ 01C2:125A
 loc_2ecb:	// 4695 
 cs=0x1c2;eip=0x00125b; 	T(DEC(di))	// 2843 dec     di ;~ 01C2:125B
 cs=0x1c2;eip=0x00125c; 	T(DEC(al))	// 2844 dec     al ;~ 01C2:125C
@@ -2936,7 +2936,7 @@ cs=0x1c2;eip=0x00126d; 	R(JMP(loc_2ebb))	// 2852 jmp     short loc_2EBB ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -2952,7 +2952,7 @@ cs=0x1c2;eip=0x00126d; 	R(JMP(loc_2ebb))	// 2852 jmp     short loc_2EBB ;~ 01C2:
 
 
 
- void sub_2edf(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2edf(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -2963,7 +2963,7 @@ cs=0x1c2;eip=0x00126d; 	R(JMP(loc_2ebb))	// 2852 jmp     short loc_2EBB ;~ 01C2:
 cs=0x1c2;eip=0x00126f; 	T(MOV(ax, word_6566))	// 2860 mov     ax, word_6566 ;~ 01C2:126F
 cs=0x1c2;eip=0x001272; 	T(CMP(ax, 0x322))	// 2861 cmp     ax, 322h ;~ 01C2:1272
 cs=0x1c2;eip=0x001275; 	R(JNC(loc_2ee8))	// 2862 jnb     short loc_2EE8 ;~ 01C2:1275
-cs=0x1c2;eip=0x001277; 	R(RETN)	// 2863 retn ;~ 01C2:1277
+cs=0x1c2;eip=0x001277; 	R(RETN(0))	// 2863 retn ;~ 01C2:1277
 loc_2ee8:	// 4696 
 cs=0x1c2;eip=0x001278; 	X(PUSH(es))	// 2867 push    es ;~ 01C2:1278
 cs=0x1c2;eip=0x001279; 	T(MOV(ax, seg_offset(seg1277)))	// 2868 mov     ax, seg seg1277 ;~ 01C2:1279
@@ -2982,7 +2982,7 @@ loc_2f0b:	// 4697
 cs=0x1c2;eip=0x00129b; 	R(CALL(sub_2f18,0))	// 2883 call    sub_2F18 ;~ 01C2:129B
 ret_1c2_129e:	// 4698 
 cs=0x1c2;eip=0x00129e; 	X(POP(es))	// 2884 pop     es ;~ 01C2:129E
-cs=0x1c2;eip=0x00129f; 	R(RETN)	// 2886 retn ;~ 01C2:129F
+cs=0x1c2;eip=0x00129f; 	R(RETN(0))	// 2886 retn ;~ 01C2:129F
 loc_2f10:	// 4699 
 cs=0x1c2;eip=0x0012a0; 	T(MOV(cx, 0x0E05))	// 2890 mov     cx, 0E05h ;~ 01C2:12A0
 cs=0x1c2;eip=0x0012a3; 	T(MOV(si, 0x35B))	// 2891 mov     si, 35Bh ;~ 01C2:12A3
@@ -2992,7 +2992,7 @@ cs=0x1c2;eip=0x0012a6; 	R(JMP(loc_2f0b))	// 2892 jmp     short loc_2F0B ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3007,7 +3007,7 @@ cs=0x1c2;eip=0x0012a6; 	R(JMP(loc_2f0b))	// 2892 jmp     short loc_2F0B ;~ 01C2:
 
 
 
- void sub_2f18(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2f18(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3058,13 +3058,13 @@ cs=0x1c2;eip=0x0012f0; 	T(MOV(bl, cl))	// 2946 mov     bl, cl ;~ 01C2:12F0
 cs=0x1c2;eip=0x0012f2; 	T(DEC(ch))	// 2947 dec     ch ;~ 01C2:12F2
 cs=0x1c2;eip=0x0012f4; 	R(JNZ(loc_2f1a))	// 2948 jnz     short loc_2F1A ;~ 01C2:12F4
 locret_2f66:	// 4705 
-cs=0x1c2;eip=0x0012f6; 	R(RETN)	// 2951 retn ;~ 01C2:12F6
+cs=0x1c2;eip=0x0012f6; 	R(RETN(0))	// 2951 retn ;~ 01C2:12F6
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3081,7 +3081,7 @@ cs=0x1c2;eip=0x0012f6; 	R(RETN)	// 2951 retn ;~ 01C2:12F6
 
 
 
- void sub_2f70(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_2f70(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3161,13 +3161,13 @@ cs=0x1c2;eip=0x001380; 	X(POP(cx))	// 3021 pop     cx ;~ 01C2:1380
 cs=0x1c2;eip=0x001381; 	R(LOOP(loc_2fcd))	// 3022 loop    loc_2FCD ;~ 01C2:1381
 cs=0x1c2;eip=0x001383; 	R(CALL(sub_51a5,0))	// 3023 call    sub_51A5 ;~ 01C2:1383
 ret_1c2_1386:	// 4723 
-cs=0x1c2;eip=0x001386; 	R(RETN)	// 3024 retn ;~ 01C2:1386
+cs=0x1c2;eip=0x001386; 	R(RETN(0))	// 3024 retn ;~ 01C2:1386
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3196,7 +3196,7 @@ cs=0x1c2;eip=0x001386; 	R(RETN)	// 3024 retn ;~ 01C2:1386
 
 
 
- void sub_324a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_324a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3221,12 +3221,12 @@ cs=0x1c2;eip=0x0015f3; 	T(CMP(ax, 0x0E0))	// 3410 cmp     ax, 0E0h ; 'à' ;~ 01C2
 cs=0x1c2;eip=0x0015f6; 	R(JC(loc_326e))	// 3411 jb      short loc_326E ;~ 01C2:15F6
 cs=0x1c2;eip=0x0015f8; 	T(CMP(ax, 0x3A0))	// 3412 cmp     ax, 3A0h ;~ 01C2:15F8
 cs=0x1c2;eip=0x0015fb; 	R(JNC(loc_326e))	// 3413 jnb     short loc_326E ;~ 01C2:15FB
-cs=0x1c2;eip=0x0015fd; 	R(RETN)	// 3414 retn ;~ 01C2:15FD
+cs=0x1c2;eip=0x0015fd; 	R(RETN(0))	// 3414 retn ;~ 01C2:15FD
 loc_326e:	// 4787 
 cs=0x1c2;eip=0x0015fe; 	T(MOV(bl, *(raddr(ds,si))))	// 3419 mov     bl, [si] ;~ 01C2:15FE
 cs=0x1c2;eip=0x001600; 	T(OR(bl, bl))	// 3420 or      bl, bl ;~ 01C2:1600
 cs=0x1c2;eip=0x001602; 	R(JNZ(loc_3275))	// 3421 jnz     short loc_3275 ;~ 01C2:1602
-cs=0x1c2;eip=0x001604; 	R(RETN)	// 3422 retn ;~ 01C2:1604
+cs=0x1c2;eip=0x001604; 	R(RETN(0))	// 3422 retn ;~ 01C2:1604
 loc_3275:	// 4788 
 cs=0x1c2;eip=0x001605; 	T(CMP(bl, 4))	// 3426 cmp     bl, 4 ;~ 01C2:1605
 cs=0x1c2;eip=0x001608; 	R(JNC(loc_3289))	// 3427 jnb     short loc_3289 ;~ 01C2:1608
@@ -3318,7 +3318,7 @@ cs=0x1c2;eip=0x0016be; 	T(MOV(di, *(dw*)(raddr(cs,di))))	// 3532 mov     di, cs:
 cs=0x1c2;eip=0x0016c1; 	R(CALL(__dispatch_call,di))	// 3533 call    di ;~ 01C2:16C1
 ret_1c2_16c3:	// 4802 
 cs=0x1c2;eip=0x0016c3; 	X(MOV(word_65b1, 0))	// 3534 mov     word_65B1, 0 ;~ 01C2:16C3
-cs=0x1c2;eip=0x0016c9; 	R(RETN)	// 3535 retn ;~ 01C2:16C9
+cs=0x1c2;eip=0x0016c9; 	R(RETN(0))	// 3535 retn ;~ 01C2:16C9
 loc_3360:	// 4803 
 cs=0x1c2;eip=0x0016f0; 	T(MOV(si, word_6460))	// 3562 mov     si, word_6460 ;~ 01C2:16F0
 cs=0x1c2;eip=0x0016f4; 	T(MOV(al, byte_6586))	// 3563 mov     al, byte_6586 ;~ 01C2:16F4
@@ -3420,7 +3420,7 @@ cs=0x1c2;eip=0x0017b5; 	X(MOV(byte_658a, 0x0FF))	// 3683 mov     byte_658A, 0FFh
 cs=0x1c2;eip=0x0017ba; 	T(XOR(al, al))	// 3684 xor     al, al ;~ 01C2:17BA
 loc_342c:	// 4827 
 cs=0x1c2;eip=0x0017bc; 	X(MOV(byte_6f50, al))	// 3687 mov     byte_6F50, al ;~ 01C2:17BC
-cs=0x1c2;eip=0x0017bf; 	R(RETN)	// 3688 retn ;~ 01C2:17BF
+cs=0x1c2;eip=0x0017bf; 	R(RETN(0))	// 3688 retn ;~ 01C2:17BF
 loc_3430:	// 4828 
 cs=0x1c2;eip=0x0017c0; 	T(MOV(al, byte_6586))	// 3692 mov     al, byte_6586 ;~ 01C2:17C0
 cs=0x1c2;eip=0x0017c3; 	T(CMP(al, 0x17))	// 3693 cmp     al, 17h ;~ 01C2:17C3
@@ -3528,7 +3528,7 @@ cs=0x1c2;eip=0x0018a6; 	R(CALL(sub_3782,0))	// 3815 call    sub_3782 ;~ 01C2:18A
 ret_1c2_18a9:	// 4852 
 cs=0x1c2;eip=0x0018a9; 	R(JNC(loc_351c))	// 3816 jnb     short loc_351C ;~ 01C2:18A9
 locret_351b:	// 4853 
-cs=0x1c2;eip=0x0018ab; 	R(RETN)	// 3819 retn ;~ 01C2:18AB
+cs=0x1c2;eip=0x0018ab; 	R(RETN(0))	// 3819 retn ;~ 01C2:18AB
 loc_351c:	// 4854 
 cs=0x1c2;eip=0x0018ac; 	T(MOV(al, byte_6593))	// 3824 mov     al, byte_6593 ;~ 01C2:18AC
 cs=0x1c2;eip=0x0018af; 	T(OR(al, al))	// 3825 or      al, al ;~ 01C2:18AF
@@ -3538,10 +3538,10 @@ cs=0x1c2;eip=0x0018b5; 	T(MOV(al, byte_6f5e))	// 3828 mov     al, byte_6F5E ;~ 0
 cs=0x1c2;eip=0x0018b8; 	X(MOV(byte_6591, al))	// 3829 mov     byte_6591, al ;~ 01C2:18B8
 cs=0x1c2;eip=0x0018bb; 	R(CALL(sub_5469,m2c::kloc_546e))	// 3830 call    loc_546E ;~ 01C2:18BB
 ret_1c2_18be:	// 4855 
-cs=0x1c2;eip=0x0018be; 	R(RETN)	// 3831 retn ;~ 01C2:18BE
+cs=0x1c2;eip=0x0018be; 	R(RETN(0))	// 3831 retn ;~ 01C2:18BE
 loc_352f:	// 4856 
 cs=0x1c2;eip=0x0018bf; 	X(MOV(byte_658a, 0x0FF))	// 3836 mov     byte_658A, 0FFh ;~ 01C2:18BF
-cs=0x1c2;eip=0x0018c4; 	R(RETN)	// 3837 retn ;~ 01C2:18C4
+cs=0x1c2;eip=0x0018c4; 	R(RETN(0))	// 3837 retn ;~ 01C2:18C4
 loc_3535:	// 4857 
 cs=0x1c2;eip=0x0018c5; 	T(MOV(bx, word_6e1c))	// 3842 mov     bx, word_6E1C ;~ 01C2:18C5
 cs=0x1c2;eip=0x0018c9; 	T(MOV(al, byte_61c7))	// 3843 mov     al, byte_61C7 ;~ 01C2:18C9
@@ -3575,13 +3575,13 @@ loc_357d:	// 4863
 cs=0x1c2;eip=0x00190d; 	R(CALL(sub_359b,0))	// 3881 call    sub_359B ;~ 01C2:190D
 ret_1c2_1910:	// 4864 
 cs=0x1c2;eip=0x001910; 	X(DEC(byte_6590))	// 3882 dec     byte_6590 ;~ 01C2:1910
-cs=0x1c2;eip=0x001914; 	R(RETN)	// 3883 retn ;~ 01C2:1914
+cs=0x1c2;eip=0x001914; 	R(RETN(0))	// 3883 retn ;~ 01C2:1914
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3673,7 +3673,7 @@ cs=0x1c2;eip=0x001914; 	R(RETN)	// 3883 retn ;~ 01C2:1914
 
 
 
- void sub_359b(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_359b(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3713,16 +3713,16 @@ cs=0x1c2;eip=0x00197e; 	T(CMP(byte_6f51, 3))	// 3942 cmp     byte_6F51, 3 ;~ 01C
 cs=0x1c2;eip=0x001983; 	R(JZ(loc_35fb))	// 3943 jz      short loc_35FB ;~ 01C2:1983
 cs=0x1c2;eip=0x001985; 	X(MOV(byte_6586, 0x23))	// 3944 mov     byte_6586, 23h ; '#' ;~ 01C2:1985
 locret_35fa:	// 4869 
-cs=0x1c2;eip=0x00198a; 	R(RETN)	// 3948 retn ;~ 01C2:198A
+cs=0x1c2;eip=0x00198a; 	R(RETN(0))	// 3948 retn ;~ 01C2:198A
 loc_35fb:	// 4870 
 cs=0x1c2;eip=0x00198b; 	X(MOV(byte_6590, 4))	// 3952 mov     byte_6590, 4 ;~ 01C2:198B
-cs=0x1c2;eip=0x001990; 	R(RETN)	// 3953 retn ;~ 01C2:1990
+cs=0x1c2;eip=0x001990; 	R(RETN(0))	// 3953 retn ;~ 01C2:1990
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3738,7 +3738,7 @@ cs=0x1c2;eip=0x001990; 	R(RETN)	// 3953 retn ;~ 01C2:1990
 
 
 
- void sub_3601(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3601(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3758,13 +3758,13 @@ cs=0x1c2;eip=0x0019a2; 	X(MOV(word_658d, cx))	// 3968 mov     word_658D, cx ;~ 0
 cs=0x1c2;eip=0x0019a6; 	T(MOV(ax, word_658b))	// 3969 mov     ax, word_658B ;~ 01C2:19A6
 cs=0x1c2;eip=0x0019a9; 	T(SHL(ax, 1))	// 3970 shl     ax, 1 ;~ 01C2:19A9
 cs=0x1c2;eip=0x0019ab; 	X(ADD(*(dw*)(raddr(ds,si+9)), ax))	// 3971 add     [si+9], ax ;~ 01C2:19AB
-cs=0x1c2;eip=0x0019ae; 	R(RETN)	// 3972 retn ;~ 01C2:19AE
+cs=0x1c2;eip=0x0019ae; 	R(RETN(0))	// 3972 retn ;~ 01C2:19AE
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3776,7 +3776,7 @@ cs=0x1c2;eip=0x0019ae; 	R(RETN)	// 3972 retn ;~ 01C2:19AE
 
 
 
- void sub_361f(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_361f(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3796,13 +3796,13 @@ cs=0x1c2;eip=0x0019c0; 	X(MOV(word_658d, cx))	// 3987 mov     word_658D, cx ;~ 0
 cs=0x1c2;eip=0x0019c4; 	T(MOV(ax, word_658b))	// 3988 mov     ax, word_658B ;~ 01C2:19C4
 cs=0x1c2;eip=0x0019c7; 	T(SHL(ax, 1))	// 3989 shl     ax, 1 ;~ 01C2:19C7
 cs=0x1c2;eip=0x0019c9; 	X(SUB(*(dw*)(raddr(ds,si+9)), ax))	// 3990 sub     [si+9], ax ;~ 01C2:19C9
-cs=0x1c2;eip=0x0019cc; 	R(RETN)	// 3991 retn ;~ 01C2:19CC
+cs=0x1c2;eip=0x0019cc; 	R(RETN(0))	// 3991 retn ;~ 01C2:19CC
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3814,7 +3814,7 @@ cs=0x1c2;eip=0x0019cc; 	R(RETN)	// 3991 retn ;~ 01C2:19CC
 
 
 
- void sub_36c8(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_36c8(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3834,7 +3834,7 @@ loc_36df:	// 4891
 cs=0x1c2;eip=0x001a6f; 	X(MOV(byte_659d, 0))	// 4097 mov     byte_659D, 0 ;~ 01C2:1A6F
 cs=0x1c2;eip=0x001a74; 	R(CALL(sub_3777,0))	// 4098 call    sub_3777 ;~ 01C2:1A74
 locret_36e7:	// 4892 
-cs=0x1c2;eip=0x001a77; 	R(RETN)	// 4101 retn ;~ 01C2:1A77
+cs=0x1c2;eip=0x001a77; 	R(RETN(0))	// 4101 retn ;~ 01C2:1A77
 loc_36e8:	// 4893 
 cs=0x1c2;eip=0x001a78; 	T(CMP(byte_61ca, 0x0FF))	// 4105 cmp     byte_61CA, 0FFh ;~ 01C2:1A78
 cs=0x1c2;eip=0x001a7d; 	R(JNZ(loc_36f2))	// 4106 jnz     short loc_36F2 ;~ 01C2:1A7D
@@ -3846,10 +3846,10 @@ cs=0x1c2;eip=0x001a89; 	T(TEST(byte_6489, 0x0FF))	// 4112 test    byte_6489, 0FF
 cs=0x1c2;eip=0x001a8e; 	R(JNZ(locret_3703))	// 4113 jnz     short locret_3703 ;~ 01C2:1A8E
 cs=0x1c2;eip=0x001a90; 	R(CALL(sub_54ce,0))	// 4114 call    sub_54CE ;~ 01C2:1A90
 locret_3703:	// 4895 
-cs=0x1c2;eip=0x001a93; 	R(RETN)	// 4117 retn ;~ 01C2:1A93
+cs=0x1c2;eip=0x001a93; 	R(RETN(0))	// 4117 retn ;~ 01C2:1A93
 loc_3704:	// 4896 
 cs=0x1c2;eip=0x001a94; 	X(DEC(byte_61ca))	// 4121 dec     byte_61CA ;~ 01C2:1A94
-cs=0x1c2;eip=0x001a98; 	R(RETN)	// 4122 retn ;~ 01C2:1A98
+cs=0x1c2;eip=0x001a98; 	R(RETN(0))	// 4122 retn ;~ 01C2:1A98
 loc_3709:	// 4897 
 cs=0x1c2;eip=0x001a99; 	T(MOV(ax, word_659b))	// 4128 mov     ax, word_659B ;~ 01C2:1A99
 cs=0x1c2;eip=0x001a9c; 	T(ADD(ax, 0x20))	// 4129 add     ax, 20h ; ' ' ;~ 01C2:1A9C
@@ -3865,13 +3865,13 @@ loc_3723:	// 4899
 cs=0x1c2;eip=0x001ab3; 	R(CALL(sub_372b,0))	// 4141 call    sub_372B ;~ 01C2:1AB3
 ret_1c2_1ab6:	// 4900 
 cs=0x1c2;eip=0x001ab6; 	X(DEC(byte_6596))	// 4142 dec     byte_6596 ;~ 01C2:1AB6
-cs=0x1c2;eip=0x001aba; 	R(RETN)	// 4143 retn ;~ 01C2:1ABA
+cs=0x1c2;eip=0x001aba; 	R(RETN(0))	// 4143 retn ;~ 01C2:1ABA
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3892,7 +3892,7 @@ cs=0x1c2;eip=0x001aba; 	R(RETN)	// 4143 retn ;~ 01C2:1ABA
 
 
 
- void sub_372b(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_372b(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3904,13 +3904,13 @@ cs=0x1c2;eip=0x001abb; 	T(MOV(dx, word_6597))	// 4149 mov     dx, word_6597 ;~ 0
 cs=0x1c2;eip=0x001abf; 	X(ADD(*(dw*)(raddr(ds,si+1)), dx))	// 4150 add     [si+1], dx ;~ 01C2:1ABF
 cs=0x1c2;eip=0x001ac2; 	T(MOV(dx, word_6599))	// 4151 mov     dx, word_6599 ;~ 01C2:1AC2
 cs=0x1c2;eip=0x001ac6; 	X(ADD(*(dw*)(raddr(ds,si+3)), dx))	// 4152 add     [si+3], dx ;~ 01C2:1AC6
-cs=0x1c2;eip=0x001ac9; 	R(RETN)	// 4153 retn ;~ 01C2:1AC9
+cs=0x1c2;eip=0x001ac9; 	R(RETN(0))	// 4153 retn ;~ 01C2:1AC9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3921,7 +3921,7 @@ cs=0x1c2;eip=0x001ac9; 	R(RETN)	// 4153 retn ;~ 01C2:1AC9
 
 
 
- void sub_373a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_373a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3950,13 +3950,13 @@ cs=0x1c2;eip=0x001af2; 	R(CALL(sub_56d8,0))	// 4175 call    sub_56D8 ;~ 01C2:1AF
 ret_1c2_1af5:	// 4905 
 cs=0x1c2;eip=0x001af5; 	T(ADD(ax, 5))	// 4176 add     ax, 5 ;~ 01C2:1AF5
 cs=0x1c2;eip=0x001af8; 	X(MOV(byte_6596, al))	// 4177 mov     byte_6596, al ;~ 01C2:1AF8
-cs=0x1c2;eip=0x001afb; 	R(RETN)	// 4178 retn ;~ 01C2:1AFB
+cs=0x1c2;eip=0x001afb; 	R(RETN(0))	// 4178 retn ;~ 01C2:1AFB
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -3972,7 +3972,7 @@ cs=0x1c2;eip=0x001afb; 	R(RETN)	// 4178 retn ;~ 01C2:1AFB
 
 
 
- void sub_376c(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_376c(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -3985,13 +3985,13 @@ cs=0x1c2;eip=0x001aff; 	R(CALL(sub_56d8,0))	// 4187 call    sub_56D8 ;~ 01C2:1AF
 ret_1c2_1b02:	// 4906 
 cs=0x1c2;eip=0x001b02; 	T(INC(ax))	// 4188 inc     ax ;~ 01C2:1B02
 cs=0x1c2;eip=0x001b03; 	X(MOV(byte_61ca, al))	// 4189 mov     byte_61CA, al ;~ 01C2:1B03
-cs=0x1c2;eip=0x001b06; 	R(RETN)	// 4190 retn ;~ 01C2:1B06
+cs=0x1c2;eip=0x001b06; 	R(RETN(0))	// 4190 retn ;~ 01C2:1B06
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4003,7 +4003,7 @@ cs=0x1c2;eip=0x001b06; 	R(RETN)	// 4190 retn ;~ 01C2:1B06
 
 
 
- void sub_3777(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3777(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4013,13 +4013,13 @@ cs=0x1c2;eip=0x001b06; 	R(RETN)	// 4190 retn ;~ 01C2:1B06
     _begin:
 cs=0x1c2;eip=0x001b07; 	X(MOV(byte_61ca, 0x0FF))	// 4199 mov     byte_61CA, 0FFh ;~ 01C2:1B07
 cs=0x1c2;eip=0x001b0c; 	X(MOV(byte_6489, 0))	// 4200 mov     byte_6489, 0 ;~ 01C2:1B0C
-cs=0x1c2;eip=0x001b11; 	R(RETN)	// 4201 retn ;~ 01C2:1B11
+cs=0x1c2;eip=0x001b11; 	R(RETN(0))	// 4201 retn ;~ 01C2:1B11
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4030,7 +4030,7 @@ cs=0x1c2;eip=0x001b11; 	R(RETN)	// 4201 retn ;~ 01C2:1B11
 
 
 
- void sub_3782(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3782(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4043,13 +4043,13 @@ cs=0x1c2;eip=0x001b14; 	R(JNS(loc_3788))	// 4211 jns     short loc_3788 ;~ 01C2:
 cs=0x1c2;eip=0x001b16; 	T(NEG(ax))	// 4212 neg     ax ;~ 01C2:1B16
 loc_3788:	// 4907 
 cs=0x1c2;eip=0x001b18; 	T(CMP(ax, 0x7000))	// 4215 cmp     ax, 7000h ;~ 01C2:1B18
-cs=0x1c2;eip=0x001b1b; 	R(RETN)	// 4216 retn ;~ 01C2:1B1B
+cs=0x1c2;eip=0x001b1b; 	R(RETN(0))	// 4216 retn ;~ 01C2:1B1B
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4061,7 +4061,7 @@ cs=0x1c2;eip=0x001b1b; 	R(RETN)	// 4216 retn ;~ 01C2:1B1B
 
 
 
- void sub_378c(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_378c(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4080,12 +4080,12 @@ cs=0x1c2;eip=0x001b26; 	T(MOV(al, 3))	// 4230 mov     al, 3 ;~ 01C2:1B26
 cs=0x1c2;eip=0x001b28; 	R(CALL(sub_5a85,0))	// 4231 call    sub_5A85 ;~ 01C2:1B28
 ret_1c2_1b2b:	// 4911 
 cs=0x1c2;eip=0x001b2b; 	X(MOV(byte_61dd, 4))	// 4232 mov     byte_61DD, 4 ;~ 01C2:1B2B
-cs=0x1c2;eip=0x001b30; 	R(RETN)	// 4233 retn ;~ 01C2:1B30
+cs=0x1c2;eip=0x001b30; 	R(RETN(0))	// 4233 retn ;~ 01C2:1B30
 loc_37a1:	// 4912 
 cs=0x1c2;eip=0x001b31; 	R(CALL(sub_22b6,0))	// 4237 call    sub_22B6 ;~ 01C2:1B31
 ret_1c2_1b34:	// 4913 
 cs=0x1c2;eip=0x001b34; 	R(JC(loc_37a7))	// 4238 jb      short loc_37A7 ;~ 01C2:1B34
-cs=0x1c2;eip=0x001b36; 	R(RETN)	// 4239 retn ;~ 01C2:1B36
+cs=0x1c2;eip=0x001b36; 	R(RETN(0))	// 4239 retn ;~ 01C2:1B36
 loc_37a7:	// 4914 
 cs=0x1c2;eip=0x001b37; 	T(CMP(byte_631b, 3))	// 4244 cmp     byte_631B, 3 ;~ 01C2:1B37
 cs=0x1c2;eip=0x001b3c; 	R(JZ(loc_37bc))	// 4245 jz      short loc_37BC ;~ 01C2:1B3C
@@ -4101,13 +4101,13 @@ cs=0x1c2;eip=0x001b53; 	R(CALL(sub_5a85,0))	// 4256 call    sub_5A85 ;~ 01C2:1B5
 ret_1c2_1b56:	// 4916 
 cs=0x1c2;eip=0x001b56; 	X(MOV(byte_6cb2, 1))	// 4257 mov     byte_6CB2, 1 ;~ 01C2:1B56	// 4258 nop ;~ 01C2:1B5B	// 4259 nop ;~ 01C2:1B5C	// 4260 nop ;~ 01C2:1B5D	// 4261 nop ;~ 01C2:1B5E
 cs=0x1c2;eip=0x001b5f; 	X(MOV(*(raddr(ds,si)), 0))	// 4262 mov     byte ptr [si], 0 ;~ 01C2:1B5F
-cs=0x1c2;eip=0x001b62; 	R(RETN)	// 4263 retn ;~ 01C2:1B62
+cs=0x1c2;eip=0x001b62; 	R(RETN(0))	// 4263 retn ;~ 01C2:1B62
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4127,7 +4127,7 @@ cs=0x1c2;eip=0x001b62; 	R(RETN)	// 4263 retn ;~ 01C2:1B62
 
 
 
- void sub_37e0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_37e0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4163,7 +4163,7 @@ cs=0x1c2;eip=0x001bb6; 	T(CMP(bx, 0x15))	// 4305 cmp     bx, 15h ;~ 01C2:1BB6
 cs=0x1c2;eip=0x001bb9; 	R(JC(locret_382d))	// 4306 jb      short locret_382D ;~ 01C2:1BB9
 cs=0x1c2;eip=0x001bbb; 	R(JMP(loc_382e))	// 4307 jmp     short loc_382E ;~ 01C2:1BBB
 locret_382d:	// 4921 
-cs=0x1c2;eip=0x001bbd; 	R(RETN)	// 4312 retn ;~ 01C2:1BBD
+cs=0x1c2;eip=0x001bbd; 	R(RETN(0))	// 4312 retn ;~ 01C2:1BBD
 loc_382e:	// 4922 
 cs=0x1c2;eip=0x001bbe; 	T(MOV(si, 0x525))	// 4316 mov     si, 525h ;~ 01C2:1BBE
 loc_3831:	// 4923 
@@ -4243,7 +4243,7 @@ cs=0x1c2;eip=0x001c79; 	T(MOV(di, 0x5E9))	// 4396 mov     di, 5E9h ;~ 01C2:1C79
 cs=0x1c2;eip=0x001c7c; 	X(MOV(word_65ad, di))	// 4397 mov     word_65AD, di ;~ 01C2:1C7C
 cs=0x1c2;eip=0x001c80; 	R(CALL(sub_3c4f,0))	// 4398 call    sub_3C4F ;~ 01C2:1C80
 ret_1c2_1c83:	// 4932 
-cs=0x1c2;eip=0x001c83; 	R(RETN)	// 4399 retn ;~ 01C2:1C83
+cs=0x1c2;eip=0x001c83; 	R(RETN(0))	// 4399 retn ;~ 01C2:1C83
 loc_38f4:	// 4933 
 cs=0x1c2;eip=0x001c84; 	X(MOV(byte_6e13, 0))	// 4405 mov     byte_6E13, 0 ;~ 01C2:1C84
 cs=0x1c2;eip=0x001c89; 	X(MOV(word_65c5, 0x28))	// 4406 mov     word_65C5, 28h ; '(' ;~ 01C2:1C89
@@ -4273,7 +4273,7 @@ cs=0x1c2;eip=0x001cca; 	T(CMP(bx, 0x15))	// 4436 cmp     bx, 15h ;~ 01C2:1CCA
 cs=0x1c2;eip=0x001ccd; 	R(JC(locret_3941))	// 4437 jb      short locret_3941 ;~ 01C2:1CCD
 cs=0x1c2;eip=0x001ccf; 	R(JMP(loc_3942))	// 4438 jmp     short loc_3942 ;~ 01C2:1CCF
 locret_3941:	// 4938 
-cs=0x1c2;eip=0x001cd1; 	R(RETN)	// 4443 retn ;~ 01C2:1CD1
+cs=0x1c2;eip=0x001cd1; 	R(RETN(0))	// 4443 retn ;~ 01C2:1CD1
 loc_3942:	// 4939 
 cs=0x1c2;eip=0x001cd2; 	T(MOV(si, 0x561))	// 4447 mov     si, 561h ;~ 01C2:1CD2
 loc_3945:	// 4940 
@@ -4352,7 +4352,7 @@ cs=0x1c2;eip=0x001d8a; 	T(MOV(di, 0x634))	// 4526 mov     di, 634h ;~ 01C2:1D8A
 cs=0x1c2;eip=0x001d8d; 	X(MOV(word_65ad, di))	// 4527 mov     word_65AD, di ;~ 01C2:1D8D
 cs=0x1c2;eip=0x001d91; 	R(CALL(sub_3c4f,0))	// 4528 call    sub_3C4F ;~ 01C2:1D91
 ret_1c2_1d94:	// 4949 
-cs=0x1c2;eip=0x001d94; 	R(RETN)	// 4529 retn ;~ 01C2:1D94
+cs=0x1c2;eip=0x001d94; 	R(RETN(0))	// 4529 retn ;~ 01C2:1D94
 loc_3a05:	// 4950 
 cs=0x1c2;eip=0x001d95; 	X(MOV(byte_6e13, 0))	// 4533 mov     byte_6E13, 0 ;~ 01C2:1D95
 cs=0x1c2;eip=0x001d9a; 	X(MOV(word_65c5, 0x32))	// 4534 mov     word_65C5, 32h ; '2' ;~ 01C2:1D9A
@@ -4390,7 +4390,7 @@ cs=0x1c2;eip=0x001dee; 	T(CMP(bx, 0x15))	// 4574 cmp     bx, 15h ;~ 01C2:1DEE
 cs=0x1c2;eip=0x001df1; 	R(JC(locret_3a65))	// 4575 jb      short locret_3A65 ;~ 01C2:1DF1
 cs=0x1c2;eip=0x001df3; 	R(JMP(loc_3a66))	// 4576 jmp     short loc_3A66 ;~ 01C2:1DF3
 locret_3a65:	// 4956 
-cs=0x1c2;eip=0x001df5; 	R(RETN)	// 4581 retn ;~ 01C2:1DF5
+cs=0x1c2;eip=0x001df5; 	R(RETN(0))	// 4581 retn ;~ 01C2:1DF5
 loc_3a66:	// 4957 
 cs=0x1c2;eip=0x001df6; 	T(MOV(si, 0x59D))	// 4585 mov     si, 59Dh ;~ 01C2:1DF6
 loc_3a69:	// 4958 
@@ -4469,7 +4469,7 @@ cs=0x1c2;eip=0x001eae; 	T(MOV(di, 0x66D))	// 4664 mov     di, 66Dh ;~ 01C2:1EAE
 cs=0x1c2;eip=0x001eb1; 	X(MOV(word_65ad, di))	// 4665 mov     word_65AD, di ;~ 01C2:1EB1
 cs=0x1c2;eip=0x001eb5; 	R(CALL(sub_3c4f,0))	// 4666 call    sub_3C4F ;~ 01C2:1EB5
 ret_1c2_1eb8:	// 4967 
-cs=0x1c2;eip=0x001eb8; 	R(RETN)	// 4667 retn ;~ 01C2:1EB8
+cs=0x1c2;eip=0x001eb8; 	R(RETN(0))	// 4667 retn ;~ 01C2:1EB8
 loc_3b29:	// 4968 
 cs=0x1c2;eip=0x001eb9; 	X(MOV(word_65c5, 0x22))	// 4671 mov     word_65C5, 22h ; '"' ;~ 01C2:1EB9
 cs=0x1c2;eip=0x001ebf; 	T(MOV(dx, word_659b))	// 4672 mov     dx, word_659B ;~ 01C2:1EBF
@@ -4494,7 +4494,7 @@ cs=0x1c2;eip=0x001ef0; 	T(CMP(bx, 0x15))	// 4696 cmp     bx, 15h ;~ 01C2:1EF0
 cs=0x1c2;eip=0x001ef3; 	R(JC(locret_3b67))	// 4697 jb      short locret_3B67 ;~ 01C2:1EF3
 cs=0x1c2;eip=0x001ef5; 	R(JMP(loc_3b68))	// 4698 jmp     short loc_3B68 ;~ 01C2:1EF5
 locret_3b67:	// 4972 
-cs=0x1c2;eip=0x001ef7; 	R(RETN)	// 4703 retn ;~ 01C2:1EF7
+cs=0x1c2;eip=0x001ef7; 	R(RETN(0))	// 4703 retn ;~ 01C2:1EF7
 loc_3b68:	// 4973 
 cs=0x1c2;eip=0x001ef8; 	T(CMP(word_65af, 0x0A0))	// 4707 cmp     word_65AF, 0A0h ; ' ' ;~ 01C2:1EF8
 cs=0x1c2;eip=0x001efe; 	R(JNS(loc_3b7d))	// 4708 jns     short loc_3B7D ;~ 01C2:1EFE
@@ -4585,13 +4585,13 @@ cs=0x1c2;eip=0x001fd4; 	T(MOV(di, 0x6C2))	// 4800 mov     di, 6C2h ;~ 01C2:1FD4
 cs=0x1c2;eip=0x001fd7; 	X(MOV(word_65ad, di))	// 4801 mov     word_65AD, di ;~ 01C2:1FD7
 cs=0x1c2;eip=0x001fdb; 	R(CALL(sub_3c4f,0))	// 4802 call    sub_3C4F ;~ 01C2:1FDB
 ret_1c2_1fde:	// 4984 
-cs=0x1c2;eip=0x001fde; 	R(RETN)	// 4803 retn ;~ 01C2:1FDE
+cs=0x1c2;eip=0x001fde; 	R(RETN(0))	// 4803 retn ;~ 01C2:1FDE
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4670,7 +4670,7 @@ cs=0x1c2;eip=0x001fde; 	R(RETN)	// 4803 retn ;~ 01C2:1FDE
 
 
 
- void sub_3c4f(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3c4f(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4733,13 +4733,13 @@ cs=0x1c2;eip=0x00205a; 	R(JMP(loc_3c61))	// 4861 jmp     short loc_3C61 ;~ 01C2:
 loc_3ccc:	// 4990 
 cs=0x1c2;eip=0x00205c; 	T(MOV(ax, seg_offset(seg002)))	// 4865 mov     ax, seg seg002 ;~ 01C2:205C
 cs=0x1c2;eip=0x00205f; 	T(MOV(es, ax))	// 4866 mov     es, ax ;~ 01C2:205F
-cs=0x1c2;eip=0x002061; 	R(RETN)	// 4868 retn ;~ 01C2:2061
+cs=0x1c2;eip=0x002061; 	R(RETN(0))	// 4868 retn ;~ 01C2:2061
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4756,7 +4756,7 @@ cs=0x1c2;eip=0x002061; 	R(RETN)	// 4868 retn ;~ 01C2:2061
 
 
 
- void sub_3cd2(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3cd2(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4772,13 +4772,13 @@ cs=0x1c2;eip=0x002067; 	T(LODSW)	// 4881 lodsw ;~ 01C2:2067
 cs=0x1c2;eip=0x002068; 	X(ADD(*(dw*)(raddr(ds,di)), ax))	// 4882 add     [di], ax ;~ 01C2:2068
 cs=0x1c2;eip=0x00206a; 	T(INC(di))	// 4883 inc     di ;~ 01C2:206A
 cs=0x1c2;eip=0x00206b; 	T(INC(di))	// 4884 inc     di ;~ 01C2:206B
-cs=0x1c2;eip=0x00206c; 	R(RETN)	// 4885 retn ;~ 01C2:206C
+cs=0x1c2;eip=0x00206c; 	R(RETN(0))	// 4885 retn ;~ 01C2:206C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4789,7 +4789,7 @@ cs=0x1c2;eip=0x00206c; 	R(RETN)	// 4885 retn ;~ 01C2:206C
 
 
 
- void sub_3cdd(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3cdd(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4887,13 +4887,13 @@ cs=0x1c2;eip=0x002121; 	X(SAR(*(dw*)(raddr(ds,di)), cl))	// 4991 sar     word pt
 cs=0x1c2;eip=0x002123; 	T(ADD(di, 2))	// 4992 add     di, 2 ;~ 01C2:2123
 cs=0x1c2;eip=0x002126; 	T(DEC(dx))	// 4993 dec     dx ;~ 01C2:2126
 cs=0x1c2;eip=0x002127; 	R(JNZ(loc_3d91))	// 4994 jnz     short loc_3D91 ;~ 01C2:2127
-cs=0x1c2;eip=0x002129; 	R(RETN)	// 4995 retn ;~ 01C2:2129
+cs=0x1c2;eip=0x002129; 	R(RETN(0))	// 4995 retn ;~ 01C2:2129
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4915,7 +4915,7 @@ cs=0x1c2;eip=0x002129; 	R(RETN)	// 4995 retn ;~ 01C2:2129
 
 
 
- void sub_3d9a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3d9a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -4945,13 +4945,13 @@ cs=0x1c2;eip=0x002146; 	X(POP(ax))	// 5026 pop     ax ;~ 01C2:2146
 cs=0x1c2;eip=0x002147; 	X(POP(cx))	// 5027 pop     cx ;~ 01C2:2147
 cs=0x1c2;eip=0x002148; 	X(POP(di))	// 5028 pop     di ;~ 01C2:2148
 cs=0x1c2;eip=0x002149; 	X(POP(si))	// 5029 pop     si ;~ 01C2:2149
-cs=0x1c2;eip=0x00214a; 	R(RETN)	// 5030 retn ;~ 01C2:214A
+cs=0x1c2;eip=0x00214a; 	R(RETN(0))	// 5030 retn ;~ 01C2:214A
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -4965,7 +4965,7 @@ cs=0x1c2;eip=0x00214a; 	R(RETN)	// 5030 retn ;~ 01C2:214A
 
 
 
- void sub_3dc0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3dc0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5054,13 +5054,13 @@ cs=0x1c2;eip=0x0021eb; 	R(JZ(loc_3e30))	// 5133 jz      short loc_3E30 ;~ 01C2:2
 cs=0x1c2;eip=0x0021ed; 	T(ADD(si, 0x0FFFA))	// 5134 add     si, 0FFFAh ;~ 01C2:21ED
 cs=0x1c2;eip=0x0021f0; 	R(JMP(loc_3e30))	// 5135 jmp     short loc_3E30 ;~ 01C2:21F0
 locret_3e62:	// 5015 
-cs=0x1c2;eip=0x0021f2; 	R(RETN)	// 5139 retn ;~ 01C2:21F2
+cs=0x1c2;eip=0x0021f2; 	R(RETN(0))	// 5139 retn ;~ 01C2:21F2
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5082,7 +5082,7 @@ cs=0x1c2;eip=0x0021f2; 	R(RETN)	// 5139 retn ;~ 01C2:21F2
 
 
 
- void sub_3e63(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3e63(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5110,7 +5110,7 @@ cs=0x1c2;eip=0x002225; 	R(JNC(locret_3e9c))	// 5170 jnb     short locret_3E9C ;~
 cs=0x1c2;eip=0x002227; 	T(CMP(bx, 0x15))	// 5171 cmp     bx, 15h ;~ 01C2:2227
 cs=0x1c2;eip=0x00222a; 	R(JNC(loc_3e9d))	// 5172 jnb     short loc_3E9D ;~ 01C2:222A
 locret_3e9c:	// 5019 
-cs=0x1c2;eip=0x00222c; 	R(RETN)	// 5175 retn ;~ 01C2:222C
+cs=0x1c2;eip=0x00222c; 	R(RETN(0))	// 5175 retn ;~ 01C2:222C
 loc_3e9d:	// 5020 
 cs=0x1c2;eip=0x00222d; 	T(MOV(si, 0x828))	// 5179 mov     si, 828h ;~ 01C2:222D
 loc_3ea0:	// 5021 
@@ -5192,13 +5192,13 @@ cs=0x1c2;eip=0x0022ef; 	T(MOV(di, 0x894))	// 5261 mov     di, 894h ;~ 01C2:22EF
 cs=0x1c2;eip=0x0022f2; 	X(MOV(word_65ad, di))	// 5262 mov     word_65AD, di ;~ 01C2:22F2
 cs=0x1c2;eip=0x0022f6; 	R(CALL(sub_3c4f,0))	// 5263 call    sub_3C4F ;~ 01C2:22F6
 locret_3f69:	// 5030 
-cs=0x1c2;eip=0x0022f9; 	R(RETN)	// 5266 retn ;~ 01C2:22F9
+cs=0x1c2;eip=0x0022f9; 	R(RETN(0))	// 5266 retn ;~ 01C2:22F9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5224,7 +5224,7 @@ cs=0x1c2;eip=0x0022f9; 	R(RETN)	// 5266 retn ;~ 01C2:22F9
 
 
 
- void sub_3f6a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_3f6a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5253,7 +5253,7 @@ cs=0x1c2;eip=0x00232e; 	T(CMP(bx, 0x15))	// 5298 cmp     bx, 15h ;~ 01C2:232E
 cs=0x1c2;eip=0x002331; 	R(JC(locret_3fa5))	// 5299 jb      short locret_3FA5 ;~ 01C2:2331
 cs=0x1c2;eip=0x002333; 	R(JMP(loc_3fa6))	// 5300 jmp     short loc_3FA6 ;~ 01C2:2333
 locret_3fa5:	// 5034 
-cs=0x1c2;eip=0x002335; 	R(RETN)	// 5305 retn ;~ 01C2:2335
+cs=0x1c2;eip=0x002335; 	R(RETN(0))	// 5305 retn ;~ 01C2:2335
 loc_3fa6:	// 5035 
 cs=0x1c2;eip=0x002336; 	T(MOV(si, 0x844))	// 5309 mov     si, 844h ;~ 01C2:2336
 loc_3fa9:	// 5036 
@@ -5335,13 +5335,13 @@ cs=0x1c2;eip=0x0023f8; 	T(MOV(di, 0x8A5))	// 5391 mov     di, 8A5h ;~ 01C2:23F8
 cs=0x1c2;eip=0x0023fb; 	X(MOV(word_65ad, di))	// 5392 mov     word_65AD, di ;~ 01C2:23FB
 cs=0x1c2;eip=0x0023ff; 	R(CALL(sub_3c4f,0))	// 5393 call    sub_3C4F ;~ 01C2:23FF
 locret_4072:	// 5045 
-cs=0x1c2;eip=0x002402; 	R(RETN)	// 5396 retn ;~ 01C2:2402
+cs=0x1c2;eip=0x002402; 	R(RETN(0))	// 5396 retn ;~ 01C2:2402
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5367,7 +5367,7 @@ cs=0x1c2;eip=0x002402; 	R(RETN)	// 5396 retn ;~ 01C2:2402
 
 
 
- void sub_4073(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4073(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5396,7 +5396,7 @@ cs=0x1c2;eip=0x002437; 	T(CMP(bx, 0x15))	// 5428 cmp     bx, 15h ;~ 01C2:2437
 cs=0x1c2;eip=0x00243a; 	R(JC(locret_40ae))	// 5429 jb      short locret_40AE ;~ 01C2:243A
 cs=0x1c2;eip=0x00243c; 	R(JMP(loc_40af))	// 5430 jmp     short loc_40AF ;~ 01C2:243C
 locret_40ae:	// 5049 
-cs=0x1c2;eip=0x00243e; 	R(RETN)	// 5435 retn ;~ 01C2:243E
+cs=0x1c2;eip=0x00243e; 	R(RETN(0))	// 5435 retn ;~ 01C2:243E
 loc_40af:	// 5050 
 cs=0x1c2;eip=0x00243f; 	T(MOV(si, 0x860))	// 5439 mov     si, 860h ;~ 01C2:243F
 loc_40b2:	// 5051 
@@ -5478,7 +5478,7 @@ cs=0x1c2;eip=0x002501; 	T(MOV(di, 0x8B6))	// 5521 mov     di, 8B6h ;~ 01C2:2501
 cs=0x1c2;eip=0x002504; 	X(MOV(word_65ad, di))	// 5522 mov     word_65AD, di ;~ 01C2:2504
 cs=0x1c2;eip=0x002508; 	R(CALL(sub_3c4f,0))	// 5523 call    sub_3C4F ;~ 01C2:2508
 locret_417b:	// 5060 
-cs=0x1c2;eip=0x00250b; 	R(RETN)	// 5526 retn ;~ 01C2:250B
+cs=0x1c2;eip=0x00250b; 	R(RETN(0))	// 5526 retn ;~ 01C2:250B
 loc_417c:	// 5061 
 cs=0x1c2;eip=0x00250c; 	X(MOV(byte_6e13, 2))	// 5532 mov     byte_6E13, 2 ;~ 01C2:250C
 cs=0x1c2;eip=0x002511; 	X(MOV(word_65c5, 0x10))	// 5533 mov     word_65C5, 10h ;~ 01C2:2511
@@ -5501,7 +5501,7 @@ cs=0x1c2;eip=0x002540; 	T(CMP(bx, 0x15))	// 5555 cmp     bx, 15h ;~ 01C2:2540
 cs=0x1c2;eip=0x002543; 	R(JC(locret_41b7))	// 5556 jb      short locret_41B7 ;~ 01C2:2543
 cs=0x1c2;eip=0x002545; 	R(JMP(loc_41b8))	// 5557 jmp     short loc_41B8 ;~ 01C2:2545
 locret_41b7:	// 5065 
-cs=0x1c2;eip=0x002547; 	R(RETN)	// 5562 retn ;~ 01C2:2547
+cs=0x1c2;eip=0x002547; 	R(RETN(0))	// 5562 retn ;~ 01C2:2547
 loc_41b8:	// 5066 
 cs=0x1c2;eip=0x002548; 	T(MOV(si, 0x87C))	// 5566 mov     si, 87Ch ;~ 01C2:2548
 loc_41bb:	// 5067 
@@ -5581,13 +5581,13 @@ cs=0x1c2;eip=0x002603; 	T(MOV(di, 0x8CF))	// 5646 mov     di, 8CFh ;~ 01C2:2603
 cs=0x1c2;eip=0x002606; 	X(MOV(word_65ad, di))	// 5647 mov     word_65AD, di ;~ 01C2:2606
 cs=0x1c2;eip=0x00260a; 	R(CALL(sub_3c4f,0))	// 5648 call    sub_3C4F ;~ 01C2:260A
 ret_1c2_260d:	// 5076 
-cs=0x1c2;eip=0x00260d; 	R(RETN)	// 5649 retn ;~ 01C2:260D
+cs=0x1c2;eip=0x00260d; 	R(RETN(0))	// 5649 retn ;~ 01C2:260D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5629,7 +5629,7 @@ cs=0x1c2;eip=0x00260d; 	R(RETN)	// 5649 retn ;~ 01C2:260D
 
 
 
- void sub_427e(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_427e(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5651,13 +5651,13 @@ cs=0x1c2;eip=0x002626; 	T(MOV(di, 0x8E8))	// 5667 mov     di, 8E8h ;~ 01C2:2626
 cs=0x1c2;eip=0x002629; 	X(MOV(word_65ad, di))	// 5668 mov     word_65AD, di ;~ 01C2:2629
 cs=0x1c2;eip=0x00262d; 	R(CALL(sub_3c4f,0))	// 5669 call    sub_3C4F ;~ 01C2:262D
 ret_1c2_2630:	// 5078 
-cs=0x1c2;eip=0x002630; 	R(RETN)	// 5670 retn ;~ 01C2:2630
+cs=0x1c2;eip=0x002630; 	R(RETN(0))	// 5670 retn ;~ 01C2:2630
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5670,7 +5670,7 @@ cs=0x1c2;eip=0x002630; 	R(RETN)	// 5670 retn ;~ 01C2:2630
 
 
 
- void sub_42a1(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_42a1(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5699,13 +5699,13 @@ ret_1c2_2665:	// 5082
 cs=0x1c2;eip=0x002665; 	X(POP(ax))	// 5692 pop     ax ;~ 01C2:2665
 cs=0x1c2;eip=0x002666; 	X(MOV(word_6e2e, ax))	// 5693 mov     word_6E2E, ax ;~ 01C2:2666
 cs=0x1c2;eip=0x002669; 	X(MOV(word_65b1, 0))	// 5694 mov     word_65B1, 0 ;~ 01C2:2669
-cs=0x1c2;eip=0x00266f; 	R(RETN)	// 5695 retn ;~ 01C2:266F
+cs=0x1c2;eip=0x00266f; 	R(RETN(0))	// 5695 retn ;~ 01C2:266F
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5720,7 +5720,7 @@ cs=0x1c2;eip=0x00266f; 	R(RETN)	// 5695 retn ;~ 01C2:266F
 
 
 
- void sub_42e0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_42e0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5744,13 +5744,13 @@ cs=0x1c2;eip=0x002694; 	T(MOV(bx, 0x64))	// 5712 mov     bx, 64h ; 'd' ;~ 01C2:2
 cs=0x1c2;eip=0x002697; 	R(CALL(sub_4311,0))	// 5713 call    sub_4311 ;~ 01C2:2697
 ret_1c2_269a:	// 5086 
 cs=0x1c2;eip=0x00269a; 	X(MOV(word_65b1, 0))	// 5714 mov     word_65B1, 0 ;~ 01C2:269A
-cs=0x1c2;eip=0x0026a0; 	R(RETN)	// 5715 retn ;~ 01C2:26A0
+cs=0x1c2;eip=0x0026a0; 	R(RETN(0))	// 5715 retn ;~ 01C2:26A0
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5765,7 +5765,7 @@ cs=0x1c2;eip=0x0026a0; 	R(RETN)	// 5715 retn ;~ 01C2:26A0
 
 
 
- void sub_4311(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4311(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5800,13 +5800,13 @@ cs=0x1c2;eip=0x0026d5; 	R(JNZ(loc_4329))	// 5750 jnz     short loc_4329 ;~ 01C2:
 loc_4347:	// 5088 
 cs=0x1c2;eip=0x0026d7; 	X(POP(ds))	// 5753 pop     ds ;~ 01C2:26D7
 cs=0x1c2;eip=0x0026d8; 	X(POP(es))	// 5755 pop     es ;~ 01C2:26D8
-cs=0x1c2;eip=0x0026d9; 	R(RETN)	// 5757 retn ;~ 01C2:26D9
+cs=0x1c2;eip=0x0026d9; 	R(RETN(0))	// 5757 retn ;~ 01C2:26D9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5819,7 +5819,7 @@ cs=0x1c2;eip=0x0026d9; 	R(RETN)	// 5757 retn ;~ 01C2:26D9
 
 
 
- void sub_434a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_434a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5900,13 +5900,13 @@ cs=0x1c2;eip=0x002775; 	T(MOV(si, 0x730))	// 5844 mov     si, 730h ;~ 01C2:2775
 loc_43e8:	// 5094 
 cs=0x1c2;eip=0x002778; 	X(MOV(word_67de, si))	// 5847 mov     word_67DE, si ;~ 01C2:2778
 locret_43ec:	// 5095 
-cs=0x1c2;eip=0x00277c; 	R(RETN)	// 5850 retn ;~ 01C2:277C
+cs=0x1c2;eip=0x00277c; 	R(RETN(0))	// 5850 retn ;~ 01C2:277C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -5924,7 +5924,7 @@ cs=0x1c2;eip=0x00277c; 	R(RETN)	// 5850 retn ;~ 01C2:277C
 
 
 
- void sub_43ed(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_43ed(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -5989,7 +5989,7 @@ cs=0x1c2;eip=0x002810; 	T(MOV(cx, 0x0B8))	// 5920 mov     cx, 0B8h ; '¸' ;~ 01C2
 cs=0x1c2;eip=0x002813; 	T(MOV(ax, 0x5555))	// 5921 mov     ax, 5555h ;~ 01C2:2813	// 5922 rep stosw ;~ 01C2:2816
 cs=0x1c2;eip=0x002816; 	X(	REP STOSW)	// 5922 rep stosw ;~ 01C2:2816
 cs=0x1c2;eip=0x002818; 	X(POP(es))	// 5923 pop     es ;~ 01C2:2818
-cs=0x1c2;eip=0x002819; 	R(RETN)	// 5925 retn ;~ 01C2:2819
+cs=0x1c2;eip=0x002819; 	R(RETN(0))	// 5925 retn ;~ 01C2:2819
 loc_448a:	// 5101 
 cs=0x1c2;eip=0x00281a; 	T(MOV(cx, 0x20))	// 5929 mov     cx, 20h ; ' ' ;~ 01C2:281A	// 5930 rep movsw ;~ 01C2:281D
 cs=0x1c2;eip=0x00281d; 	X(	REP MOVSW)	// 5930 rep movsw ;~ 01C2:281D
@@ -6005,7 +6005,7 @@ cs=0x1c2;eip=0x002834; 	R(JMP(loc_4457))	// 5937 jmp     short loc_4457 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -6022,7 +6022,7 @@ cs=0x1c2;eip=0x002834; 	R(JMP(loc_4457))	// 5937 jmp     short loc_4457 ;~ 01C2:
 
 
 
- void sub_44a6(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_44a6(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -6118,13 +6118,13 @@ ret_1c2_28d5:	// 5113
 cs=0x1c2;eip=0x0028d5; 	R(CALL(sub_2edf,0))	// 6044 call    sub_2EDF ;~ 01C2:28D5
 ret_1c2_28d8:	// 5114 
 cs=0x1c2;eip=0x0028d8; 	X(POP(es))	// 6045 pop     es ;~ 01C2:28D8
-cs=0x1c2;eip=0x0028d9; 	R(RETN)	// 6047 retn ;~ 01C2:28D9
+cs=0x1c2;eip=0x0028d9; 	R(RETN(0))	// 6047 retn ;~ 01C2:28D9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -6148,7 +6148,7 @@ cs=0x1c2;eip=0x0028d9; 	R(RETN)	// 6047 retn ;~ 01C2:28D9
 
 
 
- void sub_4550(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4550(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -6162,7 +6162,7 @@ cs=0x1c2;eip=0x0028e5; 	R(JNZ(loc_4569))	// 6059 jnz     short loc_4569 ;~ 01C2:
 cs=0x1c2;eip=0x0028e7; 	T(MOV(al, byte_6a21))	// 6060 mov     al, byte_6A21 ;~ 01C2:28E7
 cs=0x1c2;eip=0x0028ea; 	T(OR(al, al))	// 6061 or      al, al ;~ 01C2:28EA
 cs=0x1c2;eip=0x0028ec; 	R(JNZ(loc_455f))	// 6062 jnz     short loc_455F ;~ 01C2:28EC
-cs=0x1c2;eip=0x0028ee; 	R(RETN)	// 6063 retn ;~ 01C2:28EE
+cs=0x1c2;eip=0x0028ee; 	R(RETN(0))	// 6063 retn ;~ 01C2:28EE
 loc_455f:	// 5115 
 cs=0x1c2;eip=0x0028ef; 	T(INC(al))	// 6067 inc     al ;~ 01C2:28EF
 cs=0x1c2;eip=0x0028f1; 	X(MOV(byte_6a21, al))	// 6068 mov     byte_6A21, al ;~ 01C2:28F1
@@ -6186,7 +6186,7 @@ loc_4588:	// 5118
 cs=0x1c2;eip=0x002918; 	X(MOV(word_6a27, ax))	// 6092 mov     word_6A27, ax ;~ 01C2:2918
 cs=0x1c2;eip=0x00291b; 	T(CMP(ax, 0x200))	// 6093 cmp     ax, 200h ;~ 01C2:291B
 cs=0x1c2;eip=0x00291e; 	R(JC(loc_4591))	// 6094 jb      short loc_4591 ;~ 01C2:291E
-cs=0x1c2;eip=0x002920; 	R(RETN)	// 6095 retn ;~ 01C2:2920
+cs=0x1c2;eip=0x002920; 	R(RETN(0))	// 6095 retn ;~ 01C2:2920
 loc_4591:	// 5119 
 cs=0x1c2;eip=0x002921; 	T(XOR(cx, cx))	// 6099 xor     cx, cx ;~ 01C2:2921
 loc_4593:	// 5120 
@@ -6268,7 +6268,7 @@ cs=0x1c2;eip=0x0029d6; 	X(MOV(byte_6a21, 0))	// 6182 mov     byte_6A21, 0 ;~ 01C
 cs=0x1c2;eip=0x0029db; 	X(MOV(byte_6585, 0x0FF))	// 6183 mov     byte_6585, 0FFh ;~ 01C2:29DB
 loc_4650:	// 5127 
 cs=0x1c2;eip=0x0029e0; 	X(MOV(word_65b1, 0))	// 6186 mov     word_65B1, 0 ;~ 01C2:29E0
-cs=0x1c2;eip=0x0029e6; 	R(RETN)	// 6187 retn ;~ 01C2:29E6
+cs=0x1c2;eip=0x0029e6; 	R(RETN(0))	// 6187 retn ;~ 01C2:29E6
 loc_4661:	// 5128 
 cs=0x1c2;eip=0x0029f1; 	X(MOV(word_65c5, 0x1A))	// 6199 mov     word_65C5, 1Ah ;~ 01C2:29F1
 cs=0x1c2;eip=0x0029f7; 	X(MOV(byte_6a2a, 0x1A))	// 6200 mov     byte_6A2A, 1Ah ;~ 01C2:29F7
@@ -6337,7 +6337,7 @@ cs=0x1c2;eip=0x002ae1; 	T(CMP(bx, 0x15))	// 6281 cmp     bx, 15h ;~ 01C2:2AE1
 cs=0x1c2;eip=0x002ae4; 	R(JC(locret_4758))	// 6282 jb      short locret_4758 ;~ 01C2:2AE4
 cs=0x1c2;eip=0x002ae6; 	R(JMP(loc_4759))	// 6283 jmp     short loc_4759 ;~ 01C2:2AE6
 locret_4758:	// 5140 
-cs=0x1c2;eip=0x002ae8; 	R(RETN)	// 6288 retn ;~ 01C2:2AE8
+cs=0x1c2;eip=0x002ae8; 	R(RETN(0))	// 6288 retn ;~ 01C2:2AE8
 loc_4759:	// 5141 
 cs=0x1c2;eip=0x002ae9; 	T(LODSW)	// 6293 lodsw ;~ 01C2:2AE9
 cs=0x1c2;eip=0x002aea; 	T(ADD(si, 2))	// 6294 add     si, 2 ;~ 01C2:2AEA
@@ -6415,13 +6415,13 @@ cs=0x1c2;eip=0x002ba3; 	T(MOV(di, word_6a2d))	// 6370 mov     di, word_6A2D ;~ 0
 cs=0x1c2;eip=0x002ba7; 	X(MOV(word_65ad, di))	// 6371 mov     word_65AD, di ;~ 01C2:2BA7
 cs=0x1c2;eip=0x002bab; 	R(CALL(sub_3c4f,0))	// 6372 call    sub_3C4F ;~ 01C2:2BAB
 ret_1c2_2bae:	// 5150 
-cs=0x1c2;eip=0x002bae; 	R(RETN)	// 6373 retn ;~ 01C2:2BAE
+cs=0x1c2;eip=0x002bae; 	R(RETN(0))	// 6373 retn ;~ 01C2:2BAE
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -6468,7 +6468,7 @@ cs=0x1c2;eip=0x002bae; 	R(RETN)	// 6373 retn ;~ 01C2:2BAE
 
 
 
- void sub_481f(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_481f(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -6479,7 +6479,7 @@ cs=0x1c2;eip=0x002bae; 	R(RETN)	// 6373 retn ;~ 01C2:2BAE
 cs=0x1c2;eip=0x002baf; 	T(CMP(bx, 0x1F4))	// 6380 cmp     bx, 1F4h ;~ 01C2:2BAF
 cs=0x1c2;eip=0x002bb3; 	R(JC(loc_4826))	// 6381 jb      short loc_4826 ;~ 01C2:2BB3
 locret_4825:	// 5151 
-cs=0x1c2;eip=0x002bb5; 	R(RETN)	// 6385 retn ;~ 01C2:2BB5
+cs=0x1c2;eip=0x002bb5; 	R(RETN(0))	// 6385 retn ;~ 01C2:2BB5
 loc_4826:	// 5152 
 cs=0x1c2;eip=0x002bb6; 	T(MOV(di, word_6e2a))	// 6389 mov     di, word_6E2A ;~ 01C2:2BB6
 cs=0x1c2;eip=0x002bba; 	T(ADD(di, 0x1FD8))	// 6390 add     di, 1FD8h ;~ 01C2:2BBA
@@ -6540,13 +6540,13 @@ cs=0x1c2;eip=0x002c22; 	T(DEC(bl))	// 6452 dec     bl ;~ 01C2:2C22
 cs=0x1c2;eip=0x002c24; 	R(JNZ(loc_4870))	// 6453 jnz     short loc_4870 ;~ 01C2:2C24
 loc_4896:	// 5159 
 cs=0x1c2;eip=0x002c26; 	X(POP(es))	// 6456 pop     es ;~ 01C2:2C26
-cs=0x1c2;eip=0x002c27; 	R(RETN)	// 6458 retn ;~ 01C2:2C27
+cs=0x1c2;eip=0x002c27; 	R(RETN(0))	// 6458 retn ;~ 01C2:2C27
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -6566,7 +6566,7 @@ cs=0x1c2;eip=0x002c27; 	R(RETN)	// 6458 retn ;~ 01C2:2C27
 
 
 
- void sub_4966(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4966(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -6577,7 +6577,7 @@ cs=0x1c2;eip=0x002c27; 	R(RETN)	// 6458 retn ;~ 01C2:2C27
 cs=0x1c2;eip=0x002cf6; 	T(MOV(al, byte_6db6))	// 6586 mov     al, byte_6DB6 ;~ 01C2:2CF6
 cs=0x1c2;eip=0x002cf9; 	T(OR(al, al))	// 6587 or      al, al ;~ 01C2:2CF9
 cs=0x1c2;eip=0x002cfb; 	R(JNZ(loc_496e))	// 6588 jnz     short loc_496E ;~ 01C2:2CFB
-cs=0x1c2;eip=0x002cfd; 	R(RETN)	// 6589 retn ;~ 01C2:2CFD
+cs=0x1c2;eip=0x002cfd; 	R(RETN(0))	// 6589 retn ;~ 01C2:2CFD
 loc_496e:	// 5173 
 cs=0x1c2;eip=0x002cfe; 	T(INC(al))	// 6593 inc     al ;~ 01C2:2CFE
 cs=0x1c2;eip=0x002d00; 	T(CMP(al, 6))	// 6594 cmp     al, 6 ;~ 01C2:2D00
@@ -6603,7 +6603,7 @@ cs=0x1c2;eip=0x002d27; 	T(CMP(ax, 0x3E1))	// 6619 cmp     ax, 3E1h ;~ 01C2:2D27
 cs=0x1c2;eip=0x002d2a; 	R(JNC(loc_49a2))	// 6620 jnb     short loc_49A2 ;~ 01C2:2D2A
 loc_499c:	// 5177 
 cs=0x1c2;eip=0x002d2c; 	X(MOV(byte_6db6, 0))	// 6623 mov     byte_6DB6, 0 ;~ 01C2:2D2C
-cs=0x1c2;eip=0x002d31; 	R(RETN)	// 6624 retn ;~ 01C2:2D31
+cs=0x1c2;eip=0x002d31; 	R(RETN(0))	// 6624 retn ;~ 01C2:2D31
 loc_49a2:	// 5178 
 cs=0x1c2;eip=0x002d32; 	T(ADD(ax, 0x0A0))	// 6629 add     ax, 0A0h ; ' ' ;~ 01C2:2D32
 cs=0x1c2;eip=0x002d35; 	T(CMP(ax, 0x140))	// 6630 cmp     ax, 140h ;~ 01C2:2D35
@@ -6718,13 +6718,13 @@ cs=0x1c2;eip=0x002e2a; 	T(CMP(byte_6db6, 6))	// 6756 cmp     byte_6DB6, 6 ;~ 01C
 cs=0x1c2;eip=0x002e2f; 	R(JNZ(locret_4aa6))	// 6757 jnz     short locret_4AA6 ;~ 01C2:2E2F
 cs=0x1c2;eip=0x002e31; 	X(MOV(byte_6db6, 0))	// 6758 mov     byte_6DB6, 0 ;~ 01C2:2E31
 locret_4aa6:	// 5192 
-cs=0x1c2;eip=0x002e36; 	R(RETN)	// 6761 retn ;~ 01C2:2E36
+cs=0x1c2;eip=0x002e36; 	R(RETN(0))	// 6761 retn ;~ 01C2:2E36
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -6755,7 +6755,7 @@ cs=0x1c2;eip=0x002e36; 	R(RETN)	// 6761 retn ;~ 01C2:2E36
 
 
 
- void sub_4ab0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4ab0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -6775,7 +6775,7 @@ cs=0x1c2;eip=0x002e51; 	T(LODSW)	// 6780 lodsw ;~ 01C2:2E51
 cs=0x1c2;eip=0x002e52; 	R(CALL(sub_4e1d,0))	// 6781 call    sub_4E1D ;~ 01C2:2E52
 ret_1c2_2e55:	// 5193 
 cs=0x1c2;eip=0x002e55; 	R(JNC(loc_4ac8))	// 6782 jnb     short loc_4AC8 ;~ 01C2:2E55
-cs=0x1c2;eip=0x002e57; 	R(RETN)	// 6783 retn ;~ 01C2:2E57
+cs=0x1c2;eip=0x002e57; 	R(RETN(0))	// 6783 retn ;~ 01C2:2E57
 loc_4ac8:	// 5194 
 cs=0x1c2;eip=0x002e58; 	T(MOV(di, word_6e2a))	// 6787 mov     di, word_6E2A ;~ 01C2:2E58
 cs=0x1c2;eip=0x002e5c; 	T(CMP(ax, cx))	// 6788 cmp     ax, cx ;~ 01C2:2E5C
@@ -6784,7 +6784,7 @@ cs=0x1c2;eip=0x002e60; 	T(CMP(bx, dx))	// 6790 cmp     bx, dx ;~ 01C2:2E60
 cs=0x1c2;eip=0x002e62; 	R(JNZ(loc_4ad8))	// 6791 jnz     short loc_4AD8 ;~ 01C2:2E62
 cs=0x1c2;eip=0x002e64; 	R(CALL(sub_4dcd,0))	// 6792 call    sub_4DCD ;~ 01C2:2E64
 locret_4ad7:	// 5195 
-cs=0x1c2;eip=0x002e67; 	R(RETN)	// 6796 retn ;~ 01C2:2E67
+cs=0x1c2;eip=0x002e67; 	R(RETN(0))	// 6796 retn ;~ 01C2:2E67
 loc_4ad8:	// 5196 
 cs=0x1c2;eip=0x002e68; 	X(PUSH(ax))	// 6801 push    ax ;~ 01C2:2E68
 cs=0x1c2;eip=0x002e69; 	T(SUB(ax, cx))	// 6802 sub     ax, cx ;~ 01C2:2E69
@@ -6998,7 +6998,7 @@ cs=0x1c2;eip=0x00302e; 	T(CMP(cx, 1))	// 7058 cmp     cx, 1 ;~ 01C2:302E
 cs=0x1c2;eip=0x003031; 	R(JS(locret_4ca6))	// 7059 js      short locret_4CA6 ;~ 01C2:3031
 cs=0x1c2;eip=0x003033; 	R(JMP(loc_4c1b))	// 7060 jmp     loc_4C1B ;~ 01C2:3033
 locret_4ca6:	// 5228 
-cs=0x1c2;eip=0x003036; 	R(RETN)	// 7064 retn ;~ 01C2:3036
+cs=0x1c2;eip=0x003036; 	R(RETN(0))	// 7064 retn ;~ 01C2:3036
 loc_4ca7:	// 5229 
 cs=0x1c2;eip=0x003037; 	T(SUB(bp, ax))	// 7068 sub     bp, ax ;~ 01C2:3037
 cs=0x1c2;eip=0x003039; 	X(PUSH(cx))	// 7069 push    cx ;~ 01C2:3039
@@ -7133,7 +7133,7 @@ cs=0x1c2;eip=0x00315a; 	R(JMP(locret_4ad7))	// 7229 jmp     locret_4AD7 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7201,7 +7201,7 @@ cs=0x1c2;eip=0x00315a; 	R(JMP(locret_4ad7))	// 7229 jmp     locret_4AD7 ;~ 01C2:
 
 
 
- void sub_4dcd(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4dcd(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7241,13 +7241,13 @@ loc_4e13:	// 5253
 cs=0x1c2;eip=0x0031a3; 	T(SHR(bx, 1))	// 7273 shr     bx, 1 ;~ 01C2:31A3
 cs=0x1c2;eip=0x0031a5; 	X(OR(*(raddr(es,di)), ah))	// 7274 or      es:[di], ah ;~ 01C2:31A5
 cs=0x1c2;eip=0x0031a8; 	X(OR(*(raddr(es,di+1)), al))	// 7275 or      es:[di+1], al ;~ 01C2:31A8
-cs=0x1c2;eip=0x0031ac; 	R(RETN)	// 7276 retn ;~ 01C2:31AC
+cs=0x1c2;eip=0x0031ac; 	R(RETN(0))	// 7276 retn ;~ 01C2:31AC
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7262,7 +7262,7 @@ cs=0x1c2;eip=0x0031ac; 	R(RETN)	// 7276 retn ;~ 01C2:31AC
 
 
 
- void sub_4e1d(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4e1d(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7363,16 +7363,16 @@ cs=0x1c2;eip=0x003265; 	T(CMP(cx, word_6e2e))	// 7368 cmp     cx, word_6E2E ;~ 0
 cs=0x1c2;eip=0x003269; 	R(JS(loc_4edd))	// 7369 js      short loc_4EDD ;~ 01C2:3269
 loc_4edb:	// 5280 
 cs=0x1c2;eip=0x00326b; 	T(CLC)	// 7372 clc ;~ 01C2:326B
-cs=0x1c2;eip=0x00326c; 	R(RETN)	// 7373 retn ;~ 01C2:326C
+cs=0x1c2;eip=0x00326c; 	R(RETN(0))	// 7373 retn ;~ 01C2:326C
 loc_4edd:	// 5281 
 cs=0x1c2;eip=0x00326d; 	T(STC)	// 7378 stc ;~ 01C2:326D
-cs=0x1c2;eip=0x00326e; 	R(RETN)	// 7379 retn ;~ 01C2:326E
+cs=0x1c2;eip=0x00326e; 	R(RETN(0))	// 7379 retn ;~ 01C2:326E
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7411,7 +7411,7 @@ cs=0x1c2;eip=0x00326e; 	R(RETN)	// 7379 retn ;~ 01C2:326E
 
 
 
- void sub_4edf(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4edf(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7435,13 +7435,13 @@ cs=0x1c2;eip=0x003295; 	X(IDIV2(word_6eb0))	// 7400 idiv    word_6EB0 ;~ 01C2:32
 cs=0x1c2;eip=0x003299; 	T(ADD(bx, ax))	// 7401 add     bx, ax ;~ 01C2:3299
 cs=0x1c2;eip=0x00329b; 	T(MOV(ax, word_6eaa))	// 7402 mov     ax, word_6EAA ;~ 01C2:329B
 cs=0x1c2;eip=0x00329e; 	T(MOV(dx, word_6eae))	// 7403 mov     dx, word_6EAE ;~ 01C2:329E
-cs=0x1c2;eip=0x0032a2; 	R(RETN)	// 7404 retn ;~ 01C2:32A2
+cs=0x1c2;eip=0x0032a2; 	R(RETN(0))	// 7404 retn ;~ 01C2:32A2
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7452,7 +7452,7 @@ cs=0x1c2;eip=0x0032a2; 	R(RETN)	// 7404 retn ;~ 01C2:32A2
 
 
 
- void sub_4f13(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f13(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7466,13 +7466,13 @@ cs=0x1c2;eip=0x0032a7; 	T(MOV(cx, di))	// 7415 mov     cx, di ;~ 01C2:32A7
 cs=0x1c2;eip=0x0032a9; 	T(MOV(di, bx))	// 7416 mov     di, bx ;~ 01C2:32A9
 cs=0x1c2;eip=0x0032ab; 	T(MOV(bx, dx))	// 7417 mov     bx, dx ;~ 01C2:32AB
 cs=0x1c2;eip=0x0032ad; 	T(MOV(dx, di))	// 7418 mov     dx, di ;~ 01C2:32AD
-cs=0x1c2;eip=0x0032af; 	R(RETN)	// 7419 retn ;~ 01C2:32AF
+cs=0x1c2;eip=0x0032af; 	R(RETN(0))	// 7419 retn ;~ 01C2:32AF
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7483,7 +7483,7 @@ cs=0x1c2;eip=0x0032af; 	R(RETN)	// 7419 retn ;~ 01C2:32AF
 
 
 
- void sub_4f58(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f58(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7493,13 +7493,13 @@ cs=0x1c2;eip=0x0032af; 	R(RETN)	// 7419 retn ;~ 01C2:32AF
     _begin:
 cs=0x1c2;eip=0x0032e8; 	T(MOV(ah, 0))	// 7478 mov     ah, 0 ;~ 01C2:32E8
 cs=0x1c2;eip=0x0032ea; 	R(_INT(0x16))	// 7479 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:32EA
-cs=0x1c2;eip=0x0032ec; 	R(RETN)	// 7481 retn ;~ 01C2:32EC
+cs=0x1c2;eip=0x0032ec; 	R(RETN(0))	// 7481 retn ;~ 01C2:32EC
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7510,7 +7510,7 @@ cs=0x1c2;eip=0x0032ec; 	R(RETN)	// 7481 retn ;~ 01C2:32EC
 
 
 
- void sub_4f5d(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f5d(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7528,13 +7528,13 @@ ret_1c2_32f6:	// 5288
 cs=0x1c2;eip=0x0032f6; 	R(JMP(loc_4f5e))	// 7496 jmp     short loc_4F5E ;~ 01C2:32F6
 loc_4f68:	// 5289 
 cs=0x1c2;eip=0x0032f8; 	X(POP(ax))	// 7500 pop     ax ;~ 01C2:32F8
-cs=0x1c2;eip=0x0032f9; 	R(RETN)	// 7501 retn ;~ 01C2:32F9
+cs=0x1c2;eip=0x0032f9; 	R(RETN(0))	// 7501 retn ;~ 01C2:32F9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7549,7 +7549,7 @@ cs=0x1c2;eip=0x0032f9; 	R(RETN)	// 7501 retn ;~ 01C2:32F9
 
 
 
- void sub_4f6a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f6a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7567,13 +7567,13 @@ cs=0x1c2;eip=0x003308; 	T(MOV(ax, 4))	// 7517 mov     ax, 4 ;~ 01C2:3308
 cs=0x1c2;eip=0x00330b; 	R(_INT(0x10))	// 7518 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 01C2:330B
 cs=0x1c2;eip=0x00330d; 	X(POP(ds))	// 7520 pop     ds ;~ 01C2:330D
 cs=0x1c2;eip=0x00330e; 	X(POP(ax))	// 7522 pop     ax ;~ 01C2:330E
-cs=0x1c2;eip=0x00330f; 	R(RETN)	// 7523 retn ;~ 01C2:330F
+cs=0x1c2;eip=0x00330f; 	R(RETN(0))	// 7523 retn ;~ 01C2:330F
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7584,7 +7584,7 @@ cs=0x1c2;eip=0x00330f; 	R(RETN)	// 7523 retn ;~ 01C2:330F
 
 
 
- void sub_4f80(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f80(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7602,13 +7602,13 @@ cs=0x1c2;eip=0x00331e; 	T(MOV(ax, 2))	// 7538 mov     ax, 2 ;~ 01C2:331E
 cs=0x1c2;eip=0x003321; 	R(_INT(0x10))	// 7539 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 01C2:3321
 cs=0x1c2;eip=0x003323; 	X(POP(ds))	// 7541 pop     ds ;~ 01C2:3323
 cs=0x1c2;eip=0x003324; 	X(POP(ax))	// 7543 pop     ax ;~ 01C2:3324
-cs=0x1c2;eip=0x003325; 	R(RETN)	// 7544 retn ;~ 01C2:3325
+cs=0x1c2;eip=0x003325; 	R(RETN(0))	// 7544 retn ;~ 01C2:3325
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7619,7 +7619,7 @@ cs=0x1c2;eip=0x003325; 	R(RETN)	// 7544 retn ;~ 01C2:3325
 
 
 
- void sub_4f96(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4f96(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7639,13 +7639,13 @@ cs=0x1c2;eip=0x003338; 	T(MOV(bl, byte_6f37))	// 7563 mov     bl, byte_6F37 ;~ 0
 cs=0x1c2;eip=0x00333c; 	R(_INT(0x10))	// 7564 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 01C2:333C
 cs=0x1c2;eip=0x00333e; 	X(POP(bx))	// 7567 pop     bx ;~ 01C2:333E
 cs=0x1c2;eip=0x00333f; 	X(POP(ax))	// 7568 pop     ax ;~ 01C2:333F
-cs=0x1c2;eip=0x003340; 	R(RETN)	// 7569 retn ;~ 01C2:3340
+cs=0x1c2;eip=0x003340; 	R(RETN(0))	// 7569 retn ;~ 01C2:3340
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7656,7 +7656,7 @@ cs=0x1c2;eip=0x003340; 	R(RETN)	// 7569 retn ;~ 01C2:3340
 
 
 
- void sub_4fb1(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4fb1(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7698,13 +7698,13 @@ cs=0x1c2;eip=0x003386; 	X(MOV(byte_6ec4, cl))	// 7630 mov     byte_6EC4, cl ;~ 0
 loc_4ffa:	// 5294 
 cs=0x1c2;eip=0x00338a; 	T(STI)	// 7633 sti ;~ 01C2:338A
 cs=0x1c2;eip=0x00338b; 	X(POP(dx))	// 7634 pop     dx ;~ 01C2:338B
-cs=0x1c2;eip=0x00338c; 	R(RETN)	// 7635 retn ;~ 01C2:338C
+cs=0x1c2;eip=0x00338c; 	R(RETN(0))	// 7635 retn ;~ 01C2:338C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7720,7 +7720,7 @@ cs=0x1c2;eip=0x00338c; 	R(RETN)	// 7635 retn ;~ 01C2:338C
 
 
 
- void sub_4ffd(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_4ffd(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7754,7 +7754,7 @@ cs=0x1c2;eip=0x0033ba; 	X(MOV(byte_6ec2, 0x0FF))	// 7664 mov     byte_6EC2, 0FFh
 cs=0x1c2;eip=0x0033bf; 	T(MOV(al, byte_6ecd))	// 7665 mov     al, byte_6ECD ;~ 01C2:33BF
 loc_5032:	// 5299 
 cs=0x1c2;eip=0x0033c2; 	T(OR(al, al))	// 7668 or      al, al ;~ 01C2:33C2
-cs=0x1c2;eip=0x0033c4; 	R(RETN)	// 7669 retn ;~ 01C2:33C4
+cs=0x1c2;eip=0x0033c4; 	R(RETN(0))	// 7669 retn ;~ 01C2:33C4
 loc_5035:	// 5300 
 cs=0x1c2;eip=0x0033c5; 	T(MOV(bx, 0x0E5C))	// 7673 mov     bx, 0E5Ch ;~ 01C2:33C5
 cs=0x1c2;eip=0x0033c8; 	T(MOV(al, cl))	// 7674 mov     al, cl ;~ 01C2:33C8
@@ -7779,7 +7779,7 @@ loc_505e:	// 5301
 cs=0x1c2;eip=0x0033ee; 	X(MOV(byte_6ecd, al))	// 7694 mov     byte_6ECD, al ;~ 01C2:33EE
 loc_5061:	// 5302 
 cs=0x1c2;eip=0x0033f1; 	T(OR(al, al))	// 7697 or      al, al ;~ 01C2:33F1
-cs=0x1c2;eip=0x0033f3; 	R(RETN)	// 7698 retn ;~ 01C2:33F3
+cs=0x1c2;eip=0x0033f3; 	R(RETN(0))	// 7698 retn ;~ 01C2:33F3
 loc_5064:	// 5303 
 cs=0x1c2;eip=0x0033f4; 	T(TEST(byte_6eca, 0x0FF))	// 7703 test    byte_6ECA, 0FFh ;~ 01C2:33F4
 cs=0x1c2;eip=0x0033f9; 	R(JZ(loc_509c))	// 7704 jz      short loc_509C ;~ 01C2:33F9
@@ -7807,7 +7807,7 @@ cs=0x1c2;eip=0x00342a; 	R(JNZ(loc_5105))	// 7726 jnz     short loc_5105 ;~ 01C2:
 loc_509c:	// 5308 
 cs=0x1c2;eip=0x00342c; 	T(MOV(al, byte_6ecd))	// 7729 mov     al, byte_6ECD ;~ 01C2:342C
 cs=0x1c2;eip=0x00342f; 	T(OR(al, al))	// 7730 or      al, al ;~ 01C2:342F
-cs=0x1c2;eip=0x003431; 	R(RETN)	// 7731 retn ;~ 01C2:3431
+cs=0x1c2;eip=0x003431; 	R(RETN(0))	// 7731 retn ;~ 01C2:3431
 loc_50a2:	// 5309 
 cs=0x1c2;eip=0x003432; 	T(OR(cl, 1))	// 7735 or      cl, 1 ;~ 01C2:3432
 cs=0x1c2;eip=0x003435; 	T(SUB(al, byte_6ec5))	// 7736 sub     al, byte_6EC5 ;~ 01C2:3435
@@ -7862,13 +7862,13 @@ cs=0x1c2;eip=0x00349b; 	T(XLAT)	// 7801 xlat ;~ 01C2:349B
 cs=0x1c2;eip=0x00349c; 	X(POP(bx))	// 7802 pop     bx ;~ 01C2:349C
 cs=0x1c2;eip=0x00349d; 	T(TEST(byte_6ec0, 8))	// 7803 test    byte_6EC0, 8 ;~ 01C2:349D
 cs=0x1c2;eip=0x0034a2; 	X(MOV(byte_6ecd, 0))	// 7804 mov     byte_6ECD, 0 ;~ 01C2:34A2
-cs=0x1c2;eip=0x0034a7; 	R(RETN)	// 7805 retn ;~ 01C2:34A7
+cs=0x1c2;eip=0x0034a7; 	R(RETN(0))	// 7805 retn ;~ 01C2:34A7
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7905,7 +7905,7 @@ cs=0x1c2;eip=0x0034a7; 	R(RETN)	// 7805 retn ;~ 01C2:34A7
 
 
 
- void sub_5118(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5118(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7920,13 +7920,13 @@ cs=0x1c2;eip=0x0034ad; 	X(POP(dx))	// 7819 pop     dx ;~ 01C2:34AD
 cs=0x1c2;eip=0x0034ae; 	T(XOR(al, 0x0FF))	// 7820 xor     al, 0FFh ;~ 01C2:34AE
 cs=0x1c2;eip=0x0034b0; 	T(AND(al, 0x30))	// 7821 and     al, 30h ;~ 01C2:34B0
 cs=0x1c2;eip=0x0034b2; 	T(OR(al, al))	// 7822 or      al, al ;~ 01C2:34B2
-cs=0x1c2;eip=0x0034b4; 	R(RETN)	// 7823 retn ;~ 01C2:34B4
+cs=0x1c2;eip=0x0034b4; 	R(RETN(0))	// 7823 retn ;~ 01C2:34B4
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -7937,7 +7937,7 @@ cs=0x1c2;eip=0x0034b4; 	R(RETN)	// 7823 retn ;~ 01C2:34B4
 
 
 
- void sub_5125(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5125(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -7947,7 +7947,7 @@ cs=0x1c2;eip=0x0034b4; 	R(RETN)	// 7823 retn ;~ 01C2:34B4
     _begin:
 cs=0x1c2;eip=0x0034b5; 	T(TEST(byte_6ec1, 0x0FF))	// 7831 test    byte_6EC1, 0FFh ;~ 01C2:34B5
 cs=0x1c2;eip=0x0034ba; 	R(JZ(loc_512d))	// 7832 jz      short loc_512D ;~ 01C2:34BA
-cs=0x1c2;eip=0x0034bc; 	R(RETN)	// 7833 retn ;~ 01C2:34BC
+cs=0x1c2;eip=0x0034bc; 	R(RETN(0))	// 7833 retn ;~ 01C2:34BC
 loc_512d:	// 5321 
 cs=0x1c2;eip=0x0034bd; 	R(CALL(sub_4fb1,0))	// 7837 call    sub_4FB1 ;~ 01C2:34BD
 ret_1c2_34c0:	// 5322 
@@ -7977,16 +7977,16 @@ cs=0x1c2;eip=0x0034fc; 	T(CMP(dl, 0x0F5))	// 7860 cmp     dl, 0F5h ; 'õ' ;~ 01C2
 cs=0x1c2;eip=0x0034ff; 	R(JNC(loc_5177))	// 7861 jnb     short loc_5177 ;~ 01C2:34FF
 cs=0x1c2;eip=0x003501; 	T(CMP(bl, 0x0F5))	// 7862 cmp     bl, 0F5h ; 'õ' ;~ 01C2:3501
 cs=0x1c2;eip=0x003504; 	R(JNC(loc_5177))	// 7863 jnb     short loc_5177 ;~ 01C2:3504
-cs=0x1c2;eip=0x003506; 	R(RETN)	// 7864 retn ;~ 01C2:3506
+cs=0x1c2;eip=0x003506; 	R(RETN(0))	// 7864 retn ;~ 01C2:3506
 loc_5177:	// 5323 
 cs=0x1c2;eip=0x003507; 	X(MOV(byte_6eca, 0))	// 7869 mov     byte_6ECA, 0 ;~ 01C2:3507
-cs=0x1c2;eip=0x00350c; 	R(RETN)	// 7870 retn ;~ 01C2:350C
+cs=0x1c2;eip=0x00350c; 	R(RETN(0))	// 7870 retn ;~ 01C2:350C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8000,7 +8000,7 @@ cs=0x1c2;eip=0x00350c; 	R(RETN)	// 7870 retn ;~ 01C2:350C
 
 
 
- void sub_5226(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5226(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8035,13 +8035,13 @@ cs=0x1c2;eip=0x00360b; 	X(MOV(byte_61cb, 0))	// 8029 mov     byte_61CB, 0 ;~ 01C
 cs=0x1c2;eip=0x003610; 	R(CALL(sub_5335,0))	// 8030 call    sub_5335 ;~ 01C2:3610
 ret_1c2_3613:	// 5339 
 cs=0x1c2;eip=0x003613; 	X(MOV(byte_61d5, 1))	// 8031 mov     byte_61D5, 1 ;~ 01C2:3613
-cs=0x1c2;eip=0x003618; 	R(RETN)	// 8032 retn ;~ 01C2:3618
+cs=0x1c2;eip=0x003618; 	R(RETN(0))	// 8032 retn ;~ 01C2:3618
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8053,7 +8053,7 @@ cs=0x1c2;eip=0x003618; 	R(RETN)	// 8032 retn ;~ 01C2:3618
 
 
 
- void sub_5318(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5318(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8073,7 +8073,7 @@ cs=0x1c2;eip=0x0036b8; 	X(SUB(*(dw*)(raddr(ds,si)), dx))	// 8121 sub     [si], d
 cs=0x1c2;eip=0x0036ba; 	T(ADD(si, 0x0A))	// 8122 add     si, 0Ah ;~ 01C2:36BA
 loc_532d:	// 5358 
 cs=0x1c2;eip=0x0036bd; 	R(LOOP(loc_531e))	// 8125 loop    loc_531E ;~ 01C2:36BD
-cs=0x1c2;eip=0x0036bf; 	R(RETN)	// 8126 retn ;~ 01C2:36BF
+cs=0x1c2;eip=0x0036bf; 	R(RETN(0))	// 8126 retn ;~ 01C2:36BF
 loc_5330:	// 5359 
 cs=0x1c2;eip=0x0036c0; 	T(ADD(si, 0x0C))	// 8130 add     si, 0Ch ;~ 01C2:36C0
 cs=0x1c2;eip=0x0036c3; 	R(JMP(loc_532d))	// 8131 jmp     short loc_532D ;~ 01C2:36C3
@@ -8082,7 +8082,7 @@ cs=0x1c2;eip=0x0036c3; 	R(JMP(loc_532d))	// 8131 jmp     short loc_532D ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8096,7 +8096,7 @@ cs=0x1c2;eip=0x0036c3; 	R(JMP(loc_532d))	// 8131 jmp     short loc_532D ;~ 01C2:
 
 
 
- void sub_5335(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5335(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8116,13 +8116,13 @@ cs=0x1c2;eip=0x0036da; 	R(CALL(sub_5289,0))	// 8147 call    sub_5289 ;~ 01C2:36D
 ret_1c2_36dd:	// 5360 
 cs=0x1c2;eip=0x0036dd; 	R(CALL(sub_5351,0))	// 8148 call    sub_5351 ;~ 01C2:36DD
 ret_1c2_36e0:	// 5361 
-cs=0x1c2;eip=0x0036e0; 	R(RETN)	// 8149 retn ;~ 01C2:36E0
+cs=0x1c2;eip=0x0036e0; 	R(RETN(0))	// 8149 retn ;~ 01C2:36E0
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8135,7 +8135,7 @@ cs=0x1c2;eip=0x0036e0; 	R(RETN)	// 8149 retn ;~ 01C2:36E0
 
 
 
- void sub_536c(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_536c(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8147,7 +8147,7 @@ cs=0x1c2;eip=0x0036fc; 	T(TEST(byte_6576, 0x0FF))	// 8179 test    byte_6576, 0FF
 cs=0x1c2;eip=0x003701; 	R(JZ(loc_5377))	// 8180 jz      short loc_5377 ;~ 01C2:3701
 cs=0x1c2;eip=0x003703; 	R(CALL(sub_5469,0))	// 8181 call    sub_5469 ;~ 01C2:3703
 ret_1c2_3706:	// 5366 
-cs=0x1c2;eip=0x003706; 	R(RETN)	// 8182 retn ;~ 01C2:3706
+cs=0x1c2;eip=0x003706; 	R(RETN(0))	// 8182 retn ;~ 01C2:3706
 loc_5377:	// 5367 
 cs=0x1c2;eip=0x003707; 	X(MOV(byte_6368, 0x0FF))	// 8186 mov     byte_6368, 0FFh ;~ 01C2:3707
 cs=0x1c2;eip=0x00370c; 	X(MOV(byte_6586, 0))	// 8187 mov     byte_6586, 0 ;~ 01C2:370C
@@ -8232,13 +8232,13 @@ ret_1c2_37eb:	// 5377
 cs=0x1c2;eip=0x0037eb; 	X(MOV(*(dw*)(raddr(ds,di+6)), ax))	// 8266 mov     [di+6], ax ;~ 01C2:37EB
 cs=0x1c2;eip=0x0037ee; 	X(MOV(byte_6584, 0))	// 8267 mov     byte_6584, 0 ;~ 01C2:37EE
 cs=0x1c2;eip=0x0037f3; 	X(MOV(byte_6f50, 0x0E1))	// 8268 mov     byte_6F50, 0E1h ; 'á' ;~ 01C2:37F3
-cs=0x1c2;eip=0x0037f8; 	R(RETN)	// 8269 retn ;~ 01C2:37F8
+cs=0x1c2;eip=0x0037f8; 	R(RETN(0))	// 8269 retn ;~ 01C2:37F8
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8261,7 +8261,7 @@ cs=0x1c2;eip=0x0037f8; 	R(RETN)	// 8269 retn ;~ 01C2:37F8
 
 
 
- void sub_5469(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5469(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8305,13 +8305,13 @@ cs=0x1c2;eip=0x003850; 	T(INC(al))	// 8308 inc     al ;~ 01C2:3850
 cs=0x1c2;eip=0x003852; 	X(MOV(byte_6f5e, al))	// 8309 mov     byte_6F5E, al ;~ 01C2:3852
 cs=0x1c2;eip=0x003855; 	X(MOV(byte_6591, al))	// 8310 mov     byte_6591, al ;~ 01C2:3855
 cs=0x1c2;eip=0x003858; 	X(MOV(byte_6585, 0))	// 8311 mov     byte_6585, 0 ;~ 01C2:3858
-cs=0x1c2;eip=0x00385d; 	R(RETN)	// 8312 retn ;~ 01C2:385D
+cs=0x1c2;eip=0x00385d; 	R(RETN(0))	// 8312 retn ;~ 01C2:385D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8326,7 +8326,7 @@ cs=0x1c2;eip=0x00385d; 	R(RETN)	// 8312 retn ;~ 01C2:385D
 
 
 
- void sub_54ce(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_54ce(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8346,13 +8346,13 @@ cs=0x1c2;eip=0x00386e; 	X(MOV(*(dw*)(raddr(ds,si+3)), ax))	// 8326 mov     [si+3
 cs=0x1c2;eip=0x003871; 	R(CALL(sub_373a,0))	// 8327 call    sub_373A ;~ 01C2:3871
 ret_1c2_3874:	// 5384 
 cs=0x1c2;eip=0x003874; 	X(POP(si))	// 8328 pop     si ;~ 01C2:3874
-cs=0x1c2;eip=0x003875; 	R(RETN)	// 8329 retn ;~ 01C2:3875
+cs=0x1c2;eip=0x003875; 	R(RETN(0))	// 8329 retn ;~ 01C2:3875
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8366,7 +8366,7 @@ cs=0x1c2;eip=0x003875; 	R(RETN)	// 8329 retn ;~ 01C2:3875
 
 
 
- void sub_54e6(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_54e6(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8381,13 +8381,13 @@ loc_54ee:	// 5385
 cs=0x1c2;eip=0x00387e; 	X(STOSB)	// 8343 stosb ;~ 01C2:387E
 cs=0x1c2;eip=0x00387f; 	T(ADD(di, 0x0C))	// 8344 add     di, 0Ch ;~ 01C2:387F
 cs=0x1c2;eip=0x003882; 	R(LOOP(loc_54ee))	// 8345 loop    loc_54EE ;~ 01C2:3882
-cs=0x1c2;eip=0x003884; 	R(RETN)	// 8346 retn ;~ 01C2:3884
+cs=0x1c2;eip=0x003884; 	R(RETN(0))	// 8346 retn ;~ 01C2:3884
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8399,7 +8399,7 @@ cs=0x1c2;eip=0x003884; 	R(RETN)	// 8346 retn ;~ 01C2:3884
 
 
 
- void sub_54f5(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_54f5(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8412,13 +8412,13 @@ loc_54f7:	// 5386
 cs=0x1c2;eip=0x003887; 	R(LOOP(loc_54f7))	// 8358 loop    loc_54F7 ;~ 01C2:3887
 cs=0x1c2;eip=0x003889; 	T(DEC(bl))	// 8359 dec     bl ;~ 01C2:3889
 cs=0x1c2;eip=0x00388b; 	R(JNZ(loc_54f7))	// 8360 jnz     short loc_54F7 ;~ 01C2:388B
-cs=0x1c2;eip=0x00388d; 	R(RETN)	// 8361 retn ;~ 01C2:388D
+cs=0x1c2;eip=0x00388d; 	R(RETN(0))	// 8361 retn ;~ 01C2:388D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8430,7 +8430,7 @@ cs=0x1c2;eip=0x00388d; 	R(RETN)	// 8361 retn ;~ 01C2:388D
 
 
 
- void sub_5500(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5500(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8505,17 +8505,17 @@ cs=0x1c2;eip=0x00390f; 	T(MOV(ax, 0x480))	// 8442 mov     ax, 480h ;~ 01C2:390F
 cs=0x1c2;eip=0x003912; 	T(SUB(ax, bx))	// 8443 sub     ax, bx ;~ 01C2:3912
 loc_5584:	// 5394 
 cs=0x1c2;eip=0x003914; 	X(POP(si))	// 8446 pop     si ;~ 01C2:3914
-cs=0x1c2;eip=0x003915; 	R(RETN)	// 8447 retn ;~ 01C2:3915
+cs=0x1c2;eip=0x003915; 	R(RETN(0))	// 8447 retn ;~ 01C2:3915
 loc_5586:	// 5395 
 cs=0x1c2;eip=0x003916; 	T(XOR(ax, ax))	// 8451 xor     ax, ax ;~ 01C2:3916
 cs=0x1c2;eip=0x003918; 	X(POP(si))	// 8452 pop     si ;~ 01C2:3918
-cs=0x1c2;eip=0x003919; 	R(RETN)	// 8453 retn ;~ 01C2:3919
+cs=0x1c2;eip=0x003919; 	R(RETN(0))	// 8453 retn ;~ 01C2:3919
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8535,7 +8535,7 @@ cs=0x1c2;eip=0x003919; 	R(RETN)	// 8453 retn ;~ 01C2:3919
 
 
 
- void sub_558a(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_558a(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8584,13 +8584,13 @@ cs=0x1c2;eip=0x003956; 	R(CALL(sub_55ce,0))	// 8503 call    sub_55CE ;~ 01C2:395
 loc_55c9:	// 5401 
 cs=0x1c2;eip=0x003959; 	T(MOV(ax, cx))	// 8506 mov     ax, cx ;~ 01C2:3959
 cs=0x1c2;eip=0x00395b; 	T(SHL(ax, 1))	// 8507 shl     ax, 1 ;~ 01C2:395B
-cs=0x1c2;eip=0x00395d; 	R(RETN)	// 8508 retn ;~ 01C2:395D
+cs=0x1c2;eip=0x00395d; 	R(RETN(0))	// 8508 retn ;~ 01C2:395D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8607,7 +8607,7 @@ cs=0x1c2;eip=0x00395d; 	R(RETN)	// 8508 retn ;~ 01C2:395D
 
 
 
- void sub_55ce(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_55ce(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8627,13 +8627,13 @@ cs=0x1c2;eip=0x003969; 	T(ADD(cx, ax))	// 8526 add     cx, ax ;~ 01C2:3969
 cs=0x1c2;eip=0x00396b; 	T(SHR(cx, 1))	// 8527 shr     cx, 1 ;~ 01C2:396B
 cs=0x1c2;eip=0x00396d; 	X(POP(ax))	// 8528 pop     ax ;~ 01C2:396D
 cs=0x1c2;eip=0x00396e; 	X(POP(dx))	// 8529 pop     dx ;~ 01C2:396E
-cs=0x1c2;eip=0x00396f; 	R(RETN)	// 8530 retn ;~ 01C2:396F
+cs=0x1c2;eip=0x00396f; 	R(RETN(0))	// 8530 retn ;~ 01C2:396F
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8645,7 +8645,7 @@ cs=0x1c2;eip=0x00396f; 	R(RETN)	// 8530 retn ;~ 01C2:396F
 
 
 
- void sub_563c(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_563c(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8715,13 +8715,13 @@ cs=0x1c2;eip=0x003a48; 	R(JZ(loc_56bc))	// 8687 jz      short loc_56BC ;~ 01C2:3
 cs=0x1c2;eip=0x003a4a; 	T(NEG(ah))	// 8688 neg     ah ;~ 01C2:3A4A
 loc_56bc:	// 5418 
 cs=0x1c2;eip=0x003a4c; 	T(ADD(dl, ah))	// 8691 add     dl, ah ;~ 01C2:3A4C
-cs=0x1c2;eip=0x003a4e; 	R(RETN)	// 8692 retn ;~ 01C2:3A4E
+cs=0x1c2;eip=0x003a4e; 	R(RETN(0))	// 8692 retn ;~ 01C2:3A4E
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8740,7 +8740,7 @@ cs=0x1c2;eip=0x003a4e; 	R(RETN)	// 8692 retn ;~ 01C2:3A4E
 
 
 
- void sub_56bf(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_56bf(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8757,13 +8757,13 @@ cs=0x1c2;eip=0x003a5f; 	T(MOV(al, ah))	// 8706 mov     al, ah ;~ 01C2:3A5F
 cs=0x1c2;eip=0x003a61; 	T(MOV(ah, dl))	// 8707 mov     ah, dl ;~ 01C2:3A61
 cs=0x1c2;eip=0x003a63; 	X(POP(dx))	// 8708 pop     dx ;~ 01C2:3A63
 cs=0x1c2;eip=0x003a64; 	X(MOV(word_7072, ax))	// 8709 mov     word_7072, ax ;~ 01C2:3A64
-cs=0x1c2;eip=0x003a67; 	R(RETN)	// 8710 retn ;~ 01C2:3A67
+cs=0x1c2;eip=0x003a67; 	R(RETN(0))	// 8710 retn ;~ 01C2:3A67
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8774,7 +8774,7 @@ cs=0x1c2;eip=0x003a67; 	R(RETN)	// 8710 retn ;~ 01C2:3A67
 
 
 
- void sub_5834(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5834(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8803,18 +8803,18 @@ cs=0x1c2;eip=0x003bea; 	R(JZ(loc_5863))	// 8953 jz      short loc_5863 ;~ 01C2:3
 cs=0x1c2;eip=0x003bec; 	T(MOV(si, 0x0FF8))	// 8954 mov     si, 0FF8h ;~ 01C2:3BEC
 cs=0x1c2;eip=0x003bef; 	R(CALL(sub_5d64,0))	// 8955 call    sub_5D64 ;~ 01C2:3BEF
 ret_1c2_3bf2:	// 5471 
-cs=0x1c2;eip=0x003bf2; 	R(RETN)	// 8956 retn ;~ 01C2:3BF2
+cs=0x1c2;eip=0x003bf2; 	R(RETN(0))	// 8956 retn ;~ 01C2:3BF2
 loc_5863:	// 5472 
 cs=0x1c2;eip=0x003bf3; 	T(MOV(si, 0x1005))	// 8960 mov     si, 1005h ;~ 01C2:3BF3
 cs=0x1c2;eip=0x003bf6; 	R(CALL(sub_5d64,0))	// 8961 call    sub_5D64 ;~ 01C2:3BF6
 ret_1c2_3bf9:	// 5473 
-cs=0x1c2;eip=0x003bf9; 	R(RETN)	// 8962 retn ;~ 01C2:3BF9
+cs=0x1c2;eip=0x003bf9; 	R(RETN(0))	// 8962 retn ;~ 01C2:3BF9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8833,7 +8833,7 @@ cs=0x1c2;eip=0x003bf9; 	R(RETN)	// 8962 retn ;~ 01C2:3BF9
 
 
 
- void sub_58f6(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_58f6(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8851,13 +8851,13 @@ cs=0x1c2;eip=0x003c95; 	T(XOR(ah, ah))	// 9088 xor     ah, ah ;~ 01C2:3C95
 cs=0x1c2;eip=0x003c97; 	T(ADD(al, 0x30))	// 9089 add     al, 30h ; '0' ;~ 01C2:3C97
 cs=0x1c2;eip=0x003c99; 	R(CALL(sub_5cdc,0))	// 9090 call    sub_5CDC ;~ 01C2:3C99
 ret_1c2_3c9c:	// 5495 
-cs=0x1c2;eip=0x003c9c; 	R(RETN)	// 9091 retn ;~ 01C2:3C9C
+cs=0x1c2;eip=0x003c9c; 	R(RETN(0))	// 9091 retn ;~ 01C2:3C9C
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8870,7 +8870,7 @@ cs=0x1c2;eip=0x003c9c; 	R(RETN)	// 9091 retn ;~ 01C2:3C9C
 
 
 
- void sub_5910(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5910(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8917,13 +8917,13 @@ cs=0x1c2;eip=0x003cee; 	X(POP(di))	// 9153 pop     di ;~ 01C2:3CEE
 cs=0x1c2;eip=0x003cef; 	X(POP(ax))	// 9154 pop     ax ;~ 01C2:3CEF
 cs=0x1c2;eip=0x003cf0; 	X(POP(es))	// 9155 pop     es ;~ 01C2:3CF0
 cs=0x1c2;eip=0x003cf1; 	T(STI)	// 9157 sti ;~ 01C2:3CF1
-cs=0x1c2;eip=0x003cf2; 	R(RETN)	// 9158 retn ;~ 01C2:3CF2
+cs=0x1c2;eip=0x003cf2; 	R(RETN(0))	// 9158 retn ;~ 01C2:3CF2
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8935,7 +8935,7 @@ cs=0x1c2;eip=0x003cf2; 	R(RETN)	// 9158 retn ;~ 01C2:3CF2
 
 
 
- void sub_5963(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5963(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8969,13 +8969,13 @@ cs=0x1c2;eip=0x003d26; 	R(OUT(0x21, al))	// 9189 out     21h, al         ; Inter
 loc_5998:	// 5497 
 cs=0x1c2;eip=0x003d28; 	X(POP(es))	// 9192 pop     es ;~ 01C2:3D28
 cs=0x1c2;eip=0x003d29; 	T(STI)	// 9194 sti ;~ 01C2:3D29
-cs=0x1c2;eip=0x003d2a; 	R(RETN)	// 9195 retn ;~ 01C2:3D2A
+cs=0x1c2;eip=0x003d2a; 	R(RETN(0))	// 9195 retn ;~ 01C2:3D2A
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -8987,7 +8987,7 @@ cs=0x1c2;eip=0x003d2a; 	R(RETN)	// 9195 retn ;~ 01C2:3D2A
 
 
 
- void sub_599b(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_599b(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -8999,13 +8999,13 @@ cs=0x1c2;eip=0x003d2b; 	X(MOV(byte_714a, 0))	// 9203 mov     byte_714A, 0 ;~ 01C
 cs=0x1c2;eip=0x003d30; 	R(IN(al, 0x61))	// 9204 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:3D30
 cs=0x1c2;eip=0x003d32; 	T(AND(al, 0x0FC))	// 9212 and     al, 0FCh ;~ 01C2:3D32
 cs=0x1c2;eip=0x003d34; 	R(OUT(0x61, al))	// 9213 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3D34
-cs=0x1c2;eip=0x003d36; 	R(RETN)	// 9221 retn ;~ 01C2:3D36
+cs=0x1c2;eip=0x003d36; 	R(RETN(0))	// 9221 retn ;~ 01C2:3D36
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9016,7 +9016,7 @@ cs=0x1c2;eip=0x003d36; 	R(RETN)	// 9221 retn ;~ 01C2:3D36
 
 
 
- void sub_59a7(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_59a7(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9114,7 +9114,7 @@ cs=0x1c2;eip=0x003de6; 	R(IRET)	// 9342 iret ;~ 01C2:3DE6
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9138,7 +9138,7 @@ cs=0x1c2;eip=0x003de6; 	R(IRET)	// 9342 iret ;~ 01C2:3DE6
 
 
 
- void sub_5a57(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5a57(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9160,13 +9160,13 @@ cs=0x1c2;eip=0x003dfd; 	R(IN(al, 0x61))	// 9361 in      al, 61h         ; PC/XT 
 cs=0x1c2;eip=0x003dff; 	T(OR(al, 3))	// 9369 or      al, 3 ;~ 01C2:3DFF
 cs=0x1c2;eip=0x003e01; 	R(OUT(0x61, al))	// 9370 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3E01
 cs=0x1c2;eip=0x003e03; 	X(POP(dx))	// 9378 pop     dx ;~ 01C2:3E03
-cs=0x1c2;eip=0x003e04; 	R(RETN)	// 9379 retn ;~ 01C2:3E04
+cs=0x1c2;eip=0x003e04; 	R(RETN(0))	// 9379 retn ;~ 01C2:3E04
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9177,7 +9177,7 @@ cs=0x1c2;eip=0x003e04; 	R(RETN)	// 9379 retn ;~ 01C2:3E04
 
 
 
- void sub_5a75(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5a75(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9191,13 +9191,13 @@ cs=0x1c2;eip=0x003e0b; 	X(MOV(byte_7150, al))	// 9390 mov     byte_7150, al ;~ 0
 cs=0x1c2;eip=0x003e0e; 	X(MOV(byte_714e, al))	// 9391 mov     byte_714E, al ;~ 01C2:3E0E
 cs=0x1c2;eip=0x003e11; 	R(CALL(sub_599b,0))	// 9392 call    sub_599B ;~ 01C2:3E11
 ret_1c2_3e14:	// 5511 
-cs=0x1c2;eip=0x003e14; 	R(RETN)	// 9393 retn ;~ 01C2:3E14
+cs=0x1c2;eip=0x003e14; 	R(RETN(0))	// 9393 retn ;~ 01C2:3E14
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9209,7 +9209,7 @@ cs=0x1c2;eip=0x003e14; 	R(RETN)	// 9393 retn ;~ 01C2:3E14
 
 
 
- void sub_5a85(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5a85(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9221,19 +9221,19 @@ cs=0x1c2;eip=0x003e15; 	T(TEST(byte_7148, 0x0FF))	// 9402 test    byte_7148, 0FF
 cs=0x1c2;eip=0x003e1a; 	R(JNZ(loc_5a90))	// 9403 jnz     short loc_5A90 ;~ 01C2:3E1A
 cs=0x1c2;eip=0x003e1c; 	R(CALL(sub_5a75,0))	// 9404 call    sub_5A75 ;~ 01C2:3E1C
 ret_1c2_3e1f:	// 5512 
-cs=0x1c2;eip=0x003e1f; 	R(RETN)	// 9405 retn ;~ 01C2:3E1F
+cs=0x1c2;eip=0x003e1f; 	R(RETN(0))	// 9405 retn ;~ 01C2:3E1F
 loc_5a90:	// 5513 
 cs=0x1c2;eip=0x003e20; 	T(CMP(al, 0x0B))	// 9409 cmp     al, 0Bh ;~ 01C2:3E20
 cs=0x1c2;eip=0x003e22; 	R(JNZ(loc_5a98))	// 9410 jnz     short loc_5A98 ;~ 01C2:3E22
 cs=0x1c2;eip=0x003e24; 	R(CALL(sub_5b70,0))	// 9411 call    sub_5B70 ;~ 01C2:3E24
 ret_1c2_3e27:	// 5514 
-cs=0x1c2;eip=0x003e27; 	R(RETN)	// 9412 retn ;~ 01C2:3E27
+cs=0x1c2;eip=0x003e27; 	R(RETN(0))	// 9412 retn ;~ 01C2:3E27
 loc_5a98:	// 5515 
 cs=0x1c2;eip=0x003e28; 	T(CMP(al, 0x14))	// 9416 cmp     al, 14h ;~ 01C2:3E28
 cs=0x1c2;eip=0x003e2a; 	R(JNZ(loc_5aa0))	// 9417 jnz     short loc_5AA0 ;~ 01C2:3E2A
 cs=0x1c2;eip=0x003e2c; 	R(CALL(sub_5c42,0))	// 9418 call    sub_5C42 ;~ 01C2:3E2C
 ret_1c2_3e2f:	// 5516 
-cs=0x1c2;eip=0x003e2f; 	R(RETN)	// 9419 retn ;~ 01C2:3E2F
+cs=0x1c2;eip=0x003e2f; 	R(RETN(0))	// 9419 retn ;~ 01C2:3E2F
 loc_5aa0:	// 5517 
 cs=0x1c2;eip=0x003e30; 	X(PUSH(bx))	// 9423 push    bx ;~ 01C2:3E30
 cs=0x1c2;eip=0x003e31; 	X(PUSH(cx))	// 9424 push    cx ;~ 01C2:3E31
@@ -9298,13 +9298,13 @@ cs=0x1c2;eip=0x003ea0; 	X(POP(di))	// 9494 pop     di ;~ 01C2:3EA0
 cs=0x1c2;eip=0x003ea1; 	X(POP(si))	// 9495 pop     si ;~ 01C2:3EA1
 cs=0x1c2;eip=0x003ea2; 	X(POP(cx))	// 9496 pop     cx ;~ 01C2:3EA2
 cs=0x1c2;eip=0x003ea3; 	X(POP(bx))	// 9497 pop     bx ;~ 01C2:3EA3
-cs=0x1c2;eip=0x003ea4; 	R(RETN)	// 9498 retn ;~ 01C2:3EA4
+cs=0x1c2;eip=0x003ea4; 	R(RETN(0))	// 9498 retn ;~ 01C2:3EA4
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9329,7 +9329,7 @@ cs=0x1c2;eip=0x003ea4; 	R(RETN)	// 9498 retn ;~ 01C2:3EA4
 
 
 
- void sub_5b15(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5b15(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9347,13 +9347,13 @@ cs=0x1c2;eip=0x003eb8; 	X(MOV(byte_714b, al))	// 9512 mov     byte_714B, al ;~ 0
 cs=0x1c2;eip=0x003ebb; 	T(MOV(al, *(raddr(ds,bx+di))))	// 9513 mov     al, [bx+di] ;~ 01C2:3EBB
 cs=0x1c2;eip=0x003ebd; 	X(MOV(byte_714f, al))	// 9514 mov     byte_714F, al ;~ 01C2:3EBD
 cs=0x1c2;eip=0x003ec0; 	X(MOV(byte_7151, 0x0FF))	// 9515 mov     byte_7151, 0FFh ;~ 01C2:3EC0
-cs=0x1c2;eip=0x003ec5; 	R(RETN)	// 9516 retn ;~ 01C2:3EC5
+cs=0x1c2;eip=0x003ec5; 	R(RETN(0))	// 9516 retn ;~ 01C2:3EC5
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9365,7 +9365,7 @@ cs=0x1c2;eip=0x003ec5; 	R(RETN)	// 9516 retn ;~ 01C2:3EC5
 
 
 
- void sub_5b36(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5b36(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9382,7 +9382,7 @@ cs=0x1c2;eip=0x003ed0; 	T(MOV(si, 0x10D6))	// 9530 mov     si, 10D6h ;~ 01C2:3ED
 cs=0x1c2;eip=0x003ed3; 	T(ADD(si, cx))	// 9531 add     si, cx ;~ 01C2:3ED3
 cs=0x1c2;eip=0x003ed5; 	T(MOV(di, *(dw*)(raddr(ds,si))))	// 9532 mov     di, [si] ;~ 01C2:3ED5
 cs=0x1c2;eip=0x003ed7; 	T(MOV(si, ax))	// 9533 mov     si, ax ;~ 01C2:3ED7
-cs=0x1c2;eip=0x003ed9; 	R(RETN)	// 9534 retn ;~ 01C2:3ED9
+cs=0x1c2;eip=0x003ed9; 	R(RETN(0))	// 9534 retn ;~ 01C2:3ED9
 ret_1c2_3eda:	// 5527 
 cs=0x1c2;eip=0x003eda; 	X(PUSH(es))	// 9538 push    es ;~ 01C2:3EDA
 cs=0x1c2;eip=0x003edb; 	X(PUSH(di))	// 9539 push    di ;~ 01C2:3EDB
@@ -9403,13 +9403,13 @@ cs=0x1c2;eip=0x003efb; 	X(POP(cx))	// 9554 pop     cx ;~ 01C2:3EFB
 cs=0x1c2;eip=0x003efc; 	X(POP(bx))	// 9555 pop     bx ;~ 01C2:3EFC
 cs=0x1c2;eip=0x003efd; 	X(POP(di))	// 9556 pop     di ;~ 01C2:3EFD
 cs=0x1c2;eip=0x003efe; 	X(POP(es))	// 9557 pop     es ;~ 01C2:3EFE
-cs=0x1c2;eip=0x003eff; 	R(RETN)	// 9559 retn ;~ 01C2:3EFF
+cs=0x1c2;eip=0x003eff; 	R(RETN(0))	// 9559 retn ;~ 01C2:3EFF
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9421,7 +9421,7 @@ cs=0x1c2;eip=0x003eff; 	R(RETN)	// 9559 retn ;~ 01C2:3EFF
 
 
 
- void sub_5b70(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5b70(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9459,13 +9459,13 @@ cs=0x1c2;eip=0x003f3d; 	X(POP(di))	// 9592 pop     di ;~ 01C2:3F3D
 cs=0x1c2;eip=0x003f3e; 	X(POP(ax))	// 9593 pop     ax ;~ 01C2:3F3E
 cs=0x1c2;eip=0x003f3f; 	X(POP(es))	// 9594 pop     es ;~ 01C2:3F3F
 cs=0x1c2;eip=0x003f40; 	T(STI)	// 9596 sti ;~ 01C2:3F40
-cs=0x1c2;eip=0x003f41; 	R(RETN)	// 9597 retn ;~ 01C2:3F41
+cs=0x1c2;eip=0x003f41; 	R(RETN(0))	// 9597 retn ;~ 01C2:3F41
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9476,7 +9476,7 @@ cs=0x1c2;eip=0x003f41; 	R(RETN)	// 9597 retn ;~ 01C2:3F41
 
 
 
- void sub_5c42(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5c42(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9514,13 +9514,13 @@ cs=0x1c2;eip=0x00400f; 	X(POP(di))	// 9728 pop     di ;~ 01C2:400F
 cs=0x1c2;eip=0x004010; 	X(POP(ax))	// 9729 pop     ax ;~ 01C2:4010
 cs=0x1c2;eip=0x004011; 	X(POP(es))	// 9730 pop     es ;~ 01C2:4011
 cs=0x1c2;eip=0x004012; 	T(STI)	// 9732 sti ;~ 01C2:4012
-cs=0x1c2;eip=0x004013; 	R(RETN)	// 9733 retn ;~ 01C2:4013
+cs=0x1c2;eip=0x004013; 	R(RETN(0))	// 9733 retn ;~ 01C2:4013
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9531,7 +9531,7 @@ cs=0x1c2;eip=0x004013; 	R(RETN)	// 9733 retn ;~ 01C2:4013
 
 
 
- void sub_5cc0(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5cc0(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9553,13 +9553,13 @@ cs=0x1c2;eip=0x004065; 	T(ADD(ax, dx))	// 9803 add     ax, dx ;~ 01C2:4065
 cs=0x1c2;eip=0x004067; 	T(MOV(di, ax))	// 9804 mov     di, ax ;~ 01C2:4067
 cs=0x1c2;eip=0x004069; 	X(POP(dx))	// 9805 pop     dx ;~ 01C2:4069
 cs=0x1c2;eip=0x00406a; 	X(POP(ax))	// 9806 pop     ax ;~ 01C2:406A
-cs=0x1c2;eip=0x00406b; 	R(RETN)	// 9807 retn ;~ 01C2:406B
+cs=0x1c2;eip=0x00406b; 	R(RETN(0))	// 9807 retn ;~ 01C2:406B
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9570,7 +9570,7 @@ cs=0x1c2;eip=0x00406b; 	R(RETN)	// 9807 retn ;~ 01C2:406B
 
 
 
- void sub_5cdc(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5cdc(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9581,13 +9581,13 @@ cs=0x1c2;eip=0x00406b; 	R(RETN)	// 9807 retn ;~ 01C2:406B
 cs=0x1c2;eip=0x00406c; 	T(MOV(si, 0x0BE70))	// 9816 mov     si, 0BE70h ;~ 01C2:406C
 cs=0x1c2;eip=0x00406f; 	R(CALL(sub_5ce3,0))	// 9817 call    sub_5CE3 ;~ 01C2:406F
 ret_1c2_4072:	// 5541 
-cs=0x1c2;eip=0x004072; 	R(RETN)	// 9818 retn ;~ 01C2:4072
+cs=0x1c2;eip=0x004072; 	R(RETN(0))	// 9818 retn ;~ 01C2:4072
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9599,7 +9599,7 @@ cs=0x1c2;eip=0x004072; 	R(RETN)	// 9818 retn ;~ 01C2:4072
 
 
 
- void sub_5ce3(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5ce3(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9631,7 +9631,7 @@ loc_5d0c:	// 5543
 cs=0x1c2;eip=0x00409c; 	X(POP(ax))	// 9850 pop     ax ;~ 01C2:409C
 cs=0x1c2;eip=0x00409d; 	X(POP(es))	// 9851 pop     es ;~ 01C2:409D
 cs=0x1c2;eip=0x00409e; 	X(POP(cx))	// 9853 pop     cx ;~ 01C2:409E
-cs=0x1c2;eip=0x00409f; 	R(RETN)	// 9854 retn ;~ 01C2:409F
+cs=0x1c2;eip=0x00409f; 	R(RETN(0))	// 9854 retn ;~ 01C2:409F
 loc_5d10:	// 5544 
 cs=0x1c2;eip=0x0040a0; 	T(LODSW)	// 9859 lodsw ;~ 01C2:40A0
 cs=0x1c2;eip=0x0040a1; 	T(XOR(ax, 0x0FFFF))	// 9860 xor     ax, 0FFFFh ;~ 01C2:40A1
@@ -9648,7 +9648,7 @@ cs=0x1c2;eip=0x0040b4; 	R(JMP(loc_5d0c))	// 9868 jmp     short loc_5D0C ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9662,7 +9662,7 @@ cs=0x1c2;eip=0x0040b4; 	R(JMP(loc_5d0c))	// 9868 jmp     short loc_5D0C ;~ 01C2:
 
 
 
- void sub_5d26(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5d26(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9693,13 +9693,13 @@ cs=0x1c2;eip=0x0040d8; 	R(LOOP(loc_5d3c))	// 9897 loop    loc_5D3C ;~ 01C2:40D8
 cs=0x1c2;eip=0x0040da; 	X(POP(ax))	// 9898 pop     ax ;~ 01C2:40DA
 cs=0x1c2;eip=0x0040db; 	X(POP(es))	// 9899 pop     es ;~ 01C2:40DB
 cs=0x1c2;eip=0x0040dc; 	X(POP(cx))	// 9901 pop     cx ;~ 01C2:40DC
-cs=0x1c2;eip=0x0040dd; 	R(RETN)	// 9902 retn ;~ 01C2:40DD
+cs=0x1c2;eip=0x0040dd; 	R(RETN(0))	// 9902 retn ;~ 01C2:40DD
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9711,7 +9711,7 @@ cs=0x1c2;eip=0x0040dd; 	R(RETN)	// 9902 retn ;~ 01C2:40DD
 
 
 
- void sub_5d4e(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5d4e(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9733,13 +9733,13 @@ cs=0x1c2;eip=0x0040ec; 	T(ADD(di, 0x0FEC2))	// 9920 add     di, 0FEC2h ;~ 01C2:4
 cs=0x1c2;eip=0x0040f0; 	R(JMP(loc_5d52))	// 9921 jmp     short loc_5D52 ;~ 01C2:40F0
 loc_5d62:	// 5548 
 cs=0x1c2;eip=0x0040f2; 	X(POP(ax))	// 9925 pop     ax ;~ 01C2:40F2
-cs=0x1c2;eip=0x0040f3; 	R(RETN)	// 9926 retn ;~ 01C2:40F3
+cs=0x1c2;eip=0x0040f3; 	R(RETN(0))	// 9926 retn ;~ 01C2:40F3
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9753,7 +9753,7 @@ cs=0x1c2;eip=0x0040f3; 	R(RETN)	// 9926 retn ;~ 01C2:40F3
 
 
 
- void sub_5d64(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5d64(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9774,13 +9774,13 @@ ret_1c2_4104:	// 5550
 cs=0x1c2;eip=0x004104; 	R(JMP(loc_5d65))	// 9945 jmp     short loc_5D65 ;~ 01C2:4104
 loc_5d76:	// 5551 
 cs=0x1c2;eip=0x004106; 	X(POP(ax))	// 9949 pop     ax ;~ 01C2:4106
-cs=0x1c2;eip=0x004107; 	R(RETN)	// 9950 retn ;~ 01C2:4107
+cs=0x1c2;eip=0x004107; 	R(RETN(0))	// 9950 retn ;~ 01C2:4107
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9794,7 +9794,7 @@ cs=0x1c2;eip=0x004107; 	R(RETN)	// 9950 retn ;~ 01C2:4107
 
 
 
- void sub_5de2(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5de2(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9824,13 +9824,13 @@ cs=0x1c2;eip=0x004199; 	X(POP(dx))	// 10042 pop     dx ;~ 01C2:4199
 cs=0x1c2;eip=0x00419a; 	X(POP(cx))	// 10043 pop     cx ;~ 01C2:419A
 cs=0x1c2;eip=0x00419b; 	X(POP(ax))	// 10044 pop     ax ;~ 01C2:419B
 cs=0x1c2;eip=0x00419c; 	X(POP(es))	// 10045 pop     es ;~ 01C2:419C
-cs=0x1c2;eip=0x00419d; 	R(RETN)	// 10047 retn ;~ 01C2:419D
+cs=0x1c2;eip=0x00419d; 	R(RETN(0))	// 10047 retn ;~ 01C2:419D
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9841,7 +9841,7 @@ cs=0x1c2;eip=0x00419d; 	R(RETN)	// 10047 retn ;~ 01C2:419D
 
 
 
- void sub_5e0e(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5e0e(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9860,13 +9860,13 @@ ret_1c2_41aa:	// 5558
 cs=0x1c2;eip=0x0041aa; 	X(POP(dx))	// 10061 pop     dx ;~ 01C2:41AA
 cs=0x1c2;eip=0x0041ab; 	X(POP(bx))	// 10062 pop     bx ;~ 01C2:41AB
 cs=0x1c2;eip=0x0041ac; 	X(POP(ax))	// 10063 pop     ax ;~ 01C2:41AC
-cs=0x1c2;eip=0x0041ad; 	R(RETN)	// 10064 retn ;~ 01C2:41AD
+cs=0x1c2;eip=0x0041ad; 	R(RETN(0))	// 10064 retn ;~ 01C2:41AD
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9879,7 +9879,7 @@ cs=0x1c2;eip=0x0041ad; 	R(RETN)	// 10064 retn ;~ 01C2:41AD
 
 
 
- void sub_5edb(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_5edb(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9909,7 +9909,7 @@ loc_5efe:	// 5583
 cs=0x1c2;eip=0x00428e; 	X(POP(ax))	// 10222 pop     ax ;~ 01C2:428E
 cs=0x1c2;eip=0x00428f; 	X(POP(di))	// 10223 pop     di ;~ 01C2:428F
 cs=0x1c2;eip=0x004290; 	X(POP(si))	// 10224 pop     si ;~ 01C2:4290
-cs=0x1c2;eip=0x004291; 	R(RETN)	// 10225 retn ;~ 01C2:4291
+cs=0x1c2;eip=0x004291; 	R(RETN(0))	// 10225 retn ;~ 01C2:4291
 loc_5f02:	// 5584 
 cs=0x1c2;eip=0x004292; 	T(CMP(ah, 0x48))	// 10229 cmp     ah, 48h ; 'H' ;~ 01C2:4292
 cs=0x1c2;eip=0x004295; 	R(JNZ(loc_5f0b))	// 10230 jnz     short loc_5F0B ;~ 01C2:4295
@@ -9935,7 +9935,7 @@ cs=0x1c2;eip=0x0042b4; 	R(JMP(loc_5efb))	// 10253 jmp     short loc_5EFB ;~ 01C2
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9953,7 +9953,7 @@ cs=0x1c2;eip=0x0042b4; 	R(JMP(loc_5efb))	// 10253 jmp     short loc_5EFB ;~ 01C2
 
 
 
- void sub_6021(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_6021(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -9970,13 +9970,13 @@ ret_1c2_43bd:	// 5612
 cs=0x1c2;eip=0x0043bd; 	X(MOV(byte_6f32, 5))	// 10392 mov     byte_6F32, 5 ;~ 01C2:43BD
 cs=0x1c2;eip=0x0043c2; 	R(CALL(sub_5de2,0))	// 10393 call    sub_5DE2 ;~ 01C2:43C2
 ret_1c2_43c5:	// 5613 
-cs=0x1c2;eip=0x0043c5; 	R(RETN)	// 10394 retn ;~ 01C2:43C5
+cs=0x1c2;eip=0x0043c5; 	R(RETN(0))	// 10394 retn ;~ 01C2:43C5
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -9990,7 +9990,7 @@ cs=0x1c2;eip=0x0043c5; 	R(RETN)	// 10394 retn ;~ 01C2:43C5
 
 
 
- void sub_6060(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool sub_6060(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -10013,17 +10013,17 @@ loc_6077:	// 5621
 cs=0x1c2;eip=0x004407; 	T(CMP(ah, 0x3C))	// 10460 cmp     ah, 3Ch ; '<' ;~ 01C2:4407
 cs=0x1c2;eip=0x00440a; 	R(JNZ(loc_607f))	// 10461 jnz     short loc_607F ;~ 01C2:440A
 cs=0x1c2;eip=0x00440c; 	T(MOV(bl, 2))	// 10462 mov     bl, 2 ;~ 01C2:440C
-cs=0x1c2;eip=0x00440e; 	R(RETN)	// 10463 retn ;~ 01C2:440E
+cs=0x1c2;eip=0x00440e; 	R(RETN(0))	// 10463 retn ;~ 01C2:440E
 loc_607f:	// 5622 
 cs=0x1c2;eip=0x00440f; 	T(MOV(bl, 0))	// 10468 mov     bl, 0 ;~ 01C2:440F
 locret_6081:	// 5623 
-cs=0x1c2;eip=0x004411; 	R(RETN)	// 10471 retn ;~ 01C2:4411
+cs=0x1c2;eip=0x004411; 	R(RETN(0))	// 10471 retn ;~ 01C2:4411
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -10037,7 +10037,7 @@ cs=0x1c2;eip=0x004411; 	R(RETN)	// 10471 retn ;~ 01C2:4411
 
 
 
- void _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group1(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -10056,7 +10056,7 @@ cs=0x1c2;eip=0x000171; 	T(MOV(sp, offset(seg002,stack_pointer)))	// 136 mov     
 cs=0x1c2;eip=0x000174; 	T(MOV(ds, ax))	// 137 mov     ds, ax ;~ 01C2:0174
 cs=0x1c2;eip=0x000176; 	T(MOV(es, ax))	// 138 mov     es, ax ;~ 01C2:0176
 cs=0x1c2;eip=0x000178; 	R(JMP(loc_51e0))	// 140 jmp     loc_51E0 ;~ 01C2:0178
-	R(CALL(mainproc,m2c::kloc_1d70));	R(RETN);sub_212f:	// 778 
+	R(CALL(mainproc,m2c::kloc_1d70));	R(RETN(0));sub_212f:	// 778 
 cs=0x1c2;eip=0x0004bf; 	R(CALL(sub_1ea8,0))	// 790 call    sub_1EA8 ;~ 01C2:04BF
 ret_1c2_4c2:	// 4443 
 cs=0x1c2;eip=0x0004c2; 	X(MOV(byte_6f32, 8))	// 791 mov     byte_6F32, 8 ;~ 01C2:04C2
@@ -10072,7 +10072,7 @@ ret_1c2_4d9:	// 4447
 cs=0x1c2;eip=0x0004d9; 	R(JNZ(loc_2154))	// 800 jnz     short loc_2154 ;~ 01C2:04D9
 cs=0x1c2;eip=0x0004db; 	T(CMP(word_7156, 0x12C))	// 801 cmp     word_7156, 12Ch ;~ 01C2:04DB
 cs=0x1c2;eip=0x0004e1; 	R(JC(loc_2146))	// 802 jb      short loc_2146 ;~ 01C2:04E1
-cs=0x1c2;eip=0x0004e3; 	R(RETN)	// 803 retn ;~ 01C2:04E3
+cs=0x1c2;eip=0x0004e3; 	R(RETN(0))	// 803 retn ;~ 01C2:04E3
 loc_2154:	// 4448 
 cs=0x1c2;eip=0x0004e4; 	R(CALL(sub_4f58,0))	// 807 call    sub_4F58 ;~ 01C2:04E4
 ret_1c2_4e7:	// 4449 
@@ -10151,7 +10151,7 @@ cs=0x1c2;eip=0x001415; 	R(JC(locret_308f))	// 3112 jb      short locret_308F ;~ 
 cs=0x1c2;eip=0x001417; 	X(SUB(word_6566, 0x480))	// 3113 sub     word_6566, 480h ;~ 01C2:1417
 cs=0x1c2;eip=0x00141d; 	R(JMP(loc_307f))	// 3114 jmp     short loc_307F ;~ 01C2:141D
 locret_308f:	// 4736 
-cs=0x1c2;eip=0x00141f; 	R(RETN)	// 3118 retn ;~ 01C2:141F
+cs=0x1c2;eip=0x00141f; 	R(RETN(0))	// 3118 retn ;~ 01C2:141F
 loc_3090:	// 4737 
 cs=0x1c2;eip=0x001420; 	T(TEST(byte_6571, 0x0FF))	// 3122 test    byte_6571, 0FFh ;~ 01C2:1420
 cs=0x1c2;eip=0x001425; 	R(JNZ(loc_30a3))	// 3123 jnz     short loc_30A3 ;~ 01C2:1425
@@ -10228,7 +10228,7 @@ cs=0x1c2;eip=0x0014e4; 	X(POP(bx))	// 3241 pop     bx ;~ 01C2:14E4
 cs=0x1c2;eip=0x0014e5; 	X(POP(dx))	// 3242 pop     dx ;~ 01C2:14E5
 cs=0x1c2;eip=0x0014e6; 	X(POP(ax))	// 3243 pop     ax ;~ 01C2:14E6
 cs=0x1c2;eip=0x0014e7; 	X(POP(cx))	// 3244 pop     cx ;~ 01C2:14E7
-cs=0x1c2;eip=0x0014e8; 	R(RETN)	// 3245 retn ;~ 01C2:14E8
+cs=0x1c2;eip=0x0014e8; 	R(RETN(0))	// 3245 retn ;~ 01C2:14E8
 loc_3159:	// 4756 
 cs=0x1c2;eip=0x0014e9; 	T(SHR(cx, 1))	// 3250 shr     cx, 1 ;~ 01C2:14E9
 cs=0x1c2;eip=0x0014eb; 	T(SUB(cx, 0x0E))	// 3251 sub     cx, 0Eh ;~ 01C2:14EB
@@ -10236,17 +10236,17 @@ cs=0x1c2;eip=0x0014ee; 	T(MOV(ax, cx))	// 3252 mov     ax, cx ;~ 01C2:14EE
 cs=0x1c2;eip=0x0014f0; 	T(CMP(ax, 1))	// 3253 cmp     ax, 1 ;~ 01C2:14F0
 cs=0x1c2;eip=0x0014f3; 	R(JNZ(loc_316b))	// 3254 jnz     short loc_316B ;~ 01C2:14F3
 cs=0x1c2;eip=0x0014f5; 	X(XOR(byte_6576, 0x0FF))	// 3255 xor     byte_6576, 0FFh ;~ 01C2:14F5
-cs=0x1c2;eip=0x0014fa; 	R(RETN)	// 3256 retn ;~ 01C2:14FA
+cs=0x1c2;eip=0x0014fa; 	R(RETN(0))	// 3256 retn ;~ 01C2:14FA
 loc_316b:	// 4757 
 cs=0x1c2;eip=0x0014fb; 	R(CALL(sub_5a85,0))	// 3260 call    sub_5A85 ;~ 01C2:14FB
 ret_1c2_14fe:	// 4758 
-cs=0x1c2;eip=0x0014fe; 	R(RETN)	// 3261 retn ;~ 01C2:14FE
+cs=0x1c2;eip=0x0014fe; 	R(RETN(0))	// 3261 retn ;~ 01C2:14FE
 loc_316f:	// 4759 
 cs=0x1c2;eip=0x0014ff; 	T(XOR(ax, ax))	// 3265 xor     ax, ax ;~ 01C2:14FF
 cs=0x1c2;eip=0x001501; 	T(MOV(di, 0x4B8))	// 3266 mov     di, 4B8h ;~ 01C2:1501
 cs=0x1c2;eip=0x001504; 	T(MOV(cx, 4))	// 3267 mov     cx, 4 ;~ 01C2:1504	// 3268 rep stosw ;~ 01C2:1507
 cs=0x1c2;eip=0x001507; 	X(	REP STOSW)	// 3268 rep stosw ;~ 01C2:1507
-cs=0x1c2;eip=0x001509; 	R(RETN)	// 3269 retn ;~ 01C2:1509
+cs=0x1c2;eip=0x001509; 	R(RETN(0))	// 3269 retn ;~ 01C2:1509
 loc_317a:	// 4760 
 cs=0x1c2;eip=0x00150a; 	X(MOV(word_6568, 0x0FEB0))	// 3273 mov     word_6568, 0FEB0h ;~ 01C2:150A
 loc_3180:	// 4761 
@@ -10262,7 +10262,7 @@ cs=0x1c2;eip=0x001527; 	T(MOV(cx, word_6568))	// 3285 mov     cx, word_6568 ;~ 0
 cs=0x1c2;eip=0x00152b; 	R(CALL(sub_561d,0))	// 3286 call    sub_561D ;~ 01C2:152B
 ret_1c2_152e:	// 4764 
 cs=0x1c2;eip=0x00152e; 	X(MOV(word_656e, dx))	// 3287 mov     word_656E, dx ;~ 01C2:152E
-cs=0x1c2;eip=0x001532; 	R(RETN)	// 3288 retn ;~ 01C2:1532
+cs=0x1c2;eip=0x001532; 	R(RETN(0))	// 3288 retn ;~ 01C2:1532
 loc_31a3:	// 4765 
 cs=0x1c2;eip=0x001533; 	X(MOV(word_6568, 0x150))	// 3292 mov     word_6568, 150h ;~ 01C2:1533
 cs=0x1c2;eip=0x001539; 	R(JMP(loc_3180))	// 3293 jmp     short loc_3180 ;~ 01C2:1539
@@ -10279,7 +10279,7 @@ cs=0x1c2;eip=0x00154e; 	T(XOR(ax, ax))	// 3307 xor     ax, ax ;~ 01C2:154E
 cs=0x1c2;eip=0x001550; 	X(MOV(word_656c, ax))	// 3308 mov     word_656C, ax ;~ 01C2:1550
 cs=0x1c2;eip=0x001553; 	X(MOV(word_656e, ax))	// 3309 mov     word_656E, ax ;~ 01C2:1553
 cs=0x1c2;eip=0x001556; 	X(MOV(word_6568, ax))	// 3310 mov     word_6568, ax ;~ 01C2:1556
-cs=0x1c2;eip=0x001559; 	R(RETN)	// 3311 retn ;~ 01C2:1559
+cs=0x1c2;eip=0x001559; 	R(RETN(0))	// 3311 retn ;~ 01C2:1559
 loc_31ca:	// 4769 
 cs=0x1c2;eip=0x00155a; 	T(MOV(ax, word_655a))	// 3315 mov     ax, word_655A ;~ 01C2:155A
 cs=0x1c2;eip=0x00155d; 	R(JMP(loc_31ae))	// 3316 jmp     short loc_31AE ;~ 01C2:155D
@@ -10347,7 +10347,7 @@ cs=0x1c2;eip=0x0032b4; 	T(MOV(bx, di))	// 7430 mov     bx, di ;~ 01C2:32B4
 cs=0x1c2;eip=0x0032b6; 	T(MOV(di, cx))	// 7431 mov     di, cx ;~ 01C2:32B6
 cs=0x1c2;eip=0x0032b8; 	T(MOV(cx, dx))	// 7432 mov     cx, dx ;~ 01C2:32B8
 cs=0x1c2;eip=0x0032ba; 	T(MOV(dx, di))	// 7433 mov     dx, di ;~ 01C2:32BA
-cs=0x1c2;eip=0x0032bc; 	R(RETN)	// 7434 retn ;~ 01C2:32BC
+cs=0x1c2;eip=0x0032bc; 	R(RETN(0))	// 7434 retn ;~ 01C2:32BC
 loc_4f30:	// 5282 
 cs=0x1c2;eip=0x0032c0; 	R(CALL(sub_4f80,0))	// 7442 call    sub_4F80 ;~ 01C2:32C0
 ret_1c2_32c3:	// 5283 
@@ -10370,7 +10370,7 @@ cs=0x1c2;eip=0x0032e1; 	X(PUSH(ax))	// 7462 push    ax ;~ 01C2:32E1
 cs=0x1c2;eip=0x0032e2; 	T(MOV(ah, 1))	// 7463 mov     ah, 1 ;~ 01C2:32E2
 cs=0x1c2;eip=0x0032e4; 	R(_INT(0x16))	// 7464 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:32E4
 cs=0x1c2;eip=0x0032e6; 	X(POP(ax))	// 7468 pop     ax ;~ 01C2:32E6
-cs=0x1c2;eip=0x0032e7; 	R(RETN)	// 7469 retn ;~ 01C2:32E7
+cs=0x1c2;eip=0x0032e7; 	R(RETN(0))	// 7469 retn ;~ 01C2:32E7
 sub_51a5:	// 7926 
 cs=0x1c2;eip=0x003535; 	X(PUSH(es))	// 7927 push    es ;~ 01C2:3535
 cs=0x1c2;eip=0x003536; 	X(PUSH(ds))	// 7928 push    ds ;~ 01C2:3536
@@ -10394,7 +10394,7 @@ cs=0x1c2;eip=0x003562; 	T(DEC(bl))	// 7948 dec     bl ;~ 01C2:3562
 cs=0x1c2;eip=0x003564; 	R(JNZ(loc_51b8))	// 7949 jnz     short loc_51B8 ;~ 01C2:3564
 cs=0x1c2;eip=0x003566; 	X(POP(ds))	// 7950 pop     ds ;~ 01C2:3566
 cs=0x1c2;eip=0x003567; 	X(POP(es))	// 7952 pop     es ;~ 01C2:3567
-cs=0x1c2;eip=0x003568; 	R(RETN)	// 7954 retn ;~ 01C2:3568
+cs=0x1c2;eip=0x003568; 	R(RETN(0))	// 7954 retn ;~ 01C2:3568
 loc_51e0:	// 5327 
 cs=0x1c2;eip=0x003570; 	X(MOV(word_6f59, sp))	// 7962 mov     word_6F59, sp ;~ 01C2:3570
 cs=0x1c2;eip=0x003574; 	R(CALL(sub_43ed,0))	// 7963 call    sub_43ED ;~ 01C2:3574
@@ -10434,7 +10434,7 @@ cs=0x1c2;eip=0x003619; 	X(MOV(byte_61cb, 0))	// 8044 mov     byte_61CB, 0 ;~ 01C
 cs=0x1c2;eip=0x00361e; 	X(MOV(byte_6ecd, 0))	// 8045 mov     byte_6ECD, 0 ;~ 01C2:361E
 cs=0x1c2;eip=0x003623; 	T(TEST(byte_6570, 0x0FF))	// 8046 test    byte_6570, 0FFh ;~ 01C2:3623
 cs=0x1c2;eip=0x003628; 	R(JZ(loc_529b))	// 8047 jz      short loc_529B ;~ 01C2:3628
-cs=0x1c2;eip=0x00362a; 	R(RETN)	// 8048 retn ;~ 01C2:362A
+cs=0x1c2;eip=0x00362a; 	R(RETN(0))	// 8048 retn ;~ 01C2:362A
 loc_529b:	// 5340 
 cs=0x1c2;eip=0x00362b; 	T(TEST(byte_7088, 2))	// 8052 test    byte_7088, 2 ;~ 01C2:362B
 cs=0x1c2;eip=0x003630; 	R(JZ(loc_52c5))	// 8053 jz      short loc_52C5 ;~ 01C2:3630
@@ -10491,7 +10491,7 @@ ret_1c2_369f:	// 5355
 cs=0x1c2;eip=0x00369f; 	R(CALL(sub_54e6,0))	// 8102 call    sub_54E6 ;~ 01C2:369F
 ret_1c2_36a2:	// 5356 
 cs=0x1c2;eip=0x0036a2; 	X(MOV(byte_6f52, 0))	// 8103 mov     byte_6F52, 0 ;~ 01C2:36A2
-cs=0x1c2;eip=0x0036a7; 	R(RETN)	// 8104 retn ;~ 01C2:36A7
+cs=0x1c2;eip=0x0036a7; 	R(RETN(0))	// 8104 retn ;~ 01C2:36A7
 sub_56d8:	// 8717 
 cs=0x1c2;eip=0x003a68; 	X(PUSH(dx))	// 8719 push    dx ;~ 01C2:3A68
 cs=0x1c2;eip=0x003a69; 	X(PUSH(bx))	// 8720 push    bx ;~ 01C2:3A69
@@ -10519,7 +10519,7 @@ cs=0x1c2;eip=0x003a8e; 	R(JMP(loc_56f5))	// 8744 jmp     short loc_56F5 ;~ 01C2:
 loc_5700:	// 5423 
 cs=0x1c2;eip=0x003a90; 	X(POP(bx))	// 8749 pop     bx ;~ 01C2:3A90
 cs=0x1c2;eip=0x003a91; 	X(POP(dx))	// 8750 pop     dx ;~ 01C2:3A91
-cs=0x1c2;eip=0x003a92; 	R(RETN)	// 8751 retn ;~ 01C2:3A92
+cs=0x1c2;eip=0x003a92; 	R(RETN(0))	// 8751 retn ;~ 01C2:3A92
 loc_5710:	// 5424 
 cs=0x1c2;eip=0x003aa0; 	R(CALL(sub_4f6a,0))	// 8761 call    sub_4F6A ;~ 01C2:3AA0
 ret_1c2_3aa3:	// 5425 
@@ -10670,7 +10670,7 @@ cs=0x1c2;eip=0x003c00; 	T(MOV(ah, 0))	// 8977 mov     ah, 0 ;~ 01C2:3C00
 cs=0x1c2;eip=0x003c02; 	R(_INT(0x16))	// 8978 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:3C02
 cs=0x1c2;eip=0x003c04; 	R(JMP(sub_586a))	// 8980 jmp     short sub_586A ;~ 01C2:3C04
 locret_5876:	// 5474 
-cs=0x1c2;eip=0x003c06; 	R(RETN)	// 8984 retn ;~ 01C2:3C06
+cs=0x1c2;eip=0x003c06; 	R(RETN(0))	// 8984 retn ;~ 01C2:3C06
 loc_5877:	// 5475 
 cs=0x1c2;eip=0x003c07; 	T(MOV(al, byte_6f33))	// 8991 mov     al, byte_6F33 ;~ 01C2:3C07
 cs=0x1c2;eip=0x003c0a; 	T(CMP(al, byte_6f34))	// 8992 cmp     al, byte_6F34 ;~ 01C2:3C0A
@@ -10707,7 +10707,7 @@ cs=0x1c2;eip=0x003c49; 	T(MOV(si, 0x1012))	// 9034 mov     si, 1012h ;~ 01C2:3C4
 loc_58bc:	// 5484 
 cs=0x1c2;eip=0x003c4c; 	R(CALL(sub_5d64,0))	// 9037 call    sub_5D64 ;~ 01C2:3C4C
 ret_1c2_3c4f:	// 5485 
-cs=0x1c2;eip=0x003c4f; 	R(RETN)	// 9038 retn ;~ 01C2:3C4F
+cs=0x1c2;eip=0x003c4f; 	R(RETN(0))	// 9038 retn ;~ 01C2:3C4F
 loc_58c0:	// 5486 
 cs=0x1c2;eip=0x003c50; 	X(MOV(byte_6570, 0x0FF))	// 9045 mov     byte_6570, 0FFh ;~ 01C2:3C50
 cs=0x1c2;eip=0x003c55; 	R(JMP(loc_51fa))	// 9046 jmp     loc_51FA ;~ 01C2:3C55
@@ -10746,7 +10746,7 @@ ret_1c2_41ba:	// 5560
 cs=0x1c2;eip=0x0041ba; 	X(POP(dx))	// 10078 pop     dx ;~ 01C2:41BA
 cs=0x1c2;eip=0x0041bb; 	X(POP(bx))	// 10079 pop     bx ;~ 01C2:41BB
 cs=0x1c2;eip=0x0041bc; 	X(POP(ax))	// 10080 pop     ax ;~ 01C2:41BC
-cs=0x1c2;eip=0x0041bd; 	R(RETN)	// 10081 retn ;~ 01C2:41BD
+cs=0x1c2;eip=0x0041bd; 	R(RETN(0))	// 10081 retn ;~ 01C2:41BD
 loc_5e2e:	// 5561 
 cs=0x1c2;eip=0x0041be; 	R(CALL(sub_4f6a,0))	// 10088 call    sub_4F6A ;~ 01C2:41BE
 ret_1c2_41c1:	// 5562 
@@ -10868,7 +10868,7 @@ loc_5f49:	// 5592
 cs=0x1c2;eip=0x0042d9; 	X(POP(si))	// 10289 pop     si ;~ 01C2:42D9
 cs=0x1c2;eip=0x0042da; 	X(POP(bx))	// 10290 pop     bx ;~ 01C2:42DA
 cs=0x1c2;eip=0x0042db; 	X(POP(ax))	// 10291 pop     ax ;~ 01C2:42DB
-cs=0x1c2;eip=0x0042dc; 	R(RETN)	// 10292 retn ;~ 01C2:42DC
+cs=0x1c2;eip=0x0042dc; 	R(RETN(0))	// 10292 retn ;~ 01C2:42DC
 loc_5f4d:	// 5593 
 cs=0x1c2;eip=0x0042dd; 	R(CALL(sub_4f6a,0))	// 10299 call    sub_4F6A ;~ 01C2:42DD
 ret_1c2_42e0:	// 5594 
@@ -10978,7 +10978,7 @@ loc_605b:	// 5619
 cs=0x1c2;eip=0x0043eb; 	X(POP(ax))	// 10429 pop     ax ;~ 01C2:43EB
 cs=0x1c2;eip=0x0043ec; 	R(JMP(loc_51fa))	// 10430 jmp     loc_51FA ;~ 01C2:43EC
 locret_605f:	// 5620 
-cs=0x1c2;eip=0x0043ef; 	R(RETN)	// 10434 retn ;~ 01C2:43EF
+cs=0x1c2;eip=0x0043ef; 	R(RETN(0))	// 10434 retn ;~ 01C2:43EF
 sub_6082:	// 10478 
 cs=0x1c2;eip=0x004412; 	X(MOV(word_7152, 0))	// 10483 mov     word_7152, 0 ;~ 01C2:4412
 loc_6088:	// 5624 
@@ -10988,7 +10988,7 @@ cs=0x1c2;eip=0x00441c; 	R(JNZ(loc_6096))	// 10492 jnz     short loc_6096 ;~ 01C2
 cs=0x1c2;eip=0x00441e; 	T(MOV(ax, word_7152))	// 10493 mov     ax, word_7152 ;~ 01C2:441E
 cs=0x1c2;eip=0x004421; 	T(CMP(ax, cx))	// 10494 cmp     ax, cx ;~ 01C2:4421
 cs=0x1c2;eip=0x004423; 	R(JC(loc_6088))	// 10495 jb      short loc_6088 ;~ 01C2:4423
-cs=0x1c2;eip=0x004425; 	R(RETN)	// 10496 retn ;~ 01C2:4425
+cs=0x1c2;eip=0x004425; 	R(RETN(0))	// 10496 retn ;~ 01C2:4425
 loc_6096:	// 5625 
 cs=0x1c2;eip=0x004426; 	T(MOV(ah, 0))	// 10500 mov     ah, 0 ;~ 01C2:4426
 cs=0x1c2;eip=0x004428; 	R(_INT(0x16))	// 10501 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:4428
@@ -11008,7 +11008,7 @@ cs=0x1c2;eip=0x00443d; 	R(JMP(loc_51fa))	// 10515 jmp     loc_51FA ;~ 01C2:443D
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11258,7 +11258,7 @@ cs=0x1c2;eip=0x00443d; 	R(JMP(loc_51fa))	// 10515 jmp     loc_51FA ;~ 01C2:443D
 
 
 
- void _group2(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group2(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11272,7 +11272,7 @@ cs=0x1c2;eip=0x0003ab; 	T(MOV(di, 0x3C0))	// 502 mov     di, 3C0h ;~ 01C2:03AB
 sub_201e:	// 509 
 cs=0x1c2;eip=0x0003ae; 	R(CALL(sub_20af,0))	// 511 call    sub_20AF ;~ 01C2:03AE
 ret_1c2_3b1:	// 4428 
-cs=0x1c2;eip=0x0003b1; 	R(RETN)	// 512 retn ;~ 01C2:03B1
+cs=0x1c2;eip=0x0003b1; 	R(RETN(0))	// 512 retn ;~ 01C2:03B1
 sub_2022:	// 519 
 cs=0x1c2;eip=0x0003b2; 	T(MOV(si, offset(seg002,aenemytoright)))	// 520 mov     si, offset aEnemyToRight ; "ENEMY TO RIGHT" ;~ 01C2:03B2
 loc_2025:	// 4429 
@@ -11321,7 +11321,7 @@ cs=0x1c2;eip=0x000403; 	R(JMP(sub_201e))	// 618 jmp     short sub_201E ;~ 01C2:0
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11346,7 +11346,7 @@ cs=0x1c2;eip=0x000403; 	R(JMP(sub_201e))	// 618 jmp     short sub_201E ;~ 01C2:0
 
 
 
- void _group3(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group3(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11379,7 +11379,7 @@ cs=0x1c2;eip=0x004108; 	X(MOV(unk_1193e, 0x0FF))	// 9959 mov     byte ptr unk_11
 cs=0x1c2;eip=0x00410d; 	R(CALL(sub_5d64,0))	// 9960 call    sub_5D64 ;~ 01C2:410D
 ret_1c2_4110:	// 5552 
 cs=0x1c2;eip=0x004110; 	X(MOV(unk_1193e, 0))	// 9961 mov     byte ptr unk_1193E, 0 ;~ 01C2:4110
-cs=0x1c2;eip=0x004115; 	R(RETN)	// 9962 retn ;~ 01C2:4115
+cs=0x1c2;eip=0x004115; 	R(RETN(0))	// 9962 retn ;~ 01C2:4115
 loc_5d86:	// 5553 
 cs=0x1c2;eip=0x004116; 	X(PUSH(es))	// 9969 push    es ;~ 01C2:4116
 cs=0x1c2;eip=0x004117; 	T(MOV(dx, 0))	// 9970 mov     dx, 0 ;~ 01C2:4117
@@ -11422,13 +11422,13 @@ cs=0x1c2;eip=0x004167; 	T(SUB(di, *(dw*)((&unk_11942))))	// 10010 sub     di, wo
 cs=0x1c2;eip=0x00416b; 	T(CMP(dx, 0x10))	// 10011 cmp     dx, 10h ;~ 01C2:416B
 cs=0x1c2;eip=0x00416e; 	R(JNZ(loc_5d97))	// 10012 jnz     short loc_5D97 ;~ 01C2:416E
 cs=0x1c2;eip=0x004170; 	X(POP(es))	// 10013 pop     es ;~ 01C2:4170
-cs=0x1c2;eip=0x004171; 	R(RETN)	// 10015 retn ;~ 01C2:4171
+cs=0x1c2;eip=0x004171; 	R(RETN(0))	// 10015 retn ;~ 01C2:4171
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11447,7 +11447,7 @@ cs=0x1c2;eip=0x004171; 	R(RETN)	// 10015 retn ;~ 01C2:4171
 
 
 
- void _group4(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group4(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11479,7 +11479,7 @@ cs=0x1c2;eip=0x00048b; 	T(MOV(di, bp))	// 726 mov     di, bp ;~ 01C2:048B
 cs=0x1c2;eip=0x00048d; 	R(LOOP(loc_20f5))	// 727 loop    loc_20F5 ;~ 01C2:048D
 cs=0x1c2;eip=0x00048f; 	X(POP(es))	// 728 pop     es ;~ 01C2:048F
 locret_2100:	// 4440 
-cs=0x1c2;eip=0x000490; 	R(RETN)	// 733 retn ;~ 01C2:0490
+cs=0x1c2;eip=0x000490; 	R(RETN(0))	// 733 retn ;~ 01C2:0490
 sub_2101:	// 740 
 cs=0x1c2;eip=0x000491; 	T(MOV(di, 0x272A))	// 741 mov     di, 272Ah ;~ 01C2:0491
 cs=0x1c2;eip=0x000494; 	T(MOV(bp, di))	// 742 mov     bp, di ;~ 01C2:0494
@@ -11495,7 +11495,7 @@ cs=0x1c2;eip=0x0004a7; 	R(JMP(loc_20e8))	// 751 jmp     short loc_20E8 ;~ 01C2:0
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11513,7 +11513,7 @@ cs=0x1c2;eip=0x0004a7; 	R(JMP(loc_20e8))	// 751 jmp     short loc_20E8 ;~ 01C2:0
 
 
 
- void _group5(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group5(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11562,13 +11562,13 @@ cs=0x1c2;eip=0x00059f; 	R(LOOP(loc_21d7))	// 932 loop    loc_21D7 ;~ 01C2:059F
 cs=0x1c2;eip=0x0005a1; 	T(CLC)	// 933 clc ;~ 01C2:05A1
 loc_2212:	// 4465 
 cs=0x1c2;eip=0x0005a2; 	X(POP(si))	// 936 pop     si ;~ 01C2:05A2
-cs=0x1c2;eip=0x0005a3; 	R(RETN)	// 937 retn ;~ 01C2:05A3
+cs=0x1c2;eip=0x0005a3; 	R(RETN(0))	// 937 retn ;~ 01C2:05A3
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11587,7 +11587,7 @@ cs=0x1c2;eip=0x0005a3; 	R(RETN)	// 937 retn ;~ 01C2:05A3
 
 
 
- void _group6(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group6(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11639,13 +11639,13 @@ cs=0x1c2;eip=0x000a74; 	X(DEC(byte_631d))	// 1610 dec     byte_631D ;~ 01C2:0A74
 cs=0x1c2;eip=0x000a78; 	R(JNZ(loc_26b1))	// 1611 jnz     short loc_26B1 ;~ 01C2:0A78
 cs=0x1c2;eip=0x000a7a; 	T(CLC)	// 1612 clc ;~ 01C2:0A7A
 cs=0x1c2;eip=0x000a7b; 	X(POP(si))	// 1613 pop     si ;~ 01C2:0A7B
-cs=0x1c2;eip=0x000a7c; 	R(RETN)	// 1614 retn ;~ 01C2:0A7C
+cs=0x1c2;eip=0x000a7c; 	R(RETN(0))	// 1614 retn ;~ 01C2:0A7C
 loc_26ed:	// 4556 
 cs=0x1c2;eip=0x000a7d; 	X(POP(si))	// 1619 pop     si ;~ 01C2:0A7D
 cs=0x1c2;eip=0x000a7e; 	T(MOV(bx, word_6323))	// 1620 mov     bx, word_6323 ;~ 01C2:0A7E
 cs=0x1c2;eip=0x000a82; 	T(MOV(dx, word_6325))	// 1621 mov     dx, word_6325 ;~ 01C2:0A82
 cs=0x1c2;eip=0x000a86; 	T(STC)	// 1622 stc ;~ 01C2:0A86
-cs=0x1c2;eip=0x000a87; 	R(RETN)	// 1623 retn ;~ 01C2:0A87
+cs=0x1c2;eip=0x000a87; 	R(RETN(0))	// 1623 retn ;~ 01C2:0A87
 sub_26f8:	// 1630 
 cs=0x1c2;eip=0x000a88; 	X(PUSH(si))	// 1632 push    si ;~ 01C2:0A88
 cs=0x1c2;eip=0x000a89; 	T(MOV(ax, word_630f))	// 1633 mov     ax, word_630F ;~ 01C2:0A89
@@ -11659,7 +11659,7 @@ cs=0x1c2;eip=0x000a99; 	R(JMP(loc_2698))	// 1638 jmp     short loc_2698 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11678,7 +11678,7 @@ cs=0x1c2;eip=0x000a99; 	R(JMP(loc_2698))	// 1638 jmp     short loc_2698 ;~ 01C2:
 
 
 
- void _group7(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group7(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11707,7 +11707,7 @@ loc_272f:	// 4559
 cs=0x1c2;eip=0x000abf; 	T(CMP(ax, word_62e6))	// 1667 cmp     ax, word_62E6 ;~ 01C2:0ABF
 loc_2733:	// 4560 
 cs=0x1c2;eip=0x000ac3; 	X(POP(si))	// 1671 pop     si ;~ 01C2:0AC3
-cs=0x1c2;eip=0x000ac4; 	R(RETN)	// 1672 retn ;~ 01C2:0AC4
+cs=0x1c2;eip=0x000ac4; 	R(RETN(0))	// 1672 retn ;~ 01C2:0AC4
 sub_2735:	// 1679 
 cs=0x1c2;eip=0x000ac5; 	X(PUSH(si))	// 1681 push    si ;~ 01C2:0AC5
 cs=0x1c2;eip=0x000ac6; 	T(CMP(word_6339, 0))	// 1682 cmp     word_6339, 0 ;~ 01C2:0AC6
@@ -11719,7 +11719,7 @@ cs=0x1c2;eip=0x000ad1; 	R(JMP(loc_2717))	// 1685 jmp     short loc_2717 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11735,7 +11735,7 @@ cs=0x1c2;eip=0x000ad1; 	R(JMP(loc_2717))	// 1685 jmp     short loc_2717 ;~ 01C2:
 
 
 
- void _group8(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group8(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11761,13 +11761,13 @@ cs=0x1c2;eip=0x000fa2; 	T(AND(al, bl))	// 2437 and     al, bl ;~ 01C2:0FA2
 cs=0x1c2;eip=0x000fa4; 	T(XOR(al, ah))	// 2438 xor     al, ah ;~ 01C2:0FA4
 cs=0x1c2;eip=0x000fa6; 	X(STOSB)	// 2439 stosb ;~ 01C2:0FA6
 cs=0x1c2;eip=0x000fa7; 	R(LOOP(loc_2bff))	// 2440 loop    loc_2BFF ;~ 01C2:0FA7
-cs=0x1c2;eip=0x000fa9; 	R(RETN)	// 2441 retn ;~ 01C2:0FA9
+cs=0x1c2;eip=0x000fa9; 	R(RETN(0))	// 2441 retn ;~ 01C2:0FA9
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11780,7 +11780,7 @@ cs=0x1c2;eip=0x000fa9; 	R(RETN)	// 2441 retn ;~ 01C2:0FA9
 
 
 
- void _group9(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group9(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11812,13 +11812,13 @@ cs=0x1c2;eip=0x000fca; 	T(OR(al, ah))	// 2488 or      al, ah ;~ 01C2:0FCA
 cs=0x1c2;eip=0x000fcc; 	X(MOV(*(raddr(es,di)), al))	// 2489 mov     es:[di], al ;~ 01C2:0FCC
 cs=0x1c2;eip=0x000fcf; 	R(JMP(loc_2c2e))	// 2490 jmp     short loc_2C2E ;~ 01C2:0FCF
 locret_2c41:	// 4668 
-cs=0x1c2;eip=0x000fd1; 	R(RETN)	// 2494 retn ;~ 01C2:0FD1
+cs=0x1c2;eip=0x000fd1; 	R(RETN(0))	// 2494 retn ;~ 01C2:0FD1
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11834,7 +11834,7 @@ cs=0x1c2;eip=0x000fd1; 	R(RETN)	// 2494 retn ;~ 01C2:0FD1
 
 
 
- void _group10(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group10(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11860,13 +11860,13 @@ cs=0x1c2;eip=0x000fed; 	T(AND(al, bl))	// 2523 and     al, bl ;~ 01C2:0FED
 cs=0x1c2;eip=0x000fef; 	T(XOR(al, ah))	// 2524 xor     al, ah ;~ 01C2:0FEF
 cs=0x1c2;eip=0x000ff1; 	X(STOSB)	// 2525 stosb ;~ 01C2:0FF1
 cs=0x1c2;eip=0x000ff2; 	R(LOOP(loc_2c4a))	// 2526 loop    loc_2C4A ;~ 01C2:0FF2
-cs=0x1c2;eip=0x000ff4; 	R(RETN)	// 2527 retn ;~ 01C2:0FF4
+cs=0x1c2;eip=0x000ff4; 	R(RETN(0))	// 2527 retn ;~ 01C2:0FF4
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11879,7 +11879,7 @@ cs=0x1c2;eip=0x000ff4; 	R(RETN)	// 2527 retn ;~ 01C2:0FF4
 
 
 
- void _group11(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group11(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11894,7 +11894,7 @@ cs=0x1c2;eip=0x001918; 	X(ADD(*(dw*)(raddr(ds,si+9)), ax))	// 3893 add     [si+9
 cs=0x1c2;eip=0x00191b; 	T(XOR(ax, ax))	// 3894 xor     ax, ax ;~ 01C2:191B
 cs=0x1c2;eip=0x00191d; 	X(MOV(word_6580, ax))	// 3895 mov     word_6580, ax ;~ 01C2:191D
 cs=0x1c2;eip=0x001920; 	X(MOV(word_6582, ax))	// 3896 mov     word_6582, ax ;~ 01C2:1920
-cs=0x1c2;eip=0x001923; 	R(RETN)	// 3897 retn ;~ 01C2:1923
+cs=0x1c2;eip=0x001923; 	R(RETN(0))	// 3897 retn ;~ 01C2:1923
 sub_3594:	// 3904 
 cs=0x1c2;eip=0x001924; 	T(MOV(ax, word_658b))	// 3906 mov     ax, word_658B ;~ 01C2:1924
 cs=0x1c2;eip=0x001927; 	T(NEG(ax))	// 3907 neg     ax ;~ 01C2:1927
@@ -11904,7 +11904,7 @@ cs=0x1c2;eip=0x001929; 	R(JMP(loc_3588))	// 3908 jmp     short loc_3588 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -11917,7 +11917,7 @@ cs=0x1c2;eip=0x001929; 	R(JMP(loc_3588))	// 3908 jmp     short loc_3588 ;~ 01C2:
 
 
 
- void _group12(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group12(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -11937,7 +11937,7 @@ loc_3652:	// 4874
 cs=0x1c2;eip=0x0019e2; 	T(TEST(byte_6cb2, 0x0FF))	// 4010 test    byte_6CB2, 0FFh ;~ 01C2:19E2
 cs=0x1c2;eip=0x0019e7; 	R(JZ(loc_365a))	// 4011 jz      short loc_365A ;~ 01C2:19E7
 locret_3659:	// 4875 
-cs=0x1c2;eip=0x0019e9; 	R(RETN)	// 4014 retn ;~ 01C2:19E9
+cs=0x1c2;eip=0x0019e9; 	R(RETN(0))	// 4014 retn ;~ 01C2:19E9
 loc_365a:	// 4876 
 cs=0x1c2;eip=0x0019ea; 	R(CALL(sub_5289,0))	// 4018 call    sub_5289 ;~ 01C2:19EA
 ret_1c2_19ed:	// 4877 
@@ -11954,7 +11954,7 @@ cs=0x1c2;eip=0x001a08; 	R(JNZ(loc_3696))	// 4030 jnz     short loc_3696 ;~ 01C2:
 cs=0x1c2;eip=0x001a0a; 	T(TEST(byte_6585, 0x0FF))	// 4031 test    byte_6585, 0FFh ;~ 01C2:1A0A
 cs=0x1c2;eip=0x001a0f; 	X(MOV(byte_6585, 0))	// 4032 mov     byte_6585, 0 ;~ 01C2:1A0F
 cs=0x1c2;eip=0x001a14; 	R(JNZ(loc_3696))	// 4033 jnz     short loc_3696 ;~ 01C2:1A14
-cs=0x1c2;eip=0x001a16; 	R(RETN)	// 4034 retn ;~ 01C2:1A16
+cs=0x1c2;eip=0x001a16; 	R(RETN(0))	// 4034 retn ;~ 01C2:1A16
 loc_3687:	// 4880 
 cs=0x1c2;eip=0x001a17; 	X(MOV(byte_658a, 0))	// 4038 mov     byte_658A, 0 ;~ 01C2:1A17
 cs=0x1c2;eip=0x001a1c; 	T(CMP(byte_6f51, 3))	// 4039 cmp     byte_6F51, 3 ;~ 01C2:1A1C
@@ -11986,13 +11986,13 @@ cs=0x1c2;eip=0x001a4f; 	X(MOV(byte_658f, 0x0FF))	// 4074 mov     byte_658F, 0FFh
 loc_36c4:	// 4889 
 cs=0x1c2;eip=0x001a54; 	R(CALL(sub_5469,0))	// 4077 call    sub_5469 ;~ 01C2:1A54
 ret_1c2_1a57:	// 4890 
-cs=0x1c2;eip=0x001a57; 	R(RETN)	// 4078 retn ;~ 01C2:1A57
+cs=0x1c2;eip=0x001a57; 	R(RETN(0))	// 4078 retn ;~ 01C2:1A57
 sub_5351:	// 8156 
 cs=0x1c2;eip=0x0036e1; 	T(TEST(byte_6576, 0x0FF))	// 8158 test    byte_6576, 0FFh ;~ 01C2:36E1
 cs=0x1c2;eip=0x0036e6; 	R(JZ(loc_535c))	// 8159 jz      short loc_535C ;~ 01C2:36E6
 cs=0x1c2;eip=0x0036e8; 	R(CALL(sub_5469,0))	// 8160 call    sub_5469 ;~ 01C2:36E8
 ret_1c2_36eb:	// 5362 
-cs=0x1c2;eip=0x0036eb; 	R(RETN)	// 8161 retn ;~ 01C2:36EB
+cs=0x1c2;eip=0x0036eb; 	R(RETN(0))	// 8161 retn ;~ 01C2:36EB
 loc_535c:	// 5363 
 cs=0x1c2;eip=0x0036ec; 	T(TEST(byte_6f52, 0x0FF))	// 8165 test    byte_6F52, 0FFh ;~ 01C2:36EC
 cs=0x1c2;eip=0x0036f1; 	R(JNZ(locret_536b))	// 8166 jnz     short locret_536B ;~ 01C2:36F1
@@ -12000,13 +12000,13 @@ cs=0x1c2;eip=0x0036f3; 	R(CALL(sub_54e6,0))	// 8167 call    sub_54E6 ;~ 01C2:36F
 ret_1c2_36f6:	// 5364 
 cs=0x1c2;eip=0x0036f6; 	X(MOV(byte_6f52, 0x0C))	// 8168 mov     byte_6F52, 0Ch ;~ 01C2:36F6
 locret_536b:	// 5365 
-cs=0x1c2;eip=0x0036fb; 	R(RETN)	// 8171 retn ;~ 01C2:36FB
+cs=0x1c2;eip=0x0036fb; 	R(RETN(0))	// 8171 retn ;~ 01C2:36FB
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -12040,7 +12040,7 @@ cs=0x1c2;eip=0x0036fb; 	R(RETN)	// 8171 retn ;~ 01C2:36FB
 
 
 
- void _group13(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group13(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -12052,7 +12052,7 @@ sub_48a0:	// 6467
 cs=0x1c2;eip=0x002c30; 	T(MOV(al, byte_6cb2))	// 6468 mov     al, byte_6CB2 ;~ 01C2:2C30
 cs=0x1c2;eip=0x002c33; 	T(OR(al, al))	// 6469 or      al, al ;~ 01C2:2C33
 cs=0x1c2;eip=0x002c35; 	R(JNZ(loc_48a8))	// 6470 jnz     short loc_48A8 ;~ 01C2:2C35
-cs=0x1c2;eip=0x002c37; 	R(RETN)	// 6471 retn ;~ 01C2:2C37
+cs=0x1c2;eip=0x002c37; 	R(RETN(0))	// 6471 retn ;~ 01C2:2C37
 loc_48a8:	// 5160 
 cs=0x1c2;eip=0x002c38; 	T(CMP(al, 3))	// 6475 cmp     al, 3 ;~ 01C2:2C38
 cs=0x1c2;eip=0x002c3a; 	R(JC(loc_48ba))	// 6476 jb      short loc_48BA ;~ 01C2:2C3A
@@ -12074,7 +12074,7 @@ cs=0x1c2;eip=0x002c5c; 	T(MOV(di, *(dw*)(raddr(cs,di))))	// 6495 mov     di, cs:
 cs=0x1c2;eip=0x002c5f; 	R(CALL(__dispatch_call,di))	// 6496 call    di ;~ 01C2:2C5F
 ret_1c2_2c61:	// 5163 
 cs=0x1c2;eip=0x002c61; 	X(DEC(byte_6cb3))	// 6497 dec     byte_6CB3 ;~ 01C2:2C61
-cs=0x1c2;eip=0x002c65; 	R(RETN)	// 6498 retn ;~ 01C2:2C65
+cs=0x1c2;eip=0x002c65; 	R(RETN(0))	// 6498 retn ;~ 01C2:2C65
 loc_48dc:	// 5164 
 cs=0x1c2;eip=0x002c6c; 	T(MOV(si, 0x0CB4))	// 6508 mov     si, 0CB4h ;~ 01C2:2C6C
 cs=0x1c2;eip=0x002c6f; 	X(MOV(byte_6cb3, 0x0A))	// 6509 mov     byte_6CB3, 0Ah ;~ 01C2:2C6F
@@ -12137,13 +12137,13 @@ ret_1c2_2cf2:	// 5171
 cs=0x1c2;eip=0x002cf2; 	R(JMP(loc_491d))	// 6572 jmp     short loc_491D ;~ 01C2:2CF2
 loc_4964:	// 5172 
 cs=0x1c2;eip=0x002cf4; 	X(POP(es))	// 6576 pop     es ;~ 01C2:2CF4
-cs=0x1c2;eip=0x002cf5; 	R(RETN)	// 6578 retn ;~ 01C2:2CF5
+cs=0x1c2;eip=0x002cf5; 	R(RETN(0))	// 6578 retn ;~ 01C2:2CF5
 
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -12168,7 +12168,7 @@ cs=0x1c2;eip=0x002cf5; 	R(RETN)	// 6578 retn ;~ 01C2:2CF5
 
 
 
- void _group14(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group14(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -12187,7 +12187,7 @@ cs=0x1c2;eip=0x003518; 	T(INC(dx))	// 7885 inc     dx ;~ 01C2:3518
 cs=0x1c2;eip=0x003519; 	R(OUT(dx, al))	// 7886 out     dx, al          ; Video: CRT controller internal registers ;~ 01C2:3519
 cs=0x1c2;eip=0x00351a; 	X(POP(ax))	// 7887 pop     ax ;~ 01C2:351A
 cs=0x1c2;eip=0x00351b; 	X(POP(dx))	// 7888 pop     dx ;~ 01C2:351B
-cs=0x1c2;eip=0x00351c; 	R(RETN)	// 7889 retn ;~ 01C2:351C
+cs=0x1c2;eip=0x00351c; 	R(RETN(0))	// 7889 retn ;~ 01C2:351C
 ret_1c2_351d:	// 5324 
 cs=0x1c2;eip=0x00351d; 	X(PUSH(es))	// 7893 push    es ;~ 01C2:351D
 cs=0x1c2;eip=0x00351e; 	T(MOV(ax, 0x0B800))	// 7894 mov     ax, 0B800h ;~ 01C2:351E
@@ -12198,7 +12198,7 @@ cs=0x1c2;eip=0x003526; 	T(MOV(di, ax))	// 7901 mov     di, ax ;~ 01C2:3526
 cs=0x1c2;eip=0x003528; 	T(MOV(cx, 0x2000))	// 7902 mov     cx, 2000h ;~ 01C2:3528	// 7903 rep stosw ;~ 01C2:352B
 cs=0x1c2;eip=0x00352b; 	X(	REP STOSW)	// 7903 rep stosw ;~ 01C2:352B
 cs=0x1c2;eip=0x00352d; 	X(POP(es))	// 7904 pop     es ;~ 01C2:352D
-cs=0x1c2;eip=0x00352e; 	R(RETN)	// 7906 retn ;~ 01C2:352E
+cs=0x1c2;eip=0x00352e; 	R(RETN(0))	// 7906 retn ;~ 01C2:352E
 sub_519f:	// 7912 
 cs=0x1c2;eip=0x00352f; 	X(PUSH(es))	// 7917 push    es ;~ 01C2:352F
 cs=0x1c2;eip=0x003530; 	T(MOV(ax, seg_offset(seg1277)))	// 7918 mov     ax, seg seg1277 ;~ 01C2:3530
@@ -12208,7 +12208,7 @@ cs=0x1c2;eip=0x003533; 	R(JMP(loc_5191))	// 7919 jmp     short loc_5191 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -12222,7 +12222,7 @@ cs=0x1c2;eip=0x003533; 	R(JMP(loc_5191))	// 7919 jmp     short loc_5191 ;~ 01C2:
 
 
 
- void _group15(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group15(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -12259,7 +12259,7 @@ cs=0x1c2;eip=0x0039a1; 	T(ADD(ax, ax))	// 8569 add     ax, ax ;~ 01C2:39A1
 cs=0x1c2;eip=0x0039a3; 	T(ADD(si, ax))	// 8570 add     si, ax ;~ 01C2:39A3
 cs=0x1c2;eip=0x0039a5; 	T(LODSW)	// 8571 lodsw ;~ 01C2:39A5
 cs=0x1c2;eip=0x0039a6; 	X(POP(si))	// 8572 pop     si ;~ 01C2:39A6
-cs=0x1c2;eip=0x0039a7; 	R(RETN)	// 8573 retn ;~ 01C2:39A7
+cs=0x1c2;eip=0x0039a7; 	R(RETN(0))	// 8573 retn ;~ 01C2:39A7
 sub_5618:	// 8580 
 cs=0x1c2;eip=0x0039a8; 	T(SUB(ax, 0x120))	// 8582 sub     ax, 120h ;~ 01C2:39A8
 cs=0x1c2;eip=0x0039ab; 	R(JMP(sub_55e0))	// 8583 jmp     short sub_55E0 ;~ 01C2:39AB
@@ -12268,7 +12268,7 @@ cs=0x1c2;eip=0x0039ab; 	R(JMP(sub_55e0))	// 8583 jmp     short sub_55E0 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -12284,7 +12284,7 @@ cs=0x1c2;eip=0x0039ab; 	R(JMP(sub_55e0))	// 8583 jmp     short sub_55E0 ;~ 01C2:
 
 
 
- void _group16(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group16(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -12306,7 +12306,7 @@ cs=0x1c2;eip=0x0039bf; 	T(TEST(bl, 1))	// 8603 test    bl, 1 ;~ 01C2:39BF
 cs=0x1c2;eip=0x0039c2; 	R(JZ(locret_5636))	// 8604 jz      short locret_5636 ;~ 01C2:39C2
 cs=0x1c2;eip=0x0039c4; 	T(NEG(dx))	// 8605 neg     dx ;~ 01C2:39C4
 locret_5636:	// 5409 
-cs=0x1c2;eip=0x0039c6; 	R(RETN)	// 8608 retn ;~ 01C2:39C6
+cs=0x1c2;eip=0x0039c6; 	R(RETN(0))	// 8608 retn ;~ 01C2:39C6
 sub_5637:	// 8615 
 cs=0x1c2;eip=0x0039c7; 	R(CALL(sub_5618,0))	// 8617 call    sub_5618 ;~ 01C2:39C7
 ret_1c2_39ca:	// 5410 
@@ -12316,7 +12316,7 @@ cs=0x1c2;eip=0x0039ca; 	R(JMP(loc_5620))	// 8618 jmp     short loc_5620 ;~ 01C2:
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -12332,7 +12332,7 @@ cs=0x1c2;eip=0x0039ca; 	R(JMP(loc_5620))	// 8618 jmp     short loc_5620 ;~ 01C2:
 
 
 
- void _group17(m2c::_offsets _i, struct m2c::_STATE* _state){
+ bool _group17(m2c::_offsets _i, struct m2c::_STATE* _state){
     X86_REGREF
     __disp = _i;
 
@@ -12441,7 +12441,7 @@ cs=0x1c2;eip=0x00404a; 	R(IRET)	// 9782 iret ;~ 01C2:404A
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
-	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return;}  // Jumping to BIOS
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return true;}  // Jumping to BIOS
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
@@ -13919,7 +13919,7 @@ cs=0x1c2;eip=0x00404a; 	R(IRET)	// 9782 iret ;~ 01C2:404A
  #define MYCOPY(x) {m2c::set_type(x);m2c::mycopy((db*)&x,(db*)&tmp999,sizeof(tmp999),#x);}
 
  namespace m2c {
-  void   Initializer()
+  void  Initializer()
 #else
  #define MYCOPY(x) std::copy(std::begin(tmp999),std::end(tmp999),std::begin(x));
  namespace {

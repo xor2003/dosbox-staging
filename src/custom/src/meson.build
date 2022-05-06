@@ -1,5 +1,7 @@
 libsrc_sources = files([
-  'vikings.exe.cpp', 'vikings.exe_default_seg.cpp',  'vikings.exe_seg000.cpp',  'vikings.exe_seg002.cpp',  'vikings.exe_seg003.cpp',
+  'sab2.cpp', 
+  'sab2_default_seg.cpp', 
+  'sab2_seg000.cpp', 
   'init.cpp',
   '_data.cpp',
 ])
