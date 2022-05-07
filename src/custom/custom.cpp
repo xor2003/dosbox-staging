@@ -20,10 +20,10 @@ namespace m2c
   extern void load_drivers();
 }
 
-bool trace_instructions = m2c::debug >= 1;
+bool trace_instructions = false;//false; //m2c::debug >= 1;
 bool compare_instructions = m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
-bool collect_rt_info = false;
+bool trace_instructions_to_stdout = false; //false; //m2c::debug >= 1;
+bool collect_rt_info = true;
 
 static const size_t
   COMPARE_SIZE = 0xf0000;
@@ -133,11 +133,16 @@ static void print_traces ();
 
 }
 
+void loguru_fatal(const loguru::Message& message)
+{ m2c::stackDumpZ();
+}
+
 void
 custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
 {
   static bool registered=false;
   if (!registered) {
+    loguru::set_fatal_handler(loguru_fatal);
     atexit (m2c::stackDumpZ);
     registered = true;
 }
