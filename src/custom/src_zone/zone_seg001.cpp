@@ -30,8 +30,2622 @@ cs=0x1c2;eip=0x000171; 	T(MOV(sp, 0x10C));	// 457 mov     sp, 10Ch ;~ 01C2:0171
 cs=0x1c2;eip=0x000174; 	T(MOV(ds, ax));	// 458 mov     ds, ax ;~ 01C2:0174
 cs=0x1c2;eip=0x000176; 	T(MOV(es, ax));	// 460 mov     es, ax ;~ 01C2:0176
 cs=0x1c2;eip=0x000178; 	J(JMP(loc_13770));	// 462 jmp     loc_13770 ;~ 01C2:0178
-sub_10380:
-	// 471 
+sub_10605:
+	// 948 
+cs=0x1c2;eip=0x000405; 	T(MOV(di, 0x212));	// 949 mov     di, 212h ;~ 01C2:0405
+ret_1c2_408:
+	// 4423 
+cs=0x1c2;eip=0x000408; 	T(CMP(byte_14765, 1));	// 950 cmp     byte_14765, 1 ;~ 01C2:0408
+cs=0x1c2;eip=0x00040d; 	J(JZ(loc_10612));	// 951 jz      short loc_10612 ;~ 01C2:040D
+cs=0x1c2;eip=0x00040f; 	T(MOV(di, 0x5D2));	// 952 mov     di, 5D2h ;~ 01C2:040F
+loc_10612:
+	// 4424 
+cs=0x1c2;eip=0x000412; 	T(MOV(si, 0x149));	// 955 mov     si, 149h ;~ 01C2:0412
+cs=0x1c2;eip=0x000415; 	X(PUSH(es));	// 956 push    es ;~ 01C2:0415
+loc_10616:
+	// 4425 
+cs=0x1c2;eip=0x000416; 	T(MOV(ax, seg_offset(seg003)));	// 959 mov     ax, seg seg003 ;~ 01C2:0416
+cs=0x1c2;eip=0x000419; 	T(MOV(es, ax));	// 960 mov     es, ax ;~ 01C2:0419
+cs=0x1c2;eip=0x00041b; 	T(MOV(bl, 4));	// 962 mov     bl, 4 ;~ 01C2:041B
+loc_1061d:
+	// 4426 
+cs=0x1c2;eip=0x00041d; 	T(MOV(cx, 4));	// 965 mov     cx, 4 ;~ 01C2:041D
+	// 966 rep movsb ;~ 01C2:0420
+cs=0x1c2;eip=0x000420; 	X(	REP MOVSB);	// 966 rep movsb ;~ 01C2:0420
+cs=0x1c2;eip=0x000422; 	T(ADD(di, 0x1FFC));	// 967 add     di, 1FFCh ;~ 01C2:0422
+cs=0x1c2;eip=0x000426; 	T(MOV(cx, 4));	// 968 mov     cx, 4 ;~ 01C2:0426
+	// 969 rep movsb ;~ 01C2:0429
+cs=0x1c2;eip=0x000429; 	X(	REP MOVSB);	// 969 rep movsb ;~ 01C2:0429
+cs=0x1c2;eip=0x00042b; 	T(ADD(di, 0x0E04C));	// 970 add     di, 0E04Ch ;~ 01C2:042B
+cs=0x1c2;eip=0x00042f; 	T(DEC(bl));	// 971 dec     bl ;~ 01C2:042F
+cs=0x1c2;eip=0x000431; 	J(JNZ(loc_1061d));	// 972 jnz     short loc_1061D ;~ 01C2:0431
+cs=0x1c2;eip=0x000433; 	X(POP(es));	// 973 pop     es ;~ 01C2:0433
+cs=0x1c2;eip=0x000434; 	R(RETN(0));	// 975 retn ;~ 01C2:0434
+sub_1063f:
+	// 994 
+cs=0x1c2;eip=0x00043f; 	X(PUSH(di));	// 999 push    di ;~ 01C2:043F
+ret_1c2_440:
+	// 4428 
+cs=0x1c2;eip=0x000440; 	T(MOV(di, 0x0BD97));	// 1000 mov     di, 0BD97h ;~ 01C2:0440
+cs=0x1c2;eip=0x000443; 	T(MOV(dx, 0x0BE70));	// 1001 mov     dx, 0BE70h ;~ 01C2:0443
+cs=0x1c2;eip=0x000446; 	T(MOV(cx, 4));	// 1002 mov     cx, 4 ;~ 01C2:0446
+cs=0x1c2;eip=0x000449; 	T(XOR(bx, bx));	// 1003 xor     bx, bx ;~ 01C2:0449
+loc_1064b:
+	// 4429 
+cs=0x1c2;eip=0x00044b; 	T(LODSB);	// 1006 lodsb ;~ 01C2:044B
+cs=0x1c2;eip=0x00044c; 	T(OR(al, al));	// 1007 or      al, al ;~ 01C2:044C
+cs=0x1c2;eip=0x00044e; 	J(JZ(loc_1065a));	// 1008 jz      short loc_1065A ;~ 01C2:044E
+cs=0x1c2;eip=0x000450; 	T(INC(bx));	// 1009 inc     bx ;~ 01C2:0450
+cs=0x1c2;eip=0x000451; 	T(XOR(ah, ah));	// 1010 xor     ah, ah ;~ 01C2:0451
+cs=0x1c2;eip=0x000453; 	T(SHL(ax, cl));	// 1011 shl     ax, cl ;~ 01C2:0453
+cs=0x1c2;eip=0x000455; 	T(ADD(ax, dx));	// 1012 add     ax, dx ;~ 01C2:0455
+cs=0x1c2;eip=0x000457; 	X(STOSW);	// 1013 stosw ;~ 01C2:0457
+cs=0x1c2;eip=0x000458; 	J(JMP(loc_1064b));	// 1014 jmp     short loc_1064B ;~ 01C2:0458
+loc_1065a:
+	// 4430 
+cs=0x1c2;eip=0x00045a; 	X(MOV(word_1fed4, bx));	// 1018 mov     word_1FED4, bx ;~ 01C2:045A
+cs=0x1c2;eip=0x00045e; 	X(POP(di));	// 1019 pop     di ;~ 01C2:045E
+cs=0x1c2;eip=0x00045f; 	J(JMP(loc_14316));	// 1020 jmp     loc_14316 ;~ 01C2:045F
+sub_10662:
+	// 1027 
+cs=0x1c2;eip=0x000462; 	T(MOV(di, 0x236A));	// 1028 mov     di, 236Ah ;~ 01C2:0462
+ret_1c2_465:
+	// 4431 
+cs=0x1c2;eip=0x000465; 	T(MOV(bp, di));	// 1029 mov     bp, di ;~ 01C2:0465
+cs=0x1c2;eip=0x000467; 	T(TEST(byte_14765, 2));	// 1030 test    byte_14765, 2 ;~ 01C2:0467
+cs=0x1c2;eip=0x00046c; 	J(JNZ(loc_10674));	// 1031 jnz     short loc_10674 ;~ 01C2:046C
+cs=0x1c2;eip=0x00046e; 	T(MOV(cx, word_14758));	// 1032 mov     cx, word_14758 ;~ 01C2:046E
+cs=0x1c2;eip=0x000472; 	J(JMP(loc_10678));	// 1033 jmp     short loc_10678 ;~ 01C2:0472
+loc_10674:
+	// 4432 
+cs=0x1c2;eip=0x000474; 	T(MOV(cx, word_14761));	// 1037 mov     cx, word_14761 ;~ 01C2:0474
+loc_10678:
+	// 4433 
+cs=0x1c2;eip=0x000478; 	J(JCXZ(locret_10690));	// 1041 jcxz    short locret_10690 ;~ 01C2:0478
+cs=0x1c2;eip=0x00047a; 	T(CMP(cx, 8));	// 1042 cmp     cx, 8 ;~ 01C2:047A
+cs=0x1c2;eip=0x00047d; 	J(JNC(locret_10690));	// 1043 jnb     short locret_10690 ;~ 01C2:047D
+cs=0x1c2;eip=0x00047f; 	X(PUSH(es));	// 1044 push    es ;~ 01C2:047F
+loc_10680:
+	// 4434 
+cs=0x1c2;eip=0x000480; 	T(MOV(ax, seg_offset(seg003)));	// 1047 mov     ax, seg seg003 ;~ 01C2:0480
+cs=0x1c2;eip=0x000483; 	T(MOV(es, ax));	// 1048 mov     es, ax ;~ 01C2:0483
+loc_10685:
+	// 4435 
+cs=0x1c2;eip=0x000485; 	J(CALL(sub_106a9,0));	// 1052 call    sub_106A9 ;~ 01C2:0485
+cs=0x1c2;eip=0x000488; 	T(SUB(bp, 4));	// 1053 sub     bp, 4 ;~ 01C2:0488
+cs=0x1c2;eip=0x00048b; 	T(MOV(di, bp));	// 1054 mov     di, bp ;~ 01C2:048B
+cs=0x1c2;eip=0x00048d; 	J(LOOP(loc_10685));	// 1055 loop    loc_10685 ;~ 01C2:048D
+cs=0x1c2;eip=0x00048f; 	X(POP(es));	// 1056 pop     es ;~ 01C2:048F
+locret_10690:
+	// 4436 
+cs=0x1c2;eip=0x000490; 	R(RETN(0));	// 1061 retn ;~ 01C2:0490
+sub_10691:
+	// 1068 
+cs=0x1c2;eip=0x000491; 	T(MOV(di, 0x272A));	// 1069 mov     di, 272Ah ;~ 01C2:0491
+ret_1c2_494:
+	// 4437 
+cs=0x1c2;eip=0x000494; 	T(MOV(bp, di));	// 1070 mov     bp, di ;~ 01C2:0494
+cs=0x1c2;eip=0x000496; 	T(TEST(byte_14765, 2));	// 1071 test    byte_14765, 2 ;~ 01C2:0496
+cs=0x1c2;eip=0x00049b; 	J(JNZ(loc_106a3));	// 1072 jnz     short loc_106A3 ;~ 01C2:049B
+cs=0x1c2;eip=0x00049d; 	T(MOV(cx, word_14761));	// 1073 mov     cx, word_14761 ;~ 01C2:049D
+cs=0x1c2;eip=0x0004a1; 	J(JMP(loc_10678));	// 1074 jmp     short loc_10678 ;~ 01C2:04A1
+loc_106a3:
+	// 4438 
+cs=0x1c2;eip=0x0004a3; 	T(MOV(cx, word_14758));	// 1078 mov     cx, word_14758 ;~ 01C2:04A3
+cs=0x1c2;eip=0x0004a7; 	J(JMP(loc_10678));	// 1079 jmp     short loc_10678 ;~ 01C2:04A7
+sub_106bf:
+	// 1107 
+cs=0x1c2;eip=0x0004bf; 	J(CALL(sub_10438,0));	// 1119 call    sub_10438 ;~ 01C2:04BF
+ret_1c2_4c2:
+	// 4441 
+cs=0x1c2;eip=0x0004c2; 	X(MOV(byte_154c2, 8));	// 1120 mov     byte_154C2, 8 ;~ 01C2:04C2
+cs=0x1c2;eip=0x0004c7; 	J(CALL(sub_14372,0));	// 1121 call    sub_14372 ;~ 01C2:04C7
+cs=0x1c2;eip=0x0004ca; 	T(MOV(si, 0x1DA));	// 1122 mov     si, 1DAh ;~ 01C2:04CA
+cs=0x1c2;eip=0x0004cd; 	J(CALL(sub_142f4,0));	// 1123 call    sub_142F4 ;~ 01C2:04CD
+cs=0x1c2;eip=0x0004d0; 	X(MOV(word_156e6, 0));	// 1124 mov     word_156E6, 0 ;~ 01C2:04D0
+loc_106d6:
+	// 4442 
+cs=0x1c2;eip=0x0004d6; 	J(CALL(sub_134e1,0));	// 1128 call    sub_134E1 ;~ 01C2:04D6
+cs=0x1c2;eip=0x0004d9; 	J(JNZ(loc_106e4));	// 1129 jnz     short loc_106E4 ;~ 01C2:04D9
+cs=0x1c2;eip=0x0004db; 	T(CMP(word_156e6, 0x12C));	// 1130 cmp     word_156E6, 12Ch ;~ 01C2:04DB
+cs=0x1c2;eip=0x0004e1; 	J(JC(loc_106d6));	// 1131 jb      short loc_106D6 ;~ 01C2:04E1
+cs=0x1c2;eip=0x0004e3; 	R(RETN(0));	// 1132 retn ;~ 01C2:04E3
+loc_106e4:
+	// 4443 
+cs=0x1c2;eip=0x0004e4; 	J(CALL(sub_134e8,0));	// 1136 call    sub_134E8 ;~ 01C2:04E4
+cs=0x1c2;eip=0x0004e7; 	T(CMP(ax, 0x3B00));	// 1137 cmp     ax, 3B00h ;~ 01C2:04E7
+cs=0x1c2;eip=0x0004ea; 	J(JZ(loc_106f8));	// 1138 jz      short loc_106F8 ;~ 01C2:04EA
+cs=0x1c2;eip=0x0004ec; 	T(CMP(ax, 0x3C00));	// 1139 cmp     ax, 3C00h ;~ 01C2:04EC
+cs=0x1c2;eip=0x0004ef; 	J(JNZ(loc_106d6));	// 1140 jnz     short loc_106D6 ;~ 01C2:04EF
+cs=0x1c2;eip=0x0004f1; 	T(MOV(sp, word_154e9));	// 1141 mov     sp, word_154E9 ;~ 01C2:04F1
+cs=0x1c2;eip=0x0004f5; 	J(JMP(loc_13d1e));	// 1142 jmp     loc_13D1E ;~ 01C2:04F5
+loc_106f8:
+	// 4444 
+cs=0x1c2;eip=0x0004f8; 	T(MOV(sp, word_154e9));	// 1146 mov     sp, word_154E9 ;~ 01C2:04F8
+cs=0x1c2;eip=0x0004fc; 	X(MOV(byte_14b00, 0));	// 1147 mov     byte_14B00, 0 ;~ 01C2:04FC
+cs=0x1c2;eip=0x000501; 	J(JMP(loc_1378a));	// 1148 jmp     loc_1378A ;~ 01C2:0501
+sub_110b0:
+	// 2639 
+cs=0x1c2;eip=0x000eb0; 	T(TEST(byte_15242, 0x0FF));	// 2640 test    byte_15242, 0FFh ;~ 01C2:0EB0
+ret_1c2_eb5:
+	// 4614 
+cs=0x1c2;eip=0x000eb5; 	J(JZ(loc_110bb));	// 2641 jz      short loc_110BB ;~ 01C2:0EB5
+cs=0x1c2;eip=0x000eb7; 	J(CALL(sub_12e30,0));	// 2642 call    sub_12E30 ;~ 01C2:0EB7
+cs=0x1c2;eip=0x000eba; 	R(RETN(0));	// 2643 retn ;~ 01C2:0EBA
+loc_110bb:
+	// 4615 
+cs=0x1c2;eip=0x000ebb; 	T(TEST(byte_1488c, 0x0FF));	// 2647 test    byte_1488C, 0FFh ;~ 01C2:0EBB
+cs=0x1c2;eip=0x000ec0; 	J(JZ(loc_110cc));	// 2648 jz      short loc_110CC ;~ 01C2:0EC0
+cs=0x1c2;eip=0x000ec2; 	T(MOV(al, byte_1488c));	// 2649 mov     al, byte_1488C ;~ 01C2:0EC2
+cs=0x1c2;eip=0x000ec5; 	T(SHR(al, 1));	// 2650 shr     al, 1 ;~ 01C2:0EC5
+cs=0x1c2;eip=0x000ec7; 	T(TEST(al, 1));	// 2651 test    al, 1 ;~ 01C2:0EC7
+cs=0x1c2;eip=0x000ec9; 	J(JNZ(loc_110cc));	// 2652 jnz     short loc_110CC ;~ 01C2:0EC9
+cs=0x1c2;eip=0x000ecb; 	R(RETN(0));	// 2653 retn ;~ 01C2:0ECB
+loc_110cc:
+	// 4616 
+cs=0x1c2;eip=0x000ecc; 	X(PUSH(es));	// 2658 push    es ;~ 01C2:0ECC
+loc_110cd:
+	// 4617 
+cs=0x1c2;eip=0x000ecd; 	T(MOV(ax, seg_offset(seg003)));	// 2661 mov     ax, seg seg003 ;~ 01C2:0ECD
+cs=0x1c2;eip=0x000ed0; 	T(MOV(es, ax));	// 2662 mov     es, ax ;~ 01C2:0ED0
+cs=0x1c2;eip=0x000ed2; 	T(MOV(bp, word_153ba));	// 2664 mov     bp, word_153BA ;~ 01C2:0ED2
+cs=0x1c2;eip=0x000ed6; 	T(MOV(di, 0x0FD7B));	// 2665 mov     di, 0FD7Bh ;~ 01C2:0ED6
+cs=0x1c2;eip=0x000ed9; 	T(ADD(di, bp));	// 2666 add     di, bp ;~ 01C2:0ED9
+cs=0x1c2;eip=0x000edb; 	T(MOV(ax, 0x0FFFF));	// 2667 mov     ax, 0FFFFh ;~ 01C2:0EDB
+cs=0x1c2;eip=0x000ede; 	T(MOV(cx, 5));	// 2668 mov     cx, 5 ;~ 01C2:0EDE
+cs=0x1c2;eip=0x000ee1; 	T(MOV(dx, di));	// 2669 mov     dx, di ;~ 01C2:0EE1
+	// 2670 rep stosw ;~ 01C2:0EE3
+cs=0x1c2;eip=0x000ee3; 	X(	REP STOSW);	// 2670 rep stosw ;~ 01C2:0EE3
+cs=0x1c2;eip=0x000ee5; 	T(TEST(byte_148fa, 0x0FF));	// 2671 test    byte_148FA, 0FFh ;~ 01C2:0EE5
+cs=0x1c2;eip=0x000eea; 	J(JNZ(loc_11131));	// 2672 jnz     short loc_11131 ;~ 01C2:0EEA
+cs=0x1c2;eip=0x000eec; 	T(MOV(ah, 3));	// 2673 mov     ah, 3 ;~ 01C2:0EEC
+cs=0x1c2;eip=0x000eee; 	T(DEC(di));	// 2674 dec     di ;~ 01C2:0EEE
+cs=0x1c2;eip=0x000eef; 	J(CALL(sub_11187,0));	// 2675 call    sub_11187 ;~ 01C2:0EEF
+cs=0x1c2;eip=0x000ef2; 	T(MOV(di, dx));	// 2676 mov     di, dx ;~ 01C2:0EF2
+cs=0x1c2;eip=0x000ef4; 	T(MOV(ah, 0x0C0));	// 2677 mov     ah, 0C0h ; 'À' ;~ 01C2:0EF4
+cs=0x1c2;eip=0x000ef6; 	J(CALL(sub_11187,0));	// 2678 call    sub_11187 ;~ 01C2:0EF6
+cs=0x1c2;eip=0x000ef9; 	T(MOV(di, 0x27B));	// 2679 mov     di, 27Bh ;~ 01C2:0EF9
+cs=0x1c2;eip=0x000efc; 	T(ADD(di, bp));	// 2680 add     di, bp ;~ 01C2:0EFC
+cs=0x1c2;eip=0x000efe; 	T(MOV(dx, di));	// 2681 mov     dx, di ;~ 01C2:0EFE
+cs=0x1c2;eip=0x000f00; 	T(MOV(cx, 5));	// 2682 mov     cx, 5 ;~ 01C2:0F00
+cs=0x1c2;eip=0x000f03; 	T(MOV(ax, 0x0FFFF));	// 2683 mov     ax, 0FFFFh ;~ 01C2:0F03
+	// 2684 rep stosw ;~ 01C2:0F06
+cs=0x1c2;eip=0x000f06; 	X(	REP STOSW);	// 2684 rep stosw ;~ 01C2:0F06
+cs=0x1c2;eip=0x000f08; 	T(MOV(ah, 3));	// 2685 mov     ah, 3 ;~ 01C2:0F08
+cs=0x1c2;eip=0x000f0a; 	T(DEC(di));	// 2686 dec     di ;~ 01C2:0F0A
+cs=0x1c2;eip=0x000f0b; 	J(CALL(sub_111d2,0));	// 2687 call    sub_111D2 ;~ 01C2:0F0B
+cs=0x1c2;eip=0x000f0e; 	T(MOV(di, dx));	// 2688 mov     di, dx ;~ 01C2:0F0E
+cs=0x1c2;eip=0x000f10; 	T(MOV(ah, 0x0C0));	// 2689 mov     ah, 0C0h ; 'À' ;~ 01C2:0F10
+cs=0x1c2;eip=0x000f12; 	J(CALL(sub_111d2,0));	// 2690 call    sub_111D2 ;~ 01C2:0F12
+cs=0x1c2;eip=0x000f15; 	T(MOV(di, 0x0FD80));	// 2691 mov     di, 0FD80h ;~ 01C2:0F15
+cs=0x1c2;eip=0x000f18; 	T(ADD(di, bp));	// 2692 add     di, bp ;~ 01C2:0F18
+cs=0x1c2;eip=0x000f1a; 	T(MOV(cx, 8));	// 2693 mov     cx, 8 ;~ 01C2:0F1A
+cs=0x1c2;eip=0x000f1d; 	T(MOV(ah, 0x0C0));	// 2694 mov     ah, 0C0h ; 'À' ;~ 01C2:0F1D
+cs=0x1c2;eip=0x000f1f; 	J(CALL(sub_111d5,0));	// 2695 call    sub_111D5 ;~ 01C2:0F1F
+cs=0x1c2;eip=0x000f22; 	T(MOV(di, 0x280));	// 2696 mov     di, 280h ;~ 01C2:0F22
+cs=0x1c2;eip=0x000f25; 	T(ADD(di, bp));	// 2697 add     di, bp ;~ 01C2:0F25
+cs=0x1c2;eip=0x000f27; 	T(MOV(cx, 8));	// 2698 mov     cx, 8 ;~ 01C2:0F27
+cs=0x1c2;eip=0x000f2a; 	T(MOV(ah, 0x0C0));	// 2699 mov     ah, 0C0h ; 'À' ;~ 01C2:0F2A
+cs=0x1c2;eip=0x000f2c; 	J(CALL(sub_1118a,0));	// 2700 call    sub_1118A ;~ 01C2:0F2C
+cs=0x1c2;eip=0x000f2f; 	X(POP(es));	// 2701 pop     es ;~ 01C2:0F2F
+cs=0x1c2;eip=0x000f30; 	R(RETN(0));	// 2703 retn ;~ 01C2:0F30
+loc_11131:
+	// 4618 
+cs=0x1c2;eip=0x000f31; 	T(MOV(cx, 5));	// 2708 mov     cx, 5 ;~ 01C2:0F31
+cs=0x1c2;eip=0x000f34; 	T(MOV(di, dx));	// 2709 mov     di, dx ;~ 01C2:0F34
+cs=0x1c2;eip=0x000f36; 	T(ADD(di, 0x2000));	// 2710 add     di, 2000h ;~ 01C2:0F36
+	// 2711 rep stosw ;~ 01C2:0F3A
+cs=0x1c2;eip=0x000f3a; 	X(	REP STOSW);	// 2711 rep stosw ;~ 01C2:0F3A
+cs=0x1c2;eip=0x000f3c; 	T(DEC(di));	// 2712 dec     di ;~ 01C2:0F3C
+cs=0x1c2;eip=0x000f3d; 	J(CALL(sub_111aa,0));	// 2713 call    sub_111AA ;~ 01C2:0F3D
+cs=0x1c2;eip=0x000f40; 	T(MOV(di, dx));	// 2714 mov     di, dx ;~ 01C2:0F40
+cs=0x1c2;eip=0x000f42; 	T(ADD(di, 0x2000));	// 2715 add     di, 2000h ;~ 01C2:0F42
+cs=0x1c2;eip=0x000f46; 	J(CALL(sub_111af,0));	// 2716 call    sub_111AF ;~ 01C2:0F46
+cs=0x1c2;eip=0x000f49; 	T(MOV(di, 0x27B));	// 2717 mov     di, 27Bh ;~ 01C2:0F49
+cs=0x1c2;eip=0x000f4c; 	T(ADD(di, bp));	// 2718 add     di, bp ;~ 01C2:0F4C
+cs=0x1c2;eip=0x000f4e; 	T(MOV(dx, di));	// 2719 mov     dx, di ;~ 01C2:0F4E
+cs=0x1c2;eip=0x000f50; 	T(MOV(cx, 5));	// 2720 mov     cx, 5 ;~ 01C2:0F50
+cs=0x1c2;eip=0x000f53; 	T(MOV(ax, 0x0FFFF));	// 2721 mov     ax, 0FFFFh ;~ 01C2:0F53
+	// 2722 rep stosw ;~ 01C2:0F56
+cs=0x1c2;eip=0x000f56; 	X(	REP STOSW);	// 2722 rep stosw ;~ 01C2:0F56
+cs=0x1c2;eip=0x000f58; 	T(MOV(cx, 5));	// 2723 mov     cx, 5 ;~ 01C2:0F58
+cs=0x1c2;eip=0x000f5b; 	T(MOV(di, dx));	// 2724 mov     di, dx ;~ 01C2:0F5B
+cs=0x1c2;eip=0x000f5d; 	T(ADD(di, 0x1FB0));	// 2725 add     di, 1FB0h ;~ 01C2:0F5D
+	// 2726 rep stosw ;~ 01C2:0F61
+cs=0x1c2;eip=0x000f61; 	X(	REP STOSW);	// 2726 rep stosw ;~ 01C2:0F61
+cs=0x1c2;eip=0x000f63; 	T(DEC(di));	// 2727 dec     di ;~ 01C2:0F63
+cs=0x1c2;eip=0x000f64; 	J(CALL(sub_111b4,0));	// 2728 call    sub_111B4 ;~ 01C2:0F64
+cs=0x1c2;eip=0x000f67; 	T(MOV(di, dx));	// 2729 mov     di, dx ;~ 01C2:0F67
+cs=0x1c2;eip=0x000f69; 	T(ADD(di, 0x1FB0));	// 2730 add     di, 1FB0h ;~ 01C2:0F69
+cs=0x1c2;eip=0x000f6d; 	J(CALL(sub_111b9,0));	// 2731 call    sub_111B9 ;~ 01C2:0F6D
+cs=0x1c2;eip=0x000f70; 	T(MOV(di, 0x0FD80));	// 2732 mov     di, 0FD80h ;~ 01C2:0F70
+cs=0x1c2;eip=0x000f73; 	T(ADD(di, bp));	// 2733 add     di, bp ;~ 01C2:0F73
+cs=0x1c2;eip=0x000f75; 	J(CALL(sub_111f5,0));	// 2734 call    sub_111F5 ;~ 01C2:0F75
+cs=0x1c2;eip=0x000f78; 	T(MOV(di, 0x280));	// 2735 mov     di, 280h ;~ 01C2:0F78
+cs=0x1c2;eip=0x000f7b; 	T(ADD(di, bp));	// 2736 add     di, bp ;~ 01C2:0F7B
+cs=0x1c2;eip=0x000f7d; 	J(CALL(sub_11227,0));	// 2737 call    sub_11227 ;~ 01C2:0F7D
+cs=0x1c2;eip=0x000f80; 	X(POP(es));	// 2738 pop     es ;~ 01C2:0F80
+cs=0x1c2;eip=0x000f81; 	X(MOV(byte_148fa, 0));	// 2740 mov     byte_148FA, 0 ;~ 01C2:0F81
+cs=0x1c2;eip=0x000f86; 	R(RETN(0));	// 2741 retn ;~ 01C2:0F86
+sub_113ff:
+	// 3128 
+cs=0x1c2;eip=0x0011ff; 	X(PUSH(es));	// 3129 push    es ;~ 01C2:11FF
+loc_11400:
+	// 4647 
+cs=0x1c2;eip=0x001200; 	T(MOV(ax, seg_offset(seg003)));	// 3132 mov     ax, seg seg003 ;~ 01C2:1200
+cs=0x1c2;eip=0x001203; 	T(MOV(es, ax));	// 3133 mov     es, ax ;~ 01C2:1203
+cs=0x1c2;eip=0x001205; 	T(MOV(di, 0));	// 3135 mov     di, 0 ;~ 01C2:1205
+cs=0x1c2;eip=0x001208; 	T(ADD(di, 0x528));	// 3136 add     di, 528h ;~ 01C2:1208
+cs=0x1c2;eip=0x00120c; 	T(MOV(al, byte_148f3));	// 3137 mov     al, byte_148F3 ;~ 01C2:120C
+cs=0x1c2;eip=0x00120f; 	T(SHR(al, 1));	// 3138 shr     al, 1 ;~ 01C2:120F
+cs=0x1c2;eip=0x001211; 	J(JNC(loc_11421));	// 3139 jnb     short loc_11421 ;~ 01C2:1211
+cs=0x1c2;eip=0x001213; 	T(ADD(di, 0x2000));	// 3140 add     di, 2000h ;~ 01C2:1213
+cs=0x1c2;eip=0x001217; 	T(TEST(byte_148f4, 0x0FF));	// 3141 test    byte_148F4, 0FFh ;~ 01C2:1217
+cs=0x1c2;eip=0x00121c; 	J(JNZ(loc_11421));	// 3142 jnz     short loc_11421 ;~ 01C2:121C
+cs=0x1c2;eip=0x00121e; 	T(SUB(di, 0x50));	// 3143 sub     di, 50h ; 'P' ;~ 01C2:121E
+loc_11421:
+	// 4648 
+cs=0x1c2;eip=0x001221; 	X(MUL1_1(byte_148f6));	// 3147 mul     byte_148F6 ;~ 01C2:1221
+cs=0x1c2;eip=0x001225; 	T(TEST(byte_148f4, 0x0FF));	// 3148 test    byte_148F4, 0FFh ;~ 01C2:1225
+cs=0x1c2;eip=0x00122a; 	J(JZ(loc_11430));	// 3149 jz      short loc_11430 ;~ 01C2:122A
+cs=0x1c2;eip=0x00122c; 	T(ADD(di, ax));	// 3150 add     di, ax ;~ 01C2:122C
+cs=0x1c2;eip=0x00122e; 	J(JMP(loc_11432));	// 3151 jmp     short loc_11432 ;~ 01C2:122E
+loc_11430:
+	// 4649 
+cs=0x1c2;eip=0x001230; 	T(SUB(di, ax));	// 3155 sub     di, ax ;~ 01C2:1230
+loc_11432:
+	// 4650 
+cs=0x1c2;eip=0x001232; 	T(MOV(al, byte_148f1));	// 3158 mov     al, byte_148F1 ;~ 01C2:1232
+cs=0x1c2;eip=0x001235; 	T(XOR(ah, ah));	// 3159 xor     ah, ah ;~ 01C2:1235
+cs=0x1c2;eip=0x001237; 	T(MOV(bl, al));	// 3160 mov     bl, al ;~ 01C2:1237
+cs=0x1c2;eip=0x001239; 	T(AND(bl, 3));	// 3161 and     bl, 3 ;~ 01C2:1239
+cs=0x1c2;eip=0x00123c; 	T(XOR(bh, bh));	// 3162 xor     bh, bh ;~ 01C2:123C
+cs=0x1c2;eip=0x00123e; 	T(TEST(byte_148f2, 0x0FF));	// 3163 test    byte_148F2, 0FFh ;~ 01C2:123E
+cs=0x1c2;eip=0x001243; 	J(JNZ(loc_1145b));	// 3164 jnz     short loc_1145B ;~ 01C2:1243
+cs=0x1c2;eip=0x001245; 	T(SHR(al, 1));	// 3165 shr     al, 1 ;~ 01C2:1245
+cs=0x1c2;eip=0x001247; 	T(SHR(al, 1));	// 3166 shr     al, 1 ;~ 01C2:1247
+cs=0x1c2;eip=0x001249; 	T(ADD(di, ax));	// 3167 add     di, ax ;~ 01C2:1249
+loc_1144b:
+	// 4651 
+cs=0x1c2;eip=0x00124b; 	T(MOV(al, *(raddr(es,di))));	// 3170 mov     al, es:[di] ;~ 01C2:124B
+cs=0x1c2;eip=0x00124e; 	T(AND(al, *(raddr(ds,bx+0x2C3))));	// 3171 and     al, [bx+2C3h] ;~ 01C2:124E
+cs=0x1c2;eip=0x001252; 	T(OR(al, *(raddr(ds,bx+0x2BF))));	// 3172 or      al, [bx+2BFh] ;~ 01C2:1252
+cs=0x1c2;eip=0x001256; 	X(MOV(*(raddr(es,di)), al));	// 3173 mov     es:[di], al ;~ 01C2:1256
+cs=0x1c2;eip=0x001259; 	X(POP(es));	// 3174 pop     es ;~ 01C2:1259
+cs=0x1c2;eip=0x00125a; 	R(RETN(0));	// 3176 retn ;~ 01C2:125A
+loc_1145b:
+	// 4652 
+cs=0x1c2;eip=0x00125b; 	T(DEC(di));	// 3181 dec     di ;~ 01C2:125B
+cs=0x1c2;eip=0x00125c; 	T(DEC(al));	// 3182 dec     al ;~ 01C2:125C
+cs=0x1c2;eip=0x00125e; 	T(MOV(cl, al));	// 3183 mov     cl, al ;~ 01C2:125E
+cs=0x1c2;eip=0x001260; 	T(MOV(bl, 3));	// 3184 mov     bl, 3 ;~ 01C2:1260
+cs=0x1c2;eip=0x001262; 	T(AND(cl, 3));	// 3185 and     cl, 3 ;~ 01C2:1262
+cs=0x1c2;eip=0x001265; 	T(SUB(bl, cl));	// 3186 sub     bl, cl ;~ 01C2:1265
+cs=0x1c2;eip=0x001267; 	T(SHR(al, 1));	// 3187 shr     al, 1 ;~ 01C2:1267
+cs=0x1c2;eip=0x001269; 	T(SHR(al, 1));	// 3188 shr     al, 1 ;~ 01C2:1269
+cs=0x1c2;eip=0x00126b; 	T(SUB(di, ax));	// 3189 sub     di, ax ;~ 01C2:126B
+cs=0x1c2;eip=0x00126d; 	J(JMP(loc_1144b));	// 3190 jmp     short loc_1144B ;~ 01C2:126D
+sub_1146f:
+	// 3197 
+cs=0x1c2;eip=0x00126f; 	T(MOV(ax, word_14af6));	// 3198 mov     ax, word_14AF6 ;~ 01C2:126F
+ret_1c2_1272:
+	// 4653 
+cs=0x1c2;eip=0x001272; 	T(CMP(ax, 0x322));	// 3199 cmp     ax, 322h ;~ 01C2:1272
+cs=0x1c2;eip=0x001275; 	J(JNC(loc_11478));	// 3200 jnb     short loc_11478 ;~ 01C2:1275
+cs=0x1c2;eip=0x001277; 	R(RETN(0));	// 3201 retn ;~ 01C2:1277
+loc_11478:
+	// 4654 
+cs=0x1c2;eip=0x001278; 	X(PUSH(es));	// 3205 push    es ;~ 01C2:1278
+loc_11479:
+	// 4655 
+cs=0x1c2;eip=0x001279; 	T(MOV(ax, seg_offset(seg003)));	// 3208 mov     ax, seg seg003 ;~ 01C2:1279
+cs=0x1c2;eip=0x00127c; 	T(MOV(es, ax));	// 3209 mov     es, ax ;~ 01C2:127C
+cs=0x1c2;eip=0x00127e; 	T(MOV(di, word_153ba));	// 3210 mov     di, word_153BA ;~ 01C2:127E
+cs=0x1c2;eip=0x001282; 	T(ADD(di, 0x0F998));	// 3211 add     di, 0F998h ;~ 01C2:1282
+cs=0x1c2;eip=0x001286; 	T(MOV(bp, di));	// 3212 mov     bp, di ;~ 01C2:1286
+cs=0x1c2;eip=0x001288; 	T(MOV(dx, 0x46C));	// 3213 mov     dx, 46Ch ;~ 01C2:1288
+cs=0x1c2;eip=0x00128b; 	T(SUB(dx, word_14af6));	// 3214 sub     dx, word_14AF6 ;~ 01C2:128B
+cs=0x1c2;eip=0x00128f; 	T(SHR(dx, 1));	// 3215 shr     dx, 1 ;~ 01C2:128F
+cs=0x1c2;eip=0x001291; 	T(SHR(dx, 1));	// 3216 shr     dx, 1 ;~ 01C2:1291
+cs=0x1c2;eip=0x001293; 	J(JC(loc_114a0));	// 3217 jb      short loc_114A0 ;~ 01C2:1293
+cs=0x1c2;eip=0x001295; 	T(MOV(si, 0x323));	// 3218 mov     si, 323h ;~ 01C2:1295
+cs=0x1c2;eip=0x001298; 	T(MOV(cx, 0x0E04));	// 3219 mov     cx, 0E04h ;~ 01C2:1298
+loc_1149b:
+	// 4656 
+cs=0x1c2;eip=0x00129b; 	J(CALL(sub_114a8,0));	// 3222 call    sub_114A8 ;~ 01C2:129B
+cs=0x1c2;eip=0x00129e; 	X(POP(es));	// 3223 pop     es ;~ 01C2:129E
+cs=0x1c2;eip=0x00129f; 	R(RETN(0));	// 3224 retn ;~ 01C2:129F
+loc_114a0:
+	// 4657 
+cs=0x1c2;eip=0x0012a0; 	T(MOV(cx, 0x0E05));	// 3228 mov     cx, 0E05h ;~ 01C2:12A0
+cs=0x1c2;eip=0x0012a3; 	T(MOV(si, 0x35B));	// 3229 mov     si, 35Bh ;~ 01C2:12A3
+cs=0x1c2;eip=0x0012a6; 	J(JMP(loc_1149b));	// 3230 jmp     short loc_1149B ;~ 01C2:12A6
+seg001_14e9_proc:
+	// 3588 
+cs=0x1c2;eip=0x0014e9; 	T(SHR(cx, 1));	// 3588 shr     cx, 1 ;~ 01C2:14E9
+ret_1c2_14eb:
+	// 4694 
+cs=0x1c2;eip=0x0014eb; 	T(SUB(cx, 0x0E));	// 3589 sub     cx, 0Eh ;~ 01C2:14EB
+cs=0x1c2;eip=0x0014ee; 	T(MOV(ax, cx));	// 3590 mov     ax, cx ;~ 01C2:14EE
+cs=0x1c2;eip=0x0014f0; 	T(CMP(ax, 1));	// 3591 cmp     ax, 1 ;~ 01C2:14F0
+cs=0x1c2;eip=0x0014f3; 	J(JNZ(loc_116fb));	// 3592 jnz     short loc_116FB ;~ 01C2:14F3
+cs=0x1c2;eip=0x0014f5; 	X(XOR(byte_14b06, 0x0FF));	// 3593 xor     byte_14B06, 0FFh ;~ 01C2:14F5
+cs=0x1c2;eip=0x0014fa; 	R(RETN(0));	// 3594 retn ;~ 01C2:14FA
+loc_116fb:
+	// 4695 
+cs=0x1c2;eip=0x0014fb; 	J(CALL(sub_14015,0));	// 3598 call    sub_14015 ;~ 01C2:14FB
+cs=0x1c2;eip=0x0014fe; 	R(RETN(0));	// 3599 retn ;~ 01C2:14FE
+ret_1c2_14ff:
+	// 4696 
+cs=0x1c2;eip=0x0014ff; 	T(XOR(ax, ax));	// 3601 xor     ax, ax ;~ 01C2:14FF
+cs=0x1c2;eip=0x001501; 	T(MOV(di, 0x4B8));	// 3602 mov     di, 4B8h ;~ 01C2:1501
+cs=0x1c2;eip=0x001504; 	T(MOV(cx, 4));	// 3603 mov     cx, 4 ;~ 01C2:1504
+	// 3604 rep stosw ;~ 01C2:1507
+cs=0x1c2;eip=0x001507; 	X(	REP STOSW);	// 3604 rep stosw ;~ 01C2:1507
+cs=0x1c2;eip=0x001509; 	R(RETN(0));	// 3605 retn ;~ 01C2:1509
+ret_1c2_150a:
+	// 4697 
+cs=0x1c2;eip=0x00150a; 	X(MOV(word_14af8, 0x0FEB0));	// 3607 mov     word_14AF8, 0FEB0h ;~ 01C2:150A
+loc_11710:
+	// 4698 
+cs=0x1c2;eip=0x001510; 	X(MOV(word_14afa, 0));	// 3610 mov     word_14AFA, 0 ;~ 01C2:1510
+loc_11716:
+	// 4699 
+cs=0x1c2;eip=0x001516; 	T(MOV(ax, word_14af6));	// 3614 mov     ax, word_14AF6 ;~ 01C2:1516
+cs=0x1c2;eip=0x001519; 	T(MOV(cx, word_14af8));	// 3615 mov     cx, word_14AF8 ;~ 01C2:1519
+cs=0x1c2;eip=0x00151d; 	J(CALL(sub_13bc7,0));	// 3616 call    sub_13BC7 ;~ 01C2:151D
+cs=0x1c2;eip=0x001520; 	X(MOV(word_14afc, dx));	// 3617 mov     word_14AFC, dx ;~ 01C2:1520
+cs=0x1c2;eip=0x001524; 	T(MOV(ax, word_14af6));	// 3618 mov     ax, word_14AF6 ;~ 01C2:1524
+cs=0x1c2;eip=0x001527; 	T(MOV(cx, word_14af8));	// 3619 mov     cx, word_14AF8 ;~ 01C2:1527
+cs=0x1c2;eip=0x00152b; 	J(CALL(sub_13bad,0));	// 3620 call    sub_13BAD ;~ 01C2:152B
+cs=0x1c2;eip=0x00152e; 	X(MOV(word_14afe, dx));	// 3621 mov     word_14AFE, dx ;~ 01C2:152E
+cs=0x1c2;eip=0x001532; 	R(RETN(0));	// 3622 retn ;~ 01C2:1532
+ret_1c2_1533:
+	// 4700 
+cs=0x1c2;eip=0x001533; 	X(MOV(word_14af8, 0x150));	// 3624 mov     word_14AF8, 150h ;~ 01C2:1533
+cs=0x1c2;eip=0x001539; 	J(JMP(loc_11710));	// 3625 jmp     short loc_11710 ;~ 01C2:1539
+ret_1c2_153b:
+	// 4701 
+cs=0x1c2;eip=0x00153b; 	T(MOV(ax, word_14aea));	// 3627 mov     ax, word_14AEA ;~ 01C2:153B
+loc_1173e:
+	// 4702 
+cs=0x1c2;eip=0x00153e; 	X(MOV(word_14afa, ax));	// 3630 mov     word_14AFA, ax ;~ 01C2:153E
+cs=0x1c2;eip=0x001541; 	T(TEST(byte_14b00, 0x0FF));	// 3631 test    byte_14B00, 0FFh ;~ 01C2:1541
+cs=0x1c2;eip=0x001546; 	J(JZ(loc_1174a));	// 3632 jz      short loc_1174A ;~ 01C2:1546
+cs=0x1c2;eip=0x001548; 	T(SAR(ax, 1));	// 3633 sar     ax, 1 ;~ 01C2:1548
+loc_1174a:
+	// 4703 
+cs=0x1c2;eip=0x00154a; 	X(ADD(word_14af6, ax));	// 3636 add     word_14AF6, ax ;~ 01C2:154A
+cs=0x1c2;eip=0x00154e; 	T(XOR(ax, ax));	// 3637 xor     ax, ax ;~ 01C2:154E
+cs=0x1c2;eip=0x001550; 	X(MOV(word_14afc, ax));	// 3638 mov     word_14AFC, ax ;~ 01C2:1550
+cs=0x1c2;eip=0x001553; 	X(MOV(word_14afe, ax));	// 3639 mov     word_14AFE, ax ;~ 01C2:1553
+cs=0x1c2;eip=0x001556; 	X(MOV(word_14af8, ax));	// 3640 mov     word_14AF8, ax ;~ 01C2:1556
+cs=0x1c2;eip=0x001559; 	R(RETN(0));	// 3641 retn ;~ 01C2:1559
+ret_1c2_155a:
+	// 4704 
+cs=0x1c2;eip=0x00155a; 	T(MOV(ax, word_14aea));	// 3643 mov     ax, word_14AEA ;~ 01C2:155A
+cs=0x1c2;eip=0x00155d; 	J(JMP(loc_1173e));	// 3644 jmp     short loc_1173E ;~ 01C2:155D
+ret_1c2_155f:
+	// 4705 
+cs=0x1c2;eip=0x00155f; 	T(MOV(ax, word_14aea));	// 3646 mov     ax, word_14AEA ;~ 01C2:155F
+cs=0x1c2;eip=0x001562; 	T(CMP(ax, 0x10));	// 3647 cmp     ax, 10h ;~ 01C2:1562
+cs=0x1c2;eip=0x001565; 	J(JBE(loc_1176a));	// 3648 jbe     short loc_1176A ;~ 01C2:1565
+cs=0x1c2;eip=0x001567; 	T(MOV(ax, 0x10));	// 3649 mov     ax, 10h ;~ 01C2:1567
+loc_1176a:
+	// 4706 
+cs=0x1c2;eip=0x00156a; 	X(MOV(word_14afa, ax));	// 3653 mov     word_14AFA, ax ;~ 01C2:156A
+cs=0x1c2;eip=0x00156d; 	X(ADD(word_14af6, ax));	// 3654 add     word_14AF6, ax ;~ 01C2:156D
+cs=0x1c2;eip=0x001571; 	T(MOV(ax, 0x150));	// 3655 mov     ax, 150h ;~ 01C2:1571
+cs=0x1c2;eip=0x001574; 	X(MOV(word_14af8, ax));	// 3656 mov     word_14AF8, ax ;~ 01C2:1574
+cs=0x1c2;eip=0x001577; 	J(JMP(loc_11716));	// 3657 jmp     short loc_11716 ;~ 01C2:1577
+ret_1c2_1579:
+	// 4707 
+cs=0x1c2;eip=0x001579; 	T(MOV(ax, word_14aea));	// 3659 mov     ax, word_14AEA ;~ 01C2:1579
+cs=0x1c2;eip=0x00157c; 	T(CMP(ax, 0x0FFF0));	// 3660 cmp     ax, 0FFF0h ;~ 01C2:157C
+cs=0x1c2;eip=0x00157f; 	J(JNC(loc_1176a));	// 3661 jnb     short loc_1176A ;~ 01C2:157F
+cs=0x1c2;eip=0x001581; 	T(MOV(ax, 0x0FFF0));	// 3662 mov     ax, 0FFF0h ;~ 01C2:1581
+cs=0x1c2;eip=0x001584; 	J(JMP(loc_1176a));	// 3663 jmp     short loc_1176A ;~ 01C2:1584
+ret_1c2_1586:
+	// 4708 
+cs=0x1c2;eip=0x001586; 	T(MOV(ax, word_14aea));	// 3665 mov     ax, word_14AEA ;~ 01C2:1586
+cs=0x1c2;eip=0x001589; 	T(CMP(ax, 0x10));	// 3666 cmp     ax, 10h ;~ 01C2:1589
+cs=0x1c2;eip=0x00158c; 	J(JBE(loc_11791));	// 3667 jbe     short loc_11791 ;~ 01C2:158C
+cs=0x1c2;eip=0x00158e; 	T(MOV(ax, 0x10));	// 3668 mov     ax, 10h ;~ 01C2:158E
+loc_11791:
+	// 4709 
+cs=0x1c2;eip=0x001591; 	X(MOV(word_14afa, ax));	// 3672 mov     word_14AFA, ax ;~ 01C2:1591
+cs=0x1c2;eip=0x001594; 	X(ADD(word_14af6, ax));	// 3673 add     word_14AF6, ax ;~ 01C2:1594
+cs=0x1c2;eip=0x001598; 	T(MOV(ax, 0x0FEB0));	// 3674 mov     ax, 0FEB0h ;~ 01C2:1598
+cs=0x1c2;eip=0x00159b; 	X(MOV(word_14af8, ax));	// 3675 mov     word_14AF8, ax ;~ 01C2:159B
+cs=0x1c2;eip=0x00159e; 	J(JMP(loc_11716));	// 3676 jmp     loc_11716 ;~ 01C2:159E
+ret_1c2_15a1:
+	// 4710 
+cs=0x1c2;eip=0x0015a1; 	T(MOV(ax, word_14aea));	// 3678 mov     ax, word_14AEA ;~ 01C2:15A1
+cs=0x1c2;eip=0x0015a4; 	T(CMP(ax, 0x0FFF0));	// 3679 cmp     ax, 0FFF0h ;~ 01C2:15A4
+cs=0x1c2;eip=0x0015a7; 	J(JNC(loc_11791));	// 3680 jnb     short loc_11791 ;~ 01C2:15A7
+cs=0x1c2;eip=0x0015a9; 	T(MOV(ax, 0x0FFF0));	// 3681 mov     ax, 0FFF0h ;~ 01C2:15A9
+cs=0x1c2;eip=0x0015ac; 	J(JMP(loc_11791));	// 3682 jmp     short loc_11791 ;~ 01C2:15AC
+ret_1c2_15ae:
+	// 4711 
+cs=0x1c2;eip=0x0015ae; 	X(POP(ax));	// 3684 pop     ax ;~ 01C2:15AE
+cs=0x1c2;eip=0x0015af; 	T(TEST(byte_14b00, 0x0FF));	// 3685 test    byte_14B00, 0FFh ;~ 01C2:15AF
+cs=0x1c2;eip=0x0015b4; 	J(JZ(loc_117be));	// 3686 jz      short loc_117BE ;~ 01C2:15B4
+cs=0x1c2;eip=0x0015b6; 	X(MOV(byte_14b00, 0));	// 3687 mov     byte_14B00, 0 ;~ 01C2:15B6
+cs=0x1c2;eip=0x0015bb; 	J(JMP(loc_1378a));	// 3688 jmp     loc_1378A ;~ 01C2:15BB
+loc_117be:
+	// 4712 
+cs=0x1c2;eip=0x0015be; 	J(CALL(sub_10438,0));	// 3692 call    sub_10438 ;~ 01C2:15BE
+cs=0x1c2;eip=0x0015c1; 	J(CALL(sub_14005,0));	// 3693 call    sub_14005 ;~ 01C2:15C1
+cs=0x1c2;eip=0x0015c4; 	J(JMP(loc_13ca0));	// 3694 jmp     loc_13CA0 ;~ 01C2:15C4
+ret_1c2_15c7:
+	// 4713 
+cs=0x1c2;eip=0x0015c7; 	X(POP(ax));	// 3696 pop     ax ;~ 01C2:15C7
+cs=0x1c2;eip=0x0015c8; 	X(MOV(byte_14b00, 0));	// 3697 mov     byte_14B00, 0 ;~ 01C2:15C8
+cs=0x1c2;eip=0x0015cd; 	J(CALL(sub_10438,0));	// 3698 call    sub_10438 ;~ 01C2:15CD
+cs=0x1c2;eip=0x0015d0; 	J(CALL(sub_14005,0));	// 3699 call    sub_14005 ;~ 01C2:15D0
+cs=0x1c2;eip=0x0015d3; 	J(JMP(loc_13d1e));	// 3700 jmp     loc_13D1E ;~ 01C2:15D3
+ret_1c2_15d6:
+	// 4714 
+cs=0x1c2;eip=0x0015d6; 	X(POP(ax));	// 3702 pop     ax ;~ 01C2:15D6
+cs=0x1c2;eip=0x0015d7; 	J(JMP(loc_134c0));	// 3703 jmp     loc_134C0 ;~ 01C2:15D7
+sub_121df:
+	// 5103 
+cs=0x1c2;eip=0x001fdf; 	X(MOV(word_14b43, 0));	// 5105 mov     word_14B43, 0 ;~ 01C2:1FDF
+ret_1c2_1fe5:
+	// 4874 
+cs=0x1c2;eip=0x001fe5; 	X(MOV(word_153a8, 0x0D6C));	// 5106 mov     word_153A8, 0D6Ch ;~ 01C2:1FE5
+cs=0x1c2;eip=0x001feb; 	X(MOV(word_153aa, 0x0D70));	// 5107 mov     word_153AA, 0D70h ;~ 01C2:1FEB
+loc_121f1:
+	// 4875 
+cs=0x1c2;eip=0x001ff1; 	T(MOV(ax, word_14b43));	// 5110 mov     ax, word_14B43 ;~ 01C2:1FF1
+cs=0x1c2;eip=0x001ff4; 	T(SHL(ax, 1));	// 5111 shl     ax, 1 ;~ 01C2:1FF4
+cs=0x1c2;eip=0x001ff6; 	T(MOV(di, word_14b3d));	// 5112 mov     di, word_14B3D ;~ 01C2:1FF6
+cs=0x1c2;eip=0x001ffa; 	T(ADD(di, ax));	// 5113 add     di, ax ;~ 01C2:1FFA
+cs=0x1c2;eip=0x001ffc; 	T(MOV(al, *(raddr(ds,di))));	// 5114 mov     al, [di] ;~ 01C2:1FFC
+cs=0x1c2;eip=0x001ffe; 	T(CMP(al, 0x0FF));	// 5115 cmp     al, 0FFh ;~ 01C2:1FFE
+cs=0x1c2;eip=0x002000; 	J(JZ(loc_1225c));	// 5116 jz      short loc_1225C ;~ 01C2:2000
+cs=0x1c2;eip=0x002002; 	T(SUB(ah, ah));	// 5117 sub     ah, ah ;~ 01C2:2002
+cs=0x1c2;eip=0x002004; 	T(SHL(ax, 1));	// 5118 shl     ax, 1 ;~ 01C2:2004
+cs=0x1c2;eip=0x002006; 	T(SHL(ax, 1));	// 5119 shl     ax, 1 ;~ 01C2:2006
+cs=0x1c2;eip=0x002008; 	T(MOV(si, 0x0BBA3));	// 5120 mov     si, 0BBA3h ;~ 01C2:2008
+cs=0x1c2;eip=0x00200b; 	X(PUSH(si));	// 5121 push    si ;~ 01C2:200B
+cs=0x1c2;eip=0x00200c; 	T(ADD(si, ax));	// 5122 add     si, ax ;~ 01C2:200C
+cs=0x1c2;eip=0x00200e; 	T(LODSW);	// 5123 lodsw ;~ 01C2:200E
+cs=0x1c2;eip=0x00200f; 	T(MOV(bx, ax));	// 5124 mov     bx, ax ;~ 01C2:200F
+cs=0x1c2;eip=0x002011; 	T(LODSW);	// 5125 lodsw ;~ 01C2:2011
+cs=0x1c2;eip=0x002012; 	X(MOV(word_153ae, ax));	// 5126 mov     word_153AE, ax ;~ 01C2:2012
+cs=0x1c2;eip=0x002015; 	X(MOV(word_153ac, bx));	// 5127 mov     word_153AC, bx ;~ 01C2:2015
+cs=0x1c2;eip=0x002019; 	T(INC(di));	// 5128 inc     di ;~ 01C2:2019
+cs=0x1c2;eip=0x00201a; 	T(MOV(al, *(raddr(ds,di))));	// 5129 mov     al, [di] ;~ 01C2:201A
+cs=0x1c2;eip=0x00201c; 	T(SUB(ah, ah));	// 5130 sub     ah, ah ;~ 01C2:201C
+cs=0x1c2;eip=0x00201e; 	T(SHL(ax, 1));	// 5131 shl     ax, 1 ;~ 01C2:201E
+cs=0x1c2;eip=0x002020; 	T(SHL(ax, 1));	// 5132 shl     ax, 1 ;~ 01C2:2020
+cs=0x1c2;eip=0x002022; 	X(POP(si));	// 5133 pop     si ;~ 01C2:2022
+cs=0x1c2;eip=0x002023; 	T(ADD(si, ax));	// 5134 add     si, ax ;~ 01C2:2023
+cs=0x1c2;eip=0x002025; 	T(LODSW);	// 5135 lodsw ;~ 01C2:2025
+cs=0x1c2;eip=0x002026; 	T(MOV(bx, ax));	// 5136 mov     bx, ax ;~ 01C2:2026
+cs=0x1c2;eip=0x002028; 	T(LODSW);	// 5137 lodsw ;~ 01C2:2028
+cs=0x1c2;eip=0x002029; 	X(MOV(word_153b2, ax));	// 5138 mov     word_153B2, ax ;~ 01C2:2029
+cs=0x1c2;eip=0x00202c; 	X(MOV(word_153b0, bx));	// 5139 mov     word_153B0, bx ;~ 01C2:202C
+cs=0x1c2;eip=0x002030; 	T(TEST(byte_153a2, 1));	// 5140 test    byte_153A2, 1 ;~ 01C2:2030
+cs=0x1c2;eip=0x002035; 	J(JZ(loc_1223f));	// 5141 jz      short loc_1223F ;~ 01C2:2035
+cs=0x1c2;eip=0x002037; 	X(NEG(word_153ac));	// 5142 neg     word_153AC ;~ 01C2:2037
+cs=0x1c2;eip=0x00203b; 	X(NEG(word_153b0));	// 5143 neg     word_153B0 ;~ 01C2:203B
+loc_1223f:
+	// 4876 
+cs=0x1c2;eip=0x00203f; 	T(MOV(si, 0x4FF));	// 5146 mov     si, 4FFh ;~ 01C2:203F
+cs=0x1c2;eip=0x002042; 	T(MOV(di, 0x0D6C));	// 5147 mov     di, 0D6Ch ;~ 01C2:2042
+cs=0x1c2;eip=0x002045; 	J(CALL(sub_12262,0));	// 5148 call    sub_12262 ;~ 01C2:2045
+cs=0x1c2;eip=0x002048; 	T(MOV(si, 0x4FF));	// 5149 mov     si, 4FFh ;~ 01C2:2048
+cs=0x1c2;eip=0x00204b; 	J(CALL(sub_12262,0));	// 5150 call    sub_12262 ;~ 01C2:204B
+loc_1224e:
+	// 4877 
+cs=0x1c2;eip=0x00204e; 	T(MOV(ax, seg_offset(seg003)));	// 5153 mov     ax, seg seg003 ;~ 01C2:204E
+cs=0x1c2;eip=0x002051; 	T(MOV(es, ax));	// 5154 mov     es, ax ;~ 01C2:2051
+cs=0x1c2;eip=0x002053; 	J(CALL(sub_13040,0));	// 5156 call    sub_13040 ;~ 01C2:2053
+cs=0x1c2;eip=0x002056; 	X(INC(word_14b43));	// 5157 inc     word_14B43 ;~ 01C2:2056
+cs=0x1c2;eip=0x00205a; 	J(JMP(loc_121f1));	// 5158 jmp     short loc_121F1 ;~ 01C2:205A
+loc_1225c:
+	// 4878 
+cs=0x1c2;eip=0x00205c; 	T(MOV(ax, seg_offset(seg002)));	// 5163 mov     ax, seg seg002 ;~ 01C2:205C
+cs=0x1c2;eip=0x00205f; 	T(MOV(es, ax));	// 5164 mov     es, ax ;~ 01C2:205F
+cs=0x1c2;eip=0x002061; 	R(RETN(0));	// 5166 retn ;~ 01C2:2061
+sub_12350:
+	// 5337 
+cs=0x1c2;eip=0x002150; 	T(MOV(dx, word_14af6));	// 5338 mov     dx, word_14AF6 ;~ 01C2:2150
+loc_12354:
+	// 4896 
+cs=0x1c2;eip=0x002154; 	T(CMP(dx, 0x480));	// 5341 cmp     dx, 480h ;~ 01C2:2154
+cs=0x1c2;eip=0x002158; 	J(JC(loc_12360));	// 5342 jb      short loc_12360 ;~ 01C2:2158
+cs=0x1c2;eip=0x00215a; 	T(SUB(dx, 0x480));	// 5343 sub     dx, 480h ;~ 01C2:215A
+cs=0x1c2;eip=0x00215e; 	J(JMP(loc_12354));	// 5344 jmp     short loc_12354 ;~ 01C2:215E
+loc_12360:
+	// 4897 
+cs=0x1c2;eip=0x002160; 	T(MOV(ax, 0x168));	// 5348 mov     ax, 168h ;~ 01C2:2160
+cs=0x1c2;eip=0x002163; 	T(ADD(ax, dx));	// 5349 add     ax, dx ;~ 01C2:2163
+cs=0x1c2;eip=0x002165; 	X(MOV(word_14d50, ax));	// 5350 mov     word_14D50, ax ;~ 01C2:2165
+cs=0x1c2;eip=0x002168; 	X(MOV(word_14af6, dx));	// 5351 mov     word_14AF6, dx ;~ 01C2:2168
+cs=0x1c2;eip=0x00216c; 	X(MOV(byte_153a3, 2));	// 5352 mov     byte_153A3, 2 ;~ 01C2:216C
+cs=0x1c2;eip=0x002171; 	T(MOV(bx, 0x0FF60));	// 5353 mov     bx, 0FF60h ;~ 01C2:2171
+cs=0x1c2;eip=0x002174; 	T(SUB(bx, dx));	// 5354 sub     bx, dx ;~ 01C2:2174
+cs=0x1c2;eip=0x002176; 	X(MOV(word_153a8, 0x0D6C));	// 5355 mov     word_153A8, 0D6Ch ;~ 01C2:2176
+cs=0x1c2;eip=0x00217c; 	X(MOV(word_153aa, 0x0D70));	// 5356 mov     word_153AA, 0D70h ;~ 01C2:217C
+cs=0x1c2;eip=0x002182; 	T(MOV(si, 0x0B580));	// 5357 mov     si, 0B580h ;~ 01C2:2182
+cs=0x1c2;eip=0x002185; 	T(MOV(cx, 0));	// 5358 mov     cx, 0 ;~ 01C2:2185
+loc_12388:
+	// 4898 
+cs=0x1c2;eip=0x002188; 	T(LODSW);	// 5362 lodsw ;~ 01C2:2188
+cs=0x1c2;eip=0x002189; 	T(CMP(ax, 0x0FFFF));	// 5363 cmp     ax, 0FFFFh ;~ 01C2:2189
+cs=0x1c2;eip=0x00218c; 	J(JNZ(loc_12391));	// 5364 jnz     short loc_12391 ;~ 01C2:218C
+cs=0x1c2;eip=0x00218e; 	T(INC(cx));	// 5365 inc     cx ;~ 01C2:218E
+cs=0x1c2;eip=0x00218f; 	J(JMP(loc_12388));	// 5366 jmp     short loc_12388 ;~ 01C2:218F
+loc_12391:
+	// 4899 
+cs=0x1c2;eip=0x002191; 	T(CMP(ax, dx));	// 5370 cmp     ax, dx ;~ 01C2:2191
+cs=0x1c2;eip=0x002193; 	J(JNC(loc_1239a));	// 5371 jnb     short loc_1239A ;~ 01C2:2193
+cs=0x1c2;eip=0x002195; 	T(ADD(si, 2));	// 5372 add     si, 2 ;~ 01C2:2195
+cs=0x1c2;eip=0x002198; 	J(JMP(loc_12388));	// 5373 jmp     short loc_12388 ;~ 01C2:2198
+loc_1239a:
+	// 4900 
+cs=0x1c2;eip=0x00219a; 	T(ADD(si, 0x0FFFE));	// 5377 add     si, 0FFFEh ;~ 01C2:219A
+cs=0x1c2;eip=0x00219d; 	J(JCXZ(loc_123b4));	// 5378 jcxz    short loc_123B4 ;~ 01C2:219D
+cs=0x1c2;eip=0x00219f; 	T(DEC(cx));	// 5379 dec     cx ;~ 01C2:219F
+loc_123a0:
+	// 4901 
+cs=0x1c2;eip=0x0021a0; 	T(ADD(si, 0x0FFFC));	// 5382 add     si, 0FFFCh ;~ 01C2:21A0
+cs=0x1c2;eip=0x0021a3; 	T(LODSW);	// 5383 lodsw ;~ 01C2:21A3
+cs=0x1c2;eip=0x0021a4; 	T(CMP(ax, 0x0FFFF));	// 5384 cmp     ax, 0FFFFh ;~ 01C2:21A4
+cs=0x1c2;eip=0x0021a7; 	J(JNZ(loc_123a0));	// 5385 jnz     short loc_123A0 ;~ 01C2:21A7
+cs=0x1c2;eip=0x0021a9; 	J(JCXZ(loc_123b4));	// 5386 jcxz    short loc_123B4 ;~ 01C2:21A9
+loc_123ab:
+	// 4902 
+cs=0x1c2;eip=0x0021ab; 	T(ADD(si, 0x0FFFC));	// 5389 add     si, 0FFFCh ;~ 01C2:21AB
+cs=0x1c2;eip=0x0021ae; 	T(LODSW);	// 5390 lodsw ;~ 01C2:21AE
+cs=0x1c2;eip=0x0021af; 	T(CMP(ax, 0x0FFFF));	// 5391 cmp     ax, 0FFFFh ;~ 01C2:21AF
+cs=0x1c2;eip=0x0021b2; 	J(JNZ(loc_123ab));	// 5392 jnz     short loc_123AB ;~ 01C2:21B2
+loc_123b4:
+	// 4903 
+cs=0x1c2;eip=0x0021b4; 	T(MOV(cx, 0));	// 5396 mov     cx, 0 ;~ 01C2:21B4
+cs=0x1c2;eip=0x0021b7; 	T(CMP(si, 0x0B580));	// 5397 cmp     si, 0B580h ;~ 01C2:21B7
+cs=0x1c2;eip=0x0021bb; 	J(JNC(loc_123c0));	// 5398 jnb     short loc_123C0 ;~ 01C2:21BB
+cs=0x1c2;eip=0x0021bd; 	T(MOV(si, 0x0B582));	// 5399 mov     si, 0B582h ;~ 01C2:21BD
+loc_123c0:
+	// 4904 
+cs=0x1c2;eip=0x0021c0; 	T(MOV(di, 0x0D6C));	// 5403 mov     di, 0D6Ch ;~ 01C2:21C0
+cs=0x1c2;eip=0x0021c3; 	T(LODSW);	// 5404 lodsw ;~ 01C2:21C3
+cs=0x1c2;eip=0x0021c4; 	T(CMP(ax, word_14d50));	// 5405 cmp     ax, word_14D50 ;~ 01C2:21C4
+cs=0x1c2;eip=0x0021c8; 	J(JNC(locret_123f2));	// 5406 jnb     short locret_123F2 ;~ 01C2:21C8
+cs=0x1c2;eip=0x0021ca; 	T(ADD(ax, bx));	// 5407 add     ax, bx ;~ 01C2:21CA
+cs=0x1c2;eip=0x0021cc; 	X(STOSW);	// 5408 stosw ;~ 01C2:21CC
+cs=0x1c2;eip=0x0021cd; 	T(LODSW);	// 5409 lodsw ;~ 01C2:21CD
+cs=0x1c2;eip=0x0021ce; 	T(NEG(ax));	// 5410 neg     ax ;~ 01C2:21CE
+cs=0x1c2;eip=0x0021d0; 	X(STOSW);	// 5411 stosw ;~ 01C2:21D0
+cs=0x1c2;eip=0x0021d1; 	T(LODSW);	// 5412 lodsw ;~ 01C2:21D1
+cs=0x1c2;eip=0x0021d2; 	T(ADD(ax, bx));	// 5413 add     ax, bx ;~ 01C2:21D2
+cs=0x1c2;eip=0x0021d4; 	X(STOSW);	// 5414 stosw ;~ 01C2:21D4
+cs=0x1c2;eip=0x0021d5; 	T(LODSW);	// 5415 lodsw ;~ 01C2:21D5
+cs=0x1c2;eip=0x0021d6; 	T(NEG(ax));	// 5416 neg     ax ;~ 01C2:21D6
+cs=0x1c2;eip=0x0021d8; 	X(STOSW);	// 5417 stosw ;~ 01C2:21D8
+cs=0x1c2;eip=0x0021d9; 	X(PUSH(bx));	// 5418 push    bx ;~ 01C2:21D9
+cs=0x1c2;eip=0x0021da; 	X(PUSH(si));	// 5419 push    si ;~ 01C2:21DA
+cs=0x1c2;eip=0x0021db; 	X(PUSH(es));	// 5420 push    es ;~ 01C2:21DB
+loc_123dc:
+	// 4905 
+cs=0x1c2;eip=0x0021dc; 	T(MOV(ax, seg_offset(seg003)));	// 5423 mov     ax, seg seg003 ;~ 01C2:21DC
+cs=0x1c2;eip=0x0021df; 	T(MOV(es, ax));	// 5424 mov     es, ax ;~ 01C2:21DF
+cs=0x1c2;eip=0x0021e1; 	J(CALL(sub_13040,0));	// 5426 call    sub_13040 ;~ 01C2:21E1
+cs=0x1c2;eip=0x0021e4; 	X(POP(es));	// 5427 pop     es ;~ 01C2:21E4
+cs=0x1c2;eip=0x0021e5; 	X(POP(si));	// 5429 pop     si ;~ 01C2:21E5
+cs=0x1c2;eip=0x0021e6; 	X(POP(bx));	// 5430 pop     bx ;~ 01C2:21E6
+cs=0x1c2;eip=0x0021e7; 	T(LODSW);	// 5431 lodsw ;~ 01C2:21E7
+cs=0x1c2;eip=0x0021e8; 	T(CMP(ax, 0x0FFFF));	// 5432 cmp     ax, 0FFFFh ;~ 01C2:21E8
+cs=0x1c2;eip=0x0021eb; 	J(JZ(loc_123c0));	// 5433 jz      short loc_123C0 ;~ 01C2:21EB
+cs=0x1c2;eip=0x0021ed; 	T(ADD(si, 0x0FFFA));	// 5434 add     si, 0FFFAh ;~ 01C2:21ED
+cs=0x1c2;eip=0x0021f0; 	J(JMP(loc_123c0));	// 5435 jmp     short loc_123C0 ;~ 01C2:21F0
+locret_123f2:
+	// 4906 
+cs=0x1c2;eip=0x0021f2; 	R(RETN(0));	// 5439 retn ;~ 01C2:21F2
+sub_128a1:
+	// 6022 
+cs=0x1c2;eip=0x0026a1; 	T(XOR(ah, ah));	// 6024 xor     ah, ah ;~ 01C2:26A1
+ret_1c2_26a3:
+	// 4962 
+cs=0x1c2;eip=0x0026a3; 	T(SHR(al, 1));	// 6025 shr     al, 1 ;~ 01C2:26A3
+cs=0x1c2;eip=0x0026a5; 	X(MUL1_1(byte_14d58));	// 6026 mul     byte_14D58 ;~ 01C2:26A5
+cs=0x1c2;eip=0x0026a9; 	T(MOV(si, ax));	// 6027 mov     si, ax ;~ 01C2:26A9
+cs=0x1c2;eip=0x0026ab; 	T(MOV(di, si));	// 6028 mov     di, si ;~ 01C2:26AB
+cs=0x1c2;eip=0x0026ad; 	X(PUSH(es));	// 6029 push    es ;~ 01C2:26AD
+cs=0x1c2;eip=0x0026ae; 	T(MOV(ax, 0x0B800));	// 6030 mov     ax, 0B800h ;~ 01C2:26AE
+cs=0x1c2;eip=0x0026b1; 	T(MOV(es, ax));	// 6031 mov     es, ax ;~ 01C2:26B1
+loc_128b3:
+	// 4963 
+cs=0x1c2;eip=0x0026b3; 	T(MOV(ax, seg_offset(seg003)));	// 6035 mov     ax, seg seg003 ;~ 01C2:26B3
+cs=0x1c2;eip=0x0026b6; 	X(PUSH(ds));	// 6036 push    ds ;~ 01C2:26B6
+cs=0x1c2;eip=0x0026b7; 	T(MOV(ds, ax));	// 6037 mov     ds, ax ;~ 01C2:26B7
+loc_128b9:
+	// 4964 
+cs=0x1c2;eip=0x0026b9; 	T(MOV(cx, 0x28));	// 6041 mov     cx, 28h ; '(' ;~ 01C2:26B9
+	// 6042 rep movsw ;~ 01C2:26BC
+cs=0x1c2;eip=0x0026bc; 	X(	REP MOVSW);	// 6042 rep movsw ;~ 01C2:26BC
+cs=0x1c2;eip=0x0026be; 	T(ADD(si, 0x1FB0));	// 6043 add     si, 1FB0h ;~ 01C2:26BE
+cs=0x1c2;eip=0x0026c2; 	T(MOV(di, si));	// 6044 mov     di, si ;~ 01C2:26C2
+cs=0x1c2;eip=0x0026c4; 	T(MOV(cx, 0x28));	// 6045 mov     cx, 28h ; '(' ;~ 01C2:26C4
+	// 6046 rep movsw ;~ 01C2:26C7
+cs=0x1c2;eip=0x0026c7; 	X(	REP MOVSW);	// 6046 rep movsw ;~ 01C2:26C7
+cs=0x1c2;eip=0x0026c9; 	T(ADD(si, 0x0E000));	// 6047 add     si, 0E000h ;~ 01C2:26C9
+cs=0x1c2;eip=0x0026cd; 	T(MOV(di, si));	// 6048 mov     di, si ;~ 01C2:26CD
+cs=0x1c2;eip=0x0026cf; 	T(DEC(bl));	// 6049 dec     bl ;~ 01C2:26CF
+cs=0x1c2;eip=0x0026d1; 	J(JZ(loc_128d7));	// 6050 jz      short loc_128D7 ;~ 01C2:26D1
+cs=0x1c2;eip=0x0026d3; 	T(DEC(bl));	// 6051 dec     bl ;~ 01C2:26D3
+cs=0x1c2;eip=0x0026d5; 	J(JNZ(loc_128b9));	// 6052 jnz     short loc_128B9 ;~ 01C2:26D5
+loc_128d7:
+	// 4965 
+cs=0x1c2;eip=0x0026d7; 	X(POP(ds));	// 6055 pop     ds ;~ 01C2:26D7
+cs=0x1c2;eip=0x0026d8; 	X(POP(es));	// 6057 pop     es ;~ 01C2:26D8
+cs=0x1c2;eip=0x0026d9; 	R(RETN(0));	// 6059 retn ;~ 01C2:26D9
+sub_1297d:
+	// 6161 
+cs=0x1c2;eip=0x00277d; 	T(MOV(si, word_153ba));	// 6162 mov     si, word_153BA ;~ 01C2:277D
+ret_1c2_2781:
+	// 4974 
+cs=0x1c2;eip=0x002781; 	T(ADD(si, 0x0FC19));	// 6163 add     si, 0FC19h ;~ 01C2:2781
+cs=0x1c2;eip=0x002785; 	X(MOV(word_14d59, si));	// 6164 mov     word_14D59, si ;~ 01C2:2785
+cs=0x1c2;eip=0x002789; 	X(MOV(word_14d5b, 0x4000));	// 6165 mov     word_14D5B, 4000h ;~ 01C2:2789
+cs=0x1c2;eip=0x00278f; 	X(MOV(word_14af6, 0));	// 6166 mov     word_14AF6, 0 ;~ 01C2:278F
+cs=0x1c2;eip=0x002795; 	X(MOV(byte_14d5d, 0));	// 6167 mov     byte_14D5D, 0 ;~ 01C2:2795
+cs=0x1c2;eip=0x00279a; 	X(PUSH(es));	// 6168 push    es ;~ 01C2:279A
+loc_1299b:
+	// 4975 
+cs=0x1c2;eip=0x00279b; 	T(MOV(ax, seg_offset(seg003)));	// 6171 mov     ax, seg seg003 ;~ 01C2:279B
+cs=0x1c2;eip=0x00279e; 	T(MOV(es, ax));	// 6172 mov     es, ax ;~ 01C2:279E
+cs=0x1c2;eip=0x0027a0; 	T(MOV(cx, 0x1388));	// 6174 mov     cx, 1388h ;~ 01C2:27A0
+cs=0x1c2;eip=0x0027a3; 	T(MOV(ax, 0));	// 6175 mov     ax, 0 ;~ 01C2:27A3
+cs=0x1c2;eip=0x0027a6; 	T(MOV(di, 0x4000));	// 6176 mov     di, 4000h ;~ 01C2:27A6
+	// 6177 rep stosw ;~ 01C2:27A9
+cs=0x1c2;eip=0x0027a9; 	X(	REP STOSW);	// 6177 rep stosw ;~ 01C2:27A9
+cs=0x1c2;eip=0x0027ab; 	X(POP(es));	// 6178 pop     es ;~ 01C2:27AB
+loc_129ac:
+	// 4976 
+cs=0x1c2;eip=0x0027ac; 	J(CALL(sub_1372f,0));	// 6183 call    sub_1372F ;~ 01C2:27AC
+cs=0x1c2;eip=0x0027af; 	J(CALL(sub_12350,0));	// 6184 call    sub_12350 ;~ 01C2:27AF
+cs=0x1c2;eip=0x0027b2; 	X(PUSH(es));	// 6185 push    es ;~ 01C2:27B2
+cs=0x1c2;eip=0x0027b3; 	X(PUSH(ds));	// 6186 push    ds ;~ 01C2:27B3
+cs=0x1c2;eip=0x0027b4; 	T(MOV(si, word_14d59));	// 6187 mov     si, word_14D59 ;~ 01C2:27B4
+cs=0x1c2;eip=0x0027b8; 	T(MOV(di, word_14d5b));	// 6188 mov     di, word_14D5B ;~ 01C2:27B8
+loc_129bc:
+	// 4977 
+cs=0x1c2;eip=0x0027bc; 	T(MOV(ax, seg_offset(seg003)));	// 6191 mov     ax, seg seg003 ;~ 01C2:27BC
+cs=0x1c2;eip=0x0027bf; 	T(MOV(es, ax));	// 6192 mov     es, ax ;~ 01C2:27BF
+cs=0x1c2;eip=0x0027c1; 	T(MOV(ds, ax));	// 6194 mov     ds, ax ;~ 01C2:27C1
+cs=0x1c2;eip=0x0027c3; 	T(MOV(bl, 0x0D));	// 6196 mov     bl, 0Dh ;~ 01C2:27C3
+loc_129c5:
+	// 4978 
+cs=0x1c2;eip=0x0027c5; 	T(MOV(cx, 0x26));	// 6199 mov     cx, 26h ; '&' ;~ 01C2:27C5
+cs=0x1c2;eip=0x0027c8; 	T(TEST(*(&byte_14d5d), 0x0FF));	// 6200 test    ss:byte_14D5D, 0FFh ;~ 01C2:27C8
+cs=0x1c2;eip=0x0027ce; 	J(JNZ(loc_12a1a));	// 6201 jnz     short loc_12A1A ;~ 01C2:27CE
+	// 6202 rep movsw ;~ 01C2:27D0
+cs=0x1c2;eip=0x0027d0; 	X(	REP MOVSW);	// 6202 rep movsw ;~ 01C2:27D0
+cs=0x1c2;eip=0x0027d2; 	T(ADD(di, 0x124));	// 6203 add     di, 124h ;~ 01C2:27D2
+cs=0x1c2;eip=0x0027d6; 	T(ADD(si, 0x1FB4));	// 6204 add     si, 1FB4h ;~ 01C2:27D6
+cs=0x1c2;eip=0x0027da; 	T(MOV(cx, 0x26));	// 6205 mov     cx, 26h ; '&' ;~ 01C2:27DA
+	// 6206 rep movsw ;~ 01C2:27DD
+cs=0x1c2;eip=0x0027dd; 	X(	REP MOVSW);	// 6206 rep movsw ;~ 01C2:27DD
+cs=0x1c2;eip=0x0027df; 	T(ADD(di, 0x124));	// 6207 add     di, 124h ;~ 01C2:27DF
+cs=0x1c2;eip=0x0027e3; 	T(ADD(si, 0x0E004));	// 6208 add     si, 0E004h ;~ 01C2:27E3
+loc_129e7:
+	// 4979 
+cs=0x1c2;eip=0x0027e7; 	T(DEC(bl));	// 6211 dec     bl ;~ 01C2:27E7
+cs=0x1c2;eip=0x0027e9; 	J(JNZ(loc_129c5));	// 6212 jnz     short loc_129C5 ;~ 01C2:27E9
+cs=0x1c2;eip=0x0027eb; 	X(POP(ds));	// 6213 pop     ds ;~ 01C2:27EB
+cs=0x1c2;eip=0x0027ec; 	X(POP(es));	// 6215 pop     es ;~ 01C2:27EC
+cs=0x1c2;eip=0x0027ed; 	X(ADD(word_14af6, 0x130));	// 6217 add     word_14AF6, 130h ;~ 01C2:27ED
+cs=0x1c2;eip=0x0027f3; 	X(ADD(word_14d5b, 0x4C));	// 6218 add     word_14D5B, 4Ch ; 'L' ;~ 01C2:27F3
+cs=0x1c2;eip=0x0027f8; 	T(CMP(word_14d5b, 0x4130));	// 6219 cmp     word_14D5B, 4130h ;~ 01C2:27F8
+cs=0x1c2;eip=0x0027fe; 	J(JC(loc_129ac));	// 6220 jb      short loc_129AC ;~ 01C2:27FE
+cs=0x1c2;eip=0x002800; 	X(MOV(byte_14d5d, 0x0FF));	// 6221 mov     byte_14D5D, 0FFh ;~ 01C2:2800
+cs=0x1c2;eip=0x002805; 	J(JZ(loc_129ac));	// 6222 jz      short loc_129AC ;~ 01C2:2805
+cs=0x1c2;eip=0x002807; 	X(PUSH(es));	// 6223 push    es ;~ 01C2:2807
+loc_12a08:
+	// 4980 
+cs=0x1c2;eip=0x002808; 	T(MOV(ax, seg_offset(seg003)));	// 6226 mov     ax, seg seg003 ;~ 01C2:2808
+cs=0x1c2;eip=0x00280b; 	T(MOV(es, ax));	// 6227 mov     es, ax ;~ 01C2:280B
+cs=0x1c2;eip=0x00280d; 	T(MOV(di, 0x6280));	// 6229 mov     di, 6280h ;~ 01C2:280D
+cs=0x1c2;eip=0x002810; 	T(MOV(cx, 0x0B8));	// 6230 mov     cx, 0B8h ; '¸' ;~ 01C2:2810
+cs=0x1c2;eip=0x002813; 	T(MOV(ax, 0x5555));	// 6231 mov     ax, 5555h ;~ 01C2:2813
+	// 6232 rep stosw ;~ 01C2:2816
+cs=0x1c2;eip=0x002816; 	X(	REP STOSW);	// 6232 rep stosw ;~ 01C2:2816
+cs=0x1c2;eip=0x002818; 	X(POP(es));	// 6233 pop     es ;~ 01C2:2818
+cs=0x1c2;eip=0x002819; 	R(RETN(0));	// 6235 retn ;~ 01C2:2819
+loc_12a1a:
+	// 4981 
+cs=0x1c2;eip=0x00281a; 	T(MOV(cx, 0x20));	// 6240 mov     cx, 20h ; ' ' ;~ 01C2:281A
+	// 6241 rep movsw ;~ 01C2:281D
+cs=0x1c2;eip=0x00281d; 	X(	REP MOVSW);	// 6241 rep movsw ;~ 01C2:281D
+cs=0x1c2;eip=0x00281f; 	T(ADD(di, 0x130));	// 6242 add     di, 130h ;~ 01C2:281F
+cs=0x1c2;eip=0x002823; 	T(ADD(si, 0x1FC0));	// 6243 add     si, 1FC0h ;~ 01C2:2823
+cs=0x1c2;eip=0x002827; 	T(MOV(cx, 0x20));	// 6244 mov     cx, 20h ; ' ' ;~ 01C2:2827
+	// 6245 rep movsw ;~ 01C2:282A
+cs=0x1c2;eip=0x00282a; 	X(	REP MOVSW);	// 6245 rep movsw ;~ 01C2:282A
+cs=0x1c2;eip=0x00282c; 	T(ADD(di, 0x130));	// 6246 add     di, 130h ;~ 01C2:282C
+cs=0x1c2;eip=0x002830; 	T(ADD(si, 0x0E010));	// 6247 add     si, 0E010h ;~ 01C2:2830
+cs=0x1c2;eip=0x002834; 	J(JMP(loc_129e7));	// 6248 jmp     short loc_129E7 ;~ 01C2:2834
+sub_12a36:
+	// 6256 
+cs=0x1c2;eip=0x002836; 	T(MOV(dx, word_14af6));	// 6257 mov     dx, word_14AF6 ;~ 01C2:2836
+loc_12a3a:
+	// 4982 
+cs=0x1c2;eip=0x00283a; 	T(TEST(dx, 0x8000));	// 6260 test    dx, 8000h ;~ 01C2:283A
+cs=0x1c2;eip=0x00283e; 	J(JZ(loc_12a46));	// 6261 jz      short loc_12A46 ;~ 01C2:283E
+cs=0x1c2;eip=0x002840; 	T(ADD(dx, 0x480));	// 6262 add     dx, 480h ;~ 01C2:2840
+cs=0x1c2;eip=0x002844; 	J(JMP(loc_12a3a));	// 6263 jmp     short loc_12A3A ;~ 01C2:2844
+loc_12a46:
+	// 4983 
+cs=0x1c2;eip=0x002846; 	T(CMP(dx, 0x480));	// 6268 cmp     dx, 480h ;~ 01C2:2846
+cs=0x1c2;eip=0x00284a; 	J(JC(loc_12a52));	// 6269 jb      short loc_12A52 ;~ 01C2:284A
+cs=0x1c2;eip=0x00284c; 	T(SUB(dx, 0x480));	// 6270 sub     dx, 480h ;~ 01C2:284C
+cs=0x1c2;eip=0x002850; 	J(JMP(loc_12a46));	// 6271 jmp     short loc_12A46 ;~ 01C2:2850
+loc_12a52:
+	// 4984 
+cs=0x1c2;eip=0x002852; 	T(MOV(cx, dx));	// 6275 mov     cx, dx ;~ 01C2:2852
+cs=0x1c2;eip=0x002854; 	T(AND(cx, 3));	// 6276 and     cx, 3 ;~ 01C2:2854
+cs=0x1c2;eip=0x002858; 	T(SHR(dx, 1));	// 6277 shr     dx, 1 ;~ 01C2:2858
+cs=0x1c2;eip=0x00285a; 	T(SHR(dx, 1));	// 6278 shr     dx, 1 ;~ 01C2:285A
+cs=0x1c2;eip=0x00285c; 	T(MOV(di, word_153ba));	// 6279 mov     di, word_153BA ;~ 01C2:285C
+cs=0x1c2;eip=0x002860; 	T(ADD(di, 0x0FC18));	// 6280 add     di, 0FC18h ;~ 01C2:2860
+cs=0x1c2;eip=0x002864; 	T(MOV(si, 0x4000));	// 6281 mov     si, 4000h ;~ 01C2:2864
+cs=0x1c2;eip=0x002867; 	T(ADD(si, dx));	// 6282 add     si, dx ;~ 01C2:2867
+cs=0x1c2;eip=0x002869; 	T(MOV(dh, 0x0D));	// 6283 mov     dh, 0Dh ;~ 01C2:2869
+cs=0x1c2;eip=0x00286b; 	X(PUSH(es));	// 6284 push    es ;~ 01C2:286B
+cs=0x1c2;eip=0x00286c; 	X(PUSH(ds));	// 6285 push    ds ;~ 01C2:286C
+loc_12a6d:
+	// 4985 
+cs=0x1c2;eip=0x00286d; 	T(MOV(ax, seg_offset(seg003)));	// 6288 mov     ax, seg seg003 ;~ 01C2:286D
+cs=0x1c2;eip=0x002870; 	T(MOV(es, ax));	// 6289 mov     es, ax ;~ 01C2:2870
+cs=0x1c2;eip=0x002872; 	T(MOV(ds, ax));	// 6291 mov     ds, ax ;~ 01C2:2872
+loc_12a74:
+	// 4986 
+cs=0x1c2;eip=0x002874; 	T(LODSW);	// 6295 lodsw ;~ 01C2:2874
+cs=0x1c2;eip=0x002875; 	T(XCHG(al, ah));	// 6296 xchg    al, ah ;~ 01C2:2875
+cs=0x1c2;eip=0x002877; 	T(MOV(bx, ax));	// 6297 mov     bx, ax ;~ 01C2:2877
+cs=0x1c2;eip=0x002879; 	T(MOV(dl, 0x28));	// 6298 mov     dl, 28h ; '(' ;~ 01C2:2879
+loc_12a7b:
+	// 4987 
+cs=0x1c2;eip=0x00287b; 	T(LODSW);	// 6301 lodsw ;~ 01C2:287B
+cs=0x1c2;eip=0x00287c; 	T(XCHG(al, ah));	// 6302 xchg    al, ah ;~ 01C2:287C
+cs=0x1c2;eip=0x00287e; 	T(XCHG(ax, bx));	// 6303 xchg    ax, bx ;~ 01C2:287E
+cs=0x1c2;eip=0x00287f; 	J(JCXZ(loc_12a91));	// 6304 jcxz    short loc_12A91 ;~ 01C2:287F
+cs=0x1c2;eip=0x002881; 	T(MOV(bp, cx));	// 6305 mov     bp, cx ;~ 01C2:2881
+cs=0x1c2;eip=0x002883; 	X(PUSH(bx));	// 6306 push    bx ;~ 01C2:2883
+loc_12a84:
+	// 4988 
+cs=0x1c2;eip=0x002884; 	T(SHL(bx, 1));	// 6309 shl     bx, 1 ;~ 01C2:2884
+cs=0x1c2;eip=0x002886; 	T(RCL(ax, 1));	// 6310 rcl     ax, 1 ;~ 01C2:2886
+cs=0x1c2;eip=0x002888; 	T(SHL(bx, 1));	// 6311 shl     bx, 1 ;~ 01C2:2888
+cs=0x1c2;eip=0x00288a; 	T(RCL(ax, 1));	// 6312 rcl     ax, 1 ;~ 01C2:288A
+cs=0x1c2;eip=0x00288c; 	J(LOOP(loc_12a84));	// 6313 loop    loc_12A84 ;~ 01C2:288C
+cs=0x1c2;eip=0x00288e; 	T(MOV(cx, bp));	// 6314 mov     cx, bp ;~ 01C2:288E
+cs=0x1c2;eip=0x002890; 	X(POP(bx));	// 6315 pop     bx ;~ 01C2:2890
+loc_12a91:
+	// 4989 
+cs=0x1c2;eip=0x002891; 	T(XCHG(al, ah));	// 6318 xchg    al, ah ;~ 01C2:2891
+cs=0x1c2;eip=0x002893; 	X(STOSW);	// 6319 stosw ;~ 01C2:2893
+cs=0x1c2;eip=0x002894; 	T(DEC(dl));	// 6320 dec     dl ;~ 01C2:2894
+cs=0x1c2;eip=0x002896; 	J(JNZ(loc_12a7b));	// 6321 jnz     short loc_12A7B ;~ 01C2:2896
+cs=0x1c2;eip=0x002898; 	T(ADD(di, 0x1FB0));	// 6322 add     di, 1FB0h ;~ 01C2:2898
+cs=0x1c2;eip=0x00289c; 	T(ADD(si, 0x11E));	// 6323 add     si, 11Eh ;~ 01C2:289C
+cs=0x1c2;eip=0x0028a0; 	T(LODSW);	// 6324 lodsw ;~ 01C2:28A0
+cs=0x1c2;eip=0x0028a1; 	T(XCHG(al, ah));	// 6325 xchg    al, ah ;~ 01C2:28A1
+cs=0x1c2;eip=0x0028a3; 	T(MOV(bx, ax));	// 6326 mov     bx, ax ;~ 01C2:28A3
+cs=0x1c2;eip=0x0028a5; 	T(MOV(dl, 0x28));	// 6327 mov     dl, 28h ; '(' ;~ 01C2:28A5
+loc_12aa7:
+	// 4990 
+cs=0x1c2;eip=0x0028a7; 	T(LODSW);	// 6330 lodsw ;~ 01C2:28A7
+cs=0x1c2;eip=0x0028a8; 	T(XCHG(al, ah));	// 6331 xchg    al, ah ;~ 01C2:28A8
+cs=0x1c2;eip=0x0028aa; 	T(XCHG(ax, bx));	// 6332 xchg    ax, bx ;~ 01C2:28AA
+cs=0x1c2;eip=0x0028ab; 	J(JCXZ(loc_12abb));	// 6333 jcxz    short loc_12ABB ;~ 01C2:28AB
+cs=0x1c2;eip=0x0028ad; 	X(PUSH(bx));	// 6334 push    bx ;~ 01C2:28AD
+loc_12aae:
+	// 4991 
+cs=0x1c2;eip=0x0028ae; 	T(SHL(bx, 1));	// 6337 shl     bx, 1 ;~ 01C2:28AE
+cs=0x1c2;eip=0x0028b0; 	T(RCL(ax, 1));	// 6338 rcl     ax, 1 ;~ 01C2:28B0
+cs=0x1c2;eip=0x0028b2; 	T(SHL(bx, 1));	// 6339 shl     bx, 1 ;~ 01C2:28B2
+cs=0x1c2;eip=0x0028b4; 	T(RCL(ax, 1));	// 6340 rcl     ax, 1 ;~ 01C2:28B4
+cs=0x1c2;eip=0x0028b6; 	J(LOOP(loc_12aae));	// 6341 loop    loc_12AAE ;~ 01C2:28B6
+cs=0x1c2;eip=0x0028b8; 	T(MOV(cx, bp));	// 6342 mov     cx, bp ;~ 01C2:28B8
+cs=0x1c2;eip=0x0028ba; 	X(POP(bx));	// 6343 pop     bx ;~ 01C2:28BA
+loc_12abb:
+	// 4992 
+cs=0x1c2;eip=0x0028bb; 	T(XCHG(al, ah));	// 6346 xchg    al, ah ;~ 01C2:28BB
+cs=0x1c2;eip=0x0028bd; 	X(STOSW);	// 6347 stosw ;~ 01C2:28BD
+cs=0x1c2;eip=0x0028be; 	T(DEC(dl));	// 6348 dec     dl ;~ 01C2:28BE
+cs=0x1c2;eip=0x0028c0; 	J(JNZ(loc_12aa7));	// 6349 jnz     short loc_12AA7 ;~ 01C2:28C0
+cs=0x1c2;eip=0x0028c2; 	T(ADD(di, 0x0E000));	// 6350 add     di, 0E000h ;~ 01C2:28C2
+cs=0x1c2;eip=0x0028c6; 	T(ADD(si, 0x11E));	// 6351 add     si, 11Eh ;~ 01C2:28C6
+cs=0x1c2;eip=0x0028ca; 	T(DEC(dh));	// 6352 dec     dh ;~ 01C2:28CA
+cs=0x1c2;eip=0x0028cc; 	J(JNZ(loc_12a74));	// 6353 jnz     short loc_12A74 ;~ 01C2:28CC
+cs=0x1c2;eip=0x0028ce; 	X(POP(ds));	// 6354 pop     ds ;~ 01C2:28CE
+cs=0x1c2;eip=0x0028cf; 	J(CALL(sub_128da,0));	// 6356 call    sub_128DA ;~ 01C2:28CF
+cs=0x1c2;eip=0x0028d2; 	J(CALL(sub_11259,0));	// 6357 call    sub_11259 ;~ 01C2:28D2
+cs=0x1c2;eip=0x0028d5; 	J(CALL(sub_1146f,0));	// 6358 call    sub_1146F ;~ 01C2:28D5
+cs=0x1c2;eip=0x0028d8; 	X(POP(es));	// 6359 pop     es ;~ 01C2:28D8
+cs=0x1c2;eip=0x0028d9; 	R(RETN(0));	// 6361 retn ;~ 01C2:28D9
+seg001_29f1_proc:
+	// 6512 
+loc_12bf1:
+	// 5006 
+cs=0x1c2;eip=0x0029f1; 	X(MOV(word_14b55, 0x1A));	// 6513 mov     word_14B55, 1Ah ;~ 01C2:29F1
+cs=0x1c2;eip=0x0029f7; 	X(MOV(byte_14fba, 0x1A));	// 6514 mov     byte_14FBA, 1Ah ;~ 01C2:29F7
+cs=0x1c2;eip=0x0029fc; 	X(MOV(byte_14fb9, 0x34));	// 6515 mov     byte_14FB9, 34h ; '4' ;~ 01C2:29FC
+cs=0x1c2;eip=0x002a01; 	X(MOV(word_14fbb, 0x34));	// 6516 mov     word_14FBB, 34h ; '4' ;~ 01C2:2A01
+cs=0x1c2;eip=0x002a07; 	T(MOV(si, 0x9EC));	// 6517 mov     si, 9ECh ;~ 01C2:2A07
+cs=0x1c2;eip=0x002a0a; 	X(MOV(word_14fbd, 0x0A44));	// 6518 mov     word_14FBD, 0A44h ;~ 01C2:2A0A
+cs=0x1c2;eip=0x002a10; 	X(MOV(word_14b53, 0x1E));	// 6519 mov     word_14B53, 1Eh ;~ 01C2:2A10
+cs=0x1c2;eip=0x002a16; 	J(JMP(loc_12cb9));	// 6520 jmp     loc_12CB9 ;~ 01C2:2A16
+loc_12c19:
+	// 5007 
+cs=0x1c2;eip=0x002a19; 	X(MOV(word_14b55, 0x0C));	// 6524 mov     word_14B55, 0Ch ;~ 01C2:2A19
+cs=0x1c2;eip=0x002a1f; 	X(MOV(byte_14fba, 0x0C));	// 6525 mov     byte_14FBA, 0Ch ;~ 01C2:2A1F
+cs=0x1c2;eip=0x002a24; 	X(MOV(byte_14fb9, 0x18));	// 6526 mov     byte_14FB9, 18h ;~ 01C2:2A24
+cs=0x1c2;eip=0x002a29; 	X(MOV(word_14fbb, 0x18));	// 6527 mov     word_14FBB, 18h ;~ 01C2:2A29
+cs=0x1c2;eip=0x002a2f; 	T(MOV(si, 0x0A08));	// 6528 mov     si, 0A08h ;~ 01C2:2A2F
+cs=0x1c2;eip=0x002a32; 	X(MOV(word_14fbd, 0x0A6D));	// 6529 mov     word_14FBD, 0A6Dh ;~ 01C2:2A32
+cs=0x1c2;eip=0x002a38; 	X(MOV(word_14b53, 0x1E));	// 6530 mov     word_14B53, 1Eh ;~ 01C2:2A38
+cs=0x1c2;eip=0x002a3e; 	J(JMP(loc_12cb9));	// 6531 jmp     short loc_12CB9 ;~ 01C2:2A3E
+loc_12c41:
+	// 5008 
+cs=0x1c2;eip=0x002a41; 	X(MOV(word_14b55, 0x0C));	// 6537 mov     word_14B55, 0Ch ;~ 01C2:2A41
+cs=0x1c2;eip=0x002a47; 	X(MOV(byte_14fba, 0x0C));	// 6538 mov     byte_14FBA, 0Ch ;~ 01C2:2A47
+cs=0x1c2;eip=0x002a4c; 	X(MOV(byte_14fb9, 0x18));	// 6539 mov     byte_14FB9, 18h ;~ 01C2:2A4C
+cs=0x1c2;eip=0x002a51; 	X(MOV(word_14fbb, 0x18));	// 6540 mov     word_14FBB, 18h ;~ 01C2:2A51
+cs=0x1c2;eip=0x002a57; 	T(MOV(si, 0x0A18));	// 6541 mov     si, 0A18h ;~ 01C2:2A57
+cs=0x1c2;eip=0x002a5a; 	X(MOV(word_14fbd, 0x0A82));	// 6542 mov     word_14FBD, 0A82h ;~ 01C2:2A5A
+cs=0x1c2;eip=0x002a60; 	X(MOV(word_14b53, 0x1E));	// 6543 mov     word_14B53, 1Eh ;~ 01C2:2A60
+cs=0x1c2;eip=0x002a66; 	J(JMP(loc_12cb9));	// 6544 jmp     short loc_12CB9 ;~ 01C2:2A66
+loc_12c69:
+	// 5009 
+cs=0x1c2;eip=0x002a69; 	X(MOV(word_14b55, 0x10));	// 6550 mov     word_14B55, 10h ;~ 01C2:2A69
+cs=0x1c2;eip=0x002a6f; 	X(MOV(byte_14fba, 0x10));	// 6551 mov     byte_14FBA, 10h ;~ 01C2:2A6F
+cs=0x1c2;eip=0x002a74; 	X(MOV(byte_14fb9, 0x20));	// 6552 mov     byte_14FB9, 20h ; ' ' ;~ 01C2:2A74
+cs=0x1c2;eip=0x002a79; 	X(MOV(word_14fbb, 0x20));	// 6553 mov     word_14FBB, 20h ; ' ' ;~ 01C2:2A79
+cs=0x1c2;eip=0x002a7f; 	T(MOV(si, 0x0A28));	// 6554 mov     si, 0A28h ;~ 01C2:2A7F
+cs=0x1c2;eip=0x002a82; 	X(MOV(word_14fbd, 0x0A95));	// 6555 mov     word_14FBD, 0A95h ;~ 01C2:2A82
+cs=0x1c2;eip=0x002a88; 	X(MOV(word_14b53, 0x1E));	// 6556 mov     word_14B53, 1Eh ;~ 01C2:2A88
+cs=0x1c2;eip=0x002a8e; 	J(JMP(loc_12cb9));	// 6557 jmp     short loc_12CB9 ;~ 01C2:2A8E
+loc_12c91:
+	// 5010 
+cs=0x1c2;eip=0x002a91; 	X(MOV(word_14b55, 0x10));	// 6563 mov     word_14B55, 10h ;~ 01C2:2A91
+cs=0x1c2;eip=0x002a97; 	X(MOV(byte_14fba, 0x10));	// 6564 mov     byte_14FBA, 10h ;~ 01C2:2A97
+cs=0x1c2;eip=0x002a9c; 	X(MOV(byte_14fb9, 0x20));	// 6565 mov     byte_14FB9, 20h ; ' ' ;~ 01C2:2A9C
+cs=0x1c2;eip=0x002aa1; 	X(MOV(word_14fbb, 0x20));	// 6566 mov     word_14FBB, 20h ; ' ' ;~ 01C2:2AA1
+cs=0x1c2;eip=0x002aa7; 	T(MOV(si, 0x0A38));	// 6567 mov     si, 0A38h ;~ 01C2:2AA7
+cs=0x1c2;eip=0x002aaa; 	X(MOV(word_14fbd, 0x0AB2));	// 6568 mov     word_14FBD, 0AB2h ;~ 01C2:2AAA
+cs=0x1c2;eip=0x002ab0; 	X(MOV(word_14b53, 0x1E));	// 6569 mov     word_14B53, 1Eh ;~ 01C2:2AB0
+cs=0x1c2;eip=0x002ab6; 	J(JMP(loc_12cb9));	// 6570 jmp     short loc_12CB9 ;~ 01C2:2AB6
+loc_12cb9:
+	// 5011 
+cs=0x1c2;eip=0x002ab9; 	X(MOV(byte_153a3, 0));	// 6577 mov     byte_153A3, 0 ;~ 01C2:2AB9
+cs=0x1c2;eip=0x002abe; 	X(MOV(byte_153a2, 0));	// 6578 mov     byte_153A2, 0 ;~ 01C2:2ABE
+loc_12cc3:
+	// 5012 
+cs=0x1c2;eip=0x002ac3; 	T(TEST(dx, 0x8000));	// 6581 test    dx, 8000h ;~ 01C2:2AC3
+cs=0x1c2;eip=0x002ac7; 	J(JZ(loc_12ccf));	// 6582 jz      short loc_12CCF ;~ 01C2:2AC7
+cs=0x1c2;eip=0x002ac9; 	T(ADD(dx, 0x480));	// 6583 add     dx, 480h ;~ 01C2:2AC9
+cs=0x1c2;eip=0x002acd; 	J(JMP(loc_12cc3));	// 6584 jmp     short loc_12CC3 ;~ 01C2:2ACD
+loc_12ccf:
+	// 5013 
+cs=0x1c2;eip=0x002acf; 	T(CMP(dx, 0x120));	// 6589 cmp     dx, 120h ;~ 01C2:2ACF
+cs=0x1c2;eip=0x002ad3; 	J(JC(loc_12cdb));	// 6590 jb      short loc_12CDB ;~ 01C2:2AD3
+cs=0x1c2;eip=0x002ad5; 	T(SUB(dx, 0x120));	// 6591 sub     dx, 120h ;~ 01C2:2AD5
+cs=0x1c2;eip=0x002ad9; 	J(JMP(loc_12ccf));	// 6592 jmp     short loc_12CCF ;~ 01C2:2AD9
+loc_12cdb:
+	// 5014 
+cs=0x1c2;eip=0x002adb; 	T(CMP(bx, 0x1F4));	// 6596 cmp     bx, 1F4h ;~ 01C2:2ADB
+cs=0x1c2;eip=0x002adf; 	J(JNC(locret_12ce8));	// 6597 jnb     short locret_12CE8 ;~ 01C2:2ADF
+cs=0x1c2;eip=0x002ae1; 	T(CMP(bx, 0x15));	// 6598 cmp     bx, 15h ;~ 01C2:2AE1
+cs=0x1c2;eip=0x002ae4; 	J(JC(locret_12ce8));	// 6599 jb      short locret_12CE8 ;~ 01C2:2AE4
+cs=0x1c2;eip=0x002ae6; 	J(JMP(loc_12ce9));	// 6600 jmp     short loc_12CE9 ;~ 01C2:2AE6
+locret_12ce8:
+	// 5015 
+cs=0x1c2;eip=0x002ae8; 	R(RETN(0));	// 6605 retn ;~ 01C2:2AE8
+loc_12ce9:
+	// 5016 
+cs=0x1c2;eip=0x002ae9; 	T(LODSW);	// 6610 lodsw ;~ 01C2:2AE9
+cs=0x1c2;eip=0x002aea; 	T(ADD(si, 2));	// 6611 add     si, 2 ;~ 01C2:2AEA
+cs=0x1c2;eip=0x002aed; 	T(CMP(ax, bx));	// 6612 cmp     ax, bx ;~ 01C2:2AED
+cs=0x1c2;eip=0x002aef; 	J(JC(loc_12ce9));	// 6613 jb      short loc_12CE9 ;~ 01C2:2AEF
+cs=0x1c2;eip=0x002af1; 	X(MOV(word_14b47, ax));	// 6614 mov     word_14B47, ax ;~ 01C2:2AF1
+cs=0x1c2;eip=0x002af4; 	X(MOV(word_14b51, ax));	// 6615 mov     word_14B51, ax ;~ 01C2:2AF4
+cs=0x1c2;eip=0x002af7; 	T(ADD(si, 0x0FFFE));	// 6616 add     si, 0FFFEh ;~ 01C2:2AF7
+cs=0x1c2;eip=0x002afa; 	T(LODSW);	// 6617 lodsw ;~ 01C2:2AFA
+cs=0x1c2;eip=0x002afb; 	X(MOV(word_14b5b, ax));	// 6618 mov     word_14B5B, ax ;~ 01C2:2AFB
+cs=0x1c2;eip=0x002afe; 	T(ADD(si, 0x0FFF8));	// 6619 add     si, 0FFF8h ;~ 01C2:2AFE
+cs=0x1c2;eip=0x002b01; 	T(LODSW);	// 6620 lodsw ;~ 01C2:2B01
+cs=0x1c2;eip=0x002b02; 	X(MOV(word_14b45, ax));	// 6621 mov     word_14B45, ax ;~ 01C2:2B02
+cs=0x1c2;eip=0x002b05; 	T(LODSW);	// 6622 lodsw ;~ 01C2:2B05
+cs=0x1c2;eip=0x002b06; 	X(MOV(word_14b57, ax));	// 6623 mov     word_14B57, ax ;~ 01C2:2B06
+cs=0x1c2;eip=0x002b09; 	X(MOV(word_14b49, bx));	// 6624 mov     word_14B49, bx ;~ 01C2:2B09
+cs=0x1c2;eip=0x002b0d; 	T(MOV(ax, dx));	// 6625 mov     ax, dx ;~ 01C2:2B0D
+cs=0x1c2;eip=0x002b0f; 	X(DIV1(byte_14fbf));	// 6626 div     byte_14FBF ;~ 01C2:2B0F
+cs=0x1c2;eip=0x002b13; 	X(MOV(word_14b4b, 0));	// 6627 mov     word_14B4B, 0 ;~ 01C2:2B13
+cs=0x1c2;eip=0x002b19; 	X(MOV(word_14b4d, 0x30));	// 6628 mov     word_14B4D, 30h ; '0' ;~ 01C2:2B19
+cs=0x1c2;eip=0x002b1f; 	T(OR(ah, ah));	// 6629 or      ah, ah ;~ 01C2:2B1F
+cs=0x1c2;eip=0x002b21; 	J(JNZ(loc_12d2b));	// 6630 jnz     short loc_12D2B ;~ 01C2:2B21
+cs=0x1c2;eip=0x002b23; 	T(OR(al, al));	// 6631 or      al, al ;~ 01C2:2B23
+cs=0x1c2;eip=0x002b25; 	J(JZ(loc_12d2b));	// 6632 jz      short loc_12D2B ;~ 01C2:2B25
+cs=0x1c2;eip=0x002b27; 	T(DEC(al));	// 6633 dec     al ;~ 01C2:2B27
+cs=0x1c2;eip=0x002b29; 	T(MOV(ah, 0x30));	// 6634 mov     ah, 30h ; '0' ;~ 01C2:2B29
+loc_12d2b:
+	// 5017 
+cs=0x1c2;eip=0x002b2b; 	X(PUSH(ax));	// 6638 push    ax ;~ 01C2:2B2B
+cs=0x1c2;eip=0x002b2c; 	T(MOV(al, ah));	// 6639 mov     al, ah ;~ 01C2:2B2C
+cs=0x1c2;eip=0x002b2e; 	T(XOR(ah, ah));	// 6640 xor     ah, ah ;~ 01C2:2B2E
+cs=0x1c2;eip=0x002b30; 	X(MOV(word_14b4f, ax));	// 6641 mov     word_14B4F, ax ;~ 01C2:2B30
+cs=0x1c2;eip=0x002b33; 	X(POP(ax));	// 6642 pop     ax ;~ 01C2:2B33
+cs=0x1c2;eip=0x002b34; 	T(XOR(ah, ah));	// 6643 xor     ah, ah ;~ 01C2:2B34
+cs=0x1c2;eip=0x002b36; 	X(MOV(word_14b5f, ax));	// 6644 mov     word_14B5F, ax ;~ 01C2:2B36
+cs=0x1c2;eip=0x002b39; 	T(MOV(bx, word_14b45));	// 6645 mov     bx, word_14B45 ;~ 01C2:2B39
+cs=0x1c2;eip=0x002b3d; 	X(MOV(word_14b51, bx));	// 6646 mov     word_14B51, bx ;~ 01C2:2B3D
+cs=0x1c2;eip=0x002b41; 	T(CMP(bx, word_14b53));	// 6647 cmp     bx, word_14B53 ;~ 01C2:2B41
+cs=0x1c2;eip=0x002b45; 	J(JC(loc_12d4d));	// 6648 jb      short loc_12D4D ;~ 01C2:2B45
+cs=0x1c2;eip=0x002b47; 	X(MUL1_1(byte_14fba));	// 6649 mul     byte_14FBA ;~ 01C2:2B47
+cs=0x1c2;eip=0x002b4b; 	J(JMP(loc_12d51));	// 6650 jmp     short loc_12D51 ;~ 01C2:2B4B
+loc_12d4d:
+	// 5018 
+cs=0x1c2;eip=0x002b4d; 	X(MUL1_1(byte_14fb9));	// 6654 mul     byte_14FB9 ;~ 01C2:2B4D
+loc_12d51:
+	// 5019 
+cs=0x1c2;eip=0x002b51; 	T(MOV(di, 0x0BC07));	// 6657 mov     di, 0BC07h ;~ 01C2:2B51
+cs=0x1c2;eip=0x002b54; 	T(MOV(si, word_14b57));	// 6658 mov     si, word_14B57 ;~ 01C2:2B54
+cs=0x1c2;eip=0x002b58; 	T(ADD(si, ax));	// 6659 add     si, ax ;~ 01C2:2B58
+cs=0x1c2;eip=0x002b5a; 	J(CALL(sub_1232a,0));	// 6660 call    sub_1232A ;~ 01C2:2B5A
+cs=0x1c2;eip=0x002b5d; 	T(MOV(si, di));	// 6661 mov     si, di ;~ 01C2:2B5D
+cs=0x1c2;eip=0x002b5f; 	X(MOV(word_14b57, si));	// 6662 mov     word_14B57, si ;~ 01C2:2B5F
+cs=0x1c2;eip=0x002b63; 	T(ADD(si, word_14fbb));	// 6663 add     si, word_14FBB ;~ 01C2:2B63
+cs=0x1c2;eip=0x002b67; 	X(MOV(word_14b59, si));	// 6664 mov     word_14B59, si ;~ 01C2:2B67
+cs=0x1c2;eip=0x002b6b; 	T(MOV(ax, word_14b5f));	// 6665 mov     ax, word_14B5F ;~ 01C2:2B6B
+cs=0x1c2;eip=0x002b6e; 	T(MOV(bx, word_14b47));	// 6666 mov     bx, word_14B47 ;~ 01C2:2B6E
+cs=0x1c2;eip=0x002b72; 	X(MOV(word_14b51, bx));	// 6667 mov     word_14B51, bx ;~ 01C2:2B72
+cs=0x1c2;eip=0x002b76; 	T(CMP(bx, word_14b53));	// 6668 cmp     bx, word_14B53 ;~ 01C2:2B76
+cs=0x1c2;eip=0x002b7a; 	J(JC(loc_12d82));	// 6669 jb      short loc_12D82 ;~ 01C2:2B7A
+cs=0x1c2;eip=0x002b7c; 	X(MUL1_1(byte_14fba));	// 6670 mul     byte_14FBA ;~ 01C2:2B7C
+cs=0x1c2;eip=0x002b80; 	J(JMP(loc_12d86));	// 6671 jmp     short loc_12D86 ;~ 01C2:2B80
+loc_12d82:
+	// 5020 
+cs=0x1c2;eip=0x002b82; 	X(MUL1_1(byte_14fb9));	// 6675 mul     byte_14FB9 ;~ 01C2:2B82
+loc_12d86:
+	// 5021 
+cs=0x1c2;eip=0x002b86; 	T(MOV(si, word_14b5b));	// 6678 mov     si, word_14B5B ;~ 01C2:2B86
+cs=0x1c2;eip=0x002b8a; 	T(MOV(di, 0x0BCCF));	// 6679 mov     di, 0BCCFh ;~ 01C2:2B8A
+cs=0x1c2;eip=0x002b8d; 	T(ADD(si, ax));	// 6680 add     si, ax ;~ 01C2:2B8D
+cs=0x1c2;eip=0x002b8f; 	J(CALL(sub_1232a,0));	// 6681 call    sub_1232A ;~ 01C2:2B8F
+cs=0x1c2;eip=0x002b92; 	T(MOV(si, di));	// 6682 mov     si, di ;~ 01C2:2B92
+cs=0x1c2;eip=0x002b94; 	X(MOV(word_14b5b, si));	// 6683 mov     word_14B5B, si ;~ 01C2:2B94
+cs=0x1c2;eip=0x002b98; 	T(ADD(si, word_14fbb));	// 6684 add     si, word_14FBB ;~ 01C2:2B98
+cs=0x1c2;eip=0x002b9c; 	X(MOV(word_14b5d, si));	// 6685 mov     word_14B5D, si ;~ 01C2:2B9C
+cs=0x1c2;eip=0x002ba0; 	J(CALL(sub_1226d,0));	// 6686 call    sub_1226D ;~ 01C2:2BA0
+cs=0x1c2;eip=0x002ba3; 	T(MOV(di, word_14fbd));	// 6687 mov     di, word_14FBD ;~ 01C2:2BA3
+cs=0x1c2;eip=0x002ba7; 	X(MOV(word_14b3d, di));	// 6688 mov     word_14B3D, di ;~ 01C2:2BA7
+cs=0x1c2;eip=0x002bab; 	J(CALL(sub_121df,0));	// 6689 call    sub_121DF ;~ 01C2:2BAB
+cs=0x1c2;eip=0x002bae; 	R(RETN(0));	// 6690 retn ;~ 01C2:2BAE
+loc_12daf:
+	// 5022 
+cs=0x1c2;eip=0x002baf; 	T(CMP(bx, 0x1F4));	// 6695 cmp     bx, 1F4h ;~ 01C2:2BAF
+cs=0x1c2;eip=0x002bb3; 	J(JC(loc_12db6));	// 6696 jb      short loc_12DB6 ;~ 01C2:2BB3
+locret_12db5:
+	// 5023 
+cs=0x1c2;eip=0x002bb5; 	R(RETN(0));	// 6700 retn ;~ 01C2:2BB5
+loc_12db6:
+	// 5024 
+cs=0x1c2;eip=0x002bb6; 	T(MOV(di, word_153ba));	// 6704 mov     di, word_153BA ;~ 01C2:2BB6
+cs=0x1c2;eip=0x002bba; 	T(ADD(di, 0x1FD8));	// 6705 add     di, 1FD8h ;~ 01C2:2BBA
+cs=0x1c2;eip=0x002bbe; 	T(MOV(ax, word_14b3f));	// 6706 mov     ax, word_14B3F ;~ 01C2:2BBE
+cs=0x1c2;eip=0x002bc1; 	T(CMP(ax, 0x0FF70));	// 6707 cmp     ax, 0FF70h ;~ 01C2:2BC1
+cs=0x1c2;eip=0x002bc4; 	J(JS(locret_12db5));	// 6708 js      short locret_12DB5 ;~ 01C2:2BC4
+cs=0x1c2;eip=0x002bc6; 	T(CMP(ax, 0x91));	// 6709 cmp     ax, 91h ; '‘' ;~ 01C2:2BC6
+cs=0x1c2;eip=0x002bc9; 	J(JNS(locret_12db5));	// 6710 jns     short locret_12DB5 ;~ 01C2:2BC9
+cs=0x1c2;eip=0x002bcb; 	T(ADD(ax, 0x0A1));	// 6711 add     ax, 0A1h ; '¡' ;~ 01C2:2BCB
+cs=0x1c2;eip=0x002bce; 	T(SAR(ax, 1));	// 6712 sar     ax, 1 ;~ 01C2:2BCE
+cs=0x1c2;eip=0x002bd0; 	T(SAR(ax, 1));	// 6713 sar     ax, 1 ;~ 01C2:2BD0
+cs=0x1c2;eip=0x002bd2; 	T(MOV(si, 0x0BC8));	// 6714 mov     si, 0BC8h ;~ 01C2:2BD2
+cs=0x1c2;eip=0x002bd5; 	J(JMP(loc_12dda));	// 6715 jmp     short loc_12DDA ;~ 01C2:2BD5
+ret_1c2_2bd7:
+	// 5025 
+cs=0x1c2;eip=0x002bd7; 	T(MOV(si, 0x0BE4));	// 6717 mov     si, 0BE4h ;~ 01C2:2BD7
+loc_12dda:
+	// 5026 
+cs=0x1c2;eip=0x002bda; 	T(ADD(di, ax));	// 6720 add     di, ax ;~ 01C2:2BDA
+loc_12ddc:
+	// 5027 
+cs=0x1c2;eip=0x002bdc; 	T(LODSW);	// 6723 lodsw ;~ 01C2:2BDC
+cs=0x1c2;eip=0x002bdd; 	T(CMP(ax, bx));	// 6724 cmp     ax, bx ;~ 01C2:2BDD
+cs=0x1c2;eip=0x002bdf; 	J(JC(loc_12de6));	// 6725 jb      short loc_12DE6 ;~ 01C2:2BDF
+cs=0x1c2;eip=0x002be1; 	T(ADD(si, 2));	// 6726 add     si, 2 ;~ 01C2:2BE1
+cs=0x1c2;eip=0x002be4; 	J(JMP(loc_12ddc));	// 6727 jmp     short loc_12DDC ;~ 01C2:2BE4
+loc_12de6:
+	// 5028 
+cs=0x1c2;eip=0x002be6; 	T(MOV(si, *(dw*)(raddr(ds,si))));	// 6731 mov     si, [si] ;~ 01C2:2BE6
+cs=0x1c2;eip=0x002be8; 	T(LODSB);	// 6732 lodsb ;~ 01C2:2BE8
+cs=0x1c2;eip=0x002be9; 	T(MOV(cl, al));	// 6733 mov     cl, al ;~ 01C2:2BE9
+cs=0x1c2;eip=0x002beb; 	T(LODSB);	// 6734 lodsb ;~ 01C2:2BEB
+cs=0x1c2;eip=0x002bec; 	T(MOV(bl, al));	// 6735 mov     bl, al ;~ 01C2:2BEC
+cs=0x1c2;eip=0x002bee; 	T(MOV(al, cl));	// 6736 mov     al, cl ;~ 01C2:2BEE
+cs=0x1c2;eip=0x002bf0; 	T(SHR(al, 1));	// 6737 shr     al, 1 ;~ 01C2:2BF0
+cs=0x1c2;eip=0x002bf2; 	T(XOR(ah, ah));	// 6738 xor     ah, ah ;~ 01C2:2BF2
+cs=0x1c2;eip=0x002bf4; 	T(SUB(di, ax));	// 6739 sub     di, ax ;~ 01C2:2BF4
+cs=0x1c2;eip=0x002bf6; 	T(XOR(ch, ch));	// 6740 xor     ch, ch ;~ 01C2:2BF6
+cs=0x1c2;eip=0x002bf8; 	T(MOV(dx, cx));	// 6741 mov     dx, cx ;~ 01C2:2BF8
+cs=0x1c2;eip=0x002bfa; 	X(PUSH(es));	// 6742 push    es ;~ 01C2:2BFA
+loc_12dfb:
+	// 5029 
+cs=0x1c2;eip=0x002bfb; 	T(MOV(ax, seg_offset(seg003)));	// 6745 mov     ax, seg seg003 ;~ 01C2:2BFB
+cs=0x1c2;eip=0x002bfe; 	T(MOV(es, ax));	// 6746 mov     es, ax ;~ 01C2:2BFE
+loc_12e00:
+	// 5030 
+cs=0x1c2;eip=0x002c00; 	T(LODSB);	// 6751 lodsb ;~ 01C2:2C00
+cs=0x1c2;eip=0x002c01; 	X(OR(*(raddr(es,di)), al));	// 6752 or      es:[di], al ;~ 01C2:2C01
+cs=0x1c2;eip=0x002c04; 	T(INC(di));	// 6753 inc     di ;~ 01C2:2C04
+cs=0x1c2;eip=0x002c05; 	J(LOOP(loc_12e00));	// 6754 loop    loc_12E00 ;~ 01C2:2C05
+cs=0x1c2;eip=0x002c07; 	T(ADD(di, 0x0E050));	// 6755 add     di, 0E050h ;~ 01C2:2C07
+cs=0x1c2;eip=0x002c0b; 	T(SUB(di, dx));	// 6756 sub     di, dx ;~ 01C2:2C0B
+cs=0x1c2;eip=0x002c0d; 	T(MOV(cx, dx));	// 6757 mov     cx, dx ;~ 01C2:2C0D
+cs=0x1c2;eip=0x002c0f; 	T(DEC(bl));	// 6758 dec     bl ;~ 01C2:2C0F
+cs=0x1c2;eip=0x002c11; 	J(JZ(loc_12e26));	// 6759 jz      short loc_12E26 ;~ 01C2:2C11
+loc_12e13:
+	// 5031 
+cs=0x1c2;eip=0x002c13; 	T(LODSB);	// 6762 lodsb ;~ 01C2:2C13
+cs=0x1c2;eip=0x002c14; 	X(OR(*(raddr(es,di)), al));	// 6763 or      es:[di], al ;~ 01C2:2C14
+cs=0x1c2;eip=0x002c17; 	T(INC(di));	// 6764 inc     di ;~ 01C2:2C17
+cs=0x1c2;eip=0x002c18; 	J(LOOP(loc_12e13));	// 6765 loop    loc_12E13 ;~ 01C2:2C18
+cs=0x1c2;eip=0x002c1a; 	T(ADD(di, 0x2000));	// 6766 add     di, 2000h ;~ 01C2:2C1A
+cs=0x1c2;eip=0x002c1e; 	T(SUB(di, dx));	// 6767 sub     di, dx ;~ 01C2:2C1E
+cs=0x1c2;eip=0x002c20; 	T(MOV(cx, dx));	// 6768 mov     cx, dx ;~ 01C2:2C20
+cs=0x1c2;eip=0x002c22; 	T(DEC(bl));	// 6769 dec     bl ;~ 01C2:2C22
+cs=0x1c2;eip=0x002c24; 	J(JNZ(loc_12e00));	// 6770 jnz     short loc_12E00 ;~ 01C2:2C24
+loc_12e26:
+	// 5032 
+cs=0x1c2;eip=0x002c26; 	X(POP(es));	// 6773 pop     es ;~ 01C2:2C26
+cs=0x1c2;eip=0x002c27; 	R(RETN(0));	// 6775 retn ;~ 01C2:2C27
+seg001_2c6c_proc:
+	// 6822 
+loc_12e6c:
+	// 5037 
+cs=0x1c2;eip=0x002c6c; 	T(MOV(si, 0x0CB4));	// 6823 mov     si, 0CB4h ;~ 01C2:2C6C
+cs=0x1c2;eip=0x002c6f; 	X(MOV(byte_15243, 0x0A));	// 6824 mov     byte_15243, 0Ah ;~ 01C2:2C6F
+cs=0x1c2;eip=0x002c74; 	J(JMP(sub_12e92));	// 6825 jmp     short sub_12E92 ;~ 01C2:2C74
+loc_12e76:
+	// 5038 
+cs=0x1c2;eip=0x002c76; 	T(MOV(si, 0x0CB4));	// 6829 mov     si, 0CB4h ;~ 01C2:2C76
+cs=0x1c2;eip=0x002c79; 	J(CALL(sub_12e92,0));	// 6830 call    sub_12E92 ;~ 01C2:2C79
+cs=0x1c2;eip=0x002c7c; 	T(MOV(si, 0x0CD7));	// 6831 mov     si, 0CD7h ;~ 01C2:2C7C
+cs=0x1c2;eip=0x002c7f; 	J(JMP(sub_12e92));	// 6832 jmp     short sub_12E92 ;~ 01C2:2C7F
+loc_12e81:
+	// 5039 
+cs=0x1c2;eip=0x002c81; 	T(MOV(si, 0x0CB4));	// 6836 mov     si, 0CB4h ;~ 01C2:2C81
+cs=0x1c2;eip=0x002c84; 	J(CALL(sub_12e92,0));	// 6837 call    sub_12E92 ;~ 01C2:2C84
+cs=0x1c2;eip=0x002c87; 	T(MOV(si, 0x0CD7));	// 6838 mov     si, 0CD7h ;~ 01C2:2C87
+cs=0x1c2;eip=0x002c8a; 	J(CALL(sub_12e92,0));	// 6839 call    sub_12E92 ;~ 01C2:2C8A
+cs=0x1c2;eip=0x002c8d; 	T(MOV(si, 0x0CF0));	// 6840 mov     si, 0CF0h ;~ 01C2:2C8D
+cs=0x1c2;eip=0x002c90; 	J({;});	// 6841 jmp     short $+2 ;~ 01C2:2C90
+sub_12e92:
+	// 6846 
+cs=0x1c2;eip=0x002c92; 	X(PUSH(es));	// 6848 push    es ;~ 01C2:2C92
+loc_12e93:
+	// 5040 
+cs=0x1c2;eip=0x002c93; 	T(MOV(ax, seg_offset(seg003)));	// 6851 mov     ax, seg seg003 ;~ 01C2:2C93
+cs=0x1c2;eip=0x002c96; 	T(MOV(es, ax));	// 6852 mov     es, ax ;~ 01C2:2C96
+cs=0x1c2;eip=0x002c98; 	X(MOV(byte_153a3, 0));	// 6854 mov     byte_153A3, 0 ;~ 01C2:2C98
+cs=0x1c2;eip=0x002c9d; 	X(MOV(word_153a8, 0x0D6C));	// 6855 mov     word_153A8, 0D6Ch ;~ 01C2:2C9D
+cs=0x1c2;eip=0x002ca3; 	X(MOV(word_153aa, 0x0D70));	// 6856 mov     word_153AA, 0D70h ;~ 01C2:2CA3
+cs=0x1c2;eip=0x002ca9; 	X(MOV(word_15240, si));	// 6857 mov     word_15240, si ;~ 01C2:2CA9
+loc_12ead:
+	// 5041 
+cs=0x1c2;eip=0x002cad; 	T(MOV(si, word_15240));	// 6860 mov     si, word_15240 ;~ 01C2:2CAD
+cs=0x1c2;eip=0x002cb1; 	T(LODSB);	// 6861 lodsb ;~ 01C2:2CB1
+cs=0x1c2;eip=0x002cb2; 	T(CMP(al, 0x0FF));	// 6862 cmp     al, 0FFh ;~ 01C2:2CB2
+cs=0x1c2;eip=0x002cb4; 	J(JZ(loc_12ef4));	// 6863 jz      short loc_12EF4 ;~ 01C2:2CB4
+cs=0x1c2;eip=0x002cb6; 	T(XOR(ah, ah));	// 6864 xor     ah, ah ;~ 01C2:2CB6
+cs=0x1c2;eip=0x002cb8; 	T(MOV(di, 0x0C04));	// 6865 mov     di, 0C04h ;~ 01C2:2CB8
+cs=0x1c2;eip=0x002cbb; 	T(DEC(al));	// 6866 dec     al ;~ 01C2:2CBB
+cs=0x1c2;eip=0x002cbd; 	T(SHL(ax, 1));	// 6867 shl     ax, 1 ;~ 01C2:2CBD
+cs=0x1c2;eip=0x002cbf; 	T(SHL(ax, 1));	// 6868 shl     ax, 1 ;~ 01C2:2CBF
+cs=0x1c2;eip=0x002cc1; 	T(ADD(di, ax));	// 6869 add     di, ax ;~ 01C2:2CC1
+cs=0x1c2;eip=0x002cc3; 	T(MOV(ax, *(dw*)(raddr(ds,di))));	// 6870 mov     ax, [di] ;~ 01C2:2CC3
+cs=0x1c2;eip=0x002cc5; 	X(MOV(word_153ac, ax));	// 6871 mov     word_153AC, ax ;~ 01C2:2CC5
+cs=0x1c2;eip=0x002cc8; 	T(MOV(ax, *(dw*)(raddr(ds,di+2))));	// 6872 mov     ax, [di+2] ;~ 01C2:2CC8
+cs=0x1c2;eip=0x002ccb; 	T(NEG(ax));	// 6873 neg     ax ;~ 01C2:2CCB
+cs=0x1c2;eip=0x002ccd; 	X(MOV(word_153ae, ax));	// 6874 mov     word_153AE, ax ;~ 01C2:2CCD
+cs=0x1c2;eip=0x002cd0; 	T(LODSB);	// 6875 lodsb ;~ 01C2:2CD0
+cs=0x1c2;eip=0x002cd1; 	T(XOR(ah, ah));	// 6876 xor     ah, ah ;~ 01C2:2CD1
+cs=0x1c2;eip=0x002cd3; 	T(MOV(di, 0x0C04));	// 6877 mov     di, 0C04h ;~ 01C2:2CD3
+cs=0x1c2;eip=0x002cd6; 	T(DEC(al));	// 6878 dec     al ;~ 01C2:2CD6
+cs=0x1c2;eip=0x002cd8; 	T(SHL(ax, 1));	// 6879 shl     ax, 1 ;~ 01C2:2CD8
+cs=0x1c2;eip=0x002cda; 	T(SHL(ax, 1));	// 6880 shl     ax, 1 ;~ 01C2:2CDA
+cs=0x1c2;eip=0x002cdc; 	T(ADD(di, ax));	// 6881 add     di, ax ;~ 01C2:2CDC
+cs=0x1c2;eip=0x002cde; 	T(MOV(ax, *(dw*)(raddr(ds,di))));	// 6882 mov     ax, [di] ;~ 01C2:2CDE
+cs=0x1c2;eip=0x002ce0; 	X(MOV(word_153b0, ax));	// 6883 mov     word_153B0, ax ;~ 01C2:2CE0
+cs=0x1c2;eip=0x002ce3; 	T(MOV(ax, *(dw*)(raddr(ds,di+2))));	// 6884 mov     ax, [di+2] ;~ 01C2:2CE3
+cs=0x1c2;eip=0x002ce6; 	T(NEG(ax));	// 6885 neg     ax ;~ 01C2:2CE6
+cs=0x1c2;eip=0x002ce8; 	X(MOV(word_153b2, ax));	// 6886 mov     word_153B2, ax ;~ 01C2:2CE8
+cs=0x1c2;eip=0x002ceb; 	X(MOV(word_15240, si));	// 6887 mov     word_15240, si ;~ 01C2:2CEB
+cs=0x1c2;eip=0x002cef; 	J(CALL(sub_13040,0));	// 6888 call    sub_13040 ;~ 01C2:2CEF
+cs=0x1c2;eip=0x002cf2; 	J(JMP(loc_12ead));	// 6889 jmp     short loc_12EAD ;~ 01C2:2CF2
+loc_12ef4:
+	// 5042 
+cs=0x1c2;eip=0x002cf4; 	X(POP(es));	// 6893 pop     es ;~ 01C2:2CF4
+cs=0x1c2;eip=0x002cf5; 	R(RETN(0));	// 6895 retn ;~ 01C2:2CF5
+sub_12ef6:
+	// 6902 
+cs=0x1c2;eip=0x002cf6; 	T(MOV(al, byte_15346));	// 6903 mov     al, byte_15346 ;~ 01C2:2CF6
+ret_1c2_2cf9:
+	// 5043 
+cs=0x1c2;eip=0x002cf9; 	T(OR(al, al));	// 6904 or      al, al ;~ 01C2:2CF9
+cs=0x1c2;eip=0x002cfb; 	J(JNZ(loc_12efe));	// 6905 jnz     short loc_12EFE ;~ 01C2:2CFB
+cs=0x1c2;eip=0x002cfd; 	R(RETN(0));	// 6906 retn ;~ 01C2:2CFD
+loc_12efe:
+	// 5044 
+cs=0x1c2;eip=0x002cfe; 	T(INC(al));	// 6910 inc     al ;~ 01C2:2CFE
+cs=0x1c2;eip=0x002d00; 	T(CMP(al, 6));	// 6911 cmp     al, 6 ;~ 01C2:2D00
+cs=0x1c2;eip=0x002d02; 	J(JNC(loc_12f2c));	// 6912 jnb     short loc_12F2C ;~ 01C2:2D02
+cs=0x1c2;eip=0x002d04; 	X(MOV(byte_15346, al));	// 6913 mov     byte_15346, al ;~ 01C2:2D04
+cs=0x1c2;eip=0x002d07; 	T(CMP(al, 2));	// 6914 cmp     al, 2 ;~ 01C2:2D07
+cs=0x1c2;eip=0x002d09; 	J(JNZ(loc_12f83));	// 6915 jnz     short loc_12F83 ;~ 01C2:2D09
+cs=0x1c2;eip=0x002d0b; 	T(MOV(ax, word_15347));	// 6916 mov     ax, word_15347 ;~ 01C2:2D0B
+loc_12f0e:
+	// 5045 
+cs=0x1c2;eip=0x002d0e; 	T(TEST(ax, 0x8000));	// 6919 test    ax, 8000h ;~ 01C2:2D0E
+cs=0x1c2;eip=0x002d11; 	J(JZ(loc_12f18));	// 6920 jz      short loc_12F18 ;~ 01C2:2D11
+cs=0x1c2;eip=0x002d13; 	T(ADD(ax, 0x480));	// 6921 add     ax, 480h ;~ 01C2:2D13
+cs=0x1c2;eip=0x002d16; 	J(JMP(loc_12f0e));	// 6922 jmp     short loc_12F0E ;~ 01C2:2D16
+loc_12f18:
+	// 5046 
+cs=0x1c2;eip=0x002d18; 	T(CMP(ax, 0x480));	// 6927 cmp     ax, 480h ;~ 01C2:2D18
+cs=0x1c2;eip=0x002d1b; 	J(JC(loc_12f22));	// 6928 jb      short loc_12F22 ;~ 01C2:2D1B
+cs=0x1c2;eip=0x002d1d; 	T(SUB(ax, 0x480));	// 6929 sub     ax, 480h ;~ 01C2:2D1D
+cs=0x1c2;eip=0x002d20; 	J(JMP(loc_12f18));	// 6930 jmp     short loc_12F18 ;~ 01C2:2D20
+loc_12f22:
+	// 5047 
+cs=0x1c2;eip=0x002d22; 	T(CMP(ax, 0x9F));	// 6934 cmp     ax, 9Fh ; 'Ÿ' ;~ 01C2:2D22
+cs=0x1c2;eip=0x002d25; 	J(JC(loc_12f32));	// 6935 jb      short loc_12F32 ;~ 01C2:2D25
+cs=0x1c2;eip=0x002d27; 	T(CMP(ax, 0x3E1));	// 6936 cmp     ax, 3E1h ;~ 01C2:2D27
+cs=0x1c2;eip=0x002d2a; 	J(JNC(loc_12f32));	// 6937 jnb     short loc_12F32 ;~ 01C2:2D2A
+loc_12f2c:
+	// 5048 
+cs=0x1c2;eip=0x002d2c; 	X(MOV(byte_15346, 0));	// 6940 mov     byte_15346, 0 ;~ 01C2:2D2C
+cs=0x1c2;eip=0x002d31; 	R(RETN(0));	// 6941 retn ;~ 01C2:2D31
+loc_12f32:
+	// 5049 
+cs=0x1c2;eip=0x002d32; 	T(ADD(ax, 0x0A0));	// 6946 add     ax, 0A0h ; ' ' ;~ 01C2:2D32
+cs=0x1c2;eip=0x002d35; 	T(CMP(ax, 0x140));	// 6947 cmp     ax, 140h ;~ 01C2:2D35
+cs=0x1c2;eip=0x002d38; 	J(JC(loc_12f3d));	// 6948 jb      short loc_12F3D ;~ 01C2:2D38
+cs=0x1c2;eip=0x002d3a; 	T(SUB(ax, 0x480));	// 6949 sub     ax, 480h ;~ 01C2:2D3A
+loc_12f3d:
+	// 5050 
+cs=0x1c2;eip=0x002d3d; 	X(MOV(word_15349, ax));	// 6952 mov     word_15349, ax ;~ 01C2:2D3D
+cs=0x1c2;eip=0x002d40; 	J(CALL(sub_13b1a,0));	// 6953 call    sub_13B1A ;~ 01C2:2D40
+cs=0x1c2;eip=0x002d43; 	T(MOV(cl, 6));	// 6954 mov     cl, 6 ;~ 01C2:2D43
+cs=0x1c2;eip=0x002d45; 	T(SHR(ax, cl));	// 6955 shr     ax, cl ;~ 01C2:2D45
+cs=0x1c2;eip=0x002d47; 	X(MOV(word_1534b, ax));	// 6956 mov     word_1534B, ax ;~ 01C2:2D47
+cs=0x1c2;eip=0x002d4a; 	T(MOV(bx, ax));	// 6957 mov     bx, ax ;~ 01C2:2D4A
+cs=0x1c2;eip=0x002d4c; 	T(MOV(si, 0x0D0D));	// 6958 mov     si, 0D0Dh ;~ 01C2:2D4C
+cs=0x1c2;eip=0x002d4f; 	T(MOV(dx, 0x0FFFF));	// 6959 mov     dx, 0FFFFh ;~ 01C2:2D4F
+loc_12f52:
+	// 5051 
+cs=0x1c2;eip=0x002d52; 	T(LODSW);	// 6962 lodsw ;~ 01C2:2D52
+cs=0x1c2;eip=0x002d53; 	T(INC(dx));	// 6963 inc     dx ;~ 01C2:2D53
+cs=0x1c2;eip=0x002d54; 	T(CMP(bx, ax));	// 6964 cmp     bx, ax ;~ 01C2:2D54
+cs=0x1c2;eip=0x002d56; 	J(JNC(loc_12f52));	// 6965 jnb     short loc_12F52 ;~ 01C2:2D56
+cs=0x1c2;eip=0x002d58; 	T(MOV(si, 0x0D1D));	// 6966 mov     si, 0D1Dh ;~ 01C2:2D58
+cs=0x1c2;eip=0x002d5b; 	T(MOV(cl, 4));	// 6967 mov     cl, 4 ;~ 01C2:2D5B
+cs=0x1c2;eip=0x002d5d; 	T(SHL(dx, cl));	// 6968 shl     dx, cl ;~ 01C2:2D5D
+cs=0x1c2;eip=0x002d5f; 	T(ADD(si, dx));	// 6969 add     si, dx ;~ 01C2:2D5F
+cs=0x1c2;eip=0x002d61; 	X(MOV(word_15353, si));	// 6970 mov     word_15353, si ;~ 01C2:2D61
+cs=0x1c2;eip=0x002d65; 	T(MOV(ax, word_14af6));	// 6971 mov     ax, word_14AF6 ;~ 01C2:2D65
+cs=0x1c2;eip=0x002d68; 	X(MOV(word_15359, ax));	// 6972 mov     word_15359, ax ;~ 01C2:2D68
+cs=0x1c2;eip=0x002d6b; 	T(MOV(cx, word_153ba));	// 6973 mov     cx, word_153BA ;~ 01C2:2D6B
+cs=0x1c2;eip=0x002d6f; 	T(SUB(cx, 0x28));	// 6974 sub     cx, 28h ; '(' ;~ 01C2:2D6F
+cs=0x1c2;eip=0x002d72; 	T(MOV(ax, word_153be));	// 6975 mov     ax, word_153BE ;~ 01C2:2D72
+cs=0x1c2;eip=0x002d75; 	T(NEG(ax));	// 6976 neg     ax ;~ 01C2:2D75
+cs=0x1c2;eip=0x002d77; 	T(SHR(ax, 1));	// 6977 shr     ax, 1 ;~ 01C2:2D77
+cs=0x1c2;eip=0x002d79; 	X(MUL1_1(byte_15345));	// 6978 mul     byte_15345 ;~ 01C2:2D79
+cs=0x1c2;eip=0x002d7d; 	T(SUB(cx, ax));	// 6979 sub     cx, ax ;~ 01C2:2D7D
+cs=0x1c2;eip=0x002d7f; 	X(MOV(word_1535b, cx));	// 6980 mov     word_1535B, cx ;~ 01C2:2D7F
+loc_12f83:
+	// 5052 
+cs=0x1c2;eip=0x002d83; 	T(MOV(cx, 0x10));	// 6983 mov     cx, 10h ;~ 01C2:2D83
+cs=0x1c2;eip=0x002d86; 	T(MOV(si, word_15353));	// 6984 mov     si, word_15353 ;~ 01C2:2D86
+cs=0x1c2;eip=0x002d8a; 	T(MOV(di, 0x0BE37));	// 6985 mov     di, 0BE37h ;~ 01C2:2D8A
+cs=0x1c2;eip=0x002d8d; 	T(MOV(dh, byte_15346));	// 6986 mov     dh, byte_15346 ;~ 01C2:2D8D
+loc_12f91:
+	// 5053 
+cs=0x1c2;eip=0x002d91; 	T(LODSB);	// 6989 lodsb ;~ 01C2:2D91
+cs=0x1c2;eip=0x002d92; 	T(CBW);	// 6990 cbw ;~ 01C2:2D92
+cs=0x1c2;eip=0x002d93; 	T(MOV(bx, ax));	// 6991 mov     bx, ax ;~ 01C2:2D93
+cs=0x1c2;eip=0x002d95; 	T(MOV(dl, dh));	// 6992 mov     dl, dh ;~ 01C2:2D95
+loc_12f97:
+	// 5054 
+cs=0x1c2;eip=0x002d97; 	T(DEC(dl));	// 6995 dec     dl ;~ 01C2:2D97
+cs=0x1c2;eip=0x002d99; 	J(JZ(loc_12f9f));	// 6996 jz      short loc_12F9F ;~ 01C2:2D99
+cs=0x1c2;eip=0x002d9b; 	T(ADD(ax, bx));	// 6997 add     ax, bx ;~ 01C2:2D9B
+cs=0x1c2;eip=0x002d9d; 	J(JMP(loc_12f97));	// 6998 jmp     short loc_12F97 ;~ 01C2:2D9D
+loc_12f9f:
+	// 5055 
+cs=0x1c2;eip=0x002d9f; 	X(STOSW);	// 7002 stosw ;~ 01C2:2D9F
+cs=0x1c2;eip=0x002da0; 	J(LOOP(loc_12f91));	// 7003 loop    loc_12F91 ;~ 01C2:2DA0
+cs=0x1c2;eip=0x002da2; 	T(MOV(cx, 8));	// 7004 mov     cx, 8 ;~ 01C2:2DA2
+cs=0x1c2;eip=0x002da5; 	T(MOV(si, 0x0BE37));	// 7005 mov     si, 0BE37h ;~ 01C2:2DA5
+cs=0x1c2;eip=0x002da8; 	X(PUSH(es));	// 7006 push    es ;~ 01C2:2DA8
+loc_12fa9:
+	// 5056 
+cs=0x1c2;eip=0x002da9; 	T(MOV(ax, seg_offset(seg003)));	// 7009 mov     ax, seg seg003 ;~ 01C2:2DA9
+cs=0x1c2;eip=0x002dac; 	T(MOV(es, ax));	// 7010 mov     es, ax ;~ 01C2:2DAC
+cs=0x1c2;eip=0x002dae; 	T(MOV(ax, word_14af6));	// 7012 mov     ax, word_14AF6 ;~ 01C2:2DAE
+cs=0x1c2;eip=0x002db1; 	T(SUB(ax, word_15359));	// 7013 sub     ax, word_15359 ;~ 01C2:2DB1
+cs=0x1c2;eip=0x002db5; 	X(ADD(word_15359, ax));	// 7014 add     word_15359, ax ;~ 01C2:2DB5
+cs=0x1c2;eip=0x002db9; 	T(MOV(bp, word_15349));	// 7015 mov     bp, word_15349 ;~ 01C2:2DB9
+cs=0x1c2;eip=0x002dbd; 	T(SUB(bp, ax));	// 7016 sub     bp, ax ;~ 01C2:2DBD
+cs=0x1c2;eip=0x002dbf; 	X(MOV(word_15349, bp));	// 7017 mov     word_15349, bp ;~ 01C2:2DBF
+loc_12fc3:
+	// 5057 
+cs=0x1c2;eip=0x002dc3; 	T(LODSW);	// 7020 lodsw ;~ 01C2:2DC3
+cs=0x1c2;eip=0x002dc4; 	T(MOV(bp, word_15349));	// 7021 mov     bp, word_15349 ;~ 01C2:2DC4
+cs=0x1c2;eip=0x002dc8; 	T(ADD(bp, ax));	// 7022 add     bp, ax ;~ 01C2:2DC8
+cs=0x1c2;eip=0x002dca; 	T(CMP(bp, 0x13E));	// 7023 cmp     bp, 13Eh ;~ 01C2:2DCA
+cs=0x1c2;eip=0x002dce; 	J(JNC(loc_13024));	// 7024 jnb     short loc_13024 ;~ 01C2:2DCE
+cs=0x1c2;eip=0x002dd0; 	T(TEST(bp, 0x8000));	// 7025 test    bp, 8000h ;~ 01C2:2DD0
+cs=0x1c2;eip=0x002dd4; 	J(JNZ(loc_13024));	// 7026 jnz     short loc_13024 ;~ 01C2:2DD4
+cs=0x1c2;eip=0x002dd6; 	T(LODSW);	// 7027 lodsw ;~ 01C2:2DD6
+cs=0x1c2;eip=0x002dd7; 	T(NEG(ax));	// 7028 neg     ax ;~ 01C2:2DD7
+cs=0x1c2;eip=0x002dd9; 	T(CMP(ax, word_153bc));	// 7029 cmp     ax, word_153BC ;~ 01C2:2DD9
+cs=0x1c2;eip=0x002ddd; 	J(JNS(loc_13027));	// 7030 jns     short loc_13027 ;~ 01C2:2DDD
+cs=0x1c2;eip=0x002ddf; 	T(SUB(ax, word_153be));	// 7031 sub     ax, word_153BE ;~ 01C2:2DDF
+cs=0x1c2;eip=0x002de3; 	J(JS(loc_13027));	// 7032 js      short loc_13027 ;~ 01C2:2DE3
+cs=0x1c2;eip=0x002de5; 	T(MOV(di, word_1535b));	// 7033 mov     di, word_1535B ;~ 01C2:2DE5
+cs=0x1c2;eip=0x002de9; 	T(MOV(dl, 0));	// 7034 mov     dl, 0 ;~ 01C2:2DE9
+cs=0x1c2;eip=0x002deb; 	T(SAR(ax, 1));	// 7035 sar     ax, 1 ;~ 01C2:2DEB
+cs=0x1c2;eip=0x002ded; 	J(JNC(loc_12ff5));	// 7036 jnb     short loc_12FF5 ;~ 01C2:2DED
+cs=0x1c2;eip=0x002def; 	T(ADD(di, 0x2000));	// 7037 add     di, 2000h ;~ 01C2:2DEF
+cs=0x1c2;eip=0x002df3; 	T(MOV(dl, 0x0FF));	// 7038 mov     dl, 0FFh ;~ 01C2:2DF3
+loc_12ff5:
+	// 5058 
+cs=0x1c2;eip=0x002df5; 	X(IMUL1_1(byte_15345));	// 7041 imul    byte_15345 ;~ 01C2:2DF5
+cs=0x1c2;eip=0x002df9; 	T(ADD(di, ax));	// 7042 add     di, ax ;~ 01C2:2DF9
+cs=0x1c2;eip=0x002dfb; 	T(MOV(bx, bp));	// 7043 mov     bx, bp ;~ 01C2:2DFB
+cs=0x1c2;eip=0x002dfd; 	T(SHR(bp, 1));	// 7044 shr     bp, 1 ;~ 01C2:2DFD
+cs=0x1c2;eip=0x002dff; 	T(SHR(bp, 1));	// 7045 shr     bp, 1 ;~ 01C2:2DFF
+cs=0x1c2;eip=0x002e01; 	T(ADD(di, bp));	// 7046 add     di, bp ;~ 01C2:2E01
+cs=0x1c2;eip=0x002e03; 	T(AND(bx, 3));	// 7047 and     bx, 3 ;~ 01C2:2E03
+cs=0x1c2;eip=0x002e07; 	T(MOV(al, *(raddr(ds,bx+0x0D4D))));	// 7048 mov     al, [bx+0D4Dh] ;~ 01C2:2E07
+cs=0x1c2;eip=0x002e0b; 	T(OR(al, *(raddr(es,di))));	// 7049 or      al, es:[di] ;~ 01C2:2E0B
+cs=0x1c2;eip=0x002e0e; 	X(STOSB);	// 7050 stosb ;~ 01C2:2E0E
+cs=0x1c2;eip=0x002e0f; 	T(TEST(dl, 0x0FF));	// 7051 test    dl, 0FFh ;~ 01C2:2E0F
+cs=0x1c2;eip=0x002e12; 	J(JZ(loc_1301a));	// 7052 jz      short loc_1301A ;~ 01C2:2E12
+cs=0x1c2;eip=0x002e14; 	T(ADD(di, 0x0E04F));	// 7053 add     di, 0E04Fh ;~ 01C2:2E14
+cs=0x1c2;eip=0x002e18; 	J(JMP(loc_1301e));	// 7054 jmp     short loc_1301E ;~ 01C2:2E18
+loc_1301a:
+	// 5059 
+cs=0x1c2;eip=0x002e1a; 	T(ADD(di, 0x1FFF));	// 7058 add     di, 1FFFh ;~ 01C2:2E1A
+loc_1301e:
+	// 5060 
+cs=0x1c2;eip=0x002e1e; 	T(OR(al, *(raddr(es,di))));	// 7061 or      al, es:[di] ;~ 01C2:2E1E
+cs=0x1c2;eip=0x002e21; 	X(STOSB);	// 7062 stosb ;~ 01C2:2E21
+cs=0x1c2;eip=0x002e22; 	J(JMP(loc_13027));	// 7063 jmp     short loc_13027 ;~ 01C2:2E22
+loc_13024:
+	// 5061 
+cs=0x1c2;eip=0x002e24; 	T(ADD(si, 2));	// 7068 add     si, 2 ;~ 01C2:2E24
+loc_13027:
+	// 5062 
+cs=0x1c2;eip=0x002e27; 	J(LOOP(loc_12fc3));	// 7072 loop    loc_12FC3 ;~ 01C2:2E27
+cs=0x1c2;eip=0x002e29; 	X(POP(es));	// 7073 pop     es ;~ 01C2:2E29
+cs=0x1c2;eip=0x002e2a; 	T(CMP(byte_15346, 6));	// 7075 cmp     byte_15346, 6 ;~ 01C2:2E2A
+cs=0x1c2;eip=0x002e2f; 	J(JNZ(locret_13036));	// 7076 jnz     short locret_13036 ;~ 01C2:2E2F
+cs=0x1c2;eip=0x002e31; 	X(MOV(byte_15346, 0));	// 7077 mov     byte_15346, 0 ;~ 01C2:2E31
+locret_13036:
+	// 5063 
+cs=0x1c2;eip=0x002e36; 	R(RETN(0));	// 7080 retn ;~ 01C2:2E36
+seg001_32c0_proc:
+	// 7760 
+loc_134c0:
+	// 5139 
+cs=0x1c2;eip=0x0032c0; 	J(CALL(sub_13510,0));	// 7761 call    sub_13510 ;~ 01C2:32C0
+cs=0x1c2;eip=0x0032c3; 	J(CALL(sub_13ef3,0));	// 7762 call    sub_13EF3 ;~ 01C2:32C3
+cs=0x1c2;eip=0x0032c6; 	T(MOV(ax, cs));	// 7763 mov     ax, cs ;~ 01C2:32C6
+cs=0x1c2;eip=0x0032c8; 	T(SUB(ax, 0x10));	// 7764 sub     ax, 10h ;~ 01C2:32C8
+	cs=seg_offset(seg001);
+cs=0x1c2;eip=0x0032cb; 	X(MOV(*(dw*)(((db*)&dword_134db)+2), ax));	// 7765 mov     word ptr cs:dword_134DB+2, ax ;~ 01C2:32CB
+cs=0x1c2;eip=0x0032cf; 	T(MOV(ax, 0x33DF));	// 7766 mov     ax, 33DFh ;~ 01C2:32CF
+	cs=seg_offset(seg001);
+cs=0x1c2;eip=0x0032d2; 	X(MOV(*(dw*)(((db*)&dword_134db)), ax));	// 7767 mov     word ptr cs:dword_134DB, ax ;~ 01C2:32D2
+	cs=seg_offset(seg001);
+cs=0x1c2;eip=0x0032d6; __disp=*(dd*)(((db*)&dword_134db));
+	J(JMP(__dispatch_call));	// 7768 jmp     cs:dword_134DB ;~ 01C2:32D6
+ret_1c2_32df:
+	// 5140 
+cs=0x1c2;eip=0x0032df; 	R(_INT(0x20));	// 7773 int     20h             ; DOS - PROGRAM TERMINATION ;~ 01C2:32DF
+sub_134e1:
+	// 7780 
+cs=0x1c2;eip=0x0032e1; 	X(PUSH(ax));	// 7782 push    ax ;~ 01C2:32E1
+cs=0x1c2;eip=0x0032e2; 	T(MOV(ah, 1));	// 7783 mov     ah, 1 ;~ 01C2:32E2
+cs=0x1c2;eip=0x0032e4; 	R(_INT(0x16));	// 7784 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:32E4
+cs=0x1c2;eip=0x0032e6; 	X(POP(ax));	// 7788 pop     ax ;~ 01C2:32E6
+cs=0x1c2;eip=0x0032e7; 	R(RETN(0));	// 7789 retn ;~ 01C2:32E7
+seg001_351d_proc:
+	// 8214 
+cs=0x1c2;eip=0x00351d; 	X(PUSH(es));	// 8214 push    es ;~ 01C2:351D
+ret_1c2_351e:
+	// 5180 
+cs=0x1c2;eip=0x00351e; 	T(MOV(ax, 0x0B800));	// 8215 mov     ax, 0B800h ;~ 01C2:351E
+loc_13721:
+	// 5181 
+cs=0x1c2;eip=0x003521; 	T(MOV(es, ax));	// 8219 mov     es, ax ;~ 01C2:3521
+cs=0x1c2;eip=0x003523; 	T(MOV(ax, 0));	// 8221 mov     ax, 0 ;~ 01C2:3523
+cs=0x1c2;eip=0x003526; 	T(MOV(di, ax));	// 8222 mov     di, ax ;~ 01C2:3526
+cs=0x1c2;eip=0x003528; 	T(MOV(cx, 0x2000));	// 8223 mov     cx, 2000h ;~ 01C2:3528
+	// 8224 rep stosw ;~ 01C2:352B
+cs=0x1c2;eip=0x00352b; 	X(	REP STOSW);	// 8224 rep stosw ;~ 01C2:352B
+cs=0x1c2;eip=0x00352d; 	X(POP(es));	// 8225 pop     es ;~ 01C2:352D
+cs=0x1c2;eip=0x00352e; 	R(RETN(0));	// 8227 retn ;~ 01C2:352E
+sub_1372f:
+	// 8233 
+cs=0x1c2;eip=0x00352f; 	X(PUSH(es));	// 8238 push    es ;~ 01C2:352F
+loc_13730:
+	// 5182 
+cs=0x1c2;eip=0x003530; 	T(MOV(ax, seg_offset(seg003)));	// 8241 mov     ax, seg seg003 ;~ 01C2:3530
+cs=0x1c2;eip=0x003533; 	J(JMP(loc_13721));	// 8242 jmp     short loc_13721 ;~ 01C2:3533
+sub_13735:
+	// 8249 
+cs=0x1c2;eip=0x003535; 	X(PUSH(es));	// 8250 push    es ;~ 01C2:3535
+ret_1c2_3536:
+	// 5183 
+cs=0x1c2;eip=0x003536; 	X(PUSH(ds));	// 8251 push    ds ;~ 01C2:3536
+cs=0x1c2;eip=0x003537; 	T(MOV(ax, 0x0B800));	// 8252 mov     ax, 0B800h ;~ 01C2:3537
+cs=0x1c2;eip=0x00353a; 	T(MOV(es, ax));	// 8253 mov     es, ax ;~ 01C2:353A
+cs=0x1c2;eip=0x00353c; 	T(MOV(di, 0));	// 8255 mov     di, 0 ;~ 01C2:353C
+cs=0x1c2;eip=0x00353f; 	T(MOV(si, di));	// 8256 mov     si, di ;~ 01C2:353F
+loc_13741:
+	// 5184 
+cs=0x1c2;eip=0x003541; 	T(MOV(ax, seg_offset(seg003)));	// 8259 mov     ax, seg seg003 ;~ 01C2:3541
+cs=0x1c2;eip=0x003544; 	T(MOV(ds, ax));	// 8260 mov     ds, ax ;~ 01C2:3544
+cs=0x1c2;eip=0x003546; 	T(MOV(bl, 0x64));	// 8262 mov     bl, 64h ; 'd' ;~ 01C2:3546
+loc_13748:
+	// 5185 
+cs=0x1c2;eip=0x003548; 	T(MOV(cx, 0x28));	// 8265 mov     cx, 28h ; '(' ;~ 01C2:3548
+	// 8266 rep movsw ;~ 01C2:354B
+cs=0x1c2;eip=0x00354b; 	X(	REP MOVSW);	// 8266 rep movsw ;~ 01C2:354B
+cs=0x1c2;eip=0x00354d; 	T(ADD(di, 0x1FB0));	// 8267 add     di, 1FB0h ;~ 01C2:354D
+cs=0x1c2;eip=0x003551; 	T(ADD(si, 0x1FB0));	// 8268 add     si, 1FB0h ;~ 01C2:3551
+cs=0x1c2;eip=0x003555; 	T(MOV(cx, 0x28));	// 8269 mov     cx, 28h ; '(' ;~ 01C2:3555
+	// 8270 rep movsw ;~ 01C2:3558
+cs=0x1c2;eip=0x003558; 	X(	REP MOVSW);	// 8270 rep movsw ;~ 01C2:3558
+cs=0x1c2;eip=0x00355a; 	T(ADD(di, 0x0E000));	// 8271 add     di, 0E000h ;~ 01C2:355A
+cs=0x1c2;eip=0x00355e; 	T(ADD(si, 0x0E000));	// 8272 add     si, 0E000h ;~ 01C2:355E
+cs=0x1c2;eip=0x003562; 	T(DEC(bl));	// 8273 dec     bl ;~ 01C2:3562
+cs=0x1c2;eip=0x003564; 	J(JNZ(loc_13748));	// 8274 jnz     short loc_13748 ;~ 01C2:3564
+cs=0x1c2;eip=0x003566; 	X(POP(ds));	// 8275 pop     ds ;~ 01C2:3566
+cs=0x1c2;eip=0x003567; 	X(POP(es));	// 8277 pop     es ;~ 01C2:3567
+cs=0x1c2;eip=0x003568; 	R(RETN(0));	// 8279 retn ;~ 01C2:3568
+seg001_3570_proc:
+	// 8286 
+loc_13770:
+	// 5186 
+cs=0x1c2;eip=0x003570; 	X(MOV(word_154e9, sp));	// 8287 mov     word_154E9, sp ;~ 01C2:3570
+cs=0x1c2;eip=0x003574; 	J(CALL(sub_1297d,0));	// 8288 call    sub_1297D ;~ 01C2:3574
+cs=0x1c2;eip=0x003577; 	T(MOV(al, 1));	// 8289 mov     al, 1 ;~ 01C2:3577
+cs=0x1c2;eip=0x003579; 	J(CALL(sub_14015,0));	// 8290 call    sub_14015 ;~ 01C2:3579
+cs=0x1c2;eip=0x00357c; 	J(CALL(sub_13a85,0));	// 8291 call    sub_13A85 ;~ 01C2:357C
+cs=0x1c2;eip=0x00357f; 	J(CALL(sub_134fa,0));	// 8292 call    sub_134FA ;~ 01C2:357F
+cs=0x1c2;eip=0x003582; 	X(MOV(byte_15618, 1));	// 8293 mov     byte_15618, 1 ;~ 01C2:3582
+cs=0x1c2;eip=0x003587; 	J(JMP(loc_13ca0));	// 8294 jmp     loc_13CA0 ;~ 01C2:3587
+loc_1378a:
+	// 5187 
+cs=0x1c2;eip=0x00358a; 	T(TEST(byte_14b00, 0x0FF));	// 8304 test    byte_14B00, 0FFh ;~ 01C2:358A
+cs=0x1c2;eip=0x00358f; 	J(JNZ(loc_13799));	// 8305 jnz     short loc_13799 ;~ 01C2:358F
+cs=0x1c2;eip=0x003591; 	J(CALL(sub_137b6,0));	// 8306 call    sub_137B6 ;~ 01C2:3591
+loc_13794:
+	// 5188 
+cs=0x1c2;eip=0x003594; 	J(CALL(sub_11500,0));	// 8309 call    sub_11500 ;~ 01C2:3594
+cs=0x1c2;eip=0x003597; 	J(JMP(loc_13794));	// 8310 jmp     short loc_13794 ;~ 01C2:3597
+loc_13799:
+	// 5189 
+cs=0x1c2;eip=0x003599; 	T(MOV(ax, 0x12C));	// 8314 mov     ax, 12Ch ;~ 01C2:3599
+cs=0x1c2;eip=0x00359c; 	X(MOV(word_155f4, ax));	// 8315 mov     word_155F4, ax ;~ 01C2:359C
+cs=0x1c2;eip=0x00359f; 	J(CALL(sub_137b6,0));	// 8316 call    sub_137B6 ;~ 01C2:359F
+loc_137a2:
+	// 5190 
+cs=0x1c2;eip=0x0035a2; 	J(CALL(sub_11500,0));	// 8319 call    sub_11500 ;~ 01C2:35A2
+cs=0x1c2;eip=0x0035a5; 	X(DEC(word_155f4));	// 8320 dec     word_155F4 ;~ 01C2:35A5
+cs=0x1c2;eip=0x0035a9; 	T(CMP(word_155f4, 0));	// 8321 cmp     word_155F4, 0 ;~ 01C2:35A9
+cs=0x1c2;eip=0x0035ae; 	J(JNZ(loc_137a2));	// 8322 jnz     short loc_137A2 ;~ 01C2:35AE
+cs=0x1c2;eip=0x0035b0; 	J(CALL(sub_14005,0));	// 8323 call    sub_14005 ;~ 01C2:35B0
+cs=0x1c2;eip=0x0035b3; 	J(JMP(loc_13ca0));	// 8324 jmp     loc_13CA0 ;~ 01C2:35B3
+sub_13819:
+	// 8365 
+cs=0x1c2;eip=0x003619; 	X(MOV(byte_1475b, 0));	// 8370 mov     byte_1475B, 0 ;~ 01C2:3619
+ret_1c2_361e:
+	// 5192 
+cs=0x1c2;eip=0x00361e; 	X(MOV(byte_1545d, 0));	// 8371 mov     byte_1545D, 0 ;~ 01C2:361E
+cs=0x1c2;eip=0x003623; 	T(TEST(byte_14b00, 0x0FF));	// 8372 test    byte_14B00, 0FFh ;~ 01C2:3623
+cs=0x1c2;eip=0x003628; 	J(JZ(loc_1382b));	// 8373 jz      short loc_1382B ;~ 01C2:3628
+cs=0x1c2;eip=0x00362a; 	R(RETN(0));	// 8374 retn ;~ 01C2:362A
+loc_1382b:
+	// 5193 
+cs=0x1c2;eip=0x00362b; 	T(TEST(byte_15618, 2));	// 8378 test    byte_15618, 2 ;~ 01C2:362B
+cs=0x1c2;eip=0x003630; 	J(JZ(loc_13855));	// 8379 jz      short loc_13855 ;~ 01C2:3630
+cs=0x1c2;eip=0x003632; 	T(TEST(word_14758, 0x0FF));	// 8380 test    word_14758, 0FFh ;~ 01C2:3632
+cs=0x1c2;eip=0x003638; 	J(JNZ(loc_1383d));	// 8381 jnz     short loc_1383D ;~ 01C2:3638
+cs=0x1c2;eip=0x00363a; 	J(CALL(sub_10704,0));	// 8382 call    sub_10704 ;~ 01C2:363A
+loc_1383d:
+	// 5194 
+cs=0x1c2;eip=0x00363d; 	J(CALL(sub_10421,0));	// 8385 call    sub_10421 ;~ 01C2:363D
+cs=0x1c2;eip=0x003640; 	T(TEST(word_14758, 0x0FF));	// 8386 test    word_14758, 0FFh ;~ 01C2:3640
+cs=0x1c2;eip=0x003646; 	J(JNZ(loc_1386c));	// 8387 jnz     short loc_1386C ;~ 01C2:3646
+cs=0x1c2;eip=0x003648; 	J(CALL(sub_10421,0));	// 8388 call    sub_10421 ;~ 01C2:3648
+cs=0x1c2;eip=0x00364b; 	T(TEST(word_14758, 0x0FF));	// 8389 test    word_14758, 0FFh ;~ 01C2:364B
+cs=0x1c2;eip=0x003651; 	J(JZ(loc_1385d));	// 8390 jz      short loc_1385D ;~ 01C2:3651
+cs=0x1c2;eip=0x003653; 	J(JMP(loc_1386c));	// 8391 jmp     short loc_1386C ;~ 01C2:3653
+loc_13855:
+	// 5195 
+cs=0x1c2;eip=0x003655; 	T(TEST(word_14758, 0x0FF));	// 8395 test    word_14758, 0FFh ;~ 01C2:3655
+cs=0x1c2;eip=0x00365b; 	J(JNZ(loc_1386c));	// 8396 jnz     short loc_1386C ;~ 01C2:365B
+loc_1385d:
+	// 5196 
+cs=0x1c2;eip=0x00365d; 	X(MOV(byte_14b00, 0x0FF));	// 8399 mov     byte_14B00, 0FFh ;~ 01C2:365D
+cs=0x1c2;eip=0x003662; 	J(CALL(sub_106bf,0));	// 8400 call    sub_106BF ;~ 01C2:3662
+cs=0x1c2;eip=0x003665; 	T(MOV(sp, word_154e9));	// 8401 mov     sp, word_154E9 ;~ 01C2:3665
+cs=0x1c2;eip=0x003669; 	J(JMP(loc_1378a));	// 8402 jmp     loc_1378A ;~ 01C2:3669
+loc_1386c:
+	// 5197 
+cs=0x1c2;eip=0x00366c; 	J(CALL(sub_134ed,0));	// 8407 call    sub_134ED ;~ 01C2:366C
+cs=0x1c2;eip=0x00366f; 	J(CALL(sub_13c4f,0));	// 8408 call    sub_13C4F ;~ 01C2:366F
+cs=0x1c2;eip=0x003672; 	T(AND(al, 0x7F));	// 8409 and     al, 7Fh ;~ 01C2:3672
+cs=0x1c2;eip=0x003674; 	X(MUL1_1(byte_154eb));	// 8410 mul     byte_154EB ;~ 01C2:3674
+cs=0x1c2;eip=0x003678; 	X(MOV(word_14af6, ax));	// 8411 mov     word_14AF6, ax ;~ 01C2:3678
+loc_1387b:
+	// 5198 
+cs=0x1c2;eip=0x00367b; 	J(CALL(sub_13c4f,0));	// 8414 call    sub_13C4F ;~ 01C2:367B
+cs=0x1c2;eip=0x00367e; 	T(MOV(bx, ax));	// 8415 mov     bx, ax ;~ 01C2:367E
+cs=0x1c2;eip=0x003680; 	J(CALL(sub_13c4f,0));	// 8416 call    sub_13C4F ;~ 01C2:3680
+cs=0x1c2;eip=0x003683; 	T(MOV(dx, ax));	// 8417 mov     dx, ax ;~ 01C2:3683
+cs=0x1c2;eip=0x003685; 	T(MOV(cx, 3));	// 8418 mov     cx, 3 ;~ 01C2:3685
+cs=0x1c2;eip=0x003688; 	T(SAR(bx, cl));	// 8419 sar     bx, cl ;~ 01C2:3688
+cs=0x1c2;eip=0x00368a; 	T(SAR(dx, cl));	// 8420 sar     dx, cl ;~ 01C2:368A
+cs=0x1c2;eip=0x00368c; 	J(CALL(sub_10760,0));	// 8421 call    sub_10760 ;~ 01C2:368C
+cs=0x1c2;eip=0x00368f; 	J(JC(loc_1387b));	// 8422 jb      short loc_1387B ;~ 01C2:368F
+cs=0x1c2;eip=0x003691; 	J(CALL(sub_138a8,0));	// 8423 call    sub_138A8 ;~ 01C2:3691
+cs=0x1c2;eip=0x003694; 	T(XOR(ax, ax));	// 8424 xor     ax, ax ;~ 01C2:3694
+cs=0x1c2;eip=0x003696; 	X(MOV(word_14af8, ax));	// 8425 mov     word_14AF8, ax ;~ 01C2:3696
+cs=0x1c2;eip=0x003699; 	X(MOV(word_14afa, ax));	// 8426 mov     word_14AFA, ax ;~ 01C2:3699
+cs=0x1c2;eip=0x00369c; 	J(CALL(sub_11d07,0));	// 8427 call    sub_11D07 ;~ 01C2:369C
+cs=0x1c2;eip=0x00369f; 	J(CALL(sub_13a76,0));	// 8428 call    sub_13A76 ;~ 01C2:369F
+cs=0x1c2;eip=0x0036a2; 	X(MOV(byte_154e2, 0));	// 8429 mov     byte_154E2, 0 ;~ 01C2:36A2
+cs=0x1c2;eip=0x0036a7; 	R(RETN(0));	// 8430 retn ;~ 01C2:36A7
+seg001_3aa0_proc:
+	// 9085 
+loc_13ca0:
+	// 5259 
+cs=0x1c2;eip=0x003aa0; 	J(CALL(sub_134fa,0));	// 9087 call    sub_134FA ;~ 01C2:3AA0
+cs=0x1c2;eip=0x003aa3; 	X(MOV(word_15610, 0));	// 9088 mov     word_15610, 0 ;~ 01C2:3AA3
+cs=0x1c2;eip=0x003aa9; 	J(CALL(sub_1439e,0));	// 9089 call    sub_1439E ;~ 01C2:3AA9
+cs=0x1c2;eip=0x003aac; 	J(CALL(sub_136b5,0));	// 9090 call    sub_136B5 ;~ 01C2:3AAC
+cs=0x1c2;eip=0x003aaf; 	X(MOV(word_156e6, 0));	// 9091 mov     word_156E6, 0 ;~ 01C2:3AAF
+cs=0x1c2;eip=0x003ab5; 	J(CALL(sub_13ea0,0));	// 9092 call    sub_13EA0 ;~ 01C2:3AB5
+loc_13cb8:
+	// 5260 
+cs=0x1c2;eip=0x003ab8; 	J(CALL(sub_134e1,0));	// 9095 call    sub_134E1 ;~ 01C2:3AB8
+cs=0x1c2;eip=0x003abb; 	J(JNZ(loc_13cbf));	// 9096 jnz     short loc_13CBF ;~ 01C2:3ABB
+cs=0x1c2;eip=0x003abd; 	J(JMP(loc_13cdd));	// 9097 jmp     short loc_13CDD ;~ 01C2:3ABD
+loc_13cbf:
+	// 5261 
+cs=0x1c2;eip=0x003abf; 	X(MOV(word_156e6, 0));	// 9101 mov     word_156E6, 0 ;~ 01C2:3ABF
+cs=0x1c2;eip=0x003ac5; 	J(CALL(sub_134e8,0));	// 9102 call    sub_134E8 ;~ 01C2:3AC5
+cs=0x1c2;eip=0x003ac8; 	T(CMP(ax, 0x3B00));	// 9103 cmp     ax, 3B00h ;~ 01C2:3AC8
+cs=0x1c2;eip=0x003acb; 	J(JNZ(loc_13cd8));	// 9104 jnz     short loc_13CD8 ;~ 01C2:3ACB
+cs=0x1c2;eip=0x003acd; 	J(CALL(sub_14005,0));	// 9105 call    sub_14005 ;~ 01C2:3ACD
+cs=0x1c2;eip=0x003ad0; 	X(MOV(byte_14b00, 0));	// 9106 mov     byte_14B00, 0 ;~ 01C2:3AD0
+cs=0x1c2;eip=0x003ad5; 	J(JMP(loc_1378a));	// 9107 jmp     loc_1378A ;~ 01C2:3AD5
+loc_13cd8:
+	// 5262 
+cs=0x1c2;eip=0x003ad8; 	T(CMP(ax, 0x3C00));	// 9111 cmp     ax, 3C00h ;~ 01C2:3AD8
+cs=0x1c2;eip=0x003adb; 	J(JZ(loc_13d1e));	// 9112 jz      short loc_13D1E ;~ 01C2:3ADB
+loc_13cdd:
+	// 5263 
+cs=0x1c2;eip=0x003add; 	T(CMP(word_156e6, 0x960));	// 9115 cmp     word_156E6, 960h ;~ 01C2:3ADD
+cs=0x1c2;eip=0x003ae3; 	J(JC(loc_13ced));	// 9116 jb      short loc_13CED ;~ 01C2:3AE3
+cs=0x1c2;eip=0x003ae5; 	X(MOV(byte_14b00, 0x0FF));	// 9117 mov     byte_14B00, 0FFh ;~ 01C2:3AE5
+cs=0x1c2;eip=0x003aea; 	J(JMP(loc_1378a));	// 9118 jmp     loc_1378A ;~ 01C2:3AEA
+loc_13ced:
+	// 5264 
+cs=0x1c2;eip=0x003aed; 	T(MOV(ax, word_153be));	// 9122 mov     ax, word_153BE ;~ 01C2:3AED
+cs=0x1c2;eip=0x003af0; 	X(PUSH(ax));	// 9123 push    ax ;~ 01C2:3AF0
+cs=0x1c2;eip=0x003af1; 	T(MOV(bx, 0x5A));	// 9124 mov     bx, 5Ah ; 'Z' ;~ 01C2:3AF1
+cs=0x1c2;eip=0x003af4; 	T(MOV(dx, word_15610));	// 9125 mov     dx, word_15610 ;~ 01C2:3AF4
+cs=0x1c2;eip=0x003af8; 	X(MOV(word_14b41, 0x0FFE4));	// 9126 mov     word_14B41, 0FFE4h ;~ 01C2:3AF8
+cs=0x1c2;eip=0x003afe; 	J(CALL(sub_1372f,0));	// 9127 call    sub_1372F ;~ 01C2:3AFE
+cs=0x1c2;eip=0x003b01; 	J(CALL(sub_11d70,0));	// 9128 call    sub_11D70 ;~ 01C2:3B01
+cs=0x1c2;eip=0x003b04; 	T(MOV(ax, 0x42));	// 9129 mov     ax, 42h ; 'B' ;~ 01C2:3B04
+cs=0x1c2;eip=0x003b07; 	T(MOV(bx, 0x38));	// 9130 mov     bx, 38h ; '8' ;~ 01C2:3B07
+cs=0x1c2;eip=0x003b0a; 	J(CALL(sub_128a1,0));	// 9131 call    sub_128A1 ;~ 01C2:3B0A
+cs=0x1c2;eip=0x003b0d; 	X(POP(ax));	// 9132 pop     ax ;~ 01C2:3B0D
+cs=0x1c2;eip=0x003b0e; 	X(MOV(word_153be, ax));	// 9133 mov     word_153BE, ax ;~ 01C2:3B0E
+cs=0x1c2;eip=0x003b11; 	X(MOV(word_14b41, 0));	// 9134 mov     word_14B41, 0 ;~ 01C2:3B11
+cs=0x1c2;eip=0x003b17; 	X(ADD(word_15610, 3));	// 9135 add     word_15610, 3 ;~ 01C2:3B17
+cs=0x1c2;eip=0x003b1c; 	J(JMP(loc_13cb8));	// 9136 jmp     short loc_13CB8 ;~ 01C2:3B1C
+loc_13d1e:
+	// 5265 
+cs=0x1c2;eip=0x003b1e; 	J(CALL(sub_134fa,0));	// 9141 call    sub_134FA ;~ 01C2:3B1E
+cs=0x1c2;eip=0x003b21; 	J(CALL(sub_13dfa,0));	// 9142 call    sub_13DFA ;~ 01C2:3B21
+cs=0x1c2;eip=0x003b24; 	J(CALL(sub_14005,0));	// 9143 call    sub_14005 ;~ 01C2:3B24
+cs=0x1c2;eip=0x003b27; 	J(CALL(sub_143ae,0));	// 9144 call    sub_143AE ;~ 01C2:3B27
+cs=0x1c2;eip=0x003b2a; 	T(MOV(si, 0x1035));	// 9145 mov     si, 1035h ;~ 01C2:3B2A
+cs=0x1c2;eip=0x003b2d; 	T(TEST(byte_1545a, 0x0FF));	// 9146 test    byte_1545A, 0FFh ;~ 01C2:3B2D
+cs=0x1c2;eip=0x003b32; 	J(JNZ(loc_13d37));	// 9147 jnz     short loc_13D37 ;~ 01C2:3B32
+cs=0x1c2;eip=0x003b34; 	T(MOV(si, 0x1054));	// 9148 mov     si, 1054h ;~ 01C2:3B34
+loc_13d37:
+	// 5266 
+cs=0x1c2;eip=0x003b37; 	J(CALL(sub_142f4,0));	// 9151 call    sub_142F4 ;~ 01C2:3B37
+cs=0x1c2;eip=0x003b3a; 	J(CALL(sub_13dc4,0));	// 9152 call    sub_13DC4 ;~ 01C2:3B3A
+cs=0x1c2;eip=0x003b3d; 	X(MOV(word_156e6, 0));	// 9153 mov     word_156E6, 0 ;~ 01C2:3B3D
+loc_13d43:
+	// 5267 
+cs=0x1c2;eip=0x003b43; 	J(CALL(sub_134e1,0));	// 9157 call    sub_134E1 ;~ 01C2:3B43
+cs=0x1c2;eip=0x003b46; 	J(JNZ(loc_13d53));	// 9158 jnz     short loc_13D53 ;~ 01C2:3B46
+cs=0x1c2;eip=0x003b48; 	T(MOV(ax, word_156e6));	// 9159 mov     ax, word_156E6 ;~ 01C2:3B48
+cs=0x1c2;eip=0x003b4b; 	T(CMP(ax, 0x0E10));	// 9160 cmp     ax, 0E10h ;~ 01C2:3B4B
+cs=0x1c2;eip=0x003b4e; 	J(JC(loc_13d43));	// 9161 jb      short loc_13D43 ;~ 01C2:3B4E
+cs=0x1c2;eip=0x003b50; 	J(JMP(loc_13e50));	// 9162 jmp     loc_13E50 ;~ 01C2:3B50
+loc_13d53:
+	// 5268 
+cs=0x1c2;eip=0x003b53; 	X(MOV(word_156e6, 0));	// 9166 mov     word_156E6, 0 ;~ 01C2:3B53
+cs=0x1c2;eip=0x003b59; 	J(CALL(sub_134e8,0));	// 9167 call    sub_134E8 ;~ 01C2:3B59
+cs=0x1c2;eip=0x003b5c; 	T(OR(al, al));	// 9168 or      al, al ;~ 01C2:3B5C
+cs=0x1c2;eip=0x003b5e; 	J(JNZ(loc_13d94));	// 9169 jnz     short loc_13D94 ;~ 01C2:3B5E
+cs=0x1c2;eip=0x003b60; 	T(SUB(ah, 0x3B));	// 9170 sub     ah, 3Bh ; ';' ;~ 01C2:3B60
+cs=0x1c2;eip=0x003b63; 	J(JNZ(loc_13d6d));	// 9171 jnz     short loc_13D6D ;~ 01C2:3B63
+cs=0x1c2;eip=0x003b65; 	X(MOV(byte_14b00, 0));	// 9172 mov     byte_14B00, 0 ;~ 01C2:3B65
+cs=0x1c2;eip=0x003b6a; 	J(JMP(loc_1378a));	// 9173 jmp     loc_1378A ;~ 01C2:3B6A
+loc_13d6d:
+	// 5269 
+cs=0x1c2;eip=0x003b6d; 	T(DEC(ah));	// 9177 dec     ah ;~ 01C2:3B6D
+cs=0x1c2;eip=0x003b6f; 	T(DEC(ah));	// 9178 dec     ah ;~ 01C2:3B6F
+cs=0x1c2;eip=0x003b71; 	J(JNZ(loc_13d76));	// 9179 jnz     short loc_13D76 ;~ 01C2:3B71
+cs=0x1c2;eip=0x003b73; 	J(JMP(loc_13e58));	// 9180 jmp     loc_13E58 ;~ 01C2:3B73
+loc_13d76:
+	// 5270 
+cs=0x1c2;eip=0x003b76; 	T(DEC(ah));	// 9184 dec     ah ;~ 01C2:3B76
+cs=0x1c2;eip=0x003b78; 	T(DEC(ah));	// 9185 dec     ah ;~ 01C2:3B78
+cs=0x1c2;eip=0x003b7a; 	J(JNZ(loc_13d7f));	// 9186 jnz     short loc_13D7F ;~ 01C2:3B7A
+cs=0x1c2;eip=0x003b7c; 	J(JMP(loc_13e72));	// 9187 jmp     loc_13E72 ;~ 01C2:3B7C
+loc_13d7f:
+	// 5271 
+cs=0x1c2;eip=0x003b7f; 	T(SUB(ah, 3));	// 9191 sub     ah, 3 ;~ 01C2:3B7F
+cs=0x1c2;eip=0x003b82; 	J({;});	// 9192 jnz     short $+2 ;~ 01C2:3B82
+loc_13d84:
+	// 5272 
+cs=0x1c2;eip=0x003b84; 	T(DEC(ah));	// 9195 dec     ah ;~ 01C2:3B84
+cs=0x1c2;eip=0x003b86; 	J(JNZ(loc_13d8b));	// 9196 jnz     short loc_13D8B ;~ 01C2:3B86
+cs=0x1c2;eip=0x003b88; 	J(JMP(loc_13e1b));	// 9197 jmp     loc_13E1B ;~ 01C2:3B88
+loc_13d8b:
+	// 5273 
+cs=0x1c2;eip=0x003b8b; 	T(DEC(ah));	// 9201 dec     ah ;~ 01C2:3B8B
+cs=0x1c2;eip=0x003b8d; 	J(JNZ(loc_13d43));	// 9202 jnz     short loc_13D43 ;~ 01C2:3B8D
+cs=0x1c2;eip=0x003b8f; 	J(JMP(loc_13e07));	// 9203 jmp     short loc_13E07 ;~ 01C2:3B8F
+loc_13d92:
+	// 5274 
+cs=0x1c2;eip=0x003b92; 	J(JMP(loc_13d43));	// 9211 jmp     short loc_13D43 ;~ 01C2:3B92
+loc_13d94:
+	// 5275 
+cs=0x1c2;eip=0x003b94; 	T(AND(al, 0x0DF));	// 9215 and     al, 0DFh ;~ 01C2:3B94
+cs=0x1c2;eip=0x003b96; 	T(CMP(al, 0x53));	// 9216 cmp     al, 53h ; 'S' ;~ 01C2:3B96
+cs=0x1c2;eip=0x003b98; 	J(JNZ(loc_13d9d));	// 9217 jnz     short loc_13D9D ;~ 01C2:3B98
+cs=0x1c2;eip=0x003b9a; 	J(JMP(loc_13dad));	// 9218 jmp     short loc_13DAD ;~ 01C2:3B9A
+loc_13d9d:
+	// 5276 
+cs=0x1c2;eip=0x003b9d; 	T(CMP(al, 0x43));	// 9226 cmp     al, 43h ; 'C' ;~ 01C2:3B9D
+cs=0x1c2;eip=0x003b9f; 	J(JNZ(loc_13da6));	// 9227 jnz     short loc_13DA6 ;~ 01C2:3B9F
+cs=0x1c2;eip=0x003ba1; 	J(JMP(loc_143be));	// 9228 jmp     loc_143BE ;~ 01C2:3BA1
+ret_1c2_3ba4:
+	// 5277 
+cs=0x1c2;eip=0x003ba4; 	J(JMP(loc_13d92));	// 9231 jmp     short loc_13D92 ;~ 01C2:3BA4
+loc_13da6:
+	// 5278 
+cs=0x1c2;eip=0x003ba6; 	T(CMP(al, 0x58));	// 9236 cmp     al, 58h ; 'X' ;~ 01C2:3BA6
+cs=0x1c2;eip=0x003ba8; 	J(JNZ(loc_13d92));	// 9237 jnz     short loc_13D92 ;~ 01C2:3BA8
+cs=0x1c2;eip=0x003baa; 	J(JMP(loc_144dd));	// 9238 jmp     loc_144DD ;~ 01C2:3BAA
+loc_13dad:
+	// 5279 
+cs=0x1c2;eip=0x003bad; 	T(MOV(al, byte_156d8));	// 9242 mov     al, byte_156D8 ;~ 01C2:3BAD
+cs=0x1c2;eip=0x003bb0; 	T(XOR(al, 0x0FF));	// 9243 xor     al, 0FFh ;~ 01C2:3BB0
+cs=0x1c2;eip=0x003bb2; 	X(MOV(byte_156d8, al));	// 9244 mov     byte_156D8, al ;~ 01C2:3BB2
+cs=0x1c2;eip=0x003bb5; 	J(JZ(loc_13dbf));	// 9245 jz      short loc_13DBF ;~ 01C2:3BB5
+cs=0x1c2;eip=0x003bb7; 	T(MOV(si, 0x0FF8));	// 9246 mov     si, 0FF8h ;~ 01C2:3BB7
+loc_13dba:
+	// 5280 
+cs=0x1c2;eip=0x003bba; 	J(CALL(sub_142f4,0));	// 9249 call    sub_142F4 ;~ 01C2:3BBA
+cs=0x1c2;eip=0x003bbd; 	J(JMP(loc_13d43));	// 9250 jmp     short loc_13D43 ;~ 01C2:3BBD
+loc_13dbf:
+	// 5281 
+cs=0x1c2;eip=0x003bbf; 	T(MOV(si, 0x1005));	// 9254 mov     si, 1005h ;~ 01C2:3BBF
+cs=0x1c2;eip=0x003bc2; 	J(JMP(loc_13dba));	// 9255 jmp     short loc_13DBA ;~ 01C2:3BC2
+seg001_3c07_proc:
+	// 9316 
+loc_13e07:
+	// 5288 
+cs=0x1c2;eip=0x003c07; 	T(MOV(al, byte_154c3));	// 9317 mov     al, byte_154C3 ;~ 01C2:3C07
+cs=0x1c2;eip=0x003c0a; 	T(CMP(al, byte_154c4));	// 9318 cmp     al, byte_154C4 ;~ 01C2:3C0A
+cs=0x1c2;eip=0x003c0e; 	J(JBE(loc_13e15));	// 9319 jbe     short loc_13E15 ;~ 01C2:3C0E
+cs=0x1c2;eip=0x003c10; 	T(DEC(al));	// 9320 dec     al ;~ 01C2:3C10
+loc_13e12:
+	// 5289 
+cs=0x1c2;eip=0x003c12; 	X(MOV(byte_154c3, al));	// 9323 mov     byte_154C3, al ;~ 01C2:3C12
+loc_13e15:
+	// 5290 
+cs=0x1c2;eip=0x003c15; 	J(CALL(sub_1370d,0));	// 9327 call    sub_1370D ;~ 01C2:3C15
+cs=0x1c2;eip=0x003c18; 	J(JMP(loc_13d43));	// 9328 jmp     loc_13D43 ;~ 01C2:3C18
+loc_13e1b:
+	// 5291 
+cs=0x1c2;eip=0x003c1b; 	T(MOV(al, byte_154c3));	// 9332 mov     al, byte_154C3 ;~ 01C2:3C1B
+cs=0x1c2;eip=0x003c1e; 	T(CMP(al, byte_154c5));	// 9333 cmp     al, byte_154C5 ;~ 01C2:3C1E
+cs=0x1c2;eip=0x003c22; 	J(JNC(loc_13e15));	// 9334 jnb     short loc_13E15 ;~ 01C2:3C22
+cs=0x1c2;eip=0x003c24; 	T(INC(al));	// 9335 inc     al ;~ 01C2:3C24
+cs=0x1c2;eip=0x003c26; 	J(JMP(loc_13e12));	// 9336 jmp     short loc_13E12 ;~ 01C2:3C26
+ret_1c2_3c28:
+	// 5292 
+cs=0x1c2;eip=0x003c28; 	X(XOR(byte_1fec8, 0x0FF));	// 9339 xor     byte_1FEC8, 0FFh ;~ 01C2:3C28
+cs=0x1c2;eip=0x003c2d; 	J(CALL(sub_13e3d,0));	// 9340 call    sub_13E3D ;~ 01C2:3C2D
+cs=0x1c2;eip=0x003c30; 	T(TEST(byte_1fec8, 0x0FF));	// 9341 test    byte_1FEC8, 0FFh ;~ 01C2:3C30
+cs=0x1c2;eip=0x003c35; 	J(JZ(loc_13e3a));	// 9342 jz      short loc_13E3A ;~ 01C2:3C35
+cs=0x1c2;eip=0x003c37; 	J(JMP(loc_13d92));	// 9343 jmp     loc_13D92 ;~ 01C2:3C37
+loc_13e3a:
+	// 5293 
+cs=0x1c2;eip=0x003c3a; 	J(JMP(loc_13d92));	// 9347 jmp     loc_13D92 ;~ 01C2:3C3A
+seg001_3c50_proc:
+	// 9370 
+loc_13e50:
+	// 5297 
+cs=0x1c2;eip=0x003c50; 	X(MOV(byte_14b00, 0x0FF));	// 9371 mov     byte_14B00, 0FFh ;~ 01C2:3C50
+cs=0x1c2;eip=0x003c55; 	J(JMP(loc_1378a));	// 9372 jmp     loc_1378A ;~ 01C2:3C55
+loc_13e58:
+	// 5298 
+cs=0x1c2;eip=0x003c58; 	X(XOR(byte_15618, 2));	// 9376 xor     byte_15618, 2 ;~ 01C2:3C58
+cs=0x1c2;eip=0x003c5d; 	T(TEST(byte_15618, 2));	// 9377 test    byte_15618, 2 ;~ 01C2:3C5D
+cs=0x1c2;eip=0x003c62; 	J(JNZ(loc_13e6d));	// 9378 jnz     short loc_13E6D ;~ 01C2:3C62
+cs=0x1c2;eip=0x003c64; 	T(MOV(si, 0x0FDA));	// 9379 mov     si, 0FDAh ;~ 01C2:3C64
+loc_13e67:
+	// 5299 
+cs=0x1c2;eip=0x003c67; 	J(CALL(sub_142f4,0));	// 9382 call    sub_142F4 ;~ 01C2:3C67
+cs=0x1c2;eip=0x003c6a; 	J(JMP(loc_13d43));	// 9383 jmp     loc_13D43 ;~ 01C2:3C6A
+loc_13e6d:
+	// 5300 
+cs=0x1c2;eip=0x003c6d; 	T(MOV(si, 0x0FE9));	// 9387 mov     si, 0FE9h ;~ 01C2:3C6D
+cs=0x1c2;eip=0x003c70; 	J(JMP(loc_13e67));	// 9388 jmp     short loc_13E67 ;~ 01C2:3C70
+loc_13e72:
+	// 5301 
+cs=0x1c2;eip=0x003c72; 	T(MOV(al, byte_15619));	// 9392 mov     al, byte_15619 ;~ 01C2:3C72
+cs=0x1c2;eip=0x003c75; 	T(INC(al));	// 9393 inc     al ;~ 01C2:3C75
+cs=0x1c2;eip=0x003c77; 	T(CMP(al, 7));	// 9394 cmp     al, 7 ;~ 01C2:3C77
+cs=0x1c2;eip=0x003c79; 	J(JC(loc_13e7d));	// 9395 jb      short loc_13E7D ;~ 01C2:3C79
+cs=0x1c2;eip=0x003c7b; 	T(MOV(al, 1));	// 9396 mov     al, 1 ;~ 01C2:3C7B
+loc_13e7d:
+	// 5302 
+cs=0x1c2;eip=0x003c7d; 	X(MOV(byte_15619, al));	// 9399 mov     byte_15619, al ;~ 01C2:3C7D
+cs=0x1c2;eip=0x003c80; 	J(CALL(sub_13e86,0));	// 9400 call    sub_13E86 ;~ 01C2:3C80
+cs=0x1c2;eip=0x003c83; 	J(JMP(loc_13d43));	// 9401 jmp     loc_13D43 ;~ 01C2:3C83
+seg001_3d37_proc:
+	// 9551 
+cs=0x1c2;eip=0x003d37; 	T(STI);	// 9551 sti ;~ 01C2:3D37
+ret_1c2_3d38:
+	// 5309 
+cs=0x1c2;eip=0x003d38; 	X(PUSH(ax));	// 9552 push    ax ;~ 01C2:3D38
+cs=0x1c2;eip=0x003d39; 	X(PUSH(bx));	// 9553 push    bx ;~ 01C2:3D39
+cs=0x1c2;eip=0x003d3a; 	X(PUSH(cx));	// 9554 push    cx ;~ 01C2:3D3A
+cs=0x1c2;eip=0x003d3b; 	X(PUSH(si));	// 9555 push    si ;~ 01C2:3D3B
+cs=0x1c2;eip=0x003d3c; 	X(PUSH(di));	// 9556 push    di ;~ 01C2:3D3C
+cs=0x1c2;eip=0x003d3d; 	X(PUSH(ds));	// 9557 push    ds ;~ 01C2:3D3D
+loc_13f3e:
+	// 5310 
+cs=0x1c2;eip=0x003d3e; 	T(MOV(ax, seg_offset(seg002)));	// 9560 mov     ax, seg seg002 ;~ 01C2:3D3E
+cs=0x1c2;eip=0x003d41; 	T(MOV(ds, ax));	// 9561 mov     ds, ax ;~ 01C2:3D41
+cs=0x1c2;eip=0x003d43; 	X(INC(word_156e2));	// 9562 inc     word_156E2 ;~ 01C2:3D43
+cs=0x1c2;eip=0x003d47; 	J(JNZ(loc_13f4d));	// 9563 jnz     short loc_13F4D ;~ 01C2:3D47
+cs=0x1c2;eip=0x003d49; 	X(INC(word_156e4));	// 9564 inc     word_156E4 ;~ 01C2:3D49
+loc_13f4d:
+	// 5311 
+cs=0x1c2;eip=0x003d4d; 	X(INC(word_156e6));	// 9567 inc     word_156E6 ;~ 01C2:3D4D
+cs=0x1c2;eip=0x003d51; 	J(JNZ(loc_13f57));	// 9568 jnz     short loc_13F57 ;~ 01C2:3D51
+cs=0x1c2;eip=0x003d53; 	X(INC(word_156e8));	// 9569 inc     word_156E8 ;~ 01C2:3D53
+loc_13f57:
+	// 5312 
+cs=0x1c2;eip=0x003d57; 	T(XOR(bh, bh));	// 9572 xor     bh, bh ;~ 01C2:3D57
+cs=0x1c2;eip=0x003d59; 	T(TEST(byte_156da, 0x0FF));	// 9573 test    byte_156DA, 0FFh ;~ 01C2:3D59
+cs=0x1c2;eip=0x003d5e; 	J(JZ(loc_13fdc));	// 9574 jz      short loc_13FDC ;~ 01C2:3D5E
+cs=0x1c2;eip=0x003d60; 	T(TEST(byte_156e1, 0x0FF));	// 9575 test    byte_156E1, 0FFh ;~ 01C2:3D60
+cs=0x1c2;eip=0x003d65; 	J(JZ(loc_13f6f));	// 9576 jz      short loc_13F6F ;~ 01C2:3D65
+cs=0x1c2;eip=0x003d67; 	X(MOV(byte_156e1, 0));	// 9577 mov     byte_156E1, 0 ;~ 01C2:3D67
+cs=0x1c2;eip=0x003d6c; 	J(CALL(sub_13fe7,0));	// 9578 call    sub_13FE7 ;~ 01C2:3D6C
+loc_13f6f:
+	// 5313 
+cs=0x1c2;eip=0x003d6f; 	T(MOV(al, byte_156df));	// 9581 mov     al, byte_156DF ;~ 01C2:3D6F
+cs=0x1c2;eip=0x003d72; 	T(OR(al, al));	// 9582 or      al, al ;~ 01C2:3D72
+cs=0x1c2;eip=0x003d74; 	J(JZ(loc_13f9c));	// 9583 jz      short loc_13F9C ;~ 01C2:3D74
+cs=0x1c2;eip=0x003d76; 	T(DEC(al));	// 9584 dec     al ;~ 01C2:3D76
+cs=0x1c2;eip=0x003d78; 	X(MOV(byte_156df, al));	// 9585 mov     byte_156DF, al ;~ 01C2:3D78
+cs=0x1c2;eip=0x003d7b; 	T(MOV(al, byte_156dc));	// 9586 mov     al, byte_156DC ;~ 01C2:3D7B
+cs=0x1c2;eip=0x003d7e; 	T(ADD(al, byte_156dd));	// 9587 add     al, byte_156DD ;~ 01C2:3D7E
+cs=0x1c2;eip=0x003d82; 	X(MOV(byte_156dd, al));	// 9588 mov     byte_156DD, al ;~ 01C2:3D82
+cs=0x1c2;eip=0x003d85; 	J(JNC(loc_13f9a));	// 9589 jnb     short loc_13F9A ;~ 01C2:3D85
+cs=0x1c2;eip=0x003d87; 	T(TEST(byte_156de, 0x0FF));	// 9590 test    byte_156DE, 0FFh ;~ 01C2:3D87
+cs=0x1c2;eip=0x003d8c; 	J(JZ(loc_13f94));	// 9591 jz      short loc_13F94 ;~ 01C2:3D8C
+cs=0x1c2;eip=0x003d8e; 	X(INC(byte_156db));	// 9592 inc     byte_156DB ;~ 01C2:3D8E
+cs=0x1c2;eip=0x003d92; 	J(JMP(loc_13fc9));	// 9593 jmp     short loc_13FC9 ;~ 01C2:3D92
+loc_13f94:
+	// 5314 
+cs=0x1c2;eip=0x003d94; 	X(DEC(byte_156db));	// 9597 dec     byte_156DB ;~ 01C2:3D94
+cs=0x1c2;eip=0x003d98; 	J(JMP(loc_13fc9));	// 9598 jmp     short loc_13FC9 ;~ 01C2:3D98
+loc_13f9a:
+	// 5315 
+cs=0x1c2;eip=0x003d9a; 	J(JMP(loc_13fdc));	// 9602 jmp     short loc_13FDC ;~ 01C2:3D9A
+loc_13f9c:
+	// 5316 
+cs=0x1c2;eip=0x003d9c; 	X(INC(byte_156d9));	// 9606 inc     byte_156D9 ;~ 01C2:3D9C
+cs=0x1c2;eip=0x003da0; 	T(MOV(bl, byte_156e0));	// 9607 mov     bl, byte_156E0 ;~ 01C2:3DA0
+cs=0x1c2;eip=0x003da4; 	J(CALL(sub_140c6,0));	// 9608 call    sub_140C6 ;~ 01C2:3DA4
+cs=0x1c2;eip=0x003da7; 	T(MOV(bl, byte_156d9));	// 9609 mov     bl, byte_156D9 ;~ 01C2:3DA7
+cs=0x1c2;eip=0x003dab; 	T(MOV(al, *(raddr(ds,bx+di))));	// 9610 mov     al, [bx+di] ;~ 01C2:3DAB
+cs=0x1c2;eip=0x003dad; 	T(OR(al, al));	// 9611 or      al, al ;~ 01C2:3DAD
+cs=0x1c2;eip=0x003daf; 	J(JZ(loc_13fce));	// 9612 jz      short loc_13FCE ;~ 01C2:3DAF
+cs=0x1c2;eip=0x003db1; 	J(JS(loc_13fd5));	// 9613 js      short loc_13FD5 ;~ 01C2:3DB1
+cs=0x1c2;eip=0x003db3; 	T(DEC(al));	// 9614 dec     al ;~ 01C2:3DB3
+cs=0x1c2;eip=0x003db5; 	X(MOV(byte_156df, al));	// 9615 mov     byte_156DF, al ;~ 01C2:3DB5
+cs=0x1c2;eip=0x003db8; 	T(MOV(al, *(raddr(ds,bx+si))));	// 9616 mov     al, [bx+si] ;~ 01C2:3DB8
+cs=0x1c2;eip=0x003dba; 	X(MOV(byte_156db, al));	// 9617 mov     byte_156DB, al ;~ 01C2:3DBA
+cs=0x1c2;eip=0x003dbd; 	T(CMP(al, 0x0FF));	// 9618 cmp     al, 0FFh ;~ 01C2:3DBD
+cs=0x1c2;eip=0x003dbf; 	J(JNZ(loc_13fc9));	// 9619 jnz     short loc_13FC9 ;~ 01C2:3DBF
+cs=0x1c2;eip=0x003dc1; 	R(IN(al, 0x61));	// 9620 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:3DC1
+cs=0x1c2;eip=0x003dc3; 	T(AND(al, 0x0FC));	// 9628 and     al, 0FCh ;~ 01C2:3DC3
+cs=0x1c2;eip=0x003dc5; 	R(OUT(0x61, al));	// 9629 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3DC5
+cs=0x1c2;eip=0x003dc7; 	J(JMP(loc_13fdc));	// 9637 jmp     short loc_13FDC ;~ 01C2:3DC7
+loc_13fc9:
+	// 5317 
+cs=0x1c2;eip=0x003dc9; 	J(CALL(sub_13fe7,0));	// 9642 call    sub_13FE7 ;~ 01C2:3DC9
+cs=0x1c2;eip=0x003dcc; 	J(JMP(loc_13fdc));	// 9643 jmp     short loc_13FDC ;~ 01C2:3DCC
+loc_13fce:
+	// 5318 
+cs=0x1c2;eip=0x003dce; 	T(MOV(al, 0));	// 9647 mov     al, 0 ;~ 01C2:3DCE
+cs=0x1c2;eip=0x003dd0; 	J(CALL(sub_14005,0));	// 9648 call    sub_14005 ;~ 01C2:3DD0
+cs=0x1c2;eip=0x003dd3; 	J(JMP(loc_13fdc));	// 9649 jmp     short loc_13FDC ;~ 01C2:3DD3
+loc_13fd5:
+	// 5319 
+cs=0x1c2;eip=0x003dd5; 	T(MOV(bl, byte_156e0));	// 9653 mov     bl, byte_156E0 ;~ 01C2:3DD5
+cs=0x1c2;eip=0x003dd9; 	J(CALL(sub_140a5,0));	// 9654 call    sub_140A5 ;~ 01C2:3DD9
+loc_13fdc:
+	// 5320 
+cs=0x1c2;eip=0x003ddc; 	T(MOV(al, 0x20));	// 9658 mov     al, 20h ; ' ' ;~ 01C2:3DDC
+cs=0x1c2;eip=0x003dde; 	R(OUT(0x20, al));	// 9659 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:3DDE
+cs=0x1c2;eip=0x003de0; 	X(POP(ds));	// 9660 pop     ds ;~ 01C2:3DE0
+cs=0x1c2;eip=0x003de1; 	X(POP(di));	// 9662 pop     di ;~ 01C2:3DE1
+cs=0x1c2;eip=0x003de2; 	X(POP(si));	// 9663 pop     si ;~ 01C2:3DE2
+cs=0x1c2;eip=0x003de3; 	X(POP(cx));	// 9664 pop     cx ;~ 01C2:3DE3
+cs=0x1c2;eip=0x003de4; 	X(POP(bx));	// 9665 pop     bx ;~ 01C2:3DE4
+cs=0x1c2;eip=0x003de5; 	X(POP(ax));	// 9666 pop     ax ;~ 01C2:3DE5
+cs=0x1c2;eip=0x003de6; 	R(IRET);	// 9667 iret ;~ 01C2:3DE6
+sub_14015:
+	// 9725 
+cs=0x1c2;eip=0x003e15; 	T(TEST(byte_156d8, 0x0FF));	// 9727 test    byte_156D8, 0FFh ;~ 01C2:3E15
+ret_1c2_3e1a:
+	// 5323 
+cs=0x1c2;eip=0x003e1a; 	J(JNZ(loc_14020));	// 9728 jnz     short loc_14020 ;~ 01C2:3E1A
+cs=0x1c2;eip=0x003e1c; 	J(CALL(sub_14005,0));	// 9729 call    sub_14005 ;~ 01C2:3E1C
+cs=0x1c2;eip=0x003e1f; 	R(RETN(0));	// 9730 retn ;~ 01C2:3E1F
+loc_14020:
+	// 5324 
+cs=0x1c2;eip=0x003e20; 	T(CMP(al, 0x0B));	// 9734 cmp     al, 0Bh ;~ 01C2:3E20
+cs=0x1c2;eip=0x003e22; 	J(JNZ(loc_14028));	// 9735 jnz     short loc_14028 ;~ 01C2:3E22
+cs=0x1c2;eip=0x003e24; 	J(CALL(sub_14100,0));	// 9736 call    sub_14100 ;~ 01C2:3E24
+cs=0x1c2;eip=0x003e27; 	R(RETN(0));	// 9737 retn ;~ 01C2:3E27
+loc_14028:
+	// 5325 
+cs=0x1c2;eip=0x003e28; 	T(CMP(al, 0x14));	// 9741 cmp     al, 14h ;~ 01C2:3E28
+cs=0x1c2;eip=0x003e2a; 	J(JNZ(loc_14030));	// 9742 jnz     short loc_14030 ;~ 01C2:3E2A
+cs=0x1c2;eip=0x003e2c; 	J(CALL(sub_141d2,0));	// 9743 call    sub_141D2 ;~ 01C2:3E2C
+cs=0x1c2;eip=0x003e2f; 	R(RETN(0));	// 9744 retn ;~ 01C2:3E2F
+loc_14030:
+	// 5326 
+cs=0x1c2;eip=0x003e30; 	X(PUSH(bx));	// 9748 push    bx ;~ 01C2:3E30
+cs=0x1c2;eip=0x003e31; 	X(PUSH(cx));	// 9749 push    cx ;~ 01C2:3E31
+cs=0x1c2;eip=0x003e32; 	X(PUSH(si));	// 9750 push    si ;~ 01C2:3E32
+cs=0x1c2;eip=0x003e33; 	X(PUSH(di));	// 9751 push    di ;~ 01C2:3E33
+cs=0x1c2;eip=0x003e34; 	X(PUSH(ax));	// 9752 push    ax ;~ 01C2:3E34
+cs=0x1c2;eip=0x003e35; 	X(PUSH(ds));	// 9753 push    ds ;~ 01C2:3E35
+loc_14036:
+	// 5327 
+cs=0x1c2;eip=0x003e36; 	T(MOV(ax, 0x1d2));	// 9756 mov     ax, 1030h ;~ 01C2:3E36
+cs=0x1c2;eip=0x003e39; 	T(MOV(ds, ax));	// 9757 mov     ds, ax ;~ 01C2:3E39
+cs=0x1c2;eip=0x003e3b; 	T(MOV(si, 0x2C));	// 9759 mov     si, 2Ch ; ',' ;~ 01C2:3E3B
+cs=0x1c2;eip=0x003e3e; 	T(MOV(ah, 0));	// 9760 mov     ah, 0 ;~ 01C2:3E3E
+cs=0x1c2;eip=0x003e40; 	T(LODSB);	// 9761 lodsb ;~ 01C2:3E40
+cs=0x1c2;eip=0x003e41; 	T(AND(al, 0x20));	// 9762 and     al, 20h ;~ 01C2:3E41
+cs=0x1c2;eip=0x003e43; 	J(JNZ(loc_14047));	// 9763 jnz     short loc_14047 ;~ 01C2:3E43
+cs=0x1c2;eip=0x003e45; 	T(INC(ah));	// 9764 inc     ah ;~ 01C2:3E45
+loc_14047:
+	// 5328 
+cs=0x1c2;eip=0x003e47; 	T(LODSB);	// 9767 lodsb ;~ 01C2:3E47
+cs=0x1c2;eip=0x003e48; 	T(AND(al, 0x0FF));	// 9768 and     al, 0FFh ;~ 01C2:3E48
+cs=0x1c2;eip=0x003e4a; 	J(JZ(loc_1404e));	// 9769 jz      short loc_1404E ;~ 01C2:3E4A
+cs=0x1c2;eip=0x003e4c; 	T(INC(ah));	// 9770 inc     ah ;~ 01C2:3E4C
+loc_1404e:
+	// 5329 
+cs=0x1c2;eip=0x003e4e; 	X(POP(ds));	// 9773 pop     ds ;~ 01C2:3E4E
+cs=0x1c2;eip=0x003e4f; 	T(OR(ah, ah));	// 9775 or      ah, ah ;~ 01C2:3E4F
+cs=0x1c2;eip=0x003e51; 	J(JZ(loc_14059));	// 9776 jz      short loc_14059 ;~ 01C2:3E51
+cs=0x1c2;eip=0x003e53; 	X(MOV(word_156b0, 0x200));	// 9777 mov     word_156B0, 200h ;~ 01C2:3E53
+loc_14059:
+	// 5330 
+cs=0x1c2;eip=0x003e59; 	X(POP(ax));	// 9780 pop     ax ;~ 01C2:3E59
+cs=0x1c2;eip=0x003e5a; 	T(TEST(byte_156da, 0x0FF));	// 9781 test    byte_156DA, 0FFh ;~ 01C2:3E5A
+cs=0x1c2;eip=0x003e5f; 	J(JZ(loc_1407f));	// 9782 jz      short loc_1407F ;~ 01C2:3E5F
+cs=0x1c2;eip=0x003e61; 	T(MOV(si, 0x12A4));	// 9783 mov     si, 12A4h ;~ 01C2:3E61
+cs=0x1c2;eip=0x003e64; 	T(MOV(bh, al));	// 9784 mov     bh, al ;~ 01C2:3E64
+cs=0x1c2;eip=0x003e66; 	T(MOV(bl, byte_156e0));	// 9785 mov     bl, byte_156E0 ;~ 01C2:3E66
+cs=0x1c2;eip=0x003e6a; 	T(CMP(bl, bh));	// 9786 cmp     bl, bh ;~ 01C2:3E6A
+cs=0x1c2;eip=0x003e6c; 	J(JZ(loc_1407d));	// 9787 jz      short loc_1407D ;~ 01C2:3E6C
+loc_1406e:
+	// 5331 
+cs=0x1c2;eip=0x003e6e; 	T(LODSB);	// 9790 lodsb ;~ 01C2:3E6E
+cs=0x1c2;eip=0x003e6f; 	T(OR(al, al));	// 9791 or      al, al ;~ 01C2:3E6F
+cs=0x1c2;eip=0x003e71; 	J(JS(loc_1407d));	// 9792 js      short loc_1407D ;~ 01C2:3E71
+cs=0x1c2;eip=0x003e73; 	T(CMP(al, bl));	// 9793 cmp     al, bl ;~ 01C2:3E73
+cs=0x1c2;eip=0x003e75; 	J(JZ(loc_1409f));	// 9794 jz      short loc_1409F ;~ 01C2:3E75
+cs=0x1c2;eip=0x003e77; 	T(CMP(al, bh));	// 9795 cmp     al, bh ;~ 01C2:3E77
+cs=0x1c2;eip=0x003e79; 	J(JZ(loc_1407d));	// 9796 jz      short loc_1407D ;~ 01C2:3E79
+cs=0x1c2;eip=0x003e7b; 	J(JMP(loc_1406e));	// 9797 jmp     short loc_1406E ;~ 01C2:3E7B
+loc_1407d:
+	// 5332 
+cs=0x1c2;eip=0x003e7d; 	T(MOV(al, bh));	// 9802 mov     al, bh ;~ 01C2:3E7D
+loc_1407f:
+	// 5333 
+cs=0x1c2;eip=0x003e7f; 	T(CLI);	// 9805 cli ;~ 01C2:3E7F
+cs=0x1c2;eip=0x003e80; 	X(MOV(byte_156e0, al));	// 9806 mov     byte_156E0, al ;~ 01C2:3E80
+cs=0x1c2;eip=0x003e83; 	T(CMP(al, 0x0A));	// 9807 cmp     al, 0Ah ;~ 01C2:3E83
+cs=0x1c2;eip=0x003e85; 	J(JNZ(loc_1408c));	// 9808 jnz     short loc_1408C ;~ 01C2:3E85
+cs=0x1c2;eip=0x003e87; 	X(MOV(byte_156de, 0x0FF));	// 9809 mov     byte_156DE, 0FFh ;~ 01C2:3E87
+loc_1408c:
+	// 5334 
+cs=0x1c2;eip=0x003e8c; 	X(MOV(byte_156da, 1));	// 9812 mov     byte_156DA, 1 ;~ 01C2:3E8C
+cs=0x1c2;eip=0x003e91; 	T(MOV(bl, al));	// 9813 mov     bl, al ;~ 01C2:3E91
+cs=0x1c2;eip=0x003e93; 	T(XOR(bh, bh));	// 9814 xor     bh, bh ;~ 01C2:3E93
+cs=0x1c2;eip=0x003e95; 	T(MOV(al, *(raddr(ds,bx+0x1102))));	// 9815 mov     al, [bx+1102h] ;~ 01C2:3E95
+cs=0x1c2;eip=0x003e99; 	X(MOV(byte_156dc, al));	// 9816 mov     byte_156DC, al ;~ 01C2:3E99
+cs=0x1c2;eip=0x003e9c; 	J(CALL(sub_140a5,0));	// 9817 call    sub_140A5 ;~ 01C2:3E9C
+loc_1409f:
+	// 5335 
+cs=0x1c2;eip=0x003e9f; 	T(STI);	// 9820 sti ;~ 01C2:3E9F
+cs=0x1c2;eip=0x003ea0; 	X(POP(di));	// 9821 pop     di ;~ 01C2:3EA0
+cs=0x1c2;eip=0x003ea1; 	X(POP(si));	// 9822 pop     si ;~ 01C2:3EA1
+cs=0x1c2;eip=0x003ea2; 	X(POP(cx));	// 9823 pop     cx ;~ 01C2:3EA2
+cs=0x1c2;eip=0x003ea3; 	X(POP(bx));	// 9824 pop     bx ;~ 01C2:3EA3
+cs=0x1c2;eip=0x003ea4; 	R(RETN(0));	// 9825 retn ;~ 01C2:3EA4
+seg001_3f42_proc:
+	// 9929 
+cs=0x1c2;eip=0x003f42; 	T(STI);	// 9929 sti ;~ 01C2:3F42
+ret_1c2_3f43:
+	// 5340 
+cs=0x1c2;eip=0x003f43; 	X(PUSH(ax));	// 9930 push    ax ;~ 01C2:3F43
+cs=0x1c2;eip=0x003f44; 	X(PUSH(ds));	// 9931 push    ds ;~ 01C2:3F44
+loc_14145:
+	// 5341 
+cs=0x1c2;eip=0x003f45; 	T(MOV(ax, seg_offset(seg002)));	// 9934 mov     ax, seg seg002 ;~ 01C2:3F45
+cs=0x1c2;eip=0x003f48; 	T(MOV(ds, ax));	// 9935 mov     ds, ax ;~ 01C2:3F48
+cs=0x1c2;eip=0x003f4a; 	T(CMP(word_156d2, 0x1F4));	// 9936 cmp     word_156D2, 1F4h ;~ 01C2:3F4A
+cs=0x1c2;eip=0x003f50; 	J(JC(loc_14182));	// 9937 jb      short loc_14182 ;~ 01C2:3F50
+cs=0x1c2;eip=0x003f52; 	X(DEC(word_156b2));	// 9938 dec     word_156B2 ;~ 01C2:3F52
+cs=0x1c2;eip=0x003f56; 	J(JNS(loc_1417a));	// 9939 jns     short loc_1417A ;~ 01C2:3F56
+cs=0x1c2;eip=0x003f58; 	T(MOV(ax, 0x1E));	// 9940 mov     ax, 1Eh ;~ 01C2:3F58
+cs=0x1c2;eip=0x003f5b; 	J(CALL(sub_13c68,0));	// 9941 call    sub_13C68 ;~ 01C2:3F5B
+cs=0x1c2;eip=0x003f5e; 	T(ADD(ax, 5));	// 9942 add     ax, 5 ;~ 01C2:3F5E
+cs=0x1c2;eip=0x003f61; 	X(MOV(word_156b2, ax));	// 9943 mov     word_156B2, ax ;~ 01C2:3F61
+cs=0x1c2;eip=0x003f64; 	X(PUSH(si));	// 9944 push    si ;~ 01C2:3F64
+cs=0x1c2;eip=0x003f65; 	T(MOV(si, word_156b4));	// 9945 mov     si, word_156B4 ;~ 01C2:3F65
+cs=0x1c2;eip=0x003f69; 	T(LODSW);	// 9946 lodsw ;~ 01C2:3F69
+cs=0x1c2;eip=0x003f6a; 	T(OR(ax, ax));	// 9947 or      ax, ax ;~ 01C2:3F6A
+cs=0x1c2;eip=0x003f6c; 	J(JNZ(loc_14172));	// 9948 jnz     short loc_14172 ;~ 01C2:3F6C
+cs=0x1c2;eip=0x003f6e; 	T(MOV(si, 0x1076));	// 9949 mov     si, 1076h ;~ 01C2:3F6E
+cs=0x1c2;eip=0x003f71; 	T(LODSW);	// 9950 lodsw ;~ 01C2:3F71
+loc_14172:
+	// 5342 
+cs=0x1c2;eip=0x003f72; 	X(MOV(word_156b4, si));	// 9953 mov     word_156B4, si ;~ 01C2:3F72
+cs=0x1c2;eip=0x003f76; 	X(POP(si));	// 9954 pop     si ;~ 01C2:3F76
+cs=0x1c2;eip=0x003f77; 	X(MOV(word_156cd, ax));	// 9955 mov     word_156CD, ax ;~ 01C2:3F77
+loc_1417a:
+	// 5343 
+cs=0x1c2;eip=0x003f7a; 	X(ROR(word_156cd, 1));	// 9959 ror     word_156CD, 1 ;~ 01C2:3F7A
+cs=0x1c2;eip=0x003f7e; 	J(JNC(loc_141bc));	// 9960 jnb     short loc_141BC ;~ 01C2:3F7E
+cs=0x1c2;eip=0x003f80; 	J(JMP(loc_1419d));	// 9961 jmp     short loc_1419D ;~ 01C2:3F80
+loc_14182:
+	// 5344 
+cs=0x1c2;eip=0x003f82; 	X(DEC(byte_156cc));	// 9965 dec     byte_156CC ;~ 01C2:3F82
+cs=0x1c2;eip=0x003f86; 	J(JNS(loc_1417a));	// 9966 jns     short loc_1417A ;~ 01C2:3F86
+cs=0x1c2;eip=0x003f88; 	X(PUSH(si));	// 9967 push    si ;~ 01C2:3F88
+cs=0x1c2;eip=0x003f89; 	T(MOV(si, word_156be));	// 9968 mov     si, word_156BE ;~ 01C2:3F89
+cs=0x1c2;eip=0x003f8d; 	T(LODSW);	// 9969 lodsw ;~ 01C2:3F8D
+cs=0x1c2;eip=0x003f8e; 	X(MOV(word_156be, si));	// 9970 mov     word_156BE, si ;~ 01C2:3F8E
+cs=0x1c2;eip=0x003f92; 	X(MOV(word_156cd, ax));	// 9971 mov     word_156CD, ax ;~ 01C2:3F92
+cs=0x1c2;eip=0x003f95; 	X(POP(si));	// 9972 pop     si ;~ 01C2:3F95
+cs=0x1c2;eip=0x003f96; 	X(MOV(byte_156cc, 0x64));	// 9973 mov     byte_156CC, 64h ; 'd' ;~ 01C2:3F96
+cs=0x1c2;eip=0x003f9b; 	J(JMP(loc_1417a));	// 9974 jmp     short loc_1417A ;~ 01C2:3F9B
+loc_1419d:
+	// 5345 
+cs=0x1c2;eip=0x003f9d; 	X(DEC(byte_156cf));	// 9978 dec     byte_156CF ;~ 01C2:3F9D
+cs=0x1c2;eip=0x003fa1; 	J(JNS(loc_141ae));	// 9979 jns     short loc_141AE ;~ 01C2:3FA1
+cs=0x1c2;eip=0x003fa3; 	J(CALL(sub_13c4f,0));	// 9980 call    sub_13C4F ;~ 01C2:3FA3
+cs=0x1c2;eip=0x003fa6; 	X(MOV(word_156d0, ax));	// 9981 mov     word_156D0, ax ;~ 01C2:3FA6
+cs=0x1c2;eip=0x003fa9; 	X(MOV(byte_156cf, 0x0F));	// 9982 mov     byte_156CF, 0Fh ;~ 01C2:3FA9
+loc_141ae:
+	// 5346 
+cs=0x1c2;eip=0x003fae; 	X(SHR(word_156d0, 1));	// 9985 shr     word_156D0, 1 ;~ 01C2:3FAE
+cs=0x1c2;eip=0x003fb2; 	J(JNC(loc_141bc));	// 9986 jnb     short loc_141BC ;~ 01C2:3FB2
+cs=0x1c2;eip=0x003fb4; 	R(IN(al, 0x61));	// 9987 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:3FB4
+cs=0x1c2;eip=0x003fb6; 	T(AND(al, 0x0FE));	// 9995 and     al, 0FEh ;~ 01C2:3FB6
+cs=0x1c2;eip=0x003fb8; 	T(XOR(al, 2));	// 9996 xor     al, 2 ;~ 01C2:3FB8
+cs=0x1c2;eip=0x003fba; 	R(OUT(0x61, al));	// 9997 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3FBA
+loc_141bc:
+	// 5347 
+cs=0x1c2;eip=0x003fbc; 	T(MOV(al, 0x20));	// 10008 mov     al, 20h ; ' ' ;~ 01C2:3FBC
+cs=0x1c2;eip=0x003fbe; 	R(OUT(0x20, al));	// 10009 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:3FBE
+cs=0x1c2;eip=0x003fc0; 	X(DEC(word_156d2));	// 10010 dec     word_156D2 ;~ 01C2:3FC0
+cs=0x1c2;eip=0x003fc4; 	J(JNZ(loc_141cf));	// 10011 jnz     short loc_141CF ;~ 01C2:3FC4
+cs=0x1c2;eip=0x003fc6; 	J(CALL(sub_13ea0,0));	// 10012 call    sub_13EA0 ;~ 01C2:3FC6
+cs=0x1c2;eip=0x003fc9; 	T(MOV(ax, 0x1080));	// 10013 mov     ax, 1080h ;~ 01C2:3FC9
+cs=0x1c2;eip=0x003fcc; 	X(MOV(word_156be, ax));	// 10014 mov     word_156BE, ax ;~ 01C2:3FCC
+loc_141cf:
+	// 5348 
+cs=0x1c2;eip=0x003fcf; 	X(POP(ds));	// 10017 pop     ds ;~ 01C2:3FCF
+cs=0x1c2;eip=0x003fd0; 	X(POP(ax));	// 10019 pop     ax ;~ 01C2:3FD0
+cs=0x1c2;eip=0x003fd1; 	R(IRET);	// 10020 iret ;~ 01C2:3FD1
+seg001_4014_proc:
+	// 10062 
+cs=0x1c2;eip=0x004014; 	T(STI);	// 10062 sti ;~ 01C2:4014
+ret_1c2_4015:
+	// 5350 
+cs=0x1c2;eip=0x004015; 	X(PUSH(ax));	// 10063 push    ax ;~ 01C2:4015
+cs=0x1c2;eip=0x004016; 	X(PUSH(ds));	// 10064 push    ds ;~ 01C2:4016
+loc_14217:
+	// 5351 
+cs=0x1c2;eip=0x004017; 	T(MOV(ax, seg_offset(seg002)));	// 10067 mov     ax, seg seg002 ;~ 01C2:4017
+cs=0x1c2;eip=0x00401a; 	T(MOV(ds, ax));	// 10068 mov     ds, ax ;~ 01C2:401A
+cs=0x1c2;eip=0x00401c; 	X(DEC(byte_156cf));	// 10070 dec     byte_156CF ;~ 01C2:401C
+cs=0x1c2;eip=0x004020; 	J(JNS(loc_1422d));	// 10071 jns     short loc_1422D ;~ 01C2:4020
+cs=0x1c2;eip=0x004022; 	J(CALL(sub_13c4f,0));	// 10072 call    sub_13C4F ;~ 01C2:4022
+cs=0x1c2;eip=0x004025; 	X(MOV(word_156d0, ax));	// 10073 mov     word_156D0, ax ;~ 01C2:4025
+cs=0x1c2;eip=0x004028; 	X(MOV(byte_156cf, 0x0F));	// 10074 mov     byte_156CF, 0Fh ;~ 01C2:4028
+loc_1422d:
+	// 5352 
+cs=0x1c2;eip=0x00402d; 	X(SHR(word_156d0, 1));	// 10077 shr     word_156D0, 1 ;~ 01C2:402D
+cs=0x1c2;eip=0x004031; 	J(JNC(loc_141bc));	// 10078 jnb     short loc_141BC ;~ 01C2:4031
+cs=0x1c2;eip=0x004033; 	R(IN(al, 0x61));	// 10079 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:4033
+cs=0x1c2;eip=0x004035; 	T(AND(al, 0x0FE));	// 10087 and     al, 0FEh ;~ 01C2:4035
+cs=0x1c2;eip=0x004037; 	T(XOR(al, 2));	// 10088 xor     al, 2 ;~ 01C2:4037
+cs=0x1c2;eip=0x004039; 	R(OUT(0x61, al));	// 10089 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:4039
+cs=0x1c2;eip=0x00403b; 	T(MOV(al, 0x20));	// 10097 mov     al, 20h ; ' ' ;~ 01C2:403B
+cs=0x1c2;eip=0x00403d; 	R(OUT(0x20, al));	// 10098 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:403D
+cs=0x1c2;eip=0x00403f; 	X(DEC(word_156d2));	// 10099 dec     word_156D2 ;~ 01C2:403F
+cs=0x1c2;eip=0x004043; 	J(JNZ(loc_14248));	// 10100 jnz     short loc_14248 ;~ 01C2:4043
+cs=0x1c2;eip=0x004045; 	J(CALL(sub_13ea0,0));	// 10101 call    sub_13EA0 ;~ 01C2:4045
+loc_14248:
+	// 5353 
+cs=0x1c2;eip=0x004048; 	X(POP(ds));	// 10104 pop     ds ;~ 01C2:4048
+cs=0x1c2;eip=0x004049; 	X(POP(ax));	// 10106 pop     ax ;~ 01C2:4049
+cs=0x1c2;eip=0x00404a; 	R(IRET);	// 10107 iret ;~ 01C2:404A
+seg001_4116_proc:
+	// 10287 
+loc_14316:
+	// 5368 
+cs=0x1c2;eip=0x004116; 	X(PUSH(es));	// 10288 push    es ;~ 01C2:4116
+cs=0x1c2;eip=0x004117; 	T(MOV(dx, 0));	// 10289 mov     dx, 0 ;~ 01C2:4117
+loc_1431a:
+	// 5369 
+cs=0x1c2;eip=0x00411a; 	T(MOV(ax, seg_offset(seg003)));	// 10292 mov     ax, seg seg003 ;~ 01C2:411A
+cs=0x1c2;eip=0x00411d; 	T(MOV(es, ax));	// 10293 mov     es, ax ;~ 01C2:411D
+cs=0x1c2;eip=0x00411f; 	T(MOV(ax, word_1fed4));	// 10295 mov     ax, word_1FED4 ;~ 01C2:411F
+cs=0x1c2;eip=0x004122; 	T(SHL(ax, 1));	// 10296 shl     ax, 1 ;~ 01C2:4122
+cs=0x1c2;eip=0x004124; 	X(MOV(word_1fed2, ax));	// 10297 mov     word_1FED2, ax ;~ 01C2:4124
+loc_14327:
+	// 5370 
+cs=0x1c2;eip=0x004127; 	T(MOV(cx, word_1fed4));	// 10300 mov     cx, word_1FED4 ;~ 01C2:4127
+cs=0x1c2;eip=0x00412b; 	T(MOV(si, 0x0BD97));	// 10301 mov     si, 0BD97h ;~ 01C2:412B
+loc_1432e:
+	// 5371 
+cs=0x1c2;eip=0x00412e; 	T(LODSW);	// 10304 lodsw ;~ 01C2:412E
+cs=0x1c2;eip=0x00412f; 	T(MOV(bp, si));	// 10305 mov     bp, si ;~ 01C2:412F
+cs=0x1c2;eip=0x004131; 	T(ADD(ax, dx));	// 10306 add     ax, dx ;~ 01C2:4131
+cs=0x1c2;eip=0x004133; 	T(MOV(si, ax));	// 10307 mov     si, ax ;~ 01C2:4133
+cs=0x1c2;eip=0x004135; 	T(LODSW);	// 10308 lodsw ;~ 01C2:4135
+cs=0x1c2;eip=0x004136; 	T(AND(ax, 0x0AAAA));	// 10309 and     ax, 0AAAAh ;~ 01C2:4136
+cs=0x1c2;eip=0x004139; 	X(STOSW);	// 10310 stosw ;~ 01C2:4139
+cs=0x1c2;eip=0x00413a; 	T(MOV(si, bp));	// 10311 mov     si, bp ;~ 01C2:413A
+cs=0x1c2;eip=0x00413c; 	J(LOOP(loc_1432e));	// 10312 loop    loc_1432E ;~ 01C2:413C
+cs=0x1c2;eip=0x00413e; 	T(ADD(dx, 2));	// 10313 add     dx, 2 ;~ 01C2:413E
+cs=0x1c2;eip=0x004141; 	T(ADD(di, 0x2000));	// 10314 add     di, 2000h ;~ 01C2:4141
+cs=0x1c2;eip=0x004145; 	T(SUB(di, word_1fed2));	// 10315 sub     di, word_1FED2 ;~ 01C2:4145
+cs=0x1c2;eip=0x004149; 	T(MOV(cx, word_1fed4));	// 10316 mov     cx, word_1FED4 ;~ 01C2:4149
+cs=0x1c2;eip=0x00414d; 	T(MOV(si, 0x0BD97));	// 10317 mov     si, 0BD97h ;~ 01C2:414D
+loc_14350:
+	// 5372 
+cs=0x1c2;eip=0x004150; 	T(LODSW);	// 10320 lodsw ;~ 01C2:4150
+cs=0x1c2;eip=0x004151; 	T(MOV(bp, si));	// 10321 mov     bp, si ;~ 01C2:4151
+cs=0x1c2;eip=0x004153; 	T(ADD(ax, dx));	// 10322 add     ax, dx ;~ 01C2:4153
+cs=0x1c2;eip=0x004155; 	T(MOV(si, ax));	// 10323 mov     si, ax ;~ 01C2:4155
+cs=0x1c2;eip=0x004157; 	T(LODSW);	// 10324 lodsw ;~ 01C2:4157
+cs=0x1c2;eip=0x004158; 	T(AND(ax, 0x0AAAA));	// 10325 and     ax, 0AAAAh ;~ 01C2:4158
+cs=0x1c2;eip=0x00415b; 	X(STOSW);	// 10326 stosw ;~ 01C2:415B
+cs=0x1c2;eip=0x00415c; 	T(MOV(si, bp));	// 10327 mov     si, bp ;~ 01C2:415C
+cs=0x1c2;eip=0x00415e; 	J(LOOP(loc_14350));	// 10328 loop    loc_14350 ;~ 01C2:415E
+cs=0x1c2;eip=0x004160; 	T(ADD(dx, 2));	// 10329 add     dx, 2 ;~ 01C2:4160
+cs=0x1c2;eip=0x004163; 	T(ADD(di, 0x0E050));	// 10330 add     di, 0E050h ;~ 01C2:4163
+cs=0x1c2;eip=0x004167; 	T(SUB(di, word_1fed2));	// 10331 sub     di, word_1FED2 ;~ 01C2:4167
+cs=0x1c2;eip=0x00416b; 	T(CMP(dx, 0x10));	// 10332 cmp     dx, 10h ;~ 01C2:416B
+cs=0x1c2;eip=0x00416e; 	J(JNZ(loc_14327));	// 10333 jnz     short loc_14327 ;~ 01C2:416E
+cs=0x1c2;eip=0x004170; 	X(POP(es));	// 10334 pop     es ;~ 01C2:4170
+cs=0x1c2;eip=0x004171; 	R(RETN(0));	// 10336 retn ;~ 01C2:4171
+seg001_41be_proc:
+	// 10409 
+loc_143be:
+	// 5376 
+cs=0x1c2;eip=0x0041be; 	J(CALL(sub_134fa,0));	// 10410 call    sub_134FA ;~ 01C2:41BE
+cs=0x1c2;eip=0x0041c1; 	J(CALL(sub_13526,0));	// 10411 call    sub_13526 ;~ 01C2:41C1
+cs=0x1c2;eip=0x0041c4; 	T(MOV(si, 0x0B9AB));	// 10412 mov     si, 0B9ABh ;~ 01C2:41C4
+cs=0x1c2;eip=0x0041c7; 	J(CALL(sub_142f4,0));	// 10413 call    sub_142F4 ;~ 01C2:41C7
+cs=0x1c2;eip=0x0041ca; 	T(MOV(si, 0x0BA6E));	// 10414 mov     si, 0BA6Eh ;~ 01C2:41CA
+cs=0x1c2;eip=0x0041cd; 	X(MOV(word_1fed0, si));	// 10415 mov     word_1FED0, si ;~ 01C2:41CD
+cs=0x1c2;eip=0x0041d1; 	T(MOV(si, 0x0E1E));	// 10416 mov     si, 0E1Eh ;~ 01C2:41D1
+cs=0x1c2;eip=0x0041d4; 	X(MOV(word_201d3, 0));	// 10417 mov     word_201D3, 0 ;~ 01C2:41D4
+cs=0x1c2;eip=0x0041da; 	T(MOV(cx, 5));	// 10418 mov     cx, 5 ;~ 01C2:41DA
+loc_143dd:
+	// 5377 
+cs=0x1c2;eip=0x0041dd; 	X(PUSH(cx));	// 10421 push    cx ;~ 01C2:41DD
+cs=0x1c2;eip=0x0041de; 	T(LODSW);	// 10422 lodsw ;~ 01C2:41DE
+cs=0x1c2;eip=0x0041df; 	X(PUSH(si));	// 10423 push    si ;~ 01C2:41DF
+cs=0x1c2;eip=0x0041e0; 	J(CALL(sub_1446b,0));	// 10424 call    sub_1446B ;~ 01C2:41E0
+cs=0x1c2;eip=0x0041e3; 	X(POP(si));	// 10425 pop     si ;~ 01C2:41E3
+cs=0x1c2;eip=0x0041e4; 	X(POP(cx));	// 10426 pop     cx ;~ 01C2:41E4
+cs=0x1c2;eip=0x0041e5; 	J(LOOP(loc_143dd));	// 10427 loop    loc_143DD ;~ 01C2:41E5
+cs=0x1c2;eip=0x0041e7; 	T(MOV(di, 0x0E1E));	// 10428 mov     di, 0E1Eh ;~ 01C2:41E7
+cs=0x1c2;eip=0x0041ea; 	T(MOV(si, 0x0BA78));	// 10429 mov     si, 0BA78h ;~ 01C2:41EA
+cs=0x1c2;eip=0x0041ed; 	X(MOV(word_1fed0, si));	// 10430 mov     word_1FED0, si ;~ 01C2:41ED
+cs=0x1c2;eip=0x0041f1; 	T(MOV(si, 0x0BA62));	// 10431 mov     si, 0BA62h ;~ 01C2:41F1
+cs=0x1c2;eip=0x0041f4; 	X(PUSH(bx));	// 10432 push    bx ;~ 01C2:41F4
+cs=0x1c2;eip=0x0041f5; 	T(MOV(bx, 0x0BA35));	// 10433 mov     bx, 0BA35h ;~ 01C2:41F5
+loc_143f8:
+	// 5378 
+cs=0x1c2;eip=0x0041f8; 	X(PUSH(si));	// 10437 push    si ;~ 01C2:41F8
+cs=0x1c2;eip=0x0041f9; 	X(PUSH(di));	// 10438 push    di ;~ 01C2:41F9
+cs=0x1c2;eip=0x0041fa; 	X(MOV(word_156e6, 0));	// 10439 mov     word_156E6, 0 ;~ 01C2:41FA
+loc_14400:
+	// 5379 
+cs=0x1c2;eip=0x004200; 	T(MOV(ah, 1));	// 10442 mov     ah, 1 ;~ 01C2:4200
+cs=0x1c2;eip=0x004202; 	R(_INT(0x16));	// 10443 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:4202
+cs=0x1c2;eip=0x004204; 	J(JNZ(loc_14412));	// 10447 jnz     short loc_14412 ;~ 01C2:4204
+cs=0x1c2;eip=0x004206; 	T(MOV(ax, word_156e6));	// 10448 mov     ax, word_156E6 ;~ 01C2:4206
+cs=0x1c2;eip=0x004209; 	T(CMP(ax, 0x960));	// 10449 cmp     ax, 960h ;~ 01C2:4209
+cs=0x1c2;eip=0x00420c; 	J(JC(loc_14400));	// 10450 jb      short loc_14400 ;~ 01C2:420C
+cs=0x1c2;eip=0x00420e; 	X(POP(di));	// 10451 pop     di ;~ 01C2:420E
+cs=0x1c2;eip=0x00420f; 	X(POP(si));	// 10452 pop     si ;~ 01C2:420F
+cs=0x1c2;eip=0x004210; 	J(JMP(loc_14467));	// 10453 jmp     short loc_14467 ;~ 01C2:4210
+loc_14412:
+	// 5380 
+cs=0x1c2;eip=0x004212; 	T(MOV(ah, 0));	// 10457 mov     ah, 0 ;~ 01C2:4212
+cs=0x1c2;eip=0x004214; 	R(_INT(0x16));	// 10458 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:4214
+cs=0x1c2;eip=0x004216; 	X(POP(di));	// 10460 pop     di ;~ 01C2:4216
+cs=0x1c2;eip=0x004217; 	X(POP(si));	// 10461 pop     si ;~ 01C2:4217
+cs=0x1c2;eip=0x004218; 	T(OR(al, al));	// 10462 or      al, al ;~ 01C2:4218
+cs=0x1c2;eip=0x00421a; 	J(JZ(loc_14420));	// 10463 jz      short loc_14420 ;~ 01C2:421A
+cs=0x1c2;eip=0x00421c; 	T(MOV(ah, 0));	// 10464 mov     ah, 0 ;~ 01C2:421C
+cs=0x1c2;eip=0x00421e; 	J(JMP(loc_1442e));	// 10465 jmp     short loc_1442E ;~ 01C2:421E
+loc_14420:
+	// 5381 
+cs=0x1c2;eip=0x004220; 	T(CMP(ah, 0x3B));	// 10469 cmp     ah, 3Bh ; ';' ;~ 01C2:4220
+cs=0x1c2;eip=0x004223; 	J(JNZ(loc_14429));	// 10470 jnz     short loc_14429 ;~ 01C2:4223
+cs=0x1c2;eip=0x004225; 	X(POP(bx));	// 10471 pop     bx ;~ 01C2:4225
+cs=0x1c2;eip=0x004226; 	J(JMP(loc_1378a));	// 10472 jmp     loc_1378A ;~ 01C2:4226
+loc_14429:
+	// 5382 
+cs=0x1c2;eip=0x004229; 	T(CMP(ah, 0x3C));	// 10476 cmp     ah, 3Ch ; '<' ;~ 01C2:4229
+cs=0x1c2;eip=0x00422c; 	J(JZ(loc_14467));	// 10477 jz      short loc_14467 ;~ 01C2:422C
+loc_1442e:
+	// 5383 
+cs=0x1c2;eip=0x00422e; 	J(CALL(sub_144b6,0));	// 10480 call    sub_144B6 ;~ 01C2:422E
+cs=0x1c2;eip=0x004231; 	J(JC(loc_143f8));	// 10481 jb      short loc_143F8 ;~ 01C2:4231
+cs=0x1c2;eip=0x004233; 	J(CALL(sub_1446b,0));	// 10482 call    sub_1446B ;~ 01C2:4233
+cs=0x1c2;eip=0x004236; 	T(ADD(di, *(dw*)(raddr(ds,si))));	// 10483 add     di, [si] ;~ 01C2:4236
+cs=0x1c2;eip=0x004238; 	T(ADD(si, 2));	// 10484 add     si, 2 ;~ 01C2:4238
+cs=0x1c2;eip=0x00423b; 	X(MOV(*(dw*)(raddr(ds,di)), ax));	// 10485 mov     [di], ax ;~ 01C2:423B
+cs=0x1c2;eip=0x00423d; 	T(TEST(*(dw*)(raddr(ds,si)), 0x0FF));	// 10486 test    word ptr [si], 0FFh ;~ 01C2:423D
+cs=0x1c2;eip=0x004241; 	J(JZ(loc_14451));	// 10487 jz      short loc_14451 ;~ 01C2:4241
+cs=0x1c2;eip=0x004243; 	X(PUSH(si));	// 10488 push    si ;~ 01C2:4243
+cs=0x1c2;eip=0x004244; 	X(PUSH(di));	// 10489 push    di ;~ 01C2:4244
+cs=0x1c2;eip=0x004245; 	T(MOV(si, bx));	// 10490 mov     si, bx ;~ 01C2:4245
+cs=0x1c2;eip=0x004247; 	J(CALL(sub_142f4,0));	// 10491 call    sub_142F4 ;~ 01C2:4247
+cs=0x1c2;eip=0x00424a; 	X(POP(di));	// 10492 pop     di ;~ 01C2:424A
+cs=0x1c2;eip=0x00424b; 	X(POP(si));	// 10493 pop     si ;~ 01C2:424B
+cs=0x1c2;eip=0x00424c; 	T(ADD(bx, 9));	// 10494 add     bx, 9 ;~ 01C2:424C
+cs=0x1c2;eip=0x00424f; 	J(JMP(loc_143f8));	// 10495 jmp     short loc_143F8 ;~ 01C2:424F
+loc_14451:
+	// 5384 
+cs=0x1c2;eip=0x004251; 	T(XOR(cx, cx));	// 10499 xor     cx, cx ;~ 01C2:4251
+loc_14453:
+	// 5385 
+cs=0x1c2;eip=0x004253; 	R(LOOP(loc_14453));	// 10502 loop    loc_14453 ;~ 01C2:4253
+cs=0x1c2;eip=0x004255; 	X(POP(bx));	// 10503 pop     bx ;~ 01C2:4255
+cs=0x1c2;eip=0x004256; 	X(MOV(byte_154c2, 0x0B));	// 10504 mov     byte_154C2, 0Bh ;~ 01C2:4256
+cs=0x1c2;eip=0x00425b; 	J(CALL(sub_14372,0));	// 10505 call    sub_14372 ;~ 01C2:425B
+cs=0x1c2;eip=0x00425e; 	T(MOV(cx, 0x960));	// 10506 mov     cx, 960h ;~ 01C2:425E
+cs=0x1c2;eip=0x004261; 	J(CALL(sub_14612,0));	// 10507 call    sub_14612 ;~ 01C2:4261
+cs=0x1c2;eip=0x004264; 	J(JMP(loc_13d1e));	// 10508 jmp     loc_13D1E ;~ 01C2:4264
+loc_14467:
+	// 5386 
+cs=0x1c2;eip=0x004267; 	X(POP(bx));	// 10513 pop     bx ;~ 01C2:4267
+cs=0x1c2;eip=0x004268; 	J(JMP(loc_13d1e));	// 10514 jmp     loc_13D1E ;~ 01C2:4268
+seg001_42dd_proc:
+	// 10620 
+loc_144dd:
+	// 5399 
+cs=0x1c2;eip=0x0042dd; 	J(CALL(sub_134fa,0));	// 10621 call    sub_134FA ;~ 01C2:42DD
+cs=0x1c2;eip=0x0042e0; 	J(CALL(sub_13526,0));	// 10622 call    sub_13526 ;~ 01C2:42E0
+cs=0x1c2;eip=0x0042e3; 	T(MOV(si, 0x0BA82));	// 10623 mov     si, 0BA82h ;~ 01C2:42E3
+cs=0x1c2;eip=0x0042e6; 	J(CALL(sub_142f4,0));	// 10624 call    sub_142F4 ;~ 01C2:42E6
+cs=0x1c2;eip=0x0042e9; 	T(MOV(si, 0x0BB36));	// 10625 mov     si, 0BB36h ;~ 01C2:42E9
+cs=0x1c2;eip=0x0042ec; 	X(MOV(word_1fed0, si));	// 10626 mov     word_1FED0, si ;~ 01C2:42EC
+cs=0x1c2;eip=0x0042f0; 	X(MOV(byte_1fecf, 0));	// 10627 mov     byte_1FECF, 0 ;~ 01C2:42F0
+loc_144f5:
+	// 5400 
+cs=0x1c2;eip=0x0042f5; 	X(INC(byte_1fecf));	// 10631 inc     byte_1FECF ;~ 01C2:42F5
+cs=0x1c2;eip=0x0042f9; 	T(MOV(si, word_1fed0));	// 10632 mov     si, word_1FED0 ;~ 01C2:42F9
+cs=0x1c2;eip=0x0042fd; 	T(MOV(di, si));	// 10633 mov     di, si ;~ 01C2:42FD
+cs=0x1c2;eip=0x0042ff; 	T(ADD(di, 0x0F));	// 10634 add     di, 0Fh ;~ 01C2:42FF
+cs=0x1c2;eip=0x004302; 	X(MOV(word_1fed0, di));	// 10635 mov     word_1FED0, di ;~ 01C2:4302
+cs=0x1c2;eip=0x004306; 	J(CALL(sub_14308,0));	// 10636 call    sub_14308 ;~ 01C2:4306
+cs=0x1c2;eip=0x004309; 	T(MOV(cx, 0x0B4));	// 10637 mov     cx, 0B4h ; '´' ;~ 01C2:4309
+cs=0x1c2;eip=0x00430c; 	J(CALL(sub_14612,0));	// 10638 call    sub_14612 ;~ 01C2:430C
+cs=0x1c2;eip=0x00430f; 	J(CALL(sub_145c6,0));	// 10639 call    sub_145C6 ;~ 01C2:430F
+cs=0x1c2;eip=0x004312; 	J(CALL(sub_13541,0));	// 10640 call    sub_13541 ;~ 01C2:4312
+cs=0x1c2;eip=0x004315; 	T(MOV(al, byte_15453));	// 10641 mov     al, byte_15453 ;~ 01C2:4315
+cs=0x1c2;eip=0x004318; 	T(MOV(bl, byte_15454));	// 10642 mov     bl, byte_15454 ;~ 01C2:4318
+cs=0x1c2;eip=0x00431c; 	T(CMP(byte_1fecf, 1));	// 10643 cmp     byte_1FECF, 1 ;~ 01C2:431C
+cs=0x1c2;eip=0x004321; 	J(JZ(loc_14536));	// 10644 jz      short loc_14536 ;~ 01C2:4321
+cs=0x1c2;eip=0x004323; 	T(CMP(byte_1fecf, 2));	// 10645 cmp     byte_1FECF, 2 ;~ 01C2:4323
+cs=0x1c2;eip=0x004328; 	J(JZ(loc_14542));	// 10646 jz      short loc_14542 ;~ 01C2:4328
+cs=0x1c2;eip=0x00432a; 	X(MOV(byte_15456, al));	// 10647 mov     byte_15456, al ;~ 01C2:432A
+cs=0x1c2;eip=0x00432d; 	X(MOV(byte_15458, bl));	// 10648 mov     byte_15458, bl ;~ 01C2:432D
+cs=0x1c2;eip=0x004331; 	J(CALL(sub_145b1,0));	// 10649 call    sub_145B1 ;~ 01C2:4331
+cs=0x1c2;eip=0x004334; 	J(JMP(loc_1454e));	// 10650 jmp     short loc_1454E ;~ 01C2:4334
+loc_14536:
+	// 5401 
+cs=0x1c2;eip=0x004336; 	X(MOV(byte_15455, al));	// 10654 mov     byte_15455, al ;~ 01C2:4336
+cs=0x1c2;eip=0x004339; 	X(MOV(byte_15457, bl));	// 10655 mov     byte_15457, bl ;~ 01C2:4339
+cs=0x1c2;eip=0x00433d; 	J(CALL(sub_145b1,0));	// 10656 call    sub_145B1 ;~ 01C2:433D
+cs=0x1c2;eip=0x004340; 	J(JMP(loc_144f5));	// 10657 jmp     short loc_144F5 ;~ 01C2:4340
+loc_14542:
+	// 5402 
+cs=0x1c2;eip=0x004342; 	X(MOV(byte_1545b, al));	// 10661 mov     byte_1545B, al ;~ 01C2:4342
+cs=0x1c2;eip=0x004345; 	X(MOV(byte_1545c, bl));	// 10662 mov     byte_1545C, bl ;~ 01C2:4345
+cs=0x1c2;eip=0x004349; 	J(CALL(sub_145b1,0));	// 10663 call    sub_145B1 ;~ 01C2:4349
+cs=0x1c2;eip=0x00434c; 	J(JMP(loc_144f5));	// 10664 jmp     short loc_144F5 ;~ 01C2:434C
+loc_1454e:
+	// 5403 
+cs=0x1c2;eip=0x00434e; 	T(MOV(al, byte_15455));	// 10668 mov     al, byte_15455 ;~ 01C2:434E
+cs=0x1c2;eip=0x004351; 	T(SUB(al, byte_1545b));	// 10669 sub     al, byte_1545B ;~ 01C2:4351
+cs=0x1c2;eip=0x004355; 	T(SHR(al, 1));	// 10670 shr     al, 1 ;~ 01C2:4355
+cs=0x1c2;eip=0x004357; 	T(ADD(al, byte_1545b));	// 10671 add     al, byte_1545B ;~ 01C2:4357
+cs=0x1c2;eip=0x00435b; 	X(MOV(byte_15455, al));	// 10672 mov     byte_15455, al ;~ 01C2:435B
+cs=0x1c2;eip=0x00435e; 	T(MOV(al, byte_15457));	// 10673 mov     al, byte_15457 ;~ 01C2:435E
+cs=0x1c2;eip=0x004361; 	T(SUB(al, byte_1545c));	// 10674 sub     al, byte_1545C ;~ 01C2:4361
+cs=0x1c2;eip=0x004365; 	T(SHR(al, 1));	// 10675 shr     al, 1 ;~ 01C2:4365
+cs=0x1c2;eip=0x004367; 	T(ADD(al, byte_1545c));	// 10676 add     al, byte_1545C ;~ 01C2:4367
+cs=0x1c2;eip=0x00436b; 	X(MOV(byte_15457, al));	// 10677 mov     byte_15457, al ;~ 01C2:436B
+cs=0x1c2;eip=0x00436e; 	T(MOV(al, byte_1545c));	// 10678 mov     al, byte_1545C ;~ 01C2:436E
+cs=0x1c2;eip=0x004371; 	T(SUB(al, byte_15458));	// 10679 sub     al, byte_15458 ;~ 01C2:4371
+cs=0x1c2;eip=0x004375; 	T(SHR(al, 1));	// 10680 shr     al, 1 ;~ 01C2:4375
+cs=0x1c2;eip=0x004377; 	T(MOV(bl, byte_1545c));	// 10681 mov     bl, byte_1545C ;~ 01C2:4377
+cs=0x1c2;eip=0x00437b; 	T(SUB(bl, al));	// 10682 sub     bl, al ;~ 01C2:437B
+cs=0x1c2;eip=0x00437d; 	X(MOV(byte_15458, bl));	// 10683 mov     byte_15458, bl ;~ 01C2:437D
+cs=0x1c2;eip=0x004381; 	T(MOV(si, 0x0BB7B));	// 10684 mov     si, 0BB7Bh ;~ 01C2:4381
+cs=0x1c2;eip=0x004384; 	J(CALL(sub_14308,0));	// 10685 call    sub_14308 ;~ 01C2:4384
+cs=0x1c2;eip=0x004387; 	T(MOV(cx, 0x960));	// 10686 mov     cx, 960h ;~ 01C2:4387
+cs=0x1c2;eip=0x00438a; 	J(CALL(sub_14612,0));	// 10687 call    sub_14612 ;~ 01C2:438A
+cs=0x1c2;eip=0x00438d; 	T(MOV(bl, byte_1545b));	// 10688 mov     bl, byte_1545B ;~ 01C2:438D
+cs=0x1c2;eip=0x004391; 	T(MOV(dl, byte_1545c));	// 10689 mov     dl, byte_1545C ;~ 01C2:4391
+cs=0x1c2;eip=0x004395; 	T(CMP(dl, 0x10));	// 10690 cmp     dl, 10h ;~ 01C2:4395
+cs=0x1c2;eip=0x004398; 	J(JC(loc_145ae));	// 10691 jb      short loc_145AE ;~ 01C2:4398
+cs=0x1c2;eip=0x00439a; 	T(CMP(bl, 0x10));	// 10692 cmp     bl, 10h ;~ 01C2:439A
+cs=0x1c2;eip=0x00439d; 	J(JC(loc_145ae));	// 10693 jb      short loc_145AE ;~ 01C2:439D
+cs=0x1c2;eip=0x00439f; 	T(CMP(dl, 0x0F5));	// 10694 cmp     dl, 0F5h ; 'õ' ;~ 01C2:439F
+cs=0x1c2;eip=0x0043a2; 	J(JNC(loc_145ae));	// 10695 jnb     short loc_145AE ;~ 01C2:43A2
+cs=0x1c2;eip=0x0043a4; 	T(CMP(bl, 0x0F5));	// 10696 cmp     bl, 0F5h ; 'õ' ;~ 01C2:43A4
+cs=0x1c2;eip=0x0043a7; 	J(JNC(loc_145ae));	// 10697 jnb     short loc_145AE ;~ 01C2:43A7
+cs=0x1c2;eip=0x0043a9; 	X(MOV(byte_1545a, 0x0FF));	// 10698 mov     byte_1545A, 0FFh ;~ 01C2:43A9
+loc_145ae:
+	// 5404 
+cs=0x1c2;eip=0x0043ae; 	J(JMP(loc_13d1e));	// 10702 jmp     loc_13D1E ;~ 01C2:43AE
+sub_145c6:
+	// 10723 
+cs=0x1c2;eip=0x0043c6; 	X(MOV(word_156e6, 0));	// 10727 mov     word_156E6, 0 ;~ 01C2:43C6
+loc_145cc:
+	// 5406 
+cs=0x1c2;eip=0x0043cc; 	J(CALL(sub_136a8,0));	// 10730 call    sub_136A8 ;~ 01C2:43CC
+cs=0x1c2;eip=0x0043cf; 	J(JNZ(locret_145ef));	// 10731 jnz     short locret_145EF ;~ 01C2:43CF
+cs=0x1c2;eip=0x0043d1; 	J(CALL(sub_145f0,0));	// 10732 call    sub_145F0 ;~ 01C2:43D1
+cs=0x1c2;eip=0x0043d4; 	T(OR(bl, bl));	// 10733 or      bl, bl ;~ 01C2:43D4
+cs=0x1c2;eip=0x0043d6; 	J(JZ(loc_145df));	// 10734 jz      short loc_145DF ;~ 01C2:43D6
+cs=0x1c2;eip=0x0043d8; 	T(CMP(bl, 1));	// 10735 cmp     bl, 1 ;~ 01C2:43D8
+cs=0x1c2;eip=0x0043db; 	J(JZ(loc_145eb));	// 10736 jz      short loc_145EB ;~ 01C2:43DB
+cs=0x1c2;eip=0x0043dd; 	J(JMP(loc_145e7));	// 10737 jmp     short loc_145E7 ;~ 01C2:43DD
+loc_145df:
+	// 5407 
+cs=0x1c2;eip=0x0043df; 	T(MOV(ax, word_156e6));	// 10741 mov     ax, word_156E6 ;~ 01C2:43DF
+cs=0x1c2;eip=0x0043e2; 	T(CMP(ax, 0x960));	// 10742 cmp     ax, 960h ;~ 01C2:43E2
+cs=0x1c2;eip=0x0043e5; 	J(JC(loc_145cc));	// 10743 jb      short loc_145CC ;~ 01C2:43E5
+loc_145e7:
+	// 5408 
+cs=0x1c2;eip=0x0043e7; 	X(POP(ax));	// 10746 pop     ax ;~ 01C2:43E7
+cs=0x1c2;eip=0x0043e8; 	J(JMP(loc_13d1e));	// 10747 jmp     loc_13D1E ;~ 01C2:43E8
+loc_145eb:
+	// 5409 
+cs=0x1c2;eip=0x0043eb; 	X(POP(ax));	// 10751 pop     ax ;~ 01C2:43EB
+cs=0x1c2;eip=0x0043ec; 	J(JMP(loc_1378a));	// 10752 jmp     loc_1378A ;~ 01C2:43EC
+locret_145ef:
+	// 5410 
+cs=0x1c2;eip=0x0043ef; 	R(RETN(0));	// 10756 retn ;~ 01C2:43EF
+sub_14612:
+	// 10800 
+cs=0x1c2;eip=0x004412; 	X(MOV(word_156e2, 0));	// 10805 mov     word_156E2, 0 ;~ 01C2:4412
+loc_14618:
+	// 5415 
+cs=0x1c2;eip=0x004418; 	T(MOV(ah, 1));	// 10809 mov     ah, 1 ;~ 01C2:4418
+cs=0x1c2;eip=0x00441a; 	R(_INT(0x16));	// 10810 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:441A
+cs=0x1c2;eip=0x00441c; 	J(JNZ(loc_14626));	// 10814 jnz     short loc_14626 ;~ 01C2:441C
+cs=0x1c2;eip=0x00441e; 	T(MOV(ax, word_156e2));	// 10815 mov     ax, word_156E2 ;~ 01C2:441E
+cs=0x1c2;eip=0x004421; 	T(CMP(ax, cx));	// 10816 cmp     ax, cx ;~ 01C2:4421
+cs=0x1c2;eip=0x004423; 	J(JC(loc_14618));	// 10817 jb      short loc_14618 ;~ 01C2:4423
+cs=0x1c2;eip=0x004425; 	R(RETN(0));	// 10818 retn ;~ 01C2:4425
+loc_14626:
+	// 5416 
+cs=0x1c2;eip=0x004426; 	T(MOV(ah, 0));	// 10822 mov     ah, 0 ;~ 01C2:4426
+cs=0x1c2;eip=0x004428; 	R(_INT(0x16));	// 10823 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:4428
+cs=0x1c2;eip=0x00442a; 	T(OR(al, al));	// 10825 or      al, al ;~ 01C2:442A
+cs=0x1c2;eip=0x00442c; 	J(JNZ(loc_14618));	// 10826 jnz     short loc_14618 ;~ 01C2:442C
+cs=0x1c2;eip=0x00442e; 	T(CMP(ah, 0x3B));	// 10827 cmp     ah, 3Bh ; ';' ;~ 01C2:442E
+cs=0x1c2;eip=0x004431; 	J(JZ(loc_1463c));	// 10828 jz      short loc_1463C ;~ 01C2:4431
+cs=0x1c2;eip=0x004433; 	T(CMP(ah, 0x3C));	// 10829 cmp     ah, 3Ch ; '<' ;~ 01C2:4433
+cs=0x1c2;eip=0x004436; 	J(JNZ(loc_14618));	// 10830 jnz     short loc_14618 ;~ 01C2:4436
+cs=0x1c2;eip=0x004438; 	X(POP(ax));	// 10831 pop     ax ;~ 01C2:4438
+cs=0x1c2;eip=0x004439; 	J(JMP(loc_13d1e));	// 10832 jmp     loc_13D1E ;~ 01C2:4439
+loc_1463c:
+	// 5417 
+cs=0x1c2;eip=0x00443c; 	X(POP(ax));	// 10836 pop     ax ;~ 01C2:443C
+cs=0x1c2;eip=0x00443d; 	J(JMP(loc_1378a));	// 10837 jmp     loc_1378A ;~ 01C2:443D
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1036c: 	goto loc_1036c;
+        case m2c::kloc_10612: 	goto loc_10612;
+        case m2c::kloc_10616: 	goto loc_10616;
+        case m2c::kloc_1061d: 	goto loc_1061d;
+        case m2c::kloc_1064b: 	goto loc_1064b;
+        case m2c::kloc_1065a: 	goto loc_1065a;
+        case m2c::kloc_10674: 	goto loc_10674;
+        case m2c::kloc_10678: 	goto loc_10678;
+        case m2c::kloc_10680: 	goto loc_10680;
+        case m2c::kloc_10685: 	goto loc_10685;
+        case m2c::kloc_106a3: 	goto loc_106a3;
+        case m2c::kloc_106d6: 	goto loc_106d6;
+        case m2c::kloc_106e4: 	goto loc_106e4;
+        case m2c::kloc_106f8: 	goto loc_106f8;
+        case m2c::kloc_110bb: 	goto loc_110bb;
+        case m2c::kloc_110cc: 	goto loc_110cc;
+        case m2c::kloc_110cd: 	goto loc_110cd;
+        case m2c::kloc_11131: 	goto loc_11131;
+        case m2c::kloc_11400: 	goto loc_11400;
+        case m2c::kloc_11421: 	goto loc_11421;
+        case m2c::kloc_11430: 	goto loc_11430;
+        case m2c::kloc_11432: 	goto loc_11432;
+        case m2c::kloc_1144b: 	goto loc_1144b;
+        case m2c::kloc_1145b: 	goto loc_1145b;
+        case m2c::kloc_11478: 	goto loc_11478;
+        case m2c::kloc_11479: 	goto loc_11479;
+        case m2c::kloc_1149b: 	goto loc_1149b;
+        case m2c::kloc_114a0: 	goto loc_114a0;
+        case m2c::kloc_116fb: 	goto loc_116fb;
+        case m2c::kloc_11710: 	goto loc_11710;
+        case m2c::kloc_11716: 	goto loc_11716;
+        case m2c::kloc_1173e: 	goto loc_1173e;
+        case m2c::kloc_1174a: 	goto loc_1174a;
+        case m2c::kloc_1176a: 	goto loc_1176a;
+        case m2c::kloc_11791: 	goto loc_11791;
+        case m2c::kloc_117be: 	goto loc_117be;
+        case m2c::kloc_121f1: 	goto loc_121f1;
+        case m2c::kloc_1223f: 	goto loc_1223f;
+        case m2c::kloc_1224e: 	goto loc_1224e;
+        case m2c::kloc_1225c: 	goto loc_1225c;
+        case m2c::kloc_12354: 	goto loc_12354;
+        case m2c::kloc_12360: 	goto loc_12360;
+        case m2c::kloc_12388: 	goto loc_12388;
+        case m2c::kloc_12391: 	goto loc_12391;
+        case m2c::kloc_1239a: 	goto loc_1239a;
+        case m2c::kloc_123a0: 	goto loc_123a0;
+        case m2c::kloc_123ab: 	goto loc_123ab;
+        case m2c::kloc_123b4: 	goto loc_123b4;
+        case m2c::kloc_123c0: 	goto loc_123c0;
+        case m2c::kloc_123dc: 	goto loc_123dc;
+        case m2c::kloc_128b3: 	goto loc_128b3;
+        case m2c::kloc_128b9: 	goto loc_128b9;
+        case m2c::kloc_128d7: 	goto loc_128d7;
+        case m2c::kloc_1299b: 	goto loc_1299b;
+        case m2c::kloc_129ac: 	goto loc_129ac;
+        case m2c::kloc_129bc: 	goto loc_129bc;
+        case m2c::kloc_129c5: 	goto loc_129c5;
+        case m2c::kloc_129e7: 	goto loc_129e7;
+        case m2c::kloc_12a08: 	goto loc_12a08;
+        case m2c::kloc_12a1a: 	goto loc_12a1a;
+        case m2c::kloc_12a3a: 	goto loc_12a3a;
+        case m2c::kloc_12a46: 	goto loc_12a46;
+        case m2c::kloc_12a52: 	goto loc_12a52;
+        case m2c::kloc_12a6d: 	goto loc_12a6d;
+        case m2c::kloc_12a74: 	goto loc_12a74;
+        case m2c::kloc_12a7b: 	goto loc_12a7b;
+        case m2c::kloc_12a84: 	goto loc_12a84;
+        case m2c::kloc_12a91: 	goto loc_12a91;
+        case m2c::kloc_12aa7: 	goto loc_12aa7;
+        case m2c::kloc_12aae: 	goto loc_12aae;
+        case m2c::kloc_12abb: 	goto loc_12abb;
+        case m2c::kloc_12c19: 	goto loc_12c19;
+        case m2c::kloc_12c41: 	goto loc_12c41;
+        case m2c::kloc_12c69: 	goto loc_12c69;
+        case m2c::kloc_12c91: 	goto loc_12c91;
+        case m2c::kloc_12cb9: 	goto loc_12cb9;
+        case m2c::kloc_12cc3: 	goto loc_12cc3;
+        case m2c::kloc_12ccf: 	goto loc_12ccf;
+        case m2c::kloc_12cdb: 	goto loc_12cdb;
+        case m2c::kloc_12ce9: 	goto loc_12ce9;
+        case m2c::kloc_12d2b: 	goto loc_12d2b;
+        case m2c::kloc_12d4d: 	goto loc_12d4d;
+        case m2c::kloc_12d51: 	goto loc_12d51;
+        case m2c::kloc_12d82: 	goto loc_12d82;
+        case m2c::kloc_12d86: 	goto loc_12d86;
+        case m2c::kloc_12daf: 	goto loc_12daf;
+        case m2c::kloc_12db6: 	goto loc_12db6;
+        case m2c::kloc_12dda: 	goto loc_12dda;
+        case m2c::kloc_12ddc: 	goto loc_12ddc;
+        case m2c::kloc_12de6: 	goto loc_12de6;
+        case m2c::kloc_12dfb: 	goto loc_12dfb;
+        case m2c::kloc_12e00: 	goto loc_12e00;
+        case m2c::kloc_12e13: 	goto loc_12e13;
+        case m2c::kloc_12e26: 	goto loc_12e26;
+        case m2c::kloc_12e6c: 	goto loc_12e6c;
+        case m2c::kloc_12e76: 	goto loc_12e76;
+        case m2c::kloc_12e81: 	goto loc_12e81;
+        case m2c::kloc_12e93: 	goto loc_12e93;
+        case m2c::kloc_12ead: 	goto loc_12ead;
+        case m2c::kloc_12ef4: 	goto loc_12ef4;
+        case m2c::kloc_12efe: 	goto loc_12efe;
+        case m2c::kloc_12f0e: 	goto loc_12f0e;
+        case m2c::kloc_12f18: 	goto loc_12f18;
+        case m2c::kloc_12f22: 	goto loc_12f22;
+        case m2c::kloc_12f2c: 	goto loc_12f2c;
+        case m2c::kloc_12f32: 	goto loc_12f32;
+        case m2c::kloc_12f3d: 	goto loc_12f3d;
+        case m2c::kloc_12f52: 	goto loc_12f52;
+        case m2c::kloc_12f83: 	goto loc_12f83;
+        case m2c::kloc_12f91: 	goto loc_12f91;
+        case m2c::kloc_12f97: 	goto loc_12f97;
+        case m2c::kloc_12f9f: 	goto loc_12f9f;
+        case m2c::kloc_12fa9: 	goto loc_12fa9;
+        case m2c::kloc_12fc3: 	goto loc_12fc3;
+        case m2c::kloc_12ff5: 	goto loc_12ff5;
+        case m2c::kloc_1301a: 	goto loc_1301a;
+        case m2c::kloc_1301e: 	goto loc_1301e;
+        case m2c::kloc_13024: 	goto loc_13024;
+        case m2c::kloc_13027: 	goto loc_13027;
+        case m2c::kloc_134c0: 	goto loc_134c0;
+        case m2c::kloc_13721: 	goto loc_13721;
+        case m2c::kloc_13730: 	goto loc_13730;
+        case m2c::kloc_13741: 	goto loc_13741;
+        case m2c::kloc_13748: 	goto loc_13748;
+        case m2c::kloc_1378a: 	goto loc_1378a;
+        case m2c::kloc_13794: 	goto loc_13794;
+        case m2c::kloc_13799: 	goto loc_13799;
+        case m2c::kloc_137a2: 	goto loc_137a2;
+        case m2c::kloc_1382b: 	goto loc_1382b;
+        case m2c::kloc_1383d: 	goto loc_1383d;
+        case m2c::kloc_13855: 	goto loc_13855;
+        case m2c::kloc_1385d: 	goto loc_1385d;
+        case m2c::kloc_1386c: 	goto loc_1386c;
+        case m2c::kloc_1387b: 	goto loc_1387b;
+        case m2c::kloc_13ca0: 	goto loc_13ca0;
+        case m2c::kloc_13cb8: 	goto loc_13cb8;
+        case m2c::kloc_13cbf: 	goto loc_13cbf;
+        case m2c::kloc_13cd8: 	goto loc_13cd8;
+        case m2c::kloc_13cdd: 	goto loc_13cdd;
+        case m2c::kloc_13ced: 	goto loc_13ced;
+        case m2c::kloc_13d1e: 	goto loc_13d1e;
+        case m2c::kloc_13d37: 	goto loc_13d37;
+        case m2c::kloc_13d43: 	goto loc_13d43;
+        case m2c::kloc_13d53: 	goto loc_13d53;
+        case m2c::kloc_13d6d: 	goto loc_13d6d;
+        case m2c::kloc_13d76: 	goto loc_13d76;
+        case m2c::kloc_13d7f: 	goto loc_13d7f;
+        case m2c::kloc_13d84: 	goto loc_13d84;
+        case m2c::kloc_13d8b: 	goto loc_13d8b;
+        case m2c::kloc_13d92: 	goto loc_13d92;
+        case m2c::kloc_13d94: 	goto loc_13d94;
+        case m2c::kloc_13d9d: 	goto loc_13d9d;
+        case m2c::kloc_13da6: 	goto loc_13da6;
+        case m2c::kloc_13dad: 	goto loc_13dad;
+        case m2c::kloc_13dba: 	goto loc_13dba;
+        case m2c::kloc_13dbf: 	goto loc_13dbf;
+        case m2c::kloc_13e07: 	goto loc_13e07;
+        case m2c::kloc_13e12: 	goto loc_13e12;
+        case m2c::kloc_13e15: 	goto loc_13e15;
+        case m2c::kloc_13e1b: 	goto loc_13e1b;
+        case m2c::kloc_13e3a: 	goto loc_13e3a;
+        case m2c::kloc_13e50: 	goto loc_13e50;
+        case m2c::kloc_13e58: 	goto loc_13e58;
+        case m2c::kloc_13e67: 	goto loc_13e67;
+        case m2c::kloc_13e6d: 	goto loc_13e6d;
+        case m2c::kloc_13e72: 	goto loc_13e72;
+        case m2c::kloc_13e7d: 	goto loc_13e7d;
+        case m2c::kloc_13f3e: 	goto loc_13f3e;
+        case m2c::kloc_13f4d: 	goto loc_13f4d;
+        case m2c::kloc_13f57: 	goto loc_13f57;
+        case m2c::kloc_13f6f: 	goto loc_13f6f;
+        case m2c::kloc_13f94: 	goto loc_13f94;
+        case m2c::kloc_13f9a: 	goto loc_13f9a;
+        case m2c::kloc_13f9c: 	goto loc_13f9c;
+        case m2c::kloc_13fc9: 	goto loc_13fc9;
+        case m2c::kloc_13fce: 	goto loc_13fce;
+        case m2c::kloc_13fd5: 	goto loc_13fd5;
+        case m2c::kloc_13fdc: 	goto loc_13fdc;
+        case m2c::kloc_14020: 	goto loc_14020;
+        case m2c::kloc_14028: 	goto loc_14028;
+        case m2c::kloc_14030: 	goto loc_14030;
+        case m2c::kloc_14036: 	goto loc_14036;
+        case m2c::kloc_14047: 	goto loc_14047;
+        case m2c::kloc_1404e: 	goto loc_1404e;
+        case m2c::kloc_14059: 	goto loc_14059;
+        case m2c::kloc_1406e: 	goto loc_1406e;
+        case m2c::kloc_1407d: 	goto loc_1407d;
+        case m2c::kloc_1407f: 	goto loc_1407f;
+        case m2c::kloc_1408c: 	goto loc_1408c;
+        case m2c::kloc_1409f: 	goto loc_1409f;
+        case m2c::kloc_14145: 	goto loc_14145;
+        case m2c::kloc_14172: 	goto loc_14172;
+        case m2c::kloc_1417a: 	goto loc_1417a;
+        case m2c::kloc_14182: 	goto loc_14182;
+        case m2c::kloc_1419d: 	goto loc_1419d;
+        case m2c::kloc_141ae: 	goto loc_141ae;
+        case m2c::kloc_141bc: 	goto loc_141bc;
+        case m2c::kloc_141cf: 	goto loc_141cf;
+        case m2c::kloc_14217: 	goto loc_14217;
+        case m2c::kloc_1422d: 	goto loc_1422d;
+        case m2c::kloc_14248: 	goto loc_14248;
+        case m2c::kloc_1431a: 	goto loc_1431a;
+        case m2c::kloc_14327: 	goto loc_14327;
+        case m2c::kloc_1432e: 	goto loc_1432e;
+        case m2c::kloc_14350: 	goto loc_14350;
+        case m2c::kloc_143dd: 	goto loc_143dd;
+        case m2c::kloc_143f8: 	goto loc_143f8;
+        case m2c::kloc_14400: 	goto loc_14400;
+        case m2c::kloc_14412: 	goto loc_14412;
+        case m2c::kloc_14420: 	goto loc_14420;
+        case m2c::kloc_14429: 	goto loc_14429;
+        case m2c::kloc_1442e: 	goto loc_1442e;
+        case m2c::kloc_14451: 	goto loc_14451;
+        case m2c::kloc_14453: 	goto loc_14453;
+        case m2c::kloc_14467: 	goto loc_14467;
+        case m2c::kloc_144f5: 	goto loc_144f5;
+        case m2c::kloc_14536: 	goto loc_14536;
+        case m2c::kloc_14542: 	goto loc_14542;
+        case m2c::kloc_1454e: 	goto loc_1454e;
+        case m2c::kloc_145ae: 	goto loc_145ae;
+        case m2c::kloc_145cc: 	goto loc_145cc;
+        case m2c::kloc_145df: 	goto loc_145df;
+        case m2c::kloc_145e7: 	goto loc_145e7;
+        case m2c::kloc_145eb: 	goto loc_145eb;
+        case m2c::kloc_14618: 	goto loc_14618;
+        case m2c::kloc_14626: 	goto loc_14626;
+        case m2c::kloc_1463c: 	goto loc_1463c;
+        case m2c::klocret_10690: 	goto locret_10690;
+        case m2c::klocret_123f2: 	goto locret_123f2;
+        case m2c::klocret_12ce8: 	goto locret_12ce8;
+        case m2c::klocret_12db5: 	goto locret_12db5;
+        case m2c::klocret_13036: 	goto locret_13036;
+        case m2c::klocret_145ef: 	goto locret_145ef;
+        case m2c::kret_1c2_103: 	goto ret_1c2_103;
+        case m2c::kret_1c2_1272: 	goto ret_1c2_1272;
+        case m2c::kret_1c2_14eb: 	goto ret_1c2_14eb;
+        case m2c::kret_1c2_14ff: 	goto ret_1c2_14ff;
+        case m2c::kret_1c2_150a: 	goto ret_1c2_150a;
+        case m2c::kret_1c2_1533: 	goto ret_1c2_1533;
+        case m2c::kret_1c2_153b: 	goto ret_1c2_153b;
+        case m2c::kret_1c2_155a: 	goto ret_1c2_155a;
+        case m2c::kret_1c2_155f: 	goto ret_1c2_155f;
+        case m2c::kret_1c2_1579: 	goto ret_1c2_1579;
+        case m2c::kret_1c2_1586: 	goto ret_1c2_1586;
+        case m2c::kret_1c2_15a1: 	goto ret_1c2_15a1;
+        case m2c::kret_1c2_15ae: 	goto ret_1c2_15ae;
+        case m2c::kret_1c2_15c7: 	goto ret_1c2_15c7;
+        case m2c::kret_1c2_15d6: 	goto ret_1c2_15d6;
+        case m2c::kret_1c2_1fe5: 	goto ret_1c2_1fe5;
+        case m2c::kret_1c2_26a3: 	goto ret_1c2_26a3;
+        case m2c::kret_1c2_2781: 	goto ret_1c2_2781;
+        case m2c::kret_1c2_2bd7: 	goto ret_1c2_2bd7;
+        case m2c::kret_1c2_2cf9: 	goto ret_1c2_2cf9;
+        case m2c::kret_1c2_32df: 	goto ret_1c2_32df;
+        case m2c::kret_1c2_351e: 	goto ret_1c2_351e;
+        case m2c::kret_1c2_3536: 	goto ret_1c2_3536;
+        case m2c::kret_1c2_361e: 	goto ret_1c2_361e;
+        case m2c::kret_1c2_3ba4: 	goto ret_1c2_3ba4;
+        case m2c::kret_1c2_3c28: 	goto ret_1c2_3c28;
+        case m2c::kret_1c2_3d38: 	goto ret_1c2_3d38;
+        case m2c::kret_1c2_3e1a: 	goto ret_1c2_3e1a;
+        case m2c::kret_1c2_3f43: 	goto ret_1c2_3f43;
+        case m2c::kret_1c2_4015: 	goto ret_1c2_4015;
+        case m2c::kret_1c2_408: 	goto ret_1c2_408;
+        case m2c::kret_1c2_440: 	goto ret_1c2_440;
+        case m2c::kret_1c2_465: 	goto ret_1c2_465;
+        case m2c::kret_1c2_494: 	goto ret_1c2_494;
+        case m2c::kret_1c2_4c2: 	goto ret_1c2_4c2;
+        case m2c::kret_1c2_eb5: 	goto ret_1c2_eb5;
+        case m2c::kseg001_14e9_proc: 	goto seg001_14e9_proc;
+        case m2c::kseg001_29f1_proc: 	goto seg001_29f1_proc;
+        case m2c::kseg001_351d_proc: 	goto seg001_351d_proc;
+        case m2c::kseg001_3570_proc: 	goto seg001_3570_proc;
+        case m2c::kseg001_3d37_proc: 	goto seg001_3d37_proc;
+        case m2c::kseg001_3f42_proc: 	goto seg001_3f42_proc;
+        case m2c::kseg001_4014_proc: 	goto seg001_4014_proc;
+        case m2c::kseg001_4116_proc: 	goto seg001_4116_proc;
+        case m2c::kseg001_41be_proc: 	goto seg001_41be_proc;
+        case m2c::kseg001_42dd_proc: 	goto seg001_42dd_proc;
+        case m2c::ksub_10300: 	goto sub_10300;
+        case m2c::ksub_10605: 	goto sub_10605;
+        case m2c::ksub_1063f: 	goto sub_1063f;
+        case m2c::ksub_10662: 	goto sub_10662;
+        case m2c::ksub_10691: 	goto sub_10691;
+        case m2c::ksub_106bf: 	goto sub_106bf;
+        case m2c::ksub_110b0: 	goto sub_110b0;
+        case m2c::ksub_113ff: 	goto sub_113ff;
+        case m2c::ksub_1146f: 	goto sub_1146f;
+        case m2c::ksub_121df: 	goto sub_121df;
+        case m2c::ksub_12350: 	goto sub_12350;
+        case m2c::ksub_128a1: 	goto sub_128a1;
+        case m2c::ksub_1297d: 	goto sub_1297d;
+        case m2c::ksub_12a36: 	goto sub_12a36;
+        case m2c::ksub_12e92: 	goto sub_12e92;
+        case m2c::ksub_12ef6: 	goto sub_12ef6;
+        case m2c::ksub_134e1: 	goto sub_134e1;
+        case m2c::ksub_1372f: 	goto sub_1372f;
+        case m2c::ksub_13735: 	goto sub_13735;
+        case m2c::ksub_13819: 	goto sub_13819;
+        case m2c::ksub_14015: 	goto sub_14015;
+        case m2c::ksub_145c6: 	goto sub_145c6;
+        case m2c::ksub_14612: 	goto sub_14612;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10380(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10380:
+    _begin:
 cs=0x1c2;eip=0x000180; 	J(CALL(sub_10524,0));	// 472 call    sub_10524 ;~ 01C2:0180
 ret_1c2_183:
 	// 4372 
@@ -101,8 +2715,40 @@ cs=0x1c2;eip=0x00021d; 	J(CALL(sub_138fc,0));	// 539 call    sub_138FC ;~ 01C2:0
 locret_10420:
 	// 4381 
 cs=0x1c2;eip=0x000220; 	R(RETN(0));	// 543 retn ;~ 01C2:0220
-sub_10421:
-	// 550 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10391: 	goto loc_10391;
+        case m2c::kloc_103a4: 	goto loc_103a4;
+        case m2c::kloc_103b3: 	goto loc_103b3;
+        case m2c::kloc_103cd: 	goto loc_103cd;
+        case m2c::kloc_103e6: 	goto loc_103e6;
+        case m2c::kloc_103f7: 	goto loc_103f7;
+        case m2c::kloc_10401: 	goto loc_10401;
+        case m2c::kloc_10410: 	goto loc_10410;
+        case m2c::klocret_10420: 	goto locret_10420;
+        case m2c::kret_1c2_183: 	goto ret_1c2_183;
+        case m2c::ksub_10380: 	goto sub_10380;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10421(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10421:
+    _begin:
 cs=0x1c2;eip=0x000221; 	T(MOV(si, 0x113));	// 552 mov     si, 113h ;~ 01C2:0221
 ret_1c2_224:
 	// 4382 
@@ -116,8 +2762,32 @@ cs=0x1c2;eip=0x00022d; 	X(MOV(*(raddr(ds,si-1)), ah));	// 559 mov     [si-1], ah
 cs=0x1c2;eip=0x000230; 	J(LOOP(loc_1042a));	// 560 loop    loc_1042A ;~ 01C2:0230
 cs=0x1c2;eip=0x000232; 	X(XOR(byte_14765, 3));	// 561 xor     byte_14765, 3 ;~ 01C2:0232
 cs=0x1c2;eip=0x000237; 	R(RETN(0));	// 562 retn ;~ 01C2:0237
-sub_10438:
-	// 569 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1042a: 	goto loc_1042a;
+        case m2c::kret_1c2_224: 	goto ret_1c2_224;
+        case m2c::ksub_10421: 	goto sub_10421;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10438(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10438:
+    _begin:
 cs=0x1c2;eip=0x000238; 	T(MOV(ax, word_14753));	// 571 mov     ax, word_14753 ;~ 01C2:0238
 ret_1c2_23b:
 	// 4384 
@@ -127,8 +2797,32 @@ cs=0x1c2;eip=0x000241; 	X(MOV(word_1476b, ax));	// 574 mov     word_1476B, ax ;~
 locret_10444:
 	// 4385 
 cs=0x1c2;eip=0x000244; 	R(RETN(0));	// 577 retn ;~ 01C2:0244
-sub_10445:
-	// 584 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::klocret_10444: 	goto locret_10444;
+        case m2c::kret_1c2_23b: 	goto ret_1c2_23b;
+        case m2c::ksub_10438: 	goto sub_10438;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10445(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10445:
+    _begin:
 cs=0x1c2;eip=0x000245; 	X(PUSH(bx));	// 585 push    bx ;~ 01C2:0245
 ret_1c2_246:
 	// 4386 
@@ -164,21 +2858,70 @@ loc_10490:
 	// 4388 
 cs=0x1c2;eip=0x000290; 	X(POP(bx));	// 619 pop     bx ;~ 01C2:0290
 cs=0x1c2;eip=0x000291; 	R(RETN(0));	// 620 retn ;~ 01C2:0291
-sub_10492:
-	// 627 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10473: 	goto loc_10473;
+        case m2c::kloc_10490: 	goto loc_10490;
+        case m2c::kret_1c2_246: 	goto ret_1c2_246;
+        case m2c::ksub_10445: 	goto sub_10445;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10492(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10492:
+    _begin:
 cs=0x1c2;eip=0x000292; 	X(PUSH(cx));	// 628 push    cx ;~ 01C2:0292
 ret_1c2_293:
 	// 4389 
 cs=0x1c2;eip=0x000293; 	T(MOV(bl, 0x0D));	// 629 mov     bl, 0Dh ;~ 01C2:0293
 loc_10495:
 	// 4390 
-cs=0x1c2;eip=0x000295; 	J(LOOP(loc_10495));	// 633 loop    loc_10495 ;~ 01C2:0295
+cs=0x1c2;eip=0x000295; 	R(LOOP(loc_10495));	// 633 loop    loc_10495 ;~ 01C2:0295
 cs=0x1c2;eip=0x000297; 	T(DEC(bl));	// 634 dec     bl ;~ 01C2:0297
 cs=0x1c2;eip=0x000299; 	J(JNZ(loc_10495));	// 635 jnz     short loc_10495 ;~ 01C2:0299
 cs=0x1c2;eip=0x00029b; 	X(POP(cx));	// 636 pop     cx ;~ 01C2:029B
 cs=0x1c2;eip=0x00029c; 	R(RETN(0));	// 637 retn ;~ 01C2:029C
-sub_1049d:
-	// 644 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10495: 	goto loc_10495;
+        case m2c::kret_1c2_293: 	goto ret_1c2_293;
+        case m2c::ksub_10492: 	goto sub_10492;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1049d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1049d:
+    _begin:
 cs=0x1c2;eip=0x00029d; 	T(MOV(ax, word_1476b));	// 645 mov     ax, word_1476B ;~ 01C2:029D
 ret_1c2_2a0:
 	// 4391 
@@ -204,8 +2947,33 @@ cs=0x1c2;eip=0x0002ca; 	T(MOV(ax, word_1475c));	// 665 mov     ax, word_1475C ;~
 cs=0x1c2;eip=0x0002cd; 	J(CALL(sub_104d4,0));	// 666 call    sub_104D4 ;~ 01C2:02CD
 cs=0x1c2;eip=0x0002d0; 	J(CALL(sub_105ed,0));	// 667 call    sub_105ED ;~ 01C2:02D0
 cs=0x1c2;eip=0x0002d3; 	R(RETN(0));	// 668 retn ;~ 01C2:02D3
-sub_104d4:
-	// 675 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_104c7: 	goto loc_104c7;
+        case m2c::klocret_104c6: 	goto locret_104c6;
+        case m2c::kret_1c2_2a0: 	goto ret_1c2_2a0;
+        case m2c::ksub_1049d: 	goto sub_1049d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_104d4(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_104d4:
+    _begin:
 cs=0x1c2;eip=0x0002d4; 	T(MOV(di, 0x1CB));	// 677 mov     di, 1CBh ;~ 01C2:02D4
 ret_1c2_2d7:
 	// 4394 
@@ -253,8 +3021,36 @@ cs=0x1c2;eip=0x00031c; 	T(ADD(dl, 0x30));	// 722 add     dl, 30h ; '0' ;~ 01C2:0
 cs=0x1c2;eip=0x00031f; 	X(MOV(*(raddr(ds,bx+di)), dl));	// 723 mov     [bx+di], dl ;~ 01C2:031F
 cs=0x1c2;eip=0x000321; 	T(DEC(bx));	// 724 dec     bx ;~ 01C2:0321
 cs=0x1c2;eip=0x000322; 	J(JMP(loc_104ec));	// 725 jmp     short loc_104EC ;~ 01C2:0322
-sub_10524:
-	// 732 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_104e4: 	goto loc_104e4;
+        case m2c::kloc_104ec: 	goto loc_104ec;
+        case m2c::kloc_104fd: 	goto loc_104fd;
+        case m2c::kloc_10500: 	goto loc_10500;
+        case m2c::kloc_1050e: 	goto loc_1050e;
+        case m2c::kret_1c2_2d7: 	goto ret_1c2_2d7;
+        case m2c::ksub_104d4: 	goto sub_104d4;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10524(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10524:
+    _begin:
 cs=0x1c2;eip=0x000324; 	J(CALL(sub_105d5,0));	// 733 call    sub_105D5 ;~ 01C2:0324
 ret_1c2_327:
 	// 4400 
@@ -268,8 +3064,32 @@ cs=0x1c2;eip=0x00033a; 	J(CALL(sub_10605,0));	// 740 call    sub_10605 ;~ 01C2:0
 locret_1053d:
 	// 4401 
 cs=0x1c2;eip=0x00033d; 	R(RETN(0));	// 743 retn ;~ 01C2:033D
-sub_1053e:
-	// 750 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::klocret_1053d: 	goto locret_1053d;
+        case m2c::kret_1c2_327: 	goto ret_1c2_327;
+        case m2c::ksub_10524: 	goto sub_10524;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1053e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1053e:
+    _begin:
 cs=0x1c2;eip=0x00033e; 	T(TEST(byte_148f8, 0x0FF));	// 751 test    byte_148F8, 0FFh ;~ 01C2:033E
 ret_1c2_343:
 	// 4402 
@@ -331,6 +3151,40 @@ cs=0x1c2;eip=0x0003a3; 	X(DEC(byte_1476d));	// 813 dec     byte_1476D ;~ 01C2:03
 locret_105a7:
 	// 4411 
 cs=0x1c2;eip=0x0003a7; 	R(RETN(0));	// 816 retn ;~ 01C2:03A7
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1054b: 	goto loc_1054b;
+        case m2c::kloc_10558: 	goto loc_10558;
+        case m2c::kloc_10564: 	goto loc_10564;
+        case m2c::kloc_1056e: 	goto loc_1056e;
+        case m2c::kloc_10578: 	goto loc_10578;
+        case m2c::kloc_10591: 	goto loc_10591;
+        case m2c::kloc_10596: 	goto loc_10596;
+        case m2c::kloc_10599: 	goto loc_10599;
+        case m2c::klocret_105a7: 	goto locret_105a7;
+        case m2c::kret_1c2_343: 	goto ret_1c2_343;
+        case m2c::ksub_1053e: 	goto sub_1053e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group2(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group2:
+    _begin:
 sub_105a8:
 	// 823 
 cs=0x1c2;eip=0x0003a8; 	T(MOV(si, 0x169));	// 824 mov     si, 169h ;~ 01C2:03A8
@@ -412,119 +3266,83 @@ ret_1c2_400:
 	// 4422 
 cs=0x1c2;eip=0x000400; 	T(MOV(di, 0x5E0));	// 940 mov     di, 5E0h ;~ 01C2:0400
 cs=0x1c2;eip=0x000403; 	J(JMP(sub_105ae));	// 941 jmp     short sub_105AE ;~ 01C2:0403
-sub_10605:
-	// 948 
-cs=0x1c2;eip=0x000405; 	T(MOV(di, 0x212));	// 949 mov     di, 212h ;~ 01C2:0405
-ret_1c2_408:
-	// 4423 
-cs=0x1c2;eip=0x000408; 	T(CMP(byte_14765, 1));	// 950 cmp     byte_14765, 1 ;~ 01C2:0408
-cs=0x1c2;eip=0x00040d; 	J(JZ(loc_10612));	// 951 jz      short loc_10612 ;~ 01C2:040D
-cs=0x1c2;eip=0x00040f; 	T(MOV(di, 0x5D2));	// 952 mov     di, 5D2h ;~ 01C2:040F
-loc_10612:
-	// 4424 
-cs=0x1c2;eip=0x000412; 	T(MOV(si, 0x149));	// 955 mov     si, 149h ;~ 01C2:0412
-cs=0x1c2;eip=0x000415; 	X(PUSH(es));	// 956 push    es ;~ 01C2:0415
-loc_10616:
-	// 4425 
-cs=0x1c2;eip=0x000416; 	T(MOV(ax, seg_offset(seg003)));	// 959 mov     ax, seg seg003 ;~ 01C2:0416
-cs=0x1c2;eip=0x000419; 	T(MOV(es, ax));	// 960 mov     es, ax ;~ 01C2:0419
-cs=0x1c2;eip=0x00041b; 	T(MOV(bl, 4));	// 962 mov     bl, 4 ;~ 01C2:041B
-loc_1061d:
-	// 4426 
-cs=0x1c2;eip=0x00041d; 	T(MOV(cx, 4));	// 965 mov     cx, 4 ;~ 01C2:041D
-	// 966 rep movsb ;~ 01C2:0420
-cs=0x1c2;eip=0x000420; 	X(	REP MOVSB);	// 966 rep movsb ;~ 01C2:0420
-cs=0x1c2;eip=0x000422; 	T(ADD(di, 0x1FFC));	// 967 add     di, 1FFCh ;~ 01C2:0422
-cs=0x1c2;eip=0x000426; 	T(MOV(cx, 4));	// 968 mov     cx, 4 ;~ 01C2:0426
-	// 969 rep movsb ;~ 01C2:0429
-cs=0x1c2;eip=0x000429; 	X(	REP MOVSB);	// 969 rep movsb ;~ 01C2:0429
-cs=0x1c2;eip=0x00042b; 	T(ADD(di, 0x0E04C));	// 970 add     di, 0E04Ch ;~ 01C2:042B
-cs=0x1c2;eip=0x00042f; 	T(DEC(bl));	// 971 dec     bl ;~ 01C2:042F
-cs=0x1c2;eip=0x000431; 	J(JNZ(loc_1061d));	// 972 jnz     short loc_1061D ;~ 01C2:0431
-cs=0x1c2;eip=0x000433; 	X(POP(es));	// 973 pop     es ;~ 01C2:0433
-cs=0x1c2;eip=0x000434; 	R(RETN(0));	// 975 retn ;~ 01C2:0434
-sub_10635:
-	// 982 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_105b5: 	goto loc_105b5;
+        case m2c::kret_1c2_3ab: 	goto ret_1c2_3ab;
+        case m2c::kret_1c2_3bd: 	goto ret_1c2_3bd;
+        case m2c::kret_1c2_3c2: 	goto ret_1c2_3c2;
+        case m2c::kret_1c2_3c7: 	goto ret_1c2_3c7;
+        case m2c::kret_1c2_3d8: 	goto ret_1c2_3d8;
+        case m2c::kret_1c2_3e0: 	goto ret_1c2_3e0;
+        case m2c::kret_1c2_3e8: 	goto ret_1c2_3e8;
+        case m2c::kret_1c2_3f0: 	goto ret_1c2_3f0;
+        case m2c::kret_1c2_3f8: 	goto ret_1c2_3f8;
+        case m2c::kret_1c2_400: 	goto ret_1c2_400;
+        case m2c::ksub_105a8: 	goto sub_105a8;
+        case m2c::ksub_105ae: 	goto sub_105ae;
+        case m2c::ksub_105b2: 	goto sub_105b2;
+        case m2c::ksub_105ba: 	goto sub_105ba;
+        case m2c::ksub_105bf: 	goto sub_105bf;
+        case m2c::ksub_105c4: 	goto sub_105c4;
+        case m2c::ksub_105d5: 	goto sub_105d5;
+        case m2c::ksub_105dd: 	goto sub_105dd;
+        case m2c::ksub_105e5: 	goto sub_105e5;
+        case m2c::ksub_105ed: 	goto sub_105ed;
+        case m2c::ksub_105f5: 	goto sub_105f5;
+        case m2c::ksub_105fd: 	goto sub_105fd;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10635(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10635:
+    _begin:
 cs=0x1c2;eip=0x000435; 	T(MOV(si, 0x20D));	// 983 mov     si, 20Dh ;~ 01C2:0435
 ret_1c2_438:
 	// 4427 
 cs=0x1c2;eip=0x000438; 	T(MOV(di, 0x1CC6));	// 984 mov     di, 1CC6h ;~ 01C2:0438
 cs=0x1c2;eip=0x00043b; 	J(CALL(sub_1063f,0));	// 985 call    sub_1063F ;~ 01C2:043B
 cs=0x1c2;eip=0x00043e; 	R(RETN(0));	// 986 retn ;~ 01C2:043E
-sub_1063f:
-	// 994 
-cs=0x1c2;eip=0x00043f; 	X(PUSH(di));	// 999 push    di ;~ 01C2:043F
-ret_1c2_440:
-	// 4428 
-cs=0x1c2;eip=0x000440; 	T(MOV(di, 0x0BD97));	// 1000 mov     di, 0BD97h ;~ 01C2:0440
-cs=0x1c2;eip=0x000443; 	T(MOV(dx, 0x0BE70));	// 1001 mov     dx, 0BE70h ;~ 01C2:0443
-cs=0x1c2;eip=0x000446; 	T(MOV(cx, 4));	// 1002 mov     cx, 4 ;~ 01C2:0446
-cs=0x1c2;eip=0x000449; 	T(XOR(bx, bx));	// 1003 xor     bx, bx ;~ 01C2:0449
-loc_1064b:
-	// 4429 
-cs=0x1c2;eip=0x00044b; 	T(LODSB);	// 1006 lodsb ;~ 01C2:044B
-cs=0x1c2;eip=0x00044c; 	T(OR(al, al));	// 1007 or      al, al ;~ 01C2:044C
-cs=0x1c2;eip=0x00044e; 	J(JZ(loc_1065a));	// 1008 jz      short loc_1065A ;~ 01C2:044E
-cs=0x1c2;eip=0x000450; 	T(INC(bx));	// 1009 inc     bx ;~ 01C2:0450
-cs=0x1c2;eip=0x000451; 	T(XOR(ah, ah));	// 1010 xor     ah, ah ;~ 01C2:0451
-cs=0x1c2;eip=0x000453; 	T(SHL(ax, cl));	// 1011 shl     ax, cl ;~ 01C2:0453
-cs=0x1c2;eip=0x000455; 	T(ADD(ax, dx));	// 1012 add     ax, dx ;~ 01C2:0455
-cs=0x1c2;eip=0x000457; 	X(STOSW);	// 1013 stosw ;~ 01C2:0457
-cs=0x1c2;eip=0x000458; 	J(JMP(loc_1064b));	// 1014 jmp     short loc_1064B ;~ 01C2:0458
-loc_1065a:
-	// 4430 
-cs=0x1c2;eip=0x00045a; 	X(MOV(word_1fed4, bx));	// 1018 mov     word_1FED4, bx ;~ 01C2:045A
-cs=0x1c2;eip=0x00045e; 	X(POP(di));	// 1019 pop     di ;~ 01C2:045E
-cs=0x1c2;eip=0x00045f; 	J(JMP(loc_14316));	// 1020 jmp     loc_14316 ;~ 01C2:045F
-sub_10662:
-	// 1027 
-cs=0x1c2;eip=0x000462; 	T(MOV(di, 0x236A));	// 1028 mov     di, 236Ah ;~ 01C2:0462
-ret_1c2_465:
-	// 4431 
-cs=0x1c2;eip=0x000465; 	T(MOV(bp, di));	// 1029 mov     bp, di ;~ 01C2:0465
-cs=0x1c2;eip=0x000467; 	T(TEST(byte_14765, 2));	// 1030 test    byte_14765, 2 ;~ 01C2:0467
-cs=0x1c2;eip=0x00046c; 	J(JNZ(loc_10674));	// 1031 jnz     short loc_10674 ;~ 01C2:046C
-cs=0x1c2;eip=0x00046e; 	T(MOV(cx, word_14758));	// 1032 mov     cx, word_14758 ;~ 01C2:046E
-cs=0x1c2;eip=0x000472; 	J(JMP(loc_10678));	// 1033 jmp     short loc_10678 ;~ 01C2:0472
-loc_10674:
-	// 4432 
-cs=0x1c2;eip=0x000474; 	T(MOV(cx, word_14761));	// 1037 mov     cx, word_14761 ;~ 01C2:0474
-loc_10678:
-	// 4433 
-cs=0x1c2;eip=0x000478; 	J(JCXZ(locret_10690));	// 1041 jcxz    short locret_10690 ;~ 01C2:0478
-cs=0x1c2;eip=0x00047a; 	T(CMP(cx, 8));	// 1042 cmp     cx, 8 ;~ 01C2:047A
-cs=0x1c2;eip=0x00047d; 	J(JNC(locret_10690));	// 1043 jnb     short locret_10690 ;~ 01C2:047D
-cs=0x1c2;eip=0x00047f; 	X(PUSH(es));	// 1044 push    es ;~ 01C2:047F
-loc_10680:
-	// 4434 
-cs=0x1c2;eip=0x000480; 	T(MOV(ax, seg_offset(seg003)));	// 1047 mov     ax, seg seg003 ;~ 01C2:0480
-cs=0x1c2;eip=0x000483; 	T(MOV(es, ax));	// 1048 mov     es, ax ;~ 01C2:0483
-loc_10685:
-	// 4435 
-cs=0x1c2;eip=0x000485; 	J(CALL(sub_106a9,0));	// 1052 call    sub_106A9 ;~ 01C2:0485
-cs=0x1c2;eip=0x000488; 	T(SUB(bp, 4));	// 1053 sub     bp, 4 ;~ 01C2:0488
-cs=0x1c2;eip=0x00048b; 	T(MOV(di, bp));	// 1054 mov     di, bp ;~ 01C2:048B
-cs=0x1c2;eip=0x00048d; 	J(LOOP(loc_10685));	// 1055 loop    loc_10685 ;~ 01C2:048D
-cs=0x1c2;eip=0x00048f; 	X(POP(es));	// 1056 pop     es ;~ 01C2:048F
-locret_10690:
-	// 4436 
-cs=0x1c2;eip=0x000490; 	R(RETN(0));	// 1061 retn ;~ 01C2:0490
-sub_10691:
-	// 1068 
-cs=0x1c2;eip=0x000491; 	T(MOV(di, 0x272A));	// 1069 mov     di, 272Ah ;~ 01C2:0491
-ret_1c2_494:
-	// 4437 
-cs=0x1c2;eip=0x000494; 	T(MOV(bp, di));	// 1070 mov     bp, di ;~ 01C2:0494
-cs=0x1c2;eip=0x000496; 	T(TEST(byte_14765, 2));	// 1071 test    byte_14765, 2 ;~ 01C2:0496
-cs=0x1c2;eip=0x00049b; 	J(JNZ(loc_106a3));	// 1072 jnz     short loc_106A3 ;~ 01C2:049B
-cs=0x1c2;eip=0x00049d; 	T(MOV(cx, word_14761));	// 1073 mov     cx, word_14761 ;~ 01C2:049D
-cs=0x1c2;eip=0x0004a1; 	J(JMP(loc_10678));	// 1074 jmp     short loc_10678 ;~ 01C2:04A1
-loc_106a3:
-	// 4438 
-cs=0x1c2;eip=0x0004a3; 	T(MOV(cx, word_14758));	// 1078 mov     cx, word_14758 ;~ 01C2:04A3
-cs=0x1c2;eip=0x0004a7; 	J(JMP(loc_10678));	// 1079 jmp     short loc_10678 ;~ 01C2:04A7
-sub_106a9:
-	// 1087 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_438: 	goto ret_1c2_438;
+        case m2c::ksub_10635: 	goto sub_10635;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_106a9(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_106a9:
+    _begin:
 cs=0x1c2;eip=0x0004a9; 	T(MOV(si, 0x131));	// 1088 mov     si, 131h ;~ 01C2:04A9
 ret_1c2_4ac:
 	// 4439 
@@ -540,39 +3358,32 @@ cs=0x1c2;eip=0x0004b6; 	T(ADD(di, 0x1FFC));	// 1097 add     di, 1FFCh ;~ 01C2:04
 cs=0x1c2;eip=0x0004ba; 	T(DEC(bl));	// 1098 dec     bl ;~ 01C2:04BA
 cs=0x1c2;eip=0x0004bc; 	J(JNZ(loc_106ae));	// 1099 jnz     short loc_106AE ;~ 01C2:04BC
 cs=0x1c2;eip=0x0004be; 	R(RETN(0));	// 1100 retn ;~ 01C2:04BE
-sub_106bf:
-	// 1107 
-cs=0x1c2;eip=0x0004bf; 	J(CALL(sub_10438,0));	// 1119 call    sub_10438 ;~ 01C2:04BF
-ret_1c2_4c2:
-	// 4441 
-cs=0x1c2;eip=0x0004c2; 	X(MOV(byte_154c2, 8));	// 1120 mov     byte_154C2, 8 ;~ 01C2:04C2
-cs=0x1c2;eip=0x0004c7; 	J(CALL(sub_14372,0));	// 1121 call    sub_14372 ;~ 01C2:04C7
-cs=0x1c2;eip=0x0004ca; 	T(MOV(si, 0x1DA));	// 1122 mov     si, 1DAh ;~ 01C2:04CA
-cs=0x1c2;eip=0x0004cd; 	J(CALL(sub_142f4,0));	// 1123 call    sub_142F4 ;~ 01C2:04CD
-cs=0x1c2;eip=0x0004d0; 	X(MOV(word_156e6, 0));	// 1124 mov     word_156E6, 0 ;~ 01C2:04D0
-loc_106d6:
-	// 4442 
-cs=0x1c2;eip=0x0004d6; 	J(CALL(sub_134e1,0));	// 1128 call    sub_134E1 ;~ 01C2:04D6
-cs=0x1c2;eip=0x0004d9; 	J(JNZ(loc_106e4));	// 1129 jnz     short loc_106E4 ;~ 01C2:04D9
-cs=0x1c2;eip=0x0004db; 	T(CMP(word_156e6, 0x12C));	// 1130 cmp     word_156E6, 12Ch ;~ 01C2:04DB
-cs=0x1c2;eip=0x0004e1; 	J(JC(loc_106d6));	// 1131 jb      short loc_106D6 ;~ 01C2:04E1
-cs=0x1c2;eip=0x0004e3; 	R(RETN(0));	// 1132 retn ;~ 01C2:04E3
-loc_106e4:
-	// 4443 
-cs=0x1c2;eip=0x0004e4; 	J(CALL(sub_134e8,0));	// 1136 call    sub_134E8 ;~ 01C2:04E4
-cs=0x1c2;eip=0x0004e7; 	T(CMP(ax, 0x3B00));	// 1137 cmp     ax, 3B00h ;~ 01C2:04E7
-cs=0x1c2;eip=0x0004ea; 	J(JZ(loc_106f8));	// 1138 jz      short loc_106F8 ;~ 01C2:04EA
-cs=0x1c2;eip=0x0004ec; 	T(CMP(ax, 0x3C00));	// 1139 cmp     ax, 3C00h ;~ 01C2:04EC
-cs=0x1c2;eip=0x0004ef; 	J(JNZ(loc_106d6));	// 1140 jnz     short loc_106D6 ;~ 01C2:04EF
-cs=0x1c2;eip=0x0004f1; 	T(MOV(sp, word_154e9));	// 1141 mov     sp, word_154E9 ;~ 01C2:04F1
-cs=0x1c2;eip=0x0004f5; 	J(JMP(loc_13d1e));	// 1142 jmp     loc_13D1E ;~ 01C2:04F5
-loc_106f8:
-	// 4444 
-cs=0x1c2;eip=0x0004f8; 	T(MOV(sp, word_154e9));	// 1146 mov     sp, word_154E9 ;~ 01C2:04F8
-cs=0x1c2;eip=0x0004fc; 	X(MOV(byte_14b00, 0));	// 1147 mov     byte_14B00, 0 ;~ 01C2:04FC
-cs=0x1c2;eip=0x000501; 	J(JMP(loc_1378a));	// 1148 jmp     loc_1378A ;~ 01C2:0501
-sub_10704:
-	// 1155 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_106ae: 	goto loc_106ae;
+        case m2c::kret_1c2_4ac: 	goto ret_1c2_4ac;
+        case m2c::ksub_106a9: 	goto sub_106a9;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10704(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10704:
+    _begin:
 cs=0x1c2;eip=0x000504; 	J(CALL(sub_10438,0));	// 1156 call    sub_10438 ;~ 01C2:0504
 ret_1c2_507:
 	// 4445 
@@ -589,8 +3400,32 @@ loc_1071f:
 cs=0x1c2;eip=0x00051f; 	T(CMP(word_156e6, 0x12C));	// 1167 cmp     word_156E6, 12Ch ;~ 01C2:051F
 cs=0x1c2;eip=0x000525; 	J(JC(loc_1071f));	// 1168 jb      short loc_1071F ;~ 01C2:0525
 cs=0x1c2;eip=0x000527; 	R(RETN(0));	// 1169 retn ;~ 01C2:0527
-seg001_528_proc:
-	// 1173 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1071f: 	goto loc_1071f;
+        case m2c::kret_1c2_507: 	goto ret_1c2_507;
+        case m2c::ksub_10704: 	goto sub_10704;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_528_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_528_proc:
+    _begin:
 cs=0x1c2;eip=0x000528; 	X(MOV(byte_154c2, 8));	// 1173 mov     byte_154C2, 8 ;~ 01C2:0528
 ret_1c2_52d:
 	// 4447 
@@ -604,8 +3439,31 @@ cs=0x1c2;eip=0x00053d; 	T(ADD(al, 0x30));	// 1180 add     al, 30h ; '0' ;~ 01C2:
 cs=0x1c2;eip=0x00053f; 	X(MOV(*(raddr(ds,di)), al));	// 1181 mov     [di], al ;~ 01C2:053F
 cs=0x1c2;eip=0x000541; 	J(CALL(sub_142f4,0));	// 1182 call    sub_142F4 ;~ 01C2:0541
 cs=0x1c2;eip=0x000544; 	R(RETN(0));	// 1183 retn ;~ 01C2:0544
-sub_10745:
-	// 1188 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_52d: 	goto ret_1c2_52d;
+        case m2c::kseg001_528_proc: 	goto seg001_528_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10745(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10745:
+    _begin:
 cs=0x1c2;eip=0x000545; 	J(CALL(sub_13c4f,0));	// 1189 call    sub_13C4F ;~ 01C2:0545
 ret_1c2_548:
 	// 4448 
@@ -620,6 +3478,32 @@ cs=0x1c2;eip=0x000552; 	T(ADD(di, 0x14));	// 1197 add     di, 14h ;~ 01C2:0552
 cs=0x1c2;eip=0x000555; 	T(DEC(bl));	// 1198 dec     bl ;~ 01C2:0555
 cs=0x1c2;eip=0x000557; 	J(JNZ(loc_1074c));	// 1199 jnz     short loc_1074C ;~ 01C2:0557
 cs=0x1c2;eip=0x000559; 	R(RETN(0));	// 1200 retn ;~ 01C2:0559
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1074c: 	goto loc_1074c;
+        case m2c::kret_1c2_548: 	goto ret_1c2_548;
+        case m2c::ksub_10745: 	goto sub_10745;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group3:
+    _begin:
 sub_10760:
 	// 1210 
 cs=0x1c2;eip=0x000560; 	T(MOV(di, 0x3B2));	// 1211 mov     di, 3B2h ;~ 01C2:0560
@@ -673,8 +3557,39 @@ loc_107a2:
 	// 4457 
 cs=0x1c2;eip=0x0005a2; 	X(POP(si));	// 1266 pop     si ;~ 01C2:05A2
 cs=0x1c2;eip=0x0005a3; 	R(RETN(0));	// 1267 retn ;~ 01C2:05A3
-sub_107a4:
-	// 1274 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10767: 	goto loc_10767;
+        case m2c::kloc_10778: 	goto loc_10778;
+        case m2c::kloc_1078a: 	goto loc_1078a;
+        case m2c::kloc_10792: 	goto loc_10792;
+        case m2c::kloc_10794: 	goto loc_10794;
+        case m2c::kloc_1079c: 	goto loc_1079c;
+        case m2c::kloc_107a2: 	goto loc_107a2;
+        case m2c::kret_1c2_563: 	goto ret_1c2_563;
+        case m2c::ksub_10760: 	goto sub_10760;
+        case m2c::ksub_10766: 	goto sub_10766;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_107a4(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_107a4:
+    _begin:
 cs=0x1c2;eip=0x0005a4; 	T(MOV(bx, word_14afc));	// 1275 mov     bx, word_14AFC ;~ 01C2:05A4
 ret_1c2_5a8:
 	// 4458 
@@ -758,8 +3673,41 @@ loc_10843:
 cs=0x1c2;eip=0x000643; 	X(POP(si));	// 1355 pop     si ;~ 01C2:0643
 cs=0x1c2;eip=0x000644; 	T(STC);	// 1356 stc ;~ 01C2:0644
 cs=0x1c2;eip=0x000645; 	R(RETN(0));	// 1357 retn ;~ 01C2:0645
-sub_10846:
-	// 1364 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_107b8: 	goto loc_107b8;
+        case m2c::kloc_107dc: 	goto loc_107dc;
+        case m2c::kloc_107e5: 	goto loc_107e5;
+        case m2c::kloc_107ee: 	goto loc_107ee;
+        case m2c::kloc_107f6: 	goto loc_107f6;
+        case m2c::kloc_107f8: 	goto loc_107f8;
+        case m2c::kloc_10815: 	goto loc_10815;
+        case m2c::kloc_1081d: 	goto loc_1081d;
+        case m2c::kloc_10824: 	goto loc_10824;
+        case m2c::kloc_10843: 	goto loc_10843;
+        case m2c::kret_1c2_5a8: 	goto ret_1c2_5a8;
+        case m2c::ksub_107a4: 	goto sub_107a4;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10846(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10846:
+    _begin:
 cs=0x1c2;eip=0x000646; 	T(MOV(si, 0x3B2));	// 1366 mov     si, 3B2h ;~ 01C2:0646
 ret_1c2_649:
 	// 4469 
@@ -879,8 +3827,46 @@ loc_10935:
 	// 4484 
 cs=0x1c2;eip=0x000735; 	T(STC);	// 1485 stc ;~ 01C2:0735
 cs=0x1c2;eip=0x000736; 	R(RETN(0));	// 1486 retn ;~ 01C2:0736
-sub_10937:
-	// 1493 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10856: 	goto loc_10856;
+        case m2c::kloc_1086b: 	goto loc_1086b;
+        case m2c::kloc_10874: 	goto loc_10874;
+        case m2c::kloc_1087c: 	goto loc_1087c;
+        case m2c::kloc_1087e: 	goto loc_1087e;
+        case m2c::kloc_10885: 	goto loc_10885;
+        case m2c::kloc_10895: 	goto loc_10895;
+        case m2c::kloc_108cc: 	goto loc_108cc;
+        case m2c::kloc_108d4: 	goto loc_108d4;
+        case m2c::kloc_108dc: 	goto loc_108dc;
+        case m2c::kloc_108e4: 	goto loc_108e4;
+        case m2c::kloc_108e6: 	goto loc_108e6;
+        case m2c::kloc_10912: 	goto loc_10912;
+        case m2c::kloc_10913: 	goto loc_10913;
+        case m2c::kloc_10935: 	goto loc_10935;
+        case m2c::kret_1c2_649: 	goto ret_1c2_649;
+        case m2c::ksub_10846: 	goto sub_10846;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10937(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10937:
+    _begin:
 cs=0x1c2;eip=0x000737; 	T(TEST(byte_1488c, 0x0FF));	// 1494 test    byte_1488C, 0FFh ;~ 01C2:0737
 ret_1c2_73c:
 	// 4485 
@@ -934,8 +3920,37 @@ cs=0x1c2;eip=0x0007a9; 	X(MOV(*(dw*)(raddr(ds,si+0x0A)), ax));	// 1546 mov     [
 locret_109ac:
 	// 4491 
 cs=0x1c2;eip=0x0007ac; 	R(RETN(0));	// 1550 retn ;~ 01C2:07AC
-sub_109ad:
-	// 1557 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1094b: 	goto loc_1094b;
+        case m2c::kloc_1095c: 	goto loc_1095c;
+        case m2c::kloc_10972: 	goto loc_10972;
+        case m2c::kloc_10985: 	goto loc_10985;
+        case m2c::kloc_10996: 	goto loc_10996;
+        case m2c::klocret_109ac: 	goto locret_109ac;
+        case m2c::kret_1c2_73c: 	goto ret_1c2_73c;
+        case m2c::ksub_10937: 	goto sub_10937;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_109ad(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_109ad:
+    _begin:
 cs=0x1c2;eip=0x0007ad; 	T(TEST(byte_1488b, 0x0FF));	// 1558 test    byte_1488B, 0FFh ;~ 01C2:07AD
 ret_1c2_7b2:
 	// 4492 
@@ -999,8 +4014,36 @@ cs=0x1c2;eip=0x000829; 	X(POP(si));	// 1618 pop     si ;~ 01C2:0829
 cs=0x1c2;eip=0x00082a; 	T(MOV(al, 0x0A));	// 1619 mov     al, 0Ah ;~ 01C2:082A
 cs=0x1c2;eip=0x00082c; 	J(CALL(sub_14015,0));	// 1620 call    sub_14015 ;~ 01C2:082C
 cs=0x1c2;eip=0x00082f; 	R(RETN(0));	// 1621 retn ;~ 01C2:082F
-sub_10a30:
-	// 1628 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_109b5: 	goto loc_109b5;
+        case m2c::kloc_109bd: 	goto loc_109bd;
+        case m2c::kloc_109c5: 	goto loc_109c5;
+        case m2c::kloc_109dc: 	goto loc_109dc;
+        case m2c::kloc_10a29: 	goto loc_10a29;
+        case m2c::kret_1c2_7b2: 	goto ret_1c2_7b2;
+        case m2c::ksub_109ad: 	goto sub_109ad;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10a30(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10a30:
+    _begin:
 cs=0x1c2;eip=0x000830; 	T(TEST(byte_1488c, 0x0FF));	// 1629 test    byte_1488C, 0FFh ;~ 01C2:0830
 ret_1c2_835:
 	// 4498 
@@ -1042,8 +4085,32 @@ cs=0x1c2;eip=0x000886; 	J(CALL(sub_10ef0,0));	// 1665 call    sub_10EF0 ;~ 01C2:
 cs=0x1c2;eip=0x000889; 	T(MOV(al, 0x0A));	// 1666 mov     al, 0Ah ;~ 01C2:0889
 cs=0x1c2;eip=0x00088b; 	J(CALL(sub_14015,0));	// 1667 call    sub_14015 ;~ 01C2:088B
 cs=0x1c2;eip=0x00088e; 	R(RETN(0));	// 1668 retn ;~ 01C2:088E
-sub_10a8f:
-	// 1675 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10a38: 	goto loc_10a38;
+        case m2c::kret_1c2_835: 	goto ret_1c2_835;
+        case m2c::ksub_10a30: 	goto sub_10a30;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10a8f(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10a8f:
+    _begin:
 cs=0x1c2;eip=0x00088f; 	X(MOV(byte_148b0, 0));	// 1676 mov     byte_148B0, 0 ;~ 01C2:088F
 ret_1c2_894:
 	// 4500 
@@ -1170,8 +4237,45 @@ cs=0x1c2;eip=0x000995; 	T(MOV(al, byte_148ac));	// 1810 mov     al, byte_148AC ;
 cs=0x1c2;eip=0x000998; 	T(CMP(al, byte_148ad));	// 1811 cmp     al, byte_148AD ;~ 01C2:0998
 cs=0x1c2;eip=0x00099c; 	J(JC(loc_10b76));	// 1812 jb      short loc_10B76 ;~ 01C2:099C
 cs=0x1c2;eip=0x00099e; 	J(JMP(loc_10b2f));	// 1813 jmp     short loc_10B2F ;~ 01C2:099E
-sub_10ba0:
-	// 1820 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10aa5: 	goto loc_10aa5;
+        case m2c::kloc_10ab4: 	goto loc_10ab4;
+        case m2c::kloc_10ac3: 	goto loc_10ac3;
+        case m2c::kloc_10ac9: 	goto loc_10ac9;
+        case m2c::kloc_10ad7: 	goto loc_10ad7;
+        case m2c::kloc_10ae4: 	goto loc_10ae4;
+        case m2c::kloc_10aed: 	goto loc_10aed;
+        case m2c::kloc_10aef: 	goto loc_10aef;
+        case m2c::kloc_10b2f: 	goto loc_10b2f;
+        case m2c::kloc_10b40: 	goto loc_10b40;
+        case m2c::kloc_10b59: 	goto loc_10b59;
+        case m2c::kloc_10b6f: 	goto loc_10b6f;
+        case m2c::kloc_10b76: 	goto loc_10b76;
+        case m2c::kloc_10b95: 	goto loc_10b95;
+        case m2c::kret_1c2_894: 	goto ret_1c2_894;
+        case m2c::ksub_10a8f: 	goto sub_10a8f;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10ba0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10ba0:
+    _begin:
 cs=0x1c2;eip=0x0009a0; 	X(MOV(byte_148ac, 8));	// 1821 mov     byte_148AC, 8 ;~ 01C2:09A0
 ret_1c2_9a5:
 	// 4515 
@@ -1236,6 +4340,41 @@ loc_10c0e:
 cs=0x1c2;eip=0x000a0e; 	T(MOV(bx, word_148b3));	// 1882 mov     bx, word_148B3 ;~ 01C2:0A0E
 cs=0x1c2;eip=0x000a12; 	T(MOV(dx, word_148b5));	// 1883 mov     dx, word_148B5 ;~ 01C2:0A12
 cs=0x1c2;eip=0x000a16; 	R(RETN(0));	// 1884 retn ;~ 01C2:0A16
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10bb9: 	goto loc_10bb9;
+        case m2c::kloc_10bc1: 	goto loc_10bc1;
+        case m2c::kloc_10bc9: 	goto loc_10bc9;
+        case m2c::kloc_10bd1: 	goto loc_10bd1;
+        case m2c::kloc_10bd9: 	goto loc_10bd9;
+        case m2c::kloc_10bdb: 	goto loc_10bdb;
+        case m2c::kloc_10be8: 	goto loc_10be8;
+        case m2c::kloc_10bec: 	goto loc_10bec;
+        case m2c::kloc_10c0d: 	goto loc_10c0d;
+        case m2c::kloc_10c0e: 	goto loc_10c0e;
+        case m2c::kret_1c2_9a5: 	goto ret_1c2_9a5;
+        case m2c::ksub_10ba0: 	goto sub_10ba0;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group4(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group4:
+    _begin:
 sub_10c17:
 	// 1891 
 cs=0x1c2;eip=0x000a17; 	X(PUSH(si));	// 1893 push    si ;~ 01C2:0A17
@@ -1308,6 +4447,40 @@ cs=0x1c2;eip=0x000a8f; 	T(MOV(ax, word_148a1));	// 1964 mov     ax, word_148A1 ;
 cs=0x1c2;eip=0x000a92; 	X(MOV(word_14899, ax));	// 1965 mov     word_14899, ax ;~ 01C2:0A92
 cs=0x1c2;eip=0x000a95; 	T(MOV(si, word_148cb));	// 1966 mov     si, word_148CB ;~ 01C2:0A95
 cs=0x1c2;eip=0x000a99; 	J(JMP(loc_10c28));	// 1967 jmp     short loc_10C28 ;~ 01C2:0A99
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10c28: 	goto loc_10c28;
+        case m2c::kloc_10c41: 	goto loc_10c41;
+        case m2c::kloc_10c49: 	goto loc_10c49;
+        case m2c::kloc_10c51: 	goto loc_10c51;
+        case m2c::kloc_10c59: 	goto loc_10c59;
+        case m2c::kloc_10c5b: 	goto loc_10c5b;
+        case m2c::kloc_10c7d: 	goto loc_10c7d;
+        case m2c::kret_1c2_a18: 	goto ret_1c2_a18;
+        case m2c::kret_1c2_a89: 	goto ret_1c2_a89;
+        case m2c::ksub_10c17: 	goto sub_10c17;
+        case m2c::ksub_10c88: 	goto sub_10c88;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group5:
+    _begin:
 sub_10c9b:
 	// 1974 
 cs=0x1c2;eip=0x000a9b; 	X(PUSH(si));	// 1976 push    si ;~ 01C2:0A9B
@@ -1346,8 +4519,37 @@ cs=0x1c2;eip=0x000ac6; 	T(CMP(word_148c9, 0));	// 2011 cmp     word_148C9, 0 ;~ 
 cs=0x1c2;eip=0x000acb; 	J(JZ(loc_10cc3));	// 2012 jz      short loc_10CC3 ;~ 01C2:0ACB
 cs=0x1c2;eip=0x000acd; 	T(MOV(si, word_148cb));	// 2013 mov     si, word_148CB ;~ 01C2:0ACD
 cs=0x1c2;eip=0x000ad1; 	J(JMP(loc_10ca7));	// 2014 jmp     short loc_10CA7 ;~ 01C2:0AD1
-sub_10cd3:
-	// 2021 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10ca7: 	goto loc_10ca7;
+        case m2c::kloc_10cb0: 	goto loc_10cb0;
+        case m2c::kloc_10cbf: 	goto loc_10cbf;
+        case m2c::kloc_10cc3: 	goto loc_10cc3;
+        case m2c::kret_1c2_a9c: 	goto ret_1c2_a9c;
+        case m2c::kret_1c2_ac6: 	goto ret_1c2_ac6;
+        case m2c::ksub_10c9b: 	goto sub_10c9b;
+        case m2c::ksub_10cc5: 	goto sub_10cc5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10cd3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10cd3:
+    _begin:
 cs=0x1c2;eip=0x000ad3; 	J(CALL(sub_10e07,0));	// 2022 call    sub_10E07 ;~ 01C2:0AD3
 ret_1c2_ad6:
 	// 4541 
@@ -1451,8 +4653,42 @@ cs=0x1c2;eip=0x000b9a; 	T(MOV(al, byte_148ac));	// 2126 mov     al, byte_148AC ;
 cs=0x1c2;eip=0x000b9d; 	T(CMP(al, byte_148ad));	// 2127 cmp     al, byte_148AD ;~ 01C2:0B9D
 cs=0x1c2;eip=0x000ba1; 	J(JC(loc_10d81));	// 2128 jb      short loc_10D81 ;~ 01C2:0BA1
 cs=0x1c2;eip=0x000ba3; 	J(JMP(loc_10d6c));	// 2129 jmp     short loc_10D6C ;~ 01C2:0BA3
-sub_10da5:
-	// 2136 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10cfc: 	goto loc_10cfc;
+        case m2c::kloc_10d0d: 	goto loc_10d0d;
+        case m2c::kloc_10d1b: 	goto loc_10d1b;
+        case m2c::kloc_10d21: 	goto loc_10d21;
+        case m2c::kloc_10d2b: 	goto loc_10d2b;
+        case m2c::kloc_10d2d: 	goto loc_10d2d;
+        case m2c::kloc_10d6c: 	goto loc_10d6c;
+        case m2c::kloc_10d7f: 	goto loc_10d7f;
+        case m2c::kloc_10d81: 	goto loc_10d81;
+        case m2c::kloc_10d9a: 	goto loc_10d9a;
+        case m2c::klocret_10cfb: 	goto locret_10cfb;
+        case m2c::kret_1c2_ad6: 	goto ret_1c2_ad6;
+        case m2c::ksub_10cd3: 	goto sub_10cd3;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10da5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10da5:
+    _begin:
 cs=0x1c2;eip=0x000ba5; 	X(MOV(word_148ae, 0x0FFFF));	// 2137 mov     word_148AE, 0FFFFh ;~ 01C2:0BA5
 ret_1c2_bab:
 	// 4553 
@@ -1504,8 +4740,38 @@ loc_10dfe:
 cs=0x1c2;eip=0x000bfe; 	T(MOV(bx, word_148b3));	// 2184 mov     bx, word_148B3 ;~ 01C2:0BFE
 cs=0x1c2;eip=0x000c02; 	T(MOV(dx, word_148b5));	// 2185 mov     dx, word_148B5 ;~ 01C2:0C02
 cs=0x1c2;eip=0x000c06; 	R(RETN(0));	// 2186 retn ;~ 01C2:0C06
-sub_10e07:
-	// 2193 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10dbc: 	goto loc_10dbc;
+        case m2c::kloc_10dc4: 	goto loc_10dc4;
+        case m2c::kloc_10dcc: 	goto loc_10dcc;
+        case m2c::kloc_10dd4: 	goto loc_10dd4;
+        case m2c::kloc_10dd6: 	goto loc_10dd6;
+        case m2c::kloc_10dfd: 	goto loc_10dfd;
+        case m2c::kloc_10dfe: 	goto loc_10dfe;
+        case m2c::kret_1c2_bab: 	goto ret_1c2_bab;
+        case m2c::ksub_10da5: 	goto sub_10da5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10e07(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10e07:
+    _begin:
 cs=0x1c2;eip=0x000c07; 	T(MOV(si, 0x3F3));	// 2194 mov     si, 3F3h ;~ 01C2:0C07
 ret_1c2_c0a:
 	// 4561 
@@ -1582,8 +4848,42 @@ loc_10e85:
 	// 4572 
 cs=0x1c2;eip=0x000c85; 	T(STC);	// 2270 stc ;~ 01C2:0C85
 cs=0x1c2;eip=0x000c86; 	R(RETN(0));	// 2271 retn ;~ 01C2:0C86
-sub_10e87:
-	// 2278 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10e19: 	goto loc_10e19;
+        case m2c::kloc_10e1b: 	goto loc_10e1b;
+        case m2c::kloc_10e24: 	goto loc_10e24;
+        case m2c::kloc_10e33: 	goto loc_10e33;
+        case m2c::kloc_10e4a: 	goto loc_10e4a;
+        case m2c::kloc_10e52: 	goto loc_10e52;
+        case m2c::kloc_10e5a: 	goto loc_10e5a;
+        case m2c::kloc_10e62: 	goto loc_10e62;
+        case m2c::kloc_10e64: 	goto loc_10e64;
+        case m2c::kloc_10e83: 	goto loc_10e83;
+        case m2c::kloc_10e85: 	goto loc_10e85;
+        case m2c::kret_1c2_c0a: 	goto ret_1c2_c0a;
+        case m2c::ksub_10e07: 	goto sub_10e07;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10e87(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10e87:
+    _begin:
 cs=0x1c2;eip=0x000c87; 	X(PUSH(si));	// 2280 push    si ;~ 01C2:0C87
 ret_1c2_c88:
 	// 4573 
@@ -1610,8 +4910,34 @@ cs=0x1c2;eip=0x000cab; 	T(SHR(ax, cl));	// 2302 shr     ax, cl ;~ 01C2:0CAB
 cs=0x1c2;eip=0x000cad; 	X(MOV(word_148b1, ax));	// 2303 mov     word_148B1, ax ;~ 01C2:0CAD
 cs=0x1c2;eip=0x000cb0; 	X(POP(si));	// 2304 pop     si ;~ 01C2:0CB0
 cs=0x1c2;eip=0x000cb1; 	R(RETN(0));	// 2305 retn ;~ 01C2:0CB1
-sub_10eb2:
-	// 2312 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10e94: 	goto loc_10e94;
+        case m2c::kloc_10e99: 	goto loc_10e99;
+        case m2c::kloc_10ea3: 	goto loc_10ea3;
+        case m2c::kret_1c2_c88: 	goto ret_1c2_c88;
+        case m2c::ksub_10e87: 	goto sub_10e87;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10eb2(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10eb2:
+    _begin:
 cs=0x1c2;eip=0x000cb2; 	X(PUSH(bx));	// 2313 push    bx ;~ 01C2:0CB2
 ret_1c2_cb3:
 	// 4577 
@@ -1643,8 +4969,33 @@ cs=0x1c2;eip=0x000cde; 	T(ADD(di, dx));	// 2338 add     di, dx ;~ 01C2:0CDE
 cs=0x1c2;eip=0x000ce0; 	X(POP(dx));	// 2339 pop     dx ;~ 01C2:0CE0
 cs=0x1c2;eip=0x000ce1; 	X(POP(bx));	// 2340 pop     bx ;~ 01C2:0CE1
 cs=0x1c2;eip=0x000ce2; 	R(RETN(0));	// 2341 retn ;~ 01C2:0CE2
-sub_10ef0:
-	// 2350 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10ec1: 	goto loc_10ec1;
+        case m2c::kloc_10ed6: 	goto loc_10ed6;
+        case m2c::kret_1c2_cb3: 	goto ret_1c2_cb3;
+        case m2c::ksub_10eb2: 	goto sub_10eb2;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_10ef0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_10ef0:
+    _begin:
 cs=0x1c2;eip=0x000cf0; 	X(PUSH(si));	// 2352 push    si ;~ 01C2:0CF0
 ret_1c2_cf1:
 	// 4580 
@@ -1818,8 +5169,56 @@ loc_11034:
 cs=0x1c2;eip=0x000e34; 	X(POP(di));	// 2538 pop     di ;~ 01C2:0E34
 cs=0x1c2;eip=0x000e35; 	X(POP(si));	// 2539 pop     si ;~ 01C2:0E35
 cs=0x1c2;eip=0x000e36; 	R(RETN(0));	// 2540 retn ;~ 01C2:0E36
-sub_11037:
-	// 2547 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_10f01: 	goto loc_10f01;
+        case m2c::kloc_10f07: 	goto loc_10f07;
+        case m2c::kloc_10f13: 	goto loc_10f13;
+        case m2c::kloc_10f25: 	goto loc_10f25;
+        case m2c::kloc_10f28: 	goto loc_10f28;
+        case m2c::kloc_10f47: 	goto loc_10f47;
+        case m2c::kloc_10f75: 	goto loc_10f75;
+        case m2c::kloc_10f79: 	goto loc_10f79;
+        case m2c::kloc_10f82: 	goto loc_10f82;
+        case m2c::kloc_10f8a: 	goto loc_10f8a;
+        case m2c::kloc_10f8d: 	goto loc_10f8d;
+        case m2c::kloc_10f97: 	goto loc_10f97;
+        case m2c::kloc_10fa1: 	goto loc_10fa1;
+        case m2c::kloc_10fb8: 	goto loc_10fb8;
+        case m2c::kloc_10fe6: 	goto loc_10fe6;
+        case m2c::kloc_10feb: 	goto loc_10feb;
+        case m2c::kloc_10fee: 	goto loc_10fee;
+        case m2c::kloc_10fff: 	goto loc_10fff;
+        case m2c::kloc_11008: 	goto loc_11008;
+        case m2c::kloc_1100d: 	goto loc_1100d;
+        case m2c::kloc_11019: 	goto loc_11019;
+        case m2c::kloc_1101c: 	goto loc_1101c;
+        case m2c::kloc_11025: 	goto loc_11025;
+        case m2c::kloc_11029: 	goto loc_11029;
+        case m2c::kloc_11034: 	goto loc_11034;
+        case m2c::kret_1c2_cf1: 	goto ret_1c2_cf1;
+        case m2c::ksub_10ef0: 	goto sub_10ef0;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11037(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11037:
+    _begin:
 cs=0x1c2;eip=0x000e37; 	T(MOV(ax, word_148d7));	// 2549 mov     ax, word_148D7 ;~ 01C2:0E37
 ret_1c2_e3a:
 	// 4606 
@@ -1838,8 +5237,33 @@ loc_1104c:
 	// 4608 
 cs=0x1c2;eip=0x000e4c; 	T(CLC);	// 2565 clc ;~ 01C2:0E4C
 cs=0x1c2;eip=0x000e4d; 	R(RETN(0));	// 2566 retn ;~ 01C2:0E4D
-sub_1104e:
-	// 2573 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11042: 	goto loc_11042;
+        case m2c::kloc_1104c: 	goto loc_1104c;
+        case m2c::kret_1c2_e3a: 	goto ret_1c2_e3a;
+        case m2c::ksub_11037: 	goto sub_11037;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1104e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1104e:
+    _begin:
 cs=0x1c2;eip=0x000e4e; 	T(MOV(si, 0x0BBA3));	// 2575 mov     si, 0BBA3h ;~ 01C2:0E4E
 ret_1c2_e51:
 	// 4609 
@@ -1864,8 +5288,34 @@ loc_11069:
 cs=0x1c2;eip=0x000e69; 	T(ADD(si, 2));	// 2594 add     si, 2 ;~ 01C2:0E69
 cs=0x1c2;eip=0x000e6c; 	J(LOOP(loc_11058));	// 2595 loop    loc_11058 ;~ 01C2:0E6C
 cs=0x1c2;eip=0x000e6e; 	R(RETN(0));	// 2596 retn ;~ 01C2:0E6E
-sub_1106f:
-	// 2603 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11058: 	goto loc_11058;
+        case m2c::kloc_11061: 	goto loc_11061;
+        case m2c::kloc_11069: 	goto loc_11069;
+        case m2c::kret_1c2_e51: 	goto ret_1c2_e51;
+        case m2c::ksub_1104e: 	goto sub_1104e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1106f(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1106f:
+    _begin:
 cs=0x1c2;eip=0x000e6f; 	J(CALL(sub_1104e,0));	// 2604 call    sub_1104E ;~ 01C2:0E6F
 ret_1c2_e72:
 	// 4613 
@@ -1895,109 +5345,31 @@ cs=0x1c2;eip=0x000e9b; 	T(MOV(bx, ax));	// 2627 mov     bx, ax ;~ 01C2:0E9B
 cs=0x1c2;eip=0x000e9d; 	T(MOV(dx, word_201e3));	// 2628 mov     dx, word_201E3 ;~ 01C2:0E9D
 cs=0x1c2;eip=0x000ea1; 	T(ADD(dx, 3));	// 2629 add     dx, 3 ;~ 01C2:0EA1
 cs=0x1c2;eip=0x000ea4; 	R(RETN(0));	// 2630 retn ;~ 01C2:0EA4
-sub_110b0:
-	// 2639 
-cs=0x1c2;eip=0x000eb0; 	T(TEST(byte_15242, 0x0FF));	// 2640 test    byte_15242, 0FFh ;~ 01C2:0EB0
-ret_1c2_eb5:
-	// 4614 
-cs=0x1c2;eip=0x000eb5; 	J(JZ(loc_110bb));	// 2641 jz      short loc_110BB ;~ 01C2:0EB5
-cs=0x1c2;eip=0x000eb7; 	J(CALL(sub_12e30,0));	// 2642 call    sub_12E30 ;~ 01C2:0EB7
-cs=0x1c2;eip=0x000eba; 	R(RETN(0));	// 2643 retn ;~ 01C2:0EBA
-loc_110bb:
-	// 4615 
-cs=0x1c2;eip=0x000ebb; 	T(TEST(byte_1488c, 0x0FF));	// 2647 test    byte_1488C, 0FFh ;~ 01C2:0EBB
-cs=0x1c2;eip=0x000ec0; 	J(JZ(loc_110cc));	// 2648 jz      short loc_110CC ;~ 01C2:0EC0
-cs=0x1c2;eip=0x000ec2; 	T(MOV(al, byte_1488c));	// 2649 mov     al, byte_1488C ;~ 01C2:0EC2
-cs=0x1c2;eip=0x000ec5; 	T(SHR(al, 1));	// 2650 shr     al, 1 ;~ 01C2:0EC5
-cs=0x1c2;eip=0x000ec7; 	T(TEST(al, 1));	// 2651 test    al, 1 ;~ 01C2:0EC7
-cs=0x1c2;eip=0x000ec9; 	J(JNZ(loc_110cc));	// 2652 jnz     short loc_110CC ;~ 01C2:0EC9
-cs=0x1c2;eip=0x000ecb; 	R(RETN(0));	// 2653 retn ;~ 01C2:0ECB
-loc_110cc:
-	// 4616 
-cs=0x1c2;eip=0x000ecc; 	X(PUSH(es));	// 2658 push    es ;~ 01C2:0ECC
-loc_110cd:
-	// 4617 
-cs=0x1c2;eip=0x000ecd; 	T(MOV(ax, seg_offset(seg003)));	// 2661 mov     ax, seg seg003 ;~ 01C2:0ECD
-cs=0x1c2;eip=0x000ed0; 	T(MOV(es, ax));	// 2662 mov     es, ax ;~ 01C2:0ED0
-cs=0x1c2;eip=0x000ed2; 	T(MOV(bp, word_153ba));	// 2664 mov     bp, word_153BA ;~ 01C2:0ED2
-cs=0x1c2;eip=0x000ed6; 	T(MOV(di, 0x0FD7B));	// 2665 mov     di, 0FD7Bh ;~ 01C2:0ED6
-cs=0x1c2;eip=0x000ed9; 	T(ADD(di, bp));	// 2666 add     di, bp ;~ 01C2:0ED9
-cs=0x1c2;eip=0x000edb; 	T(MOV(ax, 0x0FFFF));	// 2667 mov     ax, 0FFFFh ;~ 01C2:0EDB
-cs=0x1c2;eip=0x000ede; 	T(MOV(cx, 5));	// 2668 mov     cx, 5 ;~ 01C2:0EDE
-cs=0x1c2;eip=0x000ee1; 	T(MOV(dx, di));	// 2669 mov     dx, di ;~ 01C2:0EE1
-	// 2670 rep stosw ;~ 01C2:0EE3
-cs=0x1c2;eip=0x000ee3; 	X(	REP STOSW);	// 2670 rep stosw ;~ 01C2:0EE3
-cs=0x1c2;eip=0x000ee5; 	T(TEST(byte_148fa, 0x0FF));	// 2671 test    byte_148FA, 0FFh ;~ 01C2:0EE5
-cs=0x1c2;eip=0x000eea; 	J(JNZ(loc_11131));	// 2672 jnz     short loc_11131 ;~ 01C2:0EEA
-cs=0x1c2;eip=0x000eec; 	T(MOV(ah, 3));	// 2673 mov     ah, 3 ;~ 01C2:0EEC
-cs=0x1c2;eip=0x000eee; 	T(DEC(di));	// 2674 dec     di ;~ 01C2:0EEE
-cs=0x1c2;eip=0x000eef; 	J(CALL(sub_11187,0));	// 2675 call    sub_11187 ;~ 01C2:0EEF
-cs=0x1c2;eip=0x000ef2; 	T(MOV(di, dx));	// 2676 mov     di, dx ;~ 01C2:0EF2
-cs=0x1c2;eip=0x000ef4; 	T(MOV(ah, 0x0C0));	// 2677 mov     ah, 0C0h ; 'À' ;~ 01C2:0EF4
-cs=0x1c2;eip=0x000ef6; 	J(CALL(sub_11187,0));	// 2678 call    sub_11187 ;~ 01C2:0EF6
-cs=0x1c2;eip=0x000ef9; 	T(MOV(di, 0x27B));	// 2679 mov     di, 27Bh ;~ 01C2:0EF9
-cs=0x1c2;eip=0x000efc; 	T(ADD(di, bp));	// 2680 add     di, bp ;~ 01C2:0EFC
-cs=0x1c2;eip=0x000efe; 	T(MOV(dx, di));	// 2681 mov     dx, di ;~ 01C2:0EFE
-cs=0x1c2;eip=0x000f00; 	T(MOV(cx, 5));	// 2682 mov     cx, 5 ;~ 01C2:0F00
-cs=0x1c2;eip=0x000f03; 	T(MOV(ax, 0x0FFFF));	// 2683 mov     ax, 0FFFFh ;~ 01C2:0F03
-	// 2684 rep stosw ;~ 01C2:0F06
-cs=0x1c2;eip=0x000f06; 	X(	REP STOSW);	// 2684 rep stosw ;~ 01C2:0F06
-cs=0x1c2;eip=0x000f08; 	T(MOV(ah, 3));	// 2685 mov     ah, 3 ;~ 01C2:0F08
-cs=0x1c2;eip=0x000f0a; 	T(DEC(di));	// 2686 dec     di ;~ 01C2:0F0A
-cs=0x1c2;eip=0x000f0b; 	J(CALL(sub_111d2,0));	// 2687 call    sub_111D2 ;~ 01C2:0F0B
-cs=0x1c2;eip=0x000f0e; 	T(MOV(di, dx));	// 2688 mov     di, dx ;~ 01C2:0F0E
-cs=0x1c2;eip=0x000f10; 	T(MOV(ah, 0x0C0));	// 2689 mov     ah, 0C0h ; 'À' ;~ 01C2:0F10
-cs=0x1c2;eip=0x000f12; 	J(CALL(sub_111d2,0));	// 2690 call    sub_111D2 ;~ 01C2:0F12
-cs=0x1c2;eip=0x000f15; 	T(MOV(di, 0x0FD80));	// 2691 mov     di, 0FD80h ;~ 01C2:0F15
-cs=0x1c2;eip=0x000f18; 	T(ADD(di, bp));	// 2692 add     di, bp ;~ 01C2:0F18
-cs=0x1c2;eip=0x000f1a; 	T(MOV(cx, 8));	// 2693 mov     cx, 8 ;~ 01C2:0F1A
-cs=0x1c2;eip=0x000f1d; 	T(MOV(ah, 0x0C0));	// 2694 mov     ah, 0C0h ; 'À' ;~ 01C2:0F1D
-cs=0x1c2;eip=0x000f1f; 	J(CALL(sub_111d5,0));	// 2695 call    sub_111D5 ;~ 01C2:0F1F
-cs=0x1c2;eip=0x000f22; 	T(MOV(di, 0x280));	// 2696 mov     di, 280h ;~ 01C2:0F22
-cs=0x1c2;eip=0x000f25; 	T(ADD(di, bp));	// 2697 add     di, bp ;~ 01C2:0F25
-cs=0x1c2;eip=0x000f27; 	T(MOV(cx, 8));	// 2698 mov     cx, 8 ;~ 01C2:0F27
-cs=0x1c2;eip=0x000f2a; 	T(MOV(ah, 0x0C0));	// 2699 mov     ah, 0C0h ; 'À' ;~ 01C2:0F2A
-cs=0x1c2;eip=0x000f2c; 	J(CALL(sub_1118a,0));	// 2700 call    sub_1118A ;~ 01C2:0F2C
-cs=0x1c2;eip=0x000f2f; 	X(POP(es));	// 2701 pop     es ;~ 01C2:0F2F
-cs=0x1c2;eip=0x000f30; 	R(RETN(0));	// 2703 retn ;~ 01C2:0F30
-loc_11131:
-	// 4618 
-cs=0x1c2;eip=0x000f31; 	T(MOV(cx, 5));	// 2708 mov     cx, 5 ;~ 01C2:0F31
-cs=0x1c2;eip=0x000f34; 	T(MOV(di, dx));	// 2709 mov     di, dx ;~ 01C2:0F34
-cs=0x1c2;eip=0x000f36; 	T(ADD(di, 0x2000));	// 2710 add     di, 2000h ;~ 01C2:0F36
-	// 2711 rep stosw ;~ 01C2:0F3A
-cs=0x1c2;eip=0x000f3a; 	X(	REP STOSW);	// 2711 rep stosw ;~ 01C2:0F3A
-cs=0x1c2;eip=0x000f3c; 	T(DEC(di));	// 2712 dec     di ;~ 01C2:0F3C
-cs=0x1c2;eip=0x000f3d; 	J(CALL(sub_111aa,0));	// 2713 call    sub_111AA ;~ 01C2:0F3D
-cs=0x1c2;eip=0x000f40; 	T(MOV(di, dx));	// 2714 mov     di, dx ;~ 01C2:0F40
-cs=0x1c2;eip=0x000f42; 	T(ADD(di, 0x2000));	// 2715 add     di, 2000h ;~ 01C2:0F42
-cs=0x1c2;eip=0x000f46; 	J(CALL(sub_111af,0));	// 2716 call    sub_111AF ;~ 01C2:0F46
-cs=0x1c2;eip=0x000f49; 	T(MOV(di, 0x27B));	// 2717 mov     di, 27Bh ;~ 01C2:0F49
-cs=0x1c2;eip=0x000f4c; 	T(ADD(di, bp));	// 2718 add     di, bp ;~ 01C2:0F4C
-cs=0x1c2;eip=0x000f4e; 	T(MOV(dx, di));	// 2719 mov     dx, di ;~ 01C2:0F4E
-cs=0x1c2;eip=0x000f50; 	T(MOV(cx, 5));	// 2720 mov     cx, 5 ;~ 01C2:0F50
-cs=0x1c2;eip=0x000f53; 	T(MOV(ax, 0x0FFFF));	// 2721 mov     ax, 0FFFFh ;~ 01C2:0F53
-	// 2722 rep stosw ;~ 01C2:0F56
-cs=0x1c2;eip=0x000f56; 	X(	REP STOSW);	// 2722 rep stosw ;~ 01C2:0F56
-cs=0x1c2;eip=0x000f58; 	T(MOV(cx, 5));	// 2723 mov     cx, 5 ;~ 01C2:0F58
-cs=0x1c2;eip=0x000f5b; 	T(MOV(di, dx));	// 2724 mov     di, dx ;~ 01C2:0F5B
-cs=0x1c2;eip=0x000f5d; 	T(ADD(di, 0x1FB0));	// 2725 add     di, 1FB0h ;~ 01C2:0F5D
-	// 2726 rep stosw ;~ 01C2:0F61
-cs=0x1c2;eip=0x000f61; 	X(	REP STOSW);	// 2726 rep stosw ;~ 01C2:0F61
-cs=0x1c2;eip=0x000f63; 	T(DEC(di));	// 2727 dec     di ;~ 01C2:0F63
-cs=0x1c2;eip=0x000f64; 	J(CALL(sub_111b4,0));	// 2728 call    sub_111B4 ;~ 01C2:0F64
-cs=0x1c2;eip=0x000f67; 	T(MOV(di, dx));	// 2729 mov     di, dx ;~ 01C2:0F67
-cs=0x1c2;eip=0x000f69; 	T(ADD(di, 0x1FB0));	// 2730 add     di, 1FB0h ;~ 01C2:0F69
-cs=0x1c2;eip=0x000f6d; 	J(CALL(sub_111b9,0));	// 2731 call    sub_111B9 ;~ 01C2:0F6D
-cs=0x1c2;eip=0x000f70; 	T(MOV(di, 0x0FD80));	// 2732 mov     di, 0FD80h ;~ 01C2:0F70
-cs=0x1c2;eip=0x000f73; 	T(ADD(di, bp));	// 2733 add     di, bp ;~ 01C2:0F73
-cs=0x1c2;eip=0x000f75; 	J(CALL(sub_111f5,0));	// 2734 call    sub_111F5 ;~ 01C2:0F75
-cs=0x1c2;eip=0x000f78; 	T(MOV(di, 0x280));	// 2735 mov     di, 280h ;~ 01C2:0F78
-cs=0x1c2;eip=0x000f7b; 	T(ADD(di, bp));	// 2736 add     di, bp ;~ 01C2:0F7B
-cs=0x1c2;eip=0x000f7d; 	J(CALL(sub_11227,0));	// 2737 call    sub_11227 ;~ 01C2:0F7D
-cs=0x1c2;eip=0x000f80; 	X(POP(es));	// 2738 pop     es ;~ 01C2:0F80
-cs=0x1c2;eip=0x000f81; 	X(MOV(byte_148fa, 0));	// 2740 mov     byte_148FA, 0 ;~ 01C2:0F81
-cs=0x1c2;eip=0x000f86; 	R(RETN(0));	// 2741 retn ;~ 01C2:0F86
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_e72: 	goto ret_1c2_e72;
+        case m2c::ksub_1106f: 	goto sub_1106f;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group6(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group6:
+    _begin:
 sub_11187:
 	// 2749 
 cs=0x1c2;eip=0x000f87; 	T(MOV(cx, 3));	// 2751 mov     cx, 3 ;~ 01C2:0F87
@@ -2022,6 +5394,33 @@ cs=0x1c2;eip=0x000fa4; 	T(XOR(al, ah));	// 2772 xor     al, ah ;~ 01C2:0FA4
 cs=0x1c2;eip=0x000fa6; 	X(STOSB);	// 2773 stosb ;~ 01C2:0FA6
 cs=0x1c2;eip=0x000fa7; 	J(LOOP(loc_1118f));	// 2774 loop    loc_1118F ;~ 01C2:0FA7
 cs=0x1c2;eip=0x000fa9; 	R(RETN(0));	// 2775 retn ;~ 01C2:0FA9
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1118f: 	goto loc_1118f;
+        case m2c::kret_1c2_f8c: 	goto ret_1c2_f8c;
+        case m2c::ksub_11187: 	goto sub_11187;
+        case m2c::ksub_1118a: 	goto sub_1118a;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group7(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group7:
+    _begin:
 sub_111aa:
 	// 2782 
 cs=0x1c2;eip=0x000faa; 	T(MOV(si, 0x2DE));	// 2783 mov     si, 2DEh ;~ 01C2:0FAA
@@ -2060,6 +5459,39 @@ cs=0x1c2;eip=0x000fcf; 	J(JMP(loc_111be));	// 2824 jmp     short loc_111BE ;~ 01
 locret_111d1:
 	// 4626 
 cs=0x1c2;eip=0x000fd1; 	R(RETN(0));	// 2828 retn ;~ 01C2:0FD1
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_111be: 	goto loc_111be;
+        case m2c::klocret_111d1: 	goto locret_111d1;
+        case m2c::kret_1c2_fad: 	goto ret_1c2_fad;
+        case m2c::kret_1c2_fb2: 	goto ret_1c2_fb2;
+        case m2c::kret_1c2_fb7: 	goto ret_1c2_fb7;
+        case m2c::kret_1c2_fbc: 	goto ret_1c2_fbc;
+        case m2c::ksub_111aa: 	goto sub_111aa;
+        case m2c::ksub_111af: 	goto sub_111af;
+        case m2c::ksub_111b4: 	goto sub_111b4;
+        case m2c::ksub_111b9: 	goto sub_111b9;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group8(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group8:
+    _begin:
 sub_111d2:
 	// 2835 
 cs=0x1c2;eip=0x000fd2; 	T(MOV(cx, 3));	// 2837 mov     cx, 3 ;~ 01C2:0FD2
@@ -2084,8 +5516,33 @@ cs=0x1c2;eip=0x000fef; 	T(XOR(al, ah));	// 2858 xor     al, ah ;~ 01C2:0FEF
 cs=0x1c2;eip=0x000ff1; 	X(STOSB);	// 2859 stosb ;~ 01C2:0FF1
 cs=0x1c2;eip=0x000ff2; 	J(LOOP(loc_111da));	// 2860 loop    loc_111DA ;~ 01C2:0FF2
 cs=0x1c2;eip=0x000ff4; 	R(RETN(0));	// 2861 retn ;~ 01C2:0FF4
-sub_111f5:
-	// 2868 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_111da: 	goto loc_111da;
+        case m2c::kret_1c2_fd7: 	goto ret_1c2_fd7;
+        case m2c::ksub_111d2: 	goto sub_111d2;
+        case m2c::ksub_111d5: 	goto sub_111d5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_111f5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_111f5:
+    _begin:
 cs=0x1c2;eip=0x000ff5; 	T(MOV(cx, 8));	// 2869 mov     cx, 8 ;~ 01C2:0FF5
 loc_111f8:
 	// 4629 
@@ -2105,8 +5562,31 @@ cs=0x1c2;eip=0x00101e; 	T(OR(al, 3));	// 2884 or      al, 3 ;~ 01C2:101E
 cs=0x1c2;eip=0x001020; 	X(MOV(*(raddr(es,di-1)), al));	// 2885 mov     es:[di-1], al ;~ 01C2:1020
 cs=0x1c2;eip=0x001024; 	J(LOOP(loc_111f8));	// 2886 loop    loc_111F8 ;~ 01C2:1024
 cs=0x1c2;eip=0x001026; 	R(RETN(0));	// 2887 retn ;~ 01C2:1026
-sub_11227:
-	// 2894 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_111f8: 	goto loc_111f8;
+        case m2c::ksub_111f5: 	goto sub_111f5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11227(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11227:
+    _begin:
 cs=0x1c2;eip=0x001027; 	T(MOV(cx, 8));	// 2895 mov     cx, 8 ;~ 01C2:1027
 loc_1122a:
 	// 4630 
@@ -2126,8 +5606,31 @@ cs=0x1c2;eip=0x001050; 	T(OR(al, 3));	// 2910 or      al, 3 ;~ 01C2:1050
 cs=0x1c2;eip=0x001052; 	X(MOV(*(raddr(es,di-1)), al));	// 2911 mov     es:[di-1], al ;~ 01C2:1052
 cs=0x1c2;eip=0x001056; 	J(LOOP(loc_1122a));	// 2912 loop    loc_1122A ;~ 01C2:1056
 cs=0x1c2;eip=0x001058; 	R(RETN(0));	// 2913 retn ;~ 01C2:1058
-sub_11259:
-	// 2920 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1122a: 	goto loc_1122a;
+        case m2c::ksub_11227: 	goto sub_11227;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11259(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11259:
+    _begin:
 cs=0x1c2;eip=0x001059; 	T(MOV(si, 0x0B800));	// 2921 mov     si, 0B800h ;~ 01C2:1059
 ret_1c2_105c:
 	// 4631 
@@ -2256,8 +5759,39 @@ cs=0x1c2;eip=0x001174; 	J(CALL(sub_13040,0));	// 3045 call    sub_13040 ;~ 01C2:
 cs=0x1c2;eip=0x001177; 	X(POP(ax));	// 3046 pop     ax ;~ 01C2:1177
 cs=0x1c2;eip=0x001178; 	X(MOV(word_153be, ax));	// 3047 mov     word_153BE, ax ;~ 01C2:1178
 cs=0x1c2;eip=0x00117b; 	R(RETN(0));	// 3048 retn ;~ 01C2:117B
-sub_1137c:
-	// 3056 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11265: 	goto loc_11265;
+        case m2c::kloc_1126d: 	goto loc_1126d;
+        case m2c::kloc_11293: 	goto loc_11293;
+        case m2c::kloc_112b2: 	goto loc_112b2;
+        case m2c::kloc_112d9: 	goto loc_112d9;
+        case m2c::kloc_112fa: 	goto loc_112fa;
+        case m2c::kloc_11302: 	goto loc_11302;
+        case m2c::kloc_11305: 	goto loc_11305;
+        case m2c::kret_1c2_105c: 	goto ret_1c2_105c;
+        case m2c::ksub_11259: 	goto sub_11259;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1137c(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1137c:
+    _begin:
 cs=0x1c2;eip=0x00117c; 	T(MOV(si, 0x3B2));	// 3057 mov     si, 3B2h ;~ 01C2:117C
 ret_1c2_117f:
 	// 4640 
@@ -2322,101 +5856,37 @@ loc_113f9:
 	// 4646 
 cs=0x1c2;eip=0x0011f9; 	X(MOV(byte_148f8, 0x0FF));	// 3120 mov     byte_148F8, 0FFh ;~ 01C2:11F9
 cs=0x1c2;eip=0x0011fe; 	R(RETN(0));	// 3121 retn ;~ 01C2:11FE
-sub_113ff:
-	// 3128 
-cs=0x1c2;eip=0x0011ff; 	X(PUSH(es));	// 3129 push    es ;~ 01C2:11FF
-loc_11400:
-	// 4647 
-cs=0x1c2;eip=0x001200; 	T(MOV(ax, seg_offset(seg003)));	// 3132 mov     ax, seg seg003 ;~ 01C2:1200
-cs=0x1c2;eip=0x001203; 	T(MOV(es, ax));	// 3133 mov     es, ax ;~ 01C2:1203
-cs=0x1c2;eip=0x001205; 	T(MOV(di, 0));	// 3135 mov     di, 0 ;~ 01C2:1205
-cs=0x1c2;eip=0x001208; 	T(ADD(di, 0x528));	// 3136 add     di, 528h ;~ 01C2:1208
-cs=0x1c2;eip=0x00120c; 	T(MOV(al, byte_148f3));	// 3137 mov     al, byte_148F3 ;~ 01C2:120C
-cs=0x1c2;eip=0x00120f; 	T(SHR(al, 1));	// 3138 shr     al, 1 ;~ 01C2:120F
-cs=0x1c2;eip=0x001211; 	J(JNC(loc_11421));	// 3139 jnb     short loc_11421 ;~ 01C2:1211
-cs=0x1c2;eip=0x001213; 	T(ADD(di, 0x2000));	// 3140 add     di, 2000h ;~ 01C2:1213
-cs=0x1c2;eip=0x001217; 	T(TEST(byte_148f4, 0x0FF));	// 3141 test    byte_148F4, 0FFh ;~ 01C2:1217
-cs=0x1c2;eip=0x00121c; 	J(JNZ(loc_11421));	// 3142 jnz     short loc_11421 ;~ 01C2:121C
-cs=0x1c2;eip=0x00121e; 	T(SUB(di, 0x50));	// 3143 sub     di, 50h ; 'P' ;~ 01C2:121E
-loc_11421:
-	// 4648 
-cs=0x1c2;eip=0x001221; 	X(MUL1_1(byte_148f6));	// 3147 mul     byte_148F6 ;~ 01C2:1221
-cs=0x1c2;eip=0x001225; 	T(TEST(byte_148f4, 0x0FF));	// 3148 test    byte_148F4, 0FFh ;~ 01C2:1225
-cs=0x1c2;eip=0x00122a; 	J(JZ(loc_11430));	// 3149 jz      short loc_11430 ;~ 01C2:122A
-cs=0x1c2;eip=0x00122c; 	T(ADD(di, ax));	// 3150 add     di, ax ;~ 01C2:122C
-cs=0x1c2;eip=0x00122e; 	J(JMP(loc_11432));	// 3151 jmp     short loc_11432 ;~ 01C2:122E
-loc_11430:
-	// 4649 
-cs=0x1c2;eip=0x001230; 	T(SUB(di, ax));	// 3155 sub     di, ax ;~ 01C2:1230
-loc_11432:
-	// 4650 
-cs=0x1c2;eip=0x001232; 	T(MOV(al, byte_148f1));	// 3158 mov     al, byte_148F1 ;~ 01C2:1232
-cs=0x1c2;eip=0x001235; 	T(XOR(ah, ah));	// 3159 xor     ah, ah ;~ 01C2:1235
-cs=0x1c2;eip=0x001237; 	T(MOV(bl, al));	// 3160 mov     bl, al ;~ 01C2:1237
-cs=0x1c2;eip=0x001239; 	T(AND(bl, 3));	// 3161 and     bl, 3 ;~ 01C2:1239
-cs=0x1c2;eip=0x00123c; 	T(XOR(bh, bh));	// 3162 xor     bh, bh ;~ 01C2:123C
-cs=0x1c2;eip=0x00123e; 	T(TEST(byte_148f2, 0x0FF));	// 3163 test    byte_148F2, 0FFh ;~ 01C2:123E
-cs=0x1c2;eip=0x001243; 	J(JNZ(loc_1145b));	// 3164 jnz     short loc_1145B ;~ 01C2:1243
-cs=0x1c2;eip=0x001245; 	T(SHR(al, 1));	// 3165 shr     al, 1 ;~ 01C2:1245
-cs=0x1c2;eip=0x001247; 	T(SHR(al, 1));	// 3166 shr     al, 1 ;~ 01C2:1247
-cs=0x1c2;eip=0x001249; 	T(ADD(di, ax));	// 3167 add     di, ax ;~ 01C2:1249
-loc_1144b:
-	// 4651 
-cs=0x1c2;eip=0x00124b; 	T(MOV(al, *(raddr(es,di))));	// 3170 mov     al, es:[di] ;~ 01C2:124B
-cs=0x1c2;eip=0x00124e; 	T(AND(al, *(raddr(ds,bx+0x2C3))));	// 3171 and     al, [bx+2C3h] ;~ 01C2:124E
-cs=0x1c2;eip=0x001252; 	T(OR(al, *(raddr(ds,bx+0x2BF))));	// 3172 or      al, [bx+2BFh] ;~ 01C2:1252
-cs=0x1c2;eip=0x001256; 	X(MOV(*(raddr(es,di)), al));	// 3173 mov     es:[di], al ;~ 01C2:1256
-cs=0x1c2;eip=0x001259; 	X(POP(es));	// 3174 pop     es ;~ 01C2:1259
-cs=0x1c2;eip=0x00125a; 	R(RETN(0));	// 3176 retn ;~ 01C2:125A
-loc_1145b:
-	// 4652 
-cs=0x1c2;eip=0x00125b; 	T(DEC(di));	// 3181 dec     di ;~ 01C2:125B
-cs=0x1c2;eip=0x00125c; 	T(DEC(al));	// 3182 dec     al ;~ 01C2:125C
-cs=0x1c2;eip=0x00125e; 	T(MOV(cl, al));	// 3183 mov     cl, al ;~ 01C2:125E
-cs=0x1c2;eip=0x001260; 	T(MOV(bl, 3));	// 3184 mov     bl, 3 ;~ 01C2:1260
-cs=0x1c2;eip=0x001262; 	T(AND(cl, 3));	// 3185 and     cl, 3 ;~ 01C2:1262
-cs=0x1c2;eip=0x001265; 	T(SUB(bl, cl));	// 3186 sub     bl, cl ;~ 01C2:1265
-cs=0x1c2;eip=0x001267; 	T(SHR(al, 1));	// 3187 shr     al, 1 ;~ 01C2:1267
-cs=0x1c2;eip=0x001269; 	T(SHR(al, 1));	// 3188 shr     al, 1 ;~ 01C2:1269
-cs=0x1c2;eip=0x00126b; 	T(SUB(di, ax));	// 3189 sub     di, ax ;~ 01C2:126B
-cs=0x1c2;eip=0x00126d; 	J(JMP(loc_1144b));	// 3190 jmp     short loc_1144B ;~ 01C2:126D
-sub_1146f:
-	// 3197 
-cs=0x1c2;eip=0x00126f; 	T(MOV(ax, word_14af6));	// 3198 mov     ax, word_14AF6 ;~ 01C2:126F
-ret_1c2_1272:
-	// 4653 
-cs=0x1c2;eip=0x001272; 	T(CMP(ax, 0x322));	// 3199 cmp     ax, 322h ;~ 01C2:1272
-cs=0x1c2;eip=0x001275; 	J(JNC(loc_11478));	// 3200 jnb     short loc_11478 ;~ 01C2:1275
-cs=0x1c2;eip=0x001277; 	R(RETN(0));	// 3201 retn ;~ 01C2:1277
-loc_11478:
-	// 4654 
-cs=0x1c2;eip=0x001278; 	X(PUSH(es));	// 3205 push    es ;~ 01C2:1278
-loc_11479:
-	// 4655 
-cs=0x1c2;eip=0x001279; 	T(MOV(ax, seg_offset(seg003)));	// 3208 mov     ax, seg seg003 ;~ 01C2:1279
-cs=0x1c2;eip=0x00127c; 	T(MOV(es, ax));	// 3209 mov     es, ax ;~ 01C2:127C
-cs=0x1c2;eip=0x00127e; 	T(MOV(di, word_153ba));	// 3210 mov     di, word_153BA ;~ 01C2:127E
-cs=0x1c2;eip=0x001282; 	T(ADD(di, 0x0F998));	// 3211 add     di, 0F998h ;~ 01C2:1282
-cs=0x1c2;eip=0x001286; 	T(MOV(bp, di));	// 3212 mov     bp, di ;~ 01C2:1286
-cs=0x1c2;eip=0x001288; 	T(MOV(dx, 0x46C));	// 3213 mov     dx, 46Ch ;~ 01C2:1288
-cs=0x1c2;eip=0x00128b; 	T(SUB(dx, word_14af6));	// 3214 sub     dx, word_14AF6 ;~ 01C2:128B
-cs=0x1c2;eip=0x00128f; 	T(SHR(dx, 1));	// 3215 shr     dx, 1 ;~ 01C2:128F
-cs=0x1c2;eip=0x001291; 	T(SHR(dx, 1));	// 3216 shr     dx, 1 ;~ 01C2:1291
-cs=0x1c2;eip=0x001293; 	J(JC(loc_114a0));	// 3217 jb      short loc_114A0 ;~ 01C2:1293
-cs=0x1c2;eip=0x001295; 	T(MOV(si, 0x323));	// 3218 mov     si, 323h ;~ 01C2:1295
-cs=0x1c2;eip=0x001298; 	T(MOV(cx, 0x0E04));	// 3219 mov     cx, 0E04h ;~ 01C2:1298
-loc_1149b:
-	// 4656 
-cs=0x1c2;eip=0x00129b; 	J(CALL(sub_114a8,0));	// 3222 call    sub_114A8 ;~ 01C2:129B
-cs=0x1c2;eip=0x00129e; 	X(POP(es));	// 3223 pop     es ;~ 01C2:129E
-cs=0x1c2;eip=0x00129f; 	R(RETN(0));	// 3224 retn ;~ 01C2:129F
-loc_114a0:
-	// 4657 
-cs=0x1c2;eip=0x0012a0; 	T(MOV(cx, 0x0E05));	// 3228 mov     cx, 0E05h ;~ 01C2:12A0
-cs=0x1c2;eip=0x0012a3; 	T(MOV(si, 0x35B));	// 3229 mov     si, 35Bh ;~ 01C2:12A3
-cs=0x1c2;eip=0x0012a6; 	J(JMP(loc_1149b));	// 3230 jmp     short loc_1149B ;~ 01C2:12A6
-sub_114a8:
-	// 3237 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11382: 	goto loc_11382;
+        case m2c::kloc_11392: 	goto loc_11392;
+        case m2c::kloc_113a6: 	goto loc_113a6;
+        case m2c::kloc_113ba: 	goto loc_113ba;
+        case m2c::kloc_113e9: 	goto loc_113e9;
+        case m2c::kloc_113f9: 	goto loc_113f9;
+        case m2c::kret_1c2_117f: 	goto ret_1c2_117f;
+        case m2c::ksub_1137c: 	goto sub_1137c;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_114a8(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_114a8:
+    _begin:
 cs=0x1c2;eip=0x0012a8; 	T(MOV(bl, cl));	// 3238 mov     bl, cl ;~ 01C2:12A8
 loc_114aa:
 	// 4658 
@@ -2467,8 +5937,36 @@ cs=0x1c2;eip=0x0012f4; 	J(JNZ(loc_114aa));	// 3286 jnz     short loc_114AA ;~ 01
 locret_114f6:
 	// 4663 
 cs=0x1c2;eip=0x0012f6; 	R(RETN(0));	// 3289 retn ;~ 01C2:12F6
-sub_11500:
-	// 3299 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_114aa: 	goto loc_114aa;
+        case m2c::kloc_114ab: 	goto loc_114ab;
+        case m2c::kloc_114bc: 	goto loc_114bc;
+        case m2c::kloc_114d1: 	goto loc_114d1;
+        case m2c::kloc_114e2: 	goto loc_114e2;
+        case m2c::klocret_114f6: 	goto locret_114f6;
+        case m2c::ksub_114a8: 	goto sub_114a8;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11500(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11500:
+    _begin:
 cs=0x1c2;eip=0x001300; 	J(CALL(sub_1372f,0));	// 3301 call    sub_1372F ;~ 01C2:1300
 ret_1c2_1303:
 	// 4664 
@@ -2534,8 +6032,35 @@ cs=0x1c2;eip=0x001380; 	X(POP(cx));	// 3360 pop     cx ;~ 01C2:1380
 cs=0x1c2;eip=0x001381; 	J(LOOP(loc_1155d));	// 3361 loop    loc_1155D ;~ 01C2:1381
 cs=0x1c2;eip=0x001383; 	J(CALL(sub_13735,0));	// 3362 call    sub_13735 ;~ 01C2:1383
 cs=0x1c2;eip=0x001386; 	R(RETN(0));	// 3363 retn ;~ 01C2:1386
-sub_1158f:
-	// 3375 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11527: 	goto loc_11527;
+        case m2c::kloc_1154a: 	goto loc_1154a;
+        case m2c::kloc_1155d: 	goto loc_1155d;
+        case m2c::kloc_11579: 	goto loc_11579;
+        case m2c::kret_1c2_1303: 	goto ret_1c2_1303;
+        case m2c::ksub_11500: 	goto sub_11500;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1158f(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1158f:
+    _begin:
 cs=0x1c2;eip=0x00138f; 	T(TEST(byte_15242, 0x0FF));	// 3376 test    byte_15242, 0FFh ;~ 01C2:138F
 ret_1c2_1394:
 	// 4669 
@@ -2646,8 +6171,48 @@ cs=0x1c2;eip=0x001455; 	T(MOV(al, byte_14b02));	// 3490 mov     al, byte_14B02 ;
 loc_11658:
 	// 4686 
 cs=0x1c2;eip=0x001458; 	J(JMP(loc_115b5));	// 3493 jmp     loc_115B5 ;~ 01C2:1458
-seg001_145b_proc:
-	// 3497 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_115a0: 	goto loc_115a0;
+        case m2c::kloc_115b0: 	goto loc_115b0;
+        case m2c::kloc_115b3: 	goto loc_115b3;
+        case m2c::kloc_115b5: 	goto loc_115b5;
+        case m2c::kloc_115d0: 	goto loc_115d0;
+        case m2c::kloc_115da: 	goto loc_115da;
+        case m2c::kloc_115e2: 	goto loc_115e2;
+        case m2c::kloc_115ee: 	goto loc_115ee;
+        case m2c::kloc_115ff: 	goto loc_115ff;
+        case m2c::kloc_1160f: 	goto loc_1160f;
+        case m2c::kloc_11620: 	goto loc_11620;
+        case m2c::kloc_11633: 	goto loc_11633;
+        case m2c::kloc_11645: 	goto loc_11645;
+        case m2c::kloc_11648: 	goto loc_11648;
+        case m2c::kloc_11655: 	goto loc_11655;
+        case m2c::kloc_11658: 	goto loc_11658;
+        case m2c::klocret_1161f: 	goto locret_1161f;
+        case m2c::kret_1c2_1394: 	goto ret_1c2_1394;
+        case m2c::ksub_1158f: 	goto sub_1158f;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_145b_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_145b_proc:
+    _begin:
 cs=0x1c2;eip=0x00145b; 	J(CALL(__dispatch_call,*(dw*)(raddr(ds,si))));	// 3497 call    word ptr [si] ;~ 01C2:145B
 ret_1c2_145d:
 	// 4687 
@@ -2666,8 +6231,31 @@ cs=0x1c2;eip=0x001476; 	T(ADC(al, 0x0D6));	// 3509 adc     al, 0D6h ; 'Ö' ;~ 01C
 cs=0x1c2;eip=0x001478; 	T(ADC(ax, 0x14E9));	// 3510 adc     ax, 14E9h ;~ 01C2:1478
 cs=0x1c2;eip=0x00147b; __disp=byte_1ff92;
 	J(JMP(__dispatch_call));	// 3511 jmp     near ptr byte_1FF92 ;~ 01C2:147B
-sub_116a3:
-	// 3536 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_145d: 	goto ret_1c2_145d;
+        case m2c::kseg001_145b_proc: 	goto seg001_145b_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_116a3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_116a3:
+    _begin:
 cs=0x1c2;eip=0x0014a3; 	X(PUSH(cx));	// 3537 push    cx ;~ 01C2:14A3
 ret_1c2_14a4:
 	// 4688 
@@ -2716,136 +6304,36 @@ cs=0x1c2;eip=0x0014e5; 	X(POP(dx));	// 3581 pop     dx ;~ 01C2:14E5
 cs=0x1c2;eip=0x0014e6; 	X(POP(ax));	// 3582 pop     ax ;~ 01C2:14E6
 cs=0x1c2;eip=0x0014e7; 	X(POP(cx));	// 3583 pop     cx ;~ 01C2:14E7
 cs=0x1c2;eip=0x0014e8; 	R(RETN(0));	// 3584 retn ;~ 01C2:14E8
-seg001_14e9_proc:
-	// 3588 
-cs=0x1c2;eip=0x0014e9; 	T(SHR(cx, 1));	// 3588 shr     cx, 1 ;~ 01C2:14E9
-ret_1c2_14eb:
-	// 4694 
-cs=0x1c2;eip=0x0014eb; 	T(SUB(cx, 0x0E));	// 3589 sub     cx, 0Eh ;~ 01C2:14EB
-cs=0x1c2;eip=0x0014ee; 	T(MOV(ax, cx));	// 3590 mov     ax, cx ;~ 01C2:14EE
-cs=0x1c2;eip=0x0014f0; 	T(CMP(ax, 1));	// 3591 cmp     ax, 1 ;~ 01C2:14F0
-cs=0x1c2;eip=0x0014f3; 	J(JNZ(loc_116fb));	// 3592 jnz     short loc_116FB ;~ 01C2:14F3
-cs=0x1c2;eip=0x0014f5; 	X(XOR(byte_14b06, 0x0FF));	// 3593 xor     byte_14B06, 0FFh ;~ 01C2:14F5
-cs=0x1c2;eip=0x0014fa; 	R(RETN(0));	// 3594 retn ;~ 01C2:14FA
-loc_116fb:
-	// 4695 
-cs=0x1c2;eip=0x0014fb; 	J(CALL(sub_14015,0));	// 3598 call    sub_14015 ;~ 01C2:14FB
-cs=0x1c2;eip=0x0014fe; 	R(RETN(0));	// 3599 retn ;~ 01C2:14FE
-ret_1c2_14ff:
-	// 4696 
-cs=0x1c2;eip=0x0014ff; 	T(XOR(ax, ax));	// 3601 xor     ax, ax ;~ 01C2:14FF
-cs=0x1c2;eip=0x001501; 	T(MOV(di, 0x4B8));	// 3602 mov     di, 4B8h ;~ 01C2:1501
-cs=0x1c2;eip=0x001504; 	T(MOV(cx, 4));	// 3603 mov     cx, 4 ;~ 01C2:1504
-	// 3604 rep stosw ;~ 01C2:1507
-cs=0x1c2;eip=0x001507; 	X(	REP STOSW);	// 3604 rep stosw ;~ 01C2:1507
-cs=0x1c2;eip=0x001509; 	R(RETN(0));	// 3605 retn ;~ 01C2:1509
-ret_1c2_150a:
-	// 4697 
-cs=0x1c2;eip=0x00150a; 	X(MOV(word_14af8, 0x0FEB0));	// 3607 mov     word_14AF8, 0FEB0h ;~ 01C2:150A
-loc_11710:
-	// 4698 
-cs=0x1c2;eip=0x001510; 	X(MOV(word_14afa, 0));	// 3610 mov     word_14AFA, 0 ;~ 01C2:1510
-loc_11716:
-	// 4699 
-cs=0x1c2;eip=0x001516; 	T(MOV(ax, word_14af6));	// 3614 mov     ax, word_14AF6 ;~ 01C2:1516
-cs=0x1c2;eip=0x001519; 	T(MOV(cx, word_14af8));	// 3615 mov     cx, word_14AF8 ;~ 01C2:1519
-cs=0x1c2;eip=0x00151d; 	J(CALL(sub_13bc7,0));	// 3616 call    sub_13BC7 ;~ 01C2:151D
-cs=0x1c2;eip=0x001520; 	X(MOV(word_14afc, dx));	// 3617 mov     word_14AFC, dx ;~ 01C2:1520
-cs=0x1c2;eip=0x001524; 	T(MOV(ax, word_14af6));	// 3618 mov     ax, word_14AF6 ;~ 01C2:1524
-cs=0x1c2;eip=0x001527; 	T(MOV(cx, word_14af8));	// 3619 mov     cx, word_14AF8 ;~ 01C2:1527
-cs=0x1c2;eip=0x00152b; 	J(CALL(sub_13bad,0));	// 3620 call    sub_13BAD ;~ 01C2:152B
-cs=0x1c2;eip=0x00152e; 	X(MOV(word_14afe, dx));	// 3621 mov     word_14AFE, dx ;~ 01C2:152E
-cs=0x1c2;eip=0x001532; 	R(RETN(0));	// 3622 retn ;~ 01C2:1532
-ret_1c2_1533:
-	// 4700 
-cs=0x1c2;eip=0x001533; 	X(MOV(word_14af8, 0x150));	// 3624 mov     word_14AF8, 150h ;~ 01C2:1533
-cs=0x1c2;eip=0x001539; 	J(JMP(loc_11710));	// 3625 jmp     short loc_11710 ;~ 01C2:1539
-ret_1c2_153b:
-	// 4701 
-cs=0x1c2;eip=0x00153b; 	T(MOV(ax, word_14aea));	// 3627 mov     ax, word_14AEA ;~ 01C2:153B
-loc_1173e:
-	// 4702 
-cs=0x1c2;eip=0x00153e; 	X(MOV(word_14afa, ax));	// 3630 mov     word_14AFA, ax ;~ 01C2:153E
-cs=0x1c2;eip=0x001541; 	T(TEST(byte_14b00, 0x0FF));	// 3631 test    byte_14B00, 0FFh ;~ 01C2:1541
-cs=0x1c2;eip=0x001546; 	J(JZ(loc_1174a));	// 3632 jz      short loc_1174A ;~ 01C2:1546
-cs=0x1c2;eip=0x001548; 	T(SAR(ax, 1));	// 3633 sar     ax, 1 ;~ 01C2:1548
-loc_1174a:
-	// 4703 
-cs=0x1c2;eip=0x00154a; 	X(ADD(word_14af6, ax));	// 3636 add     word_14AF6, ax ;~ 01C2:154A
-cs=0x1c2;eip=0x00154e; 	T(XOR(ax, ax));	// 3637 xor     ax, ax ;~ 01C2:154E
-cs=0x1c2;eip=0x001550; 	X(MOV(word_14afc, ax));	// 3638 mov     word_14AFC, ax ;~ 01C2:1550
-cs=0x1c2;eip=0x001553; 	X(MOV(word_14afe, ax));	// 3639 mov     word_14AFE, ax ;~ 01C2:1553
-cs=0x1c2;eip=0x001556; 	X(MOV(word_14af8, ax));	// 3640 mov     word_14AF8, ax ;~ 01C2:1556
-cs=0x1c2;eip=0x001559; 	R(RETN(0));	// 3641 retn ;~ 01C2:1559
-ret_1c2_155a:
-	// 4704 
-cs=0x1c2;eip=0x00155a; 	T(MOV(ax, word_14aea));	// 3643 mov     ax, word_14AEA ;~ 01C2:155A
-cs=0x1c2;eip=0x00155d; 	J(JMP(loc_1173e));	// 3644 jmp     short loc_1173E ;~ 01C2:155D
-ret_1c2_155f:
-	// 4705 
-cs=0x1c2;eip=0x00155f; 	T(MOV(ax, word_14aea));	// 3646 mov     ax, word_14AEA ;~ 01C2:155F
-cs=0x1c2;eip=0x001562; 	T(CMP(ax, 0x10));	// 3647 cmp     ax, 10h ;~ 01C2:1562
-cs=0x1c2;eip=0x001565; 	J(JBE(loc_1176a));	// 3648 jbe     short loc_1176A ;~ 01C2:1565
-cs=0x1c2;eip=0x001567; 	T(MOV(ax, 0x10));	// 3649 mov     ax, 10h ;~ 01C2:1567
-loc_1176a:
-	// 4706 
-cs=0x1c2;eip=0x00156a; 	X(MOV(word_14afa, ax));	// 3653 mov     word_14AFA, ax ;~ 01C2:156A
-cs=0x1c2;eip=0x00156d; 	X(ADD(word_14af6, ax));	// 3654 add     word_14AF6, ax ;~ 01C2:156D
-cs=0x1c2;eip=0x001571; 	T(MOV(ax, 0x150));	// 3655 mov     ax, 150h ;~ 01C2:1571
-cs=0x1c2;eip=0x001574; 	X(MOV(word_14af8, ax));	// 3656 mov     word_14AF8, ax ;~ 01C2:1574
-cs=0x1c2;eip=0x001577; 	J(JMP(loc_11716));	// 3657 jmp     short loc_11716 ;~ 01C2:1577
-ret_1c2_1579:
-	// 4707 
-cs=0x1c2;eip=0x001579; 	T(MOV(ax, word_14aea));	// 3659 mov     ax, word_14AEA ;~ 01C2:1579
-cs=0x1c2;eip=0x00157c; 	T(CMP(ax, 0x0FFF0));	// 3660 cmp     ax, 0FFF0h ;~ 01C2:157C
-cs=0x1c2;eip=0x00157f; 	J(JNC(loc_1176a));	// 3661 jnb     short loc_1176A ;~ 01C2:157F
-cs=0x1c2;eip=0x001581; 	T(MOV(ax, 0x0FFF0));	// 3662 mov     ax, 0FFF0h ;~ 01C2:1581
-cs=0x1c2;eip=0x001584; 	J(JMP(loc_1176a));	// 3663 jmp     short loc_1176A ;~ 01C2:1584
-ret_1c2_1586:
-	// 4708 
-cs=0x1c2;eip=0x001586; 	T(MOV(ax, word_14aea));	// 3665 mov     ax, word_14AEA ;~ 01C2:1586
-cs=0x1c2;eip=0x001589; 	T(CMP(ax, 0x10));	// 3666 cmp     ax, 10h ;~ 01C2:1589
-cs=0x1c2;eip=0x00158c; 	J(JBE(loc_11791));	// 3667 jbe     short loc_11791 ;~ 01C2:158C
-cs=0x1c2;eip=0x00158e; 	T(MOV(ax, 0x10));	// 3668 mov     ax, 10h ;~ 01C2:158E
-loc_11791:
-	// 4709 
-cs=0x1c2;eip=0x001591; 	X(MOV(word_14afa, ax));	// 3672 mov     word_14AFA, ax ;~ 01C2:1591
-cs=0x1c2;eip=0x001594; 	X(ADD(word_14af6, ax));	// 3673 add     word_14AF6, ax ;~ 01C2:1594
-cs=0x1c2;eip=0x001598; 	T(MOV(ax, 0x0FEB0));	// 3674 mov     ax, 0FEB0h ;~ 01C2:1598
-cs=0x1c2;eip=0x00159b; 	X(MOV(word_14af8, ax));	// 3675 mov     word_14AF8, ax ;~ 01C2:159B
-cs=0x1c2;eip=0x00159e; 	J(JMP(loc_11716));	// 3676 jmp     loc_11716 ;~ 01C2:159E
-ret_1c2_15a1:
-	// 4710 
-cs=0x1c2;eip=0x0015a1; 	T(MOV(ax, word_14aea));	// 3678 mov     ax, word_14AEA ;~ 01C2:15A1
-cs=0x1c2;eip=0x0015a4; 	T(CMP(ax, 0x0FFF0));	// 3679 cmp     ax, 0FFF0h ;~ 01C2:15A4
-cs=0x1c2;eip=0x0015a7; 	J(JNC(loc_11791));	// 3680 jnb     short loc_11791 ;~ 01C2:15A7
-cs=0x1c2;eip=0x0015a9; 	T(MOV(ax, 0x0FFF0));	// 3681 mov     ax, 0FFF0h ;~ 01C2:15A9
-cs=0x1c2;eip=0x0015ac; 	J(JMP(loc_11791));	// 3682 jmp     short loc_11791 ;~ 01C2:15AC
-ret_1c2_15ae:
-	// 4711 
-cs=0x1c2;eip=0x0015ae; 	X(POP(ax));	// 3684 pop     ax ;~ 01C2:15AE
-cs=0x1c2;eip=0x0015af; 	T(TEST(byte_14b00, 0x0FF));	// 3685 test    byte_14B00, 0FFh ;~ 01C2:15AF
-cs=0x1c2;eip=0x0015b4; 	J(JZ(loc_117be));	// 3686 jz      short loc_117BE ;~ 01C2:15B4
-cs=0x1c2;eip=0x0015b6; 	X(MOV(byte_14b00, 0));	// 3687 mov     byte_14B00, 0 ;~ 01C2:15B6
-cs=0x1c2;eip=0x0015bb; 	J(JMP(loc_1378a));	// 3688 jmp     loc_1378A ;~ 01C2:15BB
-loc_117be:
-	// 4712 
-cs=0x1c2;eip=0x0015be; 	J(CALL(sub_10438,0));	// 3692 call    sub_10438 ;~ 01C2:15BE
-cs=0x1c2;eip=0x0015c1; 	J(CALL(sub_14005,0));	// 3693 call    sub_14005 ;~ 01C2:15C1
-cs=0x1c2;eip=0x0015c4; 	J(JMP(loc_13ca0));	// 3694 jmp     loc_13CA0 ;~ 01C2:15C4
-ret_1c2_15c7:
-	// 4713 
-cs=0x1c2;eip=0x0015c7; 	X(POP(ax));	// 3696 pop     ax ;~ 01C2:15C7
-cs=0x1c2;eip=0x0015c8; 	X(MOV(byte_14b00, 0));	// 3697 mov     byte_14B00, 0 ;~ 01C2:15C8
-cs=0x1c2;eip=0x0015cd; 	J(CALL(sub_10438,0));	// 3698 call    sub_10438 ;~ 01C2:15CD
-cs=0x1c2;eip=0x0015d0; 	J(CALL(sub_14005,0));	// 3699 call    sub_14005 ;~ 01C2:15D0
-cs=0x1c2;eip=0x0015d3; 	J(JMP(loc_13d1e));	// 3700 jmp     loc_13D1E ;~ 01C2:15D3
-ret_1c2_15d6:
-	// 4714 
-cs=0x1c2;eip=0x0015d6; 	X(POP(ax));	// 3702 pop     ax ;~ 01C2:15D6
-cs=0x1c2;eip=0x0015d7; 	J(JMP(loc_134c0));	// 3703 jmp     loc_134C0 ;~ 01C2:15D7
-sub_117da:
-	// 3708 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_116ad: 	goto loc_116ad;
+        case m2c::kloc_116b0: 	goto loc_116b0;
+        case m2c::kloc_116c1: 	goto loc_116c1;
+        case m2c::kloc_116c4: 	goto loc_116c4;
+        case m2c::kloc_116db: 	goto loc_116db;
+        case m2c::kret_1c2_14a4: 	goto ret_1c2_14a4;
+        case m2c::ksub_116a3: 	goto sub_116a3;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_117da(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_117da:
+    _begin:
 cs=0x1c2;eip=0x0015da; 	T(MOV(si, word_149f0));	// 3709 mov     si, word_149F0 ;~ 01C2:15DA
 ret_1c2_15de:
 	// 4715 
@@ -2976,8 +6464,47 @@ cs=0x1c2;eip=0x0016be; 	T(MOV(di, *(dw*)(raddr(cs,di))));	// 3846 mov     di, cs
 cs=0x1c2;eip=0x0016c1; 	J(CALL(__dispatch_call,di));	// 3847 call    di ;~ 01C2:16C1
 cs=0x1c2;eip=0x0016c3; 	X(MOV(word_14b41, 0));	// 3848 mov     word_14B41, 0 ;~ 01C2:16C3
 cs=0x1c2;eip=0x0016c9; 	R(RETN(0));	// 3849 retn ;~ 01C2:16C9
-seg001_16f0_proc:
-	// 3877 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_117ea: 	goto loc_117ea;
+        case m2c::kloc_117f3: 	goto loc_117f3;
+        case m2c::kloc_117fe: 	goto loc_117fe;
+        case m2c::kloc_11805: 	goto loc_11805;
+        case m2c::kloc_11814: 	goto loc_11814;
+        case m2c::kloc_11819: 	goto loc_11819;
+        case m2c::kloc_11840: 	goto loc_11840;
+        case m2c::kloc_1184a: 	goto loc_1184a;
+        case m2c::kloc_11854: 	goto loc_11854;
+        case m2c::kloc_11875: 	goto loc_11875;
+        case m2c::kloc_1187f: 	goto loc_1187f;
+        case m2c::kloc_11895: 	goto loc_11895;
+        case m2c::kloc_1189e: 	goto loc_1189e;
+        case m2c::kloc_118a8: 	goto loc_118a8;
+        case m2c::kloc_118b0: 	goto loc_118b0;
+        case m2c::kloc_118be: 	goto loc_118be;
+        case m2c::kret_1c2_15de: 	goto ret_1c2_15de;
+        case m2c::ksub_117da: 	goto sub_117da;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_16f0_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_16f0_proc:
+    _begin:
 cs=0x1c2;eip=0x0016f0; 	T(MOV(si, word_149f0));	// 3877 mov     si, word_149F0 ;~ 01C2:16F0
 ret_1c2_16f4:
 	// 4732 
@@ -3013,11 +6540,11 @@ cs=0x1c2;eip=0x001727; 	T(CMP(ax, 0x475));	// 3910 cmp     ax, 475h ;~ 01C2:1727
 cs=0x1c2;eip=0x00172a; 	J(JA(loc_11940));	// 3911 ja      short loc_11940 ;~ 01C2:172A
 cs=0x1c2;eip=0x00172c; 	T(CMP(ax, 0x240));	// 3912 cmp     ax, 240h ;~ 01C2:172C
 cs=0x1c2;eip=0x00172f; 	J(JC(loc_11936));	// 3913 jb      short loc_11936 ;~ 01C2:172F
-cs=0x1c2;eip=0x001731; 	J(CALL(_group1,m2c::kloc_11b24));	// 3914 call    loc_11B24 ;~ 01C2:1731
+cs=0x1c2;eip=0x001731; 	J(CALL(seg001_16f0_proc,m2c::kloc_11b24));	// 3914 call    loc_11B24 ;~ 01C2:1731
 cs=0x1c2;eip=0x001734; 	J(JMP(loc_11939));	// 3915 jmp     short loc_11939 ;~ 01C2:1734
 loc_11936:
 	// 4737 
-cs=0x1c2;eip=0x001736; 	J(CALL(_group1,m2c::kloc_11b15));	// 3919 call    loc_11B15 ;~ 01C2:1736
+cs=0x1c2;eip=0x001736; 	J(CALL(seg001_16f0_proc,m2c::kloc_11b15));	// 3919 call    loc_11B15 ;~ 01C2:1736
 loc_11939:
 	// 4738 
 cs=0x1c2;eip=0x001739; 	X(MOV(*(dw*)(raddr(ds,si+7)), 0));	// 3922 mov     word ptr [si+7], 0 ;~ 01C2:1739
@@ -3059,11 +6586,11 @@ cs=0x1c2;eip=0x001779; 	T(TEST(byte_14b19, 1));	// 3962 test    byte_14B19, 1 ;~
 cs=0x1c2;eip=0x00177e; 	J(JNZ(loc_11991));	// 3963 jnz     short loc_11991 ;~ 01C2:177E
 cs=0x1c2;eip=0x001780; 	T(CMP(byte_14b19, 0));	// 3964 cmp     byte_14B19, 0 ;~ 01C2:1780
 cs=0x1c2;eip=0x001785; 	J(JZ(loc_1198c));	// 3965 jz      short loc_1198C ;~ 01C2:1785
-cs=0x1c2;eip=0x001787; 	J(CALL(_group1,m2c::kloc_11b15));	// 3966 call    loc_11B15 ;~ 01C2:1787
+cs=0x1c2;eip=0x001787; 	J(CALL(seg001_16f0_proc,m2c::kloc_11b15));	// 3966 call    loc_11B15 ;~ 01C2:1787
 cs=0x1c2;eip=0x00178a; 	J(JMP(loc_11994));	// 3967 jmp     short loc_11994 ;~ 01C2:178A
 loc_1198c:
 	// 4744 
-cs=0x1c2;eip=0x00178c; 	J(CALL(_group1,m2c::kloc_11b24));	// 3971 call    loc_11B24 ;~ 01C2:178C
+cs=0x1c2;eip=0x00178c; 	J(CALL(seg001_16f0_proc,m2c::kloc_11b24));	// 3971 call    loc_11B24 ;~ 01C2:178C
 cs=0x1c2;eip=0x00178f; 	J(JMP(loc_11994));	// 3972 jmp     short loc_11994 ;~ 01C2:178F
 loc_11991:
 	// 4745 
@@ -3113,11 +6640,11 @@ loc_119da:
 cs=0x1c2;eip=0x0017da; 	T(MOV(al, byte_14b19));	// 4022 mov     al, byte_14B19 ;~ 01C2:17DA
 cs=0x1c2;eip=0x0017dd; 	T(OR(al, al));	// 4023 or      al, al ;~ 01C2:17DD
 cs=0x1c2;eip=0x0017df; 	J(JNZ(loc_119e6));	// 4024 jnz     short loc_119E6 ;~ 01C2:17DF
-cs=0x1c2;eip=0x0017e1; 	J(CALL(_group1,m2c::kloc_11baf));	// 4025 call    loc_11BAF ;~ 01C2:17E1
+cs=0x1c2;eip=0x0017e1; 	J(CALL(seg001_1991_proc,m2c::kloc_11baf));	// 4025 call    loc_11BAF ;~ 01C2:17E1
 cs=0x1c2;eip=0x0017e4; 	J(JMP(loc_119f6));	// 4026 jmp     short loc_119F6 ;~ 01C2:17E4
 loc_119e6:
 	// 4754 
-cs=0x1c2;eip=0x0017e6; 	J(CALL(_group1,m2c::kloc_11b91));	// 4030 call    loc_11B91 ;~ 01C2:17E6
+cs=0x1c2;eip=0x0017e6; 	J(CALL(seg001_1991_proc,m2c::kloc_11b91));	// 4030 call    loc_11B91 ;~ 01C2:17E6
 cs=0x1c2;eip=0x0017e9; 	J(JMP(loc_119f6));	// 4031 jmp     short loc_119F6 ;~ 01C2:17E9
 loc_119eb:
 	// 4755 
@@ -3221,7 +6748,7 @@ cs=0x1c2;eip=0x0018b1; 	J(JS(loc_11abf));	// 4139 js      short loc_11ABF ;~ 01C
 cs=0x1c2;eip=0x0018b3; 	J(JZ(loc_11abf));	// 4140 jz      short loc_11ABF ;~ 01C2:18B3
 cs=0x1c2;eip=0x0018b5; 	T(MOV(al, byte_154ee));	// 4141 mov     al, byte_154EE ;~ 01C2:18B5
 cs=0x1c2;eip=0x0018b8; 	X(MOV(byte_14b21, al));	// 4142 mov     byte_14B21, al ;~ 01C2:18B8
-cs=0x1c2;eip=0x0018bb; 	J(CALL(_group1,m2c::kloc_139fe));	// 4143 call    loc_139FE ;~ 01C2:18BB
+cs=0x1c2;eip=0x0018bb; 	J(CALL(sub_139f9,m2c::kloc_139fe));	// 4143 call    loc_139FE ;~ 01C2:18BB
 cs=0x1c2;eip=0x0018be; 	R(RETN(0));	// 4144 retn ;~ 01C2:18BE
 loc_11abf:
 	// 4771 
@@ -3282,8 +6809,80 @@ loc_11b24:
 cs=0x1c2;eip=0x001924; 	T(MOV(ax, word_14b1b));	// 4213 mov     ax, word_14B1B ;~ 01C2:1924
 cs=0x1c2;eip=0x001927; 	T(NEG(ax));	// 4214 neg     ax ;~ 01C2:1927
 cs=0x1c2;eip=0x001929; 	J(JMP(loc_11b18));	// 4215 jmp     short loc_11B18 ;~ 01C2:1929
-sub_11b2b:
-	// 4220 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_118fe: 	goto loc_118fe;
+        case m2c::kloc_1190e: 	goto loc_1190e;
+        case m2c::kloc_11918: 	goto loc_11918;
+        case m2c::kloc_11922: 	goto loc_11922;
+        case m2c::kloc_11936: 	goto loc_11936;
+        case m2c::kloc_11939: 	goto loc_11939;
+        case m2c::kloc_11940: 	goto loc_11940;
+        case m2c::kloc_1194f: 	goto loc_1194f;
+        case m2c::kloc_11961: 	goto loc_11961;
+        case m2c::kloc_1196c: 	goto loc_1196c;
+        case m2c::kloc_11979: 	goto loc_11979;
+        case m2c::kloc_1198c: 	goto loc_1198c;
+        case m2c::kloc_11991: 	goto loc_11991;
+        case m2c::kloc_11994: 	goto loc_11994;
+        case m2c::kloc_1199f: 	goto loc_1199f;
+        case m2c::kloc_119aa: 	goto loc_119aa;
+        case m2c::kloc_119b5: 	goto loc_119b5;
+        case m2c::kloc_119bc: 	goto loc_119bc;
+        case m2c::kloc_119c0: 	goto loc_119c0;
+        case m2c::kloc_119d7: 	goto loc_119d7;
+        case m2c::kloc_119da: 	goto loc_119da;
+        case m2c::kloc_119e6: 	goto loc_119e6;
+        case m2c::kloc_119eb: 	goto loc_119eb;
+        case m2c::kloc_119f6: 	goto loc_119f6;
+        case m2c::kloc_11a01: 	goto loc_11a01;
+        case m2c::kloc_11a0a: 	goto loc_11a0a;
+        case m2c::kloc_11a19: 	goto loc_11a19;
+        case m2c::kloc_11a2f: 	goto loc_11a2f;
+        case m2c::kloc_11a39: 	goto loc_11a39;
+        case m2c::kloc_11a43: 	goto loc_11a43;
+        case m2c::kloc_11a58: 	goto loc_11a58;
+        case m2c::kloc_11a76: 	goto loc_11a76;
+        case m2c::kloc_11a7c: 	goto loc_11a7c;
+        case m2c::kloc_11a8e: 	goto loc_11a8e;
+        case m2c::kloc_11a91: 	goto loc_11a91;
+        case m2c::kloc_11aac: 	goto loc_11aac;
+        case m2c::kloc_11abf: 	goto loc_11abf;
+        case m2c::kloc_11ac5: 	goto loc_11ac5;
+        case m2c::kloc_11ad6: 	goto loc_11ad6;
+        case m2c::kloc_11ae0: 	goto loc_11ae0;
+        case m2c::kloc_11ae8: 	goto loc_11ae8;
+        case m2c::kloc_11afb: 	goto loc_11afb;
+        case m2c::kloc_11afe: 	goto loc_11afe;
+        case m2c::kloc_11b0d: 	goto loc_11b0d;
+        case m2c::kloc_11b15: 	goto loc_11b15;
+        case m2c::kloc_11b18: 	goto loc_11b18;
+        case m2c::kloc_11b24: 	goto loc_11b24;
+        case m2c::klocret_11aab: 	goto locret_11aab;
+        case m2c::kret_1c2_16f4: 	goto ret_1c2_16f4;
+        case m2c::kret_1c2_180f: 	goto ret_1c2_180f;
+        case m2c::kseg001_16f0_proc: 	goto seg001_16f0_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11b2b(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11b2b:
+    _begin:
 cs=0x1c2;eip=0x00192b; 	T(MOV(cx, word_14b1d));	// 4222 mov     cx, word_14B1D ;~ 01C2:192B
 ret_1c2_192f:
 	// 4782 
@@ -3321,8 +6920,33 @@ loc_11b8b:
 	// 4784 
 cs=0x1c2;eip=0x00198b; 	X(MOV(byte_14b20, 4));	// 4257 mov     byte_14B20, 4 ;~ 01C2:198B
 cs=0x1c2;eip=0x001990; 	R(RETN(0));	// 4258 retn ;~ 01C2:1990
-seg001_1991_proc:
-	// 4263 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11b8b: 	goto loc_11b8b;
+        case m2c::klocret_11b8a: 	goto locret_11b8a;
+        case m2c::kret_1c2_192f: 	goto ret_1c2_192f;
+        case m2c::ksub_11b2b: 	goto sub_11b2b;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_1991_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_1991_proc:
+    _begin:
 loc_11b91:
 	// 4785 
 cs=0x1c2;eip=0x001991; 	T(MOV(cx, word_14b1d));	// 4264 mov     cx, word_14B1D ;~ 01C2:1991
@@ -3351,6 +6975,31 @@ cs=0x1c2;eip=0x0019c4; 	T(MOV(ax, word_14b1b));	// 4287 mov     ax, word_14B1B ;
 cs=0x1c2;eip=0x0019c7; 	T(SHL(ax, 1));	// 4288 shl     ax, 1 ;~ 01C2:19C7
 cs=0x1c2;eip=0x0019c9; 	X(SUB(*(dw*)(raddr(ds,si+9)), ax));	// 4289 sub     [si+9], ax ;~ 01C2:19C9
 cs=0x1c2;eip=0x0019cc; 	R(RETN(0));	// 4290 retn ;~ 01C2:19CC
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11baf: 	goto loc_11baf;
+        case m2c::kseg001_1991_proc: 	goto seg001_1991_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group9(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group9:
+    _begin:
 sub_11bcd:
 	// 4295 
 cs=0x1c2;eip=0x0019cd; 	T(CMP(byte_1475b, 3));	// 4296 cmp     byte_1475B, 3 ;~ 01C2:19CD
@@ -3422,8 +7071,64 @@ loc_11c54:
 	// 4799 
 cs=0x1c2;eip=0x001a54; 	J(CALL(sub_139f9,0));	// 4374 call    sub_139F9 ;~ 01C2:1A54
 cs=0x1c2;eip=0x001a57; 	R(RETN(0));	// 4375 retn ;~ 01C2:1A57
-sub_11c58:
-	// 4382 
+sub_138e1:
+	// 8482 
+cs=0x1c2;eip=0x0036e1; 	T(TEST(byte_14b06, 0x0FF));	// 8484 test    byte_14B06, 0FFh ;~ 01C2:36E1
+ret_1c2_36e6:
+	// 5204 
+cs=0x1c2;eip=0x0036e6; 	J(JZ(loc_138ec));	// 8485 jz      short loc_138EC ;~ 01C2:36E6
+cs=0x1c2;eip=0x0036e8; 	J(CALL(sub_139f9,0));	// 8486 call    sub_139F9 ;~ 01C2:36E8
+cs=0x1c2;eip=0x0036eb; 	R(RETN(0));	// 8487 retn ;~ 01C2:36EB
+loc_138ec:
+	// 5205 
+cs=0x1c2;eip=0x0036ec; 	T(TEST(byte_154e2, 0x0FF));	// 8491 test    byte_154E2, 0FFh ;~ 01C2:36EC
+cs=0x1c2;eip=0x0036f1; 	J(JNZ(locret_138fb));	// 8492 jnz     short locret_138FB ;~ 01C2:36F1
+cs=0x1c2;eip=0x0036f3; 	J(CALL(sub_13a76,0));	// 8493 call    sub_13A76 ;~ 01C2:36F3
+cs=0x1c2;eip=0x0036f6; 	X(MOV(byte_154e2, 0x0C));	// 8494 mov     byte_154E2, 0Ch ;~ 01C2:36F6
+locret_138fb:
+	// 5206 
+cs=0x1c2;eip=0x0036fb; 	R(RETN(0));	// 8497 retn ;~ 01C2:36FB
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11bdb: 	goto loc_11bdb;
+        case m2c::kloc_11be2: 	goto loc_11be2;
+        case m2c::kloc_11bea: 	goto loc_11bea;
+        case m2c::kloc_11bf0: 	goto loc_11bf0;
+        case m2c::kloc_11c17: 	goto loc_11c17;
+        case m2c::kloc_11c26: 	goto loc_11c26;
+        case m2c::kloc_11c35: 	goto loc_11c35;
+        case m2c::kloc_11c3c: 	goto loc_11c3c;
+        case m2c::kloc_11c4c: 	goto loc_11c4c;
+        case m2c::kloc_11c4f: 	goto loc_11c4f;
+        case m2c::kloc_11c54: 	goto loc_11c54;
+        case m2c::kloc_138ec: 	goto loc_138ec;
+        case m2c::klocret_11be9: 	goto locret_11be9;
+        case m2c::klocret_138fb: 	goto locret_138fb;
+        case m2c::kret_1c2_19d2: 	goto ret_1c2_19d2;
+        case m2c::kret_1c2_36e6: 	goto ret_1c2_36e6;
+        case m2c::ksub_11bcd: 	goto sub_11bcd;
+        case m2c::ksub_138e1: 	goto sub_138e1;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11c58(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11c58:
+    _begin:
 cs=0x1c2;eip=0x001a58; 	T(TEST(byte_14fb2, 0x0FF));	// 4383 test    byte_14FB2, 0FFh ;~ 01C2:1A58
 ret_1c2_1a5d:
 	// 4800 
@@ -3460,8 +7165,37 @@ loc_11c94:
 	// 4806 
 cs=0x1c2;eip=0x001a94; 	X(DEC(byte_1475a));	// 4418 dec     byte_1475A ;~ 01C2:1A94
 cs=0x1c2;eip=0x001a98; 	R(RETN(0));	// 4419 retn ;~ 01C2:1A98
-seg001_1a99_proc:
-	// 4423 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11c6f: 	goto loc_11c6f;
+        case m2c::kloc_11c78: 	goto loc_11c78;
+        case m2c::kloc_11c82: 	goto loc_11c82;
+        case m2c::kloc_11c94: 	goto loc_11c94;
+        case m2c::klocret_11c77: 	goto locret_11c77;
+        case m2c::klocret_11c93: 	goto locret_11c93;
+        case m2c::kret_1c2_1a5d: 	goto ret_1c2_1a5d;
+        case m2c::ksub_11c58: 	goto sub_11c58;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_1a99_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_1a99_proc:
+    _begin:
 cs=0x1c2;eip=0x001a99; 	T(MOV(ax, word_14b2b));	// 4423 mov     ax, word_14B2B ;~ 01C2:1A99
 ret_1c2_1a9c:
 	// 4807 
@@ -3480,8 +7214,33 @@ loc_11cb3:
 cs=0x1c2;eip=0x001ab3; 	J(CALL(sub_11cbb,0));	// 4436 call    sub_11CBB ;~ 01C2:1AB3
 cs=0x1c2;eip=0x001ab6; 	X(DEC(byte_14b26));	// 4437 dec     byte_14B26 ;~ 01C2:1AB6
 cs=0x1c2;eip=0x001aba; 	R(RETN(0));	// 4438 retn ;~ 01C2:1ABA
-sub_11cbb:
-	// 4443 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11ca6: 	goto loc_11ca6;
+        case m2c::kloc_11cb3: 	goto loc_11cb3;
+        case m2c::kret_1c2_1a9c: 	goto ret_1c2_1a9c;
+        case m2c::kseg001_1a99_proc: 	goto seg001_1a99_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11cbb(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11cbb:
+    _begin:
 cs=0x1c2;eip=0x001abb; 	T(MOV(dx, word_14b27));	// 4444 mov     dx, word_14B27 ;~ 01C2:1ABB
 ret_1c2_1abf:
 	// 4810 
@@ -3489,8 +7248,31 @@ cs=0x1c2;eip=0x001abf; 	X(ADD(*(dw*)(raddr(ds,si+1)), dx));	// 4445 add     [si+
 cs=0x1c2;eip=0x001ac2; 	T(MOV(dx, word_14b29));	// 4446 mov     dx, word_14B29 ;~ 01C2:1AC2
 cs=0x1c2;eip=0x001ac6; 	X(ADD(*(dw*)(raddr(ds,si+3)), dx));	// 4447 add     [si+3], dx ;~ 01C2:1AC6
 cs=0x1c2;eip=0x001ac9; 	R(RETN(0));	// 4448 retn ;~ 01C2:1AC9
-sub_11cca:
-	// 4455 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_1abf: 	goto ret_1c2_1abf;
+        case m2c::ksub_11cbb: 	goto sub_11cbb;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11cca(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11cca:
+    _begin:
 cs=0x1c2;eip=0x001aca; 	T(MOV(ax, 0x150));	// 4457 mov     ax, 150h ;~ 01C2:1ACA
 ret_1c2_1acd:
 	// 4811 
@@ -3510,8 +7292,31 @@ cs=0x1c2;eip=0x001af2; 	J(CALL(sub_13c68,0));	// 4470 call    sub_13C68 ;~ 01C2:
 cs=0x1c2;eip=0x001af5; 	T(ADD(ax, 5));	// 4471 add     ax, 5 ;~ 01C2:1AF5
 cs=0x1c2;eip=0x001af8; 	X(MOV(byte_14b26, al));	// 4472 mov     byte_14B26, al ;~ 01C2:1AF8
 cs=0x1c2;eip=0x001afb; 	R(RETN(0));	// 4473 retn ;~ 01C2:1AFB
-sub_11cfc:
-	// 4480 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_1acd: 	goto ret_1c2_1acd;
+        case m2c::ksub_11cca: 	goto sub_11cca;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11cfc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11cfc:
+    _begin:
 cs=0x1c2;eip=0x001afc; 	T(MOV(ax, 0x96));	// 4481 mov     ax, 96h ; '–' ;~ 01C2:1AFC
 ret_1c2_1aff:
 	// 4812 
@@ -3519,15 +7324,61 @@ cs=0x1c2;eip=0x001aff; 	J(CALL(sub_13c68,0));	// 4482 call    sub_13C68 ;~ 01C2:
 cs=0x1c2;eip=0x001b02; 	T(INC(ax));	// 4483 inc     ax ;~ 01C2:1B02
 cs=0x1c2;eip=0x001b03; 	X(MOV(byte_1475a, al));	// 4484 mov     byte_1475A, al ;~ 01C2:1B03
 cs=0x1c2;eip=0x001b06; 	R(RETN(0));	// 4485 retn ;~ 01C2:1B06
-sub_11d07:
-	// 4492 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_1aff: 	goto ret_1c2_1aff;
+        case m2c::ksub_11cfc: 	goto sub_11cfc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11d07(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11d07:
+    _begin:
 cs=0x1c2;eip=0x001b07; 	X(MOV(byte_1475a, 0x0FF));	// 4494 mov     byte_1475A, 0FFh ;~ 01C2:1B07
 ret_1c2_1b0c:
 	// 4813 
 cs=0x1c2;eip=0x001b0c; 	X(MOV(byte_14a19, 0));	// 4495 mov     byte_14A19, 0 ;~ 01C2:1B0C
 cs=0x1c2;eip=0x001b11; 	R(RETN(0));	// 4496 retn ;~ 01C2:1B11
-sub_11d12:
-	// 4503 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_1b0c: 	goto ret_1c2_1b0c;
+        case m2c::ksub_11d07: 	goto sub_11d07;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11d12(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11d12:
+    _begin:
 cs=0x1c2;eip=0x001b12; 	T(OR(ax, ax));	// 4505 or      ax, ax ;~ 01C2:1B12
 ret_1c2_1b14:
 	// 4814 
@@ -3537,8 +7388,32 @@ loc_11d18:
 	// 4815 
 cs=0x1c2;eip=0x001b18; 	T(CMP(ax, 0x7000));	// 4510 cmp     ax, 7000h ;~ 01C2:1B18
 cs=0x1c2;eip=0x001b1b; 	R(RETN(0));	// 4511 retn ;~ 01C2:1B1B
-sub_11d1c:
-	// 4518 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11d18: 	goto loc_11d18;
+        case m2c::kret_1c2_1b14: 	goto ret_1c2_1b14;
+        case m2c::ksub_11d12: 	goto sub_11d12;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11d1c(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11d1c:
+    _begin:
 cs=0x1c2;eip=0x001b1c; 	J(CALL(sub_107a4,0));	// 4519 call    sub_107A4 ;~ 01C2:1B1C
 ret_1c2_1b1f:
 	// 4816 
@@ -3577,8 +7452,35 @@ cs=0x1c2;eip=0x001b5d; 	T(NOP);	// 4555 nop ;~ 01C2:1B5D
 cs=0x1c2;eip=0x001b5e; 	T(NOP);	// 4556 nop ;~ 01C2:1B5E
 cs=0x1c2;eip=0x001b5f; 	X(MOV(*(raddr(ds,si)), 0));	// 4557 mov     byte ptr [si], 0 ;~ 01C2:1B5F
 cs=0x1c2;eip=0x001b62; 	R(RETN(0));	// 4558 retn ;~ 01C2:1B62
-sub_11d70:
-	// 4567 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11d26: 	goto loc_11d26;
+        case m2c::kloc_11d31: 	goto loc_11d31;
+        case m2c::kloc_11d37: 	goto loc_11d37;
+        case m2c::kloc_11d4c: 	goto loc_11d4c;
+        case m2c::kret_1c2_1b1f: 	goto ret_1c2_1b1f;
+        case m2c::ksub_11d1c: 	goto sub_11d1c;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_11d70(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_11d70:
+    _begin:
 cs=0x1c2;eip=0x001b70; 	X(MOV(byte_153a3, 0));	// 4569 mov     byte_153A3, 0 ;~ 01C2:1B70
 ret_1c2_1b75:
 	// 4821 
@@ -3698,8 +7600,43 @@ cs=0x1c2;eip=0x001c79; 	T(MOV(di, 0x5E9));	// 4691 mov     di, 5E9h ;~ 01C2:1C79
 cs=0x1c2;eip=0x001c7c; 	X(MOV(word_14b3d, di));	// 4692 mov     word_14B3D, di ;~ 01C2:1C7C
 cs=0x1c2;eip=0x001c80; 	J(CALL(sub_121df,0));	// 4693 call    sub_121DF ;~ 01C2:1C80
 cs=0x1c2;eip=0x001c83; 	R(RETN(0));	// 4694 retn ;~ 01C2:1C83
-seg001_1c84_proc:
-	// 4699 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11d80: 	goto loc_11d80;
+        case m2c::kloc_11d8c: 	goto loc_11d8c;
+        case m2c::kloc_11d98: 	goto loc_11d98;
+        case m2c::kloc_11daa: 	goto loc_11daa;
+        case m2c::kloc_11dbe: 	goto loc_11dbe;
+        case m2c::kloc_11dc1: 	goto loc_11dc1;
+        case m2c::kloc_11e03: 	goto loc_11e03;
+        case m2c::kloc_11e25: 	goto loc_11e25;
+        case m2c::kloc_11e29: 	goto loc_11e29;
+        case m2c::kloc_11e59: 	goto loc_11e59;
+        case m2c::kloc_11e5d: 	goto loc_11e5d;
+        case m2c::klocret_11dbd: 	goto locret_11dbd;
+        case m2c::kret_1c2_1b75: 	goto ret_1c2_1b75;
+        case m2c::ksub_11d70: 	goto sub_11d70;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_1c84_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_1c84_proc:
+    _begin:
 loc_11e84:
 	// 4834 
 cs=0x1c2;eip=0x001c84; 	X(MOV(byte_153a3, 0));	// 4700 mov     byte_153A3, 0 ;~ 01C2:1C84
@@ -4070,70 +8007,69 @@ cs=0x1c2;eip=0x001fd4; 	T(MOV(di, 0x6C2));	// 5095 mov     di, 6C2h ;~ 01C2:1FD4
 cs=0x1c2;eip=0x001fd7; 	X(MOV(word_14b3d, di));	// 5096 mov     word_14B3D, di ;~ 01C2:1FD7
 cs=0x1c2;eip=0x001fdb; 	J(CALL(sub_121df,0));	// 5097 call    sub_121DF ;~ 01C2:1FDB
 cs=0x1c2;eip=0x001fde; 	R(RETN(0));	// 5098 retn ;~ 01C2:1FDE
-sub_121df:
-	// 5103 
-cs=0x1c2;eip=0x001fdf; 	X(MOV(word_14b43, 0));	// 5105 mov     word_14B43, 0 ;~ 01C2:1FDF
-ret_1c2_1fe5:
-	// 4874 
-cs=0x1c2;eip=0x001fe5; 	X(MOV(word_153a8, 0x0D6C));	// 5106 mov     word_153A8, 0D6Ch ;~ 01C2:1FE5
-cs=0x1c2;eip=0x001feb; 	X(MOV(word_153aa, 0x0D70));	// 5107 mov     word_153AA, 0D70h ;~ 01C2:1FEB
-loc_121f1:
-	// 4875 
-cs=0x1c2;eip=0x001ff1; 	T(MOV(ax, word_14b43));	// 5110 mov     ax, word_14B43 ;~ 01C2:1FF1
-cs=0x1c2;eip=0x001ff4; 	T(SHL(ax, 1));	// 5111 shl     ax, 1 ;~ 01C2:1FF4
-cs=0x1c2;eip=0x001ff6; 	T(MOV(di, word_14b3d));	// 5112 mov     di, word_14B3D ;~ 01C2:1FF6
-cs=0x1c2;eip=0x001ffa; 	T(ADD(di, ax));	// 5113 add     di, ax ;~ 01C2:1FFA
-cs=0x1c2;eip=0x001ffc; 	T(MOV(al, *(raddr(ds,di))));	// 5114 mov     al, [di] ;~ 01C2:1FFC
-cs=0x1c2;eip=0x001ffe; 	T(CMP(al, 0x0FF));	// 5115 cmp     al, 0FFh ;~ 01C2:1FFE
-cs=0x1c2;eip=0x002000; 	J(JZ(loc_1225c));	// 5116 jz      short loc_1225C ;~ 01C2:2000
-cs=0x1c2;eip=0x002002; 	T(SUB(ah, ah));	// 5117 sub     ah, ah ;~ 01C2:2002
-cs=0x1c2;eip=0x002004; 	T(SHL(ax, 1));	// 5118 shl     ax, 1 ;~ 01C2:2004
-cs=0x1c2;eip=0x002006; 	T(SHL(ax, 1));	// 5119 shl     ax, 1 ;~ 01C2:2006
-cs=0x1c2;eip=0x002008; 	T(MOV(si, 0x0BBA3));	// 5120 mov     si, 0BBA3h ;~ 01C2:2008
-cs=0x1c2;eip=0x00200b; 	X(PUSH(si));	// 5121 push    si ;~ 01C2:200B
-cs=0x1c2;eip=0x00200c; 	T(ADD(si, ax));	// 5122 add     si, ax ;~ 01C2:200C
-cs=0x1c2;eip=0x00200e; 	T(LODSW);	// 5123 lodsw ;~ 01C2:200E
-cs=0x1c2;eip=0x00200f; 	T(MOV(bx, ax));	// 5124 mov     bx, ax ;~ 01C2:200F
-cs=0x1c2;eip=0x002011; 	T(LODSW);	// 5125 lodsw ;~ 01C2:2011
-cs=0x1c2;eip=0x002012; 	X(MOV(word_153ae, ax));	// 5126 mov     word_153AE, ax ;~ 01C2:2012
-cs=0x1c2;eip=0x002015; 	X(MOV(word_153ac, bx));	// 5127 mov     word_153AC, bx ;~ 01C2:2015
-cs=0x1c2;eip=0x002019; 	T(INC(di));	// 5128 inc     di ;~ 01C2:2019
-cs=0x1c2;eip=0x00201a; 	T(MOV(al, *(raddr(ds,di))));	// 5129 mov     al, [di] ;~ 01C2:201A
-cs=0x1c2;eip=0x00201c; 	T(SUB(ah, ah));	// 5130 sub     ah, ah ;~ 01C2:201C
-cs=0x1c2;eip=0x00201e; 	T(SHL(ax, 1));	// 5131 shl     ax, 1 ;~ 01C2:201E
-cs=0x1c2;eip=0x002020; 	T(SHL(ax, 1));	// 5132 shl     ax, 1 ;~ 01C2:2020
-cs=0x1c2;eip=0x002022; 	X(POP(si));	// 5133 pop     si ;~ 01C2:2022
-cs=0x1c2;eip=0x002023; 	T(ADD(si, ax));	// 5134 add     si, ax ;~ 01C2:2023
-cs=0x1c2;eip=0x002025; 	T(LODSW);	// 5135 lodsw ;~ 01C2:2025
-cs=0x1c2;eip=0x002026; 	T(MOV(bx, ax));	// 5136 mov     bx, ax ;~ 01C2:2026
-cs=0x1c2;eip=0x002028; 	T(LODSW);	// 5137 lodsw ;~ 01C2:2028
-cs=0x1c2;eip=0x002029; 	X(MOV(word_153b2, ax));	// 5138 mov     word_153B2, ax ;~ 01C2:2029
-cs=0x1c2;eip=0x00202c; 	X(MOV(word_153b0, bx));	// 5139 mov     word_153B0, bx ;~ 01C2:202C
-cs=0x1c2;eip=0x002030; 	T(TEST(byte_153a2, 1));	// 5140 test    byte_153A2, 1 ;~ 01C2:2030
-cs=0x1c2;eip=0x002035; 	J(JZ(loc_1223f));	// 5141 jz      short loc_1223F ;~ 01C2:2035
-cs=0x1c2;eip=0x002037; 	X(NEG(word_153ac));	// 5142 neg     word_153AC ;~ 01C2:2037
-cs=0x1c2;eip=0x00203b; 	X(NEG(word_153b0));	// 5143 neg     word_153B0 ;~ 01C2:203B
-loc_1223f:
-	// 4876 
-cs=0x1c2;eip=0x00203f; 	T(MOV(si, 0x4FF));	// 5146 mov     si, 4FFh ;~ 01C2:203F
-cs=0x1c2;eip=0x002042; 	T(MOV(di, 0x0D6C));	// 5147 mov     di, 0D6Ch ;~ 01C2:2042
-cs=0x1c2;eip=0x002045; 	J(CALL(sub_12262,0));	// 5148 call    sub_12262 ;~ 01C2:2045
-cs=0x1c2;eip=0x002048; 	T(MOV(si, 0x4FF));	// 5149 mov     si, 4FFh ;~ 01C2:2048
-cs=0x1c2;eip=0x00204b; 	J(CALL(sub_12262,0));	// 5150 call    sub_12262 ;~ 01C2:204B
-loc_1224e:
-	// 4877 
-cs=0x1c2;eip=0x00204e; 	T(MOV(ax, seg_offset(seg003)));	// 5153 mov     ax, seg seg003 ;~ 01C2:204E
-cs=0x1c2;eip=0x002051; 	T(MOV(es, ax));	// 5154 mov     es, ax ;~ 01C2:2051
-cs=0x1c2;eip=0x002053; 	J(CALL(sub_13040,0));	// 5156 call    sub_13040 ;~ 01C2:2053
-cs=0x1c2;eip=0x002056; 	X(INC(word_14b43));	// 5157 inc     word_14B43 ;~ 01C2:2056
-cs=0x1c2;eip=0x00205a; 	J(JMP(loc_121f1));	// 5158 jmp     short loc_121F1 ;~ 01C2:205A
-loc_1225c:
-	// 4878 
-cs=0x1c2;eip=0x00205c; 	T(MOV(ax, seg_offset(seg002)));	// 5163 mov     ax, seg seg002 ;~ 01C2:205C
-cs=0x1c2;eip=0x00205f; 	T(MOV(es, ax));	// 5164 mov     es, ax ;~ 01C2:205F
-cs=0x1c2;eip=0x002061; 	R(RETN(0));	// 5166 retn ;~ 01C2:2061
-sub_12262:
-	// 5173 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_11e84: 	goto loc_11e84;
+        case m2c::kloc_11e94: 	goto loc_11e94;
+        case m2c::kloc_11ea0: 	goto loc_11ea0;
+        case m2c::kloc_11eac: 	goto loc_11eac;
+        case m2c::kloc_11ebe: 	goto loc_11ebe;
+        case m2c::kloc_11ed2: 	goto loc_11ed2;
+        case m2c::kloc_11ed5: 	goto loc_11ed5;
+        case m2c::kloc_11f14: 	goto loc_11f14;
+        case m2c::kloc_11f36: 	goto loc_11f36;
+        case m2c::kloc_11f3a: 	goto loc_11f3a;
+        case m2c::kloc_11f6a: 	goto loc_11f6a;
+        case m2c::kloc_11f6e: 	goto loc_11f6e;
+        case m2c::kloc_11f95: 	goto loc_11f95;
+        case m2c::kloc_11fa5: 	goto loc_11fa5;
+        case m2c::kloc_11fb1: 	goto loc_11fb1;
+        case m2c::kloc_11fbd: 	goto loc_11fbd;
+        case m2c::kloc_11fdb: 	goto loc_11fdb;
+        case m2c::kloc_11fe2: 	goto loc_11fe2;
+        case m2c::kloc_11ff6: 	goto loc_11ff6;
+        case m2c::kloc_11ff9: 	goto loc_11ff9;
+        case m2c::kloc_12038: 	goto loc_12038;
+        case m2c::kloc_1205a: 	goto loc_1205a;
+        case m2c::kloc_1205e: 	goto loc_1205e;
+        case m2c::kloc_1208e: 	goto loc_1208e;
+        case m2c::kloc_12092: 	goto loc_12092;
+        case m2c::kloc_120b9: 	goto loc_120b9;
+        case m2c::kloc_120ce: 	goto loc_120ce;
+        case m2c::kloc_120da: 	goto loc_120da;
+        case m2c::kloc_120e4: 	goto loc_120e4;
+        case m2c::kloc_120f8: 	goto loc_120f8;
+        case m2c::kloc_1210d: 	goto loc_1210d;
+        case m2c::kloc_12110: 	goto loc_12110;
+        case m2c::kloc_1215e: 	goto loc_1215e;
+        case m2c::kloc_12180: 	goto loc_12180;
+        case m2c::kloc_12184: 	goto loc_12184;
+        case m2c::kloc_121b4: 	goto loc_121b4;
+        case m2c::kloc_121b8: 	goto loc_121b8;
+        case m2c::klocret_11ed1: 	goto locret_11ed1;
+        case m2c::klocret_11ff5: 	goto locret_11ff5;
+        case m2c::klocret_120f7: 	goto locret_120f7;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12262(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12262:
+    _begin:
 cs=0x1c2;eip=0x002062; 	T(LODSW);	// 5175 lodsw ;~ 01C2:2062
 ret_1c2_2063:
 	// 4879 
@@ -4145,8 +8081,31 @@ cs=0x1c2;eip=0x002068; 	X(ADD(*(dw*)(raddr(ds,di)), ax));	// 5180 add     [di], 
 cs=0x1c2;eip=0x00206a; 	T(INC(di));	// 5181 inc     di ;~ 01C2:206A
 cs=0x1c2;eip=0x00206b; 	T(INC(di));	// 5182 inc     di ;~ 01C2:206B
 cs=0x1c2;eip=0x00206c; 	R(RETN(0));	// 5183 retn ;~ 01C2:206C
-sub_1226d:
-	// 5190 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_2063: 	goto ret_1c2_2063;
+        case m2c::ksub_12262: 	goto sub_12262;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1226d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1226d:
+    _begin:
 cs=0x1c2;eip=0x00206d; 	T(MOV(ax, word_14b47));	// 5192 mov     ax, word_14B47 ;~ 01C2:206D
 ret_1c2_2070:
 	// 4880 
@@ -4252,8 +8211,42 @@ cs=0x1c2;eip=0x002123; 	T(ADD(di, 2));	// 5290 add     di, 2 ;~ 01C2:2123
 cs=0x1c2;eip=0x002126; 	T(DEC(dx));	// 5291 dec     dx ;~ 01C2:2126
 cs=0x1c2;eip=0x002127; 	J(JNZ(loc_12321));	// 5292 jnz     short loc_12321 ;~ 01C2:2127
 cs=0x1c2;eip=0x002129; 	R(RETN(0));	// 5293 retn ;~ 01C2:2129
-sub_1232a:
-	// 5300 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1227f: 	goto loc_1227f;
+        case m2c::kloc_12288: 	goto loc_12288;
+        case m2c::kloc_1229c: 	goto loc_1229c;
+        case m2c::kloc_122a5: 	goto loc_122a5;
+        case m2c::kloc_122c0: 	goto loc_122c0;
+        case m2c::kloc_122cc: 	goto loc_122cc;
+        case m2c::kloc_122e3: 	goto loc_122e3;
+        case m2c::kloc_122ed: 	goto loc_122ed;
+        case m2c::kloc_122f4: 	goto loc_122f4;
+        case m2c::kloc_12302: 	goto loc_12302;
+        case m2c::kloc_12321: 	goto loc_12321;
+        case m2c::kret_1c2_2070: 	goto ret_1c2_2070;
+        case m2c::ksub_1226d: 	goto sub_1226d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1232a(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1232a:
+    _begin:
 cs=0x1c2;eip=0x00212a; 	X(PUSH(si));	// 5302 push    si ;~ 01C2:212A
 ret_1c2_212b:
 	// 4892 
@@ -4283,103 +8276,34 @@ cs=0x1c2;eip=0x002147; 	X(POP(cx));	// 5325 pop     cx ;~ 01C2:2147
 cs=0x1c2;eip=0x002148; 	X(POP(di));	// 5326 pop     di ;~ 01C2:2148
 cs=0x1c2;eip=0x002149; 	X(POP(si));	// 5327 pop     si ;~ 01C2:2149
 cs=0x1c2;eip=0x00214a; 	R(RETN(0));	// 5328 retn ;~ 01C2:214A
-sub_12350:
-	// 5337 
-cs=0x1c2;eip=0x002150; 	T(MOV(dx, word_14af6));	// 5338 mov     dx, word_14AF6 ;~ 01C2:2150
-loc_12354:
-	// 4896 
-cs=0x1c2;eip=0x002154; 	T(CMP(dx, 0x480));	// 5341 cmp     dx, 480h ;~ 01C2:2154
-cs=0x1c2;eip=0x002158; 	J(JC(loc_12360));	// 5342 jb      short loc_12360 ;~ 01C2:2158
-cs=0x1c2;eip=0x00215a; 	T(SUB(dx, 0x480));	// 5343 sub     dx, 480h ;~ 01C2:215A
-cs=0x1c2;eip=0x00215e; 	J(JMP(loc_12354));	// 5344 jmp     short loc_12354 ;~ 01C2:215E
-loc_12360:
-	// 4897 
-cs=0x1c2;eip=0x002160; 	T(MOV(ax, 0x168));	// 5348 mov     ax, 168h ;~ 01C2:2160
-cs=0x1c2;eip=0x002163; 	T(ADD(ax, dx));	// 5349 add     ax, dx ;~ 01C2:2163
-cs=0x1c2;eip=0x002165; 	X(MOV(word_14d50, ax));	// 5350 mov     word_14D50, ax ;~ 01C2:2165
-cs=0x1c2;eip=0x002168; 	X(MOV(word_14af6, dx));	// 5351 mov     word_14AF6, dx ;~ 01C2:2168
-cs=0x1c2;eip=0x00216c; 	X(MOV(byte_153a3, 2));	// 5352 mov     byte_153A3, 2 ;~ 01C2:216C
-cs=0x1c2;eip=0x002171; 	T(MOV(bx, 0x0FF60));	// 5353 mov     bx, 0FF60h ;~ 01C2:2171
-cs=0x1c2;eip=0x002174; 	T(SUB(bx, dx));	// 5354 sub     bx, dx ;~ 01C2:2174
-cs=0x1c2;eip=0x002176; 	X(MOV(word_153a8, 0x0D6C));	// 5355 mov     word_153A8, 0D6Ch ;~ 01C2:2176
-cs=0x1c2;eip=0x00217c; 	X(MOV(word_153aa, 0x0D70));	// 5356 mov     word_153AA, 0D70h ;~ 01C2:217C
-cs=0x1c2;eip=0x002182; 	T(MOV(si, 0x0B580));	// 5357 mov     si, 0B580h ;~ 01C2:2182
-cs=0x1c2;eip=0x002185; 	T(MOV(cx, 0));	// 5358 mov     cx, 0 ;~ 01C2:2185
-loc_12388:
-	// 4898 
-cs=0x1c2;eip=0x002188; 	T(LODSW);	// 5362 lodsw ;~ 01C2:2188
-cs=0x1c2;eip=0x002189; 	T(CMP(ax, 0x0FFFF));	// 5363 cmp     ax, 0FFFFh ;~ 01C2:2189
-cs=0x1c2;eip=0x00218c; 	J(JNZ(loc_12391));	// 5364 jnz     short loc_12391 ;~ 01C2:218C
-cs=0x1c2;eip=0x00218e; 	T(INC(cx));	// 5365 inc     cx ;~ 01C2:218E
-cs=0x1c2;eip=0x00218f; 	J(JMP(loc_12388));	// 5366 jmp     short loc_12388 ;~ 01C2:218F
-loc_12391:
-	// 4899 
-cs=0x1c2;eip=0x002191; 	T(CMP(ax, dx));	// 5370 cmp     ax, dx ;~ 01C2:2191
-cs=0x1c2;eip=0x002193; 	J(JNC(loc_1239a));	// 5371 jnb     short loc_1239A ;~ 01C2:2193
-cs=0x1c2;eip=0x002195; 	T(ADD(si, 2));	// 5372 add     si, 2 ;~ 01C2:2195
-cs=0x1c2;eip=0x002198; 	J(JMP(loc_12388));	// 5373 jmp     short loc_12388 ;~ 01C2:2198
-loc_1239a:
-	// 4900 
-cs=0x1c2;eip=0x00219a; 	T(ADD(si, 0x0FFFE));	// 5377 add     si, 0FFFEh ;~ 01C2:219A
-cs=0x1c2;eip=0x00219d; 	J(JCXZ(loc_123b4));	// 5378 jcxz    short loc_123B4 ;~ 01C2:219D
-cs=0x1c2;eip=0x00219f; 	T(DEC(cx));	// 5379 dec     cx ;~ 01C2:219F
-loc_123a0:
-	// 4901 
-cs=0x1c2;eip=0x0021a0; 	T(ADD(si, 0x0FFFC));	// 5382 add     si, 0FFFCh ;~ 01C2:21A0
-cs=0x1c2;eip=0x0021a3; 	T(LODSW);	// 5383 lodsw ;~ 01C2:21A3
-cs=0x1c2;eip=0x0021a4; 	T(CMP(ax, 0x0FFFF));	// 5384 cmp     ax, 0FFFFh ;~ 01C2:21A4
-cs=0x1c2;eip=0x0021a7; 	J(JNZ(loc_123a0));	// 5385 jnz     short loc_123A0 ;~ 01C2:21A7
-cs=0x1c2;eip=0x0021a9; 	J(JCXZ(loc_123b4));	// 5386 jcxz    short loc_123B4 ;~ 01C2:21A9
-loc_123ab:
-	// 4902 
-cs=0x1c2;eip=0x0021ab; 	T(ADD(si, 0x0FFFC));	// 5389 add     si, 0FFFCh ;~ 01C2:21AB
-cs=0x1c2;eip=0x0021ae; 	T(LODSW);	// 5390 lodsw ;~ 01C2:21AE
-cs=0x1c2;eip=0x0021af; 	T(CMP(ax, 0x0FFFF));	// 5391 cmp     ax, 0FFFFh ;~ 01C2:21AF
-cs=0x1c2;eip=0x0021b2; 	J(JNZ(loc_123ab));	// 5392 jnz     short loc_123AB ;~ 01C2:21B2
-loc_123b4:
-	// 4903 
-cs=0x1c2;eip=0x0021b4; 	T(MOV(cx, 0));	// 5396 mov     cx, 0 ;~ 01C2:21B4
-cs=0x1c2;eip=0x0021b7; 	T(CMP(si, 0x0B580));	// 5397 cmp     si, 0B580h ;~ 01C2:21B7
-cs=0x1c2;eip=0x0021bb; 	J(JNC(loc_123c0));	// 5398 jnb     short loc_123C0 ;~ 01C2:21BB
-cs=0x1c2;eip=0x0021bd; 	T(MOV(si, 0x0B582));	// 5399 mov     si, 0B582h ;~ 01C2:21BD
-loc_123c0:
-	// 4904 
-cs=0x1c2;eip=0x0021c0; 	T(MOV(di, 0x0D6C));	// 5403 mov     di, 0D6Ch ;~ 01C2:21C0
-cs=0x1c2;eip=0x0021c3; 	T(LODSW);	// 5404 lodsw ;~ 01C2:21C3
-cs=0x1c2;eip=0x0021c4; 	T(CMP(ax, word_14d50));	// 5405 cmp     ax, word_14D50 ;~ 01C2:21C4
-cs=0x1c2;eip=0x0021c8; 	J(JNC(locret_123f2));	// 5406 jnb     short locret_123F2 ;~ 01C2:21C8
-cs=0x1c2;eip=0x0021ca; 	T(ADD(ax, bx));	// 5407 add     ax, bx ;~ 01C2:21CA
-cs=0x1c2;eip=0x0021cc; 	X(STOSW);	// 5408 stosw ;~ 01C2:21CC
-cs=0x1c2;eip=0x0021cd; 	T(LODSW);	// 5409 lodsw ;~ 01C2:21CD
-cs=0x1c2;eip=0x0021ce; 	T(NEG(ax));	// 5410 neg     ax ;~ 01C2:21CE
-cs=0x1c2;eip=0x0021d0; 	X(STOSW);	// 5411 stosw ;~ 01C2:21D0
-cs=0x1c2;eip=0x0021d1; 	T(LODSW);	// 5412 lodsw ;~ 01C2:21D1
-cs=0x1c2;eip=0x0021d2; 	T(ADD(ax, bx));	// 5413 add     ax, bx ;~ 01C2:21D2
-cs=0x1c2;eip=0x0021d4; 	X(STOSW);	// 5414 stosw ;~ 01C2:21D4
-cs=0x1c2;eip=0x0021d5; 	T(LODSW);	// 5415 lodsw ;~ 01C2:21D5
-cs=0x1c2;eip=0x0021d6; 	T(NEG(ax));	// 5416 neg     ax ;~ 01C2:21D6
-cs=0x1c2;eip=0x0021d8; 	X(STOSW);	// 5417 stosw ;~ 01C2:21D8
-cs=0x1c2;eip=0x0021d9; 	X(PUSH(bx));	// 5418 push    bx ;~ 01C2:21D9
-cs=0x1c2;eip=0x0021da; 	X(PUSH(si));	// 5419 push    si ;~ 01C2:21DA
-cs=0x1c2;eip=0x0021db; 	X(PUSH(es));	// 5420 push    es ;~ 01C2:21DB
-loc_123dc:
-	// 4905 
-cs=0x1c2;eip=0x0021dc; 	T(MOV(ax, seg_offset(seg003)));	// 5423 mov     ax, seg seg003 ;~ 01C2:21DC
-cs=0x1c2;eip=0x0021df; 	T(MOV(es, ax));	// 5424 mov     es, ax ;~ 01C2:21DF
-cs=0x1c2;eip=0x0021e1; 	J(CALL(sub_13040,0));	// 5426 call    sub_13040 ;~ 01C2:21E1
-cs=0x1c2;eip=0x0021e4; 	X(POP(es));	// 5427 pop     es ;~ 01C2:21E4
-cs=0x1c2;eip=0x0021e5; 	X(POP(si));	// 5429 pop     si ;~ 01C2:21E5
-cs=0x1c2;eip=0x0021e6; 	X(POP(bx));	// 5430 pop     bx ;~ 01C2:21E6
-cs=0x1c2;eip=0x0021e7; 	T(LODSW);	// 5431 lodsw ;~ 01C2:21E7
-cs=0x1c2;eip=0x0021e8; 	T(CMP(ax, 0x0FFFF));	// 5432 cmp     ax, 0FFFFh ;~ 01C2:21E8
-cs=0x1c2;eip=0x0021eb; 	J(JZ(loc_123c0));	// 5433 jz      short loc_123C0 ;~ 01C2:21EB
-cs=0x1c2;eip=0x0021ed; 	T(ADD(si, 0x0FFFA));	// 5434 add     si, 0FFFAh ;~ 01C2:21ED
-cs=0x1c2;eip=0x0021f0; 	J(JMP(loc_123c0));	// 5435 jmp     short loc_123C0 ;~ 01C2:21F0
-locret_123f2:
-	// 4906 
-cs=0x1c2;eip=0x0021f2; 	R(RETN(0));	// 5439 retn ;~ 01C2:21F2
-sub_123f3:
-	// 5446 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1233d: 	goto loc_1233d;
+        case m2c::kloc_12344: 	goto loc_12344;
+        case m2c::kloc_12346: 	goto loc_12346;
+        case m2c::kret_1c2_212b: 	goto ret_1c2_212b;
+        case m2c::ksub_1232a: 	goto sub_1232a;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_123f3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_123f3:
+    _begin:
 cs=0x1c2;eip=0x0021f3; 	X(MOV(byte_153a3, 2));	// 5448 mov     byte_153A3, 2 ;~ 01C2:21F3
 ret_1c2_21f8:
 	// 4907 
@@ -4494,8 +8418,43 @@ cs=0x1c2;eip=0x0022f6; 	J(CALL(sub_121df,0));	// 5563 call    sub_121DF ;~ 01C2:
 locret_124f9:
 	// 4919 
 cs=0x1c2;eip=0x0022f9; 	R(RETN(0));	// 5566 retn ;~ 01C2:22F9
-sub_124fa:
-	// 5573 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_12403: 	goto loc_12403;
+        case m2c::kloc_1240f: 	goto loc_1240f;
+        case m2c::kloc_1241b: 	goto loc_1241b;
+        case m2c::kloc_1242d: 	goto loc_1242d;
+        case m2c::kloc_12430: 	goto loc_12430;
+        case m2c::kloc_12472: 	goto loc_12472;
+        case m2c::kloc_12494: 	goto loc_12494;
+        case m2c::kloc_12498: 	goto loc_12498;
+        case m2c::kloc_124c8: 	goto loc_124c8;
+        case m2c::kloc_124cc: 	goto loc_124cc;
+        case m2c::klocret_1242c: 	goto locret_1242c;
+        case m2c::klocret_124f9: 	goto locret_124f9;
+        case m2c::kret_1c2_21f8: 	goto ret_1c2_21f8;
+        case m2c::ksub_123f3: 	goto sub_123f3;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_124fa(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_124fa:
+    _begin:
 cs=0x1c2;eip=0x0022fa; 	X(MOV(byte_153a3, 2));	// 5575 mov     byte_153A3, 2 ;~ 01C2:22FA
 ret_1c2_22ff:
 	// 4920 
@@ -4611,8 +8570,43 @@ cs=0x1c2;eip=0x0023ff; 	J(CALL(sub_121df,0));	// 5693 call    sub_121DF ;~ 01C2:
 locret_12602:
 	// 4932 
 cs=0x1c2;eip=0x002402; 	R(RETN(0));	// 5696 retn ;~ 01C2:2402
-sub_12603:
-	// 5703 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1250a: 	goto loc_1250a;
+        case m2c::kloc_12516: 	goto loc_12516;
+        case m2c::kloc_12522: 	goto loc_12522;
+        case m2c::kloc_12536: 	goto loc_12536;
+        case m2c::kloc_12539: 	goto loc_12539;
+        case m2c::kloc_1257b: 	goto loc_1257b;
+        case m2c::kloc_1259d: 	goto loc_1259d;
+        case m2c::kloc_125a1: 	goto loc_125a1;
+        case m2c::kloc_125d1: 	goto loc_125d1;
+        case m2c::kloc_125d5: 	goto loc_125d5;
+        case m2c::klocret_12535: 	goto locret_12535;
+        case m2c::klocret_12602: 	goto locret_12602;
+        case m2c::kret_1c2_22ff: 	goto ret_1c2_22ff;
+        case m2c::ksub_124fa: 	goto sub_124fa;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12603(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12603:
+    _begin:
 cs=0x1c2;eip=0x002403; 	X(MOV(byte_153a3, 2));	// 5705 mov     byte_153A3, 2 ;~ 01C2:2403
 ret_1c2_2408:
 	// 4933 
@@ -4728,8 +8722,43 @@ cs=0x1c2;eip=0x002508; 	J(CALL(sub_121df,0));	// 5823 call    sub_121DF ;~ 01C2:
 locret_1270b:
 	// 4945 
 cs=0x1c2;eip=0x00250b; 	R(RETN(0));	// 5826 retn ;~ 01C2:250B
-seg001_250c_proc:
-	// 5831 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_12613: 	goto loc_12613;
+        case m2c::kloc_1261f: 	goto loc_1261f;
+        case m2c::kloc_1262b: 	goto loc_1262b;
+        case m2c::kloc_1263f: 	goto loc_1263f;
+        case m2c::kloc_12642: 	goto loc_12642;
+        case m2c::kloc_12684: 	goto loc_12684;
+        case m2c::kloc_126a6: 	goto loc_126a6;
+        case m2c::kloc_126aa: 	goto loc_126aa;
+        case m2c::kloc_126da: 	goto loc_126da;
+        case m2c::kloc_126de: 	goto loc_126de;
+        case m2c::klocret_1263e: 	goto locret_1263e;
+        case m2c::klocret_1270b: 	goto locret_1270b;
+        case m2c::kret_1c2_2408: 	goto ret_1c2_2408;
+        case m2c::ksub_12603: 	goto sub_12603;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_250c_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_250c_proc:
+    _begin:
 loc_1270c:
 	// 4946 
 cs=0x1c2;eip=0x00250c; 	X(MOV(byte_153a3, 2));	// 5832 mov     byte_153A3, 2 ;~ 01C2:250C
@@ -4841,8 +8870,41 @@ cs=0x1c2;eip=0x002603; 	T(MOV(di, 0x8CF));	// 5946 mov     di, 8CFh ;~ 01C2:2603
 cs=0x1c2;eip=0x002606; 	X(MOV(word_14b3d, di));	// 5947 mov     word_14B3D, di ;~ 01C2:2606
 cs=0x1c2;eip=0x00260a; 	J(CALL(sub_121df,0));	// 5948 call    sub_121DF ;~ 01C2:260A
 cs=0x1c2;eip=0x00260d; 	R(RETN(0));	// 5949 retn ;~ 01C2:260D
-sub_1280e:
-	// 5954 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1271c: 	goto loc_1271c;
+        case m2c::kloc_12728: 	goto loc_12728;
+        case m2c::kloc_12734: 	goto loc_12734;
+        case m2c::kloc_12748: 	goto loc_12748;
+        case m2c::kloc_1274b: 	goto loc_1274b;
+        case m2c::kloc_1278d: 	goto loc_1278d;
+        case m2c::kloc_127af: 	goto loc_127af;
+        case m2c::kloc_127b3: 	goto loc_127b3;
+        case m2c::kloc_127e3: 	goto loc_127e3;
+        case m2c::kloc_127e7: 	goto loc_127e7;
+        case m2c::klocret_12747: 	goto locret_12747;
+        case m2c::kseg001_250c_proc: 	goto seg001_250c_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1280e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1280e:
+    _begin:
 cs=0x1c2;eip=0x00260e; 	X(MOV(byte_153a3, 0));	// 5956 mov     byte_153A3, 0 ;~ 01C2:260E
 ret_1c2_2613:
 	// 4958 
@@ -4860,8 +8922,32 @@ cs=0x1c2;eip=0x002626; 	T(MOV(di, 0x8E8));	// 5967 mov     di, 8E8h ;~ 01C2:2626
 cs=0x1c2;eip=0x002629; 	X(MOV(word_14b3d, di));	// 5968 mov     word_14B3D, di ;~ 01C2:2629
 cs=0x1c2;eip=0x00262d; 	J(CALL(sub_121df,0));	// 5969 call    sub_121DF ;~ 01C2:262D
 cs=0x1c2;eip=0x002630; 	R(RETN(0));	// 5970 retn ;~ 01C2:2630
-sub_12831:
-	// 5977 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_12821: 	goto loc_12821;
+        case m2c::kret_1c2_2613: 	goto ret_1c2_2613;
+        case m2c::ksub_1280e: 	goto sub_1280e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12831(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12831:
+    _begin:
 cs=0x1c2;eip=0x002631; 	J(CALL(sub_1372f,0));	// 5978 call    sub_1372F ;~ 01C2:2631
 ret_1c2_2634:
 	// 4960 
@@ -4882,8 +8968,31 @@ cs=0x1c2;eip=0x002665; 	X(POP(ax));	// 5992 pop     ax ;~ 01C2:2665
 cs=0x1c2;eip=0x002666; 	X(MOV(word_153be, ax));	// 5993 mov     word_153BE, ax ;~ 01C2:2666
 cs=0x1c2;eip=0x002669; 	X(MOV(word_14b41, 0));	// 5994 mov     word_14B41, 0 ;~ 01C2:2669
 cs=0x1c2;eip=0x00266f; 	R(RETN(0));	// 5995 retn ;~ 01C2:266F
-sub_12870:
-	// 6002 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_2634: 	goto ret_1c2_2634;
+        case m2c::ksub_12831: 	goto sub_12831;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12870(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12870:
+    _begin:
 cs=0x1c2;eip=0x002670; 	J(CALL(sub_1372f,0));	// 6003 call    sub_1372F ;~ 01C2:2670
 ret_1c2_2673:
 	// 4961 
@@ -4899,46 +9008,31 @@ cs=0x1c2;eip=0x002694; 	T(MOV(bx, 0x64));	// 6012 mov     bx, 64h ; 'd' ;~ 01C2:
 cs=0x1c2;eip=0x002697; 	J(CALL(sub_128a1,0));	// 6013 call    sub_128A1 ;~ 01C2:2697
 cs=0x1c2;eip=0x00269a; 	X(MOV(word_14b41, 0));	// 6014 mov     word_14B41, 0 ;~ 01C2:269A
 cs=0x1c2;eip=0x0026a0; 	R(RETN(0));	// 6015 retn ;~ 01C2:26A0
-sub_128a1:
-	// 6022 
-cs=0x1c2;eip=0x0026a1; 	T(XOR(ah, ah));	// 6024 xor     ah, ah ;~ 01C2:26A1
-ret_1c2_26a3:
-	// 4962 
-cs=0x1c2;eip=0x0026a3; 	T(SHR(al, 1));	// 6025 shr     al, 1 ;~ 01C2:26A3
-cs=0x1c2;eip=0x0026a5; 	X(MUL1_1(byte_14d58));	// 6026 mul     byte_14D58 ;~ 01C2:26A5
-cs=0x1c2;eip=0x0026a9; 	T(MOV(si, ax));	// 6027 mov     si, ax ;~ 01C2:26A9
-cs=0x1c2;eip=0x0026ab; 	T(MOV(di, si));	// 6028 mov     di, si ;~ 01C2:26AB
-cs=0x1c2;eip=0x0026ad; 	X(PUSH(es));	// 6029 push    es ;~ 01C2:26AD
-cs=0x1c2;eip=0x0026ae; 	T(MOV(ax, 0x0B800));	// 6030 mov     ax, 0B800h ;~ 01C2:26AE
-cs=0x1c2;eip=0x0026b1; 	T(MOV(es, ax));	// 6031 mov     es, ax ;~ 01C2:26B1
-loc_128b3:
-	// 4963 
-cs=0x1c2;eip=0x0026b3; 	T(MOV(ax, seg_offset(seg003)));	// 6035 mov     ax, seg seg003 ;~ 01C2:26B3
-cs=0x1c2;eip=0x0026b6; 	X(PUSH(ds));	// 6036 push    ds ;~ 01C2:26B6
-cs=0x1c2;eip=0x0026b7; 	T(MOV(ds, ax));	// 6037 mov     ds, ax ;~ 01C2:26B7
-loc_128b9:
-	// 4964 
-cs=0x1c2;eip=0x0026b9; 	T(MOV(cx, 0x28));	// 6041 mov     cx, 28h ; '(' ;~ 01C2:26B9
-	// 6042 rep movsw ;~ 01C2:26BC
-cs=0x1c2;eip=0x0026bc; 	X(	REP MOVSW);	// 6042 rep movsw ;~ 01C2:26BC
-cs=0x1c2;eip=0x0026be; 	T(ADD(si, 0x1FB0));	// 6043 add     si, 1FB0h ;~ 01C2:26BE
-cs=0x1c2;eip=0x0026c2; 	T(MOV(di, si));	// 6044 mov     di, si ;~ 01C2:26C2
-cs=0x1c2;eip=0x0026c4; 	T(MOV(cx, 0x28));	// 6045 mov     cx, 28h ; '(' ;~ 01C2:26C4
-	// 6046 rep movsw ;~ 01C2:26C7
-cs=0x1c2;eip=0x0026c7; 	X(	REP MOVSW);	// 6046 rep movsw ;~ 01C2:26C7
-cs=0x1c2;eip=0x0026c9; 	T(ADD(si, 0x0E000));	// 6047 add     si, 0E000h ;~ 01C2:26C9
-cs=0x1c2;eip=0x0026cd; 	T(MOV(di, si));	// 6048 mov     di, si ;~ 01C2:26CD
-cs=0x1c2;eip=0x0026cf; 	T(DEC(bl));	// 6049 dec     bl ;~ 01C2:26CF
-cs=0x1c2;eip=0x0026d1; 	J(JZ(loc_128d7));	// 6050 jz      short loc_128D7 ;~ 01C2:26D1
-cs=0x1c2;eip=0x0026d3; 	T(DEC(bl));	// 6051 dec     bl ;~ 01C2:26D3
-cs=0x1c2;eip=0x0026d5; 	J(JNZ(loc_128b9));	// 6052 jnz     short loc_128B9 ;~ 01C2:26D5
-loc_128d7:
-	// 4965 
-cs=0x1c2;eip=0x0026d7; 	X(POP(ds));	// 6055 pop     ds ;~ 01C2:26D7
-cs=0x1c2;eip=0x0026d8; 	X(POP(es));	// 6057 pop     es ;~ 01C2:26D8
-cs=0x1c2;eip=0x0026d9; 	R(RETN(0));	// 6059 retn ;~ 01C2:26D9
-sub_128da:
-	// 6067 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_2673: 	goto ret_1c2_2673;
+        case m2c::ksub_12870: 	goto sub_12870;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_128da(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_128da:
+    _begin:
 cs=0x1c2;eip=0x0026da; 	T(MOV(ax, word_14af6));	// 6068 mov     ax, word_14AF6 ;~ 01C2:26DA
 ret_1c2_26dd:
 	// 4966 
@@ -5022,194 +9116,38 @@ cs=0x1c2;eip=0x002778; 	X(MOV(word_14d6e, si));	// 6150 mov     word_14D6E, si ;
 locret_1297c:
 	// 4973 
 cs=0x1c2;eip=0x00277c; 	R(RETN(0));	// 6153 retn ;~ 01C2:277C
-sub_1297d:
-	// 6161 
-cs=0x1c2;eip=0x00277d; 	T(MOV(si, word_153ba));	// 6162 mov     si, word_153BA ;~ 01C2:277D
-ret_1c2_2781:
-	// 4974 
-cs=0x1c2;eip=0x002781; 	T(ADD(si, 0x0FC19));	// 6163 add     si, 0FC19h ;~ 01C2:2781
-cs=0x1c2;eip=0x002785; 	X(MOV(word_14d59, si));	// 6164 mov     word_14D59, si ;~ 01C2:2785
-cs=0x1c2;eip=0x002789; 	X(MOV(word_14d5b, 0x4000));	// 6165 mov     word_14D5B, 4000h ;~ 01C2:2789
-cs=0x1c2;eip=0x00278f; 	X(MOV(word_14af6, 0));	// 6166 mov     word_14AF6, 0 ;~ 01C2:278F
-cs=0x1c2;eip=0x002795; 	X(MOV(byte_14d5d, 0));	// 6167 mov     byte_14D5D, 0 ;~ 01C2:2795
-cs=0x1c2;eip=0x00279a; 	X(PUSH(es));	// 6168 push    es ;~ 01C2:279A
-loc_1299b:
-	// 4975 
-cs=0x1c2;eip=0x00279b; 	T(MOV(ax, seg_offset(seg003)));	// 6171 mov     ax, seg seg003 ;~ 01C2:279B
-cs=0x1c2;eip=0x00279e; 	T(MOV(es, ax));	// 6172 mov     es, ax ;~ 01C2:279E
-cs=0x1c2;eip=0x0027a0; 	T(MOV(cx, 0x1388));	// 6174 mov     cx, 1388h ;~ 01C2:27A0
-cs=0x1c2;eip=0x0027a3; 	T(MOV(ax, 0));	// 6175 mov     ax, 0 ;~ 01C2:27A3
-cs=0x1c2;eip=0x0027a6; 	T(MOV(di, 0x4000));	// 6176 mov     di, 4000h ;~ 01C2:27A6
-	// 6177 rep stosw ;~ 01C2:27A9
-cs=0x1c2;eip=0x0027a9; 	X(	REP STOSW);	// 6177 rep stosw ;~ 01C2:27A9
-cs=0x1c2;eip=0x0027ab; 	X(POP(es));	// 6178 pop     es ;~ 01C2:27AB
-loc_129ac:
-	// 4976 
-cs=0x1c2;eip=0x0027ac; 	J(CALL(sub_1372f,0));	// 6183 call    sub_1372F ;~ 01C2:27AC
-cs=0x1c2;eip=0x0027af; 	J(CALL(sub_12350,0));	// 6184 call    sub_12350 ;~ 01C2:27AF
-cs=0x1c2;eip=0x0027b2; 	X(PUSH(es));	// 6185 push    es ;~ 01C2:27B2
-cs=0x1c2;eip=0x0027b3; 	X(PUSH(ds));	// 6186 push    ds ;~ 01C2:27B3
-cs=0x1c2;eip=0x0027b4; 	T(MOV(si, word_14d59));	// 6187 mov     si, word_14D59 ;~ 01C2:27B4
-cs=0x1c2;eip=0x0027b8; 	T(MOV(di, word_14d5b));	// 6188 mov     di, word_14D5B ;~ 01C2:27B8
-loc_129bc:
-	// 4977 
-cs=0x1c2;eip=0x0027bc; 	T(MOV(ax, seg_offset(seg003)));	// 6191 mov     ax, seg seg003 ;~ 01C2:27BC
-cs=0x1c2;eip=0x0027bf; 	T(MOV(es, ax));	// 6192 mov     es, ax ;~ 01C2:27BF
-cs=0x1c2;eip=0x0027c1; 	T(MOV(ds, ax));	// 6194 mov     ds, ax ;~ 01C2:27C1
-cs=0x1c2;eip=0x0027c3; 	T(MOV(bl, 0x0D));	// 6196 mov     bl, 0Dh ;~ 01C2:27C3
-loc_129c5:
-	// 4978 
-cs=0x1c2;eip=0x0027c5; 	T(MOV(cx, 0x26));	// 6199 mov     cx, 26h ; '&' ;~ 01C2:27C5
-cs=0x1c2;eip=0x0027c8; 	T(TEST(*(&byte_14d5d), 0x0FF));	// 6200 test    ss:byte_14D5D, 0FFh ;~ 01C2:27C8
-cs=0x1c2;eip=0x0027ce; 	J(JNZ(loc_12a1a));	// 6201 jnz     short loc_12A1A ;~ 01C2:27CE
-	// 6202 rep movsw ;~ 01C2:27D0
-cs=0x1c2;eip=0x0027d0; 	X(	REP MOVSW);	// 6202 rep movsw ;~ 01C2:27D0
-cs=0x1c2;eip=0x0027d2; 	T(ADD(di, 0x124));	// 6203 add     di, 124h ;~ 01C2:27D2
-cs=0x1c2;eip=0x0027d6; 	T(ADD(si, 0x1FB4));	// 6204 add     si, 1FB4h ;~ 01C2:27D6
-cs=0x1c2;eip=0x0027da; 	T(MOV(cx, 0x26));	// 6205 mov     cx, 26h ; '&' ;~ 01C2:27DA
-	// 6206 rep movsw ;~ 01C2:27DD
-cs=0x1c2;eip=0x0027dd; 	X(	REP MOVSW);	// 6206 rep movsw ;~ 01C2:27DD
-cs=0x1c2;eip=0x0027df; 	T(ADD(di, 0x124));	// 6207 add     di, 124h ;~ 01C2:27DF
-cs=0x1c2;eip=0x0027e3; 	T(ADD(si, 0x0E004));	// 6208 add     si, 0E004h ;~ 01C2:27E3
-loc_129e7:
-	// 4979 
-cs=0x1c2;eip=0x0027e7; 	T(DEC(bl));	// 6211 dec     bl ;~ 01C2:27E7
-cs=0x1c2;eip=0x0027e9; 	J(JNZ(loc_129c5));	// 6212 jnz     short loc_129C5 ;~ 01C2:27E9
-cs=0x1c2;eip=0x0027eb; 	X(POP(ds));	// 6213 pop     ds ;~ 01C2:27EB
-cs=0x1c2;eip=0x0027ec; 	X(POP(es));	// 6215 pop     es ;~ 01C2:27EC
-cs=0x1c2;eip=0x0027ed; 	X(ADD(word_14af6, 0x130));	// 6217 add     word_14AF6, 130h ;~ 01C2:27ED
-cs=0x1c2;eip=0x0027f3; 	X(ADD(word_14d5b, 0x4C));	// 6218 add     word_14D5B, 4Ch ; 'L' ;~ 01C2:27F3
-cs=0x1c2;eip=0x0027f8; 	T(CMP(word_14d5b, 0x4130));	// 6219 cmp     word_14D5B, 4130h ;~ 01C2:27F8
-cs=0x1c2;eip=0x0027fe; 	J(JC(loc_129ac));	// 6220 jb      short loc_129AC ;~ 01C2:27FE
-cs=0x1c2;eip=0x002800; 	X(MOV(byte_14d5d, 0x0FF));	// 6221 mov     byte_14D5D, 0FFh ;~ 01C2:2800
-cs=0x1c2;eip=0x002805; 	J(JZ(loc_129ac));	// 6222 jz      short loc_129AC ;~ 01C2:2805
-cs=0x1c2;eip=0x002807; 	X(PUSH(es));	// 6223 push    es ;~ 01C2:2807
-loc_12a08:
-	// 4980 
-cs=0x1c2;eip=0x002808; 	T(MOV(ax, seg_offset(seg003)));	// 6226 mov     ax, seg seg003 ;~ 01C2:2808
-cs=0x1c2;eip=0x00280b; 	T(MOV(es, ax));	// 6227 mov     es, ax ;~ 01C2:280B
-cs=0x1c2;eip=0x00280d; 	T(MOV(di, 0x6280));	// 6229 mov     di, 6280h ;~ 01C2:280D
-cs=0x1c2;eip=0x002810; 	T(MOV(cx, 0x0B8));	// 6230 mov     cx, 0B8h ; '¸' ;~ 01C2:2810
-cs=0x1c2;eip=0x002813; 	T(MOV(ax, 0x5555));	// 6231 mov     ax, 5555h ;~ 01C2:2813
-	// 6232 rep stosw ;~ 01C2:2816
-cs=0x1c2;eip=0x002816; 	X(	REP STOSW);	// 6232 rep stosw ;~ 01C2:2816
-cs=0x1c2;eip=0x002818; 	X(POP(es));	// 6233 pop     es ;~ 01C2:2818
-cs=0x1c2;eip=0x002819; 	R(RETN(0));	// 6235 retn ;~ 01C2:2819
-loc_12a1a:
-	// 4981 
-cs=0x1c2;eip=0x00281a; 	T(MOV(cx, 0x20));	// 6240 mov     cx, 20h ; ' ' ;~ 01C2:281A
-	// 6241 rep movsw ;~ 01C2:281D
-cs=0x1c2;eip=0x00281d; 	X(	REP MOVSW);	// 6241 rep movsw ;~ 01C2:281D
-cs=0x1c2;eip=0x00281f; 	T(ADD(di, 0x130));	// 6242 add     di, 130h ;~ 01C2:281F
-cs=0x1c2;eip=0x002823; 	T(ADD(si, 0x1FC0));	// 6243 add     si, 1FC0h ;~ 01C2:2823
-cs=0x1c2;eip=0x002827; 	T(MOV(cx, 0x20));	// 6244 mov     cx, 20h ; ' ' ;~ 01C2:2827
-	// 6245 rep movsw ;~ 01C2:282A
-cs=0x1c2;eip=0x00282a; 	X(	REP MOVSW);	// 6245 rep movsw ;~ 01C2:282A
-cs=0x1c2;eip=0x00282c; 	T(ADD(di, 0x130));	// 6246 add     di, 130h ;~ 01C2:282C
-cs=0x1c2;eip=0x002830; 	T(ADD(si, 0x0E010));	// 6247 add     si, 0E010h ;~ 01C2:2830
-cs=0x1c2;eip=0x002834; 	J(JMP(loc_129e7));	// 6248 jmp     short loc_129E7 ;~ 01C2:2834
-sub_12a36:
-	// 6256 
-cs=0x1c2;eip=0x002836; 	T(MOV(dx, word_14af6));	// 6257 mov     dx, word_14AF6 ;~ 01C2:2836
-loc_12a3a:
-	// 4982 
-cs=0x1c2;eip=0x00283a; 	T(TEST(dx, 0x8000));	// 6260 test    dx, 8000h ;~ 01C2:283A
-cs=0x1c2;eip=0x00283e; 	J(JZ(loc_12a46));	// 6261 jz      short loc_12A46 ;~ 01C2:283E
-cs=0x1c2;eip=0x002840; 	T(ADD(dx, 0x480));	// 6262 add     dx, 480h ;~ 01C2:2840
-cs=0x1c2;eip=0x002844; 	J(JMP(loc_12a3a));	// 6263 jmp     short loc_12A3A ;~ 01C2:2844
-loc_12a46:
-	// 4983 
-cs=0x1c2;eip=0x002846; 	T(CMP(dx, 0x480));	// 6268 cmp     dx, 480h ;~ 01C2:2846
-cs=0x1c2;eip=0x00284a; 	J(JC(loc_12a52));	// 6269 jb      short loc_12A52 ;~ 01C2:284A
-cs=0x1c2;eip=0x00284c; 	T(SUB(dx, 0x480));	// 6270 sub     dx, 480h ;~ 01C2:284C
-cs=0x1c2;eip=0x002850; 	J(JMP(loc_12a46));	// 6271 jmp     short loc_12A46 ;~ 01C2:2850
-loc_12a52:
-	// 4984 
-cs=0x1c2;eip=0x002852; 	T(MOV(cx, dx));	// 6275 mov     cx, dx ;~ 01C2:2852
-cs=0x1c2;eip=0x002854; 	T(AND(cx, 3));	// 6276 and     cx, 3 ;~ 01C2:2854
-cs=0x1c2;eip=0x002858; 	T(SHR(dx, 1));	// 6277 shr     dx, 1 ;~ 01C2:2858
-cs=0x1c2;eip=0x00285a; 	T(SHR(dx, 1));	// 6278 shr     dx, 1 ;~ 01C2:285A
-cs=0x1c2;eip=0x00285c; 	T(MOV(di, word_153ba));	// 6279 mov     di, word_153BA ;~ 01C2:285C
-cs=0x1c2;eip=0x002860; 	T(ADD(di, 0x0FC18));	// 6280 add     di, 0FC18h ;~ 01C2:2860
-cs=0x1c2;eip=0x002864; 	T(MOV(si, 0x4000));	// 6281 mov     si, 4000h ;~ 01C2:2864
-cs=0x1c2;eip=0x002867; 	T(ADD(si, dx));	// 6282 add     si, dx ;~ 01C2:2867
-cs=0x1c2;eip=0x002869; 	T(MOV(dh, 0x0D));	// 6283 mov     dh, 0Dh ;~ 01C2:2869
-cs=0x1c2;eip=0x00286b; 	X(PUSH(es));	// 6284 push    es ;~ 01C2:286B
-cs=0x1c2;eip=0x00286c; 	X(PUSH(ds));	// 6285 push    ds ;~ 01C2:286C
-loc_12a6d:
-	// 4985 
-cs=0x1c2;eip=0x00286d; 	T(MOV(ax, seg_offset(seg003)));	// 6288 mov     ax, seg seg003 ;~ 01C2:286D
-cs=0x1c2;eip=0x002870; 	T(MOV(es, ax));	// 6289 mov     es, ax ;~ 01C2:2870
-cs=0x1c2;eip=0x002872; 	T(MOV(ds, ax));	// 6291 mov     ds, ax ;~ 01C2:2872
-loc_12a74:
-	// 4986 
-cs=0x1c2;eip=0x002874; 	T(LODSW);	// 6295 lodsw ;~ 01C2:2874
-cs=0x1c2;eip=0x002875; 	T(XCHG(al, ah));	// 6296 xchg    al, ah ;~ 01C2:2875
-cs=0x1c2;eip=0x002877; 	T(MOV(bx, ax));	// 6297 mov     bx, ax ;~ 01C2:2877
-cs=0x1c2;eip=0x002879; 	T(MOV(dl, 0x28));	// 6298 mov     dl, 28h ; '(' ;~ 01C2:2879
-loc_12a7b:
-	// 4987 
-cs=0x1c2;eip=0x00287b; 	T(LODSW);	// 6301 lodsw ;~ 01C2:287B
-cs=0x1c2;eip=0x00287c; 	T(XCHG(al, ah));	// 6302 xchg    al, ah ;~ 01C2:287C
-cs=0x1c2;eip=0x00287e; 	T(XCHG(ax, bx));	// 6303 xchg    ax, bx ;~ 01C2:287E
-cs=0x1c2;eip=0x00287f; 	J(JCXZ(loc_12a91));	// 6304 jcxz    short loc_12A91 ;~ 01C2:287F
-cs=0x1c2;eip=0x002881; 	T(MOV(bp, cx));	// 6305 mov     bp, cx ;~ 01C2:2881
-cs=0x1c2;eip=0x002883; 	X(PUSH(bx));	// 6306 push    bx ;~ 01C2:2883
-loc_12a84:
-	// 4988 
-cs=0x1c2;eip=0x002884; 	T(SHL(bx, 1));	// 6309 shl     bx, 1 ;~ 01C2:2884
-cs=0x1c2;eip=0x002886; 	T(RCL(ax, 1));	// 6310 rcl     ax, 1 ;~ 01C2:2886
-cs=0x1c2;eip=0x002888; 	T(SHL(bx, 1));	// 6311 shl     bx, 1 ;~ 01C2:2888
-cs=0x1c2;eip=0x00288a; 	T(RCL(ax, 1));	// 6312 rcl     ax, 1 ;~ 01C2:288A
-cs=0x1c2;eip=0x00288c; 	J(LOOP(loc_12a84));	// 6313 loop    loc_12A84 ;~ 01C2:288C
-cs=0x1c2;eip=0x00288e; 	T(MOV(cx, bp));	// 6314 mov     cx, bp ;~ 01C2:288E
-cs=0x1c2;eip=0x002890; 	X(POP(bx));	// 6315 pop     bx ;~ 01C2:2890
-loc_12a91:
-	// 4989 
-cs=0x1c2;eip=0x002891; 	T(XCHG(al, ah));	// 6318 xchg    al, ah ;~ 01C2:2891
-cs=0x1c2;eip=0x002893; 	X(STOSW);	// 6319 stosw ;~ 01C2:2893
-cs=0x1c2;eip=0x002894; 	T(DEC(dl));	// 6320 dec     dl ;~ 01C2:2894
-cs=0x1c2;eip=0x002896; 	J(JNZ(loc_12a7b));	// 6321 jnz     short loc_12A7B ;~ 01C2:2896
-cs=0x1c2;eip=0x002898; 	T(ADD(di, 0x1FB0));	// 6322 add     di, 1FB0h ;~ 01C2:2898
-cs=0x1c2;eip=0x00289c; 	T(ADD(si, 0x11E));	// 6323 add     si, 11Eh ;~ 01C2:289C
-cs=0x1c2;eip=0x0028a0; 	T(LODSW);	// 6324 lodsw ;~ 01C2:28A0
-cs=0x1c2;eip=0x0028a1; 	T(XCHG(al, ah));	// 6325 xchg    al, ah ;~ 01C2:28A1
-cs=0x1c2;eip=0x0028a3; 	T(MOV(bx, ax));	// 6326 mov     bx, ax ;~ 01C2:28A3
-cs=0x1c2;eip=0x0028a5; 	T(MOV(dl, 0x28));	// 6327 mov     dl, 28h ; '(' ;~ 01C2:28A5
-loc_12aa7:
-	// 4990 
-cs=0x1c2;eip=0x0028a7; 	T(LODSW);	// 6330 lodsw ;~ 01C2:28A7
-cs=0x1c2;eip=0x0028a8; 	T(XCHG(al, ah));	// 6331 xchg    al, ah ;~ 01C2:28A8
-cs=0x1c2;eip=0x0028aa; 	T(XCHG(ax, bx));	// 6332 xchg    ax, bx ;~ 01C2:28AA
-cs=0x1c2;eip=0x0028ab; 	J(JCXZ(loc_12abb));	// 6333 jcxz    short loc_12ABB ;~ 01C2:28AB
-cs=0x1c2;eip=0x0028ad; 	X(PUSH(bx));	// 6334 push    bx ;~ 01C2:28AD
-loc_12aae:
-	// 4991 
-cs=0x1c2;eip=0x0028ae; 	T(SHL(bx, 1));	// 6337 shl     bx, 1 ;~ 01C2:28AE
-cs=0x1c2;eip=0x0028b0; 	T(RCL(ax, 1));	// 6338 rcl     ax, 1 ;~ 01C2:28B0
-cs=0x1c2;eip=0x0028b2; 	T(SHL(bx, 1));	// 6339 shl     bx, 1 ;~ 01C2:28B2
-cs=0x1c2;eip=0x0028b4; 	T(RCL(ax, 1));	// 6340 rcl     ax, 1 ;~ 01C2:28B4
-cs=0x1c2;eip=0x0028b6; 	J(LOOP(loc_12aae));	// 6341 loop    loc_12AAE ;~ 01C2:28B6
-cs=0x1c2;eip=0x0028b8; 	T(MOV(cx, bp));	// 6342 mov     cx, bp ;~ 01C2:28B8
-cs=0x1c2;eip=0x0028ba; 	X(POP(bx));	// 6343 pop     bx ;~ 01C2:28BA
-loc_12abb:
-	// 4992 
-cs=0x1c2;eip=0x0028bb; 	T(XCHG(al, ah));	// 6346 xchg    al, ah ;~ 01C2:28BB
-cs=0x1c2;eip=0x0028bd; 	X(STOSW);	// 6347 stosw ;~ 01C2:28BD
-cs=0x1c2;eip=0x0028be; 	T(DEC(dl));	// 6348 dec     dl ;~ 01C2:28BE
-cs=0x1c2;eip=0x0028c0; 	J(JNZ(loc_12aa7));	// 6349 jnz     short loc_12AA7 ;~ 01C2:28C0
-cs=0x1c2;eip=0x0028c2; 	T(ADD(di, 0x0E000));	// 6350 add     di, 0E000h ;~ 01C2:28C2
-cs=0x1c2;eip=0x0028c6; 	T(ADD(si, 0x11E));	// 6351 add     si, 11Eh ;~ 01C2:28C6
-cs=0x1c2;eip=0x0028ca; 	T(DEC(dh));	// 6352 dec     dh ;~ 01C2:28CA
-cs=0x1c2;eip=0x0028cc; 	J(JNZ(loc_12a74));	// 6353 jnz     short loc_12A74 ;~ 01C2:28CC
-cs=0x1c2;eip=0x0028ce; 	X(POP(ds));	// 6354 pop     ds ;~ 01C2:28CE
-cs=0x1c2;eip=0x0028cf; 	J(CALL(sub_128da,0));	// 6356 call    sub_128DA ;~ 01C2:28CF
-cs=0x1c2;eip=0x0028d2; 	J(CALL(sub_11259,0));	// 6357 call    sub_11259 ;~ 01C2:28D2
-cs=0x1c2;eip=0x0028d5; 	J(CALL(sub_1146f,0));	// 6358 call    sub_1146F ;~ 01C2:28D5
-cs=0x1c2;eip=0x0028d8; 	X(POP(es));	// 6359 pop     es ;~ 01C2:28D8
-cs=0x1c2;eip=0x0028d9; 	R(RETN(0));	// 6361 retn ;~ 01C2:28D9
-sub_12ae0:
-	// 6370 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_128e7: 	goto loc_128e7;
+        case m2c::kloc_128ea: 	goto loc_128ea;
+        case m2c::kloc_128fc: 	goto loc_128fc;
+        case m2c::kloc_12935: 	goto loc_12935;
+        case m2c::kloc_1296e: 	goto loc_1296e;
+        case m2c::kloc_12978: 	goto loc_12978;
+        case m2c::klocret_1297c: 	goto locret_1297c;
+        case m2c::kret_1c2_26dd: 	goto ret_1c2_26dd;
+        case m2c::ksub_128da: 	goto sub_128da;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12ae0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12ae0:
+    _begin:
 cs=0x1c2;eip=0x0028e0; 	T(MOV(al, byte_14fb0));	// 6371 mov     al, byte_14FB0 ;~ 01C2:28E0
 ret_1c2_28e3:
 	// 4993 
@@ -5336,244 +9274,43 @@ loc_12be0:
 	// 5005 
 cs=0x1c2;eip=0x0029e0; 	X(MOV(word_14b41, 0));	// 6500 mov     word_14B41, 0 ;~ 01C2:29E0
 cs=0x1c2;eip=0x0029e6; 	R(RETN(0));	// 6501 retn ;~ 01C2:29E6
-seg001_29f1_proc:
-	// 6512 
-loc_12bf1:
-	// 5006 
-cs=0x1c2;eip=0x0029f1; 	X(MOV(word_14b55, 0x1A));	// 6513 mov     word_14B55, 1Ah ;~ 01C2:29F1
-cs=0x1c2;eip=0x0029f7; 	X(MOV(byte_14fba, 0x1A));	// 6514 mov     byte_14FBA, 1Ah ;~ 01C2:29F7
-cs=0x1c2;eip=0x0029fc; 	X(MOV(byte_14fb9, 0x34));	// 6515 mov     byte_14FB9, 34h ; '4' ;~ 01C2:29FC
-cs=0x1c2;eip=0x002a01; 	X(MOV(word_14fbb, 0x34));	// 6516 mov     word_14FBB, 34h ; '4' ;~ 01C2:2A01
-cs=0x1c2;eip=0x002a07; 	T(MOV(si, 0x9EC));	// 6517 mov     si, 9ECh ;~ 01C2:2A07
-cs=0x1c2;eip=0x002a0a; 	X(MOV(word_14fbd, 0x0A44));	// 6518 mov     word_14FBD, 0A44h ;~ 01C2:2A0A
-cs=0x1c2;eip=0x002a10; 	X(MOV(word_14b53, 0x1E));	// 6519 mov     word_14B53, 1Eh ;~ 01C2:2A10
-cs=0x1c2;eip=0x002a16; 	J(JMP(loc_12cb9));	// 6520 jmp     loc_12CB9 ;~ 01C2:2A16
-loc_12c19:
-	// 5007 
-cs=0x1c2;eip=0x002a19; 	X(MOV(word_14b55, 0x0C));	// 6524 mov     word_14B55, 0Ch ;~ 01C2:2A19
-cs=0x1c2;eip=0x002a1f; 	X(MOV(byte_14fba, 0x0C));	// 6525 mov     byte_14FBA, 0Ch ;~ 01C2:2A1F
-cs=0x1c2;eip=0x002a24; 	X(MOV(byte_14fb9, 0x18));	// 6526 mov     byte_14FB9, 18h ;~ 01C2:2A24
-cs=0x1c2;eip=0x002a29; 	X(MOV(word_14fbb, 0x18));	// 6527 mov     word_14FBB, 18h ;~ 01C2:2A29
-cs=0x1c2;eip=0x002a2f; 	T(MOV(si, 0x0A08));	// 6528 mov     si, 0A08h ;~ 01C2:2A2F
-cs=0x1c2;eip=0x002a32; 	X(MOV(word_14fbd, 0x0A6D));	// 6529 mov     word_14FBD, 0A6Dh ;~ 01C2:2A32
-cs=0x1c2;eip=0x002a38; 	X(MOV(word_14b53, 0x1E));	// 6530 mov     word_14B53, 1Eh ;~ 01C2:2A38
-cs=0x1c2;eip=0x002a3e; 	J(JMP(loc_12cb9));	// 6531 jmp     short loc_12CB9 ;~ 01C2:2A3E
-loc_12c41:
-	// 5008 
-cs=0x1c2;eip=0x002a41; 	X(MOV(word_14b55, 0x0C));	// 6537 mov     word_14B55, 0Ch ;~ 01C2:2A41
-cs=0x1c2;eip=0x002a47; 	X(MOV(byte_14fba, 0x0C));	// 6538 mov     byte_14FBA, 0Ch ;~ 01C2:2A47
-cs=0x1c2;eip=0x002a4c; 	X(MOV(byte_14fb9, 0x18));	// 6539 mov     byte_14FB9, 18h ;~ 01C2:2A4C
-cs=0x1c2;eip=0x002a51; 	X(MOV(word_14fbb, 0x18));	// 6540 mov     word_14FBB, 18h ;~ 01C2:2A51
-cs=0x1c2;eip=0x002a57; 	T(MOV(si, 0x0A18));	// 6541 mov     si, 0A18h ;~ 01C2:2A57
-cs=0x1c2;eip=0x002a5a; 	X(MOV(word_14fbd, 0x0A82));	// 6542 mov     word_14FBD, 0A82h ;~ 01C2:2A5A
-cs=0x1c2;eip=0x002a60; 	X(MOV(word_14b53, 0x1E));	// 6543 mov     word_14B53, 1Eh ;~ 01C2:2A60
-cs=0x1c2;eip=0x002a66; 	J(JMP(loc_12cb9));	// 6544 jmp     short loc_12CB9 ;~ 01C2:2A66
-loc_12c69:
-	// 5009 
-cs=0x1c2;eip=0x002a69; 	X(MOV(word_14b55, 0x10));	// 6550 mov     word_14B55, 10h ;~ 01C2:2A69
-cs=0x1c2;eip=0x002a6f; 	X(MOV(byte_14fba, 0x10));	// 6551 mov     byte_14FBA, 10h ;~ 01C2:2A6F
-cs=0x1c2;eip=0x002a74; 	X(MOV(byte_14fb9, 0x20));	// 6552 mov     byte_14FB9, 20h ; ' ' ;~ 01C2:2A74
-cs=0x1c2;eip=0x002a79; 	X(MOV(word_14fbb, 0x20));	// 6553 mov     word_14FBB, 20h ; ' ' ;~ 01C2:2A79
-cs=0x1c2;eip=0x002a7f; 	T(MOV(si, 0x0A28));	// 6554 mov     si, 0A28h ;~ 01C2:2A7F
-cs=0x1c2;eip=0x002a82; 	X(MOV(word_14fbd, 0x0A95));	// 6555 mov     word_14FBD, 0A95h ;~ 01C2:2A82
-cs=0x1c2;eip=0x002a88; 	X(MOV(word_14b53, 0x1E));	// 6556 mov     word_14B53, 1Eh ;~ 01C2:2A88
-cs=0x1c2;eip=0x002a8e; 	J(JMP(loc_12cb9));	// 6557 jmp     short loc_12CB9 ;~ 01C2:2A8E
-loc_12c91:
-	// 5010 
-cs=0x1c2;eip=0x002a91; 	X(MOV(word_14b55, 0x10));	// 6563 mov     word_14B55, 10h ;~ 01C2:2A91
-cs=0x1c2;eip=0x002a97; 	X(MOV(byte_14fba, 0x10));	// 6564 mov     byte_14FBA, 10h ;~ 01C2:2A97
-cs=0x1c2;eip=0x002a9c; 	X(MOV(byte_14fb9, 0x20));	// 6565 mov     byte_14FB9, 20h ; ' ' ;~ 01C2:2A9C
-cs=0x1c2;eip=0x002aa1; 	X(MOV(word_14fbb, 0x20));	// 6566 mov     word_14FBB, 20h ; ' ' ;~ 01C2:2AA1
-cs=0x1c2;eip=0x002aa7; 	T(MOV(si, 0x0A38));	// 6567 mov     si, 0A38h ;~ 01C2:2AA7
-cs=0x1c2;eip=0x002aaa; 	X(MOV(word_14fbd, 0x0AB2));	// 6568 mov     word_14FBD, 0AB2h ;~ 01C2:2AAA
-cs=0x1c2;eip=0x002ab0; 	X(MOV(word_14b53, 0x1E));	// 6569 mov     word_14B53, 1Eh ;~ 01C2:2AB0
-cs=0x1c2;eip=0x002ab6; 	J(JMP(loc_12cb9));	// 6570 jmp     short loc_12CB9 ;~ 01C2:2AB6
-loc_12cb9:
-	// 5011 
-cs=0x1c2;eip=0x002ab9; 	X(MOV(byte_153a3, 0));	// 6577 mov     byte_153A3, 0 ;~ 01C2:2AB9
-cs=0x1c2;eip=0x002abe; 	X(MOV(byte_153a2, 0));	// 6578 mov     byte_153A2, 0 ;~ 01C2:2ABE
-loc_12cc3:
-	// 5012 
-cs=0x1c2;eip=0x002ac3; 	T(TEST(dx, 0x8000));	// 6581 test    dx, 8000h ;~ 01C2:2AC3
-cs=0x1c2;eip=0x002ac7; 	J(JZ(loc_12ccf));	// 6582 jz      short loc_12CCF ;~ 01C2:2AC7
-cs=0x1c2;eip=0x002ac9; 	T(ADD(dx, 0x480));	// 6583 add     dx, 480h ;~ 01C2:2AC9
-cs=0x1c2;eip=0x002acd; 	J(JMP(loc_12cc3));	// 6584 jmp     short loc_12CC3 ;~ 01C2:2ACD
-loc_12ccf:
-	// 5013 
-cs=0x1c2;eip=0x002acf; 	T(CMP(dx, 0x120));	// 6589 cmp     dx, 120h ;~ 01C2:2ACF
-cs=0x1c2;eip=0x002ad3; 	J(JC(loc_12cdb));	// 6590 jb      short loc_12CDB ;~ 01C2:2AD3
-cs=0x1c2;eip=0x002ad5; 	T(SUB(dx, 0x120));	// 6591 sub     dx, 120h ;~ 01C2:2AD5
-cs=0x1c2;eip=0x002ad9; 	J(JMP(loc_12ccf));	// 6592 jmp     short loc_12CCF ;~ 01C2:2AD9
-loc_12cdb:
-	// 5014 
-cs=0x1c2;eip=0x002adb; 	T(CMP(bx, 0x1F4));	// 6596 cmp     bx, 1F4h ;~ 01C2:2ADB
-cs=0x1c2;eip=0x002adf; 	J(JNC(locret_12ce8));	// 6597 jnb     short locret_12CE8 ;~ 01C2:2ADF
-cs=0x1c2;eip=0x002ae1; 	T(CMP(bx, 0x15));	// 6598 cmp     bx, 15h ;~ 01C2:2AE1
-cs=0x1c2;eip=0x002ae4; 	J(JC(locret_12ce8));	// 6599 jb      short locret_12CE8 ;~ 01C2:2AE4
-cs=0x1c2;eip=0x002ae6; 	J(JMP(loc_12ce9));	// 6600 jmp     short loc_12CE9 ;~ 01C2:2AE6
-locret_12ce8:
-	// 5015 
-cs=0x1c2;eip=0x002ae8; 	R(RETN(0));	// 6605 retn ;~ 01C2:2AE8
-loc_12ce9:
-	// 5016 
-cs=0x1c2;eip=0x002ae9; 	T(LODSW);	// 6610 lodsw ;~ 01C2:2AE9
-cs=0x1c2;eip=0x002aea; 	T(ADD(si, 2));	// 6611 add     si, 2 ;~ 01C2:2AEA
-cs=0x1c2;eip=0x002aed; 	T(CMP(ax, bx));	// 6612 cmp     ax, bx ;~ 01C2:2AED
-cs=0x1c2;eip=0x002aef; 	J(JC(loc_12ce9));	// 6613 jb      short loc_12CE9 ;~ 01C2:2AEF
-cs=0x1c2;eip=0x002af1; 	X(MOV(word_14b47, ax));	// 6614 mov     word_14B47, ax ;~ 01C2:2AF1
-cs=0x1c2;eip=0x002af4; 	X(MOV(word_14b51, ax));	// 6615 mov     word_14B51, ax ;~ 01C2:2AF4
-cs=0x1c2;eip=0x002af7; 	T(ADD(si, 0x0FFFE));	// 6616 add     si, 0FFFEh ;~ 01C2:2AF7
-cs=0x1c2;eip=0x002afa; 	T(LODSW);	// 6617 lodsw ;~ 01C2:2AFA
-cs=0x1c2;eip=0x002afb; 	X(MOV(word_14b5b, ax));	// 6618 mov     word_14B5B, ax ;~ 01C2:2AFB
-cs=0x1c2;eip=0x002afe; 	T(ADD(si, 0x0FFF8));	// 6619 add     si, 0FFF8h ;~ 01C2:2AFE
-cs=0x1c2;eip=0x002b01; 	T(LODSW);	// 6620 lodsw ;~ 01C2:2B01
-cs=0x1c2;eip=0x002b02; 	X(MOV(word_14b45, ax));	// 6621 mov     word_14B45, ax ;~ 01C2:2B02
-cs=0x1c2;eip=0x002b05; 	T(LODSW);	// 6622 lodsw ;~ 01C2:2B05
-cs=0x1c2;eip=0x002b06; 	X(MOV(word_14b57, ax));	// 6623 mov     word_14B57, ax ;~ 01C2:2B06
-cs=0x1c2;eip=0x002b09; 	X(MOV(word_14b49, bx));	// 6624 mov     word_14B49, bx ;~ 01C2:2B09
-cs=0x1c2;eip=0x002b0d; 	T(MOV(ax, dx));	// 6625 mov     ax, dx ;~ 01C2:2B0D
-cs=0x1c2;eip=0x002b0f; 	X(DIV1(byte_14fbf));	// 6626 div     byte_14FBF ;~ 01C2:2B0F
-cs=0x1c2;eip=0x002b13; 	X(MOV(word_14b4b, 0));	// 6627 mov     word_14B4B, 0 ;~ 01C2:2B13
-cs=0x1c2;eip=0x002b19; 	X(MOV(word_14b4d, 0x30));	// 6628 mov     word_14B4D, 30h ; '0' ;~ 01C2:2B19
-cs=0x1c2;eip=0x002b1f; 	T(OR(ah, ah));	// 6629 or      ah, ah ;~ 01C2:2B1F
-cs=0x1c2;eip=0x002b21; 	J(JNZ(loc_12d2b));	// 6630 jnz     short loc_12D2B ;~ 01C2:2B21
-cs=0x1c2;eip=0x002b23; 	T(OR(al, al));	// 6631 or      al, al ;~ 01C2:2B23
-cs=0x1c2;eip=0x002b25; 	J(JZ(loc_12d2b));	// 6632 jz      short loc_12D2B ;~ 01C2:2B25
-cs=0x1c2;eip=0x002b27; 	T(DEC(al));	// 6633 dec     al ;~ 01C2:2B27
-cs=0x1c2;eip=0x002b29; 	T(MOV(ah, 0x30));	// 6634 mov     ah, 30h ; '0' ;~ 01C2:2B29
-loc_12d2b:
-	// 5017 
-cs=0x1c2;eip=0x002b2b; 	X(PUSH(ax));	// 6638 push    ax ;~ 01C2:2B2B
-cs=0x1c2;eip=0x002b2c; 	T(MOV(al, ah));	// 6639 mov     al, ah ;~ 01C2:2B2C
-cs=0x1c2;eip=0x002b2e; 	T(XOR(ah, ah));	// 6640 xor     ah, ah ;~ 01C2:2B2E
-cs=0x1c2;eip=0x002b30; 	X(MOV(word_14b4f, ax));	// 6641 mov     word_14B4F, ax ;~ 01C2:2B30
-cs=0x1c2;eip=0x002b33; 	X(POP(ax));	// 6642 pop     ax ;~ 01C2:2B33
-cs=0x1c2;eip=0x002b34; 	T(XOR(ah, ah));	// 6643 xor     ah, ah ;~ 01C2:2B34
-cs=0x1c2;eip=0x002b36; 	X(MOV(word_14b5f, ax));	// 6644 mov     word_14B5F, ax ;~ 01C2:2B36
-cs=0x1c2;eip=0x002b39; 	T(MOV(bx, word_14b45));	// 6645 mov     bx, word_14B45 ;~ 01C2:2B39
-cs=0x1c2;eip=0x002b3d; 	X(MOV(word_14b51, bx));	// 6646 mov     word_14B51, bx ;~ 01C2:2B3D
-cs=0x1c2;eip=0x002b41; 	T(CMP(bx, word_14b53));	// 6647 cmp     bx, word_14B53 ;~ 01C2:2B41
-cs=0x1c2;eip=0x002b45; 	J(JC(loc_12d4d));	// 6648 jb      short loc_12D4D ;~ 01C2:2B45
-cs=0x1c2;eip=0x002b47; 	X(MUL1_1(byte_14fba));	// 6649 mul     byte_14FBA ;~ 01C2:2B47
-cs=0x1c2;eip=0x002b4b; 	J(JMP(loc_12d51));	// 6650 jmp     short loc_12D51 ;~ 01C2:2B4B
-loc_12d4d:
-	// 5018 
-cs=0x1c2;eip=0x002b4d; 	X(MUL1_1(byte_14fb9));	// 6654 mul     byte_14FB9 ;~ 01C2:2B4D
-loc_12d51:
-	// 5019 
-cs=0x1c2;eip=0x002b51; 	T(MOV(di, 0x0BC07));	// 6657 mov     di, 0BC07h ;~ 01C2:2B51
-cs=0x1c2;eip=0x002b54; 	T(MOV(si, word_14b57));	// 6658 mov     si, word_14B57 ;~ 01C2:2B54
-cs=0x1c2;eip=0x002b58; 	T(ADD(si, ax));	// 6659 add     si, ax ;~ 01C2:2B58
-cs=0x1c2;eip=0x002b5a; 	J(CALL(sub_1232a,0));	// 6660 call    sub_1232A ;~ 01C2:2B5A
-cs=0x1c2;eip=0x002b5d; 	T(MOV(si, di));	// 6661 mov     si, di ;~ 01C2:2B5D
-cs=0x1c2;eip=0x002b5f; 	X(MOV(word_14b57, si));	// 6662 mov     word_14B57, si ;~ 01C2:2B5F
-cs=0x1c2;eip=0x002b63; 	T(ADD(si, word_14fbb));	// 6663 add     si, word_14FBB ;~ 01C2:2B63
-cs=0x1c2;eip=0x002b67; 	X(MOV(word_14b59, si));	// 6664 mov     word_14B59, si ;~ 01C2:2B67
-cs=0x1c2;eip=0x002b6b; 	T(MOV(ax, word_14b5f));	// 6665 mov     ax, word_14B5F ;~ 01C2:2B6B
-cs=0x1c2;eip=0x002b6e; 	T(MOV(bx, word_14b47));	// 6666 mov     bx, word_14B47 ;~ 01C2:2B6E
-cs=0x1c2;eip=0x002b72; 	X(MOV(word_14b51, bx));	// 6667 mov     word_14B51, bx ;~ 01C2:2B72
-cs=0x1c2;eip=0x002b76; 	T(CMP(bx, word_14b53));	// 6668 cmp     bx, word_14B53 ;~ 01C2:2B76
-cs=0x1c2;eip=0x002b7a; 	J(JC(loc_12d82));	// 6669 jb      short loc_12D82 ;~ 01C2:2B7A
-cs=0x1c2;eip=0x002b7c; 	X(MUL1_1(byte_14fba));	// 6670 mul     byte_14FBA ;~ 01C2:2B7C
-cs=0x1c2;eip=0x002b80; 	J(JMP(loc_12d86));	// 6671 jmp     short loc_12D86 ;~ 01C2:2B80
-loc_12d82:
-	// 5020 
-cs=0x1c2;eip=0x002b82; 	X(MUL1_1(byte_14fb9));	// 6675 mul     byte_14FB9 ;~ 01C2:2B82
-loc_12d86:
-	// 5021 
-cs=0x1c2;eip=0x002b86; 	T(MOV(si, word_14b5b));	// 6678 mov     si, word_14B5B ;~ 01C2:2B86
-cs=0x1c2;eip=0x002b8a; 	T(MOV(di, 0x0BCCF));	// 6679 mov     di, 0BCCFh ;~ 01C2:2B8A
-cs=0x1c2;eip=0x002b8d; 	T(ADD(si, ax));	// 6680 add     si, ax ;~ 01C2:2B8D
-cs=0x1c2;eip=0x002b8f; 	J(CALL(sub_1232a,0));	// 6681 call    sub_1232A ;~ 01C2:2B8F
-cs=0x1c2;eip=0x002b92; 	T(MOV(si, di));	// 6682 mov     si, di ;~ 01C2:2B92
-cs=0x1c2;eip=0x002b94; 	X(MOV(word_14b5b, si));	// 6683 mov     word_14B5B, si ;~ 01C2:2B94
-cs=0x1c2;eip=0x002b98; 	T(ADD(si, word_14fbb));	// 6684 add     si, word_14FBB ;~ 01C2:2B98
-cs=0x1c2;eip=0x002b9c; 	X(MOV(word_14b5d, si));	// 6685 mov     word_14B5D, si ;~ 01C2:2B9C
-cs=0x1c2;eip=0x002ba0; 	J(CALL(sub_1226d,0));	// 6686 call    sub_1226D ;~ 01C2:2BA0
-cs=0x1c2;eip=0x002ba3; 	T(MOV(di, word_14fbd));	// 6687 mov     di, word_14FBD ;~ 01C2:2BA3
-cs=0x1c2;eip=0x002ba7; 	X(MOV(word_14b3d, di));	// 6688 mov     word_14B3D, di ;~ 01C2:2BA7
-cs=0x1c2;eip=0x002bab; 	J(CALL(sub_121df,0));	// 6689 call    sub_121DF ;~ 01C2:2BAB
-cs=0x1c2;eip=0x002bae; 	R(RETN(0));	// 6690 retn ;~ 01C2:2BAE
-loc_12daf:
-	// 5022 
-cs=0x1c2;eip=0x002baf; 	T(CMP(bx, 0x1F4));	// 6695 cmp     bx, 1F4h ;~ 01C2:2BAF
-cs=0x1c2;eip=0x002bb3; 	J(JC(loc_12db6));	// 6696 jb      short loc_12DB6 ;~ 01C2:2BB3
-locret_12db5:
-	// 5023 
-cs=0x1c2;eip=0x002bb5; 	R(RETN(0));	// 6700 retn ;~ 01C2:2BB5
-loc_12db6:
-	// 5024 
-cs=0x1c2;eip=0x002bb6; 	T(MOV(di, word_153ba));	// 6704 mov     di, word_153BA ;~ 01C2:2BB6
-cs=0x1c2;eip=0x002bba; 	T(ADD(di, 0x1FD8));	// 6705 add     di, 1FD8h ;~ 01C2:2BBA
-cs=0x1c2;eip=0x002bbe; 	T(MOV(ax, word_14b3f));	// 6706 mov     ax, word_14B3F ;~ 01C2:2BBE
-cs=0x1c2;eip=0x002bc1; 	T(CMP(ax, 0x0FF70));	// 6707 cmp     ax, 0FF70h ;~ 01C2:2BC1
-cs=0x1c2;eip=0x002bc4; 	J(JS(locret_12db5));	// 6708 js      short locret_12DB5 ;~ 01C2:2BC4
-cs=0x1c2;eip=0x002bc6; 	T(CMP(ax, 0x91));	// 6709 cmp     ax, 91h ; '‘' ;~ 01C2:2BC6
-cs=0x1c2;eip=0x002bc9; 	J(JNS(locret_12db5));	// 6710 jns     short locret_12DB5 ;~ 01C2:2BC9
-cs=0x1c2;eip=0x002bcb; 	T(ADD(ax, 0x0A1));	// 6711 add     ax, 0A1h ; '¡' ;~ 01C2:2BCB
-cs=0x1c2;eip=0x002bce; 	T(SAR(ax, 1));	// 6712 sar     ax, 1 ;~ 01C2:2BCE
-cs=0x1c2;eip=0x002bd0; 	T(SAR(ax, 1));	// 6713 sar     ax, 1 ;~ 01C2:2BD0
-cs=0x1c2;eip=0x002bd2; 	T(MOV(si, 0x0BC8));	// 6714 mov     si, 0BC8h ;~ 01C2:2BD2
-cs=0x1c2;eip=0x002bd5; 	J(JMP(loc_12dda));	// 6715 jmp     short loc_12DDA ;~ 01C2:2BD5
-ret_1c2_2bd7:
-	// 5025 
-cs=0x1c2;eip=0x002bd7; 	T(MOV(si, 0x0BE4));	// 6717 mov     si, 0BE4h ;~ 01C2:2BD7
-loc_12dda:
-	// 5026 
-cs=0x1c2;eip=0x002bda; 	T(ADD(di, ax));	// 6720 add     di, ax ;~ 01C2:2BDA
-loc_12ddc:
-	// 5027 
-cs=0x1c2;eip=0x002bdc; 	T(LODSW);	// 6723 lodsw ;~ 01C2:2BDC
-cs=0x1c2;eip=0x002bdd; 	T(CMP(ax, bx));	// 6724 cmp     ax, bx ;~ 01C2:2BDD
-cs=0x1c2;eip=0x002bdf; 	J(JC(loc_12de6));	// 6725 jb      short loc_12DE6 ;~ 01C2:2BDF
-cs=0x1c2;eip=0x002be1; 	T(ADD(si, 2));	// 6726 add     si, 2 ;~ 01C2:2BE1
-cs=0x1c2;eip=0x002be4; 	J(JMP(loc_12ddc));	// 6727 jmp     short loc_12DDC ;~ 01C2:2BE4
-loc_12de6:
-	// 5028 
-cs=0x1c2;eip=0x002be6; 	T(MOV(si, *(dw*)(raddr(ds,si))));	// 6731 mov     si, [si] ;~ 01C2:2BE6
-cs=0x1c2;eip=0x002be8; 	T(LODSB);	// 6732 lodsb ;~ 01C2:2BE8
-cs=0x1c2;eip=0x002be9; 	T(MOV(cl, al));	// 6733 mov     cl, al ;~ 01C2:2BE9
-cs=0x1c2;eip=0x002beb; 	T(LODSB);	// 6734 lodsb ;~ 01C2:2BEB
-cs=0x1c2;eip=0x002bec; 	T(MOV(bl, al));	// 6735 mov     bl, al ;~ 01C2:2BEC
-cs=0x1c2;eip=0x002bee; 	T(MOV(al, cl));	// 6736 mov     al, cl ;~ 01C2:2BEE
-cs=0x1c2;eip=0x002bf0; 	T(SHR(al, 1));	// 6737 shr     al, 1 ;~ 01C2:2BF0
-cs=0x1c2;eip=0x002bf2; 	T(XOR(ah, ah));	// 6738 xor     ah, ah ;~ 01C2:2BF2
-cs=0x1c2;eip=0x002bf4; 	T(SUB(di, ax));	// 6739 sub     di, ax ;~ 01C2:2BF4
-cs=0x1c2;eip=0x002bf6; 	T(XOR(ch, ch));	// 6740 xor     ch, ch ;~ 01C2:2BF6
-cs=0x1c2;eip=0x002bf8; 	T(MOV(dx, cx));	// 6741 mov     dx, cx ;~ 01C2:2BF8
-cs=0x1c2;eip=0x002bfa; 	X(PUSH(es));	// 6742 push    es ;~ 01C2:2BFA
-loc_12dfb:
-	// 5029 
-cs=0x1c2;eip=0x002bfb; 	T(MOV(ax, seg_offset(seg003)));	// 6745 mov     ax, seg seg003 ;~ 01C2:2BFB
-cs=0x1c2;eip=0x002bfe; 	T(MOV(es, ax));	// 6746 mov     es, ax ;~ 01C2:2BFE
-loc_12e00:
-	// 5030 
-cs=0x1c2;eip=0x002c00; 	T(LODSB);	// 6751 lodsb ;~ 01C2:2C00
-cs=0x1c2;eip=0x002c01; 	X(OR(*(raddr(es,di)), al));	// 6752 or      es:[di], al ;~ 01C2:2C01
-cs=0x1c2;eip=0x002c04; 	T(INC(di));	// 6753 inc     di ;~ 01C2:2C04
-cs=0x1c2;eip=0x002c05; 	J(LOOP(loc_12e00));	// 6754 loop    loc_12E00 ;~ 01C2:2C05
-cs=0x1c2;eip=0x002c07; 	T(ADD(di, 0x0E050));	// 6755 add     di, 0E050h ;~ 01C2:2C07
-cs=0x1c2;eip=0x002c0b; 	T(SUB(di, dx));	// 6756 sub     di, dx ;~ 01C2:2C0B
-cs=0x1c2;eip=0x002c0d; 	T(MOV(cx, dx));	// 6757 mov     cx, dx ;~ 01C2:2C0D
-cs=0x1c2;eip=0x002c0f; 	T(DEC(bl));	// 6758 dec     bl ;~ 01C2:2C0F
-cs=0x1c2;eip=0x002c11; 	J(JZ(loc_12e26));	// 6759 jz      short loc_12E26 ;~ 01C2:2C11
-loc_12e13:
-	// 5031 
-cs=0x1c2;eip=0x002c13; 	T(LODSB);	// 6762 lodsb ;~ 01C2:2C13
-cs=0x1c2;eip=0x002c14; 	X(OR(*(raddr(es,di)), al));	// 6763 or      es:[di], al ;~ 01C2:2C14
-cs=0x1c2;eip=0x002c17; 	T(INC(di));	// 6764 inc     di ;~ 01C2:2C17
-cs=0x1c2;eip=0x002c18; 	J(LOOP(loc_12e13));	// 6765 loop    loc_12E13 ;~ 01C2:2C18
-cs=0x1c2;eip=0x002c1a; 	T(ADD(di, 0x2000));	// 6766 add     di, 2000h ;~ 01C2:2C1A
-cs=0x1c2;eip=0x002c1e; 	T(SUB(di, dx));	// 6767 sub     di, dx ;~ 01C2:2C1E
-cs=0x1c2;eip=0x002c20; 	T(MOV(cx, dx));	// 6768 mov     cx, dx ;~ 01C2:2C20
-cs=0x1c2;eip=0x002c22; 	T(DEC(bl));	// 6769 dec     bl ;~ 01C2:2C22
-cs=0x1c2;eip=0x002c24; 	J(JNZ(loc_12e00));	// 6770 jnz     short loc_12E00 ;~ 01C2:2C24
-loc_12e26:
-	// 5032 
-cs=0x1c2;eip=0x002c26; 	X(POP(es));	// 6773 pop     es ;~ 01C2:2C26
-cs=0x1c2;eip=0x002c27; 	R(RETN(0));	// 6775 retn ;~ 01C2:2C27
-sub_12e30:
-	// 6782 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_12aef: 	goto loc_12aef;
+        case m2c::kloc_12af9: 	goto loc_12af9;
+        case m2c::kloc_12b00: 	goto loc_12b00;
+        case m2c::kloc_12b18: 	goto loc_12b18;
+        case m2c::kloc_12b21: 	goto loc_12b21;
+        case m2c::kloc_12b23: 	goto loc_12b23;
+        case m2c::kloc_12b36: 	goto loc_12b36;
+        case m2c::kloc_12b62: 	goto loc_12b62;
+        case m2c::kloc_12b99: 	goto loc_12b99;
+        case m2c::kloc_12ba3: 	goto loc_12ba3;
+        case m2c::kloc_12bcf: 	goto loc_12bcf;
+        case m2c::kloc_12be0: 	goto loc_12be0;
+        case m2c::kret_1c2_28e3: 	goto ret_1c2_28e3;
+        case m2c::ksub_12ae0: 	goto sub_12ae0;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_12e30(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_12e30:
+    _begin:
 cs=0x1c2;eip=0x002c30; 	T(MOV(al, byte_15242));	// 6783 mov     al, byte_15242 ;~ 01C2:2C30
 ret_1c2_2c33:
 	// 5033 
@@ -5604,245 +9341,34 @@ cs=0x1c2;eip=0x002c5c; 	T(MOV(di, *(dw*)(raddr(cs,di))));	// 6810 mov     di, cs
 cs=0x1c2;eip=0x002c5f; 	J(CALL(__dispatch_call,di));	// 6811 call    di ;~ 01C2:2C5F
 cs=0x1c2;eip=0x002c61; 	X(DEC(byte_15243));	// 6812 dec     byte_15243 ;~ 01C2:2C61
 cs=0x1c2;eip=0x002c65; 	R(RETN(0));	// 6813 retn ;~ 01C2:2C65
-seg001_2c6c_proc:
-	// 6822 
-loc_12e6c:
-	// 5037 
-cs=0x1c2;eip=0x002c6c; 	T(MOV(si, 0x0CB4));	// 6823 mov     si, 0CB4h ;~ 01C2:2C6C
-cs=0x1c2;eip=0x002c6f; 	X(MOV(byte_15243, 0x0A));	// 6824 mov     byte_15243, 0Ah ;~ 01C2:2C6F
-cs=0x1c2;eip=0x002c74; 	J(JMP(sub_12e92));	// 6825 jmp     short sub_12E92 ;~ 01C2:2C74
-loc_12e76:
-	// 5038 
-cs=0x1c2;eip=0x002c76; 	T(MOV(si, 0x0CB4));	// 6829 mov     si, 0CB4h ;~ 01C2:2C76
-cs=0x1c2;eip=0x002c79; 	J(CALL(sub_12e92,0));	// 6830 call    sub_12E92 ;~ 01C2:2C79
-cs=0x1c2;eip=0x002c7c; 	T(MOV(si, 0x0CD7));	// 6831 mov     si, 0CD7h ;~ 01C2:2C7C
-cs=0x1c2;eip=0x002c7f; 	J(JMP(sub_12e92));	// 6832 jmp     short sub_12E92 ;~ 01C2:2C7F
-loc_12e81:
-	// 5039 
-cs=0x1c2;eip=0x002c81; 	T(MOV(si, 0x0CB4));	// 6836 mov     si, 0CB4h ;~ 01C2:2C81
-cs=0x1c2;eip=0x002c84; 	J(CALL(sub_12e92,0));	// 6837 call    sub_12E92 ;~ 01C2:2C84
-cs=0x1c2;eip=0x002c87; 	T(MOV(si, 0x0CD7));	// 6838 mov     si, 0CD7h ;~ 01C2:2C87
-cs=0x1c2;eip=0x002c8a; 	J(CALL(sub_12e92,0));	// 6839 call    sub_12E92 ;~ 01C2:2C8A
-cs=0x1c2;eip=0x002c8d; 	T(MOV(si, 0x0CF0));	// 6840 mov     si, 0CF0h ;~ 01C2:2C8D
-cs=0x1c2;eip=0x002c90; 	J({;});	// 6841 jmp     short $+2 ;~ 01C2:2C90
-sub_12e92:
-	// 6846 
-cs=0x1c2;eip=0x002c92; 	X(PUSH(es));	// 6848 push    es ;~ 01C2:2C92
-loc_12e93:
-	// 5040 
-cs=0x1c2;eip=0x002c93; 	T(MOV(ax, seg_offset(seg003)));	// 6851 mov     ax, seg seg003 ;~ 01C2:2C93
-cs=0x1c2;eip=0x002c96; 	T(MOV(es, ax));	// 6852 mov     es, ax ;~ 01C2:2C96
-cs=0x1c2;eip=0x002c98; 	X(MOV(byte_153a3, 0));	// 6854 mov     byte_153A3, 0 ;~ 01C2:2C98
-cs=0x1c2;eip=0x002c9d; 	X(MOV(word_153a8, 0x0D6C));	// 6855 mov     word_153A8, 0D6Ch ;~ 01C2:2C9D
-cs=0x1c2;eip=0x002ca3; 	X(MOV(word_153aa, 0x0D70));	// 6856 mov     word_153AA, 0D70h ;~ 01C2:2CA3
-cs=0x1c2;eip=0x002ca9; 	X(MOV(word_15240, si));	// 6857 mov     word_15240, si ;~ 01C2:2CA9
-loc_12ead:
-	// 5041 
-cs=0x1c2;eip=0x002cad; 	T(MOV(si, word_15240));	// 6860 mov     si, word_15240 ;~ 01C2:2CAD
-cs=0x1c2;eip=0x002cb1; 	T(LODSB);	// 6861 lodsb ;~ 01C2:2CB1
-cs=0x1c2;eip=0x002cb2; 	T(CMP(al, 0x0FF));	// 6862 cmp     al, 0FFh ;~ 01C2:2CB2
-cs=0x1c2;eip=0x002cb4; 	J(JZ(loc_12ef4));	// 6863 jz      short loc_12EF4 ;~ 01C2:2CB4
-cs=0x1c2;eip=0x002cb6; 	T(XOR(ah, ah));	// 6864 xor     ah, ah ;~ 01C2:2CB6
-cs=0x1c2;eip=0x002cb8; 	T(MOV(di, 0x0C04));	// 6865 mov     di, 0C04h ;~ 01C2:2CB8
-cs=0x1c2;eip=0x002cbb; 	T(DEC(al));	// 6866 dec     al ;~ 01C2:2CBB
-cs=0x1c2;eip=0x002cbd; 	T(SHL(ax, 1));	// 6867 shl     ax, 1 ;~ 01C2:2CBD
-cs=0x1c2;eip=0x002cbf; 	T(SHL(ax, 1));	// 6868 shl     ax, 1 ;~ 01C2:2CBF
-cs=0x1c2;eip=0x002cc1; 	T(ADD(di, ax));	// 6869 add     di, ax ;~ 01C2:2CC1
-cs=0x1c2;eip=0x002cc3; 	T(MOV(ax, *(dw*)(raddr(ds,di))));	// 6870 mov     ax, [di] ;~ 01C2:2CC3
-cs=0x1c2;eip=0x002cc5; 	X(MOV(word_153ac, ax));	// 6871 mov     word_153AC, ax ;~ 01C2:2CC5
-cs=0x1c2;eip=0x002cc8; 	T(MOV(ax, *(dw*)(raddr(ds,di+2))));	// 6872 mov     ax, [di+2] ;~ 01C2:2CC8
-cs=0x1c2;eip=0x002ccb; 	T(NEG(ax));	// 6873 neg     ax ;~ 01C2:2CCB
-cs=0x1c2;eip=0x002ccd; 	X(MOV(word_153ae, ax));	// 6874 mov     word_153AE, ax ;~ 01C2:2CCD
-cs=0x1c2;eip=0x002cd0; 	T(LODSB);	// 6875 lodsb ;~ 01C2:2CD0
-cs=0x1c2;eip=0x002cd1; 	T(XOR(ah, ah));	// 6876 xor     ah, ah ;~ 01C2:2CD1
-cs=0x1c2;eip=0x002cd3; 	T(MOV(di, 0x0C04));	// 6877 mov     di, 0C04h ;~ 01C2:2CD3
-cs=0x1c2;eip=0x002cd6; 	T(DEC(al));	// 6878 dec     al ;~ 01C2:2CD6
-cs=0x1c2;eip=0x002cd8; 	T(SHL(ax, 1));	// 6879 shl     ax, 1 ;~ 01C2:2CD8
-cs=0x1c2;eip=0x002cda; 	T(SHL(ax, 1));	// 6880 shl     ax, 1 ;~ 01C2:2CDA
-cs=0x1c2;eip=0x002cdc; 	T(ADD(di, ax));	// 6881 add     di, ax ;~ 01C2:2CDC
-cs=0x1c2;eip=0x002cde; 	T(MOV(ax, *(dw*)(raddr(ds,di))));	// 6882 mov     ax, [di] ;~ 01C2:2CDE
-cs=0x1c2;eip=0x002ce0; 	X(MOV(word_153b0, ax));	// 6883 mov     word_153B0, ax ;~ 01C2:2CE0
-cs=0x1c2;eip=0x002ce3; 	T(MOV(ax, *(dw*)(raddr(ds,di+2))));	// 6884 mov     ax, [di+2] ;~ 01C2:2CE3
-cs=0x1c2;eip=0x002ce6; 	T(NEG(ax));	// 6885 neg     ax ;~ 01C2:2CE6
-cs=0x1c2;eip=0x002ce8; 	X(MOV(word_153b2, ax));	// 6886 mov     word_153B2, ax ;~ 01C2:2CE8
-cs=0x1c2;eip=0x002ceb; 	X(MOV(word_15240, si));	// 6887 mov     word_15240, si ;~ 01C2:2CEB
-cs=0x1c2;eip=0x002cef; 	J(CALL(sub_13040,0));	// 6888 call    sub_13040 ;~ 01C2:2CEF
-cs=0x1c2;eip=0x002cf2; 	J(JMP(loc_12ead));	// 6889 jmp     short loc_12EAD ;~ 01C2:2CF2
-loc_12ef4:
-	// 5042 
-cs=0x1c2;eip=0x002cf4; 	X(POP(es));	// 6893 pop     es ;~ 01C2:2CF4
-cs=0x1c2;eip=0x002cf5; 	R(RETN(0));	// 6895 retn ;~ 01C2:2CF5
-sub_12ef6:
-	// 6902 
-cs=0x1c2;eip=0x002cf6; 	T(MOV(al, byte_15346));	// 6903 mov     al, byte_15346 ;~ 01C2:2CF6
-ret_1c2_2cf9:
-	// 5043 
-cs=0x1c2;eip=0x002cf9; 	T(OR(al, al));	// 6904 or      al, al ;~ 01C2:2CF9
-cs=0x1c2;eip=0x002cfb; 	J(JNZ(loc_12efe));	// 6905 jnz     short loc_12EFE ;~ 01C2:2CFB
-cs=0x1c2;eip=0x002cfd; 	R(RETN(0));	// 6906 retn ;~ 01C2:2CFD
-loc_12efe:
-	// 5044 
-cs=0x1c2;eip=0x002cfe; 	T(INC(al));	// 6910 inc     al ;~ 01C2:2CFE
-cs=0x1c2;eip=0x002d00; 	T(CMP(al, 6));	// 6911 cmp     al, 6 ;~ 01C2:2D00
-cs=0x1c2;eip=0x002d02; 	J(JNC(loc_12f2c));	// 6912 jnb     short loc_12F2C ;~ 01C2:2D02
-cs=0x1c2;eip=0x002d04; 	X(MOV(byte_15346, al));	// 6913 mov     byte_15346, al ;~ 01C2:2D04
-cs=0x1c2;eip=0x002d07; 	T(CMP(al, 2));	// 6914 cmp     al, 2 ;~ 01C2:2D07
-cs=0x1c2;eip=0x002d09; 	J(JNZ(loc_12f83));	// 6915 jnz     short loc_12F83 ;~ 01C2:2D09
-cs=0x1c2;eip=0x002d0b; 	T(MOV(ax, word_15347));	// 6916 mov     ax, word_15347 ;~ 01C2:2D0B
-loc_12f0e:
-	// 5045 
-cs=0x1c2;eip=0x002d0e; 	T(TEST(ax, 0x8000));	// 6919 test    ax, 8000h ;~ 01C2:2D0E
-cs=0x1c2;eip=0x002d11; 	J(JZ(loc_12f18));	// 6920 jz      short loc_12F18 ;~ 01C2:2D11
-cs=0x1c2;eip=0x002d13; 	T(ADD(ax, 0x480));	// 6921 add     ax, 480h ;~ 01C2:2D13
-cs=0x1c2;eip=0x002d16; 	J(JMP(loc_12f0e));	// 6922 jmp     short loc_12F0E ;~ 01C2:2D16
-loc_12f18:
-	// 5046 
-cs=0x1c2;eip=0x002d18; 	T(CMP(ax, 0x480));	// 6927 cmp     ax, 480h ;~ 01C2:2D18
-cs=0x1c2;eip=0x002d1b; 	J(JC(loc_12f22));	// 6928 jb      short loc_12F22 ;~ 01C2:2D1B
-cs=0x1c2;eip=0x002d1d; 	T(SUB(ax, 0x480));	// 6929 sub     ax, 480h ;~ 01C2:2D1D
-cs=0x1c2;eip=0x002d20; 	J(JMP(loc_12f18));	// 6930 jmp     short loc_12F18 ;~ 01C2:2D20
-loc_12f22:
-	// 5047 
-cs=0x1c2;eip=0x002d22; 	T(CMP(ax, 0x9F));	// 6934 cmp     ax, 9Fh ; 'Ÿ' ;~ 01C2:2D22
-cs=0x1c2;eip=0x002d25; 	J(JC(loc_12f32));	// 6935 jb      short loc_12F32 ;~ 01C2:2D25
-cs=0x1c2;eip=0x002d27; 	T(CMP(ax, 0x3E1));	// 6936 cmp     ax, 3E1h ;~ 01C2:2D27
-cs=0x1c2;eip=0x002d2a; 	J(JNC(loc_12f32));	// 6937 jnb     short loc_12F32 ;~ 01C2:2D2A
-loc_12f2c:
-	// 5048 
-cs=0x1c2;eip=0x002d2c; 	X(MOV(byte_15346, 0));	// 6940 mov     byte_15346, 0 ;~ 01C2:2D2C
-cs=0x1c2;eip=0x002d31; 	R(RETN(0));	// 6941 retn ;~ 01C2:2D31
-loc_12f32:
-	// 5049 
-cs=0x1c2;eip=0x002d32; 	T(ADD(ax, 0x0A0));	// 6946 add     ax, 0A0h ; ' ' ;~ 01C2:2D32
-cs=0x1c2;eip=0x002d35; 	T(CMP(ax, 0x140));	// 6947 cmp     ax, 140h ;~ 01C2:2D35
-cs=0x1c2;eip=0x002d38; 	J(JC(loc_12f3d));	// 6948 jb      short loc_12F3D ;~ 01C2:2D38
-cs=0x1c2;eip=0x002d3a; 	T(SUB(ax, 0x480));	// 6949 sub     ax, 480h ;~ 01C2:2D3A
-loc_12f3d:
-	// 5050 
-cs=0x1c2;eip=0x002d3d; 	X(MOV(word_15349, ax));	// 6952 mov     word_15349, ax ;~ 01C2:2D3D
-cs=0x1c2;eip=0x002d40; 	J(CALL(sub_13b1a,0));	// 6953 call    sub_13B1A ;~ 01C2:2D40
-cs=0x1c2;eip=0x002d43; 	T(MOV(cl, 6));	// 6954 mov     cl, 6 ;~ 01C2:2D43
-cs=0x1c2;eip=0x002d45; 	T(SHR(ax, cl));	// 6955 shr     ax, cl ;~ 01C2:2D45
-cs=0x1c2;eip=0x002d47; 	X(MOV(word_1534b, ax));	// 6956 mov     word_1534B, ax ;~ 01C2:2D47
-cs=0x1c2;eip=0x002d4a; 	T(MOV(bx, ax));	// 6957 mov     bx, ax ;~ 01C2:2D4A
-cs=0x1c2;eip=0x002d4c; 	T(MOV(si, 0x0D0D));	// 6958 mov     si, 0D0Dh ;~ 01C2:2D4C
-cs=0x1c2;eip=0x002d4f; 	T(MOV(dx, 0x0FFFF));	// 6959 mov     dx, 0FFFFh ;~ 01C2:2D4F
-loc_12f52:
-	// 5051 
-cs=0x1c2;eip=0x002d52; 	T(LODSW);	// 6962 lodsw ;~ 01C2:2D52
-cs=0x1c2;eip=0x002d53; 	T(INC(dx));	// 6963 inc     dx ;~ 01C2:2D53
-cs=0x1c2;eip=0x002d54; 	T(CMP(bx, ax));	// 6964 cmp     bx, ax ;~ 01C2:2D54
-cs=0x1c2;eip=0x002d56; 	J(JNC(loc_12f52));	// 6965 jnb     short loc_12F52 ;~ 01C2:2D56
-cs=0x1c2;eip=0x002d58; 	T(MOV(si, 0x0D1D));	// 6966 mov     si, 0D1Dh ;~ 01C2:2D58
-cs=0x1c2;eip=0x002d5b; 	T(MOV(cl, 4));	// 6967 mov     cl, 4 ;~ 01C2:2D5B
-cs=0x1c2;eip=0x002d5d; 	T(SHL(dx, cl));	// 6968 shl     dx, cl ;~ 01C2:2D5D
-cs=0x1c2;eip=0x002d5f; 	T(ADD(si, dx));	// 6969 add     si, dx ;~ 01C2:2D5F
-cs=0x1c2;eip=0x002d61; 	X(MOV(word_15353, si));	// 6970 mov     word_15353, si ;~ 01C2:2D61
-cs=0x1c2;eip=0x002d65; 	T(MOV(ax, word_14af6));	// 6971 mov     ax, word_14AF6 ;~ 01C2:2D65
-cs=0x1c2;eip=0x002d68; 	X(MOV(word_15359, ax));	// 6972 mov     word_15359, ax ;~ 01C2:2D68
-cs=0x1c2;eip=0x002d6b; 	T(MOV(cx, word_153ba));	// 6973 mov     cx, word_153BA ;~ 01C2:2D6B
-cs=0x1c2;eip=0x002d6f; 	T(SUB(cx, 0x28));	// 6974 sub     cx, 28h ; '(' ;~ 01C2:2D6F
-cs=0x1c2;eip=0x002d72; 	T(MOV(ax, word_153be));	// 6975 mov     ax, word_153BE ;~ 01C2:2D72
-cs=0x1c2;eip=0x002d75; 	T(NEG(ax));	// 6976 neg     ax ;~ 01C2:2D75
-cs=0x1c2;eip=0x002d77; 	T(SHR(ax, 1));	// 6977 shr     ax, 1 ;~ 01C2:2D77
-cs=0x1c2;eip=0x002d79; 	X(MUL1_1(byte_15345));	// 6978 mul     byte_15345 ;~ 01C2:2D79
-cs=0x1c2;eip=0x002d7d; 	T(SUB(cx, ax));	// 6979 sub     cx, ax ;~ 01C2:2D7D
-cs=0x1c2;eip=0x002d7f; 	X(MOV(word_1535b, cx));	// 6980 mov     word_1535B, cx ;~ 01C2:2D7F
-loc_12f83:
-	// 5052 
-cs=0x1c2;eip=0x002d83; 	T(MOV(cx, 0x10));	// 6983 mov     cx, 10h ;~ 01C2:2D83
-cs=0x1c2;eip=0x002d86; 	T(MOV(si, word_15353));	// 6984 mov     si, word_15353 ;~ 01C2:2D86
-cs=0x1c2;eip=0x002d8a; 	T(MOV(di, 0x0BE37));	// 6985 mov     di, 0BE37h ;~ 01C2:2D8A
-cs=0x1c2;eip=0x002d8d; 	T(MOV(dh, byte_15346));	// 6986 mov     dh, byte_15346 ;~ 01C2:2D8D
-loc_12f91:
-	// 5053 
-cs=0x1c2;eip=0x002d91; 	T(LODSB);	// 6989 lodsb ;~ 01C2:2D91
-cs=0x1c2;eip=0x002d92; 	T(CBW);	// 6990 cbw ;~ 01C2:2D92
-cs=0x1c2;eip=0x002d93; 	T(MOV(bx, ax));	// 6991 mov     bx, ax ;~ 01C2:2D93
-cs=0x1c2;eip=0x002d95; 	T(MOV(dl, dh));	// 6992 mov     dl, dh ;~ 01C2:2D95
-loc_12f97:
-	// 5054 
-cs=0x1c2;eip=0x002d97; 	T(DEC(dl));	// 6995 dec     dl ;~ 01C2:2D97
-cs=0x1c2;eip=0x002d99; 	J(JZ(loc_12f9f));	// 6996 jz      short loc_12F9F ;~ 01C2:2D99
-cs=0x1c2;eip=0x002d9b; 	T(ADD(ax, bx));	// 6997 add     ax, bx ;~ 01C2:2D9B
-cs=0x1c2;eip=0x002d9d; 	J(JMP(loc_12f97));	// 6998 jmp     short loc_12F97 ;~ 01C2:2D9D
-loc_12f9f:
-	// 5055 
-cs=0x1c2;eip=0x002d9f; 	X(STOSW);	// 7002 stosw ;~ 01C2:2D9F
-cs=0x1c2;eip=0x002da0; 	J(LOOP(loc_12f91));	// 7003 loop    loc_12F91 ;~ 01C2:2DA0
-cs=0x1c2;eip=0x002da2; 	T(MOV(cx, 8));	// 7004 mov     cx, 8 ;~ 01C2:2DA2
-cs=0x1c2;eip=0x002da5; 	T(MOV(si, 0x0BE37));	// 7005 mov     si, 0BE37h ;~ 01C2:2DA5
-cs=0x1c2;eip=0x002da8; 	X(PUSH(es));	// 7006 push    es ;~ 01C2:2DA8
-loc_12fa9:
-	// 5056 
-cs=0x1c2;eip=0x002da9; 	T(MOV(ax, seg_offset(seg003)));	// 7009 mov     ax, seg seg003 ;~ 01C2:2DA9
-cs=0x1c2;eip=0x002dac; 	T(MOV(es, ax));	// 7010 mov     es, ax ;~ 01C2:2DAC
-cs=0x1c2;eip=0x002dae; 	T(MOV(ax, word_14af6));	// 7012 mov     ax, word_14AF6 ;~ 01C2:2DAE
-cs=0x1c2;eip=0x002db1; 	T(SUB(ax, word_15359));	// 7013 sub     ax, word_15359 ;~ 01C2:2DB1
-cs=0x1c2;eip=0x002db5; 	X(ADD(word_15359, ax));	// 7014 add     word_15359, ax ;~ 01C2:2DB5
-cs=0x1c2;eip=0x002db9; 	T(MOV(bp, word_15349));	// 7015 mov     bp, word_15349 ;~ 01C2:2DB9
-cs=0x1c2;eip=0x002dbd; 	T(SUB(bp, ax));	// 7016 sub     bp, ax ;~ 01C2:2DBD
-cs=0x1c2;eip=0x002dbf; 	X(MOV(word_15349, bp));	// 7017 mov     word_15349, bp ;~ 01C2:2DBF
-loc_12fc3:
-	// 5057 
-cs=0x1c2;eip=0x002dc3; 	T(LODSW);	// 7020 lodsw ;~ 01C2:2DC3
-cs=0x1c2;eip=0x002dc4; 	T(MOV(bp, word_15349));	// 7021 mov     bp, word_15349 ;~ 01C2:2DC4
-cs=0x1c2;eip=0x002dc8; 	T(ADD(bp, ax));	// 7022 add     bp, ax ;~ 01C2:2DC8
-cs=0x1c2;eip=0x002dca; 	T(CMP(bp, 0x13E));	// 7023 cmp     bp, 13Eh ;~ 01C2:2DCA
-cs=0x1c2;eip=0x002dce; 	J(JNC(loc_13024));	// 7024 jnb     short loc_13024 ;~ 01C2:2DCE
-cs=0x1c2;eip=0x002dd0; 	T(TEST(bp, 0x8000));	// 7025 test    bp, 8000h ;~ 01C2:2DD0
-cs=0x1c2;eip=0x002dd4; 	J(JNZ(loc_13024));	// 7026 jnz     short loc_13024 ;~ 01C2:2DD4
-cs=0x1c2;eip=0x002dd6; 	T(LODSW);	// 7027 lodsw ;~ 01C2:2DD6
-cs=0x1c2;eip=0x002dd7; 	T(NEG(ax));	// 7028 neg     ax ;~ 01C2:2DD7
-cs=0x1c2;eip=0x002dd9; 	T(CMP(ax, word_153bc));	// 7029 cmp     ax, word_153BC ;~ 01C2:2DD9
-cs=0x1c2;eip=0x002ddd; 	J(JNS(loc_13027));	// 7030 jns     short loc_13027 ;~ 01C2:2DDD
-cs=0x1c2;eip=0x002ddf; 	T(SUB(ax, word_153be));	// 7031 sub     ax, word_153BE ;~ 01C2:2DDF
-cs=0x1c2;eip=0x002de3; 	J(JS(loc_13027));	// 7032 js      short loc_13027 ;~ 01C2:2DE3
-cs=0x1c2;eip=0x002de5; 	T(MOV(di, word_1535b));	// 7033 mov     di, word_1535B ;~ 01C2:2DE5
-cs=0x1c2;eip=0x002de9; 	T(MOV(dl, 0));	// 7034 mov     dl, 0 ;~ 01C2:2DE9
-cs=0x1c2;eip=0x002deb; 	T(SAR(ax, 1));	// 7035 sar     ax, 1 ;~ 01C2:2DEB
-cs=0x1c2;eip=0x002ded; 	J(JNC(loc_12ff5));	// 7036 jnb     short loc_12FF5 ;~ 01C2:2DED
-cs=0x1c2;eip=0x002def; 	T(ADD(di, 0x2000));	// 7037 add     di, 2000h ;~ 01C2:2DEF
-cs=0x1c2;eip=0x002df3; 	T(MOV(dl, 0x0FF));	// 7038 mov     dl, 0FFh ;~ 01C2:2DF3
-loc_12ff5:
-	// 5058 
-cs=0x1c2;eip=0x002df5; 	X(IMUL1_1(byte_15345));	// 7041 imul    byte_15345 ;~ 01C2:2DF5
-cs=0x1c2;eip=0x002df9; 	T(ADD(di, ax));	// 7042 add     di, ax ;~ 01C2:2DF9
-cs=0x1c2;eip=0x002dfb; 	T(MOV(bx, bp));	// 7043 mov     bx, bp ;~ 01C2:2DFB
-cs=0x1c2;eip=0x002dfd; 	T(SHR(bp, 1));	// 7044 shr     bp, 1 ;~ 01C2:2DFD
-cs=0x1c2;eip=0x002dff; 	T(SHR(bp, 1));	// 7045 shr     bp, 1 ;~ 01C2:2DFF
-cs=0x1c2;eip=0x002e01; 	T(ADD(di, bp));	// 7046 add     di, bp ;~ 01C2:2E01
-cs=0x1c2;eip=0x002e03; 	T(AND(bx, 3));	// 7047 and     bx, 3 ;~ 01C2:2E03
-cs=0x1c2;eip=0x002e07; 	T(MOV(al, *(raddr(ds,bx+0x0D4D))));	// 7048 mov     al, [bx+0D4Dh] ;~ 01C2:2E07
-cs=0x1c2;eip=0x002e0b; 	T(OR(al, *(raddr(es,di))));	// 7049 or      al, es:[di] ;~ 01C2:2E0B
-cs=0x1c2;eip=0x002e0e; 	X(STOSB);	// 7050 stosb ;~ 01C2:2E0E
-cs=0x1c2;eip=0x002e0f; 	T(TEST(dl, 0x0FF));	// 7051 test    dl, 0FFh ;~ 01C2:2E0F
-cs=0x1c2;eip=0x002e12; 	J(JZ(loc_1301a));	// 7052 jz      short loc_1301A ;~ 01C2:2E12
-cs=0x1c2;eip=0x002e14; 	T(ADD(di, 0x0E04F));	// 7053 add     di, 0E04Fh ;~ 01C2:2E14
-cs=0x1c2;eip=0x002e18; 	J(JMP(loc_1301e));	// 7054 jmp     short loc_1301E ;~ 01C2:2E18
-loc_1301a:
-	// 5059 
-cs=0x1c2;eip=0x002e1a; 	T(ADD(di, 0x1FFF));	// 7058 add     di, 1FFFh ;~ 01C2:2E1A
-loc_1301e:
-	// 5060 
-cs=0x1c2;eip=0x002e1e; 	T(OR(al, *(raddr(es,di))));	// 7061 or      al, es:[di] ;~ 01C2:2E1E
-cs=0x1c2;eip=0x002e21; 	X(STOSB);	// 7062 stosb ;~ 01C2:2E21
-cs=0x1c2;eip=0x002e22; 	J(JMP(loc_13027));	// 7063 jmp     short loc_13027 ;~ 01C2:2E22
-loc_13024:
-	// 5061 
-cs=0x1c2;eip=0x002e24; 	T(ADD(si, 2));	// 7068 add     si, 2 ;~ 01C2:2E24
-loc_13027:
-	// 5062 
-cs=0x1c2;eip=0x002e27; 	J(LOOP(loc_12fc3));	// 7072 loop    loc_12FC3 ;~ 01C2:2E27
-cs=0x1c2;eip=0x002e29; 	X(POP(es));	// 7073 pop     es ;~ 01C2:2E29
-cs=0x1c2;eip=0x002e2a; 	T(CMP(byte_15346, 6));	// 7075 cmp     byte_15346, 6 ;~ 01C2:2E2A
-cs=0x1c2;eip=0x002e2f; 	J(JNZ(locret_13036));	// 7076 jnz     short locret_13036 ;~ 01C2:2E2F
-cs=0x1c2;eip=0x002e31; 	X(MOV(byte_15346, 0));	// 7077 mov     byte_15346, 0 ;~ 01C2:2E31
-locret_13036:
-	// 5063 
-cs=0x1c2;eip=0x002e36; 	R(RETN(0));	// 7080 retn ;~ 01C2:2E36
-sub_13040:
-	// 7090 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_12e38: 	goto loc_12e38;
+        case m2c::kloc_12e4a: 	goto loc_12e4a;
+        case m2c::kloc_12e51: 	goto loc_12e51;
+        case m2c::kret_1c2_2c33: 	goto ret_1c2_2c33;
+        case m2c::ksub_12e30: 	goto sub_12e30;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13040(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13040:
+    _begin:
 cs=0x1c2;eip=0x002e40; 	T(MOV(si, word_153a8));	// 7092 mov     si, word_153A8 ;~ 01C2:2E40
 ret_1c2_2e44:
 	// 5064 
@@ -6263,8 +9789,86 @@ loc_13358:
 	// 5119 
 cs=0x1c2;eip=0x003158; 	J(LOOP(loc_13301));	// 7548 loop    loc_13301 ;~ 01C2:3158
 cs=0x1c2;eip=0x00315a; 	J(JMP(locret_13067));	// 7549 jmp     locret_13067 ;~ 01C2:315A
-sub_1335d:
-	// 7556 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13058: 	goto loc_13058;
+        case m2c::kloc_13068: 	goto loc_13068;
+        case m2c::kloc_13072: 	goto loc_13072;
+        case m2c::kloc_1307d: 	goto loc_1307d;
+        case m2c::kloc_13086: 	goto loc_13086;
+        case m2c::kloc_1309a: 	goto loc_1309a;
+        case m2c::kloc_130a8: 	goto loc_130a8;
+        case m2c::kloc_130ac: 	goto loc_130ac;
+        case m2c::kloc_130b8: 	goto loc_130b8;
+        case m2c::kloc_130c2: 	goto loc_130c2;
+        case m2c::kloc_13100: 	goto loc_13100;
+        case m2c::kloc_13112: 	goto loc_13112;
+        case m2c::kloc_1311c: 	goto loc_1311c;
+        case m2c::kloc_13134: 	goto loc_13134;
+        case m2c::kloc_13140: 	goto loc_13140;
+        case m2c::kloc_13150: 	goto loc_13150;
+        case m2c::kloc_13155: 	goto loc_13155;
+        case m2c::kloc_1316d: 	goto loc_1316d;
+        case m2c::kloc_13171: 	goto loc_13171;
+        case m2c::kloc_13183: 	goto loc_13183;
+        case m2c::kloc_1319f: 	goto loc_1319f;
+        case m2c::kloc_131a4: 	goto loc_131a4;
+        case m2c::kloc_131ab: 	goto loc_131ab;
+        case m2c::kloc_131c7: 	goto loc_131c7;
+        case m2c::kloc_131d2: 	goto loc_131d2;
+        case m2c::kloc_131db: 	goto loc_131db;
+        case m2c::kloc_131fd: 	goto loc_131fd;
+        case m2c::kloc_13203: 	goto loc_13203;
+        case m2c::kloc_13207: 	goto loc_13207;
+        case m2c::kloc_13222: 	goto loc_13222;
+        case m2c::kloc_1322e: 	goto loc_1322e;
+        case m2c::kloc_13237: 	goto loc_13237;
+        case m2c::kloc_1324f: 	goto loc_1324f;
+        case m2c::kloc_13254: 	goto loc_13254;
+        case m2c::kloc_13257: 	goto loc_13257;
+        case m2c::kloc_1325f: 	goto loc_1325f;
+        case m2c::kloc_13271: 	goto loc_13271;
+        case m2c::kloc_13287: 	goto loc_13287;
+        case m2c::kloc_1328c: 	goto loc_1328c;
+        case m2c::kloc_13291: 	goto loc_13291;
+        case m2c::kloc_132a5: 	goto loc_132a5;
+        case m2c::kloc_132b3: 	goto loc_132b3;
+        case m2c::kloc_132b7: 	goto loc_132b7;
+        case m2c::kloc_132c3: 	goto loc_132c3;
+        case m2c::kloc_132cd: 	goto loc_132cd;
+        case m2c::kloc_13301: 	goto loc_13301;
+        case m2c::kloc_13320: 	goto loc_13320;
+        case m2c::kloc_13326: 	goto loc_13326;
+        case m2c::kloc_1332a: 	goto loc_1332a;
+        case m2c::kloc_1333f: 	goto loc_1333f;
+        case m2c::kloc_1334b: 	goto loc_1334b;
+        case m2c::kloc_13358: 	goto loc_13358;
+        case m2c::klocret_13067: 	goto locret_13067;
+        case m2c::klocret_13236: 	goto locret_13236;
+        case m2c::kret_1c2_2e44: 	goto ret_1c2_2e44;
+        case m2c::kret_1c2_2f8f: 	goto ret_1c2_2f8f;
+        case m2c::ksub_13040: 	goto sub_13040;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1335d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1335d:
+    _begin:
 cs=0x1c2;eip=0x00315d; 	T(SAR(ax, 1));	// 7557 sar     ax, 1 ;~ 01C2:315D
 ret_1c2_315f:
 	// 5120 
@@ -6304,8 +9908,35 @@ cs=0x1c2;eip=0x0031a3; 	T(SHR(bx, 1));	// 7593 shr     bx, 1 ;~ 01C2:31A3
 cs=0x1c2;eip=0x0031a5; 	X(OR(*(raddr(es,di)), ah));	// 7594 or      es:[di], ah ;~ 01C2:31A5
 cs=0x1c2;eip=0x0031a8; 	X(OR(*(raddr(es,di+1)), al));	// 7595 or      es:[di+1], al ;~ 01C2:31A8
 cs=0x1c2;eip=0x0031ac; 	R(RETN(0));	// 7596 retn ;~ 01C2:31AC
-sub_133ad:
-	// 7603 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13365: 	goto loc_13365;
+        case m2c::kloc_13399: 	goto loc_13399;
+        case m2c::kloc_1339f: 	goto loc_1339f;
+        case m2c::kloc_133a3: 	goto loc_133a3;
+        case m2c::kret_1c2_315f: 	goto ret_1c2_315f;
+        case m2c::ksub_1335d: 	goto sub_1335d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_133ad(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_133ad:
+    _begin:
 cs=0x1c2;eip=0x0031ad; 	T(MOV(bp, word_153bc));	// 7604 mov     bp, word_153BC ;~ 01C2:31AD
 ret_1c2_31b1:
 	// 5125 
@@ -6397,8 +10028,41 @@ loc_1346d:
 	// 5135 
 cs=0x1c2;eip=0x00326d; 	T(STC);	// 7698 stc ;~ 01C2:326D
 cs=0x1c2;eip=0x00326e; 	R(RETN(0));	// 7699 retn ;~ 01C2:326E
-sub_1346f:
-	// 7706 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_133c0: 	goto loc_133c0;
+        case m2c::kloc_133d5: 	goto loc_133d5;
+        case m2c::kloc_133ea: 	goto loc_133ea;
+        case m2c::kloc_133f9: 	goto loc_133f9;
+        case m2c::kloc_13416: 	goto loc_13416;
+        case m2c::kloc_13418: 	goto loc_13418;
+        case m2c::kloc_1342d: 	goto loc_1342d;
+        case m2c::kloc_13446: 	goto loc_13446;
+        case m2c::kloc_1346b: 	goto loc_1346b;
+        case m2c::kloc_1346d: 	goto loc_1346d;
+        case m2c::kret_1c2_31b1: 	goto ret_1c2_31b1;
+        case m2c::ksub_133ad: 	goto sub_133ad;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1346f(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1346f:
+    _begin:
 cs=0x1c2;eip=0x00326f; 	X(MOV(word_1543a, bp));	// 7708 mov     word_1543A, bp ;~ 01C2:326F
 ret_1c2_3273:
 	// 5136 
@@ -6418,8 +10082,31 @@ cs=0x1c2;eip=0x003299; 	T(ADD(bx, ax));	// 7721 add     bx, ax ;~ 01C2:3299
 cs=0x1c2;eip=0x00329b; 	T(MOV(ax, word_1543a));	// 7722 mov     ax, word_1543A ;~ 01C2:329B
 cs=0x1c2;eip=0x00329e; 	T(MOV(dx, word_1543e));	// 7723 mov     dx, word_1543E ;~ 01C2:329E
 cs=0x1c2;eip=0x0032a2; 	R(RETN(0));	// 7724 retn ;~ 01C2:32A2
-sub_134a3:
-	// 7731 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3273: 	goto ret_1c2_3273;
+        case m2c::ksub_1346f: 	goto sub_1346f;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_134a3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_134a3:
+    _begin:
 cs=0x1c2;eip=0x0032a3; 	T(MOV(di, ax));	// 7733 mov     di, ax ;~ 01C2:32A3
 ret_1c2_32a5:
 	// 5137 
@@ -6429,8 +10116,31 @@ cs=0x1c2;eip=0x0032a9; 	T(MOV(di, bx));	// 7736 mov     di, bx ;~ 01C2:32A9
 cs=0x1c2;eip=0x0032ab; 	T(MOV(bx, dx));	// 7737 mov     bx, dx ;~ 01C2:32AB
 cs=0x1c2;eip=0x0032ad; 	T(MOV(dx, di));	// 7738 mov     dx, di ;~ 01C2:32AD
 cs=0x1c2;eip=0x0032af; 	R(RETN(0));	// 7739 retn ;~ 01C2:32AF
-sub_134b0:
-	// 7746 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_32a5: 	goto ret_1c2_32a5;
+        case m2c::ksub_134a3: 	goto sub_134a3;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_134b0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_134b0:
+    _begin:
 cs=0x1c2;eip=0x0032b0; 	T(MOV(di, ax));	// 7748 mov     di, ax ;~ 01C2:32B0
 ret_1c2_32b2:
 	// 5138 
@@ -6440,41 +10150,61 @@ cs=0x1c2;eip=0x0032b6; 	T(MOV(di, cx));	// 7751 mov     di, cx ;~ 01C2:32B6
 cs=0x1c2;eip=0x0032b8; 	T(MOV(cx, dx));	// 7752 mov     cx, dx ;~ 01C2:32B8
 cs=0x1c2;eip=0x0032ba; 	T(MOV(dx, di));	// 7753 mov     dx, di ;~ 01C2:32BA
 cs=0x1c2;eip=0x0032bc; 	R(RETN(0));	// 7754 retn ;~ 01C2:32BC
-seg001_32c0_proc:
-	// 7760 
-loc_134c0:
-	// 5139 
-cs=0x1c2;eip=0x0032c0; 	J(CALL(sub_13510,0));	// 7761 call    sub_13510 ;~ 01C2:32C0
-cs=0x1c2;eip=0x0032c3; 	J(CALL(sub_13ef3,0));	// 7762 call    sub_13EF3 ;~ 01C2:32C3
-cs=0x1c2;eip=0x0032c6; 	T(MOV(ax, cs));	// 7763 mov     ax, cs ;~ 01C2:32C6
-cs=0x1c2;eip=0x0032c8; 	T(SUB(ax, 0x10));	// 7764 sub     ax, 10h ;~ 01C2:32C8
-	cs=seg_offset(seg001);
-cs=0x1c2;eip=0x0032cb; 	X(MOV(*(dw*)(((db*)&dword_134db)+2), ax));	// 7765 mov     word ptr cs:dword_134DB+2, ax ;~ 01C2:32CB
-cs=0x1c2;eip=0x0032cf; 	T(MOV(ax, 0x33DF));	// 7766 mov     ax, 33DFh ;~ 01C2:32CF
-	cs=seg_offset(seg001);
-cs=0x1c2;eip=0x0032d2; 	X(MOV(*(dw*)(((db*)&dword_134db)), ax));	// 7767 mov     word ptr cs:dword_134DB, ax ;~ 01C2:32D2
-	cs=seg_offset(seg001);
-cs=0x1c2;eip=0x0032d6; __disp=*(dd*)(((db*)&dword_134db));
-	J(JMP(__dispatch_call));	// 7768 jmp     cs:dword_134DB ;~ 01C2:32D6
-ret_1c2_32df:
-	// 5140 
-cs=0x1c2;eip=0x0032df; 	R(_INT(0x20));	// 7773 int     20h             ; DOS - PROGRAM TERMINATION ;~ 01C2:32DF
-sub_134e1:
-	// 7780 
-cs=0x1c2;eip=0x0032e1; 	X(PUSH(ax));	// 7782 push    ax ;~ 01C2:32E1
-cs=0x1c2;eip=0x0032e2; 	T(MOV(ah, 1));	// 7783 mov     ah, 1 ;~ 01C2:32E2
-cs=0x1c2;eip=0x0032e4; 	R(_INT(0x16));	// 7784 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:32E4
-cs=0x1c2;eip=0x0032e6; 	X(POP(ax));	// 7788 pop     ax ;~ 01C2:32E6
-cs=0x1c2;eip=0x0032e7; 	R(RETN(0));	// 7789 retn ;~ 01C2:32E7
-sub_134e8:
-	// 7796 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_32b2: 	goto ret_1c2_32b2;
+        case m2c::ksub_134b0: 	goto sub_134b0;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_134e8(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_134e8:
+    _begin:
 cs=0x1c2;eip=0x0032e8; 	T(MOV(ah, 0));	// 7798 mov     ah, 0 ;~ 01C2:32E8
 ret_1c2_32ea:
 	// 5141 
 cs=0x1c2;eip=0x0032ea; 	R(_INT(0x16));	// 7799 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:32EA
 cs=0x1c2;eip=0x0032ec; 	R(RETN(0));	// 7801 retn ;~ 01C2:32EC
-sub_134ed:
-	// 7808 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_32ea: 	goto ret_1c2_32ea;
+        case m2c::ksub_134e8: 	goto sub_134e8;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_134ed(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_134ed:
+    _begin:
 cs=0x1c2;eip=0x0032ed; 	X(PUSH(ax));	// 7810 push    ax ;~ 01C2:32ED
 loc_134ee:
 	// 5142 
@@ -6486,8 +10216,32 @@ loc_134f8:
 	// 5143 
 cs=0x1c2;eip=0x0032f8; 	X(POP(ax));	// 7820 pop     ax ;~ 01C2:32F8
 cs=0x1c2;eip=0x0032f9; 	R(RETN(0));	// 7821 retn ;~ 01C2:32F9
-sub_134fa:
-	// 7828 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_134ee: 	goto loc_134ee;
+        case m2c::kloc_134f8: 	goto loc_134f8;
+        case m2c::ksub_134ed: 	goto sub_134ed;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_134fa(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_134fa:
+    _begin:
 cs=0x1c2;eip=0x0032fa; 	X(PUSH(ax));	// 7830 push    ax ;~ 01C2:32FA
 ret_1c2_32fb:
 	// 5144 
@@ -6501,8 +10255,31 @@ cs=0x1c2;eip=0x00330b; 	R(_INT(0x10));	// 7838 int     10h             ; - VIDEO
 cs=0x1c2;eip=0x00330d; 	X(POP(ds));	// 7840 pop     ds ;~ 01C2:330D
 cs=0x1c2;eip=0x00330e; 	X(POP(ax));	// 7842 pop     ax ;~ 01C2:330E
 cs=0x1c2;eip=0x00330f; 	R(RETN(0));	// 7843 retn ;~ 01C2:330F
-sub_13510:
-	// 7850 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_32fb: 	goto ret_1c2_32fb;
+        case m2c::ksub_134fa: 	goto sub_134fa;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13510(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13510:
+    _begin:
 cs=0x1c2;eip=0x003310; 	X(PUSH(ax));	// 7851 push    ax ;~ 01C2:3310
 ret_1c2_3311:
 	// 5145 
@@ -6516,8 +10293,31 @@ cs=0x1c2;eip=0x003321; 	R(_INT(0x10));	// 7859 int     10h             ; - VIDEO
 cs=0x1c2;eip=0x003323; 	X(POP(ds));	// 7861 pop     ds ;~ 01C2:3323
 cs=0x1c2;eip=0x003324; 	X(POP(ax));	// 7863 pop     ax ;~ 01C2:3324
 cs=0x1c2;eip=0x003325; 	R(RETN(0));	// 7864 retn ;~ 01C2:3325
-sub_13526:
-	// 7871 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3311: 	goto ret_1c2_3311;
+        case m2c::ksub_13510: 	goto sub_13510;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13526(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13526:
+    _begin:
 cs=0x1c2;eip=0x003326; 	X(PUSH(ax));	// 7873 push    ax ;~ 01C2:3326
 ret_1c2_3327:
 	// 5146 
@@ -6533,8 +10333,31 @@ cs=0x1c2;eip=0x00333c; 	R(_INT(0x10));	// 7884 int     10h             ; - VIDEO
 cs=0x1c2;eip=0x00333e; 	X(POP(bx));	// 7887 pop     bx ;~ 01C2:333E
 cs=0x1c2;eip=0x00333f; 	X(POP(ax));	// 7888 pop     ax ;~ 01C2:333F
 cs=0x1c2;eip=0x003340; 	R(RETN(0));	// 7889 retn ;~ 01C2:3340
-sub_13541:
-	// 7897 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3327: 	goto ret_1c2_3327;
+        case m2c::ksub_13526: 	goto sub_13526;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13541(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13541:
+    _begin:
 cs=0x1c2;eip=0x003341; 	X(MOV(byte_15453, 0));	// 7899 mov     byte_15453, 0 ;~ 01C2:3341
 ret_1c2_3346:
 	// 5147 
@@ -6586,8 +10409,36 @@ loc_1358a:
 cs=0x1c2;eip=0x00338a; 	T(STI);	// 7954 sti ;~ 01C2:338A
 cs=0x1c2;eip=0x00338b; 	X(POP(dx));	// 7955 pop     dx ;~ 01C2:338B
 cs=0x1c2;eip=0x00338c; 	R(RETN(0));	// 7956 retn ;~ 01C2:338C
-sub_1358d:
-	// 7963 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13554: 	goto loc_13554;
+        case m2c::kloc_13564: 	goto loc_13564;
+        case m2c::kloc_13576: 	goto loc_13576;
+        case m2c::kloc_1357a: 	goto loc_1357a;
+        case m2c::kloc_1358a: 	goto loc_1358a;
+        case m2c::kret_1c2_3346: 	goto ret_1c2_3346;
+        case m2c::ksub_13541: 	goto sub_13541;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1358d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1358d:
+    _begin:
 cs=0x1c2;eip=0x00338d; 	X(MOV(byte_15452, 0));	// 7965 mov     byte_15452, 0 ;~ 01C2:338D
 ret_1c2_3392:
 	// 5153 
@@ -6742,8 +10593,52 @@ cs=0x1c2;eip=0x00349c; 	X(POP(bx));	// 8123 pop     bx ;~ 01C2:349C
 cs=0x1c2;eip=0x00349d; 	T(TEST(byte_15450, 8));	// 8124 test    byte_15450, 8 ;~ 01C2:349D
 cs=0x1c2;eip=0x0034a2; 	X(MOV(byte_1545d, 0));	// 8125 mov     byte_1545D, 0 ;~ 01C2:34A2
 cs=0x1c2;eip=0x0034a7; 	R(RETN(0));	// 8126 retn ;~ 01C2:34A7
-sub_136a8:
-	// 8133 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_135a9: 	goto loc_135a9;
+        case m2c::kloc_135c2: 	goto loc_135c2;
+        case m2c::kloc_135c5: 	goto loc_135c5;
+        case m2c::kloc_135ee: 	goto loc_135ee;
+        case m2c::kloc_135f1: 	goto loc_135f1;
+        case m2c::kloc_135f4: 	goto loc_135f4;
+        case m2c::kloc_13605: 	goto loc_13605;
+        case m2c::kloc_13619: 	goto loc_13619;
+        case m2c::kloc_1362c: 	goto loc_1362c;
+        case m2c::kloc_13632: 	goto loc_13632;
+        case m2c::kloc_1363d: 	goto loc_1363d;
+        case m2c::kloc_1364a: 	goto loc_1364a;
+        case m2c::kloc_13655: 	goto loc_13655;
+        case m2c::kloc_13660: 	goto loc_13660;
+        case m2c::kloc_13677: 	goto loc_13677;
+        case m2c::kloc_1367c: 	goto loc_1367c;
+        case m2c::kloc_13681: 	goto loc_13681;
+        case m2c::kloc_1368d: 	goto loc_1368d;
+        case m2c::kloc_13692: 	goto loc_13692;
+        case m2c::kloc_13695: 	goto loc_13695;
+        case m2c::kret_1c2_3392: 	goto ret_1c2_3392;
+        case m2c::kret_1c2_3462: 	goto ret_1c2_3462;
+        case m2c::ksub_1358d: 	goto sub_1358d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_136a8(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_136a8:
+    _begin:
 cs=0x1c2;eip=0x0034a8; 	X(PUSH(dx));	// 8135 push    dx ;~ 01C2:34A8
 ret_1c2_34a9:
 	// 5175 
@@ -6754,8 +10649,31 @@ cs=0x1c2;eip=0x0034ae; 	T(XOR(al, 0x0FF));	// 8141 xor     al, 0FFh ;~ 01C2:34AE
 cs=0x1c2;eip=0x0034b0; 	T(AND(al, 0x30));	// 8142 and     al, 30h ;~ 01C2:34B0
 cs=0x1c2;eip=0x0034b2; 	T(OR(al, al));	// 8143 or      al, al ;~ 01C2:34B2
 cs=0x1c2;eip=0x0034b4; 	R(RETN(0));	// 8144 retn ;~ 01C2:34B4
-sub_136b5:
-	// 8151 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_34a9: 	goto ret_1c2_34a9;
+        case m2c::ksub_136a8: 	goto sub_136a8;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_136b5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_136b5:
+    _begin:
 cs=0x1c2;eip=0x0034b5; 	T(TEST(byte_15451, 0x0FF));	// 8152 test    byte_15451, 0FFh ;~ 01C2:34B5
 ret_1c2_34ba:
 	// 5176 
@@ -6795,8 +10713,33 @@ loc_13707:
 	// 5178 
 cs=0x1c2;eip=0x003507; 	X(MOV(byte_1545a, 0));	// 8190 mov     byte_1545A, 0 ;~ 01C2:3507
 cs=0x1c2;eip=0x00350c; 	R(RETN(0));	// 8191 retn ;~ 01C2:350C
-sub_1370d:
-	// 8198 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_136bd: 	goto loc_136bd;
+        case m2c::kloc_13707: 	goto loc_13707;
+        case m2c::kret_1c2_34ba: 	goto ret_1c2_34ba;
+        case m2c::ksub_136b5: 	goto sub_136b5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1370d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1370d:
+    _begin:
 cs=0x1c2;eip=0x00350d; 	X(PUSH(dx));	// 8199 push    dx ;~ 01C2:350D
 ret_1c2_350e:
 	// 5179 
@@ -6810,97 +10753,31 @@ cs=0x1c2;eip=0x003519; 	R(OUT(dx, al));	// 8207 out     dx, al          ; Video:
 cs=0x1c2;eip=0x00351a; 	X(POP(ax));	// 8208 pop     ax ;~ 01C2:351A
 cs=0x1c2;eip=0x00351b; 	X(POP(dx));	// 8209 pop     dx ;~ 01C2:351B
 cs=0x1c2;eip=0x00351c; 	R(RETN(0));	// 8210 retn ;~ 01C2:351C
-seg001_351d_proc:
-	// 8214 
-cs=0x1c2;eip=0x00351d; 	X(PUSH(es));	// 8214 push    es ;~ 01C2:351D
-ret_1c2_351e:
-	// 5180 
-cs=0x1c2;eip=0x00351e; 	T(MOV(ax, 0x0B800));	// 8215 mov     ax, 0B800h ;~ 01C2:351E
-loc_13721:
-	// 5181 
-cs=0x1c2;eip=0x003521; 	T(MOV(es, ax));	// 8219 mov     es, ax ;~ 01C2:3521
-cs=0x1c2;eip=0x003523; 	T(MOV(ax, 0));	// 8221 mov     ax, 0 ;~ 01C2:3523
-cs=0x1c2;eip=0x003526; 	T(MOV(di, ax));	// 8222 mov     di, ax ;~ 01C2:3526
-cs=0x1c2;eip=0x003528; 	T(MOV(cx, 0x2000));	// 8223 mov     cx, 2000h ;~ 01C2:3528
-	// 8224 rep stosw ;~ 01C2:352B
-cs=0x1c2;eip=0x00352b; 	X(	REP STOSW);	// 8224 rep stosw ;~ 01C2:352B
-cs=0x1c2;eip=0x00352d; 	X(POP(es));	// 8225 pop     es ;~ 01C2:352D
-cs=0x1c2;eip=0x00352e; 	R(RETN(0));	// 8227 retn ;~ 01C2:352E
-sub_1372f:
-	// 8233 
-cs=0x1c2;eip=0x00352f; 	X(PUSH(es));	// 8238 push    es ;~ 01C2:352F
-loc_13730:
-	// 5182 
-cs=0x1c2;eip=0x003530; 	T(MOV(ax, seg_offset(seg003)));	// 8241 mov     ax, seg seg003 ;~ 01C2:3530
-cs=0x1c2;eip=0x003533; 	J(JMP(loc_13721));	// 8242 jmp     short loc_13721 ;~ 01C2:3533
-sub_13735:
-	// 8249 
-cs=0x1c2;eip=0x003535; 	X(PUSH(es));	// 8250 push    es ;~ 01C2:3535
-ret_1c2_3536:
-	// 5183 
-cs=0x1c2;eip=0x003536; 	X(PUSH(ds));	// 8251 push    ds ;~ 01C2:3536
-cs=0x1c2;eip=0x003537; 	T(MOV(ax, 0x0B800));	// 8252 mov     ax, 0B800h ;~ 01C2:3537
-cs=0x1c2;eip=0x00353a; 	T(MOV(es, ax));	// 8253 mov     es, ax ;~ 01C2:353A
-cs=0x1c2;eip=0x00353c; 	T(MOV(di, 0));	// 8255 mov     di, 0 ;~ 01C2:353C
-cs=0x1c2;eip=0x00353f; 	T(MOV(si, di));	// 8256 mov     si, di ;~ 01C2:353F
-loc_13741:
-	// 5184 
-cs=0x1c2;eip=0x003541; 	T(MOV(ax, seg_offset(seg003)));	// 8259 mov     ax, seg seg003 ;~ 01C2:3541
-cs=0x1c2;eip=0x003544; 	T(MOV(ds, ax));	// 8260 mov     ds, ax ;~ 01C2:3544
-cs=0x1c2;eip=0x003546; 	T(MOV(bl, 0x64));	// 8262 mov     bl, 64h ; 'd' ;~ 01C2:3546
-loc_13748:
-	// 5185 
-cs=0x1c2;eip=0x003548; 	T(MOV(cx, 0x28));	// 8265 mov     cx, 28h ; '(' ;~ 01C2:3548
-	// 8266 rep movsw ;~ 01C2:354B
-cs=0x1c2;eip=0x00354b; 	X(	REP MOVSW);	// 8266 rep movsw ;~ 01C2:354B
-cs=0x1c2;eip=0x00354d; 	T(ADD(di, 0x1FB0));	// 8267 add     di, 1FB0h ;~ 01C2:354D
-cs=0x1c2;eip=0x003551; 	T(ADD(si, 0x1FB0));	// 8268 add     si, 1FB0h ;~ 01C2:3551
-cs=0x1c2;eip=0x003555; 	T(MOV(cx, 0x28));	// 8269 mov     cx, 28h ; '(' ;~ 01C2:3555
-	// 8270 rep movsw ;~ 01C2:3558
-cs=0x1c2;eip=0x003558; 	X(	REP MOVSW);	// 8270 rep movsw ;~ 01C2:3558
-cs=0x1c2;eip=0x00355a; 	T(ADD(di, 0x0E000));	// 8271 add     di, 0E000h ;~ 01C2:355A
-cs=0x1c2;eip=0x00355e; 	T(ADD(si, 0x0E000));	// 8272 add     si, 0E000h ;~ 01C2:355E
-cs=0x1c2;eip=0x003562; 	T(DEC(bl));	// 8273 dec     bl ;~ 01C2:3562
-cs=0x1c2;eip=0x003564; 	J(JNZ(loc_13748));	// 8274 jnz     short loc_13748 ;~ 01C2:3564
-cs=0x1c2;eip=0x003566; 	X(POP(ds));	// 8275 pop     ds ;~ 01C2:3566
-cs=0x1c2;eip=0x003567; 	X(POP(es));	// 8277 pop     es ;~ 01C2:3567
-cs=0x1c2;eip=0x003568; 	R(RETN(0));	// 8279 retn ;~ 01C2:3568
-seg001_3570_proc:
-	// 8286 
-loc_13770:
-	// 5186 
-cs=0x1c2;eip=0x003570; 	X(MOV(word_154e9, sp));	// 8287 mov     word_154E9, sp ;~ 01C2:3570
-cs=0x1c2;eip=0x003574; 	J(CALL(sub_1297d,0));	// 8288 call    sub_1297D ;~ 01C2:3574
-cs=0x1c2;eip=0x003577; 	T(MOV(al, 1));	// 8289 mov     al, 1 ;~ 01C2:3577
-cs=0x1c2;eip=0x003579; 	J(CALL(sub_14015,0));	// 8290 call    sub_14015 ;~ 01C2:3579
-cs=0x1c2;eip=0x00357c; 	J(CALL(sub_13a85,0));	// 8291 call    sub_13A85 ;~ 01C2:357C
-cs=0x1c2;eip=0x00357f; 	J(CALL(sub_134fa,0));	// 8292 call    sub_134FA ;~ 01C2:357F
-cs=0x1c2;eip=0x003582; 	X(MOV(byte_15618, 1));	// 8293 mov     byte_15618, 1 ;~ 01C2:3582
-cs=0x1c2;eip=0x003587; 	J(JMP(loc_13ca0));	// 8294 jmp     loc_13CA0 ;~ 01C2:3587
-loc_1378a:
-	// 5187 
-cs=0x1c2;eip=0x00358a; 	T(TEST(byte_14b00, 0x0FF));	// 8304 test    byte_14B00, 0FFh ;~ 01C2:358A
-cs=0x1c2;eip=0x00358f; 	J(JNZ(loc_13799));	// 8305 jnz     short loc_13799 ;~ 01C2:358F
-cs=0x1c2;eip=0x003591; 	J(CALL(sub_137b6,0));	// 8306 call    sub_137B6 ;~ 01C2:3591
-loc_13794:
-	// 5188 
-cs=0x1c2;eip=0x003594; 	J(CALL(sub_11500,0));	// 8309 call    sub_11500 ;~ 01C2:3594
-cs=0x1c2;eip=0x003597; 	J(JMP(loc_13794));	// 8310 jmp     short loc_13794 ;~ 01C2:3597
-loc_13799:
-	// 5189 
-cs=0x1c2;eip=0x003599; 	T(MOV(ax, 0x12C));	// 8314 mov     ax, 12Ch ;~ 01C2:3599
-cs=0x1c2;eip=0x00359c; 	X(MOV(word_155f4, ax));	// 8315 mov     word_155F4, ax ;~ 01C2:359C
-cs=0x1c2;eip=0x00359f; 	J(CALL(sub_137b6,0));	// 8316 call    sub_137B6 ;~ 01C2:359F
-loc_137a2:
-	// 5190 
-cs=0x1c2;eip=0x0035a2; 	J(CALL(sub_11500,0));	// 8319 call    sub_11500 ;~ 01C2:35A2
-cs=0x1c2;eip=0x0035a5; 	X(DEC(word_155f4));	// 8320 dec     word_155F4 ;~ 01C2:35A5
-cs=0x1c2;eip=0x0035a9; 	T(CMP(word_155f4, 0));	// 8321 cmp     word_155F4, 0 ;~ 01C2:35A9
-cs=0x1c2;eip=0x0035ae; 	J(JNZ(loc_137a2));	// 8322 jnz     short loc_137A2 ;~ 01C2:35AE
-cs=0x1c2;eip=0x0035b0; 	J(CALL(sub_14005,0));	// 8323 call    sub_14005 ;~ 01C2:35B0
-cs=0x1c2;eip=0x0035b3; 	J(JMP(loc_13ca0));	// 8324 jmp     loc_13CA0 ;~ 01C2:35B3
-sub_137b6:
-	// 8330 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_350e: 	goto ret_1c2_350e;
+        case m2c::ksub_1370d: 	goto sub_1370d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_137b6(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_137b6:
+    _begin:
 cs=0x1c2;eip=0x0035b6; 	X(MOV(byte_154ee, 0x0FF));	// 8332 mov     byte_154EE, 0FFh ;~ 01C2:35B6
 ret_1c2_35bb:
 	// 5191 
@@ -6931,69 +10808,31 @@ cs=0x1c2;eip=0x00360b; 	X(MOV(byte_1475b, 0));	// 8355 mov     byte_1475B, 0 ;~ 
 cs=0x1c2;eip=0x003610; 	J(CALL(sub_138c5,0));	// 8356 call    sub_138C5 ;~ 01C2:3610
 cs=0x1c2;eip=0x003613; 	X(MOV(byte_14765, 1));	// 8357 mov     byte_14765, 1 ;~ 01C2:3613
 cs=0x1c2;eip=0x003618; 	R(RETN(0));	// 8358 retn ;~ 01C2:3618
-sub_13819:
-	// 8365 
-cs=0x1c2;eip=0x003619; 	X(MOV(byte_1475b, 0));	// 8370 mov     byte_1475B, 0 ;~ 01C2:3619
-ret_1c2_361e:
-	// 5192 
-cs=0x1c2;eip=0x00361e; 	X(MOV(byte_1545d, 0));	// 8371 mov     byte_1545D, 0 ;~ 01C2:361E
-cs=0x1c2;eip=0x003623; 	T(TEST(byte_14b00, 0x0FF));	// 8372 test    byte_14B00, 0FFh ;~ 01C2:3623
-cs=0x1c2;eip=0x003628; 	J(JZ(loc_1382b));	// 8373 jz      short loc_1382B ;~ 01C2:3628
-cs=0x1c2;eip=0x00362a; 	R(RETN(0));	// 8374 retn ;~ 01C2:362A
-loc_1382b:
-	// 5193 
-cs=0x1c2;eip=0x00362b; 	T(TEST(byte_15618, 2));	// 8378 test    byte_15618, 2 ;~ 01C2:362B
-cs=0x1c2;eip=0x003630; 	J(JZ(loc_13855));	// 8379 jz      short loc_13855 ;~ 01C2:3630
-cs=0x1c2;eip=0x003632; 	T(TEST(word_14758, 0x0FF));	// 8380 test    word_14758, 0FFh ;~ 01C2:3632
-cs=0x1c2;eip=0x003638; 	J(JNZ(loc_1383d));	// 8381 jnz     short loc_1383D ;~ 01C2:3638
-cs=0x1c2;eip=0x00363a; 	J(CALL(sub_10704,0));	// 8382 call    sub_10704 ;~ 01C2:363A
-loc_1383d:
-	// 5194 
-cs=0x1c2;eip=0x00363d; 	J(CALL(sub_10421,0));	// 8385 call    sub_10421 ;~ 01C2:363D
-cs=0x1c2;eip=0x003640; 	T(TEST(word_14758, 0x0FF));	// 8386 test    word_14758, 0FFh ;~ 01C2:3640
-cs=0x1c2;eip=0x003646; 	J(JNZ(loc_1386c));	// 8387 jnz     short loc_1386C ;~ 01C2:3646
-cs=0x1c2;eip=0x003648; 	J(CALL(sub_10421,0));	// 8388 call    sub_10421 ;~ 01C2:3648
-cs=0x1c2;eip=0x00364b; 	T(TEST(word_14758, 0x0FF));	// 8389 test    word_14758, 0FFh ;~ 01C2:364B
-cs=0x1c2;eip=0x003651; 	J(JZ(loc_1385d));	// 8390 jz      short loc_1385D ;~ 01C2:3651
-cs=0x1c2;eip=0x003653; 	J(JMP(loc_1386c));	// 8391 jmp     short loc_1386C ;~ 01C2:3653
-loc_13855:
-	// 5195 
-cs=0x1c2;eip=0x003655; 	T(TEST(word_14758, 0x0FF));	// 8395 test    word_14758, 0FFh ;~ 01C2:3655
-cs=0x1c2;eip=0x00365b; 	J(JNZ(loc_1386c));	// 8396 jnz     short loc_1386C ;~ 01C2:365B
-loc_1385d:
-	// 5196 
-cs=0x1c2;eip=0x00365d; 	X(MOV(byte_14b00, 0x0FF));	// 8399 mov     byte_14B00, 0FFh ;~ 01C2:365D
-cs=0x1c2;eip=0x003662; 	J(CALL(sub_106bf,0));	// 8400 call    sub_106BF ;~ 01C2:3662
-cs=0x1c2;eip=0x003665; 	T(MOV(sp, word_154e9));	// 8401 mov     sp, word_154E9 ;~ 01C2:3665
-cs=0x1c2;eip=0x003669; 	J(JMP(loc_1378a));	// 8402 jmp     loc_1378A ;~ 01C2:3669
-loc_1386c:
-	// 5197 
-cs=0x1c2;eip=0x00366c; 	J(CALL(sub_134ed,0));	// 8407 call    sub_134ED ;~ 01C2:366C
-cs=0x1c2;eip=0x00366f; 	J(CALL(sub_13c4f,0));	// 8408 call    sub_13C4F ;~ 01C2:366F
-cs=0x1c2;eip=0x003672; 	T(AND(al, 0x7F));	// 8409 and     al, 7Fh ;~ 01C2:3672
-cs=0x1c2;eip=0x003674; 	X(MUL1_1(byte_154eb));	// 8410 mul     byte_154EB ;~ 01C2:3674
-cs=0x1c2;eip=0x003678; 	X(MOV(word_14af6, ax));	// 8411 mov     word_14AF6, ax ;~ 01C2:3678
-loc_1387b:
-	// 5198 
-cs=0x1c2;eip=0x00367b; 	J(CALL(sub_13c4f,0));	// 8414 call    sub_13C4F ;~ 01C2:367B
-cs=0x1c2;eip=0x00367e; 	T(MOV(bx, ax));	// 8415 mov     bx, ax ;~ 01C2:367E
-cs=0x1c2;eip=0x003680; 	J(CALL(sub_13c4f,0));	// 8416 call    sub_13C4F ;~ 01C2:3680
-cs=0x1c2;eip=0x003683; 	T(MOV(dx, ax));	// 8417 mov     dx, ax ;~ 01C2:3683
-cs=0x1c2;eip=0x003685; 	T(MOV(cx, 3));	// 8418 mov     cx, 3 ;~ 01C2:3685
-cs=0x1c2;eip=0x003688; 	T(SAR(bx, cl));	// 8419 sar     bx, cl ;~ 01C2:3688
-cs=0x1c2;eip=0x00368a; 	T(SAR(dx, cl));	// 8420 sar     dx, cl ;~ 01C2:368A
-cs=0x1c2;eip=0x00368c; 	J(CALL(sub_10760,0));	// 8421 call    sub_10760 ;~ 01C2:368C
-cs=0x1c2;eip=0x00368f; 	J(JC(loc_1387b));	// 8422 jb      short loc_1387B ;~ 01C2:368F
-cs=0x1c2;eip=0x003691; 	J(CALL(sub_138a8,0));	// 8423 call    sub_138A8 ;~ 01C2:3691
-cs=0x1c2;eip=0x003694; 	T(XOR(ax, ax));	// 8424 xor     ax, ax ;~ 01C2:3694
-cs=0x1c2;eip=0x003696; 	X(MOV(word_14af8, ax));	// 8425 mov     word_14AF8, ax ;~ 01C2:3696
-cs=0x1c2;eip=0x003699; 	X(MOV(word_14afa, ax));	// 8426 mov     word_14AFA, ax ;~ 01C2:3699
-cs=0x1c2;eip=0x00369c; 	J(CALL(sub_11d07,0));	// 8427 call    sub_11D07 ;~ 01C2:369C
-cs=0x1c2;eip=0x00369f; 	J(CALL(sub_13a76,0));	// 8428 call    sub_13A76 ;~ 01C2:369F
-cs=0x1c2;eip=0x0036a2; 	X(MOV(byte_154e2, 0));	// 8429 mov     byte_154E2, 0 ;~ 01C2:36A2
-cs=0x1c2;eip=0x0036a7; 	R(RETN(0));	// 8430 retn ;~ 01C2:36A7
-sub_138a8:
-	// 8437 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_35bb: 	goto ret_1c2_35bb;
+        case m2c::ksub_137b6: 	goto sub_137b6;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_138a8(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_138a8:
+    _begin:
 cs=0x1c2;eip=0x0036a8; 	T(MOV(si, 0x3B2));	// 8438 mov     si, 3B2h ;~ 01C2:36A8
 ret_1c2_36ab:
 	// 5199 
@@ -7015,8 +10854,34 @@ loc_138c0:
 	// 5202 
 cs=0x1c2;eip=0x0036c0; 	T(ADD(si, 0x0C));	// 8456 add     si, 0Ch ;~ 01C2:36C0
 cs=0x1c2;eip=0x0036c3; 	J(JMP(loc_138bd));	// 8457 jmp     short loc_138BD ;~ 01C2:36C3
-sub_138c5:
-	// 8464 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_138ae: 	goto loc_138ae;
+        case m2c::kloc_138bd: 	goto loc_138bd;
+        case m2c::kloc_138c0: 	goto loc_138c0;
+        case m2c::kret_1c2_36ab: 	goto ret_1c2_36ab;
+        case m2c::ksub_138a8: 	goto sub_138a8;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_138c5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_138c5:
+    _begin:
 cs=0x1c2;eip=0x0036c5; 	T(MOV(cx, 0x0F7));	// 8465 mov     cx, 0F7h ; '÷' ;~ 01C2:36C5
 ret_1c2_36c8:
 	// 5203 
@@ -7032,25 +10897,31 @@ cs=0x1c2;eip=0x0036d8; 	X(	REP MOVSB);	// 8472 rep movsb ;~ 01C2:36D8
 cs=0x1c2;eip=0x0036da; 	J(CALL(sub_13819,0));	// 8473 call    sub_13819 ;~ 01C2:36DA
 cs=0x1c2;eip=0x0036dd; 	J(CALL(sub_138e1,0));	// 8474 call    sub_138E1 ;~ 01C2:36DD
 cs=0x1c2;eip=0x0036e0; 	R(RETN(0));	// 8475 retn ;~ 01C2:36E0
-sub_138e1:
-	// 8482 
-cs=0x1c2;eip=0x0036e1; 	T(TEST(byte_14b06, 0x0FF));	// 8484 test    byte_14B06, 0FFh ;~ 01C2:36E1
-ret_1c2_36e6:
-	// 5204 
-cs=0x1c2;eip=0x0036e6; 	J(JZ(loc_138ec));	// 8485 jz      short loc_138EC ;~ 01C2:36E6
-cs=0x1c2;eip=0x0036e8; 	J(CALL(sub_139f9,0));	// 8486 call    sub_139F9 ;~ 01C2:36E8
-cs=0x1c2;eip=0x0036eb; 	R(RETN(0));	// 8487 retn ;~ 01C2:36EB
-loc_138ec:
-	// 5205 
-cs=0x1c2;eip=0x0036ec; 	T(TEST(byte_154e2, 0x0FF));	// 8491 test    byte_154E2, 0FFh ;~ 01C2:36EC
-cs=0x1c2;eip=0x0036f1; 	J(JNZ(locret_138fb));	// 8492 jnz     short locret_138FB ;~ 01C2:36F1
-cs=0x1c2;eip=0x0036f3; 	J(CALL(sub_13a76,0));	// 8493 call    sub_13A76 ;~ 01C2:36F3
-cs=0x1c2;eip=0x0036f6; 	X(MOV(byte_154e2, 0x0C));	// 8494 mov     byte_154E2, 0Ch ;~ 01C2:36F6
-locret_138fb:
-	// 5206 
-cs=0x1c2;eip=0x0036fb; 	R(RETN(0));	// 8497 retn ;~ 01C2:36FB
-sub_138fc:
-	// 8504 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_36c8: 	goto ret_1c2_36c8;
+        case m2c::ksub_138c5: 	goto sub_138c5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_138fc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_138fc:
+    _begin:
 cs=0x1c2;eip=0x0036fc; 	T(TEST(byte_14b06, 0x0FF));	// 8505 test    byte_14B06, 0FFh ;~ 01C2:36FC
 ret_1c2_3701:
 	// 5207 
@@ -7141,8 +11012,36 @@ cs=0x1c2;eip=0x0037eb; 	X(MOV(*(dw*)(raddr(ds,di+6)), ax));	// 8592 mov     [di+
 cs=0x1c2;eip=0x0037ee; 	X(MOV(byte_14b14, 0));	// 8593 mov     byte_14B14, 0 ;~ 01C2:37EE
 cs=0x1c2;eip=0x0037f3; 	X(MOV(byte_154e0, 0x0E1));	// 8594 mov     byte_154E0, 0E1h ; 'á' ;~ 01C2:37F3
 cs=0x1c2;eip=0x0037f8; 	R(RETN(0));	// 8595 retn ;~ 01C2:37F8
-sub_139f9:
-	// 8602 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13907: 	goto loc_13907;
+        case m2c::kloc_13933: 	goto loc_13933;
+        case m2c::kloc_13942: 	goto loc_13942;
+        case m2c::kloc_13965: 	goto loc_13965;
+        case m2c::kloc_13982: 	goto loc_13982;
+        case m2c::kret_1c2_3701: 	goto ret_1c2_3701;
+        case m2c::ksub_138fc: 	goto sub_138fc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_139f9(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_139f9:
+    _begin:
 cs=0x1c2;eip=0x0037f9; 	X(MOV(byte_14b23, 0x64));	// 8604 mov     byte_14B23, 64h ; 'd' ;~ 01C2:37F9
 loc_139fe:
 	// 5213 
@@ -7178,8 +11077,31 @@ cs=0x1c2;eip=0x003852; 	X(MOV(byte_154ee, al));	// 8635 mov     byte_154EE, al ;
 cs=0x1c2;eip=0x003855; 	X(MOV(byte_14b21, al));	// 8636 mov     byte_14B21, al ;~ 01C2:3855
 cs=0x1c2;eip=0x003858; 	X(MOV(byte_14b15, 0));	// 8637 mov     byte_14B15, 0 ;~ 01C2:3858
 cs=0x1c2;eip=0x00385d; 	R(RETN(0));	// 8638 retn ;~ 01C2:385D
-sub_13a5e:
-	// 8645 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_139fe: 	goto loc_139fe;
+        case m2c::ksub_139f9: 	goto sub_139f9;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13a5e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13a5e:
+    _begin:
 cs=0x1c2;eip=0x00385e; 	X(PUSH(si));	// 8646 push    si ;~ 01C2:385E
 ret_1c2_385f:
 	// 5214 
@@ -7192,8 +11114,31 @@ cs=0x1c2;eip=0x00386e; 	X(MOV(*(dw*)(raddr(ds,si+3)), ax));	// 8652 mov     [si+
 cs=0x1c2;eip=0x003871; 	J(CALL(sub_11cca,0));	// 8653 call    sub_11CCA ;~ 01C2:3871
 cs=0x1c2;eip=0x003874; 	X(POP(si));	// 8654 pop     si ;~ 01C2:3874
 cs=0x1c2;eip=0x003875; 	R(RETN(0));	// 8655 retn ;~ 01C2:3875
-sub_13a76:
-	// 8662 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_385f: 	goto ret_1c2_385f;
+        case m2c::ksub_13a5e: 	goto sub_13a5e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13a76(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13a76:
+    _begin:
 cs=0x1c2;eip=0x003876; 	T(MOV(di, 0x3B2));	// 8664 mov     di, 3B2h ;~ 01C2:3876
 ret_1c2_3879:
 	// 5215 
@@ -7205,8 +11150,32 @@ cs=0x1c2;eip=0x00387e; 	X(STOSB);	// 8669 stosb ;~ 01C2:387E
 cs=0x1c2;eip=0x00387f; 	T(ADD(di, 0x0C));	// 8670 add     di, 0Ch ;~ 01C2:387F
 cs=0x1c2;eip=0x003882; 	J(LOOP(loc_13a7e));	// 8671 loop    loc_13A7E ;~ 01C2:3882
 cs=0x1c2;eip=0x003884; 	R(RETN(0));	// 8672 retn ;~ 01C2:3884
-sub_13a85:
-	// 8679 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13a7e: 	goto loc_13a7e;
+        case m2c::kret_1c2_3879: 	goto ret_1c2_3879;
+        case m2c::ksub_13a76: 	goto sub_13a76;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13a85(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13a85:
+    _begin:
 cs=0x1c2;eip=0x003885; 	T(MOV(bl, 0x0A));	// 8680 mov     bl, 0Ah ;~ 01C2:3885
 loc_13a87:
 	// 5217 
@@ -7214,8 +11183,31 @@ cs=0x1c2;eip=0x003887; 	R(LOOP(loc_13a87));	// 8684 loop    loc_13A87 ;~ 01C2:38
 cs=0x1c2;eip=0x003889; 	T(DEC(bl));	// 8685 dec     bl ;~ 01C2:3889
 cs=0x1c2;eip=0x00388b; 	J(JNZ(loc_13a87));	// 8686 jnz     short loc_13A87 ;~ 01C2:388B
 cs=0x1c2;eip=0x00388d; 	R(RETN(0));	// 8687 retn ;~ 01C2:388D
-sub_13a90:
-	// 8696 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13a87: 	goto loc_13a87;
+        case m2c::ksub_13a85: 	goto sub_13a85;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13a90(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13a90:
+    _begin:
 cs=0x1c2;eip=0x003890; 	X(PUSH(si));	// 8698 push    si ;~ 01C2:3890
 ret_1c2_3891:
 	// 5218 
@@ -7299,8 +11291,40 @@ loc_13b16:
 cs=0x1c2;eip=0x003916; 	T(XOR(ax, ax));	// 8777 xor     ax, ax ;~ 01C2:3916
 cs=0x1c2;eip=0x003918; 	X(POP(si));	// 8778 pop     si ;~ 01C2:3918
 cs=0x1c2;eip=0x003919; 	R(RETN(0));	// 8779 retn ;~ 01C2:3919
-sub_13b1a:
-	// 8786 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13aa4: 	goto loc_13aa4;
+        case m2c::kloc_13ab0: 	goto loc_13ab0;
+        case m2c::kloc_13abe: 	goto loc_13abe;
+        case m2c::kloc_13ad1: 	goto loc_13ad1;
+        case m2c::kloc_13ae9: 	goto loc_13ae9;
+        case m2c::kloc_13afa: 	goto loc_13afa;
+        case m2c::kloc_13b07: 	goto loc_13b07;
+        case m2c::kloc_13b14: 	goto loc_13b14;
+        case m2c::kloc_13b16: 	goto loc_13b16;
+        case m2c::kret_1c2_3891: 	goto ret_1c2_3891;
+        case m2c::ksub_13a90: 	goto sub_13a90;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13b1a(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13b1a:
+    _begin:
 cs=0x1c2;eip=0x00391a; 	T(LODSW);	// 8788 lodsw ;~ 01C2:391A
 ret_1c2_391b:
 	// 5228 
@@ -7349,8 +11373,36 @@ loc_13b59:
 cs=0x1c2;eip=0x003959; 	T(MOV(ax, cx));	// 8832 mov     ax, cx ;~ 01C2:3959
 cs=0x1c2;eip=0x00395b; 	T(SHL(ax, 1));	// 8833 shl     ax, 1 ;~ 01C2:395B
 cs=0x1c2;eip=0x00395d; 	R(RETN(0));	// 8834 retn ;~ 01C2:395D
-sub_13b5e:
-	// 8841 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13b27: 	goto loc_13b27;
+        case m2c::kloc_13b2f: 	goto loc_13b2f;
+        case m2c::kloc_13b4b: 	goto loc_13b4b;
+        case m2c::kloc_13b4d: 	goto loc_13b4d;
+        case m2c::kloc_13b59: 	goto loc_13b59;
+        case m2c::kret_1c2_391b: 	goto ret_1c2_391b;
+        case m2c::ksub_13b1a: 	goto sub_13b1a;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13b5e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13b5e:
+    _begin:
 cs=0x1c2;eip=0x00395e; 	X(PUSH(dx));	// 8843 push    dx ;~ 01C2:395E
 ret_1c2_395f:
 	// 5234 
@@ -7367,6 +11419,32 @@ cs=0x1c2;eip=0x00396b; 	T(SHR(cx, 1));	// 8853 shr     cx, 1 ;~ 01C2:396B
 cs=0x1c2;eip=0x00396d; 	X(POP(ax));	// 8854 pop     ax ;~ 01C2:396D
 cs=0x1c2;eip=0x00396e; 	X(POP(dx));	// 8855 pop     dx ;~ 01C2:396E
 cs=0x1c2;eip=0x00396f; 	R(RETN(0));	// 8856 retn ;~ 01C2:396F
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13b67: 	goto loc_13b67;
+        case m2c::kret_1c2_395f: 	goto ret_1c2_395f;
+        case m2c::ksub_13b5e: 	goto sub_13b5e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group10(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group10:
+    _begin:
 sub_13b70:
 	// 8863 
 cs=0x1c2;eip=0x003970; 	T(TEST(ax, 0x8000));	// 8865 test    ax, 8000h ;~ 01C2:3970
@@ -7410,6 +11488,37 @@ cs=0x1c2;eip=0x0039a8; 	T(SUB(ax, 0x120));	// 8908 sub     ax, 120h ;~ 01C2:39A8
 ret_1c2_39ab:
 	// 5241 
 cs=0x1c2;eip=0x0039ab; 	J(JMP(sub_13b70));	// 8909 jmp     short sub_13B70 ;~ 01C2:39AB
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13b77: 	goto loc_13b77;
+        case m2c::kloc_13b81: 	goto loc_13b81;
+        case m2c::kloc_13b8e: 	goto loc_13b8e;
+        case m2c::kloc_13b9d: 	goto loc_13b9d;
+        case m2c::kret_1c2_3973: 	goto ret_1c2_3973;
+        case m2c::kret_1c2_39ab: 	goto ret_1c2_39ab;
+        case m2c::ksub_13b70: 	goto sub_13b70;
+        case m2c::ksub_13ba8: 	goto sub_13ba8;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool _group11(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    _group11:
+    _begin:
 sub_13bad:
 	// 8916 
 cs=0x1c2;eip=0x0039ad; 	J(CALL(sub_13b70,0));	// 8918 call    sub_13B70 ;~ 01C2:39AD
@@ -7435,8 +11544,35 @@ cs=0x1c2;eip=0x0039c7; 	J(CALL(sub_13ba8,0));	// 8943 call    sub_13BA8 ;~ 01C2:
 ret_1c2_39ca:
 	// 5245 
 cs=0x1c2;eip=0x0039ca; 	J(JMP(loc_13bb0));	// 8944 jmp     short loc_13BB0 ;~ 01C2:39CA
-sub_13bcc:
-	// 8951 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13bb0: 	goto loc_13bb0;
+        case m2c::kloc_13bbb: 	goto loc_13bbb;
+        case m2c::klocret_13bc6: 	goto locret_13bc6;
+        case m2c::kret_1c2_39ca: 	goto ret_1c2_39ca;
+        case m2c::ksub_13bad: 	goto sub_13bad;
+        case m2c::ksub_13bc7: 	goto sub_13bc7;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13bcc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13bcc:
+    _begin:
 cs=0x1c2;eip=0x0039cc; 	X(PUSH(ax));	// 8952 push    ax ;~ 01C2:39CC
 ret_1c2_39cd:
 	// 5246 
@@ -7506,8 +11642,37 @@ loc_13c4c:
 	// 5252 
 cs=0x1c2;eip=0x003a4c; 	T(ADD(dl, ah));	// 9017 add     dl, ah ;~ 01C2:3A4C
 cs=0x1c2;eip=0x003a4e; 	R(RETN(0));	// 9018 retn ;~ 01C2:3A4E
-sub_13c4f:
-	// 9025 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13be9: 	goto loc_13be9;
+        case m2c::kloc_13bfe: 	goto loc_13bfe;
+        case m2c::kloc_13c13: 	goto loc_13c13;
+        case m2c::kloc_13c25: 	goto loc_13c25;
+        case m2c::kloc_13c39: 	goto loc_13c39;
+        case m2c::kloc_13c4c: 	goto loc_13c4c;
+        case m2c::kret_1c2_39cd: 	goto ret_1c2_39cd;
+        case m2c::ksub_13bcc: 	goto sub_13bcc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13c4f(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13c4f:
+    _begin:
 cs=0x1c2;eip=0x003a4f; 	X(PUSH(dx));	// 9027 push    dx ;~ 01C2:3A4F
 ret_1c2_3a50:
 	// 5253 
@@ -7520,8 +11685,31 @@ cs=0x1c2;eip=0x003a61; 	T(MOV(ah, dl));	// 9033 mov     ah, dl ;~ 01C2:3A61
 cs=0x1c2;eip=0x003a63; 	X(POP(dx));	// 9034 pop     dx ;~ 01C2:3A63
 cs=0x1c2;eip=0x003a64; 	X(MOV(word_15602, ax));	// 9035 mov     word_15602, ax ;~ 01C2:3A64
 cs=0x1c2;eip=0x003a67; 	R(RETN(0));	// 9036 retn ;~ 01C2:3A67
-sub_13c68:
-	// 9043 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3a50: 	goto ret_1c2_3a50;
+        case m2c::ksub_13c4f: 	goto sub_13c4f;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13c68(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13c68:
+    _begin:
 cs=0x1c2;eip=0x003a68; 	X(PUSH(dx));	// 9045 push    dx ;~ 01C2:3A68
 ret_1c2_3a69:
 	// 5254 
@@ -7554,155 +11742,35 @@ loc_13c90:
 cs=0x1c2;eip=0x003a90; 	X(POP(bx));	// 9075 pop     bx ;~ 01C2:3A90
 cs=0x1c2;eip=0x003a91; 	X(POP(dx));	// 9076 pop     dx ;~ 01C2:3A91
 cs=0x1c2;eip=0x003a92; 	R(RETN(0));	// 9077 retn ;~ 01C2:3A92
-seg001_3aa0_proc:
-	// 9085 
-loc_13ca0:
-	// 5259 
-cs=0x1c2;eip=0x003aa0; 	J(CALL(sub_134fa,0));	// 9087 call    sub_134FA ;~ 01C2:3AA0
-cs=0x1c2;eip=0x003aa3; 	X(MOV(word_15610, 0));	// 9088 mov     word_15610, 0 ;~ 01C2:3AA3
-cs=0x1c2;eip=0x003aa9; 	J(CALL(sub_1439e,0));	// 9089 call    sub_1439E ;~ 01C2:3AA9
-cs=0x1c2;eip=0x003aac; 	J(CALL(sub_136b5,0));	// 9090 call    sub_136B5 ;~ 01C2:3AAC
-cs=0x1c2;eip=0x003aaf; 	X(MOV(word_156e6, 0));	// 9091 mov     word_156E6, 0 ;~ 01C2:3AAF
-cs=0x1c2;eip=0x003ab5; 	J(CALL(sub_13ea0,0));	// 9092 call    sub_13EA0 ;~ 01C2:3AB5
-loc_13cb8:
-	// 5260 
-cs=0x1c2;eip=0x003ab8; 	J(CALL(sub_134e1,0));	// 9095 call    sub_134E1 ;~ 01C2:3AB8
-cs=0x1c2;eip=0x003abb; 	J(JNZ(loc_13cbf));	// 9096 jnz     short loc_13CBF ;~ 01C2:3ABB
-cs=0x1c2;eip=0x003abd; 	J(JMP(loc_13cdd));	// 9097 jmp     short loc_13CDD ;~ 01C2:3ABD
-loc_13cbf:
-	// 5261 
-cs=0x1c2;eip=0x003abf; 	X(MOV(word_156e6, 0));	// 9101 mov     word_156E6, 0 ;~ 01C2:3ABF
-cs=0x1c2;eip=0x003ac5; 	J(CALL(sub_134e8,0));	// 9102 call    sub_134E8 ;~ 01C2:3AC5
-cs=0x1c2;eip=0x003ac8; 	T(CMP(ax, 0x3B00));	// 9103 cmp     ax, 3B00h ;~ 01C2:3AC8
-cs=0x1c2;eip=0x003acb; 	J(JNZ(loc_13cd8));	// 9104 jnz     short loc_13CD8 ;~ 01C2:3ACB
-cs=0x1c2;eip=0x003acd; 	J(CALL(sub_14005,0));	// 9105 call    sub_14005 ;~ 01C2:3ACD
-cs=0x1c2;eip=0x003ad0; 	X(MOV(byte_14b00, 0));	// 9106 mov     byte_14B00, 0 ;~ 01C2:3AD0
-cs=0x1c2;eip=0x003ad5; 	J(JMP(loc_1378a));	// 9107 jmp     loc_1378A ;~ 01C2:3AD5
-loc_13cd8:
-	// 5262 
-cs=0x1c2;eip=0x003ad8; 	T(CMP(ax, 0x3C00));	// 9111 cmp     ax, 3C00h ;~ 01C2:3AD8
-cs=0x1c2;eip=0x003adb; 	J(JZ(loc_13d1e));	// 9112 jz      short loc_13D1E ;~ 01C2:3ADB
-loc_13cdd:
-	// 5263 
-cs=0x1c2;eip=0x003add; 	T(CMP(word_156e6, 0x960));	// 9115 cmp     word_156E6, 960h ;~ 01C2:3ADD
-cs=0x1c2;eip=0x003ae3; 	J(JC(loc_13ced));	// 9116 jb      short loc_13CED ;~ 01C2:3AE3
-cs=0x1c2;eip=0x003ae5; 	X(MOV(byte_14b00, 0x0FF));	// 9117 mov     byte_14B00, 0FFh ;~ 01C2:3AE5
-cs=0x1c2;eip=0x003aea; 	J(JMP(loc_1378a));	// 9118 jmp     loc_1378A ;~ 01C2:3AEA
-loc_13ced:
-	// 5264 
-cs=0x1c2;eip=0x003aed; 	T(MOV(ax, word_153be));	// 9122 mov     ax, word_153BE ;~ 01C2:3AED
-cs=0x1c2;eip=0x003af0; 	X(PUSH(ax));	// 9123 push    ax ;~ 01C2:3AF0
-cs=0x1c2;eip=0x003af1; 	T(MOV(bx, 0x5A));	// 9124 mov     bx, 5Ah ; 'Z' ;~ 01C2:3AF1
-cs=0x1c2;eip=0x003af4; 	T(MOV(dx, word_15610));	// 9125 mov     dx, word_15610 ;~ 01C2:3AF4
-cs=0x1c2;eip=0x003af8; 	X(MOV(word_14b41, 0x0FFE4));	// 9126 mov     word_14B41, 0FFE4h ;~ 01C2:3AF8
-cs=0x1c2;eip=0x003afe; 	J(CALL(sub_1372f,0));	// 9127 call    sub_1372F ;~ 01C2:3AFE
-cs=0x1c2;eip=0x003b01; 	J(CALL(sub_11d70,0));	// 9128 call    sub_11D70 ;~ 01C2:3B01
-cs=0x1c2;eip=0x003b04; 	T(MOV(ax, 0x42));	// 9129 mov     ax, 42h ; 'B' ;~ 01C2:3B04
-cs=0x1c2;eip=0x003b07; 	T(MOV(bx, 0x38));	// 9130 mov     bx, 38h ; '8' ;~ 01C2:3B07
-cs=0x1c2;eip=0x003b0a; 	J(CALL(sub_128a1,0));	// 9131 call    sub_128A1 ;~ 01C2:3B0A
-cs=0x1c2;eip=0x003b0d; 	X(POP(ax));	// 9132 pop     ax ;~ 01C2:3B0D
-cs=0x1c2;eip=0x003b0e; 	X(MOV(word_153be, ax));	// 9133 mov     word_153BE, ax ;~ 01C2:3B0E
-cs=0x1c2;eip=0x003b11; 	X(MOV(word_14b41, 0));	// 9134 mov     word_14B41, 0 ;~ 01C2:3B11
-cs=0x1c2;eip=0x003b17; 	X(ADD(word_15610, 3));	// 9135 add     word_15610, 3 ;~ 01C2:3B17
-cs=0x1c2;eip=0x003b1c; 	J(JMP(loc_13cb8));	// 9136 jmp     short loc_13CB8 ;~ 01C2:3B1C
-loc_13d1e:
-	// 5265 
-cs=0x1c2;eip=0x003b1e; 	J(CALL(sub_134fa,0));	// 9141 call    sub_134FA ;~ 01C2:3B1E
-cs=0x1c2;eip=0x003b21; 	J(CALL(sub_13dfa,0));	// 9142 call    sub_13DFA ;~ 01C2:3B21
-cs=0x1c2;eip=0x003b24; 	J(CALL(sub_14005,0));	// 9143 call    sub_14005 ;~ 01C2:3B24
-cs=0x1c2;eip=0x003b27; 	J(CALL(sub_143ae,0));	// 9144 call    sub_143AE ;~ 01C2:3B27
-cs=0x1c2;eip=0x003b2a; 	T(MOV(si, 0x1035));	// 9145 mov     si, 1035h ;~ 01C2:3B2A
-cs=0x1c2;eip=0x003b2d; 	T(TEST(byte_1545a, 0x0FF));	// 9146 test    byte_1545A, 0FFh ;~ 01C2:3B2D
-cs=0x1c2;eip=0x003b32; 	J(JNZ(loc_13d37));	// 9147 jnz     short loc_13D37 ;~ 01C2:3B32
-cs=0x1c2;eip=0x003b34; 	T(MOV(si, 0x1054));	// 9148 mov     si, 1054h ;~ 01C2:3B34
-loc_13d37:
-	// 5266 
-cs=0x1c2;eip=0x003b37; 	J(CALL(sub_142f4,0));	// 9151 call    sub_142F4 ;~ 01C2:3B37
-cs=0x1c2;eip=0x003b3a; 	J(CALL(sub_13dc4,0));	// 9152 call    sub_13DC4 ;~ 01C2:3B3A
-cs=0x1c2;eip=0x003b3d; 	X(MOV(word_156e6, 0));	// 9153 mov     word_156E6, 0 ;~ 01C2:3B3D
-loc_13d43:
-	// 5267 
-cs=0x1c2;eip=0x003b43; 	J(CALL(sub_134e1,0));	// 9157 call    sub_134E1 ;~ 01C2:3B43
-cs=0x1c2;eip=0x003b46; 	J(JNZ(loc_13d53));	// 9158 jnz     short loc_13D53 ;~ 01C2:3B46
-cs=0x1c2;eip=0x003b48; 	T(MOV(ax, word_156e6));	// 9159 mov     ax, word_156E6 ;~ 01C2:3B48
-cs=0x1c2;eip=0x003b4b; 	T(CMP(ax, 0x0E10));	// 9160 cmp     ax, 0E10h ;~ 01C2:3B4B
-cs=0x1c2;eip=0x003b4e; 	J(JC(loc_13d43));	// 9161 jb      short loc_13D43 ;~ 01C2:3B4E
-cs=0x1c2;eip=0x003b50; 	J(JMP(loc_13e50));	// 9162 jmp     loc_13E50 ;~ 01C2:3B50
-loc_13d53:
-	// 5268 
-cs=0x1c2;eip=0x003b53; 	X(MOV(word_156e6, 0));	// 9166 mov     word_156E6, 0 ;~ 01C2:3B53
-cs=0x1c2;eip=0x003b59; 	J(CALL(sub_134e8,0));	// 9167 call    sub_134E8 ;~ 01C2:3B59
-cs=0x1c2;eip=0x003b5c; 	T(OR(al, al));	// 9168 or      al, al ;~ 01C2:3B5C
-cs=0x1c2;eip=0x003b5e; 	J(JNZ(loc_13d94));	// 9169 jnz     short loc_13D94 ;~ 01C2:3B5E
-cs=0x1c2;eip=0x003b60; 	T(SUB(ah, 0x3B));	// 9170 sub     ah, 3Bh ; ';' ;~ 01C2:3B60
-cs=0x1c2;eip=0x003b63; 	J(JNZ(loc_13d6d));	// 9171 jnz     short loc_13D6D ;~ 01C2:3B63
-cs=0x1c2;eip=0x003b65; 	X(MOV(byte_14b00, 0));	// 9172 mov     byte_14B00, 0 ;~ 01C2:3B65
-cs=0x1c2;eip=0x003b6a; 	J(JMP(loc_1378a));	// 9173 jmp     loc_1378A ;~ 01C2:3B6A
-loc_13d6d:
-	// 5269 
-cs=0x1c2;eip=0x003b6d; 	T(DEC(ah));	// 9177 dec     ah ;~ 01C2:3B6D
-cs=0x1c2;eip=0x003b6f; 	T(DEC(ah));	// 9178 dec     ah ;~ 01C2:3B6F
-cs=0x1c2;eip=0x003b71; 	J(JNZ(loc_13d76));	// 9179 jnz     short loc_13D76 ;~ 01C2:3B71
-cs=0x1c2;eip=0x003b73; 	J(JMP(loc_13e58));	// 9180 jmp     loc_13E58 ;~ 01C2:3B73
-loc_13d76:
-	// 5270 
-cs=0x1c2;eip=0x003b76; 	T(DEC(ah));	// 9184 dec     ah ;~ 01C2:3B76
-cs=0x1c2;eip=0x003b78; 	T(DEC(ah));	// 9185 dec     ah ;~ 01C2:3B78
-cs=0x1c2;eip=0x003b7a; 	J(JNZ(loc_13d7f));	// 9186 jnz     short loc_13D7F ;~ 01C2:3B7A
-cs=0x1c2;eip=0x003b7c; 	J(JMP(loc_13e72));	// 9187 jmp     loc_13E72 ;~ 01C2:3B7C
-loc_13d7f:
-	// 5271 
-cs=0x1c2;eip=0x003b7f; 	T(SUB(ah, 3));	// 9191 sub     ah, 3 ;~ 01C2:3B7F
-cs=0x1c2;eip=0x003b82; 	J({;});	// 9192 jnz     short $+2 ;~ 01C2:3B82
-loc_13d84:
-	// 5272 
-cs=0x1c2;eip=0x003b84; 	T(DEC(ah));	// 9195 dec     ah ;~ 01C2:3B84
-cs=0x1c2;eip=0x003b86; 	J(JNZ(loc_13d8b));	// 9196 jnz     short loc_13D8B ;~ 01C2:3B86
-cs=0x1c2;eip=0x003b88; 	J(JMP(loc_13e1b));	// 9197 jmp     loc_13E1B ;~ 01C2:3B88
-loc_13d8b:
-	// 5273 
-cs=0x1c2;eip=0x003b8b; 	T(DEC(ah));	// 9201 dec     ah ;~ 01C2:3B8B
-cs=0x1c2;eip=0x003b8d; 	J(JNZ(loc_13d43));	// 9202 jnz     short loc_13D43 ;~ 01C2:3B8D
-cs=0x1c2;eip=0x003b8f; 	J(JMP(loc_13e07));	// 9203 jmp     short loc_13E07 ;~ 01C2:3B8F
-loc_13d92:
-	// 5274 
-cs=0x1c2;eip=0x003b92; 	J(JMP(loc_13d43));	// 9211 jmp     short loc_13D43 ;~ 01C2:3B92
-loc_13d94:
-	// 5275 
-cs=0x1c2;eip=0x003b94; 	T(AND(al, 0x0DF));	// 9215 and     al, 0DFh ;~ 01C2:3B94
-cs=0x1c2;eip=0x003b96; 	T(CMP(al, 0x53));	// 9216 cmp     al, 53h ; 'S' ;~ 01C2:3B96
-cs=0x1c2;eip=0x003b98; 	J(JNZ(loc_13d9d));	// 9217 jnz     short loc_13D9D ;~ 01C2:3B98
-cs=0x1c2;eip=0x003b9a; 	J(JMP(loc_13dad));	// 9218 jmp     short loc_13DAD ;~ 01C2:3B9A
-loc_13d9d:
-	// 5276 
-cs=0x1c2;eip=0x003b9d; 	T(CMP(al, 0x43));	// 9226 cmp     al, 43h ; 'C' ;~ 01C2:3B9D
-cs=0x1c2;eip=0x003b9f; 	J(JNZ(loc_13da6));	// 9227 jnz     short loc_13DA6 ;~ 01C2:3B9F
-cs=0x1c2;eip=0x003ba1; 	J(JMP(loc_143be));	// 9228 jmp     loc_143BE ;~ 01C2:3BA1
-ret_1c2_3ba4:
-	// 5277 
-cs=0x1c2;eip=0x003ba4; 	J(JMP(loc_13d92));	// 9231 jmp     short loc_13D92 ;~ 01C2:3BA4
-loc_13da6:
-	// 5278 
-cs=0x1c2;eip=0x003ba6; 	T(CMP(al, 0x58));	// 9236 cmp     al, 58h ; 'X' ;~ 01C2:3BA6
-cs=0x1c2;eip=0x003ba8; 	J(JNZ(loc_13d92));	// 9237 jnz     short loc_13D92 ;~ 01C2:3BA8
-cs=0x1c2;eip=0x003baa; 	J(JMP(loc_144dd));	// 9238 jmp     loc_144DD ;~ 01C2:3BAA
-loc_13dad:
-	// 5279 
-cs=0x1c2;eip=0x003bad; 	T(MOV(al, byte_156d8));	// 9242 mov     al, byte_156D8 ;~ 01C2:3BAD
-cs=0x1c2;eip=0x003bb0; 	T(XOR(al, 0x0FF));	// 9243 xor     al, 0FFh ;~ 01C2:3BB0
-cs=0x1c2;eip=0x003bb2; 	X(MOV(byte_156d8, al));	// 9244 mov     byte_156D8, al ;~ 01C2:3BB2
-cs=0x1c2;eip=0x003bb5; 	J(JZ(loc_13dbf));	// 9245 jz      short loc_13DBF ;~ 01C2:3BB5
-cs=0x1c2;eip=0x003bb7; 	T(MOV(si, 0x0FF8));	// 9246 mov     si, 0FF8h ;~ 01C2:3BB7
-loc_13dba:
-	// 5280 
-cs=0x1c2;eip=0x003bba; 	J(CALL(sub_142f4,0));	// 9249 call    sub_142F4 ;~ 01C2:3BBA
-cs=0x1c2;eip=0x003bbd; 	J(JMP(loc_13d43));	// 9250 jmp     short loc_13D43 ;~ 01C2:3BBD
-loc_13dbf:
-	// 5281 
-cs=0x1c2;eip=0x003bbf; 	T(MOV(si, 0x1005));	// 9254 mov     si, 1005h ;~ 01C2:3BBF
-cs=0x1c2;eip=0x003bc2; 	J(JMP(loc_13dba));	// 9255 jmp     short loc_13DBA ;~ 01C2:3BC2
-sub_13dc4:
-	// 9261 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13c73: 	goto loc_13c73;
+        case m2c::kloc_13c7d: 	goto loc_13c7d;
+        case m2c::kloc_13c85: 	goto loc_13c85;
+        case m2c::kloc_13c90: 	goto loc_13c90;
+        case m2c::kret_1c2_3a69: 	goto ret_1c2_3a69;
+        case m2c::ksub_13c68: 	goto sub_13c68;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13dc4(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13dc4:
+    _begin:
 cs=0x1c2;eip=0x003bc4; 	T(MOV(si, 0x102C));	// 9262 mov     si, 102Ch ;~ 01C2:3BC4
 ret_1c2_3bc7:
 	// 5282 
@@ -7730,8 +11798,34 @@ loc_13df3:
 cs=0x1c2;eip=0x003bf3; 	T(MOV(si, 0x1005));	// 9286 mov     si, 1005h ;~ 01C2:3BF3
 cs=0x1c2;eip=0x003bf6; 	J(CALL(sub_142f4,0));	// 9287 call    sub_142F4 ;~ 01C2:3BF6
 cs=0x1c2;eip=0x003bf9; 	R(RETN(0));	// 9288 retn ;~ 01C2:3BF9
-sub_13dfa:
-	// 9295 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13dd9: 	goto loc_13dd9;
+        case m2c::kloc_13ddf: 	goto loc_13ddf;
+        case m2c::kloc_13df3: 	goto loc_13df3;
+        case m2c::kret_1c2_3bc7: 	goto ret_1c2_3bc7;
+        case m2c::ksub_13dc4: 	goto sub_13dc4;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13dfa(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13dfa:
+    _begin:
 cs=0x1c2;eip=0x003bfa; 	T(MOV(ah, 1));	// 9297 mov     ah, 1 ;~ 01C2:3BFA
 ret_1c2_3bfc:
 	// 5286 
@@ -7743,40 +11837,32 @@ cs=0x1c2;eip=0x003c04; 	J(JMP(sub_13dfa));	// 9306 jmp     short sub_13DFA ;~ 01
 locret_13e06:
 	// 5287 
 cs=0x1c2;eip=0x003c06; 	R(RETN(0));	// 9310 retn ;~ 01C2:3C06
-seg001_3c07_proc:
-	// 9316 
-loc_13e07:
-	// 5288 
-cs=0x1c2;eip=0x003c07; 	T(MOV(al, byte_154c3));	// 9317 mov     al, byte_154C3 ;~ 01C2:3C07
-cs=0x1c2;eip=0x003c0a; 	T(CMP(al, byte_154c4));	// 9318 cmp     al, byte_154C4 ;~ 01C2:3C0A
-cs=0x1c2;eip=0x003c0e; 	J(JBE(loc_13e15));	// 9319 jbe     short loc_13E15 ;~ 01C2:3C0E
-cs=0x1c2;eip=0x003c10; 	T(DEC(al));	// 9320 dec     al ;~ 01C2:3C10
-loc_13e12:
-	// 5289 
-cs=0x1c2;eip=0x003c12; 	X(MOV(byte_154c3, al));	// 9323 mov     byte_154C3, al ;~ 01C2:3C12
-loc_13e15:
-	// 5290 
-cs=0x1c2;eip=0x003c15; 	J(CALL(sub_1370d,0));	// 9327 call    sub_1370D ;~ 01C2:3C15
-cs=0x1c2;eip=0x003c18; 	J(JMP(loc_13d43));	// 9328 jmp     loc_13D43 ;~ 01C2:3C18
-loc_13e1b:
-	// 5291 
-cs=0x1c2;eip=0x003c1b; 	T(MOV(al, byte_154c3));	// 9332 mov     al, byte_154C3 ;~ 01C2:3C1B
-cs=0x1c2;eip=0x003c1e; 	T(CMP(al, byte_154c5));	// 9333 cmp     al, byte_154C5 ;~ 01C2:3C1E
-cs=0x1c2;eip=0x003c22; 	J(JNC(loc_13e15));	// 9334 jnb     short loc_13E15 ;~ 01C2:3C22
-cs=0x1c2;eip=0x003c24; 	T(INC(al));	// 9335 inc     al ;~ 01C2:3C24
-cs=0x1c2;eip=0x003c26; 	J(JMP(loc_13e12));	// 9336 jmp     short loc_13E12 ;~ 01C2:3C26
-ret_1c2_3c28:
-	// 5292 
-cs=0x1c2;eip=0x003c28; 	X(XOR(byte_1fec8, 0x0FF));	// 9339 xor     byte_1FEC8, 0FFh ;~ 01C2:3C28
-cs=0x1c2;eip=0x003c2d; 	J(CALL(sub_13e3d,0));	// 9340 call    sub_13E3D ;~ 01C2:3C2D
-cs=0x1c2;eip=0x003c30; 	T(TEST(byte_1fec8, 0x0FF));	// 9341 test    byte_1FEC8, 0FFh ;~ 01C2:3C30
-cs=0x1c2;eip=0x003c35; 	J(JZ(loc_13e3a));	// 9342 jz      short loc_13E3A ;~ 01C2:3C35
-cs=0x1c2;eip=0x003c37; 	J(JMP(loc_13d92));	// 9343 jmp     loc_13D92 ;~ 01C2:3C37
-loc_13e3a:
-	// 5293 
-cs=0x1c2;eip=0x003c3a; 	J(JMP(loc_13d92));	// 9347 jmp     loc_13D92 ;~ 01C2:3C3A
-sub_13e3d:
-	// 9352 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::klocret_13e06: 	goto locret_13e06;
+        case m2c::kret_1c2_3bfc: 	goto ret_1c2_3bfc;
+        case m2c::ksub_13dfa: 	goto sub_13dfa;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13e3d(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13e3d:
+    _begin:
 cs=0x1c2;eip=0x003c3d; 	T(TEST(byte_1fec8, 0x0FF));	// 9353 test    byte_1FEC8, 0FFh ;~ 01C2:3C3D
 ret_1c2_3c42:
 	// 5294 
@@ -7790,40 +11876,33 @@ loc_13e4c:
 	// 5296 
 cs=0x1c2;eip=0x003c4c; 	J(CALL(sub_142f4,0));	// 9363 call    sub_142F4 ;~ 01C2:3C4C
 cs=0x1c2;eip=0x003c4f; 	R(RETN(0));	// 9364 retn ;~ 01C2:3C4F
-seg001_3c50_proc:
-	// 9370 
-loc_13e50:
-	// 5297 
-cs=0x1c2;eip=0x003c50; 	X(MOV(byte_14b00, 0x0FF));	// 9371 mov     byte_14B00, 0FFh ;~ 01C2:3C50
-cs=0x1c2;eip=0x003c55; 	J(JMP(loc_1378a));	// 9372 jmp     loc_1378A ;~ 01C2:3C55
-loc_13e58:
-	// 5298 
-cs=0x1c2;eip=0x003c58; 	X(XOR(byte_15618, 2));	// 9376 xor     byte_15618, 2 ;~ 01C2:3C58
-cs=0x1c2;eip=0x003c5d; 	T(TEST(byte_15618, 2));	// 9377 test    byte_15618, 2 ;~ 01C2:3C5D
-cs=0x1c2;eip=0x003c62; 	J(JNZ(loc_13e6d));	// 9378 jnz     short loc_13E6D ;~ 01C2:3C62
-cs=0x1c2;eip=0x003c64; 	T(MOV(si, 0x0FDA));	// 9379 mov     si, 0FDAh ;~ 01C2:3C64
-loc_13e67:
-	// 5299 
-cs=0x1c2;eip=0x003c67; 	J(CALL(sub_142f4,0));	// 9382 call    sub_142F4 ;~ 01C2:3C67
-cs=0x1c2;eip=0x003c6a; 	J(JMP(loc_13d43));	// 9383 jmp     loc_13D43 ;~ 01C2:3C6A
-loc_13e6d:
-	// 5300 
-cs=0x1c2;eip=0x003c6d; 	T(MOV(si, 0x0FE9));	// 9387 mov     si, 0FE9h ;~ 01C2:3C6D
-cs=0x1c2;eip=0x003c70; 	J(JMP(loc_13e67));	// 9388 jmp     short loc_13E67 ;~ 01C2:3C70
-loc_13e72:
-	// 5301 
-cs=0x1c2;eip=0x003c72; 	T(MOV(al, byte_15619));	// 9392 mov     al, byte_15619 ;~ 01C2:3C72
-cs=0x1c2;eip=0x003c75; 	T(INC(al));	// 9393 inc     al ;~ 01C2:3C75
-cs=0x1c2;eip=0x003c77; 	T(CMP(al, 7));	// 9394 cmp     al, 7 ;~ 01C2:3C77
-cs=0x1c2;eip=0x003c79; 	J(JC(loc_13e7d));	// 9395 jb      short loc_13E7D ;~ 01C2:3C79
-cs=0x1c2;eip=0x003c7b; 	T(MOV(al, 1));	// 9396 mov     al, 1 ;~ 01C2:3C7B
-loc_13e7d:
-	// 5302 
-cs=0x1c2;eip=0x003c7d; 	X(MOV(byte_15619, al));	// 9399 mov     byte_15619, al ;~ 01C2:3C7D
-cs=0x1c2;eip=0x003c80; 	J(CALL(sub_13e86,0));	// 9400 call    sub_13E86 ;~ 01C2:3C80
-cs=0x1c2;eip=0x003c83; 	J(JMP(loc_13d43));	// 9401 jmp     loc_13D43 ;~ 01C2:3C83
-sub_13e86:
-	// 9407 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13e49: 	goto loc_13e49;
+        case m2c::kloc_13e4c: 	goto loc_13e4c;
+        case m2c::kret_1c2_3c42: 	goto ret_1c2_3c42;
+        case m2c::ksub_13e3d: 	goto sub_13e3d;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13e86(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13e86:
+    _begin:
 cs=0x1c2;eip=0x003c86; 	X(PUSH(ax));	// 9409 push    ax ;~ 01C2:3C86
 ret_1c2_3c87:
 	// 5303 
@@ -7835,8 +11914,31 @@ cs=0x1c2;eip=0x003c95; 	T(XOR(ah, ah));	// 9414 xor     ah, ah ;~ 01C2:3C95
 cs=0x1c2;eip=0x003c97; 	T(ADD(al, 0x30));	// 9415 add     al, 30h ; '0' ;~ 01C2:3C97
 cs=0x1c2;eip=0x003c99; 	J(CALL(sub_1426c,0));	// 9416 call    sub_1426C ;~ 01C2:3C99
 cs=0x1c2;eip=0x003c9c; 	R(RETN(0));	// 9417 retn ;~ 01C2:3C9C
-sub_13ea0:
-	// 9426 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3c87: 	goto ret_1c2_3c87;
+        case m2c::ksub_13e86: 	goto sub_13e86;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13ea0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13ea0:
+    _begin:
 cs=0x1c2;eip=0x003ca0; 	T(CLI);	// 9428 cli ;~ 01C2:3CA0
 ret_1c2_3ca1:
 	// 5304 
@@ -7880,8 +11982,32 @@ cs=0x1c2;eip=0x003cef; 	X(POP(ax));	// 9480 pop     ax ;~ 01C2:3CEF
 cs=0x1c2;eip=0x003cf0; 	X(POP(es));	// 9481 pop     es ;~ 01C2:3CF0
 cs=0x1c2;eip=0x003cf1; 	T(STI);	// 9483 sti ;~ 01C2:3CF1
 cs=0x1c2;eip=0x003cf2; 	R(RETN(0));	// 9484 retn ;~ 01C2:3CF2
-sub_13ef3:
-	// 9491 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13ec2: 	goto loc_13ec2;
+        case m2c::kret_1c2_3ca1: 	goto ret_1c2_3ca1;
+        case m2c::ksub_13ea0: 	goto sub_13ea0;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13ef3(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13ef3:
+    _begin:
 cs=0x1c2;eip=0x003cf3; 	X(PUSH(es));	// 9492 push    es ;~ 01C2:3CF3
 ret_1c2_3cf4:
 	// 5306 
@@ -7912,8 +12038,32 @@ loc_13f28:
 cs=0x1c2;eip=0x003d28; 	X(POP(es));	// 9518 pop     es ;~ 01C2:3D28
 cs=0x1c2;eip=0x003d29; 	T(STI);	// 9520 sti ;~ 01C2:3D29
 cs=0x1c2;eip=0x003d2a; 	R(RETN(0));	// 9521 retn ;~ 01C2:3D2A
-sub_13f2b:
-	// 9528 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_13f28: 	goto loc_13f28;
+        case m2c::kret_1c2_3cf4: 	goto ret_1c2_3cf4;
+        case m2c::ksub_13ef3: 	goto sub_13ef3;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13f2b(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13f2b:
+    _begin:
 cs=0x1c2;eip=0x003d2b; 	X(MOV(byte_156da, 0));	// 9529 mov     byte_156DA, 0 ;~ 01C2:3D2B
 ret_1c2_3d30:
 	// 5308 
@@ -7921,106 +12071,31 @@ cs=0x1c2;eip=0x003d30; 	R(IN(al, 0x61));	// 9530 in      al, 61h         ; PC/XT
 cs=0x1c2;eip=0x003d32; 	T(AND(al, 0x0FC));	// 9538 and     al, 0FCh ;~ 01C2:3D32
 cs=0x1c2;eip=0x003d34; 	R(OUT(0x61, al));	// 9539 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3D34
 cs=0x1c2;eip=0x003d36; 	R(RETN(0));	// 9547 retn ;~ 01C2:3D36
-seg001_3d37_proc:
-	// 9551 
-cs=0x1c2;eip=0x003d37; 	T(STI);	// 9551 sti ;~ 01C2:3D37
-ret_1c2_3d38:
-	// 5309 
-cs=0x1c2;eip=0x003d38; 	X(PUSH(ax));	// 9552 push    ax ;~ 01C2:3D38
-cs=0x1c2;eip=0x003d39; 	X(PUSH(bx));	// 9553 push    bx ;~ 01C2:3D39
-cs=0x1c2;eip=0x003d3a; 	X(PUSH(cx));	// 9554 push    cx ;~ 01C2:3D3A
-cs=0x1c2;eip=0x003d3b; 	X(PUSH(si));	// 9555 push    si ;~ 01C2:3D3B
-cs=0x1c2;eip=0x003d3c; 	X(PUSH(di));	// 9556 push    di ;~ 01C2:3D3C
-cs=0x1c2;eip=0x003d3d; 	X(PUSH(ds));	// 9557 push    ds ;~ 01C2:3D3D
-loc_13f3e:
-	// 5310 
-cs=0x1c2;eip=0x003d3e; 	T(MOV(ax, seg_offset(seg002)));	// 9560 mov     ax, seg seg002 ;~ 01C2:3D3E
-cs=0x1c2;eip=0x003d41; 	T(MOV(ds, ax));	// 9561 mov     ds, ax ;~ 01C2:3D41
-cs=0x1c2;eip=0x003d43; 	X(INC(word_156e2));	// 9562 inc     word_156E2 ;~ 01C2:3D43
-cs=0x1c2;eip=0x003d47; 	J(JNZ(loc_13f4d));	// 9563 jnz     short loc_13F4D ;~ 01C2:3D47
-cs=0x1c2;eip=0x003d49; 	X(INC(word_156e4));	// 9564 inc     word_156E4 ;~ 01C2:3D49
-loc_13f4d:
-	// 5311 
-cs=0x1c2;eip=0x003d4d; 	X(INC(word_156e6));	// 9567 inc     word_156E6 ;~ 01C2:3D4D
-cs=0x1c2;eip=0x003d51; 	J(JNZ(loc_13f57));	// 9568 jnz     short loc_13F57 ;~ 01C2:3D51
-cs=0x1c2;eip=0x003d53; 	X(INC(word_156e8));	// 9569 inc     word_156E8 ;~ 01C2:3D53
-loc_13f57:
-	// 5312 
-cs=0x1c2;eip=0x003d57; 	T(XOR(bh, bh));	// 9572 xor     bh, bh ;~ 01C2:3D57
-cs=0x1c2;eip=0x003d59; 	T(TEST(byte_156da, 0x0FF));	// 9573 test    byte_156DA, 0FFh ;~ 01C2:3D59
-cs=0x1c2;eip=0x003d5e; 	J(JZ(loc_13fdc));	// 9574 jz      short loc_13FDC ;~ 01C2:3D5E
-cs=0x1c2;eip=0x003d60; 	T(TEST(byte_156e1, 0x0FF));	// 9575 test    byte_156E1, 0FFh ;~ 01C2:3D60
-cs=0x1c2;eip=0x003d65; 	J(JZ(loc_13f6f));	// 9576 jz      short loc_13F6F ;~ 01C2:3D65
-cs=0x1c2;eip=0x003d67; 	X(MOV(byte_156e1, 0));	// 9577 mov     byte_156E1, 0 ;~ 01C2:3D67
-cs=0x1c2;eip=0x003d6c; 	J(CALL(sub_13fe7,0));	// 9578 call    sub_13FE7 ;~ 01C2:3D6C
-loc_13f6f:
-	// 5313 
-cs=0x1c2;eip=0x003d6f; 	T(MOV(al, byte_156df));	// 9581 mov     al, byte_156DF ;~ 01C2:3D6F
-cs=0x1c2;eip=0x003d72; 	T(OR(al, al));	// 9582 or      al, al ;~ 01C2:3D72
-cs=0x1c2;eip=0x003d74; 	J(JZ(loc_13f9c));	// 9583 jz      short loc_13F9C ;~ 01C2:3D74
-cs=0x1c2;eip=0x003d76; 	T(DEC(al));	// 9584 dec     al ;~ 01C2:3D76
-cs=0x1c2;eip=0x003d78; 	X(MOV(byte_156df, al));	// 9585 mov     byte_156DF, al ;~ 01C2:3D78
-cs=0x1c2;eip=0x003d7b; 	T(MOV(al, byte_156dc));	// 9586 mov     al, byte_156DC ;~ 01C2:3D7B
-cs=0x1c2;eip=0x003d7e; 	T(ADD(al, byte_156dd));	// 9587 add     al, byte_156DD ;~ 01C2:3D7E
-cs=0x1c2;eip=0x003d82; 	X(MOV(byte_156dd, al));	// 9588 mov     byte_156DD, al ;~ 01C2:3D82
-cs=0x1c2;eip=0x003d85; 	J(JNC(loc_13f9a));	// 9589 jnb     short loc_13F9A ;~ 01C2:3D85
-cs=0x1c2;eip=0x003d87; 	T(TEST(byte_156de, 0x0FF));	// 9590 test    byte_156DE, 0FFh ;~ 01C2:3D87
-cs=0x1c2;eip=0x003d8c; 	J(JZ(loc_13f94));	// 9591 jz      short loc_13F94 ;~ 01C2:3D8C
-cs=0x1c2;eip=0x003d8e; 	X(INC(byte_156db));	// 9592 inc     byte_156DB ;~ 01C2:3D8E
-cs=0x1c2;eip=0x003d92; 	J(JMP(loc_13fc9));	// 9593 jmp     short loc_13FC9 ;~ 01C2:3D92
-loc_13f94:
-	// 5314 
-cs=0x1c2;eip=0x003d94; 	X(DEC(byte_156db));	// 9597 dec     byte_156DB ;~ 01C2:3D94
-cs=0x1c2;eip=0x003d98; 	J(JMP(loc_13fc9));	// 9598 jmp     short loc_13FC9 ;~ 01C2:3D98
-loc_13f9a:
-	// 5315 
-cs=0x1c2;eip=0x003d9a; 	J(JMP(loc_13fdc));	// 9602 jmp     short loc_13FDC ;~ 01C2:3D9A
-loc_13f9c:
-	// 5316 
-cs=0x1c2;eip=0x003d9c; 	X(INC(byte_156d9));	// 9606 inc     byte_156D9 ;~ 01C2:3D9C
-cs=0x1c2;eip=0x003da0; 	T(MOV(bl, byte_156e0));	// 9607 mov     bl, byte_156E0 ;~ 01C2:3DA0
-cs=0x1c2;eip=0x003da4; 	J(CALL(sub_140c6,0));	// 9608 call    sub_140C6 ;~ 01C2:3DA4
-cs=0x1c2;eip=0x003da7; 	T(MOV(bl, byte_156d9));	// 9609 mov     bl, byte_156D9 ;~ 01C2:3DA7
-cs=0x1c2;eip=0x003dab; 	T(MOV(al, *(raddr(ds,bx+di))));	// 9610 mov     al, [bx+di] ;~ 01C2:3DAB
-cs=0x1c2;eip=0x003dad; 	T(OR(al, al));	// 9611 or      al, al ;~ 01C2:3DAD
-cs=0x1c2;eip=0x003daf; 	J(JZ(loc_13fce));	// 9612 jz      short loc_13FCE ;~ 01C2:3DAF
-cs=0x1c2;eip=0x003db1; 	J(JS(loc_13fd5));	// 9613 js      short loc_13FD5 ;~ 01C2:3DB1
-cs=0x1c2;eip=0x003db3; 	T(DEC(al));	// 9614 dec     al ;~ 01C2:3DB3
-cs=0x1c2;eip=0x003db5; 	X(MOV(byte_156df, al));	// 9615 mov     byte_156DF, al ;~ 01C2:3DB5
-cs=0x1c2;eip=0x003db8; 	T(MOV(al, *(raddr(ds,bx+si))));	// 9616 mov     al, [bx+si] ;~ 01C2:3DB8
-cs=0x1c2;eip=0x003dba; 	X(MOV(byte_156db, al));	// 9617 mov     byte_156DB, al ;~ 01C2:3DBA
-cs=0x1c2;eip=0x003dbd; 	T(CMP(al, 0x0FF));	// 9618 cmp     al, 0FFh ;~ 01C2:3DBD
-cs=0x1c2;eip=0x003dbf; 	J(JNZ(loc_13fc9));	// 9619 jnz     short loc_13FC9 ;~ 01C2:3DBF
-cs=0x1c2;eip=0x003dc1; 	R(IN(al, 0x61));	// 9620 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:3DC1
-cs=0x1c2;eip=0x003dc3; 	T(AND(al, 0x0FC));	// 9628 and     al, 0FCh ;~ 01C2:3DC3
-cs=0x1c2;eip=0x003dc5; 	R(OUT(0x61, al));	// 9629 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3DC5
-cs=0x1c2;eip=0x003dc7; 	J(JMP(loc_13fdc));	// 9637 jmp     short loc_13FDC ;~ 01C2:3DC7
-loc_13fc9:
-	// 5317 
-cs=0x1c2;eip=0x003dc9; 	J(CALL(sub_13fe7,0));	// 9642 call    sub_13FE7 ;~ 01C2:3DC9
-cs=0x1c2;eip=0x003dcc; 	J(JMP(loc_13fdc));	// 9643 jmp     short loc_13FDC ;~ 01C2:3DCC
-loc_13fce:
-	// 5318 
-cs=0x1c2;eip=0x003dce; 	T(MOV(al, 0));	// 9647 mov     al, 0 ;~ 01C2:3DCE
-cs=0x1c2;eip=0x003dd0; 	J(CALL(sub_14005,0));	// 9648 call    sub_14005 ;~ 01C2:3DD0
-cs=0x1c2;eip=0x003dd3; 	J(JMP(loc_13fdc));	// 9649 jmp     short loc_13FDC ;~ 01C2:3DD3
-loc_13fd5:
-	// 5319 
-cs=0x1c2;eip=0x003dd5; 	T(MOV(bl, byte_156e0));	// 9653 mov     bl, byte_156E0 ;~ 01C2:3DD5
-cs=0x1c2;eip=0x003dd9; 	J(CALL(sub_140a5,0));	// 9654 call    sub_140A5 ;~ 01C2:3DD9
-loc_13fdc:
-	// 5320 
-cs=0x1c2;eip=0x003ddc; 	T(MOV(al, 0x20));	// 9658 mov     al, 20h ; ' ' ;~ 01C2:3DDC
-cs=0x1c2;eip=0x003dde; 	R(OUT(0x20, al));	// 9659 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:3DDE
-cs=0x1c2;eip=0x003de0; 	X(POP(ds));	// 9660 pop     ds ;~ 01C2:3DE0
-cs=0x1c2;eip=0x003de1; 	X(POP(di));	// 9662 pop     di ;~ 01C2:3DE1
-cs=0x1c2;eip=0x003de2; 	X(POP(si));	// 9663 pop     si ;~ 01C2:3DE2
-cs=0x1c2;eip=0x003de3; 	X(POP(cx));	// 9664 pop     cx ;~ 01C2:3DE3
-cs=0x1c2;eip=0x003de4; 	X(POP(bx));	// 9665 pop     bx ;~ 01C2:3DE4
-cs=0x1c2;eip=0x003de5; 	X(POP(ax));	// 9666 pop     ax ;~ 01C2:3DE5
-cs=0x1c2;eip=0x003de6; 	R(IRET);	// 9667 iret ;~ 01C2:3DE6
-sub_13fe7:
-	// 9673 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3d30: 	goto ret_1c2_3d30;
+        case m2c::ksub_13f2b: 	goto sub_13f2b;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_13fe7(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_13fe7:
+    _begin:
 cs=0x1c2;eip=0x003de7; 	X(PUSH(dx));	// 9675 push    dx ;~ 01C2:3DE7
 ret_1c2_3de8:
 	// 5321 
@@ -8038,8 +12113,31 @@ cs=0x1c2;eip=0x003dff; 	T(OR(al, 3));	// 9693 or      al, 3 ;~ 01C2:3DFF
 cs=0x1c2;eip=0x003e01; 	R(OUT(0x61, al));	// 9694 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3E01
 cs=0x1c2;eip=0x003e03; 	X(POP(dx));	// 9702 pop     dx ;~ 01C2:3E03
 cs=0x1c2;eip=0x003e04; 	R(RETN(0));	// 9703 retn ;~ 01C2:3E04
-sub_14005:
-	// 9710 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3de8: 	goto ret_1c2_3de8;
+        case m2c::ksub_13fe7: 	goto sub_13fe7;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14005(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14005:
+    _begin:
 cs=0x1c2;eip=0x003e05; 	T(MOV(ax, 0));	// 9712 mov     ax, 0 ;~ 01C2:3E05
 ret_1c2_3e08:
 	// 5322 
@@ -8048,104 +12146,31 @@ cs=0x1c2;eip=0x003e0b; 	X(MOV(byte_156e0, al));	// 9714 mov     byte_156E0, al ;
 cs=0x1c2;eip=0x003e0e; 	X(MOV(byte_156de, al));	// 9715 mov     byte_156DE, al ;~ 01C2:3E0E
 cs=0x1c2;eip=0x003e11; 	J(CALL(sub_13f2b,0));	// 9716 call    sub_13F2B ;~ 01C2:3E11
 cs=0x1c2;eip=0x003e14; 	R(RETN(0));	// 9717 retn ;~ 01C2:3E14
-sub_14015:
-	// 9725 
-cs=0x1c2;eip=0x003e15; 	T(TEST(byte_156d8, 0x0FF));	// 9727 test    byte_156D8, 0FFh ;~ 01C2:3E15
-ret_1c2_3e1a:
-	// 5323 
-cs=0x1c2;eip=0x003e1a; 	J(JNZ(loc_14020));	// 9728 jnz     short loc_14020 ;~ 01C2:3E1A
-cs=0x1c2;eip=0x003e1c; 	J(CALL(sub_14005,0));	// 9729 call    sub_14005 ;~ 01C2:3E1C
-cs=0x1c2;eip=0x003e1f; 	R(RETN(0));	// 9730 retn ;~ 01C2:3E1F
-loc_14020:
-	// 5324 
-cs=0x1c2;eip=0x003e20; 	T(CMP(al, 0x0B));	// 9734 cmp     al, 0Bh ;~ 01C2:3E20
-cs=0x1c2;eip=0x003e22; 	J(JNZ(loc_14028));	// 9735 jnz     short loc_14028 ;~ 01C2:3E22
-cs=0x1c2;eip=0x003e24; 	J(CALL(sub_14100,0));	// 9736 call    sub_14100 ;~ 01C2:3E24
-cs=0x1c2;eip=0x003e27; 	R(RETN(0));	// 9737 retn ;~ 01C2:3E27
-loc_14028:
-	// 5325 
-cs=0x1c2;eip=0x003e28; 	T(CMP(al, 0x14));	// 9741 cmp     al, 14h ;~ 01C2:3E28
-cs=0x1c2;eip=0x003e2a; 	J(JNZ(loc_14030));	// 9742 jnz     short loc_14030 ;~ 01C2:3E2A
-cs=0x1c2;eip=0x003e2c; 	J(CALL(sub_141d2,0));	// 9743 call    sub_141D2 ;~ 01C2:3E2C
-cs=0x1c2;eip=0x003e2f; 	R(RETN(0));	// 9744 retn ;~ 01C2:3E2F
-loc_14030:
-	// 5326 
-cs=0x1c2;eip=0x003e30; 	X(PUSH(bx));	// 9748 push    bx ;~ 01C2:3E30
-cs=0x1c2;eip=0x003e31; 	X(PUSH(cx));	// 9749 push    cx ;~ 01C2:3E31
-cs=0x1c2;eip=0x003e32; 	X(PUSH(si));	// 9750 push    si ;~ 01C2:3E32
-cs=0x1c2;eip=0x003e33; 	X(PUSH(di));	// 9751 push    di ;~ 01C2:3E33
-cs=0x1c2;eip=0x003e34; 	X(PUSH(ax));	// 9752 push    ax ;~ 01C2:3E34
-cs=0x1c2;eip=0x003e35; 	X(PUSH(ds));	// 9753 push    ds ;~ 01C2:3E35
-loc_14036:
-	// 5327 
-cs=0x1c2;eip=0x003e36; 	T(MOV(ax, 0x1d2));	// 9756 mov     ax, 1030h ;~ 01C2:3E36
-cs=0x1c2;eip=0x003e39; 	T(MOV(ds, ax));	// 9757 mov     ds, ax ;~ 01C2:3E39
-cs=0x1c2;eip=0x003e3b; 	T(MOV(si, 0x2C));	// 9759 mov     si, 2Ch ; ',' ;~ 01C2:3E3B
-cs=0x1c2;eip=0x003e3e; 	T(MOV(ah, 0));	// 9760 mov     ah, 0 ;~ 01C2:3E3E
-cs=0x1c2;eip=0x003e40; 	T(LODSB);	// 9761 lodsb ;~ 01C2:3E40
-cs=0x1c2;eip=0x003e41; 	T(AND(al, 0x20));	// 9762 and     al, 20h ;~ 01C2:3E41
-cs=0x1c2;eip=0x003e43; 	J(JNZ(loc_14047));	// 9763 jnz     short loc_14047 ;~ 01C2:3E43
-cs=0x1c2;eip=0x003e45; 	T(INC(ah));	// 9764 inc     ah ;~ 01C2:3E45
-loc_14047:
-	// 5328 
-cs=0x1c2;eip=0x003e47; 	T(LODSB);	// 9767 lodsb ;~ 01C2:3E47
-cs=0x1c2;eip=0x003e48; 	T(AND(al, 0x0FF));	// 9768 and     al, 0FFh ;~ 01C2:3E48
-cs=0x1c2;eip=0x003e4a; 	J(JZ(loc_1404e));	// 9769 jz      short loc_1404E ;~ 01C2:3E4A
-cs=0x1c2;eip=0x003e4c; 	T(INC(ah));	// 9770 inc     ah ;~ 01C2:3E4C
-loc_1404e:
-	// 5329 
-cs=0x1c2;eip=0x003e4e; 	X(POP(ds));	// 9773 pop     ds ;~ 01C2:3E4E
-cs=0x1c2;eip=0x003e4f; 	T(OR(ah, ah));	// 9775 or      ah, ah ;~ 01C2:3E4F
-cs=0x1c2;eip=0x003e51; 	J(JZ(loc_14059));	// 9776 jz      short loc_14059 ;~ 01C2:3E51
-cs=0x1c2;eip=0x003e53; 	X(MOV(word_156b0, 0x200));	// 9777 mov     word_156B0, 200h ;~ 01C2:3E53
-loc_14059:
-	// 5330 
-cs=0x1c2;eip=0x003e59; 	X(POP(ax));	// 9780 pop     ax ;~ 01C2:3E59
-cs=0x1c2;eip=0x003e5a; 	T(TEST(byte_156da, 0x0FF));	// 9781 test    byte_156DA, 0FFh ;~ 01C2:3E5A
-cs=0x1c2;eip=0x003e5f; 	J(JZ(loc_1407f));	// 9782 jz      short loc_1407F ;~ 01C2:3E5F
-cs=0x1c2;eip=0x003e61; 	T(MOV(si, 0x12A4));	// 9783 mov     si, 12A4h ;~ 01C2:3E61
-cs=0x1c2;eip=0x003e64; 	T(MOV(bh, al));	// 9784 mov     bh, al ;~ 01C2:3E64
-cs=0x1c2;eip=0x003e66; 	T(MOV(bl, byte_156e0));	// 9785 mov     bl, byte_156E0 ;~ 01C2:3E66
-cs=0x1c2;eip=0x003e6a; 	T(CMP(bl, bh));	// 9786 cmp     bl, bh ;~ 01C2:3E6A
-cs=0x1c2;eip=0x003e6c; 	J(JZ(loc_1407d));	// 9787 jz      short loc_1407D ;~ 01C2:3E6C
-loc_1406e:
-	// 5331 
-cs=0x1c2;eip=0x003e6e; 	T(LODSB);	// 9790 lodsb ;~ 01C2:3E6E
-cs=0x1c2;eip=0x003e6f; 	T(OR(al, al));	// 9791 or      al, al ;~ 01C2:3E6F
-cs=0x1c2;eip=0x003e71; 	J(JS(loc_1407d));	// 9792 js      short loc_1407D ;~ 01C2:3E71
-cs=0x1c2;eip=0x003e73; 	T(CMP(al, bl));	// 9793 cmp     al, bl ;~ 01C2:3E73
-cs=0x1c2;eip=0x003e75; 	J(JZ(loc_1409f));	// 9794 jz      short loc_1409F ;~ 01C2:3E75
-cs=0x1c2;eip=0x003e77; 	T(CMP(al, bh));	// 9795 cmp     al, bh ;~ 01C2:3E77
-cs=0x1c2;eip=0x003e79; 	J(JZ(loc_1407d));	// 9796 jz      short loc_1407D ;~ 01C2:3E79
-cs=0x1c2;eip=0x003e7b; 	J(JMP(loc_1406e));	// 9797 jmp     short loc_1406E ;~ 01C2:3E7B
-loc_1407d:
-	// 5332 
-cs=0x1c2;eip=0x003e7d; 	T(MOV(al, bh));	// 9802 mov     al, bh ;~ 01C2:3E7D
-loc_1407f:
-	// 5333 
-cs=0x1c2;eip=0x003e7f; 	T(CLI);	// 9805 cli ;~ 01C2:3E7F
-cs=0x1c2;eip=0x003e80; 	X(MOV(byte_156e0, al));	// 9806 mov     byte_156E0, al ;~ 01C2:3E80
-cs=0x1c2;eip=0x003e83; 	T(CMP(al, 0x0A));	// 9807 cmp     al, 0Ah ;~ 01C2:3E83
-cs=0x1c2;eip=0x003e85; 	J(JNZ(loc_1408c));	// 9808 jnz     short loc_1408C ;~ 01C2:3E85
-cs=0x1c2;eip=0x003e87; 	X(MOV(byte_156de, 0x0FF));	// 9809 mov     byte_156DE, 0FFh ;~ 01C2:3E87
-loc_1408c:
-	// 5334 
-cs=0x1c2;eip=0x003e8c; 	X(MOV(byte_156da, 1));	// 9812 mov     byte_156DA, 1 ;~ 01C2:3E8C
-cs=0x1c2;eip=0x003e91; 	T(MOV(bl, al));	// 9813 mov     bl, al ;~ 01C2:3E91
-cs=0x1c2;eip=0x003e93; 	T(XOR(bh, bh));	// 9814 xor     bh, bh ;~ 01C2:3E93
-cs=0x1c2;eip=0x003e95; 	T(MOV(al, *(raddr(ds,bx+0x1102))));	// 9815 mov     al, [bx+1102h] ;~ 01C2:3E95
-cs=0x1c2;eip=0x003e99; 	X(MOV(byte_156dc, al));	// 9816 mov     byte_156DC, al ;~ 01C2:3E99
-cs=0x1c2;eip=0x003e9c; 	J(CALL(sub_140a5,0));	// 9817 call    sub_140A5 ;~ 01C2:3E9C
-loc_1409f:
-	// 5335 
-cs=0x1c2;eip=0x003e9f; 	T(STI);	// 9820 sti ;~ 01C2:3E9F
-cs=0x1c2;eip=0x003ea0; 	X(POP(di));	// 9821 pop     di ;~ 01C2:3EA0
-cs=0x1c2;eip=0x003ea1; 	X(POP(si));	// 9822 pop     si ;~ 01C2:3EA1
-cs=0x1c2;eip=0x003ea2; 	X(POP(cx));	// 9823 pop     cx ;~ 01C2:3EA2
-cs=0x1c2;eip=0x003ea3; 	X(POP(bx));	// 9824 pop     bx ;~ 01C2:3EA3
-cs=0x1c2;eip=0x003ea4; 	R(RETN(0));	// 9825 retn ;~ 01C2:3EA4
-sub_140a5:
-	// 9832 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3e08: 	goto ret_1c2_3e08;
+        case m2c::ksub_14005: 	goto sub_14005;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_140a5(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_140a5:
+    _begin:
 cs=0x1c2;eip=0x003ea5; 	X(MOV(byte_156d9, 0));	// 9834 mov     byte_156D9, 0 ;~ 01C2:3EA5
 ret_1c2_3eaa:
 	// 5336 
@@ -8158,8 +12183,31 @@ cs=0x1c2;eip=0x003ebb; 	T(MOV(al, *(raddr(ds,bx+di))));	// 9840 mov     al, [bx+
 cs=0x1c2;eip=0x003ebd; 	X(MOV(byte_156df, al));	// 9841 mov     byte_156DF, al ;~ 01C2:3EBD
 cs=0x1c2;eip=0x003ec0; 	X(MOV(byte_156e1, 0x0FF));	// 9842 mov     byte_156E1, 0FFh ;~ 01C2:3EC0
 cs=0x1c2;eip=0x003ec5; 	R(RETN(0));	// 9843 retn ;~ 01C2:3EC5
-sub_140c6:
-	// 9850 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3eaa: 	goto ret_1c2_3eaa;
+        case m2c::ksub_140a5: 	goto sub_140a5;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_140c6(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_140c6:
+    _begin:
 cs=0x1c2;eip=0x003ec6; 	T(MOV(si, 0x10AA));	// 9852 mov     si, 10AAh ;~ 01C2:3EC6
 ret_1c2_3ec9:
 	// 5337 
@@ -8172,8 +12220,31 @@ cs=0x1c2;eip=0x003ed3; 	T(ADD(si, cx));	// 9858 add     si, cx ;~ 01C2:3ED3
 cs=0x1c2;eip=0x003ed5; 	T(MOV(di, *(dw*)(raddr(ds,si))));	// 9859 mov     di, [si] ;~ 01C2:3ED5
 cs=0x1c2;eip=0x003ed7; 	T(MOV(si, ax));	// 9860 mov     si, ax ;~ 01C2:3ED7
 cs=0x1c2;eip=0x003ed9; 	R(RETN(0));	// 9861 retn ;~ 01C2:3ED9
-seg001_3eda_proc:
-	// 9865 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3ec9: 	goto ret_1c2_3ec9;
+        case m2c::ksub_140c6: 	goto sub_140c6;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_3eda_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_3eda_proc:
+    _begin:
 cs=0x1c2;eip=0x003eda; 	X(PUSH(es));	// 9865 push    es ;~ 01C2:3EDA
 ret_1c2_3edb:
 	// 5338 
@@ -8196,8 +12267,31 @@ cs=0x1c2;eip=0x003efc; 	X(POP(bx));	// 9882 pop     bx ;~ 01C2:3EFC
 cs=0x1c2;eip=0x003efd; 	X(POP(di));	// 9883 pop     di ;~ 01C2:3EFD
 cs=0x1c2;eip=0x003efe; 	X(POP(es));	// 9884 pop     es ;~ 01C2:3EFE
 cs=0x1c2;eip=0x003eff; 	R(RETN(0));	// 9886 retn ;~ 01C2:3EFF
-sub_14100:
-	// 9892 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3edb: 	goto ret_1c2_3edb;
+        case m2c::kseg001_3eda_proc: 	goto seg001_3eda_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14100(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14100:
+    _begin:
 cs=0x1c2;eip=0x003f00; 	T(CLI);	// 9893 cli ;~ 01C2:3F00
 ret_1c2_3f01:
 	// 5339 
@@ -8231,85 +12325,31 @@ cs=0x1c2;eip=0x003f3e; 	X(POP(ax));	// 9921 pop     ax ;~ 01C2:3F3E
 cs=0x1c2;eip=0x003f3f; 	X(POP(es));	// 9922 pop     es ;~ 01C2:3F3F
 cs=0x1c2;eip=0x003f40; 	T(STI);	// 9924 sti ;~ 01C2:3F40
 cs=0x1c2;eip=0x003f41; 	R(RETN(0));	// 9925 retn ;~ 01C2:3F41
-seg001_3f42_proc:
-	// 9929 
-cs=0x1c2;eip=0x003f42; 	T(STI);	// 9929 sti ;~ 01C2:3F42
-ret_1c2_3f43:
-	// 5340 
-cs=0x1c2;eip=0x003f43; 	X(PUSH(ax));	// 9930 push    ax ;~ 01C2:3F43
-cs=0x1c2;eip=0x003f44; 	X(PUSH(ds));	// 9931 push    ds ;~ 01C2:3F44
-loc_14145:
-	// 5341 
-cs=0x1c2;eip=0x003f45; 	T(MOV(ax, seg_offset(seg002)));	// 9934 mov     ax, seg seg002 ;~ 01C2:3F45
-cs=0x1c2;eip=0x003f48; 	T(MOV(ds, ax));	// 9935 mov     ds, ax ;~ 01C2:3F48
-cs=0x1c2;eip=0x003f4a; 	T(CMP(word_156d2, 0x1F4));	// 9936 cmp     word_156D2, 1F4h ;~ 01C2:3F4A
-cs=0x1c2;eip=0x003f50; 	J(JC(loc_14182));	// 9937 jb      short loc_14182 ;~ 01C2:3F50
-cs=0x1c2;eip=0x003f52; 	X(DEC(word_156b2));	// 9938 dec     word_156B2 ;~ 01C2:3F52
-cs=0x1c2;eip=0x003f56; 	J(JNS(loc_1417a));	// 9939 jns     short loc_1417A ;~ 01C2:3F56
-cs=0x1c2;eip=0x003f58; 	T(MOV(ax, 0x1E));	// 9940 mov     ax, 1Eh ;~ 01C2:3F58
-cs=0x1c2;eip=0x003f5b; 	J(CALL(sub_13c68,0));	// 9941 call    sub_13C68 ;~ 01C2:3F5B
-cs=0x1c2;eip=0x003f5e; 	T(ADD(ax, 5));	// 9942 add     ax, 5 ;~ 01C2:3F5E
-cs=0x1c2;eip=0x003f61; 	X(MOV(word_156b2, ax));	// 9943 mov     word_156B2, ax ;~ 01C2:3F61
-cs=0x1c2;eip=0x003f64; 	X(PUSH(si));	// 9944 push    si ;~ 01C2:3F64
-cs=0x1c2;eip=0x003f65; 	T(MOV(si, word_156b4));	// 9945 mov     si, word_156B4 ;~ 01C2:3F65
-cs=0x1c2;eip=0x003f69; 	T(LODSW);	// 9946 lodsw ;~ 01C2:3F69
-cs=0x1c2;eip=0x003f6a; 	T(OR(ax, ax));	// 9947 or      ax, ax ;~ 01C2:3F6A
-cs=0x1c2;eip=0x003f6c; 	J(JNZ(loc_14172));	// 9948 jnz     short loc_14172 ;~ 01C2:3F6C
-cs=0x1c2;eip=0x003f6e; 	T(MOV(si, 0x1076));	// 9949 mov     si, 1076h ;~ 01C2:3F6E
-cs=0x1c2;eip=0x003f71; 	T(LODSW);	// 9950 lodsw ;~ 01C2:3F71
-loc_14172:
-	// 5342 
-cs=0x1c2;eip=0x003f72; 	X(MOV(word_156b4, si));	// 9953 mov     word_156B4, si ;~ 01C2:3F72
-cs=0x1c2;eip=0x003f76; 	X(POP(si));	// 9954 pop     si ;~ 01C2:3F76
-cs=0x1c2;eip=0x003f77; 	X(MOV(word_156cd, ax));	// 9955 mov     word_156CD, ax ;~ 01C2:3F77
-loc_1417a:
-	// 5343 
-cs=0x1c2;eip=0x003f7a; 	X(ROR(word_156cd, 1));	// 9959 ror     word_156CD, 1 ;~ 01C2:3F7A
-cs=0x1c2;eip=0x003f7e; 	J(JNC(loc_141bc));	// 9960 jnb     short loc_141BC ;~ 01C2:3F7E
-cs=0x1c2;eip=0x003f80; 	J(JMP(loc_1419d));	// 9961 jmp     short loc_1419D ;~ 01C2:3F80
-loc_14182:
-	// 5344 
-cs=0x1c2;eip=0x003f82; 	X(DEC(byte_156cc));	// 9965 dec     byte_156CC ;~ 01C2:3F82
-cs=0x1c2;eip=0x003f86; 	J(JNS(loc_1417a));	// 9966 jns     short loc_1417A ;~ 01C2:3F86
-cs=0x1c2;eip=0x003f88; 	X(PUSH(si));	// 9967 push    si ;~ 01C2:3F88
-cs=0x1c2;eip=0x003f89; 	T(MOV(si, word_156be));	// 9968 mov     si, word_156BE ;~ 01C2:3F89
-cs=0x1c2;eip=0x003f8d; 	T(LODSW);	// 9969 lodsw ;~ 01C2:3F8D
-cs=0x1c2;eip=0x003f8e; 	X(MOV(word_156be, si));	// 9970 mov     word_156BE, si ;~ 01C2:3F8E
-cs=0x1c2;eip=0x003f92; 	X(MOV(word_156cd, ax));	// 9971 mov     word_156CD, ax ;~ 01C2:3F92
-cs=0x1c2;eip=0x003f95; 	X(POP(si));	// 9972 pop     si ;~ 01C2:3F95
-cs=0x1c2;eip=0x003f96; 	X(MOV(byte_156cc, 0x64));	// 9973 mov     byte_156CC, 64h ; 'd' ;~ 01C2:3F96
-cs=0x1c2;eip=0x003f9b; 	J(JMP(loc_1417a));	// 9974 jmp     short loc_1417A ;~ 01C2:3F9B
-loc_1419d:
-	// 5345 
-cs=0x1c2;eip=0x003f9d; 	X(DEC(byte_156cf));	// 9978 dec     byte_156CF ;~ 01C2:3F9D
-cs=0x1c2;eip=0x003fa1; 	J(JNS(loc_141ae));	// 9979 jns     short loc_141AE ;~ 01C2:3FA1
-cs=0x1c2;eip=0x003fa3; 	J(CALL(sub_13c4f,0));	// 9980 call    sub_13C4F ;~ 01C2:3FA3
-cs=0x1c2;eip=0x003fa6; 	X(MOV(word_156d0, ax));	// 9981 mov     word_156D0, ax ;~ 01C2:3FA6
-cs=0x1c2;eip=0x003fa9; 	X(MOV(byte_156cf, 0x0F));	// 9982 mov     byte_156CF, 0Fh ;~ 01C2:3FA9
-loc_141ae:
-	// 5346 
-cs=0x1c2;eip=0x003fae; 	X(SHR(word_156d0, 1));	// 9985 shr     word_156D0, 1 ;~ 01C2:3FAE
-cs=0x1c2;eip=0x003fb2; 	J(JNC(loc_141bc));	// 9986 jnb     short loc_141BC ;~ 01C2:3FB2
-cs=0x1c2;eip=0x003fb4; 	R(IN(al, 0x61));	// 9987 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:3FB4
-cs=0x1c2;eip=0x003fb6; 	T(AND(al, 0x0FE));	// 9995 and     al, 0FEh ;~ 01C2:3FB6
-cs=0x1c2;eip=0x003fb8; 	T(XOR(al, 2));	// 9996 xor     al, 2 ;~ 01C2:3FB8
-cs=0x1c2;eip=0x003fba; 	R(OUT(0x61, al));	// 9997 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:3FBA
-loc_141bc:
-	// 5347 
-cs=0x1c2;eip=0x003fbc; 	T(MOV(al, 0x20));	// 10008 mov     al, 20h ; ' ' ;~ 01C2:3FBC
-cs=0x1c2;eip=0x003fbe; 	R(OUT(0x20, al));	// 10009 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:3FBE
-cs=0x1c2;eip=0x003fc0; 	X(DEC(word_156d2));	// 10010 dec     word_156D2 ;~ 01C2:3FC0
-cs=0x1c2;eip=0x003fc4; 	J(JNZ(loc_141cf));	// 10011 jnz     short loc_141CF ;~ 01C2:3FC4
-cs=0x1c2;eip=0x003fc6; 	J(CALL(sub_13ea0,0));	// 10012 call    sub_13EA0 ;~ 01C2:3FC6
-cs=0x1c2;eip=0x003fc9; 	T(MOV(ax, 0x1080));	// 10013 mov     ax, 1080h ;~ 01C2:3FC9
-cs=0x1c2;eip=0x003fcc; 	X(MOV(word_156be, ax));	// 10014 mov     word_156BE, ax ;~ 01C2:3FCC
-loc_141cf:
-	// 5348 
-cs=0x1c2;eip=0x003fcf; 	X(POP(ds));	// 10017 pop     ds ;~ 01C2:3FCF
-cs=0x1c2;eip=0x003fd0; 	X(POP(ax));	// 10019 pop     ax ;~ 01C2:3FD0
-cs=0x1c2;eip=0x003fd1; 	R(IRET);	// 10020 iret ;~ 01C2:3FD1
-sub_141d2:
-	// 10025 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3f01: 	goto ret_1c2_3f01;
+        case m2c::ksub_14100: 	goto sub_14100;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_141d2(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_141d2:
+    _begin:
 cs=0x1c2;eip=0x003fd2; 	T(CLI);	// 10026 cli ;~ 01C2:3FD2
 ret_1c2_3fd3:
 	// 5349 
@@ -8343,42 +12383,31 @@ cs=0x1c2;eip=0x004010; 	X(POP(ax));	// 10054 pop     ax ;~ 01C2:4010
 cs=0x1c2;eip=0x004011; 	X(POP(es));	// 10055 pop     es ;~ 01C2:4011
 cs=0x1c2;eip=0x004012; 	T(STI);	// 10057 sti ;~ 01C2:4012
 cs=0x1c2;eip=0x004013; 	R(RETN(0));	// 10058 retn ;~ 01C2:4013
-seg001_4014_proc:
-	// 10062 
-cs=0x1c2;eip=0x004014; 	T(STI);	// 10062 sti ;~ 01C2:4014
-ret_1c2_4015:
-	// 5350 
-cs=0x1c2;eip=0x004015; 	X(PUSH(ax));	// 10063 push    ax ;~ 01C2:4015
-cs=0x1c2;eip=0x004016; 	X(PUSH(ds));	// 10064 push    ds ;~ 01C2:4016
-loc_14217:
-	// 5351 
-cs=0x1c2;eip=0x004017; 	T(MOV(ax, seg_offset(seg002)));	// 10067 mov     ax, seg seg002 ;~ 01C2:4017
-cs=0x1c2;eip=0x00401a; 	T(MOV(ds, ax));	// 10068 mov     ds, ax ;~ 01C2:401A
-cs=0x1c2;eip=0x00401c; 	X(DEC(byte_156cf));	// 10070 dec     byte_156CF ;~ 01C2:401C
-cs=0x1c2;eip=0x004020; 	J(JNS(loc_1422d));	// 10071 jns     short loc_1422D ;~ 01C2:4020
-cs=0x1c2;eip=0x004022; 	J(CALL(sub_13c4f,0));	// 10072 call    sub_13C4F ;~ 01C2:4022
-cs=0x1c2;eip=0x004025; 	X(MOV(word_156d0, ax));	// 10073 mov     word_156D0, ax ;~ 01C2:4025
-cs=0x1c2;eip=0x004028; 	X(MOV(byte_156cf, 0x0F));	// 10074 mov     byte_156CF, 0Fh ;~ 01C2:4028
-loc_1422d:
-	// 5352 
-cs=0x1c2;eip=0x00402d; 	X(SHR(word_156d0, 1));	// 10077 shr     word_156D0, 1 ;~ 01C2:402D
-cs=0x1c2;eip=0x004031; 	J(JNC(loc_141bc));	// 10078 jnb     short loc_141BC ;~ 01C2:4031
-cs=0x1c2;eip=0x004033; 	R(IN(al, 0x61));	// 10079 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01C2:4033
-cs=0x1c2;eip=0x004035; 	T(AND(al, 0x0FE));	// 10087 and     al, 0FEh ;~ 01C2:4035
-cs=0x1c2;eip=0x004037; 	T(XOR(al, 2));	// 10088 xor     al, 2 ;~ 01C2:4037
-cs=0x1c2;eip=0x004039; 	R(OUT(0x61, al));	// 10089 out     61h, al         ; PC/XT PPI port B bits: ;~ 01C2:4039
-cs=0x1c2;eip=0x00403b; 	T(MOV(al, 0x20));	// 10097 mov     al, 20h ; ' ' ;~ 01C2:403B
-cs=0x1c2;eip=0x00403d; 	R(OUT(0x20, al));	// 10098 out     20h, al         ; Interrupt controller, 8259A. ;~ 01C2:403D
-cs=0x1c2;eip=0x00403f; 	X(DEC(word_156d2));	// 10099 dec     word_156D2 ;~ 01C2:403F
-cs=0x1c2;eip=0x004043; 	J(JNZ(loc_14248));	// 10100 jnz     short loc_14248 ;~ 01C2:4043
-cs=0x1c2;eip=0x004045; 	J(CALL(sub_13ea0,0));	// 10101 call    sub_13EA0 ;~ 01C2:4045
-loc_14248:
-	// 5353 
-cs=0x1c2;eip=0x004048; 	X(POP(ds));	// 10104 pop     ds ;~ 01C2:4048
-cs=0x1c2;eip=0x004049; 	X(POP(ax));	// 10106 pop     ax ;~ 01C2:4049
-cs=0x1c2;eip=0x00404a; 	R(IRET);	// 10107 iret ;~ 01C2:404A
-sub_14250:
-	// 10115 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_3fd3: 	goto ret_1c2_3fd3;
+        case m2c::ksub_141d2: 	goto sub_141d2;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14250(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14250:
+    _begin:
 cs=0x1c2;eip=0x004050; 	X(PUSH(ax));	// 10117 push    ax ;~ 01C2:4050
 ret_1c2_4051:
 	// 5354 
@@ -8396,15 +12425,61 @@ cs=0x1c2;eip=0x004067; 	T(MOV(di, ax));	// 10128 mov     di, ax ;~ 01C2:4067
 cs=0x1c2;eip=0x004069; 	X(POP(dx));	// 10129 pop     dx ;~ 01C2:4069
 cs=0x1c2;eip=0x00406a; 	X(POP(ax));	// 10130 pop     ax ;~ 01C2:406A
 cs=0x1c2;eip=0x00406b; 	R(RETN(0));	// 10131 retn ;~ 01C2:406B
-sub_1426c:
-	// 10138 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_4051: 	goto ret_1c2_4051;
+        case m2c::ksub_14250: 	goto sub_14250;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1426c(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1426c:
+    _begin:
 cs=0x1c2;eip=0x00406c; 	T(MOV(si, 0x0BE70));	// 10140 mov     si, 0BE70h ;~ 01C2:406C
 ret_1c2_406f:
 	// 5355 
 cs=0x1c2;eip=0x00406f; 	J(CALL(sub_14273,0));	// 10141 call    sub_14273 ;~ 01C2:406F
 cs=0x1c2;eip=0x004072; 	R(RETN(0));	// 10142 retn ;~ 01C2:4072
-sub_14273:
-	// 10149 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_406f: 	goto ret_1c2_406f;
+        case m2c::ksub_1426c: 	goto sub_1426c;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14273(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14273:
+    _begin:
 cs=0x1c2;eip=0x004073; 	X(PUSH(cx));	// 10150 push    cx ;~ 01C2:4073
 ret_1c2_4074:
 	// 5356 
@@ -8446,8 +12521,34 @@ cs=0x1c2;eip=0x0040ad; 	X(STOSW);	// 10189 stosw ;~ 01C2:40AD
 cs=0x1c2;eip=0x0040ae; 	T(ADD(di, 0x0E04E));	// 10190 add     di, 0E04Eh ;~ 01C2:40AE
 cs=0x1c2;eip=0x0040b2; 	J(LOOP(loc_142a0));	// 10191 loop    loc_142A0 ;~ 01C2:40B2
 cs=0x1c2;eip=0x0040b4; 	J(JMP(loc_1429c));	// 10192 jmp     short loc_1429C ;~ 01C2:40B4
-seg001_40b6_proc:
-	// 10196 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_14290: 	goto loc_14290;
+        case m2c::kloc_1429c: 	goto loc_1429c;
+        case m2c::kloc_142a0: 	goto loc_142a0;
+        case m2c::kret_1c2_4074: 	goto ret_1c2_4074;
+        case m2c::ksub_14273: 	goto sub_14273;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool seg001_40b6_proc(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    seg001_40b6_proc:
+    _begin:
 cs=0x1c2;eip=0x0040b6; 	X(PUSH(cx));	// 10196 push    cx ;~ 01C2:40B6
 ret_1c2_40b7:
 	// 5360 
@@ -8475,8 +12576,32 @@ cs=0x1c2;eip=0x0040da; 	X(POP(ax));	// 10218 pop     ax ;~ 01C2:40DA
 cs=0x1c2;eip=0x0040db; 	X(POP(es));	// 10219 pop     es ;~ 01C2:40DB
 cs=0x1c2;eip=0x0040dc; 	X(POP(cx));	// 10221 pop     cx ;~ 01C2:40DC
 cs=0x1c2;eip=0x0040dd; 	R(RETN(0));	// 10222 retn ;~ 01C2:40DD
-sub_142de:
-	// 10228 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_142cc: 	goto loc_142cc;
+        case m2c::kret_1c2_40b7: 	goto ret_1c2_40b7;
+        case m2c::kseg001_40b6_proc: 	goto seg001_40b6_proc;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_142de(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_142de:
+    _begin:
 cs=0x1c2;eip=0x0040de; 	X(PUSH(ax));	// 10229 push    ax ;~ 01C2:40DE
 ret_1c2_40df:
 	// 5362 
@@ -8495,8 +12620,33 @@ loc_142f2:
 	// 5364 
 cs=0x1c2;eip=0x0040f2; 	X(POP(ax));	// 10244 pop     ax ;~ 01C2:40F2
 cs=0x1c2;eip=0x0040f3; 	R(RETN(0));	// 10245 retn ;~ 01C2:40F3
-sub_142f4:
-	// 10252 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_142e2: 	goto loc_142e2;
+        case m2c::kloc_142f2: 	goto loc_142f2;
+        case m2c::kret_1c2_40df: 	goto ret_1c2_40df;
+        case m2c::ksub_142de: 	goto sub_142de;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_142f4(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_142f4:
+    _begin:
 cs=0x1c2;eip=0x0040f4; 	X(PUSH(ax));	// 10254 push    ax ;~ 01C2:40F4
 loc_142f5:
 	// 5365 
@@ -8512,67 +12662,63 @@ loc_14306:
 	// 5366 
 cs=0x1c2;eip=0x004106; 	X(POP(ax));	// 10268 pop     ax ;~ 01C2:4106
 cs=0x1c2;eip=0x004107; 	R(RETN(0));	// 10269 retn ;~ 01C2:4107
-sub_14308:
-	// 10276 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_142f5: 	goto loc_142f5;
+        case m2c::kloc_14306: 	goto loc_14306;
+        case m2c::ksub_142f4: 	goto sub_142f4;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14308(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14308:
+    _begin:
 cs=0x1c2;eip=0x004108; 	X(MOV(byte_1fece, 0x0FF));	// 10278 mov     byte_1FECE, 0FFh ;~ 01C2:4108
 ret_1c2_410d:
 	// 5367 
 cs=0x1c2;eip=0x00410d; 	J(CALL(sub_142f4,0));	// 10279 call    sub_142F4 ;~ 01C2:410D
 cs=0x1c2;eip=0x004110; 	X(MOV(byte_1fece, 0));	// 10280 mov     byte_1FECE, 0 ;~ 01C2:4110
 cs=0x1c2;eip=0x004115; 	R(RETN(0));	// 10281 retn ;~ 01C2:4115
-seg001_4116_proc:
-	// 10287 
-loc_14316:
-	// 5368 
-cs=0x1c2;eip=0x004116; 	X(PUSH(es));	// 10288 push    es ;~ 01C2:4116
-cs=0x1c2;eip=0x004117; 	T(MOV(dx, 0));	// 10289 mov     dx, 0 ;~ 01C2:4117
-loc_1431a:
-	// 5369 
-cs=0x1c2;eip=0x00411a; 	T(MOV(ax, seg_offset(seg003)));	// 10292 mov     ax, seg seg003 ;~ 01C2:411A
-cs=0x1c2;eip=0x00411d; 	T(MOV(es, ax));	// 10293 mov     es, ax ;~ 01C2:411D
-cs=0x1c2;eip=0x00411f; 	T(MOV(ax, word_1fed4));	// 10295 mov     ax, word_1FED4 ;~ 01C2:411F
-cs=0x1c2;eip=0x004122; 	T(SHL(ax, 1));	// 10296 shl     ax, 1 ;~ 01C2:4122
-cs=0x1c2;eip=0x004124; 	X(MOV(word_1fed2, ax));	// 10297 mov     word_1FED2, ax ;~ 01C2:4124
-loc_14327:
-	// 5370 
-cs=0x1c2;eip=0x004127; 	T(MOV(cx, word_1fed4));	// 10300 mov     cx, word_1FED4 ;~ 01C2:4127
-cs=0x1c2;eip=0x00412b; 	T(MOV(si, 0x0BD97));	// 10301 mov     si, 0BD97h ;~ 01C2:412B
-loc_1432e:
-	// 5371 
-cs=0x1c2;eip=0x00412e; 	T(LODSW);	// 10304 lodsw ;~ 01C2:412E
-cs=0x1c2;eip=0x00412f; 	T(MOV(bp, si));	// 10305 mov     bp, si ;~ 01C2:412F
-cs=0x1c2;eip=0x004131; 	T(ADD(ax, dx));	// 10306 add     ax, dx ;~ 01C2:4131
-cs=0x1c2;eip=0x004133; 	T(MOV(si, ax));	// 10307 mov     si, ax ;~ 01C2:4133
-cs=0x1c2;eip=0x004135; 	T(LODSW);	// 10308 lodsw ;~ 01C2:4135
-cs=0x1c2;eip=0x004136; 	T(AND(ax, 0x0AAAA));	// 10309 and     ax, 0AAAAh ;~ 01C2:4136
-cs=0x1c2;eip=0x004139; 	X(STOSW);	// 10310 stosw ;~ 01C2:4139
-cs=0x1c2;eip=0x00413a; 	T(MOV(si, bp));	// 10311 mov     si, bp ;~ 01C2:413A
-cs=0x1c2;eip=0x00413c; 	J(LOOP(loc_1432e));	// 10312 loop    loc_1432E ;~ 01C2:413C
-cs=0x1c2;eip=0x00413e; 	T(ADD(dx, 2));	// 10313 add     dx, 2 ;~ 01C2:413E
-cs=0x1c2;eip=0x004141; 	T(ADD(di, 0x2000));	// 10314 add     di, 2000h ;~ 01C2:4141
-cs=0x1c2;eip=0x004145; 	T(SUB(di, word_1fed2));	// 10315 sub     di, word_1FED2 ;~ 01C2:4145
-cs=0x1c2;eip=0x004149; 	T(MOV(cx, word_1fed4));	// 10316 mov     cx, word_1FED4 ;~ 01C2:4149
-cs=0x1c2;eip=0x00414d; 	T(MOV(si, 0x0BD97));	// 10317 mov     si, 0BD97h ;~ 01C2:414D
-loc_14350:
-	// 5372 
-cs=0x1c2;eip=0x004150; 	T(LODSW);	// 10320 lodsw ;~ 01C2:4150
-cs=0x1c2;eip=0x004151; 	T(MOV(bp, si));	// 10321 mov     bp, si ;~ 01C2:4151
-cs=0x1c2;eip=0x004153; 	T(ADD(ax, dx));	// 10322 add     ax, dx ;~ 01C2:4153
-cs=0x1c2;eip=0x004155; 	T(MOV(si, ax));	// 10323 mov     si, ax ;~ 01C2:4155
-cs=0x1c2;eip=0x004157; 	T(LODSW);	// 10324 lodsw ;~ 01C2:4157
-cs=0x1c2;eip=0x004158; 	T(AND(ax, 0x0AAAA));	// 10325 and     ax, 0AAAAh ;~ 01C2:4158
-cs=0x1c2;eip=0x00415b; 	X(STOSW);	// 10326 stosw ;~ 01C2:415B
-cs=0x1c2;eip=0x00415c; 	T(MOV(si, bp));	// 10327 mov     si, bp ;~ 01C2:415C
-cs=0x1c2;eip=0x00415e; 	J(LOOP(loc_14350));	// 10328 loop    loc_14350 ;~ 01C2:415E
-cs=0x1c2;eip=0x004160; 	T(ADD(dx, 2));	// 10329 add     dx, 2 ;~ 01C2:4160
-cs=0x1c2;eip=0x004163; 	T(ADD(di, 0x0E050));	// 10330 add     di, 0E050h ;~ 01C2:4163
-cs=0x1c2;eip=0x004167; 	T(SUB(di, word_1fed2));	// 10331 sub     di, word_1FED2 ;~ 01C2:4167
-cs=0x1c2;eip=0x00416b; 	T(CMP(dx, 0x10));	// 10332 cmp     dx, 10h ;~ 01C2:416B
-cs=0x1c2;eip=0x00416e; 	J(JNZ(loc_14327));	// 10333 jnz     short loc_14327 ;~ 01C2:416E
-cs=0x1c2;eip=0x004170; 	X(POP(es));	// 10334 pop     es ;~ 01C2:4170
-cs=0x1c2;eip=0x004171; 	R(RETN(0));	// 10336 retn ;~ 01C2:4171
-sub_14372:
-	// 10342 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_410d: 	goto ret_1c2_410d;
+        case m2c::ksub_14308: 	goto sub_14308;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_14372(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_14372:
+    _begin:
 cs=0x1c2;eip=0x004172; 	X(PUSH(es));	// 10344 push    es ;~ 01C2:4172
 ret_1c2_4173:
 	// 5373 
@@ -8600,8 +12746,31 @@ cs=0x1c2;eip=0x00419a; 	X(POP(cx));	// 10364 pop     cx ;~ 01C2:419A
 cs=0x1c2;eip=0x00419b; 	X(POP(ax));	// 10365 pop     ax ;~ 01C2:419B
 cs=0x1c2;eip=0x00419c; 	X(POP(es));	// 10366 pop     es ;~ 01C2:419C
 cs=0x1c2;eip=0x00419d; 	R(RETN(0));	// 10368 retn ;~ 01C2:419D
-sub_1439e:
-	// 10376 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_4173: 	goto ret_1c2_4173;
+        case m2c::ksub_14372: 	goto sub_14372;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1439e(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1439e:
+    _begin:
 cs=0x1c2;eip=0x00419e; 	X(PUSH(ax));	// 10377 push    ax ;~ 01C2:419E
 ret_1c2_419f:
 	// 5374 
@@ -8614,8 +12783,31 @@ cs=0x1c2;eip=0x0041aa; 	X(POP(dx));	// 10383 pop     dx ;~ 01C2:41AA
 cs=0x1c2;eip=0x0041ab; 	X(POP(bx));	// 10384 pop     bx ;~ 01C2:41AB
 cs=0x1c2;eip=0x0041ac; 	X(POP(ax));	// 10385 pop     ax ;~ 01C2:41AC
 cs=0x1c2;eip=0x0041ad; 	R(RETN(0));	// 10386 retn ;~ 01C2:41AD
-sub_143ae:
-	// 10393 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_419f: 	goto ret_1c2_419f;
+        case m2c::ksub_1439e: 	goto sub_1439e;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_143ae(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_143ae:
+    _begin:
 cs=0x1c2;eip=0x0041ae; 	X(PUSH(ax));	// 10394 push    ax ;~ 01C2:41AE
 ret_1c2_41af:
 	// 5375 
@@ -8628,106 +12820,31 @@ cs=0x1c2;eip=0x0041ba; 	X(POP(dx));	// 10400 pop     dx ;~ 01C2:41BA
 cs=0x1c2;eip=0x0041bb; 	X(POP(bx));	// 10401 pop     bx ;~ 01C2:41BB
 cs=0x1c2;eip=0x0041bc; 	X(POP(ax));	// 10402 pop     ax ;~ 01C2:41BC
 cs=0x1c2;eip=0x0041bd; 	R(RETN(0));	// 10403 retn ;~ 01C2:41BD
-seg001_41be_proc:
-	// 10409 
-loc_143be:
-	// 5376 
-cs=0x1c2;eip=0x0041be; 	J(CALL(sub_134fa,0));	// 10410 call    sub_134FA ;~ 01C2:41BE
-cs=0x1c2;eip=0x0041c1; 	J(CALL(sub_13526,0));	// 10411 call    sub_13526 ;~ 01C2:41C1
-cs=0x1c2;eip=0x0041c4; 	T(MOV(si, 0x0B9AB));	// 10412 mov     si, 0B9ABh ;~ 01C2:41C4
-cs=0x1c2;eip=0x0041c7; 	J(CALL(sub_142f4,0));	// 10413 call    sub_142F4 ;~ 01C2:41C7
-cs=0x1c2;eip=0x0041ca; 	T(MOV(si, 0x0BA6E));	// 10414 mov     si, 0BA6Eh ;~ 01C2:41CA
-cs=0x1c2;eip=0x0041cd; 	X(MOV(word_1fed0, si));	// 10415 mov     word_1FED0, si ;~ 01C2:41CD
-cs=0x1c2;eip=0x0041d1; 	T(MOV(si, 0x0E1E));	// 10416 mov     si, 0E1Eh ;~ 01C2:41D1
-cs=0x1c2;eip=0x0041d4; 	X(MOV(word_201d3, 0));	// 10417 mov     word_201D3, 0 ;~ 01C2:41D4
-cs=0x1c2;eip=0x0041da; 	T(MOV(cx, 5));	// 10418 mov     cx, 5 ;~ 01C2:41DA
-loc_143dd:
-	// 5377 
-cs=0x1c2;eip=0x0041dd; 	X(PUSH(cx));	// 10421 push    cx ;~ 01C2:41DD
-cs=0x1c2;eip=0x0041de; 	T(LODSW);	// 10422 lodsw ;~ 01C2:41DE
-cs=0x1c2;eip=0x0041df; 	X(PUSH(si));	// 10423 push    si ;~ 01C2:41DF
-cs=0x1c2;eip=0x0041e0; 	J(CALL(sub_1446b,0));	// 10424 call    sub_1446B ;~ 01C2:41E0
-cs=0x1c2;eip=0x0041e3; 	X(POP(si));	// 10425 pop     si ;~ 01C2:41E3
-cs=0x1c2;eip=0x0041e4; 	X(POP(cx));	// 10426 pop     cx ;~ 01C2:41E4
-cs=0x1c2;eip=0x0041e5; 	J(LOOP(loc_143dd));	// 10427 loop    loc_143DD ;~ 01C2:41E5
-cs=0x1c2;eip=0x0041e7; 	T(MOV(di, 0x0E1E));	// 10428 mov     di, 0E1Eh ;~ 01C2:41E7
-cs=0x1c2;eip=0x0041ea; 	T(MOV(si, 0x0BA78));	// 10429 mov     si, 0BA78h ;~ 01C2:41EA
-cs=0x1c2;eip=0x0041ed; 	X(MOV(word_1fed0, si));	// 10430 mov     word_1FED0, si ;~ 01C2:41ED
-cs=0x1c2;eip=0x0041f1; 	T(MOV(si, 0x0BA62));	// 10431 mov     si, 0BA62h ;~ 01C2:41F1
-cs=0x1c2;eip=0x0041f4; 	X(PUSH(bx));	// 10432 push    bx ;~ 01C2:41F4
-cs=0x1c2;eip=0x0041f5; 	T(MOV(bx, 0x0BA35));	// 10433 mov     bx, 0BA35h ;~ 01C2:41F5
-loc_143f8:
-	// 5378 
-cs=0x1c2;eip=0x0041f8; 	X(PUSH(si));	// 10437 push    si ;~ 01C2:41F8
-cs=0x1c2;eip=0x0041f9; 	X(PUSH(di));	// 10438 push    di ;~ 01C2:41F9
-cs=0x1c2;eip=0x0041fa; 	X(MOV(word_156e6, 0));	// 10439 mov     word_156E6, 0 ;~ 01C2:41FA
-loc_14400:
-	// 5379 
-cs=0x1c2;eip=0x004200; 	T(MOV(ah, 1));	// 10442 mov     ah, 1 ;~ 01C2:4200
-cs=0x1c2;eip=0x004202; 	R(_INT(0x16));	// 10443 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:4202
-cs=0x1c2;eip=0x004204; 	J(JNZ(loc_14412));	// 10447 jnz     short loc_14412 ;~ 01C2:4204
-cs=0x1c2;eip=0x004206; 	T(MOV(ax, word_156e6));	// 10448 mov     ax, word_156E6 ;~ 01C2:4206
-cs=0x1c2;eip=0x004209; 	T(CMP(ax, 0x960));	// 10449 cmp     ax, 960h ;~ 01C2:4209
-cs=0x1c2;eip=0x00420c; 	J(JC(loc_14400));	// 10450 jb      short loc_14400 ;~ 01C2:420C
-cs=0x1c2;eip=0x00420e; 	X(POP(di));	// 10451 pop     di ;~ 01C2:420E
-cs=0x1c2;eip=0x00420f; 	X(POP(si));	// 10452 pop     si ;~ 01C2:420F
-cs=0x1c2;eip=0x004210; 	J(JMP(loc_14467));	// 10453 jmp     short loc_14467 ;~ 01C2:4210
-loc_14412:
-	// 5380 
-cs=0x1c2;eip=0x004212; 	T(MOV(ah, 0));	// 10457 mov     ah, 0 ;~ 01C2:4212
-cs=0x1c2;eip=0x004214; 	R(_INT(0x16));	// 10458 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:4214
-cs=0x1c2;eip=0x004216; 	X(POP(di));	// 10460 pop     di ;~ 01C2:4216
-cs=0x1c2;eip=0x004217; 	X(POP(si));	// 10461 pop     si ;~ 01C2:4217
-cs=0x1c2;eip=0x004218; 	T(OR(al, al));	// 10462 or      al, al ;~ 01C2:4218
-cs=0x1c2;eip=0x00421a; 	J(JZ(loc_14420));	// 10463 jz      short loc_14420 ;~ 01C2:421A
-cs=0x1c2;eip=0x00421c; 	T(MOV(ah, 0));	// 10464 mov     ah, 0 ;~ 01C2:421C
-cs=0x1c2;eip=0x00421e; 	J(JMP(loc_1442e));	// 10465 jmp     short loc_1442E ;~ 01C2:421E
-loc_14420:
-	// 5381 
-cs=0x1c2;eip=0x004220; 	T(CMP(ah, 0x3B));	// 10469 cmp     ah, 3Bh ; ';' ;~ 01C2:4220
-cs=0x1c2;eip=0x004223; 	J(JNZ(loc_14429));	// 10470 jnz     short loc_14429 ;~ 01C2:4223
-cs=0x1c2;eip=0x004225; 	X(POP(bx));	// 10471 pop     bx ;~ 01C2:4225
-cs=0x1c2;eip=0x004226; 	J(JMP(loc_1378a));	// 10472 jmp     loc_1378A ;~ 01C2:4226
-loc_14429:
-	// 5382 
-cs=0x1c2;eip=0x004229; 	T(CMP(ah, 0x3C));	// 10476 cmp     ah, 3Ch ; '<' ;~ 01C2:4229
-cs=0x1c2;eip=0x00422c; 	J(JZ(loc_14467));	// 10477 jz      short loc_14467 ;~ 01C2:422C
-loc_1442e:
-	// 5383 
-cs=0x1c2;eip=0x00422e; 	J(CALL(sub_144b6,0));	// 10480 call    sub_144B6 ;~ 01C2:422E
-cs=0x1c2;eip=0x004231; 	J(JC(loc_143f8));	// 10481 jb      short loc_143F8 ;~ 01C2:4231
-cs=0x1c2;eip=0x004233; 	J(CALL(sub_1446b,0));	// 10482 call    sub_1446B ;~ 01C2:4233
-cs=0x1c2;eip=0x004236; 	T(ADD(di, *(dw*)(raddr(ds,si))));	// 10483 add     di, [si] ;~ 01C2:4236
-cs=0x1c2;eip=0x004238; 	T(ADD(si, 2));	// 10484 add     si, 2 ;~ 01C2:4238
-cs=0x1c2;eip=0x00423b; 	X(MOV(*(dw*)(raddr(ds,di)), ax));	// 10485 mov     [di], ax ;~ 01C2:423B
-cs=0x1c2;eip=0x00423d; 	T(TEST(*(dw*)(raddr(ds,si)), 0x0FF));	// 10486 test    word ptr [si], 0FFh ;~ 01C2:423D
-cs=0x1c2;eip=0x004241; 	J(JZ(loc_14451));	// 10487 jz      short loc_14451 ;~ 01C2:4241
-cs=0x1c2;eip=0x004243; 	X(PUSH(si));	// 10488 push    si ;~ 01C2:4243
-cs=0x1c2;eip=0x004244; 	X(PUSH(di));	// 10489 push    di ;~ 01C2:4244
-cs=0x1c2;eip=0x004245; 	T(MOV(si, bx));	// 10490 mov     si, bx ;~ 01C2:4245
-cs=0x1c2;eip=0x004247; 	J(CALL(sub_142f4,0));	// 10491 call    sub_142F4 ;~ 01C2:4247
-cs=0x1c2;eip=0x00424a; 	X(POP(di));	// 10492 pop     di ;~ 01C2:424A
-cs=0x1c2;eip=0x00424b; 	X(POP(si));	// 10493 pop     si ;~ 01C2:424B
-cs=0x1c2;eip=0x00424c; 	T(ADD(bx, 9));	// 10494 add     bx, 9 ;~ 01C2:424C
-cs=0x1c2;eip=0x00424f; 	J(JMP(loc_143f8));	// 10495 jmp     short loc_143F8 ;~ 01C2:424F
-loc_14451:
-	// 5384 
-cs=0x1c2;eip=0x004251; 	T(XOR(cx, cx));	// 10499 xor     cx, cx ;~ 01C2:4251
-loc_14453:
-	// 5385 
-cs=0x1c2;eip=0x004253; 	R(LOOP(loc_14453));	// 10502 loop    loc_14453 ;~ 01C2:4253
-cs=0x1c2;eip=0x004255; 	X(POP(bx));	// 10503 pop     bx ;~ 01C2:4255
-cs=0x1c2;eip=0x004256; 	X(MOV(byte_154c2, 0x0B));	// 10504 mov     byte_154C2, 0Bh ;~ 01C2:4256
-cs=0x1c2;eip=0x00425b; 	J(CALL(sub_14372,0));	// 10505 call    sub_14372 ;~ 01C2:425B
-cs=0x1c2;eip=0x00425e; 	T(MOV(cx, 0x960));	// 10506 mov     cx, 960h ;~ 01C2:425E
-cs=0x1c2;eip=0x004261; 	J(CALL(sub_14612,0));	// 10507 call    sub_14612 ;~ 01C2:4261
-cs=0x1c2;eip=0x004264; 	J(JMP(loc_13d1e));	// 10508 jmp     loc_13D1E ;~ 01C2:4264
-loc_14467:
-	// 5386 
-cs=0x1c2;eip=0x004267; 	X(POP(bx));	// 10513 pop     bx ;~ 01C2:4267
-cs=0x1c2;eip=0x004268; 	J(JMP(loc_13d1e));	// 10514 jmp     loc_13D1E ;~ 01C2:4268
-sub_1446b:
-	// 10520 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_41af: 	goto ret_1c2_41af;
+        case m2c::ksub_143ae: 	goto sub_143ae;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_1446b(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_1446b:
+    _begin:
 cs=0x1c2;eip=0x00426b; 	X(PUSH(si));	// 10522 push    si ;~ 01C2:426B
 ret_1c2_426c:
 	// 5387 
@@ -8778,8 +12895,37 @@ cs=0x1c2;eip=0x0042ad; 	T(CMP(ah, 0x50));	// 10572 cmp     ah, 50h ; 'P' ;~ 01C2
 cs=0x1c2;eip=0x0042b0; 	J(JNZ(loc_1448e));	// 10573 jnz     short loc_1448E ;~ 01C2:42B0
 cs=0x1c2;eip=0x0042b2; 	T(MOV(al, 0x82));	// 10574 mov     al, 82h ; '‚' ;~ 01C2:42B2
 cs=0x1c2;eip=0x0042b4; 	J(JMP(loc_1448b));	// 10575 jmp     short loc_1448B ;~ 01C2:42B4
-sub_144b6:
-	// 10582 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_1448b: 	goto loc_1448b;
+        case m2c::kloc_1448e: 	goto loc_1448e;
+        case m2c::kloc_14492: 	goto loc_14492;
+        case m2c::kloc_1449b: 	goto loc_1449b;
+        case m2c::kloc_144a4: 	goto loc_144a4;
+        case m2c::kloc_144ad: 	goto loc_144ad;
+        case m2c::kret_1c2_426c: 	goto ret_1c2_426c;
+        case m2c::ksub_1446b: 	goto sub_1446b;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_144b6(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_144b6:
+    _begin:
 cs=0x1c2;eip=0x0042b6; 	X(PUSH(ax));	// 10583 push    ax ;~ 01C2:42B6
 ret_1c2_42b7:
 	// 5394 
@@ -8812,89 +12958,35 @@ cs=0x1c2;eip=0x0042d9; 	X(POP(si));	// 10611 pop     si ;~ 01C2:42D9
 cs=0x1c2;eip=0x0042da; 	X(POP(bx));	// 10612 pop     bx ;~ 01C2:42DA
 cs=0x1c2;eip=0x0042db; 	X(POP(ax));	// 10613 pop     ax ;~ 01C2:42DB
 cs=0x1c2;eip=0x0042dc; 	R(RETN(0));	// 10614 retn ;~ 01C2:42DC
-seg001_42dd_proc:
-	// 10620 
-loc_144dd:
-	// 5399 
-cs=0x1c2;eip=0x0042dd; 	J(CALL(sub_134fa,0));	// 10621 call    sub_134FA ;~ 01C2:42DD
-cs=0x1c2;eip=0x0042e0; 	J(CALL(sub_13526,0));	// 10622 call    sub_13526 ;~ 01C2:42E0
-cs=0x1c2;eip=0x0042e3; 	T(MOV(si, 0x0BA82));	// 10623 mov     si, 0BA82h ;~ 01C2:42E3
-cs=0x1c2;eip=0x0042e6; 	J(CALL(sub_142f4,0));	// 10624 call    sub_142F4 ;~ 01C2:42E6
-cs=0x1c2;eip=0x0042e9; 	T(MOV(si, 0x0BB36));	// 10625 mov     si, 0BB36h ;~ 01C2:42E9
-cs=0x1c2;eip=0x0042ec; 	X(MOV(word_1fed0, si));	// 10626 mov     word_1FED0, si ;~ 01C2:42EC
-cs=0x1c2;eip=0x0042f0; 	X(MOV(byte_1fecf, 0));	// 10627 mov     byte_1FECF, 0 ;~ 01C2:42F0
-loc_144f5:
-	// 5400 
-cs=0x1c2;eip=0x0042f5; 	X(INC(byte_1fecf));	// 10631 inc     byte_1FECF ;~ 01C2:42F5
-cs=0x1c2;eip=0x0042f9; 	T(MOV(si, word_1fed0));	// 10632 mov     si, word_1FED0 ;~ 01C2:42F9
-cs=0x1c2;eip=0x0042fd; 	T(MOV(di, si));	// 10633 mov     di, si ;~ 01C2:42FD
-cs=0x1c2;eip=0x0042ff; 	T(ADD(di, 0x0F));	// 10634 add     di, 0Fh ;~ 01C2:42FF
-cs=0x1c2;eip=0x004302; 	X(MOV(word_1fed0, di));	// 10635 mov     word_1FED0, di ;~ 01C2:4302
-cs=0x1c2;eip=0x004306; 	J(CALL(sub_14308,0));	// 10636 call    sub_14308 ;~ 01C2:4306
-cs=0x1c2;eip=0x004309; 	T(MOV(cx, 0x0B4));	// 10637 mov     cx, 0B4h ; '´' ;~ 01C2:4309
-cs=0x1c2;eip=0x00430c; 	J(CALL(sub_14612,0));	// 10638 call    sub_14612 ;~ 01C2:430C
-cs=0x1c2;eip=0x00430f; 	J(CALL(sub_145c6,0));	// 10639 call    sub_145C6 ;~ 01C2:430F
-cs=0x1c2;eip=0x004312; 	J(CALL(sub_13541,0));	// 10640 call    sub_13541 ;~ 01C2:4312
-cs=0x1c2;eip=0x004315; 	T(MOV(al, byte_15453));	// 10641 mov     al, byte_15453 ;~ 01C2:4315
-cs=0x1c2;eip=0x004318; 	T(MOV(bl, byte_15454));	// 10642 mov     bl, byte_15454 ;~ 01C2:4318
-cs=0x1c2;eip=0x00431c; 	T(CMP(byte_1fecf, 1));	// 10643 cmp     byte_1FECF, 1 ;~ 01C2:431C
-cs=0x1c2;eip=0x004321; 	J(JZ(loc_14536));	// 10644 jz      short loc_14536 ;~ 01C2:4321
-cs=0x1c2;eip=0x004323; 	T(CMP(byte_1fecf, 2));	// 10645 cmp     byte_1FECF, 2 ;~ 01C2:4323
-cs=0x1c2;eip=0x004328; 	J(JZ(loc_14542));	// 10646 jz      short loc_14542 ;~ 01C2:4328
-cs=0x1c2;eip=0x00432a; 	X(MOV(byte_15456, al));	// 10647 mov     byte_15456, al ;~ 01C2:432A
-cs=0x1c2;eip=0x00432d; 	X(MOV(byte_15458, bl));	// 10648 mov     byte_15458, bl ;~ 01C2:432D
-cs=0x1c2;eip=0x004331; 	J(CALL(sub_145b1,0));	// 10649 call    sub_145B1 ;~ 01C2:4331
-cs=0x1c2;eip=0x004334; 	J(JMP(loc_1454e));	// 10650 jmp     short loc_1454E ;~ 01C2:4334
-loc_14536:
-	// 5401 
-cs=0x1c2;eip=0x004336; 	X(MOV(byte_15455, al));	// 10654 mov     byte_15455, al ;~ 01C2:4336
-cs=0x1c2;eip=0x004339; 	X(MOV(byte_15457, bl));	// 10655 mov     byte_15457, bl ;~ 01C2:4339
-cs=0x1c2;eip=0x00433d; 	J(CALL(sub_145b1,0));	// 10656 call    sub_145B1 ;~ 01C2:433D
-cs=0x1c2;eip=0x004340; 	J(JMP(loc_144f5));	// 10657 jmp     short loc_144F5 ;~ 01C2:4340
-loc_14542:
-	// 5402 
-cs=0x1c2;eip=0x004342; 	X(MOV(byte_1545b, al));	// 10661 mov     byte_1545B, al ;~ 01C2:4342
-cs=0x1c2;eip=0x004345; 	X(MOV(byte_1545c, bl));	// 10662 mov     byte_1545C, bl ;~ 01C2:4345
-cs=0x1c2;eip=0x004349; 	J(CALL(sub_145b1,0));	// 10663 call    sub_145B1 ;~ 01C2:4349
-cs=0x1c2;eip=0x00434c; 	J(JMP(loc_144f5));	// 10664 jmp     short loc_144F5 ;~ 01C2:434C
-loc_1454e:
-	// 5403 
-cs=0x1c2;eip=0x00434e; 	T(MOV(al, byte_15455));	// 10668 mov     al, byte_15455 ;~ 01C2:434E
-cs=0x1c2;eip=0x004351; 	T(SUB(al, byte_1545b));	// 10669 sub     al, byte_1545B ;~ 01C2:4351
-cs=0x1c2;eip=0x004355; 	T(SHR(al, 1));	// 10670 shr     al, 1 ;~ 01C2:4355
-cs=0x1c2;eip=0x004357; 	T(ADD(al, byte_1545b));	// 10671 add     al, byte_1545B ;~ 01C2:4357
-cs=0x1c2;eip=0x00435b; 	X(MOV(byte_15455, al));	// 10672 mov     byte_15455, al ;~ 01C2:435B
-cs=0x1c2;eip=0x00435e; 	T(MOV(al, byte_15457));	// 10673 mov     al, byte_15457 ;~ 01C2:435E
-cs=0x1c2;eip=0x004361; 	T(SUB(al, byte_1545c));	// 10674 sub     al, byte_1545C ;~ 01C2:4361
-cs=0x1c2;eip=0x004365; 	T(SHR(al, 1));	// 10675 shr     al, 1 ;~ 01C2:4365
-cs=0x1c2;eip=0x004367; 	T(ADD(al, byte_1545c));	// 10676 add     al, byte_1545C ;~ 01C2:4367
-cs=0x1c2;eip=0x00436b; 	X(MOV(byte_15457, al));	// 10677 mov     byte_15457, al ;~ 01C2:436B
-cs=0x1c2;eip=0x00436e; 	T(MOV(al, byte_1545c));	// 10678 mov     al, byte_1545C ;~ 01C2:436E
-cs=0x1c2;eip=0x004371; 	T(SUB(al, byte_15458));	// 10679 sub     al, byte_15458 ;~ 01C2:4371
-cs=0x1c2;eip=0x004375; 	T(SHR(al, 1));	// 10680 shr     al, 1 ;~ 01C2:4375
-cs=0x1c2;eip=0x004377; 	T(MOV(bl, byte_1545c));	// 10681 mov     bl, byte_1545C ;~ 01C2:4377
-cs=0x1c2;eip=0x00437b; 	T(SUB(bl, al));	// 10682 sub     bl, al ;~ 01C2:437B
-cs=0x1c2;eip=0x00437d; 	X(MOV(byte_15458, bl));	// 10683 mov     byte_15458, bl ;~ 01C2:437D
-cs=0x1c2;eip=0x004381; 	T(MOV(si, 0x0BB7B));	// 10684 mov     si, 0BB7Bh ;~ 01C2:4381
-cs=0x1c2;eip=0x004384; 	J(CALL(sub_14308,0));	// 10685 call    sub_14308 ;~ 01C2:4384
-cs=0x1c2;eip=0x004387; 	T(MOV(cx, 0x960));	// 10686 mov     cx, 960h ;~ 01C2:4387
-cs=0x1c2;eip=0x00438a; 	J(CALL(sub_14612,0));	// 10687 call    sub_14612 ;~ 01C2:438A
-cs=0x1c2;eip=0x00438d; 	T(MOV(bl, byte_1545b));	// 10688 mov     bl, byte_1545B ;~ 01C2:438D
-cs=0x1c2;eip=0x004391; 	T(MOV(dl, byte_1545c));	// 10689 mov     dl, byte_1545C ;~ 01C2:4391
-cs=0x1c2;eip=0x004395; 	T(CMP(dl, 0x10));	// 10690 cmp     dl, 10h ;~ 01C2:4395
-cs=0x1c2;eip=0x004398; 	J(JC(loc_145ae));	// 10691 jb      short loc_145AE ;~ 01C2:4398
-cs=0x1c2;eip=0x00439a; 	T(CMP(bl, 0x10));	// 10692 cmp     bl, 10h ;~ 01C2:439A
-cs=0x1c2;eip=0x00439d; 	J(JC(loc_145ae));	// 10693 jb      short loc_145AE ;~ 01C2:439D
-cs=0x1c2;eip=0x00439f; 	T(CMP(dl, 0x0F5));	// 10694 cmp     dl, 0F5h ; 'õ' ;~ 01C2:439F
-cs=0x1c2;eip=0x0043a2; 	J(JNC(loc_145ae));	// 10695 jnb     short loc_145AE ;~ 01C2:43A2
-cs=0x1c2;eip=0x0043a4; 	T(CMP(bl, 0x0F5));	// 10696 cmp     bl, 0F5h ; 'õ' ;~ 01C2:43A4
-cs=0x1c2;eip=0x0043a7; 	J(JNC(loc_145ae));	// 10697 jnb     short loc_145AE ;~ 01C2:43A7
-cs=0x1c2;eip=0x0043a9; 	X(MOV(byte_1545a, 0x0FF));	// 10698 mov     byte_1545A, 0FFh ;~ 01C2:43A9
-loc_145ae:
-	// 5404 
-cs=0x1c2;eip=0x0043ae; 	J(JMP(loc_13d1e));	// 10702 jmp     loc_13D1E ;~ 01C2:43AE
-sub_145b1:
-	// 10708 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kloc_144be: 	goto loc_144be;
+        case m2c::kloc_144c9: 	goto loc_144c9;
+        case m2c::kloc_144d3: 	goto loc_144d3;
+        case m2c::kloc_144d9: 	goto loc_144d9;
+        case m2c::kret_1c2_42b7: 	goto ret_1c2_42b7;
+        case m2c::ksub_144b6: 	goto sub_144b6;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_145b1(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_145b1:
+    _begin:
 cs=0x1c2;eip=0x0043b1; 	T(MOV(si, 0x0BB63));	// 10710 mov     si, 0BB63h ;~ 01C2:43B1
 ret_1c2_43b4:
 	// 5405 
@@ -8904,37 +12996,31 @@ cs=0x1c2;eip=0x0043ba; 	J(CALL(sub_14612,0));	// 10713 call    sub_14612 ;~ 01C2
 cs=0x1c2;eip=0x0043bd; 	X(MOV(byte_154c2, 5));	// 10714 mov     byte_154C2, 5 ;~ 01C2:43BD
 cs=0x1c2;eip=0x0043c2; 	J(CALL(sub_14372,0));	// 10715 call    sub_14372 ;~ 01C2:43C2
 cs=0x1c2;eip=0x0043c5; 	R(RETN(0));	// 10716 retn ;~ 01C2:43C5
-sub_145c6:
-	// 10723 
-cs=0x1c2;eip=0x0043c6; 	X(MOV(word_156e6, 0));	// 10727 mov     word_156E6, 0 ;~ 01C2:43C6
-loc_145cc:
-	// 5406 
-cs=0x1c2;eip=0x0043cc; 	J(CALL(sub_136a8,0));	// 10730 call    sub_136A8 ;~ 01C2:43CC
-cs=0x1c2;eip=0x0043cf; 	J(JNZ(locret_145ef));	// 10731 jnz     short locret_145EF ;~ 01C2:43CF
-cs=0x1c2;eip=0x0043d1; 	J(CALL(sub_145f0,0));	// 10732 call    sub_145F0 ;~ 01C2:43D1
-cs=0x1c2;eip=0x0043d4; 	T(OR(bl, bl));	// 10733 or      bl, bl ;~ 01C2:43D4
-cs=0x1c2;eip=0x0043d6; 	J(JZ(loc_145df));	// 10734 jz      short loc_145DF ;~ 01C2:43D6
-cs=0x1c2;eip=0x0043d8; 	T(CMP(bl, 1));	// 10735 cmp     bl, 1 ;~ 01C2:43D8
-cs=0x1c2;eip=0x0043db; 	J(JZ(loc_145eb));	// 10736 jz      short loc_145EB ;~ 01C2:43DB
-cs=0x1c2;eip=0x0043dd; 	J(JMP(loc_145e7));	// 10737 jmp     short loc_145E7 ;~ 01C2:43DD
-loc_145df:
-	// 5407 
-cs=0x1c2;eip=0x0043df; 	T(MOV(ax, word_156e6));	// 10741 mov     ax, word_156E6 ;~ 01C2:43DF
-cs=0x1c2;eip=0x0043e2; 	T(CMP(ax, 0x960));	// 10742 cmp     ax, 960h ;~ 01C2:43E2
-cs=0x1c2;eip=0x0043e5; 	J(JC(loc_145cc));	// 10743 jb      short loc_145CC ;~ 01C2:43E5
-loc_145e7:
-	// 5408 
-cs=0x1c2;eip=0x0043e7; 	X(POP(ax));	// 10746 pop     ax ;~ 01C2:43E7
-cs=0x1c2;eip=0x0043e8; 	J(JMP(loc_13d1e));	// 10747 jmp     loc_13D1E ;~ 01C2:43E8
-loc_145eb:
-	// 5409 
-cs=0x1c2;eip=0x0043eb; 	X(POP(ax));	// 10751 pop     ax ;~ 01C2:43EB
-cs=0x1c2;eip=0x0043ec; 	J(JMP(loc_1378a));	// 10752 jmp     loc_1378A ;~ 01C2:43EC
-locret_145ef:
-	// 5410 
-cs=0x1c2;eip=0x0043ef; 	R(RETN(0));	// 10756 retn ;~ 01C2:43EF
-sub_145f0:
-	// 10763 
+
+    assert(0);
+    __dispatch_call:
+#ifdef DOSBOX_CUSTOM
+    if ((__disp >> 16) == 0xf000)
+	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
+    if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
+#endif
+    switch (__disp) {
+        case m2c::kret_1c2_43b4: 	goto ret_1c2_43b4;
+        case m2c::ksub_145b1: 	goto sub_145b1;
+        default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+    };
+}
+
+
+
+ bool sub_145f0(m2c::_offsets _i, struct m2c::_STATE* _state){
+    X86_REGREF
+    __disp = _i;
+
+    if (__disp == 0) goto _begin;
+    else goto __dispatch_call;
+    sub_145f0:
+    _begin:
 cs=0x1c2;eip=0x0043f0; 	T(MOV(ah, 1));	// 10764 mov     ah, 1 ;~ 01C2:43F0
 ret_1c2_43f2:
 	// 5411 
@@ -8960,34 +13046,6 @@ cs=0x1c2;eip=0x00440f; 	T(MOV(bl, 0));	// 10790 mov     bl, 0 ;~ 01C2:440F
 locret_14611:
 	// 5414 
 cs=0x1c2;eip=0x004411; 	R(RETN(0));	// 10793 retn ;~ 01C2:4411
-sub_14612:
-	// 10800 
-cs=0x1c2;eip=0x004412; 	X(MOV(word_156e2, 0));	// 10805 mov     word_156E2, 0 ;~ 01C2:4412
-loc_14618:
-	// 5415 
-cs=0x1c2;eip=0x004418; 	T(MOV(ah, 1));	// 10809 mov     ah, 1 ;~ 01C2:4418
-cs=0x1c2;eip=0x00441a; 	R(_INT(0x16));	// 10810 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 01C2:441A
-cs=0x1c2;eip=0x00441c; 	J(JNZ(loc_14626));	// 10814 jnz     short loc_14626 ;~ 01C2:441C
-cs=0x1c2;eip=0x00441e; 	T(MOV(ax, word_156e2));	// 10815 mov     ax, word_156E2 ;~ 01C2:441E
-cs=0x1c2;eip=0x004421; 	T(CMP(ax, cx));	// 10816 cmp     ax, cx ;~ 01C2:4421
-cs=0x1c2;eip=0x004423; 	J(JC(loc_14618));	// 10817 jb      short loc_14618 ;~ 01C2:4423
-cs=0x1c2;eip=0x004425; 	R(RETN(0));	// 10818 retn ;~ 01C2:4425
-loc_14626:
-	// 5416 
-cs=0x1c2;eip=0x004426; 	T(MOV(ah, 0));	// 10822 mov     ah, 0 ;~ 01C2:4426
-cs=0x1c2;eip=0x004428; 	R(_INT(0x16));	// 10823 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 01C2:4428
-cs=0x1c2;eip=0x00442a; 	T(OR(al, al));	// 10825 or      al, al ;~ 01C2:442A
-cs=0x1c2;eip=0x00442c; 	J(JNZ(loc_14618));	// 10826 jnz     short loc_14618 ;~ 01C2:442C
-cs=0x1c2;eip=0x00442e; 	T(CMP(ah, 0x3B));	// 10827 cmp     ah, 3Bh ; ';' ;~ 01C2:442E
-cs=0x1c2;eip=0x004431; 	J(JZ(loc_1463c));	// 10828 jz      short loc_1463C ;~ 01C2:4431
-cs=0x1c2;eip=0x004433; 	T(CMP(ah, 0x3C));	// 10829 cmp     ah, 3Ch ; '<' ;~ 01C2:4433
-cs=0x1c2;eip=0x004436; 	J(JNZ(loc_14618));	// 10830 jnz     short loc_14618 ;~ 01C2:4436
-cs=0x1c2;eip=0x004438; 	X(POP(ax));	// 10831 pop     ax ;~ 01C2:4438
-cs=0x1c2;eip=0x004439; 	J(JMP(loc_13d1e));	// 10832 jmp     loc_13D1E ;~ 01C2:4439
-loc_1463c:
-	// 5417 
-cs=0x1c2;eip=0x00443c; 	X(POP(ax));	// 10836 pop     ax ;~ 01C2:443C
-cs=0x1c2;eip=0x00443d; 	J(JMP(loc_1378a));	// 10837 jmp     loc_1378A ;~ 01C2:443D
 
     assert(0);
     __dispatch_call:
@@ -8997,1235 +13055,11 @@ cs=0x1c2;eip=0x00443d; 	J(JMP(loc_1378a));	// 10837 jmp     loc_1378A ;~ 01C2:44
     if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
 #endif
     switch (__disp) {
-        case m2c::kloc_1036c: 	goto loc_1036c;
-        case m2c::kloc_10391: 	goto loc_10391;
-        case m2c::kloc_103a4: 	goto loc_103a4;
-        case m2c::kloc_103b3: 	goto loc_103b3;
-        case m2c::kloc_103cd: 	goto loc_103cd;
-        case m2c::kloc_103e6: 	goto loc_103e6;
-        case m2c::kloc_103f7: 	goto loc_103f7;
-        case m2c::kloc_10401: 	goto loc_10401;
-        case m2c::kloc_10410: 	goto loc_10410;
-        case m2c::kloc_1042a: 	goto loc_1042a;
-        case m2c::kloc_10473: 	goto loc_10473;
-        case m2c::kloc_10490: 	goto loc_10490;
-        case m2c::kloc_10495: 	goto loc_10495;
-        case m2c::kloc_104c7: 	goto loc_104c7;
-        case m2c::kloc_104e4: 	goto loc_104e4;
-        case m2c::kloc_104ec: 	goto loc_104ec;
-        case m2c::kloc_104fd: 	goto loc_104fd;
-        case m2c::kloc_10500: 	goto loc_10500;
-        case m2c::kloc_1050e: 	goto loc_1050e;
-        case m2c::kloc_1054b: 	goto loc_1054b;
-        case m2c::kloc_10558: 	goto loc_10558;
-        case m2c::kloc_10564: 	goto loc_10564;
-        case m2c::kloc_1056e: 	goto loc_1056e;
-        case m2c::kloc_10578: 	goto loc_10578;
-        case m2c::kloc_10591: 	goto loc_10591;
-        case m2c::kloc_10596: 	goto loc_10596;
-        case m2c::kloc_10599: 	goto loc_10599;
-        case m2c::kloc_105b5: 	goto loc_105b5;
-        case m2c::kloc_10612: 	goto loc_10612;
-        case m2c::kloc_10616: 	goto loc_10616;
-        case m2c::kloc_1061d: 	goto loc_1061d;
-        case m2c::kloc_1064b: 	goto loc_1064b;
-        case m2c::kloc_1065a: 	goto loc_1065a;
-        case m2c::kloc_10674: 	goto loc_10674;
-        case m2c::kloc_10678: 	goto loc_10678;
-        case m2c::kloc_10680: 	goto loc_10680;
-        case m2c::kloc_10685: 	goto loc_10685;
-        case m2c::kloc_106a3: 	goto loc_106a3;
-        case m2c::kloc_106ae: 	goto loc_106ae;
-        case m2c::kloc_106d6: 	goto loc_106d6;
-        case m2c::kloc_106e4: 	goto loc_106e4;
-        case m2c::kloc_106f8: 	goto loc_106f8;
-        case m2c::kloc_1071f: 	goto loc_1071f;
-        case m2c::kloc_1074c: 	goto loc_1074c;
-        case m2c::kloc_10767: 	goto loc_10767;
-        case m2c::kloc_10778: 	goto loc_10778;
-        case m2c::kloc_1078a: 	goto loc_1078a;
-        case m2c::kloc_10792: 	goto loc_10792;
-        case m2c::kloc_10794: 	goto loc_10794;
-        case m2c::kloc_1079c: 	goto loc_1079c;
-        case m2c::kloc_107a2: 	goto loc_107a2;
-        case m2c::kloc_107b8: 	goto loc_107b8;
-        case m2c::kloc_107dc: 	goto loc_107dc;
-        case m2c::kloc_107e5: 	goto loc_107e5;
-        case m2c::kloc_107ee: 	goto loc_107ee;
-        case m2c::kloc_107f6: 	goto loc_107f6;
-        case m2c::kloc_107f8: 	goto loc_107f8;
-        case m2c::kloc_10815: 	goto loc_10815;
-        case m2c::kloc_1081d: 	goto loc_1081d;
-        case m2c::kloc_10824: 	goto loc_10824;
-        case m2c::kloc_10843: 	goto loc_10843;
-        case m2c::kloc_10856: 	goto loc_10856;
-        case m2c::kloc_1086b: 	goto loc_1086b;
-        case m2c::kloc_10874: 	goto loc_10874;
-        case m2c::kloc_1087c: 	goto loc_1087c;
-        case m2c::kloc_1087e: 	goto loc_1087e;
-        case m2c::kloc_10885: 	goto loc_10885;
-        case m2c::kloc_10895: 	goto loc_10895;
-        case m2c::kloc_108cc: 	goto loc_108cc;
-        case m2c::kloc_108d4: 	goto loc_108d4;
-        case m2c::kloc_108dc: 	goto loc_108dc;
-        case m2c::kloc_108e4: 	goto loc_108e4;
-        case m2c::kloc_108e6: 	goto loc_108e6;
-        case m2c::kloc_10912: 	goto loc_10912;
-        case m2c::kloc_10913: 	goto loc_10913;
-        case m2c::kloc_10935: 	goto loc_10935;
-        case m2c::kloc_1094b: 	goto loc_1094b;
-        case m2c::kloc_1095c: 	goto loc_1095c;
-        case m2c::kloc_10972: 	goto loc_10972;
-        case m2c::kloc_10985: 	goto loc_10985;
-        case m2c::kloc_10996: 	goto loc_10996;
-        case m2c::kloc_109b5: 	goto loc_109b5;
-        case m2c::kloc_109bd: 	goto loc_109bd;
-        case m2c::kloc_109c5: 	goto loc_109c5;
-        case m2c::kloc_109dc: 	goto loc_109dc;
-        case m2c::kloc_10a29: 	goto loc_10a29;
-        case m2c::kloc_10a38: 	goto loc_10a38;
-        case m2c::kloc_10aa5: 	goto loc_10aa5;
-        case m2c::kloc_10ab4: 	goto loc_10ab4;
-        case m2c::kloc_10ac3: 	goto loc_10ac3;
-        case m2c::kloc_10ac9: 	goto loc_10ac9;
-        case m2c::kloc_10ad7: 	goto loc_10ad7;
-        case m2c::kloc_10ae4: 	goto loc_10ae4;
-        case m2c::kloc_10aed: 	goto loc_10aed;
-        case m2c::kloc_10aef: 	goto loc_10aef;
-        case m2c::kloc_10b2f: 	goto loc_10b2f;
-        case m2c::kloc_10b40: 	goto loc_10b40;
-        case m2c::kloc_10b59: 	goto loc_10b59;
-        case m2c::kloc_10b6f: 	goto loc_10b6f;
-        case m2c::kloc_10b76: 	goto loc_10b76;
-        case m2c::kloc_10b95: 	goto loc_10b95;
-        case m2c::kloc_10bb9: 	goto loc_10bb9;
-        case m2c::kloc_10bc1: 	goto loc_10bc1;
-        case m2c::kloc_10bc9: 	goto loc_10bc9;
-        case m2c::kloc_10bd1: 	goto loc_10bd1;
-        case m2c::kloc_10bd9: 	goto loc_10bd9;
-        case m2c::kloc_10bdb: 	goto loc_10bdb;
-        case m2c::kloc_10be8: 	goto loc_10be8;
-        case m2c::kloc_10bec: 	goto loc_10bec;
-        case m2c::kloc_10c0d: 	goto loc_10c0d;
-        case m2c::kloc_10c0e: 	goto loc_10c0e;
-        case m2c::kloc_10c28: 	goto loc_10c28;
-        case m2c::kloc_10c41: 	goto loc_10c41;
-        case m2c::kloc_10c49: 	goto loc_10c49;
-        case m2c::kloc_10c51: 	goto loc_10c51;
-        case m2c::kloc_10c59: 	goto loc_10c59;
-        case m2c::kloc_10c5b: 	goto loc_10c5b;
-        case m2c::kloc_10c7d: 	goto loc_10c7d;
-        case m2c::kloc_10ca7: 	goto loc_10ca7;
-        case m2c::kloc_10cb0: 	goto loc_10cb0;
-        case m2c::kloc_10cbf: 	goto loc_10cbf;
-        case m2c::kloc_10cc3: 	goto loc_10cc3;
-        case m2c::kloc_10cfc: 	goto loc_10cfc;
-        case m2c::kloc_10d0d: 	goto loc_10d0d;
-        case m2c::kloc_10d1b: 	goto loc_10d1b;
-        case m2c::kloc_10d21: 	goto loc_10d21;
-        case m2c::kloc_10d2b: 	goto loc_10d2b;
-        case m2c::kloc_10d2d: 	goto loc_10d2d;
-        case m2c::kloc_10d6c: 	goto loc_10d6c;
-        case m2c::kloc_10d7f: 	goto loc_10d7f;
-        case m2c::kloc_10d81: 	goto loc_10d81;
-        case m2c::kloc_10d9a: 	goto loc_10d9a;
-        case m2c::kloc_10dbc: 	goto loc_10dbc;
-        case m2c::kloc_10dc4: 	goto loc_10dc4;
-        case m2c::kloc_10dcc: 	goto loc_10dcc;
-        case m2c::kloc_10dd4: 	goto loc_10dd4;
-        case m2c::kloc_10dd6: 	goto loc_10dd6;
-        case m2c::kloc_10dfd: 	goto loc_10dfd;
-        case m2c::kloc_10dfe: 	goto loc_10dfe;
-        case m2c::kloc_10e19: 	goto loc_10e19;
-        case m2c::kloc_10e1b: 	goto loc_10e1b;
-        case m2c::kloc_10e24: 	goto loc_10e24;
-        case m2c::kloc_10e33: 	goto loc_10e33;
-        case m2c::kloc_10e4a: 	goto loc_10e4a;
-        case m2c::kloc_10e52: 	goto loc_10e52;
-        case m2c::kloc_10e5a: 	goto loc_10e5a;
-        case m2c::kloc_10e62: 	goto loc_10e62;
-        case m2c::kloc_10e64: 	goto loc_10e64;
-        case m2c::kloc_10e83: 	goto loc_10e83;
-        case m2c::kloc_10e85: 	goto loc_10e85;
-        case m2c::kloc_10e94: 	goto loc_10e94;
-        case m2c::kloc_10e99: 	goto loc_10e99;
-        case m2c::kloc_10ea3: 	goto loc_10ea3;
-        case m2c::kloc_10ec1: 	goto loc_10ec1;
-        case m2c::kloc_10ed6: 	goto loc_10ed6;
-        case m2c::kloc_10f01: 	goto loc_10f01;
-        case m2c::kloc_10f07: 	goto loc_10f07;
-        case m2c::kloc_10f13: 	goto loc_10f13;
-        case m2c::kloc_10f25: 	goto loc_10f25;
-        case m2c::kloc_10f28: 	goto loc_10f28;
-        case m2c::kloc_10f47: 	goto loc_10f47;
-        case m2c::kloc_10f75: 	goto loc_10f75;
-        case m2c::kloc_10f79: 	goto loc_10f79;
-        case m2c::kloc_10f82: 	goto loc_10f82;
-        case m2c::kloc_10f8a: 	goto loc_10f8a;
-        case m2c::kloc_10f8d: 	goto loc_10f8d;
-        case m2c::kloc_10f97: 	goto loc_10f97;
-        case m2c::kloc_10fa1: 	goto loc_10fa1;
-        case m2c::kloc_10fb8: 	goto loc_10fb8;
-        case m2c::kloc_10fe6: 	goto loc_10fe6;
-        case m2c::kloc_10feb: 	goto loc_10feb;
-        case m2c::kloc_10fee: 	goto loc_10fee;
-        case m2c::kloc_10fff: 	goto loc_10fff;
-        case m2c::kloc_11008: 	goto loc_11008;
-        case m2c::kloc_1100d: 	goto loc_1100d;
-        case m2c::kloc_11019: 	goto loc_11019;
-        case m2c::kloc_1101c: 	goto loc_1101c;
-        case m2c::kloc_11025: 	goto loc_11025;
-        case m2c::kloc_11029: 	goto loc_11029;
-        case m2c::kloc_11034: 	goto loc_11034;
-        case m2c::kloc_11042: 	goto loc_11042;
-        case m2c::kloc_1104c: 	goto loc_1104c;
-        case m2c::kloc_11058: 	goto loc_11058;
-        case m2c::kloc_11061: 	goto loc_11061;
-        case m2c::kloc_11069: 	goto loc_11069;
-        case m2c::kloc_110bb: 	goto loc_110bb;
-        case m2c::kloc_110cc: 	goto loc_110cc;
-        case m2c::kloc_110cd: 	goto loc_110cd;
-        case m2c::kloc_11131: 	goto loc_11131;
-        case m2c::kloc_1118f: 	goto loc_1118f;
-        case m2c::kloc_111be: 	goto loc_111be;
-        case m2c::kloc_111da: 	goto loc_111da;
-        case m2c::kloc_111f8: 	goto loc_111f8;
-        case m2c::kloc_1122a: 	goto loc_1122a;
-        case m2c::kloc_11265: 	goto loc_11265;
-        case m2c::kloc_1126d: 	goto loc_1126d;
-        case m2c::kloc_11293: 	goto loc_11293;
-        case m2c::kloc_112b2: 	goto loc_112b2;
-        case m2c::kloc_112d9: 	goto loc_112d9;
-        case m2c::kloc_112fa: 	goto loc_112fa;
-        case m2c::kloc_11302: 	goto loc_11302;
-        case m2c::kloc_11305: 	goto loc_11305;
-        case m2c::kloc_11382: 	goto loc_11382;
-        case m2c::kloc_11392: 	goto loc_11392;
-        case m2c::kloc_113a6: 	goto loc_113a6;
-        case m2c::kloc_113ba: 	goto loc_113ba;
-        case m2c::kloc_113e9: 	goto loc_113e9;
-        case m2c::kloc_113f9: 	goto loc_113f9;
-        case m2c::kloc_11400: 	goto loc_11400;
-        case m2c::kloc_11421: 	goto loc_11421;
-        case m2c::kloc_11430: 	goto loc_11430;
-        case m2c::kloc_11432: 	goto loc_11432;
-        case m2c::kloc_1144b: 	goto loc_1144b;
-        case m2c::kloc_1145b: 	goto loc_1145b;
-        case m2c::kloc_11478: 	goto loc_11478;
-        case m2c::kloc_11479: 	goto loc_11479;
-        case m2c::kloc_1149b: 	goto loc_1149b;
-        case m2c::kloc_114a0: 	goto loc_114a0;
-        case m2c::kloc_114aa: 	goto loc_114aa;
-        case m2c::kloc_114ab: 	goto loc_114ab;
-        case m2c::kloc_114bc: 	goto loc_114bc;
-        case m2c::kloc_114d1: 	goto loc_114d1;
-        case m2c::kloc_114e2: 	goto loc_114e2;
-        case m2c::kloc_11527: 	goto loc_11527;
-        case m2c::kloc_1154a: 	goto loc_1154a;
-        case m2c::kloc_1155d: 	goto loc_1155d;
-        case m2c::kloc_11579: 	goto loc_11579;
-        case m2c::kloc_115a0: 	goto loc_115a0;
-        case m2c::kloc_115b0: 	goto loc_115b0;
-        case m2c::kloc_115b3: 	goto loc_115b3;
-        case m2c::kloc_115b5: 	goto loc_115b5;
-        case m2c::kloc_115d0: 	goto loc_115d0;
-        case m2c::kloc_115da: 	goto loc_115da;
-        case m2c::kloc_115e2: 	goto loc_115e2;
-        case m2c::kloc_115ee: 	goto loc_115ee;
-        case m2c::kloc_115ff: 	goto loc_115ff;
-        case m2c::kloc_1160f: 	goto loc_1160f;
-        case m2c::kloc_11620: 	goto loc_11620;
-        case m2c::kloc_11633: 	goto loc_11633;
-        case m2c::kloc_11645: 	goto loc_11645;
-        case m2c::kloc_11648: 	goto loc_11648;
-        case m2c::kloc_11655: 	goto loc_11655;
-        case m2c::kloc_11658: 	goto loc_11658;
-        case m2c::kloc_116ad: 	goto loc_116ad;
-        case m2c::kloc_116b0: 	goto loc_116b0;
-        case m2c::kloc_116c1: 	goto loc_116c1;
-        case m2c::kloc_116c4: 	goto loc_116c4;
-        case m2c::kloc_116db: 	goto loc_116db;
-        case m2c::kloc_116fb: 	goto loc_116fb;
-        case m2c::kloc_11710: 	goto loc_11710;
-        case m2c::kloc_11716: 	goto loc_11716;
-        case m2c::kloc_1173e: 	goto loc_1173e;
-        case m2c::kloc_1174a: 	goto loc_1174a;
-        case m2c::kloc_1176a: 	goto loc_1176a;
-        case m2c::kloc_11791: 	goto loc_11791;
-        case m2c::kloc_117be: 	goto loc_117be;
-        case m2c::kloc_117ea: 	goto loc_117ea;
-        case m2c::kloc_117f3: 	goto loc_117f3;
-        case m2c::kloc_117fe: 	goto loc_117fe;
-        case m2c::kloc_11805: 	goto loc_11805;
-        case m2c::kloc_11814: 	goto loc_11814;
-        case m2c::kloc_11819: 	goto loc_11819;
-        case m2c::kloc_11840: 	goto loc_11840;
-        case m2c::kloc_1184a: 	goto loc_1184a;
-        case m2c::kloc_11854: 	goto loc_11854;
-        case m2c::kloc_11875: 	goto loc_11875;
-        case m2c::kloc_1187f: 	goto loc_1187f;
-        case m2c::kloc_11895: 	goto loc_11895;
-        case m2c::kloc_1189e: 	goto loc_1189e;
-        case m2c::kloc_118a8: 	goto loc_118a8;
-        case m2c::kloc_118b0: 	goto loc_118b0;
-        case m2c::kloc_118be: 	goto loc_118be;
-        case m2c::kloc_118fe: 	goto loc_118fe;
-        case m2c::kloc_1190e: 	goto loc_1190e;
-        case m2c::kloc_11918: 	goto loc_11918;
-        case m2c::kloc_11922: 	goto loc_11922;
-        case m2c::kloc_11936: 	goto loc_11936;
-        case m2c::kloc_11939: 	goto loc_11939;
-        case m2c::kloc_11940: 	goto loc_11940;
-        case m2c::kloc_1194f: 	goto loc_1194f;
-        case m2c::kloc_11961: 	goto loc_11961;
-        case m2c::kloc_1196c: 	goto loc_1196c;
-        case m2c::kloc_11979: 	goto loc_11979;
-        case m2c::kloc_1198c: 	goto loc_1198c;
-        case m2c::kloc_11991: 	goto loc_11991;
-        case m2c::kloc_11994: 	goto loc_11994;
-        case m2c::kloc_1199f: 	goto loc_1199f;
-        case m2c::kloc_119aa: 	goto loc_119aa;
-        case m2c::kloc_119b5: 	goto loc_119b5;
-        case m2c::kloc_119bc: 	goto loc_119bc;
-        case m2c::kloc_119c0: 	goto loc_119c0;
-        case m2c::kloc_119d7: 	goto loc_119d7;
-        case m2c::kloc_119da: 	goto loc_119da;
-        case m2c::kloc_119e6: 	goto loc_119e6;
-        case m2c::kloc_119eb: 	goto loc_119eb;
-        case m2c::kloc_119f6: 	goto loc_119f6;
-        case m2c::kloc_11a01: 	goto loc_11a01;
-        case m2c::kloc_11a0a: 	goto loc_11a0a;
-        case m2c::kloc_11a19: 	goto loc_11a19;
-        case m2c::kloc_11a2f: 	goto loc_11a2f;
-        case m2c::kloc_11a39: 	goto loc_11a39;
-        case m2c::kloc_11a43: 	goto loc_11a43;
-        case m2c::kloc_11a58: 	goto loc_11a58;
-        case m2c::kloc_11a76: 	goto loc_11a76;
-        case m2c::kloc_11a7c: 	goto loc_11a7c;
-        case m2c::kloc_11a8e: 	goto loc_11a8e;
-        case m2c::kloc_11a91: 	goto loc_11a91;
-        case m2c::kloc_11aac: 	goto loc_11aac;
-        case m2c::kloc_11abf: 	goto loc_11abf;
-        case m2c::kloc_11ac5: 	goto loc_11ac5;
-        case m2c::kloc_11ad6: 	goto loc_11ad6;
-        case m2c::kloc_11ae0: 	goto loc_11ae0;
-        case m2c::kloc_11ae8: 	goto loc_11ae8;
-        case m2c::kloc_11afb: 	goto loc_11afb;
-        case m2c::kloc_11afe: 	goto loc_11afe;
-        case m2c::kloc_11b0d: 	goto loc_11b0d;
-        case m2c::kloc_11b15: 	goto loc_11b15;
-        case m2c::kloc_11b18: 	goto loc_11b18;
-        case m2c::kloc_11b24: 	goto loc_11b24;
-        case m2c::kloc_11b8b: 	goto loc_11b8b;
-        case m2c::kloc_11b91: 	goto loc_11b91;
-        case m2c::kloc_11baf: 	goto loc_11baf;
-        case m2c::kloc_11bdb: 	goto loc_11bdb;
-        case m2c::kloc_11be2: 	goto loc_11be2;
-        case m2c::kloc_11bea: 	goto loc_11bea;
-        case m2c::kloc_11bf0: 	goto loc_11bf0;
-        case m2c::kloc_11c17: 	goto loc_11c17;
-        case m2c::kloc_11c26: 	goto loc_11c26;
-        case m2c::kloc_11c35: 	goto loc_11c35;
-        case m2c::kloc_11c3c: 	goto loc_11c3c;
-        case m2c::kloc_11c4c: 	goto loc_11c4c;
-        case m2c::kloc_11c4f: 	goto loc_11c4f;
-        case m2c::kloc_11c54: 	goto loc_11c54;
-        case m2c::kloc_11c6f: 	goto loc_11c6f;
-        case m2c::kloc_11c78: 	goto loc_11c78;
-        case m2c::kloc_11c82: 	goto loc_11c82;
-        case m2c::kloc_11c94: 	goto loc_11c94;
-        case m2c::kloc_11ca6: 	goto loc_11ca6;
-        case m2c::kloc_11cb3: 	goto loc_11cb3;
-        case m2c::kloc_11d18: 	goto loc_11d18;
-        case m2c::kloc_11d26: 	goto loc_11d26;
-        case m2c::kloc_11d31: 	goto loc_11d31;
-        case m2c::kloc_11d37: 	goto loc_11d37;
-        case m2c::kloc_11d4c: 	goto loc_11d4c;
-        case m2c::kloc_11d80: 	goto loc_11d80;
-        case m2c::kloc_11d8c: 	goto loc_11d8c;
-        case m2c::kloc_11d98: 	goto loc_11d98;
-        case m2c::kloc_11daa: 	goto loc_11daa;
-        case m2c::kloc_11dbe: 	goto loc_11dbe;
-        case m2c::kloc_11dc1: 	goto loc_11dc1;
-        case m2c::kloc_11e03: 	goto loc_11e03;
-        case m2c::kloc_11e25: 	goto loc_11e25;
-        case m2c::kloc_11e29: 	goto loc_11e29;
-        case m2c::kloc_11e59: 	goto loc_11e59;
-        case m2c::kloc_11e5d: 	goto loc_11e5d;
-        case m2c::kloc_11e94: 	goto loc_11e94;
-        case m2c::kloc_11ea0: 	goto loc_11ea0;
-        case m2c::kloc_11eac: 	goto loc_11eac;
-        case m2c::kloc_11ebe: 	goto loc_11ebe;
-        case m2c::kloc_11ed2: 	goto loc_11ed2;
-        case m2c::kloc_11ed5: 	goto loc_11ed5;
-        case m2c::kloc_11f14: 	goto loc_11f14;
-        case m2c::kloc_11f36: 	goto loc_11f36;
-        case m2c::kloc_11f3a: 	goto loc_11f3a;
-        case m2c::kloc_11f6a: 	goto loc_11f6a;
-        case m2c::kloc_11f6e: 	goto loc_11f6e;
-        case m2c::kloc_11f95: 	goto loc_11f95;
-        case m2c::kloc_11fa5: 	goto loc_11fa5;
-        case m2c::kloc_11fb1: 	goto loc_11fb1;
-        case m2c::kloc_11fbd: 	goto loc_11fbd;
-        case m2c::kloc_11fdb: 	goto loc_11fdb;
-        case m2c::kloc_11fe2: 	goto loc_11fe2;
-        case m2c::kloc_11ff6: 	goto loc_11ff6;
-        case m2c::kloc_11ff9: 	goto loc_11ff9;
-        case m2c::kloc_12038: 	goto loc_12038;
-        case m2c::kloc_1205a: 	goto loc_1205a;
-        case m2c::kloc_1205e: 	goto loc_1205e;
-        case m2c::kloc_1208e: 	goto loc_1208e;
-        case m2c::kloc_12092: 	goto loc_12092;
-        case m2c::kloc_120b9: 	goto loc_120b9;
-        case m2c::kloc_120ce: 	goto loc_120ce;
-        case m2c::kloc_120da: 	goto loc_120da;
-        case m2c::kloc_120e4: 	goto loc_120e4;
-        case m2c::kloc_120f8: 	goto loc_120f8;
-        case m2c::kloc_1210d: 	goto loc_1210d;
-        case m2c::kloc_12110: 	goto loc_12110;
-        case m2c::kloc_1215e: 	goto loc_1215e;
-        case m2c::kloc_12180: 	goto loc_12180;
-        case m2c::kloc_12184: 	goto loc_12184;
-        case m2c::kloc_121b4: 	goto loc_121b4;
-        case m2c::kloc_121b8: 	goto loc_121b8;
-        case m2c::kloc_121f1: 	goto loc_121f1;
-        case m2c::kloc_1223f: 	goto loc_1223f;
-        case m2c::kloc_1224e: 	goto loc_1224e;
-        case m2c::kloc_1225c: 	goto loc_1225c;
-        case m2c::kloc_1227f: 	goto loc_1227f;
-        case m2c::kloc_12288: 	goto loc_12288;
-        case m2c::kloc_1229c: 	goto loc_1229c;
-        case m2c::kloc_122a5: 	goto loc_122a5;
-        case m2c::kloc_122c0: 	goto loc_122c0;
-        case m2c::kloc_122cc: 	goto loc_122cc;
-        case m2c::kloc_122e3: 	goto loc_122e3;
-        case m2c::kloc_122ed: 	goto loc_122ed;
-        case m2c::kloc_122f4: 	goto loc_122f4;
-        case m2c::kloc_12302: 	goto loc_12302;
-        case m2c::kloc_12321: 	goto loc_12321;
-        case m2c::kloc_1233d: 	goto loc_1233d;
-        case m2c::kloc_12344: 	goto loc_12344;
-        case m2c::kloc_12346: 	goto loc_12346;
-        case m2c::kloc_12354: 	goto loc_12354;
-        case m2c::kloc_12360: 	goto loc_12360;
-        case m2c::kloc_12388: 	goto loc_12388;
-        case m2c::kloc_12391: 	goto loc_12391;
-        case m2c::kloc_1239a: 	goto loc_1239a;
-        case m2c::kloc_123a0: 	goto loc_123a0;
-        case m2c::kloc_123ab: 	goto loc_123ab;
-        case m2c::kloc_123b4: 	goto loc_123b4;
-        case m2c::kloc_123c0: 	goto loc_123c0;
-        case m2c::kloc_123dc: 	goto loc_123dc;
-        case m2c::kloc_12403: 	goto loc_12403;
-        case m2c::kloc_1240f: 	goto loc_1240f;
-        case m2c::kloc_1241b: 	goto loc_1241b;
-        case m2c::kloc_1242d: 	goto loc_1242d;
-        case m2c::kloc_12430: 	goto loc_12430;
-        case m2c::kloc_12472: 	goto loc_12472;
-        case m2c::kloc_12494: 	goto loc_12494;
-        case m2c::kloc_12498: 	goto loc_12498;
-        case m2c::kloc_124c8: 	goto loc_124c8;
-        case m2c::kloc_124cc: 	goto loc_124cc;
-        case m2c::kloc_1250a: 	goto loc_1250a;
-        case m2c::kloc_12516: 	goto loc_12516;
-        case m2c::kloc_12522: 	goto loc_12522;
-        case m2c::kloc_12536: 	goto loc_12536;
-        case m2c::kloc_12539: 	goto loc_12539;
-        case m2c::kloc_1257b: 	goto loc_1257b;
-        case m2c::kloc_1259d: 	goto loc_1259d;
-        case m2c::kloc_125a1: 	goto loc_125a1;
-        case m2c::kloc_125d1: 	goto loc_125d1;
-        case m2c::kloc_125d5: 	goto loc_125d5;
-        case m2c::kloc_12613: 	goto loc_12613;
-        case m2c::kloc_1261f: 	goto loc_1261f;
-        case m2c::kloc_1262b: 	goto loc_1262b;
-        case m2c::kloc_1263f: 	goto loc_1263f;
-        case m2c::kloc_12642: 	goto loc_12642;
-        case m2c::kloc_12684: 	goto loc_12684;
-        case m2c::kloc_126a6: 	goto loc_126a6;
-        case m2c::kloc_126aa: 	goto loc_126aa;
-        case m2c::kloc_126da: 	goto loc_126da;
-        case m2c::kloc_126de: 	goto loc_126de;
-        case m2c::kloc_1271c: 	goto loc_1271c;
-        case m2c::kloc_12728: 	goto loc_12728;
-        case m2c::kloc_12734: 	goto loc_12734;
-        case m2c::kloc_12748: 	goto loc_12748;
-        case m2c::kloc_1274b: 	goto loc_1274b;
-        case m2c::kloc_1278d: 	goto loc_1278d;
-        case m2c::kloc_127af: 	goto loc_127af;
-        case m2c::kloc_127b3: 	goto loc_127b3;
-        case m2c::kloc_127e3: 	goto loc_127e3;
-        case m2c::kloc_127e7: 	goto loc_127e7;
-        case m2c::kloc_12821: 	goto loc_12821;
-        case m2c::kloc_128b3: 	goto loc_128b3;
-        case m2c::kloc_128b9: 	goto loc_128b9;
-        case m2c::kloc_128d7: 	goto loc_128d7;
-        case m2c::kloc_128e7: 	goto loc_128e7;
-        case m2c::kloc_128ea: 	goto loc_128ea;
-        case m2c::kloc_128fc: 	goto loc_128fc;
-        case m2c::kloc_12935: 	goto loc_12935;
-        case m2c::kloc_1296e: 	goto loc_1296e;
-        case m2c::kloc_12978: 	goto loc_12978;
-        case m2c::kloc_1299b: 	goto loc_1299b;
-        case m2c::kloc_129ac: 	goto loc_129ac;
-        case m2c::kloc_129bc: 	goto loc_129bc;
-        case m2c::kloc_129c5: 	goto loc_129c5;
-        case m2c::kloc_129e7: 	goto loc_129e7;
-        case m2c::kloc_12a08: 	goto loc_12a08;
-        case m2c::kloc_12a1a: 	goto loc_12a1a;
-        case m2c::kloc_12a3a: 	goto loc_12a3a;
-        case m2c::kloc_12a46: 	goto loc_12a46;
-        case m2c::kloc_12a52: 	goto loc_12a52;
-        case m2c::kloc_12a6d: 	goto loc_12a6d;
-        case m2c::kloc_12a74: 	goto loc_12a74;
-        case m2c::kloc_12a7b: 	goto loc_12a7b;
-        case m2c::kloc_12a84: 	goto loc_12a84;
-        case m2c::kloc_12a91: 	goto loc_12a91;
-        case m2c::kloc_12aa7: 	goto loc_12aa7;
-        case m2c::kloc_12aae: 	goto loc_12aae;
-        case m2c::kloc_12abb: 	goto loc_12abb;
-        case m2c::kloc_12aef: 	goto loc_12aef;
-        case m2c::kloc_12af9: 	goto loc_12af9;
-        case m2c::kloc_12b00: 	goto loc_12b00;
-        case m2c::kloc_12b18: 	goto loc_12b18;
-        case m2c::kloc_12b21: 	goto loc_12b21;
-        case m2c::kloc_12b23: 	goto loc_12b23;
-        case m2c::kloc_12b36: 	goto loc_12b36;
-        case m2c::kloc_12b62: 	goto loc_12b62;
-        case m2c::kloc_12b99: 	goto loc_12b99;
-        case m2c::kloc_12ba3: 	goto loc_12ba3;
-        case m2c::kloc_12bcf: 	goto loc_12bcf;
-        case m2c::kloc_12be0: 	goto loc_12be0;
-        case m2c::kloc_12bf1: 	goto loc_12bf1;
-        case m2c::kloc_12c19: 	goto loc_12c19;
-        case m2c::kloc_12c41: 	goto loc_12c41;
-        case m2c::kloc_12c69: 	goto loc_12c69;
-        case m2c::kloc_12c91: 	goto loc_12c91;
-        case m2c::kloc_12cb9: 	goto loc_12cb9;
-        case m2c::kloc_12cc3: 	goto loc_12cc3;
-        case m2c::kloc_12ccf: 	goto loc_12ccf;
-        case m2c::kloc_12cdb: 	goto loc_12cdb;
-        case m2c::kloc_12ce9: 	goto loc_12ce9;
-        case m2c::kloc_12d2b: 	goto loc_12d2b;
-        case m2c::kloc_12d4d: 	goto loc_12d4d;
-        case m2c::kloc_12d51: 	goto loc_12d51;
-        case m2c::kloc_12d82: 	goto loc_12d82;
-        case m2c::kloc_12d86: 	goto loc_12d86;
-        case m2c::kloc_12daf: 	goto loc_12daf;
-        case m2c::kloc_12db6: 	goto loc_12db6;
-        case m2c::kloc_12dda: 	goto loc_12dda;
-        case m2c::kloc_12ddc: 	goto loc_12ddc;
-        case m2c::kloc_12de6: 	goto loc_12de6;
-        case m2c::kloc_12dfb: 	goto loc_12dfb;
-        case m2c::kloc_12e00: 	goto loc_12e00;
-        case m2c::kloc_12e13: 	goto loc_12e13;
-        case m2c::kloc_12e26: 	goto loc_12e26;
-        case m2c::kloc_12e38: 	goto loc_12e38;
-        case m2c::kloc_12e4a: 	goto loc_12e4a;
-        case m2c::kloc_12e51: 	goto loc_12e51;
-        case m2c::kloc_12e6c: 	goto loc_12e6c;
-        case m2c::kloc_12e76: 	goto loc_12e76;
-        case m2c::kloc_12e81: 	goto loc_12e81;
-        case m2c::kloc_12e93: 	goto loc_12e93;
-        case m2c::kloc_12ead: 	goto loc_12ead;
-        case m2c::kloc_12ef4: 	goto loc_12ef4;
-        case m2c::kloc_12efe: 	goto loc_12efe;
-        case m2c::kloc_12f0e: 	goto loc_12f0e;
-        case m2c::kloc_12f18: 	goto loc_12f18;
-        case m2c::kloc_12f22: 	goto loc_12f22;
-        case m2c::kloc_12f2c: 	goto loc_12f2c;
-        case m2c::kloc_12f32: 	goto loc_12f32;
-        case m2c::kloc_12f3d: 	goto loc_12f3d;
-        case m2c::kloc_12f52: 	goto loc_12f52;
-        case m2c::kloc_12f83: 	goto loc_12f83;
-        case m2c::kloc_12f91: 	goto loc_12f91;
-        case m2c::kloc_12f97: 	goto loc_12f97;
-        case m2c::kloc_12f9f: 	goto loc_12f9f;
-        case m2c::kloc_12fa9: 	goto loc_12fa9;
-        case m2c::kloc_12fc3: 	goto loc_12fc3;
-        case m2c::kloc_12ff5: 	goto loc_12ff5;
-        case m2c::kloc_1301a: 	goto loc_1301a;
-        case m2c::kloc_1301e: 	goto loc_1301e;
-        case m2c::kloc_13024: 	goto loc_13024;
-        case m2c::kloc_13027: 	goto loc_13027;
-        case m2c::kloc_13058: 	goto loc_13058;
-        case m2c::kloc_13068: 	goto loc_13068;
-        case m2c::kloc_13072: 	goto loc_13072;
-        case m2c::kloc_1307d: 	goto loc_1307d;
-        case m2c::kloc_13086: 	goto loc_13086;
-        case m2c::kloc_1309a: 	goto loc_1309a;
-        case m2c::kloc_130a8: 	goto loc_130a8;
-        case m2c::kloc_130ac: 	goto loc_130ac;
-        case m2c::kloc_130b8: 	goto loc_130b8;
-        case m2c::kloc_130c2: 	goto loc_130c2;
-        case m2c::kloc_13100: 	goto loc_13100;
-        case m2c::kloc_13112: 	goto loc_13112;
-        case m2c::kloc_1311c: 	goto loc_1311c;
-        case m2c::kloc_13134: 	goto loc_13134;
-        case m2c::kloc_13140: 	goto loc_13140;
-        case m2c::kloc_13150: 	goto loc_13150;
-        case m2c::kloc_13155: 	goto loc_13155;
-        case m2c::kloc_1316d: 	goto loc_1316d;
-        case m2c::kloc_13171: 	goto loc_13171;
-        case m2c::kloc_13183: 	goto loc_13183;
-        case m2c::kloc_1319f: 	goto loc_1319f;
-        case m2c::kloc_131a4: 	goto loc_131a4;
-        case m2c::kloc_131ab: 	goto loc_131ab;
-        case m2c::kloc_131c7: 	goto loc_131c7;
-        case m2c::kloc_131d2: 	goto loc_131d2;
-        case m2c::kloc_131db: 	goto loc_131db;
-        case m2c::kloc_131fd: 	goto loc_131fd;
-        case m2c::kloc_13203: 	goto loc_13203;
-        case m2c::kloc_13207: 	goto loc_13207;
-        case m2c::kloc_13222: 	goto loc_13222;
-        case m2c::kloc_1322e: 	goto loc_1322e;
-        case m2c::kloc_13237: 	goto loc_13237;
-        case m2c::kloc_1324f: 	goto loc_1324f;
-        case m2c::kloc_13254: 	goto loc_13254;
-        case m2c::kloc_13257: 	goto loc_13257;
-        case m2c::kloc_1325f: 	goto loc_1325f;
-        case m2c::kloc_13271: 	goto loc_13271;
-        case m2c::kloc_13287: 	goto loc_13287;
-        case m2c::kloc_1328c: 	goto loc_1328c;
-        case m2c::kloc_13291: 	goto loc_13291;
-        case m2c::kloc_132a5: 	goto loc_132a5;
-        case m2c::kloc_132b3: 	goto loc_132b3;
-        case m2c::kloc_132b7: 	goto loc_132b7;
-        case m2c::kloc_132c3: 	goto loc_132c3;
-        case m2c::kloc_132cd: 	goto loc_132cd;
-        case m2c::kloc_13301: 	goto loc_13301;
-        case m2c::kloc_13320: 	goto loc_13320;
-        case m2c::kloc_13326: 	goto loc_13326;
-        case m2c::kloc_1332a: 	goto loc_1332a;
-        case m2c::kloc_1333f: 	goto loc_1333f;
-        case m2c::kloc_1334b: 	goto loc_1334b;
-        case m2c::kloc_13358: 	goto loc_13358;
-        case m2c::kloc_13365: 	goto loc_13365;
-        case m2c::kloc_13399: 	goto loc_13399;
-        case m2c::kloc_1339f: 	goto loc_1339f;
-        case m2c::kloc_133a3: 	goto loc_133a3;
-        case m2c::kloc_133c0: 	goto loc_133c0;
-        case m2c::kloc_133d5: 	goto loc_133d5;
-        case m2c::kloc_133ea: 	goto loc_133ea;
-        case m2c::kloc_133f9: 	goto loc_133f9;
-        case m2c::kloc_13416: 	goto loc_13416;
-        case m2c::kloc_13418: 	goto loc_13418;
-        case m2c::kloc_1342d: 	goto loc_1342d;
-        case m2c::kloc_13446: 	goto loc_13446;
-        case m2c::kloc_1346b: 	goto loc_1346b;
-        case m2c::kloc_1346d: 	goto loc_1346d;
-        case m2c::kloc_134c0: 	goto loc_134c0;
-        case m2c::kloc_134ee: 	goto loc_134ee;
-        case m2c::kloc_134f8: 	goto loc_134f8;
-        case m2c::kloc_13554: 	goto loc_13554;
-        case m2c::kloc_13564: 	goto loc_13564;
-        case m2c::kloc_13576: 	goto loc_13576;
-        case m2c::kloc_1357a: 	goto loc_1357a;
-        case m2c::kloc_1358a: 	goto loc_1358a;
-        case m2c::kloc_135a9: 	goto loc_135a9;
-        case m2c::kloc_135c2: 	goto loc_135c2;
-        case m2c::kloc_135c5: 	goto loc_135c5;
-        case m2c::kloc_135ee: 	goto loc_135ee;
-        case m2c::kloc_135f1: 	goto loc_135f1;
-        case m2c::kloc_135f4: 	goto loc_135f4;
-        case m2c::kloc_13605: 	goto loc_13605;
-        case m2c::kloc_13619: 	goto loc_13619;
-        case m2c::kloc_1362c: 	goto loc_1362c;
-        case m2c::kloc_13632: 	goto loc_13632;
-        case m2c::kloc_1363d: 	goto loc_1363d;
-        case m2c::kloc_1364a: 	goto loc_1364a;
-        case m2c::kloc_13655: 	goto loc_13655;
-        case m2c::kloc_13660: 	goto loc_13660;
-        case m2c::kloc_13677: 	goto loc_13677;
-        case m2c::kloc_1367c: 	goto loc_1367c;
-        case m2c::kloc_13681: 	goto loc_13681;
-        case m2c::kloc_1368d: 	goto loc_1368d;
-        case m2c::kloc_13692: 	goto loc_13692;
-        case m2c::kloc_13695: 	goto loc_13695;
-        case m2c::kloc_136bd: 	goto loc_136bd;
-        case m2c::kloc_13707: 	goto loc_13707;
-        case m2c::kloc_13721: 	goto loc_13721;
-        case m2c::kloc_13730: 	goto loc_13730;
-        case m2c::kloc_13741: 	goto loc_13741;
-        case m2c::kloc_13748: 	goto loc_13748;
-        case m2c::kloc_13770: 	goto loc_13770;
-        case m2c::kloc_1378a: 	goto loc_1378a;
-        case m2c::kloc_13794: 	goto loc_13794;
-        case m2c::kloc_13799: 	goto loc_13799;
-        case m2c::kloc_137a2: 	goto loc_137a2;
-        case m2c::kloc_1382b: 	goto loc_1382b;
-        case m2c::kloc_1383d: 	goto loc_1383d;
-        case m2c::kloc_13855: 	goto loc_13855;
-        case m2c::kloc_1385d: 	goto loc_1385d;
-        case m2c::kloc_1386c: 	goto loc_1386c;
-        case m2c::kloc_1387b: 	goto loc_1387b;
-        case m2c::kloc_138ae: 	goto loc_138ae;
-        case m2c::kloc_138bd: 	goto loc_138bd;
-        case m2c::kloc_138c0: 	goto loc_138c0;
-        case m2c::kloc_138ec: 	goto loc_138ec;
-        case m2c::kloc_13907: 	goto loc_13907;
-        case m2c::kloc_13933: 	goto loc_13933;
-        case m2c::kloc_13942: 	goto loc_13942;
-        case m2c::kloc_13965: 	goto loc_13965;
-        case m2c::kloc_13982: 	goto loc_13982;
-        case m2c::kloc_139fe: 	goto loc_139fe;
-        case m2c::kloc_13a7e: 	goto loc_13a7e;
-        case m2c::kloc_13a87: 	goto loc_13a87;
-        case m2c::kloc_13aa4: 	goto loc_13aa4;
-        case m2c::kloc_13ab0: 	goto loc_13ab0;
-        case m2c::kloc_13abe: 	goto loc_13abe;
-        case m2c::kloc_13ad1: 	goto loc_13ad1;
-        case m2c::kloc_13ae9: 	goto loc_13ae9;
-        case m2c::kloc_13afa: 	goto loc_13afa;
-        case m2c::kloc_13b07: 	goto loc_13b07;
-        case m2c::kloc_13b14: 	goto loc_13b14;
-        case m2c::kloc_13b16: 	goto loc_13b16;
-        case m2c::kloc_13b27: 	goto loc_13b27;
-        case m2c::kloc_13b2f: 	goto loc_13b2f;
-        case m2c::kloc_13b4b: 	goto loc_13b4b;
-        case m2c::kloc_13b4d: 	goto loc_13b4d;
-        case m2c::kloc_13b59: 	goto loc_13b59;
-        case m2c::kloc_13b67: 	goto loc_13b67;
-        case m2c::kloc_13b77: 	goto loc_13b77;
-        case m2c::kloc_13b81: 	goto loc_13b81;
-        case m2c::kloc_13b8e: 	goto loc_13b8e;
-        case m2c::kloc_13b9d: 	goto loc_13b9d;
-        case m2c::kloc_13bb0: 	goto loc_13bb0;
-        case m2c::kloc_13bbb: 	goto loc_13bbb;
-        case m2c::kloc_13be9: 	goto loc_13be9;
-        case m2c::kloc_13bfe: 	goto loc_13bfe;
-        case m2c::kloc_13c13: 	goto loc_13c13;
-        case m2c::kloc_13c25: 	goto loc_13c25;
-        case m2c::kloc_13c39: 	goto loc_13c39;
-        case m2c::kloc_13c4c: 	goto loc_13c4c;
-        case m2c::kloc_13c73: 	goto loc_13c73;
-        case m2c::kloc_13c7d: 	goto loc_13c7d;
-        case m2c::kloc_13c85: 	goto loc_13c85;
-        case m2c::kloc_13c90: 	goto loc_13c90;
-        case m2c::kloc_13cb8: 	goto loc_13cb8;
-        case m2c::kloc_13cbf: 	goto loc_13cbf;
-        case m2c::kloc_13cd8: 	goto loc_13cd8;
-        case m2c::kloc_13cdd: 	goto loc_13cdd;
-        case m2c::kloc_13ced: 	goto loc_13ced;
-        case m2c::kloc_13d1e: 	goto loc_13d1e;
-        case m2c::kloc_13d37: 	goto loc_13d37;
-        case m2c::kloc_13d43: 	goto loc_13d43;
-        case m2c::kloc_13d53: 	goto loc_13d53;
-        case m2c::kloc_13d6d: 	goto loc_13d6d;
-        case m2c::kloc_13d76: 	goto loc_13d76;
-        case m2c::kloc_13d7f: 	goto loc_13d7f;
-        case m2c::kloc_13d84: 	goto loc_13d84;
-        case m2c::kloc_13d8b: 	goto loc_13d8b;
-        case m2c::kloc_13d92: 	goto loc_13d92;
-        case m2c::kloc_13d94: 	goto loc_13d94;
-        case m2c::kloc_13d9d: 	goto loc_13d9d;
-        case m2c::kloc_13da6: 	goto loc_13da6;
-        case m2c::kloc_13dad: 	goto loc_13dad;
-        case m2c::kloc_13dba: 	goto loc_13dba;
-        case m2c::kloc_13dbf: 	goto loc_13dbf;
-        case m2c::kloc_13dd9: 	goto loc_13dd9;
-        case m2c::kloc_13ddf: 	goto loc_13ddf;
-        case m2c::kloc_13df3: 	goto loc_13df3;
-        case m2c::kloc_13e12: 	goto loc_13e12;
-        case m2c::kloc_13e15: 	goto loc_13e15;
-        case m2c::kloc_13e1b: 	goto loc_13e1b;
-        case m2c::kloc_13e3a: 	goto loc_13e3a;
-        case m2c::kloc_13e49: 	goto loc_13e49;
-        case m2c::kloc_13e4c: 	goto loc_13e4c;
-        case m2c::kloc_13e50: 	goto loc_13e50;
-        case m2c::kloc_13e58: 	goto loc_13e58;
-        case m2c::kloc_13e67: 	goto loc_13e67;
-        case m2c::kloc_13e6d: 	goto loc_13e6d;
-        case m2c::kloc_13e72: 	goto loc_13e72;
-        case m2c::kloc_13e7d: 	goto loc_13e7d;
-        case m2c::kloc_13ec2: 	goto loc_13ec2;
-        case m2c::kloc_13f28: 	goto loc_13f28;
-        case m2c::kloc_13f3e: 	goto loc_13f3e;
-        case m2c::kloc_13f4d: 	goto loc_13f4d;
-        case m2c::kloc_13f57: 	goto loc_13f57;
-        case m2c::kloc_13f6f: 	goto loc_13f6f;
-        case m2c::kloc_13f94: 	goto loc_13f94;
-        case m2c::kloc_13f9a: 	goto loc_13f9a;
-        case m2c::kloc_13f9c: 	goto loc_13f9c;
-        case m2c::kloc_13fc9: 	goto loc_13fc9;
-        case m2c::kloc_13fce: 	goto loc_13fce;
-        case m2c::kloc_13fd5: 	goto loc_13fd5;
-        case m2c::kloc_13fdc: 	goto loc_13fdc;
-        case m2c::kloc_14020: 	goto loc_14020;
-        case m2c::kloc_14028: 	goto loc_14028;
-        case m2c::kloc_14030: 	goto loc_14030;
-        case m2c::kloc_14036: 	goto loc_14036;
-        case m2c::kloc_14047: 	goto loc_14047;
-        case m2c::kloc_1404e: 	goto loc_1404e;
-        case m2c::kloc_14059: 	goto loc_14059;
-        case m2c::kloc_1406e: 	goto loc_1406e;
-        case m2c::kloc_1407d: 	goto loc_1407d;
-        case m2c::kloc_1407f: 	goto loc_1407f;
-        case m2c::kloc_1408c: 	goto loc_1408c;
-        case m2c::kloc_1409f: 	goto loc_1409f;
-        case m2c::kloc_14145: 	goto loc_14145;
-        case m2c::kloc_14172: 	goto loc_14172;
-        case m2c::kloc_1417a: 	goto loc_1417a;
-        case m2c::kloc_14182: 	goto loc_14182;
-        case m2c::kloc_1419d: 	goto loc_1419d;
-        case m2c::kloc_141ae: 	goto loc_141ae;
-        case m2c::kloc_141bc: 	goto loc_141bc;
-        case m2c::kloc_141cf: 	goto loc_141cf;
-        case m2c::kloc_14217: 	goto loc_14217;
-        case m2c::kloc_1422d: 	goto loc_1422d;
-        case m2c::kloc_14248: 	goto loc_14248;
-        case m2c::kloc_14290: 	goto loc_14290;
-        case m2c::kloc_1429c: 	goto loc_1429c;
-        case m2c::kloc_142a0: 	goto loc_142a0;
-        case m2c::kloc_142cc: 	goto loc_142cc;
-        case m2c::kloc_142e2: 	goto loc_142e2;
-        case m2c::kloc_142f2: 	goto loc_142f2;
-        case m2c::kloc_142f5: 	goto loc_142f5;
-        case m2c::kloc_14306: 	goto loc_14306;
-        case m2c::kloc_1431a: 	goto loc_1431a;
-        case m2c::kloc_14327: 	goto loc_14327;
-        case m2c::kloc_1432e: 	goto loc_1432e;
-        case m2c::kloc_14350: 	goto loc_14350;
-        case m2c::kloc_143be: 	goto loc_143be;
-        case m2c::kloc_143dd: 	goto loc_143dd;
-        case m2c::kloc_143f8: 	goto loc_143f8;
-        case m2c::kloc_14400: 	goto loc_14400;
-        case m2c::kloc_14412: 	goto loc_14412;
-        case m2c::kloc_14420: 	goto loc_14420;
-        case m2c::kloc_14429: 	goto loc_14429;
-        case m2c::kloc_1442e: 	goto loc_1442e;
-        case m2c::kloc_14451: 	goto loc_14451;
-        case m2c::kloc_14453: 	goto loc_14453;
-        case m2c::kloc_14467: 	goto loc_14467;
-        case m2c::kloc_1448b: 	goto loc_1448b;
-        case m2c::kloc_1448e: 	goto loc_1448e;
-        case m2c::kloc_14492: 	goto loc_14492;
-        case m2c::kloc_1449b: 	goto loc_1449b;
-        case m2c::kloc_144a4: 	goto loc_144a4;
-        case m2c::kloc_144ad: 	goto loc_144ad;
-        case m2c::kloc_144be: 	goto loc_144be;
-        case m2c::kloc_144c9: 	goto loc_144c9;
-        case m2c::kloc_144d3: 	goto loc_144d3;
-        case m2c::kloc_144d9: 	goto loc_144d9;
-        case m2c::kloc_144dd: 	goto loc_144dd;
-        case m2c::kloc_144f5: 	goto loc_144f5;
-        case m2c::kloc_14536: 	goto loc_14536;
-        case m2c::kloc_14542: 	goto loc_14542;
-        case m2c::kloc_1454e: 	goto loc_1454e;
-        case m2c::kloc_145ae: 	goto loc_145ae;
-        case m2c::kloc_145cc: 	goto loc_145cc;
-        case m2c::kloc_145df: 	goto loc_145df;
-        case m2c::kloc_145e7: 	goto loc_145e7;
-        case m2c::kloc_145eb: 	goto loc_145eb;
         case m2c::kloc_14607: 	goto loc_14607;
         case m2c::kloc_1460f: 	goto loc_1460f;
-        case m2c::kloc_14618: 	goto loc_14618;
-        case m2c::kloc_14626: 	goto loc_14626;
-        case m2c::kloc_1463c: 	goto loc_1463c;
-        case m2c::klocret_10420: 	goto locret_10420;
-        case m2c::klocret_10444: 	goto locret_10444;
-        case m2c::klocret_104c6: 	goto locret_104c6;
-        case m2c::klocret_1053d: 	goto locret_1053d;
-        case m2c::klocret_105a7: 	goto locret_105a7;
-        case m2c::klocret_10690: 	goto locret_10690;
-        case m2c::klocret_109ac: 	goto locret_109ac;
-        case m2c::klocret_10cfb: 	goto locret_10cfb;
-        case m2c::klocret_111d1: 	goto locret_111d1;
-        case m2c::klocret_114f6: 	goto locret_114f6;
-        case m2c::klocret_1161f: 	goto locret_1161f;
-        case m2c::klocret_11aab: 	goto locret_11aab;
-        case m2c::klocret_11b8a: 	goto locret_11b8a;
-        case m2c::klocret_11be9: 	goto locret_11be9;
-        case m2c::klocret_11c77: 	goto locret_11c77;
-        case m2c::klocret_11c93: 	goto locret_11c93;
-        case m2c::klocret_11dbd: 	goto locret_11dbd;
-        case m2c::klocret_11ed1: 	goto locret_11ed1;
-        case m2c::klocret_11ff5: 	goto locret_11ff5;
-        case m2c::klocret_120f7: 	goto locret_120f7;
-        case m2c::klocret_123f2: 	goto locret_123f2;
-        case m2c::klocret_1242c: 	goto locret_1242c;
-        case m2c::klocret_124f9: 	goto locret_124f9;
-        case m2c::klocret_12535: 	goto locret_12535;
-        case m2c::klocret_12602: 	goto locret_12602;
-        case m2c::klocret_1263e: 	goto locret_1263e;
-        case m2c::klocret_1270b: 	goto locret_1270b;
-        case m2c::klocret_12747: 	goto locret_12747;
-        case m2c::klocret_1297c: 	goto locret_1297c;
-        case m2c::klocret_12ce8: 	goto locret_12ce8;
-        case m2c::klocret_12db5: 	goto locret_12db5;
-        case m2c::klocret_13036: 	goto locret_13036;
-        case m2c::klocret_13067: 	goto locret_13067;
-        case m2c::klocret_13236: 	goto locret_13236;
-        case m2c::klocret_138fb: 	goto locret_138fb;
-        case m2c::klocret_13bc6: 	goto locret_13bc6;
-        case m2c::klocret_13e06: 	goto locret_13e06;
-        case m2c::klocret_145ef: 	goto locret_145ef;
         case m2c::klocret_14611: 	goto locret_14611;
-        case m2c::kret_1c2_103: 	goto ret_1c2_103;
-        case m2c::kret_1c2_105c: 	goto ret_1c2_105c;
-        case m2c::kret_1c2_117f: 	goto ret_1c2_117f;
-        case m2c::kret_1c2_1272: 	goto ret_1c2_1272;
-        case m2c::kret_1c2_1303: 	goto ret_1c2_1303;
-        case m2c::kret_1c2_1394: 	goto ret_1c2_1394;
-        case m2c::kret_1c2_145d: 	goto ret_1c2_145d;
-        case m2c::kret_1c2_14a4: 	goto ret_1c2_14a4;
-        case m2c::kret_1c2_14eb: 	goto ret_1c2_14eb;
-        case m2c::kret_1c2_14ff: 	goto ret_1c2_14ff;
-        case m2c::kret_1c2_150a: 	goto ret_1c2_150a;
-        case m2c::kret_1c2_1533: 	goto ret_1c2_1533;
-        case m2c::kret_1c2_153b: 	goto ret_1c2_153b;
-        case m2c::kret_1c2_155a: 	goto ret_1c2_155a;
-        case m2c::kret_1c2_155f: 	goto ret_1c2_155f;
-        case m2c::kret_1c2_1579: 	goto ret_1c2_1579;
-        case m2c::kret_1c2_1586: 	goto ret_1c2_1586;
-        case m2c::kret_1c2_15a1: 	goto ret_1c2_15a1;
-        case m2c::kret_1c2_15ae: 	goto ret_1c2_15ae;
-        case m2c::kret_1c2_15c7: 	goto ret_1c2_15c7;
-        case m2c::kret_1c2_15d6: 	goto ret_1c2_15d6;
-        case m2c::kret_1c2_15de: 	goto ret_1c2_15de;
-        case m2c::kret_1c2_16f4: 	goto ret_1c2_16f4;
-        case m2c::kret_1c2_180f: 	goto ret_1c2_180f;
-        case m2c::kret_1c2_183: 	goto ret_1c2_183;
-        case m2c::kret_1c2_192f: 	goto ret_1c2_192f;
-        case m2c::kret_1c2_19d2: 	goto ret_1c2_19d2;
-        case m2c::kret_1c2_1a5d: 	goto ret_1c2_1a5d;
-        case m2c::kret_1c2_1a9c: 	goto ret_1c2_1a9c;
-        case m2c::kret_1c2_1abf: 	goto ret_1c2_1abf;
-        case m2c::kret_1c2_1acd: 	goto ret_1c2_1acd;
-        case m2c::kret_1c2_1aff: 	goto ret_1c2_1aff;
-        case m2c::kret_1c2_1b0c: 	goto ret_1c2_1b0c;
-        case m2c::kret_1c2_1b14: 	goto ret_1c2_1b14;
-        case m2c::kret_1c2_1b1f: 	goto ret_1c2_1b1f;
-        case m2c::kret_1c2_1b75: 	goto ret_1c2_1b75;
-        case m2c::kret_1c2_1fe5: 	goto ret_1c2_1fe5;
-        case m2c::kret_1c2_2063: 	goto ret_1c2_2063;
-        case m2c::kret_1c2_2070: 	goto ret_1c2_2070;
-        case m2c::kret_1c2_212b: 	goto ret_1c2_212b;
-        case m2c::kret_1c2_21f8: 	goto ret_1c2_21f8;
-        case m2c::kret_1c2_224: 	goto ret_1c2_224;
-        case m2c::kret_1c2_22ff: 	goto ret_1c2_22ff;
-        case m2c::kret_1c2_23b: 	goto ret_1c2_23b;
-        case m2c::kret_1c2_2408: 	goto ret_1c2_2408;
-        case m2c::kret_1c2_246: 	goto ret_1c2_246;
-        case m2c::kret_1c2_2613: 	goto ret_1c2_2613;
-        case m2c::kret_1c2_2634: 	goto ret_1c2_2634;
-        case m2c::kret_1c2_2673: 	goto ret_1c2_2673;
-        case m2c::kret_1c2_26a3: 	goto ret_1c2_26a3;
-        case m2c::kret_1c2_26dd: 	goto ret_1c2_26dd;
-        case m2c::kret_1c2_2781: 	goto ret_1c2_2781;
-        case m2c::kret_1c2_28e3: 	goto ret_1c2_28e3;
-        case m2c::kret_1c2_293: 	goto ret_1c2_293;
-        case m2c::kret_1c2_2a0: 	goto ret_1c2_2a0;
-        case m2c::kret_1c2_2bd7: 	goto ret_1c2_2bd7;
-        case m2c::kret_1c2_2c33: 	goto ret_1c2_2c33;
-        case m2c::kret_1c2_2cf9: 	goto ret_1c2_2cf9;
-        case m2c::kret_1c2_2d7: 	goto ret_1c2_2d7;
-        case m2c::kret_1c2_2e44: 	goto ret_1c2_2e44;
-        case m2c::kret_1c2_2f8f: 	goto ret_1c2_2f8f;
-        case m2c::kret_1c2_315f: 	goto ret_1c2_315f;
-        case m2c::kret_1c2_31b1: 	goto ret_1c2_31b1;
-        case m2c::kret_1c2_327: 	goto ret_1c2_327;
-        case m2c::kret_1c2_3273: 	goto ret_1c2_3273;
-        case m2c::kret_1c2_32a5: 	goto ret_1c2_32a5;
-        case m2c::kret_1c2_32b2: 	goto ret_1c2_32b2;
-        case m2c::kret_1c2_32df: 	goto ret_1c2_32df;
-        case m2c::kret_1c2_32ea: 	goto ret_1c2_32ea;
-        case m2c::kret_1c2_32fb: 	goto ret_1c2_32fb;
-        case m2c::kret_1c2_3311: 	goto ret_1c2_3311;
-        case m2c::kret_1c2_3327: 	goto ret_1c2_3327;
-        case m2c::kret_1c2_3346: 	goto ret_1c2_3346;
-        case m2c::kret_1c2_3392: 	goto ret_1c2_3392;
-        case m2c::kret_1c2_343: 	goto ret_1c2_343;
-        case m2c::kret_1c2_3462: 	goto ret_1c2_3462;
-        case m2c::kret_1c2_34a9: 	goto ret_1c2_34a9;
-        case m2c::kret_1c2_34ba: 	goto ret_1c2_34ba;
-        case m2c::kret_1c2_350e: 	goto ret_1c2_350e;
-        case m2c::kret_1c2_351e: 	goto ret_1c2_351e;
-        case m2c::kret_1c2_3536: 	goto ret_1c2_3536;
-        case m2c::kret_1c2_35bb: 	goto ret_1c2_35bb;
-        case m2c::kret_1c2_361e: 	goto ret_1c2_361e;
-        case m2c::kret_1c2_36ab: 	goto ret_1c2_36ab;
-        case m2c::kret_1c2_36c8: 	goto ret_1c2_36c8;
-        case m2c::kret_1c2_36e6: 	goto ret_1c2_36e6;
-        case m2c::kret_1c2_3701: 	goto ret_1c2_3701;
-        case m2c::kret_1c2_385f: 	goto ret_1c2_385f;
-        case m2c::kret_1c2_3879: 	goto ret_1c2_3879;
-        case m2c::kret_1c2_3891: 	goto ret_1c2_3891;
-        case m2c::kret_1c2_391b: 	goto ret_1c2_391b;
-        case m2c::kret_1c2_395f: 	goto ret_1c2_395f;
-        case m2c::kret_1c2_3973: 	goto ret_1c2_3973;
-        case m2c::kret_1c2_39ab: 	goto ret_1c2_39ab;
-        case m2c::kret_1c2_39ca: 	goto ret_1c2_39ca;
-        case m2c::kret_1c2_39cd: 	goto ret_1c2_39cd;
-        case m2c::kret_1c2_3a50: 	goto ret_1c2_3a50;
-        case m2c::kret_1c2_3a69: 	goto ret_1c2_3a69;
-        case m2c::kret_1c2_3ab: 	goto ret_1c2_3ab;
-        case m2c::kret_1c2_3ba4: 	goto ret_1c2_3ba4;
-        case m2c::kret_1c2_3bc7: 	goto ret_1c2_3bc7;
-        case m2c::kret_1c2_3bd: 	goto ret_1c2_3bd;
-        case m2c::kret_1c2_3bfc: 	goto ret_1c2_3bfc;
-        case m2c::kret_1c2_3c2: 	goto ret_1c2_3c2;
-        case m2c::kret_1c2_3c28: 	goto ret_1c2_3c28;
-        case m2c::kret_1c2_3c42: 	goto ret_1c2_3c42;
-        case m2c::kret_1c2_3c7: 	goto ret_1c2_3c7;
-        case m2c::kret_1c2_3c87: 	goto ret_1c2_3c87;
-        case m2c::kret_1c2_3ca1: 	goto ret_1c2_3ca1;
-        case m2c::kret_1c2_3cf4: 	goto ret_1c2_3cf4;
-        case m2c::kret_1c2_3d30: 	goto ret_1c2_3d30;
-        case m2c::kret_1c2_3d38: 	goto ret_1c2_3d38;
-        case m2c::kret_1c2_3d8: 	goto ret_1c2_3d8;
-        case m2c::kret_1c2_3de8: 	goto ret_1c2_3de8;
-        case m2c::kret_1c2_3e0: 	goto ret_1c2_3e0;
-        case m2c::kret_1c2_3e08: 	goto ret_1c2_3e08;
-        case m2c::kret_1c2_3e1a: 	goto ret_1c2_3e1a;
-        case m2c::kret_1c2_3e8: 	goto ret_1c2_3e8;
-        case m2c::kret_1c2_3eaa: 	goto ret_1c2_3eaa;
-        case m2c::kret_1c2_3ec9: 	goto ret_1c2_3ec9;
-        case m2c::kret_1c2_3edb: 	goto ret_1c2_3edb;
-        case m2c::kret_1c2_3f0: 	goto ret_1c2_3f0;
-        case m2c::kret_1c2_3f01: 	goto ret_1c2_3f01;
-        case m2c::kret_1c2_3f43: 	goto ret_1c2_3f43;
-        case m2c::kret_1c2_3f8: 	goto ret_1c2_3f8;
-        case m2c::kret_1c2_3fd3: 	goto ret_1c2_3fd3;
-        case m2c::kret_1c2_400: 	goto ret_1c2_400;
-        case m2c::kret_1c2_4015: 	goto ret_1c2_4015;
-        case m2c::kret_1c2_4051: 	goto ret_1c2_4051;
-        case m2c::kret_1c2_406f: 	goto ret_1c2_406f;
-        case m2c::kret_1c2_4074: 	goto ret_1c2_4074;
-        case m2c::kret_1c2_408: 	goto ret_1c2_408;
-        case m2c::kret_1c2_40b7: 	goto ret_1c2_40b7;
-        case m2c::kret_1c2_40df: 	goto ret_1c2_40df;
-        case m2c::kret_1c2_410d: 	goto ret_1c2_410d;
-        case m2c::kret_1c2_4173: 	goto ret_1c2_4173;
-        case m2c::kret_1c2_419f: 	goto ret_1c2_419f;
-        case m2c::kret_1c2_41af: 	goto ret_1c2_41af;
-        case m2c::kret_1c2_426c: 	goto ret_1c2_426c;
-        case m2c::kret_1c2_42b7: 	goto ret_1c2_42b7;
-        case m2c::kret_1c2_438: 	goto ret_1c2_438;
-        case m2c::kret_1c2_43b4: 	goto ret_1c2_43b4;
         case m2c::kret_1c2_43f2: 	goto ret_1c2_43f2;
-        case m2c::kret_1c2_440: 	goto ret_1c2_440;
-        case m2c::kret_1c2_465: 	goto ret_1c2_465;
-        case m2c::kret_1c2_494: 	goto ret_1c2_494;
-        case m2c::kret_1c2_4ac: 	goto ret_1c2_4ac;
-        case m2c::kret_1c2_4c2: 	goto ret_1c2_4c2;
-        case m2c::kret_1c2_507: 	goto ret_1c2_507;
-        case m2c::kret_1c2_52d: 	goto ret_1c2_52d;
-        case m2c::kret_1c2_548: 	goto ret_1c2_548;
-        case m2c::kret_1c2_563: 	goto ret_1c2_563;
-        case m2c::kret_1c2_5a8: 	goto ret_1c2_5a8;
-        case m2c::kret_1c2_649: 	goto ret_1c2_649;
-        case m2c::kret_1c2_73c: 	goto ret_1c2_73c;
-        case m2c::kret_1c2_7b2: 	goto ret_1c2_7b2;
-        case m2c::kret_1c2_835: 	goto ret_1c2_835;
-        case m2c::kret_1c2_894: 	goto ret_1c2_894;
-        case m2c::kret_1c2_9a5: 	goto ret_1c2_9a5;
-        case m2c::kret_1c2_a18: 	goto ret_1c2_a18;
-        case m2c::kret_1c2_a89: 	goto ret_1c2_a89;
-        case m2c::kret_1c2_a9c: 	goto ret_1c2_a9c;
-        case m2c::kret_1c2_ac6: 	goto ret_1c2_ac6;
-        case m2c::kret_1c2_ad6: 	goto ret_1c2_ad6;
-        case m2c::kret_1c2_bab: 	goto ret_1c2_bab;
-        case m2c::kret_1c2_c0a: 	goto ret_1c2_c0a;
-        case m2c::kret_1c2_c88: 	goto ret_1c2_c88;
-        case m2c::kret_1c2_cb3: 	goto ret_1c2_cb3;
-        case m2c::kret_1c2_cf1: 	goto ret_1c2_cf1;
-        case m2c::kret_1c2_e3a: 	goto ret_1c2_e3a;
-        case m2c::kret_1c2_e51: 	goto ret_1c2_e51;
-        case m2c::kret_1c2_e72: 	goto ret_1c2_e72;
-        case m2c::kret_1c2_eb5: 	goto ret_1c2_eb5;
-        case m2c::kret_1c2_f8c: 	goto ret_1c2_f8c;
-        case m2c::kret_1c2_fad: 	goto ret_1c2_fad;
-        case m2c::kret_1c2_fb2: 	goto ret_1c2_fb2;
-        case m2c::kret_1c2_fb7: 	goto ret_1c2_fb7;
-        case m2c::kret_1c2_fbc: 	goto ret_1c2_fbc;
-        case m2c::kret_1c2_fd7: 	goto ret_1c2_fd7;
-        case m2c::kseg001_145b_proc: 	goto seg001_145b_proc;
-        case m2c::kseg001_14e9_proc: 	goto seg001_14e9_proc;
-        case m2c::kseg001_16f0_proc: 	goto seg001_16f0_proc;
-        case m2c::kseg001_1a99_proc: 	goto seg001_1a99_proc;
-        case m2c::kseg001_1c84_proc: 	goto seg001_1c84_proc;
-        case m2c::kseg001_250c_proc: 	goto seg001_250c_proc;
-        case m2c::kseg001_351d_proc: 	goto seg001_351d_proc;
-        case m2c::kseg001_3aa0_proc: 	goto seg001_3aa0_proc;
-        case m2c::kseg001_3c07_proc: 	goto seg001_3c07_proc;
-        case m2c::kseg001_3d37_proc: 	goto seg001_3d37_proc;
-        case m2c::kseg001_3eda_proc: 	goto seg001_3eda_proc;
-        case m2c::kseg001_3f42_proc: 	goto seg001_3f42_proc;
-        case m2c::kseg001_4014_proc: 	goto seg001_4014_proc;
-        case m2c::kseg001_40b6_proc: 	goto seg001_40b6_proc;
-        case m2c::kseg001_4116_proc: 	goto seg001_4116_proc;
-        case m2c::kseg001_528_proc: 	goto seg001_528_proc;
-        case m2c::ksub_10300: 	goto sub_10300;
-        case m2c::ksub_10380: 	goto sub_10380;
-        case m2c::ksub_10421: 	goto sub_10421;
-        case m2c::ksub_10438: 	goto sub_10438;
-        case m2c::ksub_10445: 	goto sub_10445;
-        case m2c::ksub_10492: 	goto sub_10492;
-        case m2c::ksub_1049d: 	goto sub_1049d;
-        case m2c::ksub_104d4: 	goto sub_104d4;
-        case m2c::ksub_10524: 	goto sub_10524;
-        case m2c::ksub_1053e: 	goto sub_1053e;
-        case m2c::ksub_105a8: 	goto sub_105a8;
-        case m2c::ksub_105ae: 	goto sub_105ae;
-        case m2c::ksub_105b2: 	goto sub_105b2;
-        case m2c::ksub_105ba: 	goto sub_105ba;
-        case m2c::ksub_105bf: 	goto sub_105bf;
-        case m2c::ksub_105c4: 	goto sub_105c4;
-        case m2c::ksub_105d5: 	goto sub_105d5;
-        case m2c::ksub_105dd: 	goto sub_105dd;
-        case m2c::ksub_105e5: 	goto sub_105e5;
-        case m2c::ksub_105ed: 	goto sub_105ed;
-        case m2c::ksub_105f5: 	goto sub_105f5;
-        case m2c::ksub_105fd: 	goto sub_105fd;
-        case m2c::ksub_10605: 	goto sub_10605;
-        case m2c::ksub_10635: 	goto sub_10635;
-        case m2c::ksub_1063f: 	goto sub_1063f;
-        case m2c::ksub_10662: 	goto sub_10662;
-        case m2c::ksub_10691: 	goto sub_10691;
-        case m2c::ksub_106a9: 	goto sub_106a9;
-        case m2c::ksub_106bf: 	goto sub_106bf;
-        case m2c::ksub_10704: 	goto sub_10704;
-        case m2c::ksub_10745: 	goto sub_10745;
-        case m2c::ksub_10760: 	goto sub_10760;
-        case m2c::ksub_10766: 	goto sub_10766;
-        case m2c::ksub_107a4: 	goto sub_107a4;
-        case m2c::ksub_10846: 	goto sub_10846;
-        case m2c::ksub_10937: 	goto sub_10937;
-        case m2c::ksub_109ad: 	goto sub_109ad;
-        case m2c::ksub_10a30: 	goto sub_10a30;
-        case m2c::ksub_10a8f: 	goto sub_10a8f;
-        case m2c::ksub_10ba0: 	goto sub_10ba0;
-        case m2c::ksub_10c17: 	goto sub_10c17;
-        case m2c::ksub_10c88: 	goto sub_10c88;
-        case m2c::ksub_10c9b: 	goto sub_10c9b;
-        case m2c::ksub_10cc5: 	goto sub_10cc5;
-        case m2c::ksub_10cd3: 	goto sub_10cd3;
-        case m2c::ksub_10da5: 	goto sub_10da5;
-        case m2c::ksub_10e07: 	goto sub_10e07;
-        case m2c::ksub_10e87: 	goto sub_10e87;
-        case m2c::ksub_10eb2: 	goto sub_10eb2;
-        case m2c::ksub_10ef0: 	goto sub_10ef0;
-        case m2c::ksub_11037: 	goto sub_11037;
-        case m2c::ksub_1104e: 	goto sub_1104e;
-        case m2c::ksub_1106f: 	goto sub_1106f;
-        case m2c::ksub_110b0: 	goto sub_110b0;
-        case m2c::ksub_11187: 	goto sub_11187;
-        case m2c::ksub_1118a: 	goto sub_1118a;
-        case m2c::ksub_111aa: 	goto sub_111aa;
-        case m2c::ksub_111af: 	goto sub_111af;
-        case m2c::ksub_111b4: 	goto sub_111b4;
-        case m2c::ksub_111b9: 	goto sub_111b9;
-        case m2c::ksub_111d2: 	goto sub_111d2;
-        case m2c::ksub_111d5: 	goto sub_111d5;
-        case m2c::ksub_111f5: 	goto sub_111f5;
-        case m2c::ksub_11227: 	goto sub_11227;
-        case m2c::ksub_11259: 	goto sub_11259;
-        case m2c::ksub_1137c: 	goto sub_1137c;
-        case m2c::ksub_113ff: 	goto sub_113ff;
-        case m2c::ksub_1146f: 	goto sub_1146f;
-        case m2c::ksub_114a8: 	goto sub_114a8;
-        case m2c::ksub_11500: 	goto sub_11500;
-        case m2c::ksub_1158f: 	goto sub_1158f;
-        case m2c::ksub_116a3: 	goto sub_116a3;
-        case m2c::ksub_117da: 	goto sub_117da;
-        case m2c::ksub_11b2b: 	goto sub_11b2b;
-        case m2c::ksub_11bcd: 	goto sub_11bcd;
-        case m2c::ksub_11c58: 	goto sub_11c58;
-        case m2c::ksub_11cbb: 	goto sub_11cbb;
-        case m2c::ksub_11cca: 	goto sub_11cca;
-        case m2c::ksub_11cfc: 	goto sub_11cfc;
-        case m2c::ksub_11d07: 	goto sub_11d07;
-        case m2c::ksub_11d12: 	goto sub_11d12;
-        case m2c::ksub_11d1c: 	goto sub_11d1c;
-        case m2c::ksub_11d70: 	goto sub_11d70;
-        case m2c::ksub_121df: 	goto sub_121df;
-        case m2c::ksub_12262: 	goto sub_12262;
-        case m2c::ksub_1226d: 	goto sub_1226d;
-        case m2c::ksub_1232a: 	goto sub_1232a;
-        case m2c::ksub_12350: 	goto sub_12350;
-        case m2c::ksub_123f3: 	goto sub_123f3;
-        case m2c::ksub_124fa: 	goto sub_124fa;
-        case m2c::ksub_12603: 	goto sub_12603;
-        case m2c::ksub_1280e: 	goto sub_1280e;
-        case m2c::ksub_12831: 	goto sub_12831;
-        case m2c::ksub_12870: 	goto sub_12870;
-        case m2c::ksub_128a1: 	goto sub_128a1;
-        case m2c::ksub_128da: 	goto sub_128da;
-        case m2c::ksub_1297d: 	goto sub_1297d;
-        case m2c::ksub_12a36: 	goto sub_12a36;
-        case m2c::ksub_12ae0: 	goto sub_12ae0;
-        case m2c::ksub_12e30: 	goto sub_12e30;
-        case m2c::ksub_12e92: 	goto sub_12e92;
-        case m2c::ksub_12ef6: 	goto sub_12ef6;
-        case m2c::ksub_13040: 	goto sub_13040;
-        case m2c::ksub_1335d: 	goto sub_1335d;
-        case m2c::ksub_133ad: 	goto sub_133ad;
-        case m2c::ksub_1346f: 	goto sub_1346f;
-        case m2c::ksub_134a3: 	goto sub_134a3;
-        case m2c::ksub_134b0: 	goto sub_134b0;
-        case m2c::ksub_134e1: 	goto sub_134e1;
-        case m2c::ksub_134e8: 	goto sub_134e8;
-        case m2c::ksub_134ed: 	goto sub_134ed;
-        case m2c::ksub_134fa: 	goto sub_134fa;
-        case m2c::ksub_13510: 	goto sub_13510;
-        case m2c::ksub_13526: 	goto sub_13526;
-        case m2c::ksub_13541: 	goto sub_13541;
-        case m2c::ksub_1358d: 	goto sub_1358d;
-        case m2c::ksub_136a8: 	goto sub_136a8;
-        case m2c::ksub_136b5: 	goto sub_136b5;
-        case m2c::ksub_1370d: 	goto sub_1370d;
-        case m2c::ksub_1372f: 	goto sub_1372f;
-        case m2c::ksub_13735: 	goto sub_13735;
-        case m2c::ksub_137b6: 	goto sub_137b6;
-        case m2c::ksub_13819: 	goto sub_13819;
-        case m2c::ksub_138a8: 	goto sub_138a8;
-        case m2c::ksub_138c5: 	goto sub_138c5;
-        case m2c::ksub_138e1: 	goto sub_138e1;
-        case m2c::ksub_138fc: 	goto sub_138fc;
-        case m2c::ksub_139f9: 	goto sub_139f9;
-        case m2c::ksub_13a5e: 	goto sub_13a5e;
-        case m2c::ksub_13a76: 	goto sub_13a76;
-        case m2c::ksub_13a85: 	goto sub_13a85;
-        case m2c::ksub_13a90: 	goto sub_13a90;
-        case m2c::ksub_13b1a: 	goto sub_13b1a;
-        case m2c::ksub_13b5e: 	goto sub_13b5e;
-        case m2c::ksub_13b70: 	goto sub_13b70;
-        case m2c::ksub_13ba8: 	goto sub_13ba8;
-        case m2c::ksub_13bad: 	goto sub_13bad;
-        case m2c::ksub_13bc7: 	goto sub_13bc7;
-        case m2c::ksub_13bcc: 	goto sub_13bcc;
-        case m2c::ksub_13c4f: 	goto sub_13c4f;
-        case m2c::ksub_13c68: 	goto sub_13c68;
-        case m2c::ksub_13dc4: 	goto sub_13dc4;
-        case m2c::ksub_13dfa: 	goto sub_13dfa;
-        case m2c::ksub_13e3d: 	goto sub_13e3d;
-        case m2c::ksub_13e86: 	goto sub_13e86;
-        case m2c::ksub_13ea0: 	goto sub_13ea0;
-        case m2c::ksub_13ef3: 	goto sub_13ef3;
-        case m2c::ksub_13f2b: 	goto sub_13f2b;
-        case m2c::ksub_13fe7: 	goto sub_13fe7;
-        case m2c::ksub_14005: 	goto sub_14005;
-        case m2c::ksub_14015: 	goto sub_14015;
-        case m2c::ksub_140a5: 	goto sub_140a5;
-        case m2c::ksub_140c6: 	goto sub_140c6;
-        case m2c::ksub_14100: 	goto sub_14100;
-        case m2c::ksub_141d2: 	goto sub_141d2;
-        case m2c::ksub_14250: 	goto sub_14250;
-        case m2c::ksub_1426c: 	goto sub_1426c;
-        case m2c::ksub_14273: 	goto sub_14273;
-        case m2c::ksub_142de: 	goto sub_142de;
-        case m2c::ksub_142f4: 	goto sub_142f4;
-        case m2c::ksub_14308: 	goto sub_14308;
-        case m2c::ksub_14372: 	goto sub_14372;
-        case m2c::ksub_1439e: 	goto sub_1439e;
-        case m2c::ksub_143ae: 	goto sub_143ae;
-        case m2c::ksub_1446b: 	goto sub_1446b;
-        case m2c::ksub_144b6: 	goto sub_144b6;
-        case m2c::ksub_145b1: 	goto sub_145b1;
-        case m2c::ksub_145c6: 	goto sub_145c6;
         case m2c::ksub_145f0: 	goto sub_145f0;
-        case m2c::ksub_14612: 	goto sub_14612;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }

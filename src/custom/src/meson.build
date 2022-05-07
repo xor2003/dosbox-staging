@@ -1,5 +1,5 @@
 libsrc_sources = files([
-  'vikings.exe.cpp', 'vikings.exe_default_seg.cpp',  'vikings.exe_seg000.cpp',  'vikings.exe_seg002.cpp',  'vikings.exe_seg003.cpp',
+  'zone.cpp', 'zone_seg001.cpp','zone_default_seg.cpp',
   'init.cpp',
   '_data.cpp',
 ])
