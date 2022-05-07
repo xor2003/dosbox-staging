@@ -1,5 +1,6 @@
+#include "../asm.h"
 #include <cstring>
-#include <custom.h>
+#include <cstdio>
 
 void init_get_fname(char *dst, char *src);
 
@@ -13,16 +14,11 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 
 	init_get_fname(fname, name);
 
-    printf("Loaded %s\n",fname);
-	if (strcmp(fname, "sab.com")==0) 
-   { 
-    printf("Collection enabled\n");
- collect_rt_info=true;
-}
-	if (strcmp(fname, "sab2.com")) return false;
+	if (strcmp(fname, "zone.exe")) return false;
 
 	return true;
 }
+
 
 namespace m2c
 {

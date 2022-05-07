@@ -1,7 +1,5 @@
 libsrc_sources = files([
-  'sab2.cpp', 
-  'sab2_default_seg.cpp', 
-  'sab2_seg000.cpp', 
+  'zone.cpp', 'zone_seg001.cpp','zone_default_seg.cpp',
   'init.cpp',
   '_data.cpp',
 ])
