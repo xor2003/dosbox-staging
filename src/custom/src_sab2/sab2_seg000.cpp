@@ -678,7 +678,7 @@ cs=0x192;eip=0x000615; 	X(INC(byte_14a22));	// 807 inc     byte_14A22 ;~ 00D0:06
 cs=0x192;eip=0x000619; 	X(INC(byte_14a13));	// 808 inc     byte_14A13 ;~ 00D0:0619
 cs=0x192;eip=0x00061d; 	X(POP(ds));	// 809 pop     ds ;~ 00D0:061D
 cs=0x192;eip=0x00061e; 	X(POP(ax));	// 810 pop     ax ;~ 00D0:061E
-cs=0x192;eip=0x00061f; 	R(IRET);	// 811 iret ;~ 00D0:061F
+cs=0x192;eip=0x00061f; 	J(IRET);	// 811 iret ;~ 00D0:061F
 sub_10620:
 	// 816 
 cs=0x192;eip=0x000620; 	T(CMP(byte_14a22, 2));	// 818 cmp     byte_14A22, 2 ;~ 00D0:0620
@@ -6242,7 +6242,7 @@ cs=0x192;eip=0x002da8; 	X(DEC(byte_1a70e));	// 6929 dec     byte_1A70E ;~ 00D0:2
 cs=0x192;eip=0x002dac; 	J(JZ(loc_12db1));	// 6930 jz      short loc_12DB1 ;~ 00D0:2DAC
 cs=0x192;eip=0x002dae; 	X(POP(ax));	// 6931 pop     ax ;~ 00D0:2DAE
 cs=0x192;eip=0x002daf; 	X(POP(ds));	// 6932 pop     ds ;~ 00D0:2DAF
-cs=0x192;eip=0x002db0; 	R(IRET);	// 6933 iret ;~ 00D0:2DB0
+cs=0x192;eip=0x002db0; 	J(IRET);	// 6933 iret ;~ 00D0:2DB0
 loc_12db1:
 	// 5131 
 cs=0x192;eip=0x002db1; 	T(MOV(al, byte_1a710));	// 6937 mov     al, byte_1A710 ;~ 00D0:2DB1
@@ -6260,7 +6260,7 @@ loc_12dcd:
 	// 5133 
 cs=0x192;eip=0x002dcd; 	X(POP(ax));	// 6951 pop     ax ;~ 00D0:2DCD
 cs=0x192;eip=0x002dce; 	X(POP(ds));	// 6952 pop     ds ;~ 00D0:2DCE
-cs=0x192;eip=0x002dcf; 	R(IRET);	// 6953 iret ;~ 00D0:2DCF
+cs=0x192;eip=0x002dcf; 	J(IRET);	// 6953 iret ;~ 00D0:2DCF
 sub_12dd0:
 	// 6958 
 cs=0x192;eip=0x002dd0; 	X(PUSH(es));	// 6960 push    es ;~ 00D0:2DD0
