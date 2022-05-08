@@ -21,9 +21,9 @@ namespace m2c
 }
 
 bool trace_instructions = false;//false; //m2c::debug >= 1;
-bool compare_instructions = m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool compare_instructions = false; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
 bool trace_instructions_to_stdout = false; //false; //m2c::debug >= 1;
-bool collect_rt_info = false;
+bool collect_rt_info = true;
 
 static const size_t
   COMPARE_SIZE = 0xf0000;
@@ -1289,6 +1289,26 @@ using json = nlohmann::json;
     }
    }
 
+   void ShadowMemory::collect_cross_jumps(dw newcs, dd newip)
+   {
+      X86_REGREF
+     if (newcs >= 0x192 && newcs < 0xa000)
+    {
+     dd csip = (cs<<4)+ip;
+     dd target = (newcs<<4)+newip;
+     auto it = m_jumps.find(csip);
+     if (it == m_jumps.end())
+     {
+        
+        m_jumps[csip]=std::unordered_set<dd>(target);
+     }
+     else
+        it->second.insert(target);
+
+    }
+
+   }
+
    void ShadowMemory::collect_data(dd b, size_t size)
    {
       X86_REGREF
@@ -1395,6 +1415,8 @@ std::string int_to_hex( T i )
               const Data* d = static_cast<const Data*>(b);
                  nlohmann_json_j["Data"][int_to_hex(key)] = *d;
          }
+         nlohmann_json_j["Jumps"] = nlohmann_json_t.m_jumps;
+
     }
 
 }

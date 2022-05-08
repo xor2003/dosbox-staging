@@ -120,11 +120,13 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true),m_forceactive(fals
  {
    std::unordered_map< dd, std::shared_ptr<Data> > m_data;
    std::unordered_map< dd, std::shared_ptr<Code> > m_code;
+   std::unordered_map< dd, std::unordered_set<dd> > m_jumps;
 
    public:
    void collect_segs();
    void collect_data(dd b, size_t s);
    void collect_selfmod(dw seg, dd ip, size_t modsize, size_t size);
+   void collect_cross_jumps(dw target_cs, dd target_ip);
    void dump();
    friend void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t);
    

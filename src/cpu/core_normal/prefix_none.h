@@ -1142,8 +1142,17 @@
 				}
 				break;
 			case 0x04:										/* JMP Ev */	
-				if (rm >= 0xc0 ) {GetEArw;reg_eip=*earw;}
-				else {GetEAa;reg_eip=LoadMw(eaa);}
+				if (rm >= 0xc0 ) {GetEArw;
+Bit32u i=*earw;
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],i);
+reg_eip=i;
+}
+				else {GetEAa;
+Bit32u i=LoadMw(eaa);
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],i);
+
+reg_eip=i;
+}
 				continue;
 			case 0x05:										/* JMP Ep */	
 				{
