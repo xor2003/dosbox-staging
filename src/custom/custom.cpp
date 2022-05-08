@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
+extern Bitu DasmI386(char* buffer, PhysPt pc, Bitu cur_ip, bool bit32);
+
 namespace m2c
 {
   extern size_t debug;
@@ -21,7 +23,7 @@ namespace m2c
 }
 
 bool trace_instructions = false;//false; //m2c::debug >= 1;
-bool compare_instructions = false; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
 bool trace_instructions_to_stdout = false; //false; //m2c::debug >= 1;
 bool collect_rt_info = true;
 
@@ -624,10 +626,17 @@ struct CPU_Regs {
       }
   }
 
+size_t inst_size(dw cs, dd eip)
+{
+  char dline[120];
+  return DasmI386(dline,(cs<<4)+eip,eip,false);
+}
+
 size_t inst_size(db* b)
 {
 size_t instr_size=0;
 db op1 = *b;
+//printf("op1 %x\n", op1);
 
 switch (op1)
 {
@@ -644,9 +653,10 @@ case 0xF2:
 case 0xF3:
   {
     ++b; ++instr_size;
+ op1 = *b;
+//printf("op1 %x\n", op1);
   }
 }
- op1 = *b;
 
 if (op1>=0x70 && op1<=0x7f) //j
   instr_size += 2;
@@ -673,6 +683,7 @@ else if (op1 == 0xeb) //jmpf
 else if (op1 == 0xff) //jmpf
 {
   db op2 = *(b+1);
+//printf("op2 %x\n", op2);
   if (op2>=0x10 && op2 <= 0x2f ) //call/jmp 
     instr_size += 4;
   else if (op2>=0x50 && op2 <= 0x6f ) //call/jmp 
@@ -690,7 +701,11 @@ else if (op1 == 0x0f) //j
 }
 log_debug ("instr size %x\n", instr_size);
 
-if (instr_size==0) exit(1);
+if (instr_size==0) {
+    X86_REGREF
+
+printf("Could not identify instruction size %x:%x %x\n",cs,eip,op1);
+exit(1);}
  return instr_size;
 }
 
@@ -737,7 +752,8 @@ char jump_name[100]="";
 */
     already_checked[(seg << 4) + ip1] = true;
 
-    size_t instr_size = inst_size(raddr(seg,ip1));
+//    size_t instr_size = inst_size(raddr(seg,ip1));
+    size_t instr_size = inst_size(seg,ip1);
 
     if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
       {
@@ -1356,8 +1372,8 @@ using json = nlohmann::json;
        FILE *f = fopen("rt_data.json","w");
        fwrite(s.c_str(),s.size(),1,f);
        fclose(f);
-
-       printf("%s\n",j.dump(3).c_str());
+       printf("Saved json\n");
+//       printf("%s\n",j.dump(3).c_str());
    }
 
     void to_json(nlohmann::json& nlohmann_json_j, const Code& c)
