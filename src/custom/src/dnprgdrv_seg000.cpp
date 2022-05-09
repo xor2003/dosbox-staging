@@ -26408,8 +26408,8 @@ sub_1c412:
 cs=0x1a2;eip=0x00c412; 	X(PUSH(ds));	// 30850 push    ds ;~ 01A2:C412
 ret_1a2_c413:
 	// 7148 
-cs=0x1a2;eip=0x00c413; 	T(MOV(es, *(dw*)(((db*)&_word_2d08e_framebuffer2_seg))));	// 30851 mov     es, ds:_word_2D08E_framebuffer2_seg ;~ 01A2:C413
-cs=0x1a2;eip=0x00c417; 	T(MOV(ds, *(dw*)(((db*)&_word_2d08a_framebuffer_active))));	// 30853 mov     ds, ds:_word_2D08A_framebuffer_active ;~ 01A2:C417
+cs=0x1a2;eip=0x00c413; 	T(MOV(es, *(dw*)(raddr(ds,0xDBDE))));	// 30851 mov     es, ds:_word_2D08E_framebuffer2_seg ;~ 01A2:C413
+cs=0x1a2;eip=0x00c417; 	T(MOV(ds, *(dw*)(raddr(ds,0xDBDA))));	// 30853 mov     ds, ds:_word_2D08A_framebuffer_active ;~ 01A2:C417
 cs=0x1a2;eip=0x00c41b; 	J(CALLF(__dispatch_call,*(dd*)(((db*)&_ptr_22d65_gfx_vtable_func_11_copy_framebuf))));	// 30854 call    ss:_ptr_22D65_gfx_vtable_func_11_copy_framebuf ;~ 01A2:C41B
 cs=0x1a2;eip=0x00c420; 	X(POP(ds));	// 30855 pop     ds ;~ 01A2:C420
 cs=0x1a2;eip=0x00c421; 	J(RETN(0));	// 30856 retn ;~ 01A2:C421
