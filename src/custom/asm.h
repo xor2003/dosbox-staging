@@ -222,6 +222,7 @@ dw _source;
 #if M2CDEBUG == -1
 
 
+
     class eflags {
         bool _CF=0;
         bool _PF=0; 
@@ -231,7 +232,7 @@ dw _source;
         bool _TF=0;     
         bool _IF=0;      
         bool _DF=0;       
-        bool _OF=0;
+        bool _OF=0;        
     public:
 #define REGDEF_flags(Z) \
     MYINLINE bool set##Z##F(bool i){return (_##Z##F=i);} \
@@ -296,6 +297,7 @@ uint16_t& Z = *(uint16_t *)& e##Z ;
                       \
 dw& stackPointer = sp;\
 m2c::_offsets __disp; \
+m2c::eflags m2cflags; \
 dd _source;
 
 
@@ -327,7 +329,6 @@ dw ss;
 #define AFFECT_ZF(a) m2cflags.setZF(a)
 #define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
 #define AFFECT_PF(a) m2cflags.setPF(a)
-
 
 #else
 
@@ -2043,7 +2044,12 @@ enum  _offsets;
 
 #ifdef DOSBOX_CUSTOM
 //#define GETIP		(core.cseip-SegBase(cs)-MemBase)
-#define _INT(num) {m2c::fix_segs();CALLBACK_RunRealInt(num);}
+
+static void _INT_(db num,dd& eax, dd& ebx, dd& ecx, dd& edx, dd& esi, dd& edi, dd& ebp, dd& esp)
+{
+   m2c::fix_segs();CALLBACK_RunRealInt(num);
+}
+#define _INT(num) {m2c::_INT_(num,eax,ebx,ecx,edx,esi,edi,ebp,esp);}
 
 #define TESTJUMPTOBACKGROUND  //if (jumpToBackGround) CALL(moveToBackGround);
 

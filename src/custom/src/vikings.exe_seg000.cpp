@@ -16967,7 +16967,7 @@ cs=0x1a2;eip=0x007a5b; 	J(RETN(0));	// 17781 retn ;~ 01A2:7A5B
 
 
 
-X86_REGREF
+//X86_REGREF
 
 extern dw word_2b09c;
 extern dd dword_2b09;
@@ -16984,12 +16984,12 @@ extern dd _dword_2d0b8_hnm_file_remain;
 extern dd _dword_2d0b4_hnm_file_offset;
 extern dw word_2d0ca;
 
- bool sub_(m2c::_offsets _i, struct m2c::_STATE* _state){
-//    X86_REGREF
-m2c::eflags m2cflags;
+ bool sub_(m2c::_offsets _i, struct m2c::_STATE* _state, dd& eax, dd& ebx, dd& ecx, dd& edx, dd& esi, dd& edi, dd& ebp, dd& esp){
+dd eip;
+    X86_REGREF
 
 dw cs;         
-dw ds;         
+dw ds=0;         
 dw es;         
 dw fs;         
 dw gs;         
@@ -17028,9 +17028,9 @@ cs=0x1a2;eip=0x00ce00; 	R(RETN(0));	// 32591 retn ;~ 01A2:CE00
 
 }          
 
- bool sub_10982_(m2c::_offsets _i, struct m2c::_STATE* _state){
-//    X86_REGREF
-m2c::eflags m2cflags;
+ bool sub_10982_(m2c::_offsets _i, struct m2c::_STATE* _state, dd& eax, dd& ebx, dd& ecx, dd& edx, dd& esi, dd& edi, dd& ebp, dd& esp){
+dd eip;
+    X86_REGREF
 
 dw cs;         
 dw ds;         
@@ -17513,8 +17513,10 @@ loc_10cd5:
 	// 4415 
  	J(JMP(loc_10a22));	// 502 jmp     loc_10A22 ;~ 01A2:0CD5
 
+
     assert(0);
     __dispatch_call:
+#if 0
 #ifdef DOSBOX_CUSTOM
     if ((__disp >> 16) == 0xf000)
 	{cs=0xf000;eip=__disp&0xffff;m2c::fix_segs();return false;}  // Jumping to BIOS
@@ -17571,4 +17573,6 @@ loc_10cd5:
         case m2c::ksub_10982: 	goto sub_10982;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
+#endif
+;
 }
