@@ -107,6 +107,7 @@ typedef long double real10;
 
 extern volatile bool compare_jump;
 
+    extern bool compare_instructions;
 namespace m2c {
 
     bool fix_segs();
@@ -120,6 +121,8 @@ namespace m2c {
     extern void execute_irqs();
 
     extern void single_step();
+
+    extern size_t inst_size(dw cs, dd eip);
 
     struct _STATE;
     void stackDump(_STATE *_state=0);
@@ -1559,14 +1562,17 @@ throw StackPop(skip);
         return ret;
     }
 
+//#define CALL(label, disp) {if (!m2c::CALL_(label, _state, disp)) {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
 
-    static void CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
+    static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
         shadow_stack.itiscall();
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
-        PUSH((m2c::MWORDSIZE)ip);
+        m2c::MWORDSIZE return_addr = ip;
+        if (compare_instructions) ip+=inst_size(cs,eip);
+        PUSH(return_addr);
 
         if (debug>2) {
             log_debug("after call %x\n", stackPointer);
@@ -1577,6 +1583,10 @@ throw StackPop(skip);
         _state = (_STATE *)2;
         try{
             label(_i, _state);
+ if(return_addr != ip&& ((dw)(ip - return_addr)) > 5 ) {
+  log_error("~~Return address not equal to call addr %x %x\n",return_addr,ip);
+return false;
+ }
         }
         catch(const StackPop& ex)
         {
@@ -1591,6 +1601,7 @@ shadow_stack.decreasedeep();
              }
 
         }
+       return true;
     }
 
 

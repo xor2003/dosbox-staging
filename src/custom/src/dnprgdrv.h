@@ -9284,6 +9284,7 @@ static const dd ksub_1d617 = 0x1a2d617;
 static const dd kret_1a2_d618 = 0x1a2d618;
 static const dd ksub_1d61d = 0x1a2d61d;
 static const dd kret_1a2_d61e = 0x1a2d61e;
+static const dd kret_1a2_d624 = 0x1a2d624;
 static const dd kloc_1d621 = 0x1a2d621;
 static const dd kloc_1d649 = 0x1a2d649;
 static const dd ksub_1d64e = 0x1a2d64e;

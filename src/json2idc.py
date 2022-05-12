@@ -1,8 +1,13 @@
 import jsonpickle
 
-image_size = 262288+0x100 #0x22b90 - 0x200  # .exe size - exe header
-dbx_img_offset = 0x192  # para
-ida_load = 0xff0
+image_size = 317936+0x200 #0x22b90 - 0x200  # .exe size - exe header
+dbx_img_offset = 0x1a2  # para
+ida_load = 0x1000
+
+#zone? or sab2
+#image_size = 262288+0x100 #0x22b90 - 0x200  # .exe size - exe header
+#dbx_img_offset = 0x192  # para
+#ida_load = 0xff0
 
 def addr_dbx2ida(addr):
     return addr + (ida_load - dbx_img_offset) * 0x10
