@@ -39,19 +39,16 @@ class _STATE;
         };
 
         std::vector<Frame> m_ss;
-        size_t m_current;
-        bool m_itiscall;
-        bool m_itisret;
-        size_t m_deep;
+        size_t m_current=0;
+        bool m_itiscall=false;
+        bool m_itisret=false;
+        size_t m_deep=1;
     public:
-        int m_needtoskipcall;
-        bool m_active;
-        bool m_forceactive;
+        int m_needtoskipcall=0;
+        bool m_active=true;
+        bool m_forceactive=false;
 
-        size_t m_currentdeep;
-
-        ShadowStack() : m_current(0),m_itiscall(false),
-m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true),m_forceactive(false) {}
+        size_t m_currentdeep=0;
 
         void enable() {m_active=true;}
         void disable() {m_active=false;}
@@ -110,6 +107,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true),m_forceactive(fals
    std::unordered_set<dd> accessingdata;
 
    bool m_selfmodified = false;
+   std::unordered_set<std::string> m_selfvariants;
    size_t m_modsize = 0;
    size_t size = 0;
   
@@ -126,7 +124,7 @@ m_needtoskipcall(0),m_deep(1),m_currentdeep(0),m_active(true),m_forceactive(fals
    public:
    void collect_segs();
    void collect_data(dd b, size_t s);
-   void collect_selfmod(dw seg, dd ip, size_t modsize, size_t size);
+   void collect_selfmod(dw seg, dd ip, size_t modsize, size_t size, const char * oldins, const char * newins);
    void collect_cross_jumps(dw target_cs, dd target_ip);
    void dump();
    friend void to_json(nlohmann::json& nlohmann_json_j, const ShadowMemory& nlohmann_json_t);

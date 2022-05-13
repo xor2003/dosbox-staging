@@ -22,10 +22,10 @@ namespace m2c
   extern void load_drivers();
 }
 
-bool trace_instructions = true; //m2c::debug >= 1;
+bool trace_instructions = false; //m2c::debug >= 1;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
 bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool collect_rt_info = false;
+bool collect_rt_info = true;
 bool collect_rt_info_vars = false;
 
 static const size_t
@@ -710,6 +710,24 @@ exit(1);}
  return instr_size;
 }
 
+void process_self_mod(dw seg, dd ip, size_t size)
+{
+       printf ("~self-modified instruction at %x:%x\n", seg, ip);
+        ::print_instruction_direct (seg, ip);
+        cmpHexDump (m2c::lm + (seg << 4) + ip, (db *) & m2c::m + (seg << 4) + ip, size);
+        if (collect_rt_info) 
+  {
+     memcpy(raddr(0xc000,0xf000),m2c::lm + (seg << 4) + ip, size);
+
+     char ins_old[120];
+     DasmI386(ins_old,0xcf000,0xf000,false);
+     char ins_new[120];
+     DasmI386(ins_new,(seg<<4)+ip,ip,false);
+     size_t equal_bytes = countEqual (m2c::lm + (seg << 4) + ip, (db *) & m2c::m + (seg << 4) + ip, size);
+     shadow_memory.collect_selfmod(seg, ip, equal_bytes , size, ins_old, ins_new);
+  }
+}
+
 char jump_name[100]="";
 
   bool Jstart (const char *file, int line, const char *instr)
@@ -756,14 +774,9 @@ char jump_name[100]="";
 //    size_t instr_size = inst_size(raddr(seg,ip1));
     size_t instr_size = inst_size(seg,ip1);
 
-    if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
+    if (memcmp (m2c::lm + (seg << 4) + ip1, ((db *) & m2c::m) + (seg << 4) + ip1, instr_size) != 0)
       {
-        printf ("~self-modified instruction at %x:%x\n", seg, ip1);
-        //hexDump (m2c::lm+(seg<<4)+ip1, 5);
-        //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction_direct (seg, ip1);
-        cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
-        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
+        process_self_mod(seg, ip1, instr_size);
         compare_jump = false;
       }
     else
@@ -892,14 +905,9 @@ stackDump();
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
 
-    if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
+    if (memcmp (m2c::lm + (seg << 4) + ip1, ((db *) & m2c::m) + (seg << 4) + ip1, instr_size) != 0)
       {
-        log_info ("~self-modified instruction at %x:%x\n", seg, ip1);
-        //hexDump (m2c::lm+(seg<<4)+ip1, 5);
-        //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction_direct (seg, ip1);
-        cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
-        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
+        process_self_mod(seg, ip1, instr_size);
         return false;
       }
     else
@@ -1010,14 +1018,9 @@ stackDump();
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
 
-    if (memcmp (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) != 0)
+    if (memcmp (m2c::lm + (seg << 4) + ip1, ((db *) & m2c::m) + (seg << 4) + ip1, instr_size) != 0)
       {
-        log_info ("~self-modified instruction at %x:%x\n", seg, ip1);
-        //hexDump (m2c::lm+(seg<<4)+ip1, 5);
-        //hexDump ((db*)&m2c::m+(seg<<4)+ip1, 5);
-        ::print_instruction_direct (seg, ip1);
-        cmpHexDump (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size);
-        if (collect_rt_info) shadow_memory.collect_selfmod(seg, ip1, countEqual (m2c::lm + (seg << 4) + ip1, (db *) & m2c::m + (seg << 4) + ip1, instr_size) , instr_size);
+        process_self_mod(seg, ip1, instr_size);
         return false;
       }
     else
@@ -1292,17 +1295,23 @@ using json = nlohmann::json;
     }
    }
 
-   void ShadowMemory::collect_selfmod(dw seg, dd ip, size_t modsize, size_t size)
+   void ShadowMemory::collect_selfmod(dw seg, dd ip, size_t modsize, size_t size, const char * insold, const char * insnew)
    {
      if (seg >= 0x192 && seg < 0xa000)
     {
      dd target = (seg<<4)+ip;
+     bool created = false;
      if (m_code.find(target) == m_code.end())
+       {
         m_code[target]=std::make_shared<Code>();
+        created = true;
+       }
      Code& c(*static_cast<Code*>(m_code.find(target)->second.get()));
      c.m_selfmodified=true;
      c.size = size;
      c.m_modsize = modsize;
+     c.m_selfvariants.insert(insold);
+     c.m_selfvariants.insert(insnew);
     }
    }
 
@@ -1393,6 +1402,7 @@ using json = nlohmann::json;
            nlohmann_json_j["Video"] = c.m_video;
 //        if (c.m_selfmodified)
            nlohmann_json_j["Self"] = c.m_selfmodified;
+           nlohmann_json_j["SelfVar"] = c.m_selfvariants;
 //        if (c.size)
            nlohmann_json_j["Size"] = c.size;
 //        if (c.m_modsize)
