@@ -262,7 +262,7 @@ static inline PhysPt PAGING_GetPhysicalAddress(PhysPt linAddr) {
 /* Special inlined memory reading/writing */
 
 static inline Bit8u mem_readb_inline(PhysPt address) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 1);
 	HostPt tlb_addr=get_tlb_read(address);
 	if (tlb_addr) return host_readb(tlb_addr+address);
 	else
@@ -270,7 +270,7 @@ static inline Bit8u mem_readb_inline(PhysPt address) {
 }
 
 static inline Bit16u mem_readw_inline(PhysPt address) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 2);
 	if ((address & 0xfff)<0xfff) {
 		HostPt tlb_addr=get_tlb_read(address);
 		if (tlb_addr) return host_readw(tlb_addr+address);
@@ -281,7 +281,7 @@ static inline Bit16u mem_readw_inline(PhysPt address) {
 
 static inline uint32_t mem_readd_inline(PhysPt address)
 {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 4);
 	if ((address & 0xfff) < 0xffd) {
 		HostPt tlb_addr = get_tlb_read(address);
 		if (tlb_addr)
@@ -294,14 +294,14 @@ static inline uint32_t mem_readd_inline(PhysPt address)
 }
 
 static inline void mem_writeb_inline(PhysPt address,Bit8u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 1);
 	HostPt tlb_addr=get_tlb_write(address);
 	if (tlb_addr) host_writeb(tlb_addr+address,val);
 	else (get_tlb_writehandler(address))->writeb(address,val);
 }
 
 static inline void mem_writew_inline(PhysPt address,Bit16u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 2);
 	if ((address & 0xfff)<0xfff) {
 		HostPt tlb_addr=get_tlb_write(address);
 		if (tlb_addr) host_writew(tlb_addr+address,val);
@@ -310,7 +310,7 @@ static inline void mem_writew_inline(PhysPt address,Bit16u val) {
 }
 
 static inline void mem_writed_inline(PhysPt address,Bit32u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 4);
 	if ((address & 0xfff)<0xffd) {
 		HostPt tlb_addr=get_tlb_write(address);
 		if (tlb_addr) host_writed(tlb_addr+address,val);
@@ -320,7 +320,7 @@ static inline void mem_writed_inline(PhysPt address,Bit32u val) {
 
 
 static inline bool mem_readb_checked(PhysPt address, Bit8u * val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 1);
 	HostPt tlb_addr=get_tlb_read(address);
 	if (tlb_addr) {
 		*val=host_readb(tlb_addr+address);
@@ -329,7 +329,7 @@ static inline bool mem_readb_checked(PhysPt address, Bit8u * val) {
 }
 
 static inline bool mem_readw_checked(PhysPt address, Bit16u * val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 2);
 	if ((address & 0xfff)<0xfff) {
 		HostPt tlb_addr=get_tlb_read(address);
 		if (tlb_addr) {
@@ -340,7 +340,7 @@ static inline bool mem_readw_checked(PhysPt address, Bit16u * val) {
 }
 
 static inline bool mem_readd_checked(PhysPt address, Bit32u * val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 4);
 	if ((address & 0xfff)<0xffd) {
 		HostPt tlb_addr=get_tlb_read(address);
 		if (tlb_addr) {
@@ -351,7 +351,7 @@ static inline bool mem_readd_checked(PhysPt address, Bit32u * val) {
 }
 
 static inline bool mem_writeb_checked(PhysPt address,Bit8u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 1);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 1);
 	HostPt tlb_addr=get_tlb_write(address);
 	if (tlb_addr) {
 		host_writeb(tlb_addr+address,val);
@@ -360,7 +360,7 @@ static inline bool mem_writeb_checked(PhysPt address,Bit8u val) {
 }
 
 static inline bool mem_writew_checked(PhysPt address,Bit16u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 2);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 2);
 	if ((address & 0xfff)<0xfff) {
 		HostPt tlb_addr=get_tlb_write(address);
 		if (tlb_addr) {
@@ -371,7 +371,7 @@ static inline bool mem_writew_checked(PhysPt address,Bit16u val) {
 }
 
 static inline bool mem_writed_checked(PhysPt address,Bit32u val) {
-        if (collect_rt_info) m2c::shadow_memory.collect_data(address, 4);
+        if (collect_rt_info_vars) m2c::shadow_memory.collect_data(address, 4);
 	if ((address & 0xfff)<0xffd) {
 		HostPt tlb_addr=get_tlb_write(address);
 		if (tlb_addr) {
