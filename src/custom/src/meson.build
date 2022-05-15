@@ -1,10 +1,5 @@
 libsrc_sources = files([
-  'dnprgdrv.cpp',
-  'dnprgdrv_default_seg.cpp',
-  'dnprgdrv_seg000.cpp',
-  'dnprgdrv_seg002.cpp',
-  'dnprgdrv_seg003.cpp',
-  'dnprgdrv_seg005.cpp',
+  'zone.cpp', 'zone_seg001.cpp','zone_default_seg.cpp',
   'init.cpp',
   '_data.cpp',
 ])
