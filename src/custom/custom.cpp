@@ -20,6 +20,7 @@ namespace m2c
 {
   extern size_t debug;
   extern void load_drivers();
+
 }
 
 bool trace_instructions = false; //m2c::debug >= 1;
@@ -42,7 +43,7 @@ Bitu
 std::stack < Bit32u > return_point;
 
 volatile bool defered_custom_call = false;
-volatile bool from_callf = false;
+bool from_callf = false;
 volatile bool from_interpreter = false;
 
 volatile bool compare_jump=false;
@@ -185,7 +186,9 @@ custom_callf (Bitu CS, Bitu IP)
   {
      if (CS >= 0xa000 || (CS==0 && cs==0xf000)) return 0;
 
-     return __dispatch_call((CS << 16) + IP, (m2c::_STATE*)3);
+     m2c::_STATE _state;
+_state.call_source=3;
+     return __dispatch_call((CS << 16) + IP, &_state);
   }
 
   return 0;
@@ -1471,6 +1474,7 @@ if((file_to_write = fopen("goody.com", "wb")) != 0){
     fclose(file_to_write);
 }
 */
-  (*m2c::_ENTRY_POINT_) (0, 0);
+  m2c::_STATE _state;
+  (*m2c::_ENTRY_POINT_) (0, &_state);
 }
 

@@ -5698,7 +5698,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_2373c: 	_group3(__disp, _state); break;
         case m2c::kloc_27dda: 	_group3(__disp, _state); break;
         default: m2c::log_error("cs=%x ip=%x Don't know how to call to 0x%x. See " __FILE__ " line %d\n", cs,ip,__disp, __LINE__);
-if (_state==(m2c::_STATE*)3) return false;
+if (_state->call_source==3) {_state->call_source=0;return false;}
 m2c::interpret_unknown_callf(__disp>>16,__disp&0xffff,2);
 m2c::shadow_stack.getneedtoskipcallndclean(); // Put inside interpret_unknown_callf??
 m2c::log_debug("doing return2\n");return true;

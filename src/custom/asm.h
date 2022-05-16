@@ -21,6 +21,8 @@
  #endif
 #endif
 
+extern bool from_callf;
+
 #ifdef DOSBOX_CUSTOM
 #include "json.hpp"
 #include <typeinfo>
@@ -37,7 +39,6 @@
 #include <vector>
 
 extern int ticksRemain;
-extern volatile bool from_callf;
 extern volatile bool from_interpreter;
 extern bool trace_instructions;
 extern bool collect_rt_info;
@@ -103,6 +104,8 @@ namespace m2c {
 
     extern size_t counter;
 
+    extern db _indent;
+    extern const char *_str;
     extern size_t inst_size(dw cs, dd eip);
 
     struct _STATE;
@@ -146,8 +149,7 @@ union flagsUnion{
 // Regs
     struct _STATE {  // masm2c
         _STATE() {
-            _str = "";
-            _indent = 0;
+            call_source=0;
         }
 
         dd eax;
@@ -176,8 +178,8 @@ union flagsUnion{
         bool OF;
         bool IF;
         bool TF;
-        db _indent;
-        const char *_str;
+
+int call_source;
     };
 
 #define REGDEF_hl(Z)   \
@@ -340,7 +342,7 @@ dd& stackPointer = _state->esp;\
 m2c::_offsets __disp; \
 dw _source;
 
-#else
+#else // libdosbox
 
 class eflags
 {
@@ -426,8 +428,6 @@ dd& stackPointer = esp;\
 m2c::_offsets __disp; \
 dd _source;
 
-    extern db _indent;
-    extern const char *_str;
 
 #endif
 
@@ -596,7 +596,19 @@ inline long getdata(const long& s)
 { return s; }
 
     static inline void setdata(db *d, db s) {
+  #if SDL_MAJOR_VERSION == 2 && !defined(NOSDL)
+	if (m2c::isaddrbelongtom(d) && d < (db*)&m + 0xc0000 && d >= (db*)&m + 0xa0000)
+		{ 
+          dw di = d - (db*)&m;
+	  SDL_SetRenderDrawColor(renderer, vgaPalette[3*s+2], vgaPalette[3*s+1], vgaPalette[3*s], 255); 
+          SDL_RenderDrawPoint(renderer, di%320, di/320); \
+  	  SDL_RenderPresent(renderer); 
+                 } 
+	else 
+  #endif
+        {
         *d = s;
+    }
     }
 
     static inline void setdata(char *d, db s) {
@@ -1559,8 +1571,8 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
 #if SINGLEPROC
 
-#define RETN(i) {m2c::RETN_(i); __disp=(cs<<16)+eip;goto __dispatch_call;}
-    static void RETN_(size_t i)
+#define RETN(i) {m2c::RETN_(i, _state); __disp=(cs<<16)+eip;goto __dispatch_call;}
+    static void RETN_(size_t i, struct _STATE *_state)
     {
         X86_REGREF
        if (debug>2) log_debug("before ret %x\n",stackPointer);
@@ -1573,8 +1585,8 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
           log_debug("return eip %x\n",eip);}
     }
 
-#define RETF(i) {m2c::RETF_(i); __disp=(cs<<16)+eip;goto __dispatch_call;}
-    static void RETF_(size_t i)
+#define RETF(i) {m2c::RETF_(i, _state); __disp=(cs<<16)+eip;goto __dispatch_call;}
+    static void RETF_(size_t i, struct _STATE *_state)
     {
         X86_REGREF
             if (debug>2) log_debug("before retf %x\n",stackPointer);
@@ -1596,7 +1608,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
           MWORDSIZE averytemporary8=eip+2; PUSH(averytemporary8);
 
           if (debug>2) {log_debug("after call %x\n",stackPointer);
-          if (_state) {++_state->_indent;_state->_str=m2c::log_spaces(_state->_indent);};}
+          if (_state) {++m2c::_indent;m2c::_str=m2c::log_spaces(_state->_indent);};}
      }
 
 #else
@@ -1611,9 +1623,9 @@ struct StackPop
    size_t deep;
 };
 
-#define RETN(i) {if (m2c::RETN_(i)) {m2c::shadow_stack.decreasedeep(); return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#define RETN(i) {if (m2c::RETN_(i, _state)) {m2c::shadow_stack.decreasedeep(); return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 
-    static bool RETN_(size_t i) {
+    static bool RETN_(size_t i, struct _STATE *_state) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
@@ -1641,9 +1653,9 @@ throw StackPop(skip);
     }
 
 //#define RETF(i) {m2c::RETF_(i); if (ip=='xy') {m2c::shadow_stack.decreasedeep(); return true;} else  {return __dispatch_call((cs<<16)+eip,0);}}
-#define RETF(i) {m2c::RETF_(i); m2c::shadow_stack.decreasedeep();return true;}
+#define RETF(i) {m2c::RETF_(i, _state); m2c::shadow_stack.decreasedeep();return true;}
 
-    static bool RETF_(size_t i) {
+    static bool RETF_(size_t i, struct _STATE *_state) {
         X86_REGREF
         if (debug>2) log_debug("before retf %x\n", stackPointer);
 
@@ -1689,7 +1701,9 @@ throw StackPop(skip);
         shadow_stack.itiscall();
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
         m2c::MWORDSIZE return_addr = ip;
+#if DOSBOX_CUSTOM
         if (compare_instructions) ip+=inst_size(cs,eip);
+#endif
         PUSH(return_addr);
 
         if (debug>2) {
@@ -1698,7 +1712,7 @@ throw StackPop(skip);
             m2c::_indent += 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-        _state = (_STATE *)2;
+        _state->call_source = 2;
         try{
             label(_i, _state);
  if(return_addr != ip&& ((dw)(ip - return_addr)) > 5 ) {
@@ -1829,7 +1843,7 @@ shadow_stack.decreasedeep();
 #endif
 
 // ---------unimplemented
-#define UNIMPLEMENTED log_debug("unimplemented\n");
+#define UNIMPLEMENTED m2c::log_debug("unimplemented\n");
 /*
 #define CMPXCHG8B(a) UNIMPLEMENTED // not in dosbox
 #define CMOVA(a,b) UNIMPLEMENTED // not in dosbox
