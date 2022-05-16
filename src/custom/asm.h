@@ -94,6 +94,8 @@ typedef long double real10;
 
 #ifndef DOSBOX_CUSTOM
 #include "memmgr.h"
+static void CPU_Exception(int){assert(0);}
+typedef int Bits;
 #endif
 
 namespace m2c {
@@ -1348,6 +1350,9 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define MUL3_2(a, b, c) {dd averytemporary=(dd)(b)*(c);a=averytemporary; AFFECT_ZFifz(a); AFFECT_OF(AFFECT_CF(averytemporary>>16));}
 #define MUL3_4(a, b, c) {dq averytemporary=(dq)(b)*(c);a=averytemporary; AFFECT_ZFifz(a); AFFECT_OF(AFFECT_CF(averytemporary>>32));}
 
+#ifndef DOSBOX_CUSTOM
+typedef int Bits;
+#endif
 // TODO properly handle divide by zero: if(!a) {if (GET_OF()) _INT(4);} else 
 /*
 #define IDIV1(a) {SETFLAGBIT(OF,0);if(a) {int16_t averytemporary=ax;al=averytemporary/((int8_t)a); ah=averytemporary%((int8_t)a); AFFECT_OF(false);}}
