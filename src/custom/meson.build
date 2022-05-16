@@ -1,6 +1,7 @@
 libcustom_sources = files([
   'custom.cpp',
   'segfault.cpp',
+  'shadowstack.cpp'
 ])
 
 libcustom = static_library('custom', libcustom_sources,

@@ -56,12 +56,12 @@ static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) +
  #define LODS(addr,destreg,s) {memcpy (((db *)&eax), &(addr), s);; destreg+=(GET_DF()==0)?s:-s;}
 
 // #define LODSS(a,b) {memcpy (((db *)&eax)+b, realAddress(si,ds), a); si+=(GET_DF()==0)?a:-a;}
-#define LODSB {al = mem_readb((db*)m2c::raddr_(ds,si)-(db*)&m2c::m); si+=(GET_DF()==0)?1:-1;}
-#define LODSW {ax = mem_readw((db*)m2c::raddr_(ds,si)-(db*)&m2c::m); si+=(GET_DF()==0)?2:-2;}
-#define LODSD {eax = mem_readd((db*)m2c::raddr_(ds,si)-(db*)&m2c::m); si+=(GET_DF()==0)?4:-4;}
+#define LODSB {al = m2c::getdata(*(db*)m2c::raddr_(ds,si)); si+=(GET_DF()==0)?1:-1;}
+#define LODSW {ax = m2c::getdata(*(dw*)m2c::raddr_(ds,si)); si+=(GET_DF()==0)?2:-2;}
+#define LODSD {eax = m2c::getdata(*(dd*)m2c::raddr_(ds,si)); si+=(GET_DF()==0)?4:-4;}
 
-#define OUTSB {OUT(dx,(db)mem_readb((db*)m2c::raddr_(ds,si)-(db*)&m2c::m)); si+=(GET_DF()==0)?1:-1;}
-#define OUTSW {OUT(dx,(dw)mem_readw((db*)m2c::raddr_(ds,si)-(db*)&m2c::m)); si+=(GET_DF()==0)?2:-2;}
+#define OUTSB {OUT(dx,(db)m2c::getdata(*(db*)m2c::raddr_(ds,si)); si+=(GET_DF()==0)?1:-1;}
+#define OUTSW {OUT(dx,(dw)m2c::getdata(*(dw*)m2c::raddr_(ds,si)); si+=(GET_DF()==0)?2:-2;}
 
  #ifdef MSB_FIRST
   #define STOSB STOS(1,3)
@@ -94,16 +94,16 @@ static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) +
     #define STOSW STOS(2,0)
    #endif
 */
- #define MOVSS(a) {void * dest;void * src;src=realAddress(si,ds); dest=realAddress(di,es); \
-		memmove(dest,src,a); di+=(GET_DF()==0)?a:-a; si+=(GET_DF()==0)?a:-a; }
 
-   #define MOVSB {mem_writeb((db*)m2c::raddr_(es,di)-(db*)&m2c::m, mem_readb(realAddress(si,ds)-(db*)&m2c::m));si+=(GET_DF()==0)?1:-1;di+=(GET_DF()==0)?1:-1;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
-   #define MOVSW {mem_writew((db*)m2c::raddr_(es,di)-(db*)&m2c::m, mem_readw(realAddress(si,ds)-(db*)&m2c::m));si+=(GET_DF()==0)?2:-2;di+=(GET_DF()==0)?2:-2;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
-   #define MOVSD {mem_writed((db*)m2c::raddr_(es,di)-(db*)&m2c::m, mem_readd(realAddress(si,ds)-(db*)&m2c::m));si+=(GET_DF()==0)?4:-4;di+=(GET_DF()==0)?4:-4;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
+// #define MOVSS(a) {void * dest;void * src;src=realAddress(si,ds); dest=realAddress(di,es); memmove(dest,src,a); di+=(GET_DF()==0)?a:-a; si+=(GET_DF()==0)?a:-a; }
 
-   #define STOSB {mem_writeb((db*)m2c::raddr_(es,di)-(db*)&m2c::m, al);di+=(GET_DF()==0)?1:-1;} {m2c::repForMov=false;}
-   #define STOSW {mem_writew((db*)m2c::raddr_(es,di)-(db*)&m2c::m, ax);di+=(GET_DF()==0)?2:-2;} {m2c::repForMov=false;}
-   #define STOSD {mem_writed((db*)m2c::raddr_(es,di)-(db*)&m2c::m, eax);di+=(GET_DF()==0)?4:-4;} {m2c::repForMov=false;}
+   #define MOVSB {m2c::setdata( (db*)m2c::raddr_(es,di), m2c::getdata(*(db*)m2c::raddr_(ds,si)) );si+=(GET_DF()==0)?1:-1;di+=(GET_DF()==0)?1:-1;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
+   #define MOVSW {m2c::setdata( (dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(ds,si)) );si+=(GET_DF()==0)?2:-2;di+=(GET_DF()==0)?2:-2;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
+   #define MOVSD {m2c::setdata( (dd*)m2c::raddr_(es,di), m2c::getdata(*(dd*)m2c::raddr_(ds,si)) );si+=(GET_DF()==0)?4:-4;di+=(GET_DF()==0)?4:-4;} {if (m2c::repForMov) AFFECT_ZF(m2c::oldZF); m2c::repForMov=false;}
+
+   #define STOSB {m2c::setdata( (db*)m2c::raddr_(es,di), al);di+=(GET_DF()==0)?1:-1;} {m2c::repForMov=false;}
+   #define STOSW {m2c::setdata( (dw*)m2c::raddr_(es,di), ax);di+=(GET_DF()==0)?2:-2;} {m2c::repForMov=false;}
+   #define STOSD {m2c::setdata( (dd*)m2c::raddr_(es,di), eax);di+=(GET_DF()==0)?4:-4;} {m2c::repForMov=false;}
  #endif
 // #define STOSD STOS(4,0)
 

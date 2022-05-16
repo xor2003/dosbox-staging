@@ -20,9 +20,9 @@ namespace m2c {
 
 extern void Jend();
 
-class _STATE;
     extern int log_debug(const char *format, ...);
 
+class _STATE;
     class ShadowStack {
         struct Frame {
             const char *file;
