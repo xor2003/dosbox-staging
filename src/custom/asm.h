@@ -13,16 +13,15 @@
 
 #include <cstring>
 
-#include "json.hpp"
-
 #ifndef NOSDL
-#ifdef __LIBSDL2__
+ #ifdef __LIBSDL2__
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
-#endif
+ #endif
 #endif
 
 #ifdef DOSBOX_CUSTOM
+#include "json.hpp"
 #include <typeinfo>
 
 #include "custom.h"
@@ -41,27 +40,31 @@ extern volatile bool from_callf;
 extern volatile bool from_interpreter;
 extern bool trace_instructions;
 extern bool collect_rt_info;
+extern volatile bool compare_jump;
+
+extern bool compare_instructions;
 
 void increaseticks();
+#include <callback.h>
 
 #endif
 
 // Types
 #ifdef __BORLANDC__
-typedef unsigned long uint32_t;
-typedef long int32_t;
-typedef unsigned short int uint16_t;
-typedef short int int16_t;
-typedef unsigned char uint8_t;
-typedef char int8_t;
-struct uint64_t
-{
-   long a;
-   long b;
-};
+ typedef unsigned long uint32_t;
+ typedef long int32_t;
+ typedef unsigned short int uint16_t;
+ typedef short int int16_t;
+ typedef unsigned char uint8_t;
+ typedef char int8_t;
+ struct uint64_t
+ {
+	long a;
+	long b;
+ };
 
-#define MYPACKED
-#define MYINT_ENUM
+ #define MYPACKED
+ #define MYINT_ENUM
 #else
 
 #include <stdint.h>
@@ -70,22 +73,7 @@ struct uint64_t
 #define MYPACKED __attribute__((__packed__))
 #define MYINT_ENUM : int
 #endif
-//#include <pthread.h>
 
-#ifdef DOSBOX_CUSTOM
-
-#include <callback.h>
-
-#endif
-
-#ifdef DDDDOSBOX
-#include <modules.h>
-typedef Bit8u uint8_t;
-typedef Bit16u uint16_t;
-typedef Bit32u uint32_t;
-typedef Bit64u uint64_t;
-//typedef uint80_t dt;
-#endif
 
 typedef uint8_t db;
 typedef uint16_t dw;
@@ -106,18 +94,18 @@ typedef long double real10;
 #include "memmgr.h"
 #endif
 
-extern volatile bool compare_jump;
-
-    extern bool compare_instructions;
 namespace m2c {
+
+    extern struct Memory m;
+
+    extern size_t debug;
+
+    extern size_t counter;
 
     bool fix_segs();
 
     extern void log_regs_dbx(const char *file, int line, const char *instr, const CPU_Regs &r, const Segments &s);
 
-    extern size_t debug;
-
-    extern size_t counter;
 
     extern void execute_irqs();
 
@@ -128,8 +116,6 @@ namespace m2c {
     struct _STATE;
     void stackDump(_STATE *_state=0);
 
-    extern struct /*__attribute__((__packed__))*/ Memory m;
-//    extern Memory &m;
 
     typedef dd _offsets;
 
@@ -1795,13 +1781,13 @@ enum  _offsets;
 
 #define XLATP(x) {al = *(x + al);}
 
-
-
+#if DOSBOX_CUSTOM
     void mycopy(db *, db *, size_t, const char *);
+    void cmpHexDump(void *addr1, void *addr2, int len);
+#endif
 
     void hexDump(void *addr, int len);
 
-    void cmpHexDump(void *addr1, void *addr2, int len);
 
     void asm2C_INT(struct _STATE *state, int a);
 
@@ -1832,6 +1818,7 @@ enum  _offsets;
     extern db(&heap)[HEAP_SIZE];
     extern m2cf *_ENTRY_POINT_;
 
+#if DOSBOX_CUSTOM
     extern bool Jstart(const char *file, int line, const char *instr);
 
     extern void Jend();
@@ -1844,9 +1831,10 @@ enum  _offsets;
 
     extern void Xend(const char *file, int line, const char *instr);
 
-//extern void log_regs(int line, const char * instr, struct _STATE* _state);
-
     extern void interpret_unknown_callf(dw cs, dd eip, db source=0);
+#endif
+
+//extern void log_regs(int line, const char * instr, struct _STATE* _state);
 
     static bool oldZF = false;
     static bool repForMov = false;
@@ -1857,10 +1845,12 @@ enum  _offsets;
 #define TODQ(X) (*(dq*)(&(X)))
 
 
-}
+} // namespace m2c
 
+#if DOSBOX_CUSTOM
 extern void print_instruction(Bit16u newcs, Bit32u newip);
 extern void print_instruction_direct(Bit16u newcs, Bit32u newip);
+#endif
 
 extern struct SDL_Renderer *renderer;
 
