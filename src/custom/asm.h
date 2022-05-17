@@ -757,23 +757,30 @@ inline long getdata(const long& s)
 
 #else
 
+#ifndef NO_SHADOW_STACK
+ #define SHADOW_PUSH(a) m2c::shadow_stack.push(_state,(dd)(a))
+ #define SHADOW_POP() m2c::shadow_stack.pop(_state)
+#else
+ #define SHADOW_PUSH(a)
+ #define SHADOW_POP()
+#endif
  #ifdef M2CDEBUG
   #define PUSH(a) {dd averytemporary=a;stackPointer-=sizeof(a); \
 		memcpy (m2c::raddr_(ss,stackPointer), &averytemporary, sizeof (a)); \
 		m2c::log_debug("after push %x\n",stackPointer); \
-               m2c::shadow_stack.push(_state,(dd)(a)); \
+               SHADOW_PUSH(a); \
                }
 //		assert((m2c::raddr_(ss,stackPointer) - ((db*)&stack))>8);}
 
-  #define POP(a) {m2c::shadow_stack.pop(_state);\
+  #define POP(a) {SHADOW_POP();\
                   m2c::log_debug("before pop %x\n",stackPointer);memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);}
  #else
 #define PUSH(a) {dd averytemporary=a;stackPointer-=sizeof(a); \
 		memcpy (m2c::raddr_(ss,stackPointer), &averytemporary, sizeof (a));\
-               m2c::shadow_stack.push(_state,(dd)(a)); \
+               SHADOW_PUSH(a); \
                }
 
-   #define POP(a) {m2c::shadow_stack.pop(_state);\
+   #define POP(a) {SHADOW_POP();\
                    memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);}
  #endif
 
@@ -1393,7 +1400,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 {                                                            \
     Bits val=(int32_t)(op1);                            \
     if (val==0) CPU_Exception(0);                                    \
-    int64_t num=(((Bit64u)edx)<<32)|eax;                \
+    int64_t num=(((uint64_t)edx)<<32)|eax;                \
     int64_t quo=num/val;                                        \
     int32_t rem=(int32_t)(num % val);                            \
     int32_t quo32s=(int32_t)(quo&0xffffffff);                    \
@@ -1628,37 +1635,45 @@ struct StackPop
    size_t deep;
 };
 
-#define RETN(i) {if (m2c::RETN_(i, _state)) {m2c::shadow_stack.decreasedeep(); return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#define RETN(i) {if (m2c::RETN_(i, _state)) {return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 
     static bool RETN_(size_t i, struct _STATE *_state) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
+#ifndef NO_SHADOW_STACK
         shadow_stack.itisret();
+#endif
         POP(ip);
-        bool ret = shadow_stack.itwascall();
+        bool ret(true);
+#ifndef NO_SHADOW_STACK
+        ret = shadow_stack.itwascall();
         int skip = shadow_stack.getneedtoskipcallndclean();
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
         }
+#endif
         esp += i;
         if (debug>2) {
             log_debug("after ret %x\n", stackPointer);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+#ifndef NO_SHADOW_STACK
         if (skip>0) 
           {
-log_error("~~will throw exception skip call=%d\n",skip);
+log_debug("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
 throw StackPop(skip);
 }
+        if (ret) {m2c::shadow_stack.decreasedeep();}
+#endif
 	return(ret);
     }
 
 //#define RETF(i) {m2c::RETF_(i); if (ip=='xy') {m2c::shadow_stack.decreasedeep(); return true;} else  {return __dispatch_call((cs<<16)+eip,0);}}
-#define RETF(i) {m2c::RETF_(i, _state); m2c::shadow_stack.decreasedeep();return true;}
+#define RETF(i) {m2c::RETF_(i, _state); return true;}
 
     static bool RETF_(size_t i, struct _STATE *_state) {
         X86_REGREF
@@ -1666,9 +1681,13 @@ throw StackPop(skip);
 
 //        m2c::MWORDSIZE averytemporary9 = 0;
 //        log_error("~~RETF before 1pop\n");
+#ifndef NO_SHADOW_STACK
         shadow_stack.itisret();
+#endif
         POP(ip);
-        bool ret = shadow_stack.itwascall();
+        bool ret(true);
+#ifndef NO_SHADOW_STACK
+        ret = shadow_stack.itwascall();
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
@@ -1677,6 +1696,7 @@ throw StackPop(skip);
 //        log_error("~~RETF after 1pop\n");
 //        bool need = shadow_stack.needtoskipcalls();
         int skip = shadow_stack.getneedtoskipcallndclean();
+#endif
 //        log_error("~~RETF before 2pop\n");
         POP(cs);
 //        log_error("~~RETF after 2pop\n");
@@ -1687,13 +1707,16 @@ log_debug("new %x:%x\n", cs,ip);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+#ifndef NO_SHADOW_STACK
         if (skip>0) 
           {
-log_error("~~will throw exception skip call=%d\n",skip);
+log_debug("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
 throw StackPop(skip);
           }
 
+        m2c::shadow_stack.decreasedeep();
+#endif
         return ret;
     }
 
@@ -1703,7 +1726,9 @@ throw StackPop(skip);
     static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
+#ifndef NO_SHADOW_STACK
         shadow_stack.itiscall();
+#endif
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
         m2c::MWORDSIZE return_addr = ip;
 #if DOSBOX_CUSTOM
@@ -1727,16 +1752,18 @@ return false;
         }
         catch(const StackPop& ex)
         {
+#ifndef NO_SHADOW_STACK
 shadow_stack.decreasedeep();
              if (ex.deep > 0)
-             {  log_error("~~Rethrowing upper\n");
+             {  log_debug("~~Rethrowing upper\n");
 		throw StackPop(ex.deep-1);
              }
              else
-             {  log_error("~~Finished with skipping calls\n");
+             {  log_debug("~~Finished with skipping calls\n");
 		
              }
 
+#endif
         }
        return true;
     }
