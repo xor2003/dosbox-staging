@@ -124,6 +124,8 @@ namespace m2c {
 
 
     extern void single_step();
+#else
+    extern void log_regs_m2c(const char *file, int line, const char *instr, _STATE* _state);
 #endif
 
 struct flagBits{
@@ -181,6 +183,7 @@ union flagsUnion{
         bool IF;
         bool TF;
 
+dd other_flags;
 int call_source;
     };
 
@@ -260,6 +263,7 @@ public:
  {}
 dd getvalue() const noexcept
  { flagsUnion f;
+  f.value=_state->other_flags & ~0x8000; // 286+
   f.bits._CF=_state->CF;
   f.bits._PF=_state->PF;
   f.bits._AF=_state->AF;
@@ -275,6 +279,7 @@ void setvalue(dd v) noexcept
 {
  flagsUnion f;
  f.value = v;
+ _state->other_flags=v;
  _state->CF=f.bits._CF;
  _state->PF=f.bits._PF;
  _state->AF=f.bits._AF;
@@ -1350,9 +1355,6 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define MUL3_2(a, b, c) {dd averytemporary=(dd)(b)*(c);a=averytemporary; AFFECT_ZFifz(a); AFFECT_OF(AFFECT_CF(averytemporary>>16));}
 #define MUL3_4(a, b, c) {dq averytemporary=(dq)(b)*(c);a=averytemporary; AFFECT_ZFifz(a); AFFECT_OF(AFFECT_CF(averytemporary>>32));}
 
-#ifndef DOSBOX_CUSTOM
-typedef int Bits;
-#endif
 // TODO properly handle divide by zero: if(!a) {if (GET_OF()) _INT(4);} else 
 /*
 #define IDIV1(a) {SETFLAGBIT(OF,0);if(a) {int16_t averytemporary=ax;al=averytemporary/((int8_t)a); ah=averytemporary%((int8_t)a); AFFECT_OF(false);}}
@@ -1567,10 +1569,8 @@ typedef int Bits;
 //#define POPF {dd averytemporary; POP(averytemporary); CF=averytemporary&1;  PF=(averytemporary&4);AF=(averytemporary&0x10);ZF=(averytemporary&0x40);SF=(averytemporary&0x80);DF=(averytemporary&0x400);OF=(averytemporary&0x800);}
 #define NOP {;}
 
-//#define LAHF {ah= ((CF?1:0)|2|(PF?4:0)|(AF?0x10:0)|(ZF?0x40:0)|(SF?0x80:0)) ;}
-//#define SAHF {CF=ah&1; PF=ah&4; AF=ah&0x10; ZF=ah&0x40; SF=ah&0x80;}
-#define LAHF {ah= m2cflags.value ;}
-#define SAHF {*(db*)&m2cflags.value = ah;}
+#define LAHF {ah = m2cflags.getvalue();}
+#define SAHF {m2cflags.setvalue(ah);}
 
 #define CALLF(label, disp) {PUSH(cs);CALL(label, disp);}
 
@@ -1920,11 +1920,11 @@ enum  _offsets;
 
 #define _INT(a) {m2c::asm2C_INT(_state,a);}
 
-    void asm2C_OUT(int16_t address, int data);
+void asm2C_OUT(int16_t address, int data,_STATE* _state);
 
-#define OUT(a,b) m2c::asm2C_OUT(a,b)
-    int8_t asm2C_IN(int16_t data);
-#define IN(a,b) a = m2c::asm2C_IN(b);
+#define OUT(a,b) m2c::asm2C_OUT(a,b,_state)
+int8_t asm2C_IN(int16_t data,_STATE* _state);
+#define IN(a,b) a = m2c::asm2C_IN(b,_state);
 
 #endif
 
