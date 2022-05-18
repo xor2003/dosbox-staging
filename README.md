@@ -1,6 +1,11 @@
 LibDosBox
 
+A reverse engineering toolkit which helps you precisely convert DOS 16 bit (segment model) binary code into working C++.
 It is a fork of vanilla DOSBox with game code executed on real hardware but DOS interrupts and hardware emulated by DOSBox.
+
+It will be working fake-assembler C++ code will real variables. 
+If you want real readable code you will have to rewrite by hand or convert:
+for example clang++ -> LLVM IR -> Iril -> MSIL -> dotPeak -> C# -> C++
 
 [![Test drive 3](http://img.youtube.com/vi/MzK9RVgeWGM/0.jpg)](http://www.youtube.com/watch?v=MzK9RVgeWGM "Test drive 3")
 
@@ -13,12 +18,12 @@ To translate game code:
 4. File -> Produce .lst and .map
 5. Convert .lst using Masm2c to .cpp
 6. Put .cpp into /src/custom/src and binary/data to /src
-7. Prepare Makefile and init.cpp inside /src/custom/src/
+7. Prepare meson.build and init.cpp inside /src/custom/src/
 8. Build and execute
 
 Currently limited to real mode 16 bit DOS software.
 
-How converted instrumented debug execution works:
+How the converted instrumented debug execution works:
 
 1. Data segments are checked before program starts: it compares what dosbox loaded from disk and what data was translated.
 2. The hardware emulation is provided by Dosbox
