@@ -1122,6 +1122,7 @@
 			case 0x02:										/* CALL Ev */
 				if (rm >= 0xc0 ) {GetEArw;reg_eip=*earw;}
 				else {GetEAa;reg_eip=LoadMw(eaa);}
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],reg_eip);
 				Push_16(GETIP);
 				continue;
 			case 0x03:										/* CALL Ep */
@@ -1131,6 +1132,7 @@
 					Bit16u newip=LoadMw(eaa);
 					Bit16u newcs=LoadMw(eaa+2);
 					FillFlags();
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(newcs,newip);
 					CPU_CALL(false,newcs,newip,GETIP);
 #if CPU_TRAP_CHECK
 					if (GETFLAG(TF)) {	
@@ -1142,17 +1144,9 @@
 				}
 				break;
 			case 0x04:										/* JMP Ev */	
-				if (rm >= 0xc0 ) {GetEArw;
-Bit32u i=*earw;
-if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],i);
-reg_eip=i;
-}
-				else {GetEAa;
-Bit32u i=LoadMw(eaa);
-if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],i);
-
-reg_eip=i;
-}
+				if (rm >= 0xc0 ) {GetEArw;reg_eip=*earw;}
+				else {GetEAa;reg_eip=LoadMw(eaa);}
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(Segs.val[cs],reg_eip);
 				continue;
 			case 0x05:										/* JMP Ep */	
 				{
@@ -1161,6 +1155,7 @@ reg_eip=i;
 					Bit16u newip=LoadMw(eaa);
 					Bit16u newcs=LoadMw(eaa+2);
 					FillFlags();
+if (collect_rt_info) m2c::shadow_memory.collect_cross_jumps(newcs,newip);
 					CPU_JMP(false,newcs,newip,GETIP);
 #if CPU_TRAP_CHECK
 					if (GETFLAG(TF)) {	

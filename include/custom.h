@@ -119,7 +119,7 @@ class _STATE;
  {
    std::unordered_map< dd, std::shared_ptr<Data> > m_data;
    std::unordered_map< dd, std::shared_ptr<Code> > m_code;
-   std::unordered_map< dd, std::unordered_set<dd> > m_jumps;
+   std::unordered_set<dd> m_jumps;
 
    public:
    void collect_segs();

@@ -20,7 +20,7 @@ namespace m2c
 {
   extern size_t debug;
   extern void load_drivers();
-
+  extern std::string exename;
 }
 
 bool trace_instructions = false; //m2c::debug >= 1;
@@ -107,6 +107,7 @@ masm2c_exit (unsigned char exit)
 void
 init_get_fname (char *dst, char *src)
 {
+  char *initial_dst = dst;
   char *p = NULL;
   char *c = src;
 
@@ -123,9 +124,11 @@ init_get_fname (char *dst, char *src)
 
   while ((*dst++ = tolower (*p++)));
   *dst = '\0';
+  m2c::exename=initial_dst;
 }
 
 namespace m2c{
+std::string exename;
 static void print_traces ();
 
   void stackDumpZ()
@@ -1323,17 +1326,8 @@ using json = nlohmann::json;
       X86_REGREF
      if (newcs >= 0x192 && newcs < 0xa000)
     {
-     dd csip = (cs<<4)+ip;
-     dd target = (newcs<<4)+newip;
-     auto it = m_jumps.find(csip);
-     if (it == m_jumps.end())
-     {
-        
-        m_jumps[csip]=std::unordered_set<dd>(target);
-     }
-     else
-        it->second.insert(target);
-
+      dd target = (newcs<<4)+newip;
+      m_jumps.insert(target);
     }
 
    }
@@ -1382,7 +1376,7 @@ using json = nlohmann::json;
        j = *this;
 
        std::string s=j.dump();
-       FILE *f = fopen("rt_data.json","w");
+       FILE *f = fopen((exename+".json").c_str(),"w");
        fwrite(s.c_str(),s.size(),1,f);
        fclose(f);
        printf("Saved json\n");
