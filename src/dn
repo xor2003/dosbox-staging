@@ -1,0 +1,2 @@
+../build/dosbox -c "mount c $(pwd)" -c "C:" -c "DNCDPRG.EXE AMR MID330 SBP2227 386 SAF WRIC:\\"
+
