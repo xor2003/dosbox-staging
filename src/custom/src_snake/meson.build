@@ -1,5 +1,5 @@
 libsrc_sources = files([
-  'snake.cpp',
+  'snake.cpp','snake_default_seg.cpp','snake_seg001.cpp',
   'init.cpp',
   '_data.cpp',
 ])

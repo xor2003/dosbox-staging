@@ -1,5 +1,6 @@
 #include "_data.h"
 namespace m2c{
+
 struct Memory m;
 
 struct Memory types;
@@ -21,38 +22,7 @@ char (& head)[1] = m2c::m.head;
 db& dummyb_1ae2 = m2c::m.dummyb_1ae2;
 db& dummyb_1ae3 = m2c::m.dummyb_1ae3;
 char (& body)[1] = m2c::m.body;
-db& dummyb_1ae5 = m2c::m.dummyb_1ae5;
-db& dummyb_1ae6 = m2c::m.dummyb_1ae6;
-db& dummyb_1ae7 = m2c::m.dummyb_1ae7;
-db& dummyb_1ae8 = m2c::m.dummyb_1ae8;
-db& dummyb_1ae9 = m2c::m.dummyb_1ae9;
-db& dummyb_1aea = m2c::m.dummyb_1aea;
-db& dummyb_1aeb = m2c::m.dummyb_1aeb;
-db& dummyb_1aec = m2c::m.dummyb_1aec;
-db& dummyb_1aed = m2c::m.dummyb_1aed;
-db& dummyb_1aee = m2c::m.dummyb_1aee;
-db& dummyb_1aef = m2c::m.dummyb_1aef;
-db& dummyb_1af0 = m2c::m.dummyb_1af0;
-db& dummyb_1af1 = m2c::m.dummyb_1af1;
-db& dummyb_1af2 = m2c::m.dummyb_1af2;
-db& dummyb_1af3 = m2c::m.dummyb_1af3;
-db& dummyb_1af4 = m2c::m.dummyb_1af4;
-db& dummyb_1af5 = m2c::m.dummyb_1af5;
-db& dummyb_1af6 = m2c::m.dummyb_1af6;
-db& dummyb_1af7 = m2c::m.dummyb_1af7;
-db& dummyb_1af8 = m2c::m.dummyb_1af8;
-db& dummyb_1af9 = m2c::m.dummyb_1af9;
-db& dummyb_1afa = m2c::m.dummyb_1afa;
-db& dummyb_1afb = m2c::m.dummyb_1afb;
-db& dummyb_1afc = m2c::m.dummyb_1afc;
-db& dummyb_1afd = m2c::m.dummyb_1afd;
-db& dummyb_1afe = m2c::m.dummyb_1afe;
-db& dummyb_1aff = m2c::m.dummyb_1aff;
-db& dummyb_1b00 = m2c::m.dummyb_1b00;
-db& dummyb_1b01 = m2c::m.dummyb_1b01;
-db& dummyb_1b02 = m2c::m.dummyb_1b02;
-db& dummyb_1b03 = m2c::m.dummyb_1b03;
-db& dummyb_1b04 = m2c::m.dummyb_1b04;
+db (& dummyb_1ae5)[32] = m2c::m.dummyb_1ae5;
 db& dummyb_1b05 = m2c::m.dummyb_1b05;
 db& dummyb_1b06 = m2c::m.dummyb_1b06;
 db& dummyb_1b07 = m2c::m.dummyb_1b07;
