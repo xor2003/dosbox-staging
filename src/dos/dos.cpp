@@ -688,6 +688,7 @@ static Bitu DOS_21Handler(void) {
 	case 0x3d:		/* OPEN Open existing file */
 		MEM_StrCopy(SegPhys(ds)+reg_dx,name1,DOSNAMEBUF);
 		if (DOS_OpenFile(name1,reg_al,&reg_ax)) {
+printf("Open file: %s\n",name1);
 			CALLBACK_SCF(false);
 		} else {
 			reg_ax=dos.errorcode;
@@ -708,6 +709,7 @@ static Bitu DOS_21Handler(void) {
 			Bit16u toread=DOS_GetAmount();
 			dos.echo=true;
 			if (DOS_ReadFile(reg_bx,dos_copybuf,&toread)) {
+//printf("Read %x:%x %d bytes\n",SegPhys(ds),reg_dx,toread);
 				MEM_BlockWrite(SegPhys(ds)+reg_dx,dos_copybuf,toread);
 				reg_ax=toread;
 				CALLBACK_SCF(false);
