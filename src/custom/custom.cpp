@@ -26,7 +26,7 @@ namespace m2c
 bool trace_instructions = true; //m2c::debug >= 1;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
 bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool collect_rt_info = true;
+bool collect_rt_info = false;
 bool collect_rt_info_vars = false;
 
 static const size_t
@@ -617,6 +617,8 @@ struct CPU_Regs {
   void log_regs_dbx (const char *file, int line, const char *instr, const CPU_Regs & r, const Segments & s)
   {
     ++counter;
+    //if (counter==0x1ea9fa4) assert(0);
+
     if (trace_instructions)
       {
 

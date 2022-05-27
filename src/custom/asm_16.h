@@ -26,8 +26,7 @@ static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) +
  #define XLAT {al = *m2c::raddr_(ds,bx+al);}
  #define CMPSB \
 	{ \
-			db* src=realAddress(si,ds); db* dest=realAddress(di,es); \
-			CMP(*src, *dest); di+=(GET_DF()==0)?1:-1; si+=(GET_DF()==0)?1:-1; \
+			CMP(*(db*)realAddress(si,ds), *(db*)realAddress(di,es)); di+=(GET_DF()==0)?1:-1; si+=(GET_DF()==0)?1:-1; \
 	} {m2c::repForMov=false;}
  #define CMPSW \
 	{ \
