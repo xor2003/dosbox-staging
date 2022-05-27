@@ -1498,7 +1498,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define JGE(label) if (GET_SF()==GET_OF()) GOTOLABEL(label)
 #define JNL(label) JGE(label)
 
-#define JG(label) if (!GET_ZF() && !GET_SF()) GOTOLABEL(label)
+#define JG(label) if (!GET_ZF() && GET_SF()==GET_OF()) GOTOLABEL(label)
 #define JNLE(label) JG(label)
 
 #define JLE(label) if (GET_ZF() || GET_SF()!=GET_OF()) GOTOLABEL(label) // TODO

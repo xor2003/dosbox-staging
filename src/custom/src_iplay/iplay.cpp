@@ -379,7 +379,15 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &_start;}
  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state){
     X86_REGREF
     if ((__i>>16) == 0) {__i |= ((dd)cs) << 16;}
+
     __disp=__i;
+    if ((__disp >> 16) == 0xf000)
+	{m2c::log_debug("Calling BIOS %x\n",__disp);
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+m2c::log_debug("doing return1\n");
+//m2c::shadow_stack.noneedreturn();
+return true;}
     switch (__i) {
         case m2c::kmainproc: 	mainproc(0, _state); break;
         case m2c::k_mod_1021e: 	_mod_1021e(0, _state); break;
@@ -3851,18 +3859,18 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &_start;}
     {db tmp999=32;MYCOPY(dummya_15e7e)} // 0e21:7c6e
     {db tmp999=32;MYCOPY(dummya_15e7f)} // 0e21:7c6f
     {db tmp999=32;MYCOPY(dummya_15e80)} // 0e21:7c70
-    {struct_0 tmp999={6,9,73,9,m2c::kloc_1957f};MYCOPY(_str_24461)}
-    {struct_0 tmp999={6,25,73,25,m2c::kloc_1953c};MYCOPY(dummya_15e8b)}
-    {struct_0 tmp999={8,10,71,24,m2c::kloc_19880};MYCOPY(dummya_15e95)}
-    {struct_0 tmp999={2,1,77,4,m2c::kloc_19762};MYCOPY(dummya_15e9f)}
+    {struct_0 tmp999={6,9,73,9,(dw)m2c::kloc_1957f};MYCOPY(_str_24461)}
+    {struct_0 tmp999={6,25,73,25,(dw)m2c::kloc_1953c};MYCOPY(dummya_15e8b)}
+    {struct_0 tmp999={8,10,71,24,(dw)m2c::kloc_19880};MYCOPY(dummya_15e95)}
+    {struct_0 tmp999={2,1,77,4,(dw)m2c::kloc_19762};MYCOPY(dummya_15e9f)}
     {dw tmp999=65535;MYCOPY(dummya_15ea9)} // 0e21:7c99
-    {struct_0 tmp999={6,9,73,9,m2c::kloc_1957f};MYCOPY(mystr)}
-    {struct_0 tmp999={6,25,73,25,m2c::kloc_1953c};MYCOPY(dummya_15eb5)}
-    {struct_0 tmp999={2,1,77,4,m2c::kloc_1964e};MYCOPY(dummya_15ebf)}
+    {struct_0 tmp999={6,9,73,9,(dw)m2c::kloc_1957f};MYCOPY(mystr)}
+    {struct_0 tmp999={6,25,73,25,(dw)m2c::kloc_1953c};MYCOPY(dummya_15eb5)}
+    {struct_0 tmp999={2,1,77,4,(dw)m2c::kloc_1964e};MYCOPY(dummya_15ebf)}
     {dw tmp999=65535;MYCOPY(dummya_15ec9)} // 0e21:7cb9
-    {struct_0 tmp999={2,1,77,4,m2c::k_l_enter};MYCOPY(stru_244ab)}
+    {struct_0 tmp999={2,1,77,4,(dw)m2c::k_l_enter};MYCOPY(stru_244ab)}
     {dw tmp999=65535;MYCOPY(dummya_15ed5)} // 0e21:7cc5
-    {struct_0 tmp999={0,0,79,49,m2c::k_l_esc};MYCOPY(stru_244b7)}
+    {struct_0 tmp999={0,0,79,49,(dw)m2c::k_l_esc};MYCOPY(stru_244b7)}
     {dw tmp999=65535;MYCOPY(dummya_15ee1)} // 0e21:7cd1
     {dd tmp999=0;MYCOPY(dword_244c4)} // 0e21:7cd4
     {dd tmp999=0;MYCOPY(dword_244c8)} // 0e21:7cd8

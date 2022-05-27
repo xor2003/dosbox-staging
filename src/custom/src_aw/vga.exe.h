@@ -7,7 +7,7 @@
  *
  */
 
-#include "asm.h"
+#include "../asm.h"
 
 
 #pragma pack(push, 1)
@@ -2856,6 +2856,7 @@ void   Initializer();
 static const dd kbegin = 0x1001;
 static const dd kmainproc = 0x1002;
 static const dd kstart = 0x1a20000;
+static const dd kloc_1a2_d6 = 0x1a200d6;
 static const dd kloc_10039 = 0x1a20039;
 static const dd kloc_10059 = 0x1a20059;
 static const dd kloc_10090 = 0x1a20090;

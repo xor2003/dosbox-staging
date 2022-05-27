@@ -17,7 +17,7 @@
     start:
     _begin:
 cs=0x1a2;eip=0x000000; 	T(MOV(dx, seg_offset(dseg)));	// 39 mov     dx, seg dseg ;~ 01A2:0000
-cs=0x1a2;eip=0x000003; 	X(MOV(DGROUP@, dx));	// 40 mov     cs:DGROUP@, dx ;~ 01A2:0003
+cs=0x1a2;eip=0x000003; 	X(MOV(dgrouparb, dx));	// 40 mov     cs:dgrouparb, dx ;~ 01A2:0003
 cs=0x1a2;eip=0x000008; 	T(MOV(ah, 0x30));	// 41 mov     ah, 30h ;~ 01A2:0008
 cs=0x1a2;eip=0x00000a; 	R(_INT(0x21));	// 42 int     21h             ; DOS - GET DOS VERSION ;~ 01A2:000A
 cs=0x1a2;eip=0x00000c; 	T(MOV(bp, *(dw*)(raddr(ds,2))));	// 44 mov     bp, ds:2 ;~ 01A2:000C
@@ -97,7 +97,7 @@ cs=0x1a2;eip=0x0000b8; 	R(MOV(ss, dx));	// 124 mov     ss, dx ;~ 01A2:00B8
 cs=0x1a2;eip=0x0000ba; 	T(MOV(sp, di));	// 125 mov     sp, di ;~ 01A2:00BA
 cs=0x1a2;eip=0x0000bc; 	T(STI);	// 126 sti ;~ 01A2:00BC
 cs=0x1a2;eip=0x0000bd; 	T(XOR(ax, ax));	// 127 xor     ax, ax ;~ 01A2:00BD
-cs=0x1a2;eip=0x0000bf; 	T(MOV(es, DGROUP@));	// 128 mov     es, cs:DGROUP@ ;~ 01A2:00BF
+cs=0x1a2;eip=0x0000bf; 	T(MOV(es, dgrouparb));	// 128 mov     es, cs:dgrouparb ;~ 01A2:00BF
 cs=0x1a2;eip=0x0000c4; 	T(MOV(di, 0x85BC));	// 130 mov     di, 85BCh ;~ 01A2:00C4
 cs=0x1a2;eip=0x0000c7; 	T(MOV(cx, 0x8D9E));	// 131 mov     cx, 8D9Eh ;~ 01A2:00C7
 cs=0x1a2;eip=0x0000ca; 	T(SUB(cx, di));	// 132 sub     cx, di ;~ 01A2:00CA
@@ -106,6 +106,7 @@ cs=0x1a2;eip=0x0000cc; 	X(	REP STOSB);	// 133 rep stosb ;~ 01A2:00CC
 cs=0x1a2;eip=0x0000ce; 	X(PUSH(cs));	// 134 push    cs ;~ 01A2:00CE
 cs=0x1a2;eip=0x0000cf; 	J(CALL(__dispatch_call,off_25d26));	// 135 call    off_25D26 ;~ 01A2:00CF
 cs=0x1a2;eip=0x0000d3; 	J(CALL(__setargv,0));	// 136 call    __setargv ;~ 01A2:00D3
+loc_1a2_d6:
 cs=0x1a2;eip=0x0000d6; 	J(CALL(__setenvp,0));	// 138 call    __setenvp ;~ 01A2:00D6
 cs=0x1a2;eip=0x0000d9; 	T(MOV(ah, 0));	// 140 mov     ah, 0 ;~ 01A2:00D9
 cs=0x1a2;eip=0x0000db; 	R(_INT(0x1A));	// 141 int     1Ah             ; CLOCK - GET TIME OF DAY ;~ 01A2:00DB
@@ -122,7 +123,7 @@ cs=0x1a2;eip=0x000100; 	X(PUSH(ax));	// 156 push    ax              ; status ;~ 
 cs=0x1a2;eip=0x000101; 	J(CALL(_exit,0));	// 157 call    _exit ;~ 01A2:0101
 __exit:
 	// 4374 
-cs=0x1a2;eip=0x000104; 	T(MOV(ds, DGROUP@));	// 164 mov     ds, cs:DGROUP@ ;~ 01A2:0104
+cs=0x1a2;eip=0x000104; 	T(MOV(ds, dgrouparb));	// 164 mov     ds, cs:dgrouparb ;~ 01A2:0104
 cs=0x1a2;eip=0x000109; 	J(CALL(__restorezero,0));	// 165 call    __restorezero ;~ 01A2:0109
 cs=0x1a2;eip=0x00010c; 	X(PUSH(cs));	// 166 push    cs ;~ 01A2:010C
 cs=0x1a2;eip=0x00010d; 	J(CALL(__dispatch_call,off_25d28));	// 167 call    off_25D28 ;~ 01A2:010D
@@ -130,7 +131,8 @@ cs=0x1a2;eip=0x000111; 	T(MOV(bp, sp));	// 168 mov     bp, sp ;~ 01A2:0111
 cs=0x1a2;eip=0x000113; 	T(MOV(ah, 0x4C));	// 169 mov     ah, 4Ch ; 'L' ;~ 01A2:0113
 cs=0x1a2;eip=0x000115; 	T(MOV(al, *(raddr(ss,bp+2))));	// 170 mov     al, [bp+2] ;~ 01A2:0115
 cs=0x1a2;eip=0x000118; 	R(_INT(0x21));	// 171 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 01A2:0118
-	R(return seg000_11a_proc(0, _state););
+exit(al);
+//	R(return seg000_11a_proc(0, _state););
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -146,6 +148,7 @@ cs=0x1a2;eip=0x000118; 	R(_INT(0x21));	// 171 int     21h             ; DOS - 2+
         case m2c::kloc_10099: 	goto loc_10099;
         case m2c::kloc_1009c: 	goto loc_1009c;
         case m2c::kstart: 	goto start;
+        case m2c::kloc_1a2_d6:   goto loc_1a2_d6;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -365,7 +368,7 @@ cs=0x1a2;eip=0x0001a7; 	T(NOP);	// 314 nop ;~ 01A2:01A7
 cs=0x1a2;eip=0x0001a8; 	T(MOV(dx, offset(dseg,byte_1d7ad)));	// 315 mov     dx, offset byte_1D7AD ;~ 01A2:01A8
 loc_101ab:
 	// 4375 
-cs=0x1a2;eip=0x0001ab; 	T(MOV(ds, DGROUP@));	// 318 mov     ds, cs:DGROUP@ ;~ 01A2:01AB
+cs=0x1a2;eip=0x0001ab; 	T(MOV(ds, dgrouparb));	// 318 mov     ds, cs:dgrouparb ;~ 01A2:01AB
 cs=0x1a2;eip=0x0001b0; 	J(CALL(sub_1019c,0));	// 319 call    sub_1019C ;~ 01A2:01B0
 cs=0x1a2;eip=0x0001b3; 	T(MOV(ax, 3));	// 320 mov     ax, 3 ;~ 01A2:01B3
 cs=0x1a2;eip=0x0001b6; 	X(PUSH(ax));	// 321 push    ax              ; status ;~ 01A2:01B6

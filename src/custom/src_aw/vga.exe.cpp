@@ -141,7 +141,14 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state){
     X86_REGREF
     if ((__i>>16) == 0) {__i |= ((dd)cs) << 16;}
+
     __disp=__i;
+    if ((__disp >> 16) == 0xf000)
+	{m2c::log_debug("Calling BIOS %x\n",__disp);
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+m2c::log_debug("doing return1\n");
+m2c::shadow_stack.noneedreturn();return true;}
     switch (__i) {
         case m2c::kmainproc: 	mainproc(0, _state); break;
         case m2c::kstart: 	start(0, _state); break;
@@ -2424,6 +2431,8 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_1d652: 	_group12(__disp, _state); break;
         case m2c::ksub_1d5d1: 	_group12(__disp, _state); break;
         case m2c::kloc_1d617: 	_group12(__disp, _state); break;
+        case m2c::kloc_1a2_d6:   start(__disp, _state); break;
+
         default: m2c::log_error("Don't know how to call to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
      };
      return true;

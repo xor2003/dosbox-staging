@@ -13101,7 +13101,7 @@ loc_14f3c:
 cs=0x1a2;eip=0x004f3c; 	X(MOV(*(dw*)(((db*)&word_14f6c)), 1));	// 10987 mov     cs:word_14F6C, 1 ;~ 01A2:4F3C
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f43; __disp=*(dd*)(((db*)&_int8addr));
-	J(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
+	R(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
 _covox_init:
 	// 11026 
 cs=0x1a2;eip=0x004f74; 	X(MOV(_sndflags_24622, 3));	// 11028 mov     _sndflags_24622, 3 ;~ 01A2:4F74
