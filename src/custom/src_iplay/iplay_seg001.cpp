@@ -24,7 +24,7 @@ cs=0xaa7;eip=0x000000; 	J(CALL(_callsubx,0));	// 19646 call    _callsubx ;~ 0AA7
 cs=0xaa7;eip=0x000003; 	J(JC(loc_192b9));	// 19647 jb      loc_192B9 ;~ 0AA7:0003
 cs=0xaa7;eip=0x000007; 	T(MOV(dx, offset(dseg,_acurrentsoundcard)));	// 19648 mov     dx, offset _aCurrentSoundcard ; "\rCurrent Soundcard settings:\r\n\n$" ;~ 0AA7:0007
 cs=0xaa7;eip=0x00000a; 	T(MOV(ah, 9));	// 19649 mov     ah, 9 ;~ 0AA7:000A
-cs=0xaa7;eip=0x00000c; 	R(_INT(0x21));	// 19650 int     21h             ; DOS - PRINT STRING ;~ 0AA7:000C
+cs=0xaa7;eip=0x00000c; 	S(_INT(0x21));	// 19650 int     21h             ; DOS - PRINT STRING ;~ 0AA7:000C
 cs=0xaa7;eip=0x00000e; 	T(MOV(ax, ds));	// 19652 mov     ax, ds ;~ 0AA7:000E
 cs=0xaa7;eip=0x000010; 	T(MOV(es, ax));	// 19653 mov     es, ax ;~ 0AA7:0010
 cs=0xaa7;eip=0x000012; 	T(MOV(di, offset(dseg,_buffer_1)));	// 19655 mov     di, offset _buffer_1 ; 2800h ;~ 0AA7:0012
@@ -32,21 +32,23 @@ cs=0xaa7;eip=0x000015; 	J(CALLF(sub_12d05,0));	// 19656 call    sub_12D05 ;~ 0AA
 cs=0xaa7;eip=0x00001a; 	X(MOV(*(raddr(es,di)), '$'));	// 19657 mov     byte ptr es:[di], '$' ;~ 0AA7:001A
 cs=0xaa7;eip=0x00001e; 	T(MOV(dx, offset(dseg,_buffer_1)));	// 19658 mov     dx, offset _buffer_1 ; 2800h ;~ 0AA7:001E
 cs=0xaa7;eip=0x000021; 	T(MOV(ah, 9));	// 19659 mov     ah, 9 ;~ 0AA7:0021
-cs=0xaa7;eip=0x000023; 	R(_INT(0x21));	// 19660 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0023
+cs=0xaa7;eip=0x000023; 	S(_INT(0x21));	// 19660 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0023
 cs=0xaa7;eip=0x000025; 	T(MOV(dx, offset(dseg,_myendl)));	// 19662 mov     dx, offset _myendl ; "\r\n$" ;~ 0AA7:0025
 cs=0xaa7;eip=0x000028; 	T(MOV(ah, 9));	// 19663 mov     ah, 9 ;~ 0AA7:0028
-cs=0xaa7;eip=0x00002a; 	R(_INT(0x21));	// 19664 int     21h             ; DOS - PRINT STRING ;~ 0AA7:002A
+cs=0xaa7;eip=0x00002a; 	S(_INT(0x21));	// 19664 int     21h             ; DOS - PRINT STRING ;~ 0AA7:002A
 cs=0xaa7;eip=0x00002c; 	J(CALLF(_deinit_125b9,0));	// 19666 call    _deinit_125B9 ;~ 0AA7:002C
 cs=0xaa7;eip=0x000031; 	T(MOV(ax, 0x4C00));	// 19667 mov     ax, 4C00h ;~ 0AA7:0031
-cs=0xaa7;eip=0x000034; 	R(_INT(0x21));	// 19668 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0034
+cs=0xaa7;eip=0x000034; 	S(_INT(0x21));	// 19668 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0034
+exit(0);
 loc_19086:
 	// 5561 
 cs=0xaa7;eip=0x000036; 	T(MOV(dx, 0));	// 19673 mov     dx, 0 ;~ 0AA7:0036
 cs=0xaa7;eip=0x000039; 	T(MOV(ah, 9));	// 19674 mov     ah, 9 ;~ 0AA7:0039
-cs=0xaa7;eip=0x00003b; 	R(_INT(0x21));	// 19675 int     21h             ; DOS - PRINT STRING ;~ 0AA7:003B
+cs=0xaa7;eip=0x00003b; 	S(_INT(0x21));	// 19675 int     21h             ; DOS - PRINT STRING ;~ 0AA7:003B
 cs=0xaa7;eip=0x00003d; 	T(MOV(ax, 0x4C00));	// 19677 mov     ax, 4C00h ;~ 0AA7:003D
-cs=0xaa7;eip=0x000040; 	R(_INT(0x21));	// 19678 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0040
-	R(JMP(_start));_start:
+cs=0xaa7;eip=0x000040; 	S(_INT(0x21));	// 19678 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0040
+exit(0);
+	S(JMP(_start));_start:
 	// 19685 
 cs=0xaa7;eip=0x000042; 	T(MOV(ax, seg_offset(dseg)));	// 19691 mov     ax, seg dseg ;~ 0AA7:0042
 cs=0xaa7;eip=0x000045; 	T(MOV(ds, ax));	// 19692 mov     ds, ax ;~ 0AA7:0045
@@ -60,22 +62,23 @@ cs=0xaa7;eip=0x000056; 	T(ADD(bx, ax));	// 19700 add     bx, ax ;~ 0AA7:0056
 cs=0xaa7;eip=0x000058; 	T(MOV(ax, es));	// 19701 mov     ax, es ;~ 0AA7:0058
 cs=0xaa7;eip=0x00005a; 	T(SUB(bx, ax));	// 19702 sub     bx, ax ;~ 0AA7:005A
 cs=0xaa7;eip=0x00005c; 	T(MOV(ah, 0x4A));	// 19703 mov     ah, 4Ah ;~ 0AA7:005C
-cs=0xaa7;eip=0x00005e; 	R(_INT(0x21));	// 19704 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 0AA7:005E
+cs=0xaa7;eip=0x00005e; 	S(_INT(0x21));	// 19704 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 0AA7:005E
 cs=0xaa7;eip=0x000060; 	T(CLD);	// 19707 cld ;~ 0AA7:0060
 cs=0xaa7;eip=0x000061; 	T(XOR(dl, dl));	// 19708 xor     dl, dl ;~ 0AA7:0061
 cs=0xaa7;eip=0x000063; 	T(MOV(cx, 0x4D50));	// 19709 mov     cx, 4D50h       ; PM ;~ 0AA7:0063
 cs=0xaa7;eip=0x000066; 	T(MOV(bx, 0x5344));	// 19710 mov     bx, 5344h       ; DS ;~ 0AA7:0066
 cs=0xaa7;eip=0x000069; 	T(MOV(ax, 0x60FF));	// 19711 mov     ax, 60FFh ;~ 0AA7:0069
-cs=0xaa7;eip=0x00006c; 	R(_INT(0x2F));	// 19712 int     2Fh ;~ 0AA7:006C
+cs=0xaa7;eip=0x00006c; 	S(_INT(0x2F));	// 19712 int     2Fh ;~ 0AA7:006C
 cs=0xaa7;eip=0x00006e; 	T(CMP(ax, 0x4F4B));	// 19713 cmp     ax, 4F4Bh       ; 'KO' check for single instance ;~ 0AA7:006E
 cs=0xaa7;eip=0x000071; 	J(JNZ(loc_190d3));	// 19714 jnz     short loc_190D3 ;~ 0AA7:0071
 cs=0xaa7;eip=0x000073; 	T(MOV(dx, offset(dseg,_acriticalerrort)));	// 19715 mov     dx, offset _aCriticalErrorT ; "\r\n\nCritical error: The player jumped"... ;~ 0AA7:0073
 cs=0xaa7;eip=0x000076; 	T(MOV(ah, 9));	// 19716 mov     ah, 9 ;~ 0AA7:0076
-cs=0xaa7;eip=0x000078; 	R(_INT(0x21));	// 19717 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0078
+cs=0xaa7;eip=0x000078; 	S(_INT(0x21));	// 19717 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0078
 cs=0xaa7;eip=0x00007a; 	T(XOR(ah, ah));	// 19719 xor     ah, ah ;~ 0AA7:007A
-cs=0xaa7;eip=0x00007c; 	R(_INT(0x16));	// 19720 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 0AA7:007C
+cs=0xaa7;eip=0x00007c; 	S(_INT(0x16));	// 19720 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 0AA7:007C
 cs=0xaa7;eip=0x00007e; 	T(MOV(ax, 0x4C02));	// 19722 mov     ax, 4C02h ;~ 0AA7:007E
-cs=0xaa7;eip=0x000081; 	R(_INT(0x21));	// 19723 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0081
+cs=0xaa7;eip=0x000081; 	S(_INT(0x21));	// 19723 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0081
+exit(2);
 loc_190d3:
 	// 5562 
 cs=0xaa7;eip=0x000083; 	J(CALL(_loadcfg,0));	// 19728 call    _loadcfg ;~ 0AA7:0083
@@ -142,23 +145,23 @@ cs=0xaa7;eip=0x000126; 	T(SHR(ah, 4));	// 19788 shr     ah, 4 ;~ 0AA7:0126
 cs=0xaa7;eip=0x000129; 	X(MOV(byte_1de83, ah));	// 19789 mov     byte_1DE83, ah ;~ 0AA7:0129
 cs=0xaa7;eip=0x00012d; 	X(MOV(_videomempointer, 0x0B8000000));	// 19790 mov     _videomempointer, 0B8000000h ;~ 0AA7:012D
 cs=0xaa7;eip=0x000136; 	T(MOV(ax, 0x3508));	// 19791 mov     ax, 3508h ;~ 0AA7:0136
-cs=0xaa7;eip=0x000139; 	R(_INT(0x21));	// 19792 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0139
+cs=0xaa7;eip=0x000139; 	S(_INT(0x21));	// 19792 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0139
 cs=0xaa7;eip=0x00013b; 	X(MOV(_oint8off_1de14, bx));	// 19795 mov     _oint8off_1DE14, bx ;~ 0AA7:013B
 cs=0xaa7;eip=0x00013f; 	X(MOV(_oint8seg_1de16, es));	// 19796 mov     _oint8seg_1DE16, es ;~ 0AA7:013F
 cs=0xaa7;eip=0x000143; 	T(MOV(ax, 0x3509));	// 19797 mov     ax, 3509h ;~ 0AA7:0143
-cs=0xaa7;eip=0x000146; 	R(_INT(0x21));	// 19798 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0146
+cs=0xaa7;eip=0x000146; 	S(_INT(0x21));	// 19798 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0146
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x000148; 	X(MOV(*(dw*)(((db*)&_oint9_1c1a4)), bx));	// 19801 mov     word ptr cs:_oint9_1C1A4, bx ;~ 0AA7:0148
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x00014d; 	X(MOV(*(dw*)(((db*)&_oint9_1c1a4)+2), es));	// 19802 mov     word ptr cs:_oint9_1C1A4+2, es ;~ 0AA7:014D
 cs=0xaa7;eip=0x000152; 	T(MOV(ax, 0x3524));	// 19803 mov     ax, 3524h ;~ 0AA7:0152
-cs=0xaa7;eip=0x000155; 	R(_INT(0x21));	// 19804 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0155
+cs=0xaa7;eip=0x000155; 	S(_INT(0x21));	// 19804 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0155
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x000157; 	X(MOV(*(dw*)(((db*)&_oint24_1c1ac)), bx));	// 19807 mov     word ptr cs:_oint24_1C1AC, bx ;~ 0AA7:0157
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x00015c; 	X(MOV(*(dw*)(((db*)&_oint24_1c1ac)+2), es));	// 19808 mov     word ptr cs:_oint24_1C1AC+2, es ;~ 0AA7:015C
 cs=0xaa7;eip=0x000161; 	T(MOV(ax, 0x352F));	// 19809 mov     ax, 352Fh ;~ 0AA7:0161
-cs=0xaa7;eip=0x000164; 	R(_INT(0x21));	// 19810 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0164
+cs=0xaa7;eip=0x000164; 	S(_INT(0x21));	// 19810 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:0164
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x000166; 	X(MOV(*(dw*)(((db*)&_oint2f_1c1b4)), bx));	// 19813 mov     word ptr cs:_oint2f_1C1B4, bx ;~ 0AA7:0166
 	cs=seg_offset(seg001);
@@ -168,21 +171,21 @@ cs=0xaa7;eip=0x000171; 	T(MOV(ax, cs));	// 19816 mov     ax, cs ;~ 0AA7:0171
 cs=0xaa7;eip=0x000173; 	T(MOV(ds, ax));	// 19817 mov     ds, ax ;~ 0AA7:0173
 cs=0xaa7;eip=0x000175; 	T(MOV(dx, m2c::k_int9_keyb));	// 19819 mov     dx, offset _int9_keyb ;~ 0AA7:0175
 cs=0xaa7;eip=0x000178; 	T(MOV(ax, 0x2509));	// 19820 mov     ax, 2509h ;~ 0AA7:0178
-cs=0xaa7;eip=0x00017b; 	R(_INT(0x21));	// 19821 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:017B
+cs=0xaa7;eip=0x00017b; 	S(_INT(0x21));	// 19821 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:017B
 cs=0xaa7;eip=0x00017d; 	T(MOV(dx, m2c::k_int24));	// 19824 mov     dx, offset _int24 ;~ 0AA7:017D
 cs=0xaa7;eip=0x000180; 	T(MOV(ax, 0x2524));	// 19825 mov     ax, 2524h ;~ 0AA7:0180
-cs=0xaa7;eip=0x000183; 	R(_INT(0x21));	// 19826 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:0183
+cs=0xaa7;eip=0x000183; 	S(_INT(0x21));	// 19826 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:0183
 cs=0xaa7;eip=0x000185; 	T(MOV(dx, m2c::k_int2f_checkmyself));	// 19829 mov     dx, offset _int2f_checkmyself ;~ 0AA7:0185
 cs=0xaa7;eip=0x000188; 	T(MOV(ax, 0x252F));	// 19830 mov     ax, 252Fh ;~ 0AA7:0188
-cs=0xaa7;eip=0x00018b; 	R(_INT(0x21));	// 19831 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:018B
+cs=0xaa7;eip=0x00018b; 	S(_INT(0x21));	// 19831 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:018B
 cs=0xaa7;eip=0x00018d; 	X(POP(ds));	// 19834 pop     ds ;~ 0AA7:018D
 cs=0xaa7;eip=0x00018e; 	T(MOV(ah, 0x34));	// 19836 mov     ah, 34h ;~ 0AA7:018E
-cs=0xaa7;eip=0x000190; 	R(_INT(0x21));	// 19837 int     21h             ; DOS - 2+ internal - RETURN CritSectFlag (InDOS) POINTER ;~ 0AA7:0190
+cs=0xaa7;eip=0x000190; 	S(_INT(0x21));	// 19837 int     21h             ; DOS - 2+ internal - RETURN CritSectFlag (InDOS) POINTER ;~ 0AA7:0190
 cs=0xaa7;eip=0x000192; 	X(MOV(_critsectpoint_off, bx));	// 19838 mov     _critsectpoint_off, bx ;~ 0AA7:0192
 cs=0xaa7;eip=0x000196; 	X(MOV(_critsectpoint_seg, es));	// 19839 mov     _critsectpoint_seg, es ;~ 0AA7:0196
 cs=0xaa7;eip=0x00019a; 	X(PUSH(ds));	// 19840 push    ds ;~ 0AA7:019A
 cs=0xaa7;eip=0x00019b; 	T(MOV(ax, 0x5D06));	// 19841 mov     ax, 5D06h ;~ 0AA7:019B
-cs=0xaa7;eip=0x00019e; 	R(_INT(0x21));	// 19842 int     21h             ; DOS - 3.1+ internal - GET ADDRESS OF DOS SWAPPABLE DATA AREA ;~ 0AA7:019E
+cs=0xaa7;eip=0x00019e; 	S(_INT(0x21));	// 19842 int     21h             ; DOS - 3.1+ internal - GET ADDRESS OF DOS SWAPPABLE DATA AREA ;~ 0AA7:019E
 cs=0xaa7;eip=0x0001a0; 	T(MOV(ax, ds));	// 19844 mov     ax, ds ;~ 0AA7:01A0
 cs=0xaa7;eip=0x0001a2; 	X(POP(ds));	// 19845 pop     ds ;~ 0AA7:01A2
 cs=0xaa7;eip=0x0001a3; 	X(MOV(_swapdata_off, si));	// 19846 mov     _swapdata_off, si ;~ 0AA7:01A3
@@ -225,22 +228,22 @@ cs=0xaa7;eip=0x000209; 	X(PUSH(ds));	// 19884 push    ds ;~ 0AA7:0209
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x00020a; 	T(LDS(dx, *(dd*)(((db*)&_oint2f_1c1b4))));	// 19885 lds     dx, cs:_oint2f_1C1B4 ;~ 0AA7:020A
 cs=0xaa7;eip=0x00020f; 	T(MOV(ax, 0x252F));	// 19886 mov     ax, 252Fh ;~ 0AA7:020F
-cs=0xaa7;eip=0x000212; 	R(_INT(0x21));	// 19887 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:0212
+cs=0xaa7;eip=0x000212; 	S(_INT(0x21));	// 19887 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:0212
 cs=0xaa7;eip=0x000214; 	X(POP(ds));	// 19890 pop     ds ;~ 0AA7:0214
 cs=0xaa7;eip=0x000215; 	X(PUSH(ds));	// 19891 push    ds ;~ 0AA7:0215
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x000216; 	T(LDS(dx, *(dd*)(((db*)&_oint24_1c1ac))));	// 19892 lds     dx, cs:_oint24_1C1AC ;~ 0AA7:0216
 cs=0xaa7;eip=0x00021b; 	T(MOV(ax, 0x2524));	// 19893 mov     ax, 2524h ;~ 0AA7:021B
-cs=0xaa7;eip=0x00021e; 	R(_INT(0x21));	// 19894 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:021E
+cs=0xaa7;eip=0x00021e; 	S(_INT(0x21));	// 19894 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:021E
 cs=0xaa7;eip=0x000220; 	X(POP(ds));	// 19897 pop     ds ;~ 0AA7:0220
 cs=0xaa7;eip=0x000221; 	X(PUSH(ds));	// 19898 push    ds ;~ 0AA7:0221
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x000222; 	T(LDS(dx, *(dd*)(((db*)&_oint9_1c1a4))));	// 19899 lds     dx, cs:_oint9_1C1A4 ;~ 0AA7:0222
 cs=0xaa7;eip=0x000227; 	T(MOV(ax, 0x2509));	// 19900 mov     ax, 2509h ;~ 0AA7:0227
-cs=0xaa7;eip=0x00022a; 	R(_INT(0x21));	// 19901 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:022A
+cs=0xaa7;eip=0x00022a; 	S(_INT(0x21));	// 19901 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:022A
 cs=0xaa7;eip=0x00022c; 	X(POP(ds));	// 19904 pop     ds ;~ 0AA7:022C
 cs=0xaa7;eip=0x00022d; 	T(MOV(ax, 3));	// 19905 mov     ax, 3 ;~ 0AA7:022D
-cs=0xaa7;eip=0x000230; 	R(_INT(0x10));	// 19906 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:0230
+cs=0xaa7;eip=0x000230; 	S(_INT(0x10));	// 19906 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:0230
 cs=0xaa7;eip=0x000232; 	J(CALL(_txt_enableblink,0));	// 19908 call    _txt_enableblink ;~ 0AA7:0232
 cs=0xaa7;eip=0x000235; 	T(MOV(cx, 0));	// 19909 mov     cx, 0 ;~ 0AA7:0235
 cs=0xaa7;eip=0x000238; 	T(MOV(dx, 0x124F));	// 19910 mov     dx, 124Fh ;~ 0AA7:0238
@@ -254,25 +257,26 @@ cs=0xaa7;eip=0x00024d; 	J(CALL(_write_scr,0));	// 19918 call    _write_scr ;~ 0A
 cs=0xaa7;eip=0x000250; 	T(MOV(dx, 0x1300));	// 19919 mov     dx, 1300h ;~ 0AA7:0250
 cs=0xaa7;eip=0x000253; 	T(XOR(bh, bh));	// 19920 xor     bh, bh ;~ 0AA7:0253
 cs=0xaa7;eip=0x000255; 	T(MOV(ah, 2));	// 19921 mov     ah, 2 ;~ 0AA7:0255
-cs=0xaa7;eip=0x000257; 	R(_INT(0x10));	// 19922 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:0257
+cs=0xaa7;eip=0x000257; 	S(_INT(0x10));	// 19922 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:0257
 cs=0xaa7;eip=0x000259; 	T(CMP(byte_1de7e, 0));	// 19925 cmp     byte_1DE7E, 0 ;~ 0AA7:0259
 cs=0xaa7;eip=0x00025e; 	J(JZ(loc_192c3));	// 19926 jz      short loc_192C3 ;~ 0AA7:025E
 cs=0xaa7;eip=0x000260; 	T(MOV(dx, 0x1400));	// 19927 mov     dx, 1400h ;~ 0AA7:0260
 cs=0xaa7;eip=0x000263; 	T(XOR(bh, bh));	// 19928 xor     bh, bh ;~ 0AA7:0263
 cs=0xaa7;eip=0x000265; 	T(MOV(ah, 2));	// 19929 mov     ah, 2 ;~ 0AA7:0265
-cs=0xaa7;eip=0x000267; 	R(_INT(0x10));	// 19930 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:0267
+cs=0xaa7;eip=0x000267; 	S(_INT(0x10));	// 19930 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:0267
 loc_192b9:
 	// 5575 
 cs=0xaa7;eip=0x000269; 	X(PUSH(ds));	// 19935 push    ds ;~ 0AA7:0269
 cs=0xaa7;eip=0x00026a; 	T(LDS(dx, _messagepointer));	// 19936 lds     dx, _messagepointer ;~ 0AA7:026A
 cs=0xaa7;eip=0x00026e; 	T(MOV(ah, 9));	// 19937 mov     ah, 9 ;~ 0AA7:026E
-cs=0xaa7;eip=0x000270; 	R(_INT(0x21));	// 19938 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0270
+cs=0xaa7;eip=0x000270; 	S(_INT(0x21));	// 19938 int     21h             ; DOS - PRINT STRING ;~ 0AA7:0270
 cs=0xaa7;eip=0x000272; 	X(POP(ds));	// 19940 pop     ds ;~ 0AA7:0272
 loc_192c3:
 	// 5576 
 cs=0xaa7;eip=0x000273; 	T(MOV(ah, 0x4C));	// 19943 mov     ah, 4Ch ; 'L' ;~ 0AA7:0273
 cs=0xaa7;eip=0x000275; 	T(MOV(al, byte_1de7e));	// 19944 mov     al, byte_1DE7E ;~ 0AA7:0275
-cs=0xaa7;eip=0x000278; 	R(_INT(0x21));	// 19945 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0278
+cs=0xaa7;eip=0x000278; 	S(_INT(0x21));	// 19945 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:0278
+exit(byte_1de7e);
 loc_192ca:
 	// 5577 
 cs=0xaa7;eip=0x00027a; 	X(MOV(byte_1de7e, 5));	// 19950 mov     byte_1DE7E, 5 ;~ 0AA7:027A
@@ -320,14 +324,14 @@ cs=0xaa7;eip=0x0002f3; 	T(MOV(bl, 0x7F));	// 19995 mov     bl, 7Fh ;~ 0AA7:02F3
 cs=0xaa7;eip=0x0002f5; 	T(MOV(ax, 0x7803));	// 19996 mov     ax, 7803h ;~ 0AA7:02F5
 cs=0xaa7;eip=0x0002f8; 	J(CALL(_draw_frame,0));	// 19997 call    _draw_frame ;~ 0AA7:02F8
 cs=0xaa7;eip=0x0002fb; 	T(MOV(ah, 0x19));	// 19998 mov     ah, 19h ;~ 0AA7:02FB
-cs=0xaa7;eip=0x0002fd; 	R(_INT(0x21));	// 19999 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:02FD
+cs=0xaa7;eip=0x0002fd; 	S(_INT(0x21));	// 19999 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:02FD
 cs=0xaa7;eip=0x0002ff; 	T(MOV(edx, 0x5C3A41));	// 20000 mov     edx, 5C3A41h    ; "A:\" ;~ 0AA7:02FF
 cs=0xaa7;eip=0x000305; 	T(ADD(dl, al));	// 20001 add     dl, al ;~ 0AA7:0305
 cs=0xaa7;eip=0x000307; 	X(MOV(_buffer_1dc6c, edx));	// 20002 mov     _buffer_1DC6C, edx ;~ 0AA7:0307
 cs=0xaa7;eip=0x00030c; 	T(MOV(si, offset(dseg,_buffer_1dc6c)+3));	// 20003 mov     si, (offset _buffer_1DC6C+3) ;~ 0AA7:030C
 cs=0xaa7;eip=0x00030f; 	T(XOR(dl, dl));	// 20004 xor     dl, dl ;~ 0AA7:030F
 cs=0xaa7;eip=0x000311; 	T(MOV(ah, 0x47));	// 20005 mov     ah, 47h ;~ 0AA7:0311
-cs=0xaa7;eip=0x000313; 	R(_INT(0x21));	// 20006 int     21h             ; DOS - 2+ - GET CURRENT DIRECTORY ;~ 0AA7:0313
+cs=0xaa7;eip=0x000313; 	S(_INT(0x21));	// 20006 int     21h             ; DOS - 2+ - GET CURRENT DIRECTORY ;~ 0AA7:0313
 cs=0xaa7;eip=0x000315; 	T(MOV(si, offset(dseg,_buffer_1dc6c)));	// 20009 mov     si, offset _buffer_1DC6C ;~ 0AA7:0315
 cs=0xaa7;eip=0x000318; 	J(CALL(_mystrlen,0));	// 20010 call    _mystrlen ;~ 0AA7:0318
 cs=0xaa7;eip=0x00031b; 	T(SHR(ax, 1));	// 20011 shr     ax, 1 ;~ 0AA7:031B
@@ -488,7 +492,7 @@ loc_194eb:
 cs=0xaa7;eip=0x00049b; 	X(MOV(byte_1de7f, 1));	// 20167 mov     byte_1DE7F, 1 ;~ 0AA7:049B
 cs=0xaa7;eip=0x0004a0; 	T(MOV(dx, offset(dseg,_buffer_1db6c)));	// 20168 mov     dx, offset _buffer_1DB6C ;~ 0AA7:04A0
 cs=0xaa7;eip=0x0004a3; 	T(MOV(ah, 0x3B));	// 20169 mov     ah, 3Bh ;~ 0AA7:04A3
-cs=0xaa7;eip=0x0004a5; 	R(_INT(0x21));	// 20170 int     21h             ; DOS - 2+ - CHANGE THE CURRENT DIRECTORY (CHDIR) ;~ 0AA7:04A5
+cs=0xaa7;eip=0x0004a5; 	S(_INT(0x21));	// 20170 int     21h             ; DOS - 2+ - CHANGE THE CURRENT DIRECTORY (CHDIR) ;~ 0AA7:04A5
 cs=0xaa7;eip=0x0004a7; 	X(MOV(word_1de62, 0));	// 20172 mov     word_1DE62, 0 ;~ 0AA7:04A7
 cs=0xaa7;eip=0x0004ad; 	X(MOV(word_1de5e, 0));	// 20173 mov     word_1DE5E, 0 ;~ 0AA7:04AD
 cs=0xaa7;eip=0x0004b3; 	J(JMP(loc_192ff));	// 20174 jmp     loc_192FF ;~ 0AA7:04B3
@@ -504,10 +508,10 @@ cs=0xaa7;eip=0x0004ce; 	T(MOV(bl, dl));	// 20184 mov     bl, dl ;~ 0AA7:04CE
 cs=0xaa7;eip=0x0004d0; 	T(INC(bl));	// 20185 inc     bl ;~ 0AA7:04D0
 cs=0xaa7;eip=0x0004d2; 	X(PUSH(dx));	// 20186 push    dx ;~ 0AA7:04D2
 cs=0xaa7;eip=0x0004d3; 	T(MOV(ax, 0x440F));	// 20187 mov     ax, 440Fh ;~ 0AA7:04D3
-cs=0xaa7;eip=0x0004d6; 	R(_INT(0x21));	// 20188 int     21h             ; DOS - 2+ - IOCTL - ;~ 0AA7:04D6
+cs=0xaa7;eip=0x0004d6; 	S(_INT(0x21));	// 20188 int     21h             ; DOS - 2+ - IOCTL - ;~ 0AA7:04D6
 cs=0xaa7;eip=0x0004d8; 	X(POP(dx));	// 20189 pop     dx ;~ 0AA7:04D8
 cs=0xaa7;eip=0x0004d9; 	T(MOV(ah, 0x0E));	// 20190 mov     ah, 0Eh ;~ 0AA7:04D9
-cs=0xaa7;eip=0x0004db; 	R(_INT(0x21));	// 20191 int     21h             ; DOS - SELECT DISK ;~ 0AA7:04DB
+cs=0xaa7;eip=0x0004db; 	S(_INT(0x21));	// 20191 int     21h             ; DOS - SELECT DISK ;~ 0AA7:04DB
 cs=0xaa7;eip=0x0004dd; 	X(MOV(word_1de62, 0));	// 20194 mov     word_1DE62, 0 ;~ 0AA7:04DD
 cs=0xaa7;eip=0x0004e3; 	X(MOV(word_1de5e, 0));	// 20195 mov     word_1DE5E, 0 ;~ 0AA7:04E3
 cs=0xaa7;eip=0x0004e9; 	J(JMP(loc_192ff));	// 20196 jmp     loc_192FF ;~ 0AA7:04E9
@@ -696,7 +700,7 @@ cs=0xaa7;eip=0x0006e4; 	T(MOV(ax, 0x7E0D));	// 20394 mov     ax, 7E0Dh ;~ 0AA7:0
 cs=0xaa7;eip=0x0006e7; 	J(CALL(_message_1be77,0));	// 20395 call    _message_1BE77 ;~ 0AA7:06E7
 cs=0xaa7;eip=0x0006ea; 	T(MOV(dx, offset(dseg,_afile)));	// 20396 mov     dx, offset _aFile ; "File" ;~ 0AA7:06EA
 cs=0xaa7;eip=0x0006ed; 	T(MOV(ah, 0x41));	// 20397 mov     ah, 41h ;~ 0AA7:06ED
-cs=0xaa7;eip=0x0006ef; 	R(_INT(0x21));	// 20398 int     21h             ; DOS - 2+ - DELETE A FILE (UNLINK) ;~ 0AA7:06EF
+cs=0xaa7;eip=0x0006ef; 	S(_INT(0x21));	// 20398 int     21h             ; DOS - 2+ - DELETE A FILE (UNLINK) ;~ 0AA7:06EF
 cs=0xaa7;eip=0x0006f1; 	X(POP(fs));	// 20400 pop     fs ;~ 0AA7:06F1
 cs=0xaa7;eip=0x0006f3; 	X(POP(cx));	// 20401 pop     cx ;~ 0AA7:06F3
 loc_19744:
@@ -819,12 +823,12 @@ cs=0xaa7;eip=0x000a0f; 	T(CMP(word_1de52, 0));	// 20839 cmp     word_1DE52, 0 ;~
 cs=0xaa7;eip=0x000a14; 	J(JZ(loc_19a6e));	// 20840 jz      short loc_19A6E ;~ 0AA7:0A14
 cs=0xaa7;eip=0x000a16; 	T(MOV(es, word_1de52));	// 20841 mov     es, word_1DE52 ;~ 0AA7:0A16
 cs=0xaa7;eip=0x000a1a; 	T(MOV(ah, 0x49));	// 20843 mov     ah, 49h ;~ 0AA7:0A1A
-cs=0xaa7;eip=0x000a1c; 	R(_INT(0x21));	// 20844 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 0AA7:0A1C
+cs=0xaa7;eip=0x000a1c; 	S(_INT(0x21));	// 20844 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 0AA7:0A1C
 loc_19a6e:
 	// 5638 
 cs=0xaa7;eip=0x000a1e; 	T(MOV(bx, 0x1000));	// 20848 mov     bx, 1000h ;~ 0AA7:0A1E
 cs=0xaa7;eip=0x000a21; 	T(MOV(ah, 0x48));	// 20849 mov     ah, 48h ;~ 0AA7:0A21
-cs=0xaa7;eip=0x000a23; 	R(_INT(0x21));	// 20850 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 0AA7:0A23
+cs=0xaa7;eip=0x000a23; 	S(_INT(0x21));	// 20850 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 0AA7:0A23
 cs=0xaa7;eip=0x000a25; 	J(JC(loc_19250));	// 20852 jb      loc_19250 ;~ 0AA7:0A25
 cs=0xaa7;eip=0x000a29; 	X(MOV(word_1de52, ax));	// 20853 mov     word_1DE52, ax ;~ 0AA7:0A29
 cs=0xaa7;eip=0x000a2c; 	T(MOV(es, ax));	// 20854 mov     es, ax ;~ 0AA7:0A2C
@@ -953,7 +957,7 @@ cs=0xaa7;eip=0x000b90; 	T(MOV(cx, 0x16));	// 20980 mov     cx, 16h ;~ 0AA7:0B90
 cs=0xaa7;eip=0x000b93; 	T(TEST(*(db*)(((db*)&_configword)), 0x20));	// 20981 test    byte ptr _configword, 20h ;~ 0AA7:0B93
 cs=0xaa7;eip=0x000b98; 	J(JNZ(loc_19c80));	// 20982 jnz     loc_19C80 ;~ 0AA7:0B98
 cs=0xaa7;eip=0x000b9c; 	T(MOV(ax, 0x3D00));	// 20983 mov     ax, 3D00h ;~ 0AA7:0B9C
-cs=0xaa7;eip=0x000b9f; 	R(_INT(0x21));	// 20984 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:0B9F
+cs=0xaa7;eip=0x000b9f; 	S(_INT(0x21));	// 20984 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:0B9F
 cs=0xaa7;eip=0x000ba1; 	J(JC(loc_19c86));	// 20988 jb      loc_19C86 ;~ 0AA7:0BA1
 cs=0xaa7;eip=0x000ba5; 	T(MOV(bx, ax));	// 20989 mov     bx, ax ;~ 0AA7:0BA5
 cs=0xaa7;eip=0x000ba7; 	T(MOV(dx, offset(dseg,_buffer_1dc6c)));	// 20990 mov     dx, offset _buffer_1DC6C ;~ 0AA7:0BA7
@@ -961,11 +965,11 @@ cs=0xaa7;eip=0x000baa; 	T(MOV(bx, ax));	// 20991 mov     bx, ax ;~ 0AA7:0BAA
 cs=0xaa7;eip=0x000bac; 	T(MOV(cx, 0x80));	// 20992 mov     cx, 80h ; '€' ;~ 0AA7:0BAC
 cs=0xaa7;eip=0x000baf; 	T(MOV(ah, 0x3F));	// 20993 mov     ah, 3Fh ; '?' ;~ 0AA7:0BAF
 cs=0xaa7;eip=0x000bb1; 	X(PUSH(bx));	// 20994 push    bx ;~ 0AA7:0BB1
-cs=0xaa7;eip=0x000bb2; 	R(_INT(0x21));	// 20995 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:0BB2
+cs=0xaa7;eip=0x000bb2; 	S(_INT(0x21));	// 20995 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:0BB2
 cs=0xaa7;eip=0x000bb4; 	X(POP(bx));	// 20998 pop     bx ;~ 0AA7:0BB4
 cs=0xaa7;eip=0x000bb5; 	X(PUSHF);	// 20999 pushf ;~ 0AA7:0BB5
 cs=0xaa7;eip=0x000bb6; 	T(MOV(ah, 0x3E));	// 21000 mov     ah, 3Eh ;~ 0AA7:0BB6
-cs=0xaa7;eip=0x000bb8; 	R(_INT(0x21));	// 21001 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:0BB8
+cs=0xaa7;eip=0x000bb8; 	S(_INT(0x21));	// 21001 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:0BB8
 cs=0xaa7;eip=0x000bba; 	X(POPF);	// 21003 popf ;~ 0AA7:0BBA
 cs=0xaa7;eip=0x000bbb; 	J(JC(loc_19c86));	// 21004 jb      short loc_19C86 ;~ 0AA7:0BBB
 cs=0xaa7;eip=0x000bbd; 	T(MOV(si, offset(dseg,byte_1dc7c)));	// 21005 mov     si, offset byte_1DC7C ;~ 0AA7:0BBD
@@ -1025,16 +1029,16 @@ cs=0xaa7;eip=0x000c4e; 	J(JNC(loc_19b3c));	// 21063 jnb     loc_19B3C ;~ 0AA7:0C
 loc_19ca2:
 	// 5651 
 cs=0xaa7;eip=0x000c52; 	T(MOV(ah, 0x19));	// 21067 mov     ah, 19h ;~ 0AA7:0C52
-cs=0xaa7;eip=0x000c54; 	R(_INT(0x21));	// 21068 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:0C54
+cs=0xaa7;eip=0x000c54; 	S(_INT(0x21));	// 21068 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:0C54
 cs=0xaa7;eip=0x000c56; 	X(PUSH(ax));	// 21069 push    ax ;~ 0AA7:0C56
 cs=0xaa7;eip=0x000c57; 	T(XOR(dl, dl));	// 21070 xor     dl, dl ;~ 0AA7:0C57
 loc_19ca9:
 	// 5652 
 cs=0xaa7;eip=0x000c59; 	X(PUSH(dx));	// 21073 push    dx ;~ 0AA7:0C59
 cs=0xaa7;eip=0x000c5a; 	T(MOV(ah, 0x0E));	// 21074 mov     ah, 0Eh ;~ 0AA7:0C5A
-cs=0xaa7;eip=0x000c5c; 	R(_INT(0x21));	// 21075 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0C5C
+cs=0xaa7;eip=0x000c5c; 	S(_INT(0x21));	// 21075 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0C5C
 cs=0xaa7;eip=0x000c5e; 	T(MOV(ah, 0x19));	// 21078 mov     ah, 19h ;~ 0AA7:0C5E
-cs=0xaa7;eip=0x000c60; 	R(_INT(0x21));	// 21079 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:0C60
+cs=0xaa7;eip=0x000c60; 	S(_INT(0x21));	// 21079 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:0C60
 cs=0xaa7;eip=0x000c62; 	X(POP(dx));	// 21080 pop     dx ;~ 0AA7:0C62
 cs=0xaa7;eip=0x000c63; 	T(CMP(al, dl));	// 21081 cmp     al, dl ;~ 0AA7:0C63
 cs=0xaa7;eip=0x000c65; 	J(JNZ(loc_19cdf));	// 21082 jnz     short loc_19CDF ;~ 0AA7:0C65
@@ -1055,14 +1059,14 @@ cs=0xaa7;eip=0x000c91; 	T(CMP(dl, 0x1A));	// 21097 cmp     dl, 1Ah ;~ 0AA7:0C91
 cs=0xaa7;eip=0x000c94; 	J(JC(loc_19ca9));	// 21098 jb      short loc_19CA9 ;~ 0AA7:0C94
 cs=0xaa7;eip=0x000c96; 	X(POP(dx));	// 21099 pop     dx ;~ 0AA7:0C96
 cs=0xaa7;eip=0x000c97; 	T(MOV(ah, 0x0E));	// 21100 mov     ah, 0Eh ;~ 0AA7:0C97
-cs=0xaa7;eip=0x000c99; 	R(_INT(0x21));	// 21101 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0C99
+cs=0xaa7;eip=0x000c99; 	S(_INT(0x21));	// 21101 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0C99
 cs=0xaa7;eip=0x000c9b; 	T(MOV(es, word_1de52));	// 21104 mov     es, word_1DE52 ;~ 0AA7:0C9B
 cs=0xaa7;eip=0x000c9f; 	T(MOV(ax, word_1de54));	// 21106 mov     ax, word_1DE54 ;~ 0AA7:0C9F
 cs=0xaa7;eip=0x000ca2; 	T(MOV(bx, ax));	// 21107 mov     bx, ax ;~ 0AA7:0CA2
 cs=0xaa7;eip=0x000ca4; 	T(SHL(ax, 1));	// 21108 shl     ax, 1 ;~ 0AA7:0CA4
 cs=0xaa7;eip=0x000ca6; 	T(ADD(bx, ax));	// 21109 add     bx, ax ;~ 0AA7:0CA6
 cs=0xaa7;eip=0x000ca8; 	T(MOV(ah, 0x4A));	// 21110 mov     ah, 4Ah ;~ 0AA7:0CA8
-cs=0xaa7;eip=0x000caa; 	R(_INT(0x21));	// 21111 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 0AA7:0CAA
+cs=0xaa7;eip=0x000caa; 	S(_INT(0x21));	// 21111 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 0AA7:0CAA
 cs=0xaa7;eip=0x000cac; 	T(CLC);	// 21114 clc ;~ 0AA7:0CAC
 cs=0xaa7;eip=0x000cad; 	J(RETN(0));	// 21115 retn ;~ 0AA7:0CAD
 seg001_d44_proc:
@@ -1074,7 +1078,7 @@ cs=0xaa7;eip=0x000d49; 	X(MOV(*(dw*)(((db*)&_messagepointer)), offset(dseg,_alis
 cs=0xaa7;eip=0x000d4f; 	X(MOV(*(dw*)(((db*)&_messagepointer)+2), ds));	// 21234 mov     word ptr _messagepointer+2, ds ;~ 0AA7:0D4F
 cs=0xaa7;eip=0x000d53; 	T(MOV(dx, offset(dseg,_buffer_1db6c)+1));	// 21235 mov     dx, (offset _buffer_1DB6C+1) ;~ 0AA7:0D53
 cs=0xaa7;eip=0x000d56; 	T(MOV(ax, 0x3D00));	// 21236 mov     ax, 3D00h ;~ 0AA7:0D56
-cs=0xaa7;eip=0x000d59; 	R(_INT(0x21));	// 21237 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:0D59
+cs=0xaa7;eip=0x000d59; 	S(_INT(0x21));	// 21237 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:0D59
 cs=0xaa7;eip=0x000d5b; 	J(JC(loc_19256));	// 21241 jb      loc_19256 ;~ 0AA7:0D5B
 cs=0xaa7;eip=0x000d5f; 	X(PUSH(ax));	// 21242 push    ax ;~ 0AA7:0D5F
 cs=0xaa7;eip=0x000d60; 	J(CALL(_callsubx,0));	// 21243 call    _callsubx ;~ 0AA7:0D60
@@ -1089,7 +1093,7 @@ cs=0xaa7;eip=0x000d6b; 	T(MOV(cx, 1));	// 21252 mov     cx, 1 ;~ 0AA7:0D6B
 cs=0xaa7;eip=0x000d6e; 	T(MOV(ah, 0x3F));	// 21253 mov     ah, 3Fh ; '?' ;~ 0AA7:0D6E
 cs=0xaa7;eip=0x000d70; 	X(PUSH(bx));	// 21254 push    bx ;~ 0AA7:0D70
 cs=0xaa7;eip=0x000d71; 	X(PUSH(dx));	// 21255 push    dx ;~ 0AA7:0D71
-cs=0xaa7;eip=0x000d72; 	R(_INT(0x21));	// 21256 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:0D72
+cs=0xaa7;eip=0x000d72; 	S(_INT(0x21));	// 21256 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:0D72
 cs=0xaa7;eip=0x000d74; 	X(POP(dx));	// 21259 pop     dx ;~ 0AA7:0D74
 cs=0xaa7;eip=0x000d75; 	X(POP(bx));	// 21260 pop     bx ;~ 0AA7:0D75
 cs=0xaa7;eip=0x000d76; 	T(MOV(di, dx));	// 21261 mov     di, dx ;~ 0AA7:0D76
@@ -1131,7 +1135,7 @@ _int9_keyb:
 cs=0xaa7;eip=0x00302d; 	T(CMP(*(&byte_1c1b8), 1));	// 25595 cmp     cs:byte_1C1B8, 1 ;~ 0AA7:302D
 cs=0xaa7;eip=0x003033; 	J(JZ(loc_1c11f));	// 25596 jz      loc_1C11F ;~ 0AA7:3033
 cs=0xaa7;eip=0x003037; 	X(PUSH(ax));	// 25597 push    ax ;~ 0AA7:3037
-cs=0xaa7;eip=0x003038; 	R(IN(al, 0x60));	// 25598 in      al, 60h         ; 8042 keyboard controller data register ;~ 0AA7:3038
+cs=0xaa7;eip=0x003038; 	S(IN(al, 0x60));	// 25598 in      al, 60h         ; 8042 keyboard controller data register ;~ 0AA7:3038
 cs=0xaa7;eip=0x00303a; 	T(CMP(al, 0x0E0));	// 25599 cmp     al, 0E0h ; 'à' ;~ 0AA7:303A
 cs=0xaa7;eip=0x00303c; 	J(JZ(_l_escaped_scancode));	// 25600 jz      _l_escaped_scancode ;~ 0AA7:303C
 cs=0xaa7;eip=0x003040; 	T(CMP(al, 0x0E1));	// 25601 cmp     al, 0E1h ; 'á' ;~ 0AA7:3040
@@ -1164,13 +1168,13 @@ cs=0xaa7;eip=0x003073; 	J(JZ(_l_altup));	// 25624 jz      short _l_altup ;~ 0AA7
 cs=0xaa7;eip=0x003075; 	X(MOV(*(dw*)(((db*)&_key_code)), ax));	// 25625 mov     cs:_key_code, ax ;~ 0AA7:3075
 loc_1c0c9:
 	// 5992 
-cs=0xaa7;eip=0x003079; 	R(IN(al, 0x61));	// 25629 in      al, 61h         ; PC/XT PPI port B bits: ;~ 0AA7:3079
+cs=0xaa7;eip=0x003079; 	S(IN(al, 0x61));	// 25629 in      al, 61h         ; PC/XT PPI port B bits: ;~ 0AA7:3079
 cs=0xaa7;eip=0x00307b; 	T(OR(al, 0x80));	// 25637 or      al, 80h ;~ 0AA7:307B
-cs=0xaa7;eip=0x00307d; 	R(OUT(0x61, al));	// 25638 out     61h, al         ; PC/XT PPI port B bits: ;~ 0AA7:307D
+cs=0xaa7;eip=0x00307d; 	S(OUT(0x61, al));	// 25638 out     61h, al         ; PC/XT PPI port B bits: ;~ 0AA7:307D
 cs=0xaa7;eip=0x00307f; 	T(AND(al, 0x7F));	// 25646 and     al, 7Fh ;~ 0AA7:307F
-cs=0xaa7;eip=0x003081; 	R(OUT(0x61, al));	// 25647 out     61h, al         ; PC/XT PPI port B bits: ;~ 0AA7:3081
+cs=0xaa7;eip=0x003081; 	S(OUT(0x61, al));	// 25647 out     61h, al         ; PC/XT PPI port B bits: ;~ 0AA7:3081
 cs=0xaa7;eip=0x003083; 	T(MOV(al, 0x20));	// 25655 mov     al, 20h ; ' ' ;~ 0AA7:3083
-cs=0xaa7;eip=0x003085; 	R(OUT(0x20, al));	// 25656 out     20h, al         ; Interrupt controller, 8259A. ;~ 0AA7:3085
+cs=0xaa7;eip=0x003085; 	S(OUT(0x20, al));	// 25656 out     20h, al         ; Interrupt controller, 8259A. ;~ 0AA7:3085
 cs=0xaa7;eip=0x003087; 	X(POP(ax));	// 25657 pop     ax ;~ 0AA7:3087
 cs=0xaa7;eip=0x003088; 	J(IRET);	// 25658 iret ;~ 0AA7:3088
 _l_rshift:
@@ -1222,6 +1226,7 @@ loc_1c11f:
 	// 6002 
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x0030cf; __disp=*(dd*)(((db*)&_oint9_1c1a4));
+printf("int9\n");
 	J(return __dispatch_call(__disp, _state););	// 25709 jmp     cs:_oint9_1C1A4 ;~ 0AA7:30CF
 _int24:
 	// 25757 
@@ -1245,6 +1250,7 @@ loc_1c160:
 cs=0xaa7;eip=0x003110; 	X(POPF);	// 25782 popf ;~ 0AA7:3110
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x003111; __disp=*(dd*)(((db*)&_oint2f_1c1b4));
+printf("int2f\n");
 	J(return __dispatch_call(__disp, _state););	// 25783 jmp     cs:_oint2f_1C1B4 ;~ 0AA7:3111
 _lyesitsme:
 	// 6005 
@@ -1433,14 +1439,14 @@ cs=0xaa7;eip=0x0007d6; 	J(RETN(0));	// 20496 retn ;~ 0AA7:07D6
     _begin:
 cs=0xaa7;eip=0x00083c; 	X(PUSH(si));	// 20555 push    si ;~ 0AA7:083C
 cs=0xaa7;eip=0x00083d; 	T(MOV(ah, 0x19));	// 20556 mov     ah, 19h ;~ 0AA7:083D
-cs=0xaa7;eip=0x00083f; 	R(_INT(0x21));	// 20557 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:083F
+cs=0xaa7;eip=0x00083f; 	S(_INT(0x21));	// 20557 int     21h             ; DOS - GET DEFAULT DISK NUMBER ;~ 0AA7:083F
 cs=0xaa7;eip=0x000841; 	X(POP(si));	// 20558 pop     si ;~ 0AA7:0841
 cs=0xaa7;eip=0x000842; 	X(MOV(*(raddr(ds,si)), al));	// 20559 mov     [si], al ;~ 0AA7:0842
 cs=0xaa7;eip=0x000844; 	X(MOV(*(raddr(ds,si+1)), '\\'));	// 20560 mov     byte ptr [si+1], '\' ;~ 0AA7:0844
 cs=0xaa7;eip=0x000848; 	T(ADD(si, 2));	// 20561 add     si, 2 ;~ 0AA7:0848
 cs=0xaa7;eip=0x00084b; 	T(XOR(dl, dl));	// 20562 xor     dl, dl ;~ 0AA7:084B
 cs=0xaa7;eip=0x00084d; 	T(MOV(ah, 0x47));	// 20563 mov     ah, 47h ;~ 0AA7:084D
-cs=0xaa7;eip=0x00084f; 	R(_INT(0x21));	// 20564 int     21h             ; DOS - 2+ - GET CURRENT DIRECTORY ;~ 0AA7:084F
+cs=0xaa7;eip=0x00084f; 	S(_INT(0x21));	// 20564 int     21h             ; DOS - 2+ - GET CURRENT DIRECTORY ;~ 0AA7:084F
 cs=0xaa7;eip=0x000851; 	J(RETN(0));	// 20567 retn ;~ 0AA7:0851
 
     assert(0);
@@ -1470,10 +1476,10 @@ cs=0xaa7;eip=0x000852; 	T(MOV(dl, *(raddr(ds,si))));	// 20577 mov     dl, [si] ;
 cs=0xaa7;eip=0x000854; 	T(INC(si));	// 20578 inc     si ;~ 0AA7:0854
 cs=0xaa7;eip=0x000855; 	X(PUSH(si));	// 20579 push    si ;~ 0AA7:0855
 cs=0xaa7;eip=0x000856; 	T(MOV(ah, 0x0E));	// 20580 mov     ah, 0Eh ;~ 0AA7:0856
-cs=0xaa7;eip=0x000858; 	R(_INT(0x21));	// 20581 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0858
+cs=0xaa7;eip=0x000858; 	S(_INT(0x21));	// 20581 int     21h             ; DOS - SELECT DISK ;~ 0AA7:0858
 cs=0xaa7;eip=0x00085a; 	X(POP(dx));	// 20584 pop     dx ;~ 0AA7:085A
 cs=0xaa7;eip=0x00085b; 	T(MOV(ah, 0x3B));	// 20585 mov     ah, 3Bh ;~ 0AA7:085B
-cs=0xaa7;eip=0x00085d; 	R(_INT(0x21));	// 20586 int     21h             ; DOS - 2+ - CHANGE THE CURRENT DIRECTORY (CHDIR) ;~ 0AA7:085D
+cs=0xaa7;eip=0x00085d; 	S(_INT(0x21));	// 20586 int     21h             ; DOS - 2+ - CHANGE THE CURRENT DIRECTORY (CHDIR) ;~ 0AA7:085D
 cs=0xaa7;eip=0x00085f; 	J(RETN(0));	// 20588 retn ;~ 0AA7:085F
 
     assert(0);
@@ -2069,7 +2075,7 @@ cs=0xaa7;eip=0x000e9b; 	X(MOV(_volume_1de34, eax));	// 21401 mov     _volume_1DE
 cs=0xaa7;eip=0x000e9f; 	X(MOV(byte_1de7c, 0));	// 21402 mov     byte_1DE7C, 0 ;~ 0AA7:0E9F
 cs=0xaa7;eip=0x000ea4; 	J(CALLF(sub_12eba,0));	// 21403 call    sub_12EBA ;~ 0AA7:0EA4
 cs=0xaa7;eip=0x000ea9; 	J(CALL(__dispatch_call,off_1de3c));	// 21404 call    off_1DE3C ;~ 0AA7:0EA9
-	R(JMP(_keyb_19efd));_keyb_19efd:
+	S(JMP(_keyb_19efd));_keyb_19efd:
 	// 21411 
 cs=0xaa7;eip=0x000ead; 	J(CALLF(sub_1265d,0));	// 21413 call    sub_1265D ;~ 0AA7:0EAD
 cs=0xaa7;eip=0x000eb2; 	X(MOV(byte_1de72, ah));	// 21414 mov     byte_1DE72, ah ;~ 0AA7:0EB2
@@ -2732,15 +2738,15 @@ loc_1a5c3:
 cs=0xaa7;eip=0x001573; 	T(OR(al, 0x80));	// 22217 or      al, 80h ;~ 0AA7:1573
 loc_1a5c5:
 	// 5746 
-cs=0xaa7;eip=0x001575; 	R(_INT(0x10));	// 22220 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1575
+cs=0xaa7;eip=0x001575; 	S(_INT(0x10));	// 22220 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1575
 cs=0xaa7;eip=0x001577; 	J(CALL(_txt_blinkingoff,0));	// 22222 call    _txt_blinkingoff ;~ 0AA7:1577
 cs=0xaa7;eip=0x00157a; 	T(MOV(ax, 0x1112));	// 22223 mov     ax, 1112h ;~ 0AA7:157A
 cs=0xaa7;eip=0x00157d; 	T(XOR(bl, bl));	// 22224 xor     bl, bl ;~ 0AA7:157D
-cs=0xaa7;eip=0x00157f; 	R(_INT(0x10));	// 22225 int     10h             ; - VIDEO - TEXT-MODE CHARACTER GENERATOR FUNCTIONS (PS, EGA, VGA) ;~ 0AA7:157F
+cs=0xaa7;eip=0x00157f; 	S(_INT(0x10));	// 22225 int     10h             ; - VIDEO - TEXT-MODE CHARACTER GENERATOR FUNCTIONS (PS, EGA, VGA) ;~ 0AA7:157F
 cs=0xaa7;eip=0x001581; 	T(MOV(dx, 0x3300));	// 22230 mov     dx, 3300h ;~ 0AA7:1581
 cs=0xaa7;eip=0x001584; 	T(XOR(bh, bh));	// 22231 xor     bh, bh ;~ 0AA7:1584
 cs=0xaa7;eip=0x001586; 	T(MOV(ah, 2));	// 22232 mov     ah, 2 ;~ 0AA7:1586
-cs=0xaa7;eip=0x001588; 	R(_INT(0x10));	// 22233 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:1588
+cs=0xaa7;eip=0x001588; 	S(_INT(0x10));	// 22233 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:1588
 cs=0xaa7;eip=0x00158a; 	X(MOV(byte_1de70, 2));	// 22236 mov     byte_1DE70, 2 ;~ 0AA7:158A
 cs=0xaa7;eip=0x00158f; 	X(MOV(word_1de6e, 0x20));	// 22237 mov     word_1DE6E, 20h ; ' ' ;~ 0AA7:158F
 cs=0xaa7;eip=0x001595; 	T(MOV(eax, _videomempointer));	// 22238 mov     eax, _videomempointer ;~ 0AA7:1595
@@ -2865,7 +2871,7 @@ cs=0xaa7;eip=0x0016d5; 	T(MOV(ah, 0x7F));	// 22357 mov     ah, 7Fh         ; col
 cs=0xaa7;eip=0x0016d7; 	J(CALL(_put_message,0));	// 22358 call    _put_message ;~ 0AA7:16D7
 cs=0xaa7;eip=0x0016da; 	T(MOV(bx, 0x0FFFF));	// 22359 mov     bx, 0FFFFh ;~ 0AA7:16DA
 cs=0xaa7;eip=0x0016dd; 	T(MOV(ah, 0x48));	// 22360 mov     ah, 48h ;~ 0AA7:16DD
-cs=0xaa7;eip=0x0016df; 	R(_INT(0x21));	// 22361 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 0AA7:16DF
+cs=0xaa7;eip=0x0016df; 	S(_INT(0x21));	// 22361 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 0AA7:16DF
 cs=0xaa7;eip=0x0016e1; 	T(MOV(ax, bx));	// 22363 mov     ax, bx ;~ 0AA7:16E1
 cs=0xaa7;eip=0x0016e3; 	T(SHR(ax, 6));	// 22364 shr     ax, 6 ;~ 0AA7:16E3
 cs=0xaa7;eip=0x0016e6; 	T(MOV(si, offset(dseg,_buffer_1dc6c)));	// 22365 mov     si, offset _buffer_1DC6C ;~ 0AA7:16E6
@@ -3412,7 +3418,8 @@ cs=0xaa7;eip=0x002de1; 	X(PUSH(ax));	// 25124 push    ax ;~ 0AA7:2DE1
 cs=0xaa7;eip=0x002de2; 	T(SHR(al, 4));	// 25125 shr     al, 4 ;~ 0AA7:2DE2
 cs=0xaa7;eip=0x002de5; 	J(CALL(_hex_1be39,0));	// 25126 call    _hex_1BE39 ;~ 0AA7:2DE5
 cs=0xaa7;eip=0x002de8; 	X(POP(ax));	// 25127 pop     ax ;~ 0AA7:2DE8
-	R(return _hex_1be39(0, _state););_callsubx:
+	return _hex_1be39(0, _state);
+_callsubx:
 	// 26201 
 cs=0xaa7;eip=0x0033df; 	T(MOV(al, _snd_card_type));	// 26203 mov     al, _snd_card_type ;~ 0AA7:33DF
 cs=0xaa7;eip=0x0033e2; 	T(MOV(dx, _snd_base_port_0));	// 26204 mov     dx, _snd_base_port_0 ;~ 0AA7:33E2
@@ -3629,30 +3636,30 @@ cs=0xaa7;eip=0x001cdf; 	T(CMP(byte_1de70, 3));	// 23082 cmp     byte_1DE70, 3 ;~
 cs=0xaa7;eip=0x001ce4; 	J(JZ(loc_1aeb2));	// 23083 jz      loc_1AEB2 ;~ 0AA7:1CE4
 cs=0xaa7;eip=0x001ce8; 	X(MOV(byte_1de70, 3));	// 23084 mov     byte_1DE70, 3 ;~ 0AA7:1CE8
 cs=0xaa7;eip=0x001ced; 	T(MOV(ax, 0x12));	// 23085 mov     ax, 12h         ; VGA 640x480, 16-color; 80 bytes per line; 1 byte-8 pixels ;~ 0AA7:1CED
-cs=0xaa7;eip=0x001cf0; 	R(_INT(0x10));	// 23086 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1CF0
+cs=0xaa7;eip=0x001cf0; 	S(_INT(0x10));	// 23086 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1CF0
 cs=0xaa7;eip=0x001cf2; 	T(MOV(ax, ds));	// 23088 mov     ax, ds ;~ 0AA7:1CF2
 cs=0xaa7;eip=0x001cf4; 	T(MOV(es, ax));	// 23089 mov     es, ax ;~ 0AA7:1CF4
 cs=0xaa7;eip=0x001cf6; 	T(MOV(dx, offset(dseg,_palette_24404)));	// 23091 mov     dx, offset _palette_24404 ;~ 0AA7:1CF6
 cs=0xaa7;eip=0x001cf9; 	T(MOV(ax, 0x1002));	// 23092 mov     ax, 1002h ;~ 0AA7:1CF9
-cs=0xaa7;eip=0x001cfc; 	R(_INT(0x10));	// 23093 int     10h             ; - VIDEO - SET ALL PALETTE REGISTERS (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:1CFC
+cs=0xaa7;eip=0x001cfc; 	S(_INT(0x10));	// 23093 int     10h             ; - VIDEO - SET ALL PALETTE REGISTERS (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:1CFC
 cs=0xaa7;eip=0x001cfe; 	T(MOV(dx, offset(dseg,_vga_palette)));	// 23095 mov     dx, offset _vga_palette ;~ 0AA7:1CFE
 cs=0xaa7;eip=0x001d01; 	T(MOV(cx, 0x10));	// 23096 mov     cx, 10h ;~ 0AA7:1D01
 cs=0xaa7;eip=0x001d04; 	T(XOR(bx, bx));	// 23097 xor     bx, bx ;~ 0AA7:1D04
 cs=0xaa7;eip=0x001d06; 	T(MOV(ax, 0x1012));	// 23098 mov     ax, 1012h ;~ 0AA7:1D06
-cs=0xaa7;eip=0x001d09; 	R(_INT(0x10));	// 23099 int     10h             ; - VIDEO - SET BLOCK OF DAC REGISTERS (EGA, VGA/MCGA) ;~ 0AA7:1D09
+cs=0xaa7;eip=0x001d09; 	S(_INT(0x10));	// 23099 int     10h             ; - VIDEO - SET BLOCK OF DAC REGISTERS (EGA, VGA/MCGA) ;~ 0AA7:1D09
 cs=0xaa7;eip=0x001d0b; 	T(MOV(si, offset(dseg,_buffer_1dc6c)));	// 23103 mov     si, offset _buffer_1DC6C ;~ 0AA7:1D0B
 cs=0xaa7;eip=0x001d0e; 	J(CALL(_getexename,0));	// 23104 call    _getexename ;~ 0AA7:1D0E
 cs=0xaa7;eip=0x001d11; 	J(JC(loc_1ae66));	// 23105 jb      loc_1AE66 ;~ 0AA7:1D11
 cs=0xaa7;eip=0x001d15; 	T(MOV(dx, offset(dseg,_buffer_1dc6c)));	// 23106 mov     dx, offset _buffer_1DC6C ;~ 0AA7:1D15
 cs=0xaa7;eip=0x001d18; 	T(MOV(ax, 0x3D00));	// 23107 mov     ax, 3D00h ;~ 0AA7:1D18
-cs=0xaa7;eip=0x001d1b; 	R(_INT(0x21));	// 23108 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:1D1B
+cs=0xaa7;eip=0x001d1b; 	S(_INT(0x21));	// 23108 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:1D1B
 cs=0xaa7;eip=0x001d1d; 	J(JC(loc_1ae66));	// 23112 jb      loc_1AE66 ;~ 0AA7:1D1D
 cs=0xaa7;eip=0x001d21; 	X(MOV(_fhandle_1de68, ax));	// 23113 mov     _fhandle_1DE68, ax ;~ 0AA7:1D21
 cs=0xaa7;eip=0x001d24; 	T(XOR(dx, dx));	// 23114 xor     dx, dx ;~ 0AA7:1D24
 cs=0xaa7;eip=0x001d26; 	T(XOR(cx, cx));	// 23115 xor     cx, cx ;~ 0AA7:1D26
 cs=0xaa7;eip=0x001d28; 	T(MOV(bx, _fhandle_1de68));	// 23116 mov     bx, _fhandle_1DE68 ;~ 0AA7:1D28
 cs=0xaa7;eip=0x001d2c; 	T(MOV(ax, 0x4202));	// 23117 mov     ax, 4202h       ; get file size ;~ 0AA7:1D2C
-cs=0xaa7;eip=0x001d2f; 	R(_INT(0x21));	// 23118 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 0AA7:1D2F
+cs=0xaa7;eip=0x001d2f; 	S(_INT(0x21));	// 23118 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 0AA7:1D2F
 cs=0xaa7;eip=0x001d31; 	J(JC(loc_1ae5e));	// 23120 jb      loc_1AE5E ;~ 0AA7:1D31
 cs=0xaa7;eip=0x001d35; 	T(MOV(cx, dx));	// 23121 mov     cx, dx ;~ 0AA7:1D35
 cs=0xaa7;eip=0x001d37; 	T(MOV(dx, ax));	// 23122 mov     dx, ax ;~ 0AA7:1D37
@@ -3660,13 +3667,13 @@ cs=0xaa7;eip=0x001d39; 	T(SUB(dx, 0x5AB3));	// 23123 sub     dx, 5AB3h       ; r
 cs=0xaa7;eip=0x001d3d; 	T(SBB(cx, 1));	// 23124 sbb     cx, 1 ;~ 0AA7:1D3D
 cs=0xaa7;eip=0x001d40; 	T(MOV(bx, _fhandle_1de68));	// 23125 mov     bx, _fhandle_1DE68 ;~ 0AA7:1D40
 cs=0xaa7;eip=0x001d44; 	T(MOV(ax, 0x4200));	// 23126 mov     ax, 4200h ;~ 0AA7:1D44
-cs=0xaa7;eip=0x001d47; 	R(_INT(0x21));	// 23127 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 0AA7:1D47
+cs=0xaa7;eip=0x001d47; 	S(_INT(0x21));	// 23127 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 0AA7:1D47
 cs=0xaa7;eip=0x001d49; 	J(JC(loc_1ae5e));	// 23129 jb      loc_1AE5E ;~ 0AA7:1D49
 cs=0xaa7;eip=0x001d4d; 	T(MOV(dx, offset(dseg,_buffer_1dc6c)));	// 23130 mov     dx, offset _buffer_1DC6C ;~ 0AA7:1D4D
 cs=0xaa7;eip=0x001d50; 	T(MOV(cx, 2));	// 23131 mov     cx, 2 ;~ 0AA7:1D50
 cs=0xaa7;eip=0x001d53; 	T(MOV(bx, _fhandle_1de68));	// 23132 mov     bx, _fhandle_1DE68 ;~ 0AA7:1D53
 cs=0xaa7;eip=0x001d57; 	T(MOV(ah, 0x3F));	// 23133 mov     ah, 3Fh ;~ 0AA7:1D57
-cs=0xaa7;eip=0x001d59; 	R(_INT(0x21));	// 23134 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:1D59
+cs=0xaa7;eip=0x001d59; 	S(_INT(0x21));	// 23134 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:1D59
 cs=0xaa7;eip=0x001d5b; 	J(JC(loc_1ae5e));	// 23137 jb      loc_1AE5E ;~ 0AA7:1D5B
 cs=0xaa7;eip=0x001d5f; 	T(CMP(ax, 2));	// 23138 cmp     ax, 2 ;~ 0AA7:1D5F
 cs=0xaa7;eip=0x001d62; 	J(JNZ(loc_1ae5e));	// 23139 jnz     loc_1AE5E ;~ 0AA7:1D62
@@ -3676,14 +3683,14 @@ cs=0xaa7;eip=0x001d70; 	J(CALL(_set_egasequencer,0));	// 23142 call    _set_egas
 cs=0xaa7;eip=0x001d73; 	J(CALL(_read2buffer,0));	// 23143 call    _read2buffer ;~ 0AA7:1D73
 cs=0xaa7;eip=0x001d76; 	T(MOV(dx, 0x3CE));	// 23144 mov     dx, 3CEh ;~ 0AA7:1D76
 cs=0xaa7;eip=0x001d79; 	T(MOV(ax, 3));	// 23145 mov     ax, 3 ;~ 0AA7:1D79
-cs=0xaa7;eip=0x001d7c; 	R(OUT(dx, ax));	// 23146 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1D7C
+cs=0xaa7;eip=0x001d7c; 	S(OUT(dx, ax));	// 23146 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1D7C
 cs=0xaa7;eip=0x001d7d; 	T(MOV(ax, 0x0FF08));	// 23151 mov     ax, 0FF08h ;~ 0AA7:1D7D
-cs=0xaa7;eip=0x001d80; 	R(OUT(dx, ax));	// 23152 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1D80
+cs=0xaa7;eip=0x001d80; 	S(OUT(dx, ax));	// 23152 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1D80
 cs=0xaa7;eip=0x001d81; 	T(MOV(ax, 0x0A000));	// 23154 mov     ax, 0A000h ;~ 0AA7:1D81
 cs=0xaa7;eip=0x001d84; 	T(MOV(es, ax));	// 23155 mov     es, ax ;~ 0AA7:1D84
 cs=0xaa7;eip=0x001d86; 	T(MOV(dx, 0x3C4));	// 23157 mov     dx, 3C4h ;~ 0AA7:1D86
 cs=0xaa7;eip=0x001d89; 	T(MOV(al, 2));	// 23158 mov     al, 2 ;~ 0AA7:1D89
-cs=0xaa7;eip=0x001d8b; 	R(OUT(dx, al));	// 23159 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:1D8B
+cs=0xaa7;eip=0x001d8b; 	S(OUT(dx, al));	// 23159 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:1D8B
 cs=0xaa7;eip=0x001d8c; 	T(INC(dl));	// 23161 inc     dl ;~ 0AA7:1D8C
 cs=0xaa7;eip=0x001d8e; 	T(XOR(bx, bx));	// 23162 xor     bx, bx ;~ 0AA7:1D8E
 loc_1ade0:
@@ -3692,7 +3699,7 @@ cs=0xaa7;eip=0x001d90; 	T(MOV(ah, 1));	// 23165 mov     ah, 1 ;~ 0AA7:1D90
 loc_1ade2:
 	// 5805 
 cs=0xaa7;eip=0x001d92; 	T(MOV(al, ah));	// 23168 mov     al, ah ;~ 0AA7:1D92
-cs=0xaa7;eip=0x001d94; 	R(OUT(dx, al));	// 23169 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:1D94
+cs=0xaa7;eip=0x001d94; 	S(OUT(dx, al));	// 23169 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:1D94
 cs=0xaa7;eip=0x001d95; 	T(XOR(di, di));	// 23170 xor     di, di ;~ 0AA7:1D95
 loc_1ade7:
 	// 5806 
@@ -3730,7 +3737,8 @@ cs=0xaa7;eip=0x001dc4; 	J(return _read2buffer(0, _state););	// 23205 jmp     sho
 loc_1ae16:
 	// 5812 
 cs=0xaa7;eip=0x001dc6; 	X(PUSH(m2c::kloc_1ae3a));	// 23209 push    offset loc_1AE3A ;~ 0AA7:1DC6
-	R(return _read2buffer(0, _state););seg001_1ddd_proc:
+	return _read2buffer(0, _state);
+seg001_1ddd_proc:
 	// 23234 
 loc_1ae2d:
 	// 5813 
@@ -3762,19 +3770,19 @@ loc_1ae5e:
 	// 5816 
 cs=0xaa7;eip=0x001e0e; 	T(MOV(bx, _fhandle_1de68));	// 23263 mov     bx, _fhandle_1DE68 ;~ 0AA7:1E0E
 cs=0xaa7;eip=0x001e12; 	T(MOV(ah, 0x3E));	// 23264 mov     ah, 3Eh ;~ 0AA7:1E12
-cs=0xaa7;eip=0x001e14; 	R(_INT(0x21));	// 23265 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:1E14
+cs=0xaa7;eip=0x001e14; 	S(_INT(0x21));	// 23265 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:1E14
 loc_1ae66:
 	// 5817 
 cs=0xaa7;eip=0x001e16; 	X(PUSHF);	// 23270 pushf ;~ 0AA7:1E16
 cs=0xaa7;eip=0x001e17; 	T(CLI);	// 23271 cli ;~ 0AA7:1E17
 cs=0xaa7;eip=0x001e18; 	T(MOV(dx, 0x3C4));	// 23272 mov     dx, 3C4h ;~ 0AA7:1E18
 cs=0xaa7;eip=0x001e1b; 	T(MOV(ax, 0x802));	// 23273 mov     ax, 802h ;~ 0AA7:1E1B
-cs=0xaa7;eip=0x001e1e; 	R(OUT(dx, ax));	// 23274 out     dx, ax          ; EGA: sequencer address reg ;~ 0AA7:1E1E
+cs=0xaa7;eip=0x001e1e; 	S(OUT(dx, ax));	// 23274 out     dx, ax          ; EGA: sequencer address reg ;~ 0AA7:1E1E
 cs=0xaa7;eip=0x001e1f; 	T(MOV(dx, 0x3CE));	// 23276 mov     dx, 3CEh ;~ 0AA7:1E1F
 cs=0xaa7;eip=0x001e22; 	T(MOV(ax, 0x205));	// 23277 mov     ax, 205h ;~ 0AA7:1E22
-cs=0xaa7;eip=0x001e25; 	R(OUT(dx, ax));	// 23278 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E25
+cs=0xaa7;eip=0x001e25; 	S(OUT(dx, ax));	// 23278 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E25
 cs=0xaa7;eip=0x001e26; 	T(MOV(ax, 3));	// 23280 mov     ax, 3 ;~ 0AA7:1E26
-cs=0xaa7;eip=0x001e29; 	R(OUT(dx, ax));	// 23281 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E29
+cs=0xaa7;eip=0x001e29; 	S(OUT(dx, ax));	// 23281 out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E29
 cs=0xaa7;eip=0x001e2a; 	X(POPF);	// 23286 popf ;~ 0AA7:1E2A
 cs=0xaa7;eip=0x001e2b; 	J(CALL(_video_prp_mtr_positn,0));	// 23287 call    _video_prp_mtr_positn ;~ 0AA7:1E2B
 loc_1ae7e:
@@ -3827,13 +3835,13 @@ cs=0xaa7;eip=0x001e93; 	X(PUSH(di));	// 23341 push    di ;~ 0AA7:1E93
 cs=0xaa7;eip=0x001e94; 	T(MOV(bp, *(dw*)(raddr(ds,di))));	// 23342 mov     bp, [di]        ; bp = x * 8 ;~ 0AA7:1E94
 cs=0xaa7;eip=0x001e96; 	T(MOV(dx, 0x3CE));	// 23343 mov     dx, 3CEh ;~ 0AA7:1E96
 cs=0xaa7;eip=0x001e99; 	T(MOV(al, 8));	// 23344 mov     al, 8 ;~ 0AA7:1E99
-cs=0xaa7;eip=0x001e9b; 	R(OUT(dx, al));	// 23345 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E9B
+cs=0xaa7;eip=0x001e9b; 	S(OUT(dx, al));	// 23345 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1E9B
 cs=0xaa7;eip=0x001e9c; 	T(MOV(al, 0x80));	// 23348 mov     al, 10000000b   ; bits of display memory which can be modified ;~ 0AA7:1E9C
 _lc_nextvideobit:
 	// 5821 
 cs=0xaa7;eip=0x001e9e; 	T(MOV(ah, 37));	// 23351 mov     ah, 37          ; 37 * 8 = 296 by x ;~ 0AA7:1E9E
 cs=0xaa7;eip=0x001ea0; 	T(MOV(dx, 0x3CF));	// 23352 mov     dx, 3CFh ;~ 0AA7:1EA0
-cs=0xaa7;eip=0x001ea3; 	R(OUT(dx, al));	// 23353 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:1EA3
+cs=0xaa7;eip=0x001ea3; 	S(OUT(dx, al));	// 23353 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:1EA3
 cs=0xaa7;eip=0x001ea4; 	T(MOV(bx, bp));	// 23354 mov     bx, bp          ; reinit (x*8) ;~ 0AA7:1EA4
 _lc_next_x8:
 	// 5822 
@@ -3903,13 +3911,13 @@ cs=0xaa7;eip=0x001f2b; 	X(PUSH(di));	// 23427 push    di ;~ 0AA7:1F2B
 cs=0xaa7;eip=0x001f2c; 	T(MOV(bp, *(dw*)(raddr(ds,di))));	// 23428 mov     bp, [di] ;~ 0AA7:1F2C
 cs=0xaa7;eip=0x001f2e; 	T(MOV(dx, 0x3CE));	// 23429 mov     dx, 3CEh ;~ 0AA7:1F2E
 cs=0xaa7;eip=0x001f31; 	T(MOV(al, 8));	// 23430 mov     al, 8 ;~ 0AA7:1F31
-cs=0xaa7;eip=0x001f33; 	R(OUT(dx, al));	// 23431 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1F33
+cs=0xaa7;eip=0x001f33; 	S(OUT(dx, al));	// 23431 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:1F33
 cs=0xaa7;eip=0x001f34; 	T(MOV(al, 0x80));	// 23434 mov     al, 10000000b ;~ 0AA7:1F34
 loc_1af86:
 	// 5826 
 cs=0xaa7;eip=0x001f36; 	T(MOV(ah, 37));	// 23437 mov     ah, 37 ;~ 0AA7:1F36
 cs=0xaa7;eip=0x001f38; 	T(MOV(dx, 0x3CF));	// 23438 mov     dx, 3CFh ;~ 0AA7:1F38
-cs=0xaa7;eip=0x001f3b; 	R(OUT(dx, al));	// 23439 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:1F3B
+cs=0xaa7;eip=0x001f3b; 	S(OUT(dx, al));	// 23439 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:1F3B
 cs=0xaa7;eip=0x001f3c; 	T(MOV(bx, bp));	// 23440 mov     bx, bp ;~ 0AA7:1F3C
 loc_1af8e:
 	// 5827 
@@ -4009,11 +4017,11 @@ cs=0xaa7;eip=0x001f7f; 	T(CMP(byte_1de70, 4));	// 23482 cmp     byte_1DE70, 4 ;~
 cs=0xaa7;eip=0x001f84; 	J(JZ(locret_1b083));	// 23483 jz      locret_1B083 ;~ 0AA7:1F84
 cs=0xaa7;eip=0x001f88; 	X(MOV(byte_1de70, 4));	// 23484 mov     byte_1DE70, 4 ;~ 0AA7:1F88
 cs=0xaa7;eip=0x001f8d; 	T(MOV(ax, 0x13));	// 23485 mov     ax, 13h ;~ 0AA7:1F8D
-cs=0xaa7;eip=0x001f90; 	R(_INT(0x10));	// 23486 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1F90
+cs=0xaa7;eip=0x001f90; 	S(_INT(0x10));	// 23486 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1F90
 cs=0xaa7;eip=0x001f92; 	J(CALL(_set_egasequencer,0));	// 23488 call    _set_egasequencer ;~ 0AA7:1F92
 cs=0xaa7;eip=0x001f95; 	T(MOV(dx, 0x3C8));	// 23489 mov     dx, 3C8h ;~ 0AA7:1F95
 cs=0xaa7;eip=0x001f98; 	T(XOR(al, al));	// 23490 xor     al, al ;~ 0AA7:1F98
-cs=0xaa7;eip=0x001f9a; 	R(OUT(dx, al));	// 23491 out     dx, al ;~ 0AA7:1F9A
+cs=0xaa7;eip=0x001f9a; 	S(OUT(dx, al));	// 23491 out     dx, al ;~ 0AA7:1F9A
 cs=0xaa7;eip=0x001f9b; 	J({;});	// 23492 jmp     short $+2 ;~ 0AA7:1F9B
 loc_1afed:
 	// 5829 
@@ -4021,15 +4029,15 @@ cs=0xaa7;eip=0x001f9d; 	J({;});	// 23496 jmp     short $+2 ;~ 0AA7:1F9D
 loc_1afef:
 	// 5830 
 cs=0xaa7;eip=0x001f9f; 	T(INC(dx));	// 23500 inc     dx ;~ 0AA7:1F9F
-cs=0xaa7;eip=0x001fa0; 	R(OUT(dx, al));	// 23501 out     dx, al ;~ 0AA7:1FA0
+cs=0xaa7;eip=0x001fa0; 	S(OUT(dx, al));	// 23501 out     dx, al ;~ 0AA7:1FA0
 cs=0xaa7;eip=0x001fa1; 	J({;});	// 23502 jmp     short $+2 ;~ 0AA7:1FA1
 loc_1aff3:
 	// 5831 
-cs=0xaa7;eip=0x001fa3; 	R(OUT(dx, al));	// 23506 out     dx, al ;~ 0AA7:1FA3
+cs=0xaa7;eip=0x001fa3; 	S(OUT(dx, al));	// 23506 out     dx, al ;~ 0AA7:1FA3
 cs=0xaa7;eip=0x001fa4; 	J({;});	// 23507 jmp     short $+2 ;~ 0AA7:1FA4
 loc_1aff6:
 	// 5832 
-cs=0xaa7;eip=0x001fa6; 	R(OUT(dx, al));	// 23511 out     dx, al ;~ 0AA7:1FA6
+cs=0xaa7;eip=0x001fa6; 	S(OUT(dx, al));	// 23511 out     dx, al ;~ 0AA7:1FA6
 cs=0xaa7;eip=0x001fa7; 	J({;});	// 23512 jmp     short $+2 ;~ 0AA7:1FA7
 loc_1aff9:
 	// 5833 
@@ -4038,17 +4046,17 @@ cs=0xaa7;eip=0x001fac; 	T(XOR(bx, bx));	// 23517 xor     bx, bx ;~ 0AA7:1FAC
 loc_1affe:
 	// 5834 
 cs=0xaa7;eip=0x001fae; 	T(MOV(al, bh));	// 23520 mov     al, bh ;~ 0AA7:1FAE
-cs=0xaa7;eip=0x001fb0; 	R(OUT(dx, al));	// 23521 out     dx, al ;~ 0AA7:1FB0
+cs=0xaa7;eip=0x001fb0; 	S(OUT(dx, al));	// 23521 out     dx, al ;~ 0AA7:1FB0
 cs=0xaa7;eip=0x001fb1; 	J({;});	// 23522 jmp     short $+2 ;~ 0AA7:1FB1
 loc_1b003:
 	// 5835 
 cs=0xaa7;eip=0x001fb3; 	T(MOV(al, 0x3F));	// 23526 mov     al, 3Fh ; '?' ;~ 0AA7:1FB3
-cs=0xaa7;eip=0x001fb5; 	R(OUT(dx, al));	// 23527 out     dx, al ;~ 0AA7:1FB5
+cs=0xaa7;eip=0x001fb5; 	S(OUT(dx, al));	// 23527 out     dx, al ;~ 0AA7:1FB5
 cs=0xaa7;eip=0x001fb6; 	J({;});	// 23528 jmp     short $+2 ;~ 0AA7:1FB6
 loc_1b008:
 	// 5836 
 cs=0xaa7;eip=0x001fb8; 	T(XOR(al, al));	// 23532 xor     al, al ;~ 0AA7:1FB8
-cs=0xaa7;eip=0x001fba; 	R(OUT(dx, al));	// 23533 out     dx, al ;~ 0AA7:1FBA
+cs=0xaa7;eip=0x001fba; 	S(OUT(dx, al));	// 23533 out     dx, al ;~ 0AA7:1FBA
 cs=0xaa7;eip=0x001fbb; 	J({;});	// 23534 jmp     short $+2 ;~ 0AA7:1FBB
 loc_1b00d:
 	// 5837 
@@ -4059,17 +4067,17 @@ loc_1b014:
 	// 5838 
 cs=0xaa7;eip=0x001fc4; 	T(SUB(bx, bp));	// 23543 sub     bx, bp ;~ 0AA7:1FC4
 cs=0xaa7;eip=0x001fc6; 	T(MOV(al, 0x3F));	// 23544 mov     al, 3Fh ; '?' ;~ 0AA7:1FC6
-cs=0xaa7;eip=0x001fc8; 	R(OUT(dx, al));	// 23545 out     dx, al ;~ 0AA7:1FC8
+cs=0xaa7;eip=0x001fc8; 	S(OUT(dx, al));	// 23545 out     dx, al ;~ 0AA7:1FC8
 cs=0xaa7;eip=0x001fc9; 	J({;});	// 23546 jmp     short $+2 ;~ 0AA7:1FC9
 loc_1b01b:
 	// 5839 
 cs=0xaa7;eip=0x001fcb; 	T(MOV(al, bh));	// 23550 mov     al, bh ;~ 0AA7:1FCB
-cs=0xaa7;eip=0x001fcd; 	R(OUT(dx, al));	// 23551 out     dx, al ;~ 0AA7:1FCD
+cs=0xaa7;eip=0x001fcd; 	S(OUT(dx, al));	// 23551 out     dx, al ;~ 0AA7:1FCD
 cs=0xaa7;eip=0x001fce; 	J({;});	// 23552 jmp     short $+2 ;~ 0AA7:1FCE
 loc_1b020:
 	// 5840 
 cs=0xaa7;eip=0x001fd0; 	T(XOR(al, al));	// 23556 xor     al, al ;~ 0AA7:1FD0
-cs=0xaa7;eip=0x001fd2; 	R(OUT(dx, al));	// 23557 out     dx, al ;~ 0AA7:1FD2
+cs=0xaa7;eip=0x001fd2; 	S(OUT(dx, al));	// 23557 out     dx, al ;~ 0AA7:1FD2
 cs=0xaa7;eip=0x001fd3; 	J({;});	// 23558 jmp     short $+2 ;~ 0AA7:1FD3
 loc_1b025:
 	// 5841 
@@ -4077,7 +4085,7 @@ cs=0xaa7;eip=0x001fd5; 	T(OR(bh, bh));	// 23562 or      bh, bh ;~ 0AA7:1FD5
 cs=0xaa7;eip=0x001fd7; 	J(JNS(loc_1b014));	// 23563 jns     short loc_1B014 ;~ 0AA7:1FD7
 cs=0xaa7;eip=0x001fd9; 	T(MOV(dx, 0x3C8));	// 23564 mov     dx, 3C8h ;~ 0AA7:1FD9
 cs=0xaa7;eip=0x001fdc; 	T(MOV(al, 0x0FC));	// 23565 mov     al, 0FCh ; 'ü' ;~ 0AA7:1FDC
-cs=0xaa7;eip=0x001fde; 	R(OUT(dx, al));	// 23566 out     dx, al ;~ 0AA7:1FDE
+cs=0xaa7;eip=0x001fde; 	S(OUT(dx, al));	// 23566 out     dx, al ;~ 0AA7:1FDE
 cs=0xaa7;eip=0x001fdf; 	J({;});	// 23567 jmp     short $+2 ;~ 0AA7:1FDF
 loc_1b031:
 	// 5842 
@@ -4086,55 +4094,55 @@ loc_1b033:
 	// 5843 
 cs=0xaa7;eip=0x001fe3; 	T(INC(dx));	// 23575 inc     dx ;~ 0AA7:1FE3
 cs=0xaa7;eip=0x001fe4; 	T(XOR(al, al));	// 23576 xor     al, al ;~ 0AA7:1FE4
-cs=0xaa7;eip=0x001fe6; 	R(OUT(dx, al));	// 23577 out     dx, al ;~ 0AA7:1FE6
+cs=0xaa7;eip=0x001fe6; 	S(OUT(dx, al));	// 23577 out     dx, al ;~ 0AA7:1FE6
 cs=0xaa7;eip=0x001fe7; 	J({;});	// 23578 jmp     short $+2 ;~ 0AA7:1FE7
 loc_1b039:
 	// 5844 
-cs=0xaa7;eip=0x001fe9; 	R(OUT(dx, al));	// 23582 out     dx, al ;~ 0AA7:1FE9
+cs=0xaa7;eip=0x001fe9; 	S(OUT(dx, al));	// 23582 out     dx, al ;~ 0AA7:1FE9
 cs=0xaa7;eip=0x001fea; 	J({;});	// 23583 jmp     short $+2 ;~ 0AA7:1FEA
 loc_1b03c:
 	// 5845 
-cs=0xaa7;eip=0x001fec; 	R(OUT(dx, al));	// 23587 out     dx, al ;~ 0AA7:1FEC
+cs=0xaa7;eip=0x001fec; 	S(OUT(dx, al));	// 23587 out     dx, al ;~ 0AA7:1FEC
 cs=0xaa7;eip=0x001fed; 	J({;});	// 23588 jmp     short $+2 ;~ 0AA7:1FED
 loc_1b03f:
 	// 5846 
 cs=0xaa7;eip=0x001fef; 	T(MOV(al, 0x10));	// 23592 mov     al, 10h ;~ 0AA7:1FEF
-cs=0xaa7;eip=0x001ff1; 	R(OUT(dx, al));	// 23593 out     dx, al ;~ 0AA7:1FF1
+cs=0xaa7;eip=0x001ff1; 	S(OUT(dx, al));	// 23593 out     dx, al ;~ 0AA7:1FF1
 cs=0xaa7;eip=0x001ff2; 	J({;});	// 23594 jmp     short $+2 ;~ 0AA7:1FF2
 loc_1b044:
 	// 5847 
-cs=0xaa7;eip=0x001ff4; 	R(OUT(dx, al));	// 23598 out     dx, al ;~ 0AA7:1FF4
+cs=0xaa7;eip=0x001ff4; 	S(OUT(dx, al));	// 23598 out     dx, al ;~ 0AA7:1FF4
 cs=0xaa7;eip=0x001ff5; 	J({;});	// 23599 jmp     short $+2 ;~ 0AA7:1FF5
 loc_1b047:
 	// 5848 
 cs=0xaa7;eip=0x001ff7; 	T(MOV(al, 0x30));	// 23603 mov     al, 30h ; '0' ;~ 0AA7:1FF7
-cs=0xaa7;eip=0x001ff9; 	R(OUT(dx, al));	// 23604 out     dx, al ;~ 0AA7:1FF9
+cs=0xaa7;eip=0x001ff9; 	S(OUT(dx, al));	// 23604 out     dx, al ;~ 0AA7:1FF9
 cs=0xaa7;eip=0x001ffa; 	J({;});	// 23605 jmp     short $+2 ;~ 0AA7:1FFA
 loc_1b04c:
 	// 5849 
 cs=0xaa7;eip=0x001ffc; 	T(MOV(al, 0x10));	// 23609 mov     al, 10h ;~ 0AA7:1FFC
-cs=0xaa7;eip=0x001ffe; 	R(OUT(dx, al));	// 23610 out     dx, al ;~ 0AA7:1FFE
+cs=0xaa7;eip=0x001ffe; 	S(OUT(dx, al));	// 23610 out     dx, al ;~ 0AA7:1FFE
 cs=0xaa7;eip=0x001fff; 	J({;});	// 23611 jmp     short $+2 ;~ 0AA7:1FFF
 loc_1b051:
 	// 5850 
-cs=0xaa7;eip=0x002001; 	R(OUT(dx, al));	// 23615 out     dx, al ;~ 0AA7:2001
+cs=0xaa7;eip=0x002001; 	S(OUT(dx, al));	// 23615 out     dx, al ;~ 0AA7:2001
 cs=0xaa7;eip=0x002002; 	J({;});	// 23616 jmp     short $+2 ;~ 0AA7:2002
 loc_1b054:
 	// 5851 
-cs=0xaa7;eip=0x002004; 	R(OUT(dx, al));	// 23620 out     dx, al ;~ 0AA7:2004
+cs=0xaa7;eip=0x002004; 	S(OUT(dx, al));	// 23620 out     dx, al ;~ 0AA7:2004
 cs=0xaa7;eip=0x002005; 	J({;});	// 23621 jmp     short $+2 ;~ 0AA7:2005
 loc_1b057:
 	// 5852 
 cs=0xaa7;eip=0x002007; 	T(MOV(al, 0x3F));	// 23625 mov     al, 3Fh ; '?' ;~ 0AA7:2007
-cs=0xaa7;eip=0x002009; 	R(OUT(dx, al));	// 23626 out     dx, al ;~ 0AA7:2009
+cs=0xaa7;eip=0x002009; 	S(OUT(dx, al));	// 23626 out     dx, al ;~ 0AA7:2009
 cs=0xaa7;eip=0x00200a; 	J({;});	// 23627 jmp     short $+2 ;~ 0AA7:200A
 loc_1b05c:
 	// 5853 
-cs=0xaa7;eip=0x00200c; 	R(OUT(dx, al));	// 23631 out     dx, al ;~ 0AA7:200C
+cs=0xaa7;eip=0x00200c; 	S(OUT(dx, al));	// 23631 out     dx, al ;~ 0AA7:200C
 cs=0xaa7;eip=0x00200d; 	J({;});	// 23632 jmp     short $+2 ;~ 0AA7:200D
 loc_1b05f:
 	// 5854 
-cs=0xaa7;eip=0x00200f; 	R(OUT(dx, al));	// 23636 out     dx, al ;~ 0AA7:200F
+cs=0xaa7;eip=0x00200f; 	S(OUT(dx, al));	// 23636 out     dx, al ;~ 0AA7:200F
 cs=0xaa7;eip=0x002010; 	J(CALL(_graph_1c070,0));	// 23637 call    _graph_1C070 ;~ 0AA7:2010
 cs=0xaa7;eip=0x002013; 	T(MOV(ax, ds));	// 23638 mov     ax, ds ;~ 0AA7:2013
 cs=0xaa7;eip=0x002015; 	T(MOV(es, ax));	// 23639 mov     es, ax ;~ 0AA7:2015
@@ -4978,19 +4986,19 @@ cs=0xaa7;eip=0x001481; 	J(JNZ(loc_1a4d5));	// 22104 jnz     short loc_1A4D5 ;~ 0
 cs=0xaa7;eip=0x001483; 	T(OR(al, 0x80));	// 22105 or      al, 80h ;~ 0AA7:1483
 loc_1a4d5:
 	// 5737 
-cs=0xaa7;eip=0x001485; 	R(_INT(0x10));	// 22108 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1485
+cs=0xaa7;eip=0x001485; 	S(_INT(0x10));	// 22108 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:1485
 cs=0xaa7;eip=0x001487; 	J(CALL(_txt_blinkingoff,0));	// 22110 call    _txt_blinkingoff ;~ 0AA7:1487
 cs=0xaa7;eip=0x00148a; 	T(CMP(byte_1de86, 1));	// 22111 cmp     byte_1DE86, 1 ;~ 0AA7:148A
 cs=0xaa7;eip=0x00148f; 	J(JZ(loc_1a4e8));	// 22112 jz      short loc_1A4E8 ;~ 0AA7:148F
 cs=0xaa7;eip=0x001491; 	T(MOV(ax, 0x1111));	// 22113 mov     ax, 1111h ;~ 0AA7:1491
 cs=0xaa7;eip=0x001494; 	T(XOR(bl, bl));	// 22114 xor     bl, bl ;~ 0AA7:1494
-cs=0xaa7;eip=0x001496; 	R(_INT(0x10));	// 22115 int     10h             ; - VIDEO - TEXT-MODE CHARACTER GENERATOR FUNCTIONS (PS, EGA, VGA) ;~ 0AA7:1496
+cs=0xaa7;eip=0x001496; 	S(_INT(0x10));	// 22115 int     10h             ; - VIDEO - TEXT-MODE CHARACTER GENERATOR FUNCTIONS (PS, EGA, VGA) ;~ 0AA7:1496
 loc_1a4e8:
 	// 5738 
 cs=0xaa7;eip=0x001498; 	T(MOV(dx, 0x1D00));	// 22122 mov     dx, 1D00h ;~ 0AA7:1498
 cs=0xaa7;eip=0x00149b; 	T(XOR(bh, bh));	// 22123 xor     bh, bh ;~ 0AA7:149B
 cs=0xaa7;eip=0x00149d; 	T(MOV(ah, 2));	// 22124 mov     ah, 2 ;~ 0AA7:149D
-cs=0xaa7;eip=0x00149f; 	R(_INT(0x10));	// 22125 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:149F
+cs=0xaa7;eip=0x00149f; 	S(_INT(0x10));	// 22125 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:149F
 locret_1a4f1:
 	// 5739 
 cs=0xaa7;eip=0x0014a1; 	J(RETN(0));	// 22131 retn ;~ 0AA7:14A1
@@ -5300,7 +5308,7 @@ cs=0xaa7;eip=0x001b70; 	J(RETN(0));	// 22896 retn ;~ 0AA7:1B70
     _begin:
 cs=0xaa7;eip=0x001ca6; 	X(MOV(*(dw*)(raddr(ds,di)), 0x7F02));	// 23028 mov     word ptr [di], 7F02h ;~ 0AA7:1CA6
 cs=0xaa7;eip=0x001caa; 	T(ADD(di, 2));	// 23029 add     di, 2 ;~ 0AA7:1CAA
-	R(return _my_u32toa_fill(0, _state););
+	return _my_u32toa_fill(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -5379,7 +5387,7 @@ cs=0xaa7;eip=0x001dca; 	T(MOV(dx, offset(dseg,_buffer_1)));	// 23219 mov     dx,
 cs=0xaa7;eip=0x001dcd; 	T(MOV(cx, 0x5000));	// 23220 mov     cx, 5000h ;~ 0AA7:1DCD
 cs=0xaa7;eip=0x001dd0; 	T(MOV(bx, _fhandle_1de68));	// 23221 mov     bx, _fhandle_1DE68 ;~ 0AA7:1DD0
 cs=0xaa7;eip=0x001dd4; 	T(MOV(ah, 0x3F));	// 23222 mov     ah, 3Fh ;~ 0AA7:1DD4
-cs=0xaa7;eip=0x001dd6; 	R(_INT(0x21));	// 23223 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:1DD6
+cs=0xaa7;eip=0x001dd6; 	S(_INT(0x21));	// 23223 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:1DD6
 cs=0xaa7;eip=0x001dd8; 	X(POPA);	// 23226 popa ;~ 0AA7:1DD8
 cs=0xaa7;eip=0x001dd9; 	T(MOV(si, offset(dseg,_buffer_1)));	// 23227 mov     si, offset _buffer_1 ; 2800h ;~ 0AA7:1DD9
 cs=0xaa7;eip=0x001ddc; 	J(RETN(0));	// 23228 retn ;~ 0AA7:1DDC
@@ -6479,7 +6487,7 @@ loc_1bf62:
 cs=0xaa7;eip=0x002f12; 	T(MOV(di, *(dw*)(raddr(ds,si))));	// 25331 mov     di, [si] ;~ 0AA7:2F12
 cs=0xaa7;eip=0x002f14; 	T(ADD(di, bp));	// 25332 add     di, bp ;~ 0AA7:2F14
 cs=0xaa7;eip=0x002f16; 	T(ADD(si, 2));	// 25333 add     si, 2 ;~ 0AA7:2F16
-	R(JMP(_text_1bf69));_text_1bf69:
+	S(JMP(_text_1bf69));_text_1bf69:
 	// 25340 
 cs=0xaa7;eip=0x002f19; 	T(MOV(al, *(raddr(ds,si))));	// 25345 mov     al, [si] ;~ 0AA7:2F19
 cs=0xaa7;eip=0x002f1b; 	T(INC(si));	// 25346 inc     si              ; str ;~ 0AA7:2F1B
@@ -6532,7 +6540,7 @@ seg001_2f36_proc:
 loc_1bf86:
 	// 5984 
 cs=0xaa7;eip=0x002f36; 	X(STOSW);	// 25373 stosw ;~ 0AA7:2F36
-	R(JMP(_put_message));_put_message:
+	S(JMP(_put_message));_put_message:
 	// 25380 
 cs=0xaa7;eip=0x002f37; 	T(CLD);	// 25385 cld ;~ 0AA7:2F37
 cs=0xaa7;eip=0x002f38; 	T(LODSB);	// 25386 lodsb ;~ 0AA7:2F38
@@ -6596,14 +6604,14 @@ cs=0xaa7;eip=0x002f46; 	J(RETN(0));	// 25403 retn ;~ 0AA7:2F46
     _begin:
 cs=0xaa7;eip=0x002f47; 	T(MOV(dx, offset(dseg,_siplay_cfg)));	// 25411 mov     dx, offset _sIplay_cfg ; "C:\\IPLAY.CFG" ;~ 0AA7:2F47
 cs=0xaa7;eip=0x002f4a; 	T(MOV(ax, 0x3D00));	// 25412 mov     ax, 3D00h ;~ 0AA7:2F4A
-cs=0xaa7;eip=0x002f4d; 	R(_INT(0x21));	// 25413 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:2F4D
+cs=0xaa7;eip=0x002f4d; 	S(_INT(0x21));	// 25413 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 0AA7:2F4D
 cs=0xaa7;eip=0x002f4f; 	J(JC(loc_1bfe3));	// 25417 jb      short loc_1BFE3 ;~ 0AA7:2F4F
 cs=0xaa7;eip=0x002f51; 	T(MOV(bx, ax));	// 25418 mov     bx, ax ;~ 0AA7:2F51
 cs=0xaa7;eip=0x002f53; 	T(MOV(dx, offset(dseg,_cfg_buffer)));	// 25419 mov     dx, offset _cfg_buffer ;~ 0AA7:2F53
 cs=0xaa7;eip=0x002f56; 	T(MOV(cx, 4));	// 25420 mov     cx, 4 ;~ 0AA7:2F56
 cs=0xaa7;eip=0x002f59; 	T(MOV(ah, 0x3F));	// 25421 mov     ah, 3Fh ; '?' ;~ 0AA7:2F59
 cs=0xaa7;eip=0x002f5b; 	X(PUSH(bx));	// 25422 push    bx ;~ 0AA7:2F5B
-cs=0xaa7;eip=0x002f5c; 	R(_INT(0x21));	// 25423 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:2F5C
+cs=0xaa7;eip=0x002f5c; 	S(_INT(0x21));	// 25423 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:2F5C
 cs=0xaa7;eip=0x002f5e; 	X(POP(bx));	// 25426 pop     bx ;~ 0AA7:2F5E
 cs=0xaa7;eip=0x002f5f; 	J(JC(loc_1bfc9));	// 25427 jb      short loc_1BFC9 ;~ 0AA7:2F5F
 cs=0xaa7;eip=0x002f61; 	T(MOV(eax, dword_1dcec));	// 25428 mov     eax, dword_1DCEC ;~ 0AA7:2F61
@@ -6614,13 +6622,13 @@ cs=0xaa7;eip=0x002f6d; 	T(MOV(dx, offset(dseg,_snd_card_type)));	// 25432 mov   
 cs=0xaa7;eip=0x002f70; 	T(MOV(cx, 0x0C));	// 25433 mov     cx, 0Ch ;~ 0AA7:2F70
 cs=0xaa7;eip=0x002f73; 	T(MOV(ah, 0x3F));	// 25434 mov     ah, 3Fh ; '?' ;~ 0AA7:2F73
 cs=0xaa7;eip=0x002f75; 	X(PUSH(bx));	// 25435 push    bx ;~ 0AA7:2F75
-cs=0xaa7;eip=0x002f76; 	R(_INT(0x21));	// 25436 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:2F76
+cs=0xaa7;eip=0x002f76; 	S(_INT(0x21));	// 25436 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 0AA7:2F76
 cs=0xaa7;eip=0x002f78; 	X(POP(bx));	// 25439 pop     bx ;~ 0AA7:2F78
 loc_1bfc9:
 	// 5985 
 cs=0xaa7;eip=0x002f79; 	X(PUSHF);	// 25443 pushf ;~ 0AA7:2F79
 cs=0xaa7;eip=0x002f7a; 	T(MOV(ah, 0x3E));	// 25444 mov     ah, 3Eh ;~ 0AA7:2F7A
-cs=0xaa7;eip=0x002f7c; 	R(_INT(0x21));	// 25445 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:2F7C
+cs=0xaa7;eip=0x002f7c; 	S(_INT(0x21));	// 25445 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 0AA7:2F7C
 cs=0xaa7;eip=0x002f7e; 	X(POPF);	// 25447 popf ;~ 0AA7:2F7E
 cs=0xaa7;eip=0x002f7f; 	J(JC(loc_1bfe3));	// 25448 jb      short loc_1BFE3 ;~ 0AA7:2F7F
 cs=0xaa7;eip=0x002f81; 	T(MOV(si, offset(dseg,_snd_card_type)));	// 25449 mov     si, offset _snd_card_type ;~ 0AA7:2F81
@@ -6640,10 +6648,11 @@ cs=0xaa7;eip=0x002f93; 	T(MOV(ax, cs));	// 25464 mov     ax, cs ;~ 0AA7:2F93
 cs=0xaa7;eip=0x002f95; 	T(MOV(ds, ax));	// 25465 mov     ds, ax ;~ 0AA7:2F95
 cs=0xaa7;eip=0x002f97; 	T(MOV(dx, offset(seg001,_aconfigfilenotf)));	// 25467 mov     dx, offset _aConfigFileNotF ; "Config file not found. Run ISETUP first"... ;~ 0AA7:2F97
 cs=0xaa7;eip=0x002f9a; 	T(MOV(ah, 9));	// 25468 mov     ah, 9 ;~ 0AA7:2F9A
-cs=0xaa7;eip=0x002f9c; 	R(_INT(0x21));	// 25469 int     21h             ; DOS - PRINT STRING ;~ 0AA7:2F9C
+cs=0xaa7;eip=0x002f9c; 	S(_INT(0x21));	// 25469 int     21h             ; DOS - PRINT STRING ;~ 0AA7:2F9C
 cs=0xaa7;eip=0x002f9e; 	T(MOV(ax, 0x4C01));	// 25471 mov     ax, 4C01h ;~ 0AA7:2F9E
-cs=0xaa7;eip=0x002fa1; 	R(_INT(0x21));	// 25472 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:2FA1
-	R(return _getexename(0, _state););
+cs=0xaa7;eip=0x002fa1; 	S(_INT(0x21));	// 25472 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 0AA7:2FA1
+exit(1);
+	return _getexename(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -6730,12 +6739,12 @@ cs=0xaa7;eip=0x003001; 	J(RETN(0));	// 25516 retn ;~ 0AA7:3001
 cs=0xaa7;eip=0x003002; 	T(MOV(ah, al));	// 25524 mov     ah, al ;~ 0AA7:3002
 cs=0xaa7;eip=0x003004; 	T(MOV(dx, 0x3CE));	// 25525 mov     dx, 3CEh ;~ 0AA7:3004
 cs=0xaa7;eip=0x003007; 	T(MOV(al, 5));	// 25526 mov     al, 5 ;~ 0AA7:3007
-cs=0xaa7;eip=0x003009; 	R(OUT(dx, al));	// 25527 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:3009
+cs=0xaa7;eip=0x003009; 	S(OUT(dx, al));	// 25527 out     dx, al          ; EGA: graph 1 and 2 addr reg: ;~ 0AA7:3009
 cs=0xaa7;eip=0x00300a; 	T(INC(dl));	// 25534 inc     dl ;~ 0AA7:300A
-cs=0xaa7;eip=0x00300c; 	R(IN(al, dx));	// 25535 in      al, dx          ; EGA port: graphics controller data register ;~ 0AA7:300C
+cs=0xaa7;eip=0x00300c; 	S(IN(al, dx));	// 25535 in      al, dx          ; EGA port: graphics controller data register ;~ 0AA7:300C
 cs=0xaa7;eip=0x00300d; 	T(AND(al, 0x0FC));	// 25536 and     al, 0FCh ;~ 0AA7:300D
 cs=0xaa7;eip=0x00300f; 	T(OR(al, ah));	// 25537 or      al, ah ;~ 0AA7:300F
-cs=0xaa7;eip=0x003011; 	R(OUT(dx, al));	// 25538 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:3011
+cs=0xaa7;eip=0x003011; 	S(OUT(dx, al));	// 25538 out     dx, al          ; EGA port: graphics controller data register ;~ 0AA7:3011
 cs=0xaa7;eip=0x003012; 	J(RETN(0));	// 25539 retn ;~ 0AA7:3012
 
     assert(0);
@@ -6763,11 +6772,11 @@ cs=0xaa7;eip=0x003012; 	J(RETN(0));	// 25539 retn ;~ 0AA7:3012
     _begin:
 cs=0xaa7;eip=0x003013; 	T(MOV(dx, 0x3C4));	// 25548 mov     dx, 3C4h ;~ 0AA7:3013
 cs=0xaa7;eip=0x003016; 	T(MOV(al, 1));	// 25549 mov     al, 1 ;~ 0AA7:3016
-cs=0xaa7;eip=0x003018; 	R(OUT(dx, al));	// 25550 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:3018
+cs=0xaa7;eip=0x003018; 	S(OUT(dx, al));	// 25550 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:3018
 cs=0xaa7;eip=0x003019; 	T(INC(dl));	// 25556 inc     dl ;~ 0AA7:3019
-cs=0xaa7;eip=0x00301b; 	R(IN(al, dx));	// 25557 in      al, dx          ; EGA port: sequencer data register ;~ 0AA7:301B
+cs=0xaa7;eip=0x00301b; 	S(IN(al, dx));	// 25557 in      al, dx          ; EGA port: sequencer data register ;~ 0AA7:301B
 cs=0xaa7;eip=0x00301c; 	T(OR(al, 0x20));	// 25558 or      al, 100000b     ; 9 dots/char ;~ 0AA7:301C
-cs=0xaa7;eip=0x00301e; 	R(OUT(dx, al));	// 25564 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:301E
+cs=0xaa7;eip=0x00301e; 	S(OUT(dx, al));	// 25564 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:301E
 cs=0xaa7;eip=0x00301f; 	J(RETN(0));	// 25565 retn ;~ 0AA7:301F
 
     assert(0);
@@ -6795,11 +6804,11 @@ cs=0xaa7;eip=0x00301f; 	J(RETN(0));	// 25565 retn ;~ 0AA7:301F
     _begin:
 cs=0xaa7;eip=0x003020; 	T(MOV(dx, 0x3C4));	// 25574 mov     dx, 3C4h ;~ 0AA7:3020
 cs=0xaa7;eip=0x003023; 	T(MOV(al, 1));	// 25575 mov     al, 1 ;~ 0AA7:3023
-cs=0xaa7;eip=0x003025; 	R(OUT(dx, al));	// 25576 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:3025
+cs=0xaa7;eip=0x003025; 	S(OUT(dx, al));	// 25576 out     dx, al          ; EGA: sequencer address reg ;~ 0AA7:3025
 cs=0xaa7;eip=0x003026; 	T(INC(dl));	// 25582 inc     dl ;~ 0AA7:3026
-cs=0xaa7;eip=0x003028; 	R(IN(al, dx));	// 25583 in      al, dx          ; EGA port: sequencer data register ;~ 0AA7:3028
+cs=0xaa7;eip=0x003028; 	S(IN(al, dx));	// 25583 in      al, dx          ; EGA port: sequencer data register ;~ 0AA7:3028
 cs=0xaa7;eip=0x003029; 	T(AND(al, 0x0DF));	// 25584 and     al, 0DFh ;~ 0AA7:3029
-cs=0xaa7;eip=0x00302b; 	R(OUT(dx, al));	// 25585 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:302B
+cs=0xaa7;eip=0x00302b; 	S(OUT(dx, al));	// 25585 out     dx, al          ; EGA port: sequencer data register ;~ 0AA7:302B
 cs=0xaa7;eip=0x00302c; 	J(RETN(0));	// 25586 retn ;~ 0AA7:302C
 
     assert(0);
@@ -6890,7 +6899,7 @@ cs=0xaa7;eip=0x0030f1; 	J(RETN(0));	// 25741 retn ;~ 0AA7:30F1
     seg001_30f2_proc:
     _begin:
 cs=0xaa7;eip=0x0030f2; 	T(XCHG(bx, bx));	// 25745 xchg    bx, bx ;~ 0AA7:30F2
-	R(return _group32(m2c::k_int24, _state););
+	return _group32(m2c::k_int24, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -6932,11 +6941,12 @@ loc_1c19c:
 cs=0xaa7;eip=0x00314c; 	X(POPF);	// 25827 popf ;~ 0AA7:314C
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x00314d; __disp=*(dd*)(((db*)&_int1avect));
+printf("int1a\n");
 	J(return __dispatch_call(__disp, _state););	// 25828 jmp     cs:_int1Avect ;~ 0AA7:314D
 _dosexec:
 	// 25849 
 cs=0xaa7;eip=0x003169; 	T(MOV(ax, 3));	// 25851 mov     ax, 3 ;~ 0AA7:3169
-cs=0xaa7;eip=0x00316c; 	R(_INT(0x10));	// 25852 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:316C
+cs=0xaa7;eip=0x00316c; 	S(_INT(0x10));	// 25852 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 0AA7:316C
 cs=0xaa7;eip=0x00316e; 	J(CALL(_txt_enableblink,0));	// 25854 call    _txt_enableblink ;~ 0AA7:316E
 cs=0xaa7;eip=0x003171; 	T(MOV(cx, 0));	// 25855 mov     cx, 0 ;~ 0AA7:3171
 cs=0xaa7;eip=0x003174; 	T(MOV(dx, 0x94F));	// 25856 mov     dx, 94Fh ;~ 0AA7:3174
@@ -6950,11 +6960,11 @@ cs=0xaa7;eip=0x003189; 	J(CALL(_write_scr,0));	// 25863 call    _write_scr ;~ 0A
 cs=0xaa7;eip=0x00318c; 	T(MOV(dx, 0x0A00));	// 25864 mov     dx, 0A00h ;~ 0AA7:318C
 cs=0xaa7;eip=0x00318f; 	T(XOR(bh, bh));	// 25865 xor     bh, bh ;~ 0AA7:318F
 cs=0xaa7;eip=0x003191; 	T(MOV(ah, 2));	// 25866 mov     ah, 2 ;~ 0AA7:3191
-cs=0xaa7;eip=0x003193; 	R(_INT(0x10));	// 25867 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:3193
+cs=0xaa7;eip=0x003193; 	S(_INT(0x10));	// 25867 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 0AA7:3193
 cs=0xaa7;eip=0x003195; 	T(TEST(byte_1de78, 2));	// 25870 test    byte_1DE78, 2 ;~ 0AA7:3195
 cs=0xaa7;eip=0x00319a; 	J(JZ(loc_1c209));	// 25871 jz      short loc_1C209 ;~ 0AA7:319A
 cs=0xaa7;eip=0x00319c; 	T(MOV(ax, 0x351A));	// 25872 mov     ax, 351Ah ;~ 0AA7:319C
-cs=0xaa7;eip=0x00319f; 	R(_INT(0x21));	// 25873 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:319F
+cs=0xaa7;eip=0x00319f; 	S(_INT(0x21));	// 25873 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 0AA7:319F
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x0031a1; 	X(MOV(*(dw*)(((db*)&_int1avect)), bx));	// 25876 mov     word ptr cs:_int1Avect, bx ;~ 0AA7:31A1
 	cs=seg_offset(seg001);
@@ -6964,7 +6974,7 @@ cs=0xaa7;eip=0x0031ac; 	T(MOV(ax, cs));	// 25879 mov     ax, cs ;~ 0AA7:31AC
 cs=0xaa7;eip=0x0031ae; 	T(MOV(ds, ax));	// 25880 mov     ds, ax ;~ 0AA7:31AE
 cs=0xaa7;eip=0x0031b0; 	T(MOV(dx, m2c::k_int1a_timer));	// 25882 mov     dx, offset _int1a_timer ;~ 0AA7:31B0
 cs=0xaa7;eip=0x0031b3; 	T(MOV(ax, 0x251A));	// 25883 mov     ax, 251Ah ;~ 0AA7:31B3
-cs=0xaa7;eip=0x0031b6; 	R(_INT(0x21));	// 25884 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:31B6
+cs=0xaa7;eip=0x0031b6; 	S(_INT(0x21));	// 25884 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:31B6
 cs=0xaa7;eip=0x0031b8; 	X(POP(ds));	// 25887 pop     ds ;~ 0AA7:31B8
 loc_1c209:
 	// 6008 
@@ -6986,7 +6996,7 @@ cs=0xaa7;eip=0x0031df; 	T(MOV(es, ax));	// 25904 mov     es, ax ;~ 0AA7:31DF
 cs=0xaa7;eip=0x0031e1; 	T(MOV(bx, offset(dseg,word_24445)));	// 25906 mov     bx, offset word_24445 ;~ 0AA7:31E1
 cs=0xaa7;eip=0x0031e4; 	T(MOV(ds, word_24445));	// 25907 mov     ds, word_24445 ;~ 0AA7:31E4
 cs=0xaa7;eip=0x0031e8; 	T(MOV(ax, 0x4B00));	// 25908 mov     ax, 4B00h ;~ 0AA7:31E8
-cs=0xaa7;eip=0x0031eb; 	R(_INT(0x21));	// 25909 int     21h             ; DOS - 2+ - LOAD OR EXECUTE (EXEC) ;~ 0AA7:31EB
+cs=0xaa7;eip=0x0031eb; 	S(_INT(0x21));	// 25909 int     21h             ; DOS - 2+ - LOAD OR EXECUTE (EXEC) ;~ 0AA7:31EB
 cs=0xaa7;eip=0x0031ed; 	X(POP(ds));	// 25913 pop     ds ;~ 0AA7:31ED
 loc_1c23e:
 	// 6009 
@@ -7000,7 +7010,7 @@ cs=0xaa7;eip=0x003200; 	X(PUSH(ds));	// 25921 push    ds ;~ 0AA7:3200
 	cs=seg_offset(seg001);
 cs=0xaa7;eip=0x003201; 	T(LDS(dx, *(dd*)(((db*)&_int1avect))));	// 25922 lds     dx, cs:_int1Avect ;~ 0AA7:3201
 cs=0xaa7;eip=0x003206; 	T(MOV(ax, 0x251A));	// 25923 mov     ax, 251Ah ;~ 0AA7:3206
-cs=0xaa7;eip=0x003209; 	R(_INT(0x21));	// 25924 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:3209
+cs=0xaa7;eip=0x003209; 	S(_INT(0x21));	// 25924 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 0AA7:3209
 cs=0xaa7;eip=0x00320b; 	X(POP(ds));	// 25927 pop     ds ;~ 0AA7:320B
 loc_1c25c:
 	// 6010 
@@ -7038,7 +7048,7 @@ cs=0xaa7;eip=0x003217; 	J(RETN(0));	// 25933 retn ;~ 0AA7:3217
     seg001_3152_proc:
     _begin:
 cs=0xaa7;eip=0x003152; 	T(XCHG(bx, bx));	// 25832 xchg    bx, bx ;~ 0AA7:3152
-	R(return _group39(m2c::k_dosexec, _state););
+	return _group39(m2c::k_dosexec, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7148,11 +7158,11 @@ cs=0xaa7;eip=0x00327a; 	T(SUB(di, si));	// 26005 sub     di, si ;~ 0AA7:327A
 cs=0xaa7;eip=0x00327c; 	X(MOV(word_1de4c, di));	// 26006 mov     word_1DE4C, di ;~ 0AA7:327C
 cs=0xaa7;eip=0x003280; 	T(MOV(dx, offset(dseg,_buffer_1dbec)));	// 26007 mov     dx, offset _buffer_1DBEC ;~ 0AA7:3280
 cs=0xaa7;eip=0x003283; 	T(MOV(ah, 0x1A));	// 26008 mov     ah, 1Ah ;~ 0AA7:3283
-cs=0xaa7;eip=0x003285; 	R(_INT(0x21));	// 26009 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 0AA7:3285
+cs=0xaa7;eip=0x003285; 	S(_INT(0x21));	// 26009 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 0AA7:3285
 cs=0xaa7;eip=0x003287; 	T(MOV(dx, offset(dseg,_buffer_1db6c)));	// 26011 mov     dx, offset _buffer_1DB6C ;~ 0AA7:3287
 cs=0xaa7;eip=0x00328a; 	T(MOV(cx, word_1de4e));	// 26012 mov     cx, word_1DE4E ;~ 0AA7:328A
 cs=0xaa7;eip=0x00328e; 	T(MOV(ah, 0x4E));	// 26013 mov     ah, 4Eh ;~ 0AA7:328E
-cs=0xaa7;eip=0x003290; 	R(_INT(0x21));	// 26014 int     21h             ; DOS - 2+ - FIND FIRST ASCIZ (FINDFIRST) ;~ 0AA7:3290
+cs=0xaa7;eip=0x003290; 	S(_INT(0x21));	// 26014 int     21h             ; DOS - 2+ - FIND FIRST ASCIZ (FINDFIRST) ;~ 0AA7:3290
 cs=0xaa7;eip=0x003292; 	J(JNC(loc_1c309));	// 26018 jnb     short loc_1C309 ;~ 0AA7:3292
 cs=0xaa7;eip=0x003294; 	T(MOV(si, offset(dseg,_a_mod_nst_669_s)));	// 26019 mov     si, offset _a_mod_nst_669_s ; ".MOD.NST.669.STM.S3M.MTM.PSM.WOW.INR.FA"... ;~ 0AA7:3294
 loc_1c2e7:
@@ -7167,7 +7177,7 @@ cs=0xaa7;eip=0x0032aa; 	T(ADD(si, 4));	// 26028 add     si, 4 ;~ 0AA7:32AA
 cs=0xaa7;eip=0x0032ad; 	T(MOV(dx, offset(dseg,_buffer_1db6c)));	// 26029 mov     dx, offset _buffer_1DB6C ;~ 0AA7:32AD
 cs=0xaa7;eip=0x0032b0; 	T(MOV(cx, 2));	// 26030 mov     cx, 2 ;~ 0AA7:32B0
 cs=0xaa7;eip=0x0032b3; 	T(MOV(ah, 0x4E));	// 26031 mov     ah, 4Eh ;~ 0AA7:32B3
-cs=0xaa7;eip=0x0032b5; 	R(_INT(0x21));	// 26032 int     21h             ; DOS - 2+ - FIND FIRST ASCIZ (FINDFIRST) ;~ 0AA7:32B5
+cs=0xaa7;eip=0x0032b5; 	S(_INT(0x21));	// 26032 int     21h             ; DOS - 2+ - FIND FIRST ASCIZ (FINDFIRST) ;~ 0AA7:32B5
 cs=0xaa7;eip=0x0032b7; 	J(JC(loc_1c2e7));	// 26036 jb      short loc_1C2E7 ;~ 0AA7:32B7
 loc_1c309:
 	// 6018 
@@ -7194,9 +7204,9 @@ _dosfindnext:
 	// 26066 
 cs=0xaa7;eip=0x0032e2; 	T(MOV(dx, offset(dseg,_buffer_1dbec)));	// 26068 mov     dx, offset _buffer_1DBEC ;~ 0AA7:32E2
 cs=0xaa7;eip=0x0032e5; 	T(MOV(ah, 0x1A));	// 26069 mov     ah, 1Ah ;~ 0AA7:32E5
-cs=0xaa7;eip=0x0032e7; 	R(_INT(0x21));	// 26070 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 0AA7:32E7
+cs=0xaa7;eip=0x0032e7; 	S(_INT(0x21));	// 26070 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 0AA7:32E7
 cs=0xaa7;eip=0x0032e9; 	T(MOV(ah, 0x4F));	// 26072 mov     ah, 4Fh ;~ 0AA7:32E9
-cs=0xaa7;eip=0x0032eb; 	R(_INT(0x21));	// 26073 int     21h             ; DOS - 2+ - FIND NEXT ASCIZ (FINDNEXT) ;~ 0AA7:32EB
+cs=0xaa7;eip=0x0032eb; 	S(_INT(0x21));	// 26073 int     21h             ; DOS - 2+ - FIND NEXT ASCIZ (FINDNEXT) ;~ 0AA7:32EB
 cs=0xaa7;eip=0x0032ed; 	J(JNC(loc_1c309));	// 26076 jnb     short loc_1C309 ;~ 0AA7:32ED
 cs=0xaa7;eip=0x0032ef; 	J(RETN(0));	// 26077 retn ;~ 0AA7:32EF
 
@@ -7372,7 +7382,7 @@ cs=0xaa7;eip=0x0033de; 	J(RETN(0));	// 26194 retn ;~ 0AA7:33DE
     _rereadrtc_settmr:
     _begin:
 cs=0xaa7;eip=0x003458; 	T(MOV(ah, 2));	// 26245 mov     ah, 2 ;~ 0AA7:3458
-cs=0xaa7;eip=0x00345a; 	R(_INT(0x1A));	// 26246 int     1Ah             ; CLOCK - READ REAL TIME CLOCK (AT,XT286,CONV,PS) ;~ 0AA7:345A
+cs=0xaa7;eip=0x00345a; 	S(_INT(0x1A));	// 26246 int     1Ah             ; CLOCK - READ REAL TIME CLOCK (AT,XT286,CONV,PS) ;~ 0AA7:345A
 cs=0xaa7;eip=0x00345c; 	T(XOR(eax, eax));	// 26250 xor     eax, eax ;~ 0AA7:345C
 cs=0xaa7;eip=0x00345f; 	T(MOV(al, dh));	// 26251 mov     al, dh ;~ 0AA7:345F
 cs=0xaa7;eip=0x003461; 	T(MOV(ah, al));	// 26252 mov     ah, al ;~ 0AA7:3461
@@ -7475,7 +7485,7 @@ cs=0xaa7;eip=0x0034d1; 	J(RETN(0));	// 26306 retn ;~ 0AA7:34D1
     _begin:
 cs=0xaa7;eip=0x0034d2; 	T(XOR(bl, bl));	// 26315 xor     bl, bl ;~ 0AA7:34D2
 cs=0xaa7;eip=0x0034d4; 	T(MOV(ax, 0x1003));	// 26316 mov     ax, 1003h ;~ 0AA7:34D4
-cs=0xaa7;eip=0x0034d7; 	R(_INT(0x10));	// 26317 int     10h             ; - VIDEO - TOGGLE INTENSITY/BLINKING BIT (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:34D7
+cs=0xaa7;eip=0x0034d7; 	S(_INT(0x10));	// 26317 int     10h             ; - VIDEO - TOGGLE INTENSITY/BLINKING BIT (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:34D7
 cs=0xaa7;eip=0x0034d9; 	J(RETN(0));	// 26320 retn ;~ 0AA7:34D9
 
     assert(0);
@@ -7503,7 +7513,7 @@ cs=0xaa7;eip=0x0034d9; 	J(RETN(0));	// 26320 retn ;~ 0AA7:34D9
     _begin:
 cs=0xaa7;eip=0x0034da; 	T(MOV(bl, 1));	// 26329 mov     bl, 1 ;~ 0AA7:34DA
 cs=0xaa7;eip=0x0034dc; 	T(MOV(ax, 0x1003));	// 26330 mov     ax, 1003h ;~ 0AA7:34DC
-cs=0xaa7;eip=0x0034df; 	R(_INT(0x10));	// 26331 int     10h             ; - VIDEO - TOGGLE INTENSITY/BLINKING BIT (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:34DF
+cs=0xaa7;eip=0x0034df; 	S(_INT(0x10));	// 26331 int     10h             ; - VIDEO - TOGGLE INTENSITY/BLINKING BIT (Jr, PS, TANDY 1000, EGA, VGA) ;~ 0AA7:34DF
 cs=0xaa7;eip=0x0034e1; 	J(RETN(0));	// 26334 retn ;~ 0AA7:34E1
 
     assert(0);
@@ -7532,7 +7542,7 @@ cs=0xaa7;eip=0x0034e1; 	J(RETN(0));	// 26334 retn ;~ 0AA7:34E1
 cs=0xaa7;eip=0x0034e2; 	T(ROR(eax, 0x10));	// 26342 ror     eax, 10h ;~ 0AA7:34E2
 cs=0xaa7;eip=0x0034e6; 	J(CALL(_my_u16tox,0));	// 26343 call    _my_u16tox ;~ 0AA7:34E6
 cs=0xaa7;eip=0x0034e9; 	T(ROR(eax, 0x10));	// 26344 ror     eax, 10h ;~ 0AA7:34E9
-	R(return _my_u16tox(0, _state););
+	return _my_u16tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7559,7 +7569,7 @@ cs=0xaa7;eip=0x0034e9; 	T(ROR(eax, 0x10));	// 26344 ror     eax, 10h ;~ 0AA7:34E
 cs=0xaa7;eip=0x0034ed; 	T(XCHG(al, ah));	// 26353 xchg    al, ah ;~ 0AA7:34ED
 cs=0xaa7;eip=0x0034ef; 	J(CALL(_my_u8tox,0));	// 26354 call    _my_u8tox ;~ 0AA7:34EF
 cs=0xaa7;eip=0x0034f2; 	T(MOV(al, ah));	// 26355 mov     al, ah ;~ 0AA7:34F2
-	R(return _my_u8tox(0, _state););
+	return _my_u8tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7587,7 +7597,7 @@ cs=0xaa7;eip=0x0034f4; 	X(PUSH(ax));	// 26364 push    ax ;~ 0AA7:34F4
 cs=0xaa7;eip=0x0034f5; 	T(SHR(al, 4));	// 26365 shr     al, 4 ;~ 0AA7:34F5
 cs=0xaa7;eip=0x0034f8; 	J(CALL(_my_u4tox,0));	// 26366 call    _my_u4tox ;~ 0AA7:34F8
 cs=0xaa7;eip=0x0034fb; 	X(POP(ax));	// 26367 pop     ax ;~ 0AA7:34FB
-	R(return _my_u4tox(0, _state););
+	return _my_u4tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7667,7 +7677,7 @@ cs=0xaa7;eip=0x003524; 	T(XOR(cx, cx));	// 26432 xor     cx, cx ;~ 0AA7:3524
 _my_i32toa10_:
 	// 6040 
 cs=0xaa7;eip=0x003526; 	T(MOV(ebx, 10));	// 26436 mov     ebx, 10 ;~ 0AA7:3526
-	R(return _my_u32toa(0, _state););
+	return _my_u32toa(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7696,7 +7706,7 @@ cs=0xaa7;eip=0x003526; 	T(MOV(ebx, 10));	// 26436 mov     ebx, 10 ;~ 0AA7:3526
     _my_u8toa10:
     _begin:
 cs=0xaa7;eip=0x00351e; 	T(XOR(ah, ah));	// 26414 xor     ah, ah ;~ 0AA7:351E
-	R(return _my_u16toa10(0, _state););
+	return _my_u16toa10(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7721,7 +7731,7 @@ cs=0xaa7;eip=0x00351e; 	T(XOR(ah, ah));	// 26414 xor     ah, ah ;~ 0AA7:351E
     _my_u16toa10:
     _begin:
 cs=0xaa7;eip=0x003520; 	T(MOVZX(eax, ax));	// 26423 movzx   eax, ax ;~ 0AA7:3520
-	R(return _group41(m2c::k_my_u32toa10, _state););
+	return _group41(m2c::k_my_u32toa10, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -7755,7 +7765,7 @@ cs=0xaa7;eip=0x00353c; 	X(POP(edx));	// 26450 pop     edx ;~ 0AA7:353C
 loc_1c58e:
 	// 6041 
 cs=0xaa7;eip=0x00353e; 	T(OR(dl, '0'));	// 26453 or      dl, '0' ;~ 0AA7:353E
-	R(return _myputdigit(0, _state););
+	return _myputdigit(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -8232,11 +8242,11 @@ cs=0xaa7;eip=0x00367d; 	T(MOV(es, ax));	// 26748 mov     es, ax ;~ 0AA7:367D
 cs=0xaa7;eip=0x00367f; 	T(CMP(*(dd*)(raddr(es,0x0CC)), 0));	// 26750 cmp     dword ptr es:0CCh, 0 ;~ 0AA7:367F
 cs=0xaa7;eip=0x003686; 	J(JZ(loc_1c708));	// 26751 jz      short loc_1C708 ;~ 0AA7:3686
 cs=0xaa7;eip=0x003688; 	T(MOV(ax, 0x21));	// 26752 mov     ax, 21h ; '!' ;~ 0AA7:3688
-cs=0xaa7;eip=0x00368b; 	R(_INT(0x33));	// 26753 int     33h             ; - MS MOUSE - SOFTWARE RESET ;~ 0AA7:368B
+cs=0xaa7;eip=0x00368b; 	S(_INT(0x33));	// 26753 int     33h             ; - MS MOUSE - SOFTWARE RESET ;~ 0AA7:368B
 cs=0xaa7;eip=0x00368d; 	T(CMP(ax, 0x0FFFF));	// 26757 cmp     ax, 0FFFFh ;~ 0AA7:368D
 cs=0xaa7;eip=0x003690; 	J(JZ(loc_1c6ef));	// 26758 jz      short loc_1C6EF ;~ 0AA7:3690
 cs=0xaa7;eip=0x003692; 	T(XOR(ax, ax));	// 26759 xor     ax, ax ;~ 0AA7:3692
-cs=0xaa7;eip=0x003694; 	R(_INT(0x33));	// 26760 int     33h             ; - MS MOUSE - RESET DRIVER AND READ STATUS ;~ 0AA7:3694
+cs=0xaa7;eip=0x003694; 	S(_INT(0x33));	// 26760 int     33h             ; - MS MOUSE - RESET DRIVER AND READ STATUS ;~ 0AA7:3694
 cs=0xaa7;eip=0x003696; 	T(TEST(ax, ax));	// 26763 test    ax, ax ;~ 0AA7:3696
 cs=0xaa7;eip=0x003698; 	J(JZ(loc_1c708));	// 26764 jz      short loc_1C708 ;~ 0AA7:3698
 cs=0xaa7;eip=0x00369a; 	T(CMP(ax, 0x0FFFF));	// 26765 cmp     ax, 0FFFFh ;~ 0AA7:369A
@@ -8250,7 +8260,7 @@ cs=0xaa7;eip=0x0036a8; 	T(MOV(es, ax));	// 26772 mov     es, ax ;~ 0AA7:36A8
 cs=0xaa7;eip=0x0036aa; 	T(MOV(dx, m2c::kloc_1c72c));	// 26774 mov     dx, offset loc_1C72C ;~ 0AA7:36AA
 cs=0xaa7;eip=0x0036ad; 	T(MOV(cx, 0x1F));	// 26775 mov     cx, 1Fh ;~ 0AA7:36AD
 cs=0xaa7;eip=0x0036b0; 	T(MOV(ax, 0x0C));	// 26776 mov     ax, 0Ch ;~ 0AA7:36B0
-cs=0xaa7;eip=0x0036b3; 	R(_INT(0x33));	// 26777 int     33h             ; - MS MOUSE - DEFINE INTERRUPT SUBROUTINE PARAMETERS ;~ 0AA7:36B3
+cs=0xaa7;eip=0x0036b3; 	S(_INT(0x33));	// 26777 int     33h             ; - MS MOUSE - DEFINE INTERRUPT SUBROUTINE PARAMETERS ;~ 0AA7:36B3
 cs=0xaa7;eip=0x0036b5; 	X(POP(es));	// 26779 pop     es ;~ 0AA7:36B5
 cs=0xaa7;eip=0x0036b6; 	T(CLC);	// 26781 clc ;~ 0AA7:36B6
 cs=0xaa7;eip=0x0036b7; 	J(RETN(0));	// 26782 retn ;~ 0AA7:36B7
@@ -8306,7 +8316,7 @@ cs=0xaa7;eip=0x0036d0; 	T(XOR(dx, dx));	// 26802 xor     dx, dx ;~ 0AA7:36D0
 cs=0xaa7;eip=0x0036d2; 	T(MOV(es, dx));	// 26803 mov     es, dx ;~ 0AA7:36D2
 cs=0xaa7;eip=0x0036d4; 	T(MOV(cx, dx));	// 26805 mov     cx, dx ;~ 0AA7:36D4
 cs=0xaa7;eip=0x0036d6; 	T(MOV(ax, 0x0C));	// 26806 mov     ax, 0Ch ;~ 0AA7:36D6
-cs=0xaa7;eip=0x0036d9; 	R(_INT(0x33));	// 26807 int     33h             ; - MS MOUSE - DEFINE INTERRUPT SUBROUTINE PARAMETERS ;~ 0AA7:36D9
+cs=0xaa7;eip=0x0036d9; 	S(_INT(0x33));	// 26807 int     33h             ; - MS MOUSE - DEFINE INTERRUPT SUBROUTINE PARAMETERS ;~ 0AA7:36D9
 locret_1c72b:
 	// 6056 
 cs=0xaa7;eip=0x0036db; 	J(RETN(0));	// 26811 retn ;~ 0AA7:36DB
@@ -8406,7 +8416,7 @@ cs=0xaa7;eip=0x00371c; 	J(RETN(0));	// 26857 retn ;~ 0AA7:371C
 cs=0xaa7;eip=0x00371d; 	T(CMP(_mouse_exist_flag, 1));	// 26865 cmp     _mouse_exist_flag, 1 ;~ 0AA7:371D
 cs=0xaa7;eip=0x003722; 	J(JNZ(loc_1c783));	// 26866 jnz     short loc_1C783 ;~ 0AA7:3722
 cs=0xaa7;eip=0x003724; 	T(MOV(ax, 3));	// 26867 mov     ax, 3 ;~ 0AA7:3724
-cs=0xaa7;eip=0x003727; 	R(_INT(0x33));	// 26868 int     33h             ; - MS MOUSE - RETURN POSITION AND BUTTON STATUS ;~ 0AA7:3727
+cs=0xaa7;eip=0x003727; 	S(_INT(0x33));	// 26868 int     33h             ; - MS MOUSE - RETURN POSITION AND BUTTON STATUS ;~ 0AA7:3727
 cs=0xaa7;eip=0x003729; 	X(MOV(_mousecolumn, cx));	// 26870 mov     _mousecolumn, cx ;~ 0AA7:3729
 cs=0xaa7;eip=0x00372d; 	X(MOV(_mouserow, dx));	// 26871 mov     _mouserow, dx ;~ 0AA7:372D
 cs=0xaa7;eip=0x003731; 	T(CLC);	// 26872 clc ;~ 0AA7:3731
@@ -8448,7 +8458,7 @@ _mouse_showcur:
 cs=0xaa7;eip=0x00373b; 	T(CMP(_mouse_exist_flag, 1));	// 26889 cmp     _mouse_exist_flag, 1 ;~ 0AA7:373B
 cs=0xaa7;eip=0x003740; 	J(JNZ(loc_1c7a7));	// 26890 jnz     short loc_1C7A7 ;~ 0AA7:3740
 cs=0xaa7;eip=0x003742; 	T(MOV(ax, 1));	// 26891 mov     ax, 1 ;~ 0AA7:3742
-cs=0xaa7;eip=0x003745; 	R(_INT(0x33));	// 26892 int     33h             ; - MS MOUSE - SHOW MOUSE CURSOR ;~ 0AA7:3745
+cs=0xaa7;eip=0x003745; 	S(_INT(0x33));	// 26892 int     33h             ; - MS MOUSE - SHOW MOUSE CURSOR ;~ 0AA7:3745
 cs=0xaa7;eip=0x003747; 	T(CLC);	// 26894 clc ;~ 0AA7:3747
 cs=0xaa7;eip=0x003748; 	J(RETN(0));	// 26895 retn ;~ 0AA7:3748
 _mouse_hide2:
@@ -8456,7 +8466,7 @@ _mouse_hide2:
 cs=0xaa7;eip=0x003749; 	T(CMP(_mouse_exist_flag, 1));	// 26903 cmp     _mouse_exist_flag, 1 ;~ 0AA7:3749
 cs=0xaa7;eip=0x00374e; 	J(JNZ(loc_1c7a7));	// 26904 jnz     short loc_1C7A7 ;~ 0AA7:374E
 cs=0xaa7;eip=0x003750; 	T(MOV(ax, 2));	// 26905 mov     ax, 2 ;~ 0AA7:3750
-cs=0xaa7;eip=0x003753; 	R(_INT(0x33));	// 26906 int     33h             ; - MS MOUSE - HIDE MOUSE CURSOR ;~ 0AA7:3753
+cs=0xaa7;eip=0x003753; 	S(_INT(0x33));	// 26906 int     33h             ; - MS MOUSE - HIDE MOUSE CURSOR ;~ 0AA7:3753
 cs=0xaa7;eip=0x003755; 	T(CLC);	// 26908 clc ;~ 0AA7:3755
 cs=0xaa7;eip=0x003756; 	J(RETN(0));	// 26909 retn ;~ 0AA7:3756
 loc_1c7a7:
@@ -8546,7 +8556,8 @@ seg001_377c_proc:
 loc_1c7cc:
 	// 6065 
 cs=0xaa7;eip=0x00377c; 	T(ADD(bx, 0x0A));	// 26956 add     bx, 0Ah ;~ 0AA7:377C
-	R(JMP(_mouse_1c7cf));_mouse_1c7cf:
+	JMP(_mouse_1c7cf);
+_mouse_1c7cf:
 	// 26963 
 cs=0xaa7;eip=0x00377f; 	T(MOV(cx, *(dw*)(raddr(ds,bx))));	// 26968 mov     cx, [bx] ;~ 0AA7:377F
 cs=0xaa7;eip=0x003781; 	T(CMP(cx, -1));	// 26969 cmp     cx, -1 ;~ 0AA7:3781

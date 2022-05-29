@@ -41,7 +41,7 @@ prefers_static_libs = (get_option('default_library') == 'static')
 summary('Build type',     get_option('buildtype'), section : 'Build Summary')
 summary('Install prefix', get_option('prefix'),    section : 'Build Summary')
 
-extra_flags = ['-ggdb3','-rdynamic','-I/usr/include/SDL2','-Wmaybe-uninitialized', '-Wno-unused-variable','-mno-ms-bitfields', '-Wno-multichar', '-Wno-address-of-packed-member','-DDOSBOX_CUSTOM', '-DM2CDEBUG=1','-DNO_SHADOW_STACK']
+extra_flags = ['-ggdb3','-gdwarf-4','-rdynamic','-I/usr/include/SDL2','-Wmaybe-uninitialized', '-Wno-unused-variable','-mno-ms-bitfields', '-Wno-multichar', '-Wno-address-of-packed-member','-DDOSBOX_CUSTOM', '-DM2CDEBUG=1','-DNO_SHADOW_STACK']
 if host_machine.system() == 'windows'
   extra_flags += '-Wno-pedantic-ms-format'
 endif

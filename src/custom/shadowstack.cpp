@@ -22,7 +22,7 @@ namespace m2c{
         if (m_current == m_ss.size ())
           m_ss.resize (m_current + 1);
         print_frame(f);
-        m_ss[m_current++] = f;
+        m_ss.at(m_current++) = f;
      m2c::log_debug("m_itiscall=%d m_deep=%d\n",m_itiscall,m_deep);
 //     m2c::log_info("ssize=%d\n",m_ss.size());
       }
@@ -46,20 +46,20 @@ namespace m2c{
             size_t tcount = 0;
             do
               {
-                tsp = m_ss[m_current - 1].sp;
+                tsp = m_ss.at(m_current - 1).sp;
                 if ((tcount++) > 0)
-                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss[m_current - 1].addcounter, tsp);
+                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current - 1).addcounter, tsp);
                 if (tsp <= sp)
-                  m_ss[--m_current].remcounter = counter;
-                  if (m_ss[m_current].itwascall) ++m_needtoskipcall;
-                print_frame(m_ss[m_current]);
+                  m_ss.at(--m_current).remcounter = counter;
+                  if (m_ss.at(m_current).itwascall) ++m_needtoskipcall;
+                print_frame(m_ss.at(m_current));
               }
 
             while (tsp < sp);
 
-           if (m_itisret && m_ss[m_current].itwascall) --m_needtoskipcall;
+           if (m_itisret && m_ss.at(m_current).itwascall) --m_needtoskipcall;
 
-      m_currentdeep = m_ss[m_current].call_deep;
+      m_currentdeep = m_ss.at(m_current).call_deep;
                   log_debug ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall);
           }
       
@@ -91,7 +91,7 @@ return m_needtoskipcall;}
 
   void ShadowStack::print_frame(const Frame& f)
   {
-            log_debug("~~ %4d %8x %8x %04x:%04x %4x %4x %4x\n", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value, *f.pointer_);
+            log_debug("~~ %4d %8x %8x %04x:%04x sp=%4x %4x~%4x\n", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value, *f.pointer_);
   }
 
   void ShadowStack::print (_STATE * _state)
@@ -100,15 +100,15 @@ return m_needtoskipcall;}
       {
         X86_REGREF if (!m_ss.empty ())
           printf (" Shadow Stack memory dump (incl left garbage):\n");
-        printf ("%4s %8s %8s %4s:%4s %4s %4s %4s\n", "Call", "Alloc", "Dealloc", "cs", "ip", "sp", "Value", "Current value");
+        printf ("%4s %8s %8s %4s:%4s %7s %4s %6s\n", "Call", "Alloc", "Dealloc", "cs", "ip", "sp", "Value", "Current value");
         for (int i = m_ss.size () - 1; i >= 0; i--)
           {
-            Frame f = m_ss[i];
+            Frame f = m_ss.at(i);
             if (i == m_current - 1)
               printf ("  ");
-            printf ("%4d %8x %8x %04x:%04x %4x %4x", f.call_deep, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value);
-            if (*f.pointer_ != f.value)
-              printf (" %4x\n", *f.pointer_);
+            printf ("%4d %8x %8x %04x:%04x sp=%4x %4x", f.call_deep, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, (dw) f.value);
+            if ((dw) *f.pointer_ != (dw) f.value)
+              printf (" ^%4x^\n", (dw) *f.pointer_);
             else
               printf ("\n");
           }

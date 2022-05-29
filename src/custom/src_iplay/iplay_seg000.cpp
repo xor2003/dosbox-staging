@@ -26,7 +26,7 @@ cs=0x1a2;eip=0x000006; 	X(PUSH(cs));	// 39 push    cs ;~ 01A2:0006
 cs=0x1a2;eip=0x000007; 	J(CALL(_memfree_125da,0));	// 40 call    near ptr _memfree_125DA ;~ 01A2:0007
 cs=0x1a2;eip=0x00000a; 	X(POP(dx));	// 41 pop     dx ;~ 01A2:000A
 cs=0x1a2;eip=0x00000b; 	T(MOV(ax, 0x3D00));	// 42 mov     ax, 3D00h ;~ 01A2:000B
-cs=0x1a2;eip=0x00000e; 	R(_INT(0x21));	// 43 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 01A2:000E
+cs=0x1a2;eip=0x00000e; 	S(_INT(0x21));	// 43 int     21h             ; DOS - 2+ - OPEN DISK FILE WITH HANDLE ;~ 01A2:000E
 cs=0x1a2;eip=0x000010; 	T(MOV(bx, seg_offset(seg003)));	// 47 mov     bx, seg seg003 ;~ 01A2:0010
 cs=0x1a2;eip=0x000013; 	T(MOV(ds, bx));	// 48 mov     ds, bx ;~ 01A2:0013
 cs=0x1a2;eip=0x000015; 	X(MOV(_savesp_245d0, sp));	// 50 mov     _savesp_245D0, sp ;~ 01A2:0015
@@ -67,7 +67,7 @@ cs=0x1a2;eip=0x000064; 	X(MOV(byte_24665, 1));	// 83 mov     byte_24665, 1 ;~ 01
 cs=0x1a2;eip=0x000069; 	J(CALL(__dispatch_call,ax));	// 84 call    ax ;~ 01A2:0069
 cs=0x1a2;eip=0x00006b; 	T(MOV(bx, _fhandle_module));	// 85 mov     bx, _fhandle_module ;~ 01A2:006B
 cs=0x1a2;eip=0x00006f; 	T(MOV(ah, 0x3E));	// 86 mov     ah, 3Eh ;~ 01A2:006F
-cs=0x1a2;eip=0x000071; 	R(_INT(0x21));	// 87 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:0071
+cs=0x1a2;eip=0x000071; 	S(_INT(0x21));	// 87 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:0071
 cs=0x1a2;eip=0x000073; 	X(ADC(word_24662, 0));	// 89 adc     word_24662, 0 ;~ 01A2:0073
 cs=0x1a2;eip=0x000078; 	J(CALL(_ems_restore_mapctx,0));	// 90 call    _ems_restore_mapctx ;~ 01A2:0078
 cs=0x1a2;eip=0x00007b; 	T(MOVZX(ax, byte_2461b));	// 91 movzx   ax, byte_2461B ;~ 01A2:007B
@@ -95,7 +95,7 @@ cs=0x1a2;eip=0x00009f; 	X(PUSH(ax));	// 115 push    ax ;~ 01A2:009F
 cs=0x1a2;eip=0x0000a0; 	X(PUSH(dx));	// 116 push    dx ;~ 01A2:00A0
 cs=0x1a2;eip=0x0000a1; 	T(MOV(bx, _fhandle_module));	// 117 mov     bx, _fhandle_module ;~ 01A2:00A1
 cs=0x1a2;eip=0x0000a5; 	T(MOV(ah, 0x3E));	// 118 mov     ah, 3Eh ;~ 01A2:00A5
-cs=0x1a2;eip=0x0000a7; 	R(_INT(0x21));	// 119 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:00A7
+cs=0x1a2;eip=0x0000a7; 	S(_INT(0x21));	// 119 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:00A7
 cs=0x1a2;eip=0x0000a9; 	J(CALL(_ems_restore_mapctx,0));	// 121 call    _ems_restore_mapctx ;~ 01A2:00A9
 cs=0x1a2;eip=0x0000ac; 	X(PUSH(cs));	// 122 push    cs ;~ 01A2:00AC
 cs=0x1a2;eip=0x0000ad; 	J(CALL(_memfree_125da,0));	// 123 call    near ptr _memfree_125DA ;~ 01A2:00AD
@@ -103,6 +103,7 @@ cs=0x1a2;eip=0x0000b0; 	T(MOV(ax, ds));	// 124 mov     ax, ds ;~ 01A2:00B0
 cs=0x1a2;eip=0x0000b2; 	T(MOV(fs, ax));	// 125 mov     fs, ax ;~ 01A2:00B2
 cs=0x1a2;eip=0x0000b4; 	X(POP(dx));	// 127 pop     dx ;~ 01A2:00B4
 cs=0x1a2;eip=0x0000b5; 	X(POP(ax));	// 128 pop     ax ;~ 01A2:00B5
+assert(0);
 cs=0x1a2;eip=0x0000b6; 	T(MOV(sp, _savesp_245d0));	// 129 mov     sp, _savesp_245D0 ;~ 01A2:00B6
 cs=0x1a2;eip=0x0000ba; 	X(POP(ds));	// 130 pop     ds ;~ 01A2:00BA
 cs=0x1a2;eip=0x0000bb; 	T(STC);	// 131 stc ;~ 01A2:00BB
@@ -119,7 +120,7 @@ cs=0x1a2;eip=0x0000db; 	T(MOV(dx, 0x258));	// 146 mov     dx, 258h ;~ 01A2:00DB
 cs=0x1a2;eip=0x0000de; 	T(XOR(cx, cx));	// 147 xor     cx, cx ;~ 01A2:00DE
 cs=0x1a2;eip=0x0000e0; 	T(MOV(bx, _fhandle_module));	// 148 mov     bx, _fhandle_module ;~ 01A2:00E0
 cs=0x1a2;eip=0x0000e4; 	T(MOV(ax, 0x4200));	// 149 mov     ax, 4200h ;~ 01A2:00E4
-cs=0x1a2;eip=0x0000e7; 	R(_INT(0x21));	// 150 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:00E7
+cs=0x1a2;eip=0x0000e7; 	S(_INT(0x21));	// 150 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:00E7
 cs=0x1a2;eip=0x0000e9; 	X(ADC(word_24662, 0));	// 152 adc     word_24662, 0 ;~ 01A2:00E9
 cs=0x1a2;eip=0x0000ee; 	J(JMP(loc_101b7));	// 153 jmp     loc_101B7 ;~ 01A2:00EE
 _mod_flt8_module:
@@ -213,7 +214,7 @@ cs=0x1a2;eip=0x0001c5; 	T(XOR(dx, dx));	// 252 xor     dx, dx ;~ 01A2:01C5
 cs=0x1a2;eip=0x0001c7; 	T(XOR(cx, cx));	// 253 xor     cx, cx ;~ 01A2:01C7
 cs=0x1a2;eip=0x0001c9; 	T(MOV(bx, _fhandle_module));	// 254 mov     bx, _fhandle_module ;~ 01A2:01C9
 cs=0x1a2;eip=0x0001cd; 	T(MOV(ax, 0x4202));	// 255 mov     ax, 4202h ;~ 01A2:01CD
-cs=0x1a2;eip=0x0001d0; 	R(_INT(0x21));	// 256 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:01D0
+cs=0x1a2;eip=0x0001d0; 	S(_INT(0x21));	// 256 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:01D0
 cs=0x1a2;eip=0x0001d2; 	T(SHL(edx, 0x10));	// 258 shl     edx, 10h ;~ 01A2:01D2
 cs=0x1a2;eip=0x0001d6; 	T(MOV(dx, ax));	// 259 mov     dx, ax ;~ 01A2:01D6
 cs=0x1a2;eip=0x0001d8; 	X(PUSH(edx));	// 260 push    edx ;~ 01A2:01D8
@@ -221,7 +222,7 @@ cs=0x1a2;eip=0x0001da; 	T(MOV(dx, 1084));	// 261 mov     dx, 1084 ;~ 01A2:01DA
 cs=0x1a2;eip=0x0001dd; 	T(XOR(cx, cx));	// 262 xor     cx, cx ;~ 01A2:01DD
 cs=0x1a2;eip=0x0001df; 	T(MOV(bx, _fhandle_module));	// 263 mov     bx, _fhandle_module ;~ 01A2:01DF
 cs=0x1a2;eip=0x0001e3; 	T(MOV(ax, 0x4200));	// 264 mov     ax, 4200h ;~ 01A2:01E3
-cs=0x1a2;eip=0x0001e6; 	R(_INT(0x21));	// 265 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:01E6
+cs=0x1a2;eip=0x0001e6; 	S(_INT(0x21));	// 265 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:01E6
 cs=0x1a2;eip=0x0001e8; 	X(POP(edx));	// 267 pop     edx ;~ 01A2:01E8
 cs=0x1a2;eip=0x0001ea; 	T(MOVZX(eax, word_245f2));	// 268 movzx   eax, word_245F2 ;~ 01A2:01EA
 cs=0x1a2;eip=0x0001f0; 	T(SHL(eax, 0x0B));	// 269 shl     eax, 0Bh ;~ 01A2:01F0
@@ -1180,7 +1181,7 @@ cs=0x1a2;eip=0x000d0b; 	T(ADD(dx, ax));	// 1560 add     dx, ax ;~ 01A2:0D0B
 cs=0x1a2;eip=0x000d0d; 	T(ADC(cx, 0));	// 1561 adc     cx, 0 ;~ 01A2:0D0D
 cs=0x1a2;eip=0x000d10; 	T(MOV(bx, _fhandle_module));	// 1562 mov     bx, _fhandle_module ;~ 01A2:0D10
 cs=0x1a2;eip=0x000d14; 	T(MOV(ax, 0x4200));	// 1563 mov     ax, 4200h ;~ 01A2:0D14
-cs=0x1a2;eip=0x000d17; 	R(_INT(0x21));	// 1564 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:0D17
+cs=0x1a2;eip=0x000d17; 	S(_INT(0x21));	// 1564 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:0D17
 cs=0x1a2;eip=0x000d19; 	X(ADC(word_24662, 0));	// 1566 adc     word_24662, 0 ;~ 01A2:0D19
 cs=0x1a2;eip=0x000d1e; 	J(CALL(_mod_readfile_11f4e,0));	// 1567 call    near ptr _mod_readfile_11F4E ;~ 01A2:0D1E
 cs=0x1a2;eip=0x000d21; 	J(JC(loc_10099));	// 1568 jb      loc_10099 ;~ 01A2:0D21
@@ -1283,7 +1284,7 @@ cs=0x1a2;eip=0x000e32; 	T(MOV(dx, word_30562));	// 1668 mov     dx, word_30562 ;
 cs=0x1a2;eip=0x000e36; 	T(MOV(cx, word_30564));	// 1669 mov     cx, word_30564 ;~ 01A2:0E36
 cs=0x1a2;eip=0x000e3a; 	T(MOV(bx, _fhandle_module));	// 1670 mov     bx, _fhandle_module ;~ 01A2:0E3A
 cs=0x1a2;eip=0x000e3e; 	T(MOV(ax, 0x4200));	// 1671 mov     ax, 4200h ;~ 01A2:0E3E
-cs=0x1a2;eip=0x000e41; 	R(_INT(0x21));	// 1672 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:0E41
+cs=0x1a2;eip=0x000e41; 	S(_INT(0x21));	// 1672 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:0E41
 cs=0x1a2;eip=0x000e43; 	X(ADC(word_24662, 0));	// 1674 adc     word_24662, 0 ;~ 01A2:0E43
 cs=0x1a2;eip=0x000e48; 	T(MOV(cx, word_245f2));	// 1675 mov     cx, word_245F2 ;~ 01A2:0E48
 loc_10e4c:
@@ -1687,7 +1688,7 @@ cs=0x1a2;eip=0x00116a; 	T(XOR(dx, dx));	// 2090 xor     dx, dx ;~ 01A2:116A
 cs=0x1a2;eip=0x00116c; 	T(XOR(cx, cx));	// 2091 xor     cx, cx ;~ 01A2:116C
 cs=0x1a2;eip=0x00116e; 	T(MOV(bx, _fhandle_module));	// 2092 mov     bx, _fhandle_module ;~ 01A2:116E
 cs=0x1a2;eip=0x001172; 	T(MOV(ax, 0x4201));	// 2093 mov     ax, 4201h ;~ 01A2:1172
-cs=0x1a2;eip=0x001175; 	R(_INT(0x21));	// 2094 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1175
+cs=0x1a2;eip=0x001175; 	S(_INT(0x21));	// 2094 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1175
 cs=0x1a2;eip=0x001177; 	X(POP(di));	// 2096 pop     di              ; out ;~ 01A2:1177
 cs=0x1a2;eip=0x001178; 	X(MOV(*(dw*)(raddr(ds,di+0x38)), ax));	// 2097 mov     [di+38h], ax ;~ 01A2:1178
 cs=0x1a2;eip=0x00117b; 	X(MOV(*(dw*)(raddr(ds,di+0x3A)), dx));	// 2098 mov     [di+3Ah], dx ;~ 01A2:117B
@@ -1742,7 +1743,7 @@ cs=0x1a2;eip=0x001204; 	T(MOV(dx, *(dw*)(raddr(ds,si+0x20))));	// 2147 mov     d
 cs=0x1a2;eip=0x001207; 	T(MOV(cx, *(dw*)(raddr(ds,si+0x22))));	// 2148 mov     cx, [si+22h] ;~ 01A2:1207
 cs=0x1a2;eip=0x00120a; 	T(MOV(bx, _fhandle_module));	// 2149 mov     bx, _fhandle_module ;~ 01A2:120A
 cs=0x1a2;eip=0x00120e; 	T(MOV(ax, 0x4201));	// 2150 mov     ax, 4201h ;~ 01A2:120E
-cs=0x1a2;eip=0x001211; 	R(_INT(0x21));	// 2151 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1211
+cs=0x1a2;eip=0x001211; 	S(_INT(0x21));	// 2151 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1211
 cs=0x1a2;eip=0x001213; 	X(POP(di));	// 2153 pop     di ;~ 01A2:1213
 cs=0x1a2;eip=0x001214; 	X(POP(si));	// 2154 pop     si ;~ 01A2:1214
 cs=0x1a2;eip=0x001215; 	X(POP(cx));	// 2155 pop     cx ;~ 01A2:1215
@@ -1945,7 +1946,7 @@ cs=0x1a2;eip=0x001401; 	T(XOR(dx, dx));	// 2356 xor     dx, dx ;~ 01A2:1401
 cs=0x1a2;eip=0x001403; 	T(XOR(cx, cx));	// 2357 xor     cx, cx ;~ 01A2:1403
 cs=0x1a2;eip=0x001405; 	T(MOV(bx, _fhandle_module));	// 2358 mov     bx, _fhandle_module ;~ 01A2:1405
 cs=0x1a2;eip=0x001409; 	T(MOV(ax, 0x4201));	// 2359 mov     ax, 4201h ;~ 01A2:1409
-cs=0x1a2;eip=0x00140c; 	R(_INT(0x21));	// 2360 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:140C
+cs=0x1a2;eip=0x00140c; 	S(_INT(0x21));	// 2360 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:140C
 cs=0x1a2;eip=0x00140e; 	X(MOV(*(dw*)(raddr(ds,si)), ax));	// 2362 mov     [si], ax ;~ 01A2:140E
 cs=0x1a2;eip=0x001410; 	X(MOV(*(dw*)(raddr(ds,si+2)), dx));	// 2363 mov     [si+2], dx ;~ 01A2:1410
 cs=0x1a2;eip=0x001413; 	T(MOV(cx, word_245f2));	// 2364 mov     cx, word_245F2 ;~ 01A2:1413
@@ -1983,7 +1984,7 @@ cs=0x1a2;eip=0x001444; 	T(MOV(dx, *(dw*)(raddr(ds,si))));	// 2395 mov     dx, [s
 cs=0x1a2;eip=0x001446; 	T(MOV(cx, *(dw*)(raddr(ds,si+2))));	// 2396 mov     cx, [si+2] ;~ 01A2:1446
 cs=0x1a2;eip=0x001449; 	T(MOV(bx, _fhandle_module));	// 2397 mov     bx, _fhandle_module ;~ 01A2:1449
 cs=0x1a2;eip=0x00144d; 	T(MOV(ax, 0x4200));	// 2398 mov     ax, 4200h ;~ 01A2:144D
-cs=0x1a2;eip=0x001450; 	R(_INT(0x21));	// 2399 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1450
+cs=0x1a2;eip=0x001450; 	S(_INT(0x21));	// 2399 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1450
 cs=0x1a2;eip=0x001452; 	X(MOV(*(db*)(((db*)&word_3063b)+1), 1));	// 2401 mov     byte ptr word_3063B+1, 1 ;~ 01A2:1452
 cs=0x1a2;eip=0x001457; 	T(MOV(cx, 0x40));	// 2402 mov     cx, 40h ; '@' ;~ 01A2:1457
 loc_1145a:
@@ -2002,7 +2003,7 @@ cs=0x1a2;eip=0x001472; 	T(XOR(dx, dx));	// 2415 xor     dx, dx ;~ 01A2:1472
 cs=0x1a2;eip=0x001474; 	T(XOR(cx, cx));	// 2416 xor     cx, cx ;~ 01A2:1474
 cs=0x1a2;eip=0x001476; 	T(MOV(bx, _fhandle_module));	// 2417 mov     bx, _fhandle_module ;~ 01A2:1476
 cs=0x1a2;eip=0x00147a; 	T(MOV(ax, 0x4201));	// 2418 mov     ax, 4201h ;~ 01A2:147A
-cs=0x1a2;eip=0x00147d; 	R(_INT(0x21));	// 2419 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:147D
+cs=0x1a2;eip=0x00147d; 	S(_INT(0x21));	// 2419 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:147D
 cs=0x1a2;eip=0x00147f; 	X(MOV(*(dw*)(raddr(ds,si)), ax));	// 2421 mov     [si], ax ;~ 01A2:147F
 cs=0x1a2;eip=0x001481; 	X(MOV(*(dw*)(raddr(ds,si+2)), dx));	// 2422 mov     [si+2], dx ;~ 01A2:1481
 cs=0x1a2;eip=0x001484; 	X(POP(cx));	// 2423 pop     cx ;~ 01A2:1484
@@ -2083,16 +2084,16 @@ cs=0x1a2;eip=0x001b49; 	T(SHR(eax, 0x10));	// 3285 shr     eax, 10h ;~ 01A2:1B49
 cs=0x1a2;eip=0x001b4d; 	T(MOV(cx, ax));	// 3286 mov     cx, ax ;~ 01A2:1B4D
 cs=0x1a2;eip=0x001b4f; 	T(MOV(bx, _fhandle_module));	// 3287 mov     bx, _fhandle_module ;~ 01A2:1B4F
 cs=0x1a2;eip=0x001b53; 	T(MOV(ax, 0x4200));	// 3288 mov     ax, 4200h ;~ 01A2:1B53
-cs=0x1a2;eip=0x001b56; 	R(_INT(0x21));	// 3289 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1B56
+cs=0x1a2;eip=0x001b56; 	S(_INT(0x21));	// 3289 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1B56
 cs=0x1a2;eip=0x001b58; 	X(POP(dx));	// 3291 pop     dx ;~ 01A2:1B58
 cs=0x1a2;eip=0x001b59; 	X(POP(cx));	// 3292 pop     cx ;~ 01A2:1B59
 cs=0x1a2;eip=0x001b5a; 	T(MOV(ax, 0x0FFFC));	// 3293 mov     ax, 0FFFCh ;~ 01A2:1B5A
 cs=0x1a2;eip=0x001b5d; 	J(JC(_lfreaderr));	// 3294 jb      _lfreaderr ;~ 01A2:1B5D
-	R(JMP(_dosfread));_dosfread:
+	S(JMP(_dosfread));_dosfread:
 	// 3301 
 cs=0x1a2;eip=0x001b61; 	T(MOV(bx, _fhandle_module));	// 3303 mov     bx, _fhandle_module ;~ 01A2:1B61
 cs=0x1a2;eip=0x001b65; 	T(MOV(ah, 0x3F));	// 3304 mov     ah, 3Fh ;~ 01A2:1B65
-cs=0x1a2;eip=0x001b67; 	R(_INT(0x21));	// 3305 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1B67
+cs=0x1a2;eip=0x001b67; 	S(_INT(0x21));	// 3305 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1B67
 cs=0x1a2;eip=0x001b69; 	T(MOV(cx, ax));	// 3308 mov     cx, ax ;~ 01A2:1B69
 cs=0x1a2;eip=0x001b6b; 	T(MOV(ax, 0x0FFFC));	// 3309 mov     ax, 0FFFCh ;~ 01A2:1B6B
 cs=0x1a2;eip=0x001b6e; 	J(JC(_lfreaderr));	// 3310 jb      _lfreaderr      ; 1 problem here ;~ 01A2:1B6E
@@ -2676,7 +2677,7 @@ cs=0x1a2;eip=0x000b4d; 	J(CALL(_dosseek,0));	// 1365 call    _dosseek ;~ 01A2:0B
 cs=0x1a2;eip=0x000b50; 	T(MOV(si, offset(seg003,unk_3054a)));	// 1366 mov     si, offset unk_3054A ;~ 01A2:0B50
 cs=0x1a2;eip=0x000b53; 	T(MOV(di, offset(seg003,_myout)));	// 1367 mov     di, offset _myout ;~ 01A2:0B53
 cs=0x1a2;eip=0x000b56; 	T(MOV(cx, word_245d2));	// 1368 mov     cx, word_245D2 ;~ 01A2:0B56
-	R(return _group1(m2c::kseg000_b5a_proc, _state););
+	return _group1(m2c::kseg000_b5a_proc, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -2839,7 +2840,7 @@ cs=0x1a2;eip=0x001597; 	X(POP(dx));	// 2602 pop     dx ;~ 01A2:1597
 cs=0x1a2;eip=0x001598; 	J(JC(locret_115a2));	// 2603 jb      short locret_115A2 ;~ 01A2:1598
 cs=0x1a2;eip=0x00159a; 	T(MOV(bx, _fhandle_module));	// 2604 mov     bx, _fhandle_module ;~ 01A2:159A
 cs=0x1a2;eip=0x00159e; 	T(MOV(ah, 0x40));	// 2605 mov     ah, 40h ;~ 01A2:159E
-cs=0x1a2;eip=0x0015a0; 	R(_INT(0x21));	// 2606 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:15A0
+cs=0x1a2;eip=0x0015a0; 	S(_INT(0x21));	// 2606 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:15A0
 locret_115a2:
 	// 4566 
 cs=0x1a2;eip=0x0015a2; 	J(RETN(0));	// 2610 retn ;~ 01A2:15A2
@@ -2874,7 +2875,7 @@ cs=0x1a2;eip=0x0015ac; 	T(MOV(dx, offset(seg003,_chrin)));	// 2621 mov     dx, o
 cs=0x1a2;eip=0x0015af; 	T(MOV(cx, 8));	// 2622 mov     cx, 8 ;~ 01A2:15AF
 cs=0x1a2;eip=0x0015b2; 	T(MOV(bx, _fhandle_module));	// 2623 mov     bx, _fhandle_module ;~ 01A2:15B2
 cs=0x1a2;eip=0x0015b6; 	T(MOV(ah, 0x40));	// 2624 mov     ah, 40h ;~ 01A2:15B6
-cs=0x1a2;eip=0x0015b8; 	R(_INT(0x21));	// 2625 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:15B8
+cs=0x1a2;eip=0x0015b8; 	S(_INT(0x21));	// 2625 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:15B8
 cs=0x1a2;eip=0x0015ba; 	J(RETN(0));	// 2627 retn ;~ 01A2:15BA
 
     assert(0);
@@ -2902,7 +2903,7 @@ cs=0x1a2;eip=0x0015ba; 	J(RETN(0));	// 2627 retn ;~ 01A2:15BA
     _begin:
 cs=0x1a2;eip=0x0015bb; 	T(MOV(cx, 0x20));	// 2635 mov     cx, 20h ; ' ' ;~ 01A2:15BB
 cs=0x1a2;eip=0x0015be; 	T(MOV(ah, 0x3C));	// 2636 mov     ah, 3Ch ;~ 01A2:15BE
-cs=0x1a2;eip=0x0015c0; 	R(_INT(0x21));	// 2637 int     21h             ; DOS - 2+ - CREATE A FILE WITH HANDLE (CREAT) ;~ 01A2:15C0
+cs=0x1a2;eip=0x0015c0; 	S(_INT(0x21));	// 2637 int     21h             ; DOS - 2+ - CREATE A FILE WITH HANDLE (CREAT) ;~ 01A2:15C0
 cs=0x1a2;eip=0x0015c2; 	T(MOV(bx, ax));	// 2640 mov     bx, ax ;~ 01A2:15C2
 cs=0x1a2;eip=0x0015c4; 	T(MOV(ax, 0x0FFFF));	// 2641 mov     ax, 0FFFFh ;~ 01A2:15C4
 cs=0x1a2;eip=0x0015c7; 	J(JC(locret_11786));	// 2642 jb      locret_11786 ;~ 01A2:15C7
@@ -2948,7 +2949,7 @@ cs=0x1a2;eip=0x00163b; 	T(MOV(dx, offset(seg003,_ainertiamodule)));	// 2679 mov 
 cs=0x1a2;eip=0x00163e; 	T(MOV(cx, 0x50));	// 2680 mov     cx, 50h ; 'P' ;~ 01A2:163E
 cs=0x1a2;eip=0x001641; 	T(MOV(bx, _fhandle_module));	// 2681 mov     bx, _fhandle_module ;~ 01A2:1641
 cs=0x1a2;eip=0x001645; 	T(MOV(ah, 0x40));	// 2682 mov     ah, 40h ;~ 01A2:1645
-cs=0x1a2;eip=0x001647; 	R(_INT(0x21));	// 2683 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1647
+cs=0x1a2;eip=0x001647; 	S(_INT(0x21));	// 2683 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1647
 cs=0x1a2;eip=0x001649; 	T(MOV(ax, 0x0FFFE));	// 2685 mov     ax, 0FFFEh ;~ 01A2:1649
 cs=0x1a2;eip=0x00164c; 	J(JC(loc_11777));	// 2686 jb      loc_11777 ;~ 01A2:164C
 cs=0x1a2;eip=0x001650; 	T(MOV(si, offset(seg003,byte_280e8)));	// 2687 mov     si, offset byte_280E8 ;~ 01A2:1650
@@ -3022,7 +3023,7 @@ cs=0x1a2;eip=0x0016fd; 	T(MOV(bx, _fhandle_module));	// 2754 mov     bx, _fhandl
 cs=0x1a2;eip=0x001701; 	X(PUSH(ds));	// 2755 push    ds ;~ 01A2:1701
 cs=0x1a2;eip=0x001702; 	T(MOV(ds, ax));	// 2756 mov     ds, ax ;~ 01A2:1702
 cs=0x1a2;eip=0x001704; 	T(MOV(ah, 0x40));	// 2757 mov     ah, 40h ;~ 01A2:1704
-cs=0x1a2;eip=0x001706; 	R(_INT(0x21));	// 2758 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1706
+cs=0x1a2;eip=0x001706; 	S(_INT(0x21));	// 2758 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1706
 cs=0x1a2;eip=0x001708; 	X(POP(ds));	// 2760 pop     ds ;~ 01A2:1708
 cs=0x1a2;eip=0x001709; 	J(JC(loc_11777));	// 2761 jb      short loc_11777 ;~ 01A2:1709
 loc_1170b:
@@ -3040,7 +3041,7 @@ cs=0x1a2;eip=0x00171e; 	T(XOR(cx, cx));	// 2773 xor     cx, cx ;~ 01A2:171E
 cs=0x1a2;eip=0x001720; 	T(XOR(dx, dx));	// 2774 xor     dx, dx ;~ 01A2:1720
 cs=0x1a2;eip=0x001722; 	T(MOV(bx, _fhandle_module));	// 2775 mov     bx, _fhandle_module ;~ 01A2:1722
 cs=0x1a2;eip=0x001726; 	T(MOV(ax, 0x4201));	// 2776 mov     ax, 4201h ;~ 01A2:1726
-cs=0x1a2;eip=0x001729; 	R(_INT(0x21));	// 2777 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1729
+cs=0x1a2;eip=0x001729; 	S(_INT(0x21));	// 2777 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1729
 cs=0x1a2;eip=0x00172b; 	X(MOV(*(dw*)(((db*)&dword_257a0)), ax));	// 2779 mov     word ptr dword_257A0, ax ;~ 01A2:172B
 cs=0x1a2;eip=0x00172e; 	X(MOV(*(dw*)(((db*)&dword_257a0)+2), dx));	// 2780 mov     word ptr dword_257A0+2, dx ;~ 01A2:172E
 cs=0x1a2;eip=0x001732; 	T(MOV(ax, word_257a4));	// 2781 mov     ax, word_257A4 ;~ 01A2:1732
@@ -3070,7 +3071,7 @@ loc_11777:
 cs=0x1a2;eip=0x001777; 	X(PUSH(ax));	// 2806 push    ax ;~ 01A2:1777
 cs=0x1a2;eip=0x001778; 	T(MOV(bx, _fhandle_module));	// 2807 mov     bx, _fhandle_module ;~ 01A2:1778
 cs=0x1a2;eip=0x00177c; 	T(MOV(ah, 0x3E));	// 2808 mov     ah, 3Eh ;~ 01A2:177C
-cs=0x1a2;eip=0x00177e; 	R(_INT(0x21));	// 2809 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:177E
+cs=0x1a2;eip=0x00177e; 	S(_INT(0x21));	// 2809 int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:177E
 cs=0x1a2;eip=0x001780; 	X(POP(ax));	// 2811 pop     ax ;~ 01A2:1780
 cs=0x1a2;eip=0x001781; 	T(MOV(sp, _savesp_245d0));	// 2812 mov     sp, _savesp_245D0 ;~ 01A2:1781
 cs=0x1a2;eip=0x001785; 	X(POP(ds));	// 2813 pop     ds ;~ 01A2:1785
@@ -3138,7 +3139,7 @@ cs=0x1a2;eip=0x0017bf; 	T(XOR(dx, dx));	// 2847 xor     dx, dx ;~ 01A2:17BF
 cs=0x1a2;eip=0x0017c1; 	T(MOV(bx, _fhandle_module));	// 2848 mov     bx, _fhandle_module ;~ 01A2:17C1
 cs=0x1a2;eip=0x0017c5; 	T(MOV(ds, _ems_pageframe));	// 2849 mov     ds, _ems_pageframe ;~ 01A2:17C5
 cs=0x1a2;eip=0x0017c9; 	T(MOV(ah, 0x40));	// 2850 mov     ah, 40h ;~ 01A2:17C9
-cs=0x1a2;eip=0x0017cb; 	R(_INT(0x21));	// 2851 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:17CB
+cs=0x1a2;eip=0x0017cb; 	S(_INT(0x21));	// 2851 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:17CB
 cs=0x1a2;eip=0x0017cd; 	X(POP(bx));	// 2853 pop     bx ;~ 01A2:17CD
 cs=0x1a2;eip=0x0017ce; 	X(POP(ds));	// 2854 pop     ds ;~ 01A2:17CE
 cs=0x1a2;eip=0x0017cf; 	X(POP(ecx));	// 2855 pop     ecx ;~ 01A2:17CF
@@ -3173,7 +3174,7 @@ cs=0x1a2;eip=0x0017ff; 	T(MOV(bx, _fhandle_module));	// 2884 mov     bx, _fhandl
 cs=0x1a2;eip=0x001803; 	T(MOV(ds, dx));	// 2885 mov     ds, dx ;~ 01A2:1803
 cs=0x1a2;eip=0x001805; 	T(XOR(dx, dx));	// 2886 xor     dx, dx ;~ 01A2:1805
 cs=0x1a2;eip=0x001807; 	T(MOV(ah, 0x40));	// 2887 mov     ah, 40h ;~ 01A2:1807
-cs=0x1a2;eip=0x001809; 	R(_INT(0x21));	// 2888 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1809
+cs=0x1a2;eip=0x001809; 	S(_INT(0x21));	// 2888 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1809
 cs=0x1a2;eip=0x00180b; 	X(POP(dx));	// 2890 pop     dx ;~ 01A2:180B
 cs=0x1a2;eip=0x00180c; 	X(POP(ds));	// 2891 pop     ds ;~ 01A2:180C
 cs=0x1a2;eip=0x00180d; 	X(POP(ecx));	// 2892 pop     ecx ;~ 01A2:180D
@@ -3259,7 +3260,7 @@ cs=0x1a2;eip=0x00187c; 	T(MOV(dx, offset(seg003,_ainertiasample)));	// 2944 mov 
 cs=0x1a2;eip=0x00187f; 	T(MOV(cx, 96));	// 2945 mov     cx, 96 ;~ 01A2:187F
 cs=0x1a2;eip=0x001882; 	T(MOV(bx, _fhandle_module));	// 2946 mov     bx, _fhandle_module ;~ 01A2:1882
 cs=0x1a2;eip=0x001886; 	T(MOV(ah, 0x40));	// 2947 mov     ah, 40h ;~ 01A2:1886
-cs=0x1a2;eip=0x001888; 	R(_INT(0x21));	// 2948 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1888
+cs=0x1a2;eip=0x001888; 	S(_INT(0x21));	// 2948 int     21h             ; DOS - 2+ - WRITE TO FILE WITH HANDLE ;~ 01A2:1888
 cs=0x1a2;eip=0x00188a; 	T(MOV(ax, 0x0FFFE));	// 2950 mov     ax, 0FFFEh ;~ 01A2:188A
 cs=0x1a2;eip=0x00188d; 	X(POP(ecx));	// 2951 pop     ecx ;~ 01A2:188D
 cs=0x1a2;eip=0x00188f; 	J(JC(loc_118ae));	// 2952 jb      short loc_118AE ;~ 01A2:188F
@@ -3313,7 +3314,7 @@ cs=0x1a2;eip=0x0018c1; 	T(MOV(cx, 96));	// 2981 mov     cx, 96 ;~ 01A2:18C1
 cs=0x1a2;eip=0x0018c4; 	T(MOV(bx, _fhandle_module));	// 2982 mov     bx, _fhandle_module ;~ 01A2:18C4
 cs=0x1a2;eip=0x0018c8; 	T(MOV(dx, offset(seg003,_ainertiasample)));	// 2983 mov     dx, offset _aInertiaSample ; "Inertia Sample: " ;~ 01A2:18C8
 cs=0x1a2;eip=0x0018cb; 	T(MOV(ah, 0x3F));	// 2984 mov     ah, 3Fh ;~ 01A2:18CB
-cs=0x1a2;eip=0x0018cd; 	R(_INT(0x21));	// 2985 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:18CD
+cs=0x1a2;eip=0x0018cd; 	S(_INT(0x21));	// 2985 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:18CD
 cs=0x1a2;eip=0x0018cf; 	X(POP(bx));	// 2988 pop     bx ;~ 01A2:18CF
 cs=0x1a2;eip=0x0018d0; 	J(JC(loc_119b2));	// 2989 jb      loc_119B2 ;~ 01A2:18D0
 cs=0x1a2;eip=0x0018d4; 	T(di = bx);	// 2990 lea     di, [bx] ;~ 01A2:18D4
@@ -3346,7 +3347,7 @@ cs=0x1a2;eip=0x00191c; 	T(MOV(dx, offset(seg003,_chrin)));	// 3015 mov     dx, o
 cs=0x1a2;eip=0x00191f; 	T(MOV(cx, 8));	// 3016 mov     cx, 8 ;~ 01A2:191F
 cs=0x1a2;eip=0x001922; 	T(MOV(bx, _fhandle_module));	// 3017 mov     bx, _fhandle_module ;~ 01A2:1922
 cs=0x1a2;eip=0x001926; 	T(MOV(ah, 0x3F));	// 3018 mov     ah, 3Fh ;~ 01A2:1926
-cs=0x1a2;eip=0x001928; 	R(_INT(0x21));	// 3019 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1928
+cs=0x1a2;eip=0x001928; 	S(_INT(0x21));	// 3019 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1928
 cs=0x1a2;eip=0x00192a; 	J(JC(loc_119b2));	// 3022 jb      loc_119B2 ;~ 01A2:192A
 cs=0x1a2;eip=0x00192e; 	T(MOV(eax, _myin));	// 3023 mov     eax, _myin ;~ 01A2:192E
 cs=0x1a2;eip=0x001932; 	X(MOV(dword_257a0, eax));	// 3024 mov     dword_257A0, eax ;~ 01A2:1932
@@ -3354,7 +3355,7 @@ cs=0x1a2;eip=0x001936; 	T(XOR(cx, cx));	// 3025 xor     cx, cx ;~ 01A2:1936
 cs=0x1a2;eip=0x001938; 	T(XOR(dx, dx));	// 3026 xor     dx, dx ;~ 01A2:1938
 cs=0x1a2;eip=0x00193a; 	T(MOV(bx, _fhandle_module));	// 3027 mov     bx, _fhandle_module ;~ 01A2:193A
 cs=0x1a2;eip=0x00193e; 	T(MOV(ax, 0x4201));	// 3028 mov     ax, 4201h ;~ 01A2:193E
-cs=0x1a2;eip=0x001941; 	R(_INT(0x21));	// 3029 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1941
+cs=0x1a2;eip=0x001941; 	S(_INT(0x21));	// 3029 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1941
 cs=0x1a2;eip=0x001943; 	T(SHL(edx, 0x10));	// 3031 shl     edx, 10h ;~ 01A2:1943
 cs=0x1a2;eip=0x001947; 	T(MOV(dx, ax));	// 3032 mov     dx, ax ;~ 01A2:1947
 cs=0x1a2;eip=0x001949; 	X(ADD(dword_257a0, edx));	// 3033 add     dword_257A0, edx ;~ 01A2:1949
@@ -3373,14 +3374,14 @@ cs=0x1a2;eip=0x00196f; 	T(XOR(cx, cx));	// 3046 xor     cx, cx ;~ 01A2:196F
 cs=0x1a2;eip=0x001971; 	T(XOR(dx, dx));	// 3047 xor     dx, dx ;~ 01A2:1971
 cs=0x1a2;eip=0x001973; 	T(MOV(bx, _fhandle_module));	// 3048 mov     bx, _fhandle_module ;~ 01A2:1973
 cs=0x1a2;eip=0x001977; 	T(MOV(ax, 0x4201));	// 3049 mov     ax, 4201h ;~ 01A2:1977
-cs=0x1a2;eip=0x00197a; 	R(_INT(0x21));	// 3050 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:197A
+cs=0x1a2;eip=0x00197a; 	S(_INT(0x21));	// 3050 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:197A
 cs=0x1a2;eip=0x00197c; 	T(MOV(dx, ax));	// 3052 mov     dx, ax ;~ 01A2:197C
 cs=0x1a2;eip=0x00197e; 	T(MOV(cx, dx));	// 3053 mov     cx, dx ;~ 01A2:197E
 cs=0x1a2;eip=0x001980; 	T(SUB(dx, 8));	// 3054 sub     dx, 8 ;~ 01A2:1980
 cs=0x1a2;eip=0x001983; 	T(SUB(cx, 0));	// 3055 sub     cx, 0 ;~ 01A2:1983
 cs=0x1a2;eip=0x001986; 	T(MOV(bx, _fhandle_module));	// 3056 mov     bx, _fhandle_module ;~ 01A2:1986
 cs=0x1a2;eip=0x00198a; 	T(MOV(ax, 0x4200));	// 3057 mov     ax, 4200h ;~ 01A2:198A
-cs=0x1a2;eip=0x00198d; 	R(_INT(0x21));	// 3058 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:198D
+cs=0x1a2;eip=0x00198d; 	S(_INT(0x21));	// 3058 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:198D
 cs=0x1a2;eip=0x00198f; 	J(JMP(loc_119af));	// 3060 jmp     short loc_119AF ;~ 01A2:198F
 loc_11991:
 	// 4589 
@@ -3392,7 +3393,7 @@ cs=0x1a2;eip=0x001999; 	T(MOV(dx, *(dw*)(((db*)&dword_257a0))));	// 3069 mov    
 cs=0x1a2;eip=0x00199d; 	T(MOV(cx, *(dw*)(((db*)&dword_257a0)+2)));	// 3070 mov     cx, word ptr dword_257A0+2 ;~ 01A2:199D
 cs=0x1a2;eip=0x0019a1; 	T(MOV(bx, _fhandle_module));	// 3071 mov     bx, _fhandle_module ;~ 01A2:19A1
 cs=0x1a2;eip=0x0019a5; 	T(MOV(ax, 0x4200));	// 3072 mov     ax, 4200h ;~ 01A2:19A5
-cs=0x1a2;eip=0x0019a8; 	R(_INT(0x21));	// 3073 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:19A8
+cs=0x1a2;eip=0x0019a8; 	S(_INT(0x21));	// 3073 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:19A8
 cs=0x1a2;eip=0x0019aa; 	J(JC(loc_119b2));	// 3075 jb      short loc_119B2 ;~ 01A2:19AA
 cs=0x1a2;eip=0x0019ac; 	J(JMP(loc_1191c));	// 3076 jmp     loc_1191C ;~ 01A2:19AC
 loc_119af:
@@ -3439,7 +3440,7 @@ cs=0x1a2;eip=0x0019b7; 	T(MOV(ecx, _myin));	// 3100 mov     ecx, _myin ;~ 01A2:1
 cs=0x1a2;eip=0x0019bc; 	T(MOV(bx, _fhandle_module));	// 3101 mov     bx, _fhandle_module ;~ 01A2:19BC
 cs=0x1a2;eip=0x0019c0; 	T(MOV(dx, di));	// 3102 mov     dx, di ;~ 01A2:19C0
 cs=0x1a2;eip=0x0019c2; 	T(MOV(ah, 0x3F));	// 3103 mov     ah, 3Fh ;~ 01A2:19C2
-cs=0x1a2;eip=0x0019c4; 	R(_INT(0x21));	// 3104 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:19C4
+cs=0x1a2;eip=0x0019c4; 	S(_INT(0x21));	// 3104 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:19C4
 cs=0x1a2;eip=0x0019c6; 	J(RETN(0));	// 3107 retn ;~ 01A2:19C6
 
     assert(0);
@@ -3507,7 +3508,7 @@ cs=0x1a2;eip=0x001a39; 	T(MOV(cx, 8));	// 3152 mov     cx, 8 ;~ 01A2:1A39
 cs=0x1a2;eip=0x001a3c; 	T(MOV(bx, _fhandle_module));	// 3153 mov     bx, _fhandle_module ;~ 01A2:1A3C
 cs=0x1a2;eip=0x001a40; 	T(MOV(dx, offset(seg003,_chrin)));	// 3154 mov     dx, offset _chrin ;~ 01A2:1A40
 cs=0x1a2;eip=0x001a43; 	T(MOV(ah, 0x3F));	// 3155 mov     ah, 3Fh ;~ 01A2:1A43
-cs=0x1a2;eip=0x001a45; 	R(_INT(0x21));	// 3156 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1A45
+cs=0x1a2;eip=0x001a45; 	S(_INT(0x21));	// 3156 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1A45
 cs=0x1a2;eip=0x001a47; 	J(JC(loc_11b3d));	// 3159 jb      loc_11B3D ;~ 01A2:1A47
 cs=0x1a2;eip=0x001a4b; 	T(MOV(eax, _myin));	// 3160 mov     eax, _myin ;~ 01A2:1A4B
 cs=0x1a2;eip=0x001a4f; 	X(MOV(dword_257a0, eax));	// 3161 mov     dword_257A0, eax ;~ 01A2:1A4F
@@ -3515,7 +3516,7 @@ cs=0x1a2;eip=0x001a53; 	T(XOR(cx, cx));	// 3162 xor     cx, cx ;~ 01A2:1A53
 cs=0x1a2;eip=0x001a55; 	T(XOR(dx, dx));	// 3163 xor     dx, dx ;~ 01A2:1A55
 cs=0x1a2;eip=0x001a57; 	T(MOV(bx, _fhandle_module));	// 3164 mov     bx, _fhandle_module ;~ 01A2:1A57
 cs=0x1a2;eip=0x001a5b; 	T(MOV(ax, 0x4201));	// 3165 mov     ax, 4201h ;~ 01A2:1A5B
-cs=0x1a2;eip=0x001a5e; 	R(_INT(0x21));	// 3166 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1A5E
+cs=0x1a2;eip=0x001a5e; 	S(_INT(0x21));	// 3166 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1A5E
 cs=0x1a2;eip=0x001a60; 	X(ADD(*(dw*)(((db*)&dword_257a0)), ax));	// 3168 add     word ptr dword_257A0, ax ;~ 01A2:1A60
 cs=0x1a2;eip=0x001a64; 	X(ADC(*(dw*)(((db*)&dword_257a0)+2), dx));	// 3169 adc     word ptr dword_257A0+2, dx ;~ 01A2:1A64
 cs=0x1a2;eip=0x001a68; 	T(MOV(eax, _chrin));	// 3170 mov     eax, _chrin ;~ 01A2:1A68
@@ -3566,7 +3567,7 @@ cs=0x1a2;eip=0x001ae3; 	T(MOV(bx, _fhandle_module));	// 3217 mov     bx, _fhandl
 cs=0x1a2;eip=0x001ae7; 	X(PUSH(ds));	// 3218 push    ds ;~ 01A2:1AE7
 cs=0x1a2;eip=0x001ae8; 	T(MOV(ds, ax));	// 3219 mov     ds, ax ;~ 01A2:1AE8
 cs=0x1a2;eip=0x001aea; 	T(MOV(ah, 0x3F));	// 3220 mov     ah, 3Fh ;~ 01A2:1AEA
-cs=0x1a2;eip=0x001aec; 	R(_INT(0x21));	// 3221 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1AEC
+cs=0x1a2;eip=0x001aec; 	S(_INT(0x21));	// 3221 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:1AEC
 cs=0x1a2;eip=0x001aee; 	X(POP(ds));	// 3224 pop     ds ;~ 01A2:1AEE
 cs=0x1a2;eip=0x001aef; 	J(JC(loc_11b3d));	// 3225 jb      short loc_11B3D ;~ 01A2:1AEF
 cs=0x1a2;eip=0x001af1; 	J(JMP(loc_11b28));	// 3226 jmp     short loc_11B28 ;~ 01A2:1AF1
@@ -3600,7 +3601,7 @@ cs=0x1a2;eip=0x001b28; 	T(MOV(dx, *(dw*)(((db*)&dword_257a0))));	// 3257 mov    
 cs=0x1a2;eip=0x001b2c; 	T(MOV(cx, *(dw*)(((db*)&dword_257a0)+2)));	// 3258 mov     cx, word ptr dword_257A0+2 ;~ 01A2:1B2C
 cs=0x1a2;eip=0x001b30; 	T(MOV(bx, _fhandle_module));	// 3259 mov     bx, _fhandle_module ;~ 01A2:1B30
 cs=0x1a2;eip=0x001b34; 	T(MOV(ax, 0x4200));	// 3260 mov     ax, 4200h ;~ 01A2:1B34
-cs=0x1a2;eip=0x001b37; 	R(_INT(0x21));	// 3261 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1B37
+cs=0x1a2;eip=0x001b37; 	S(_INT(0x21));	// 3261 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1B37
 cs=0x1a2;eip=0x001b39; 	J(JNC(loc_11a39));	// 3263 jnb     loc_11A39 ;~ 01A2:1B39
 loc_11b3d:
 	// 4602 
@@ -4005,13 +4006,13 @@ cs=0x1a2;eip=0x001d9e; 	J(JNZ(loc_11e00));	// 3590 jnz     short loc_11E00 ;~ 01
 cs=0x1a2;eip=0x001da0; 	T(CMP(*(dd*)(raddr(es,0x0E)), 0x30585858));	// 3591 cmp     dword ptr es:0Eh, 30585858h ; XXX0 ;~ 01A2:1DA0
 cs=0x1a2;eip=0x001daa; 	J(JNZ(loc_11e00));	// 3592 jnz     short loc_11E00 ;~ 01A2:1DAA
 cs=0x1a2;eip=0x001dac; 	T(MOV(ah, 0x40));	// 3593 mov     ah, 40h ; '@' ;~ 01A2:1DAC
-cs=0x1a2;eip=0x001dae; 	R(_INT(0x67));	// 3594 int     67h             ;  - LIM EMS - GET MANAGER STATUS ;~ 01A2:1DAE
+cs=0x1a2;eip=0x001dae; 	S(_INT(0x67));	// 3594 int     67h             ;  - LIM EMS - GET MANAGER STATUS ;~ 01A2:1DAE
 cs=0x1a2;eip=0x001db0; 	T(MOV(bx, ax));	// 3596 mov     bx, ax ;~ 01A2:1DB0
 cs=0x1a2;eip=0x001db2; 	T(MOV(ax, 2));	// 3597 mov     ax, 2 ;~ 01A2:1DB2
 cs=0x1a2;eip=0x001db5; 	T(OR(bh, bh));	// 3598 or      bh, bh ;~ 01A2:1DB5
 cs=0x1a2;eip=0x001db7; 	J(JNZ(loc_11e00));	// 3599 jnz     short loc_11E00 ;~ 01A2:1DB7
 cs=0x1a2;eip=0x001db9; 	T(MOV(ah, 0x46));	// 3600 mov     ah, 46h ; 'F' ;~ 01A2:1DB9
-cs=0x1a2;eip=0x001dbb; 	R(_INT(0x67));	// 3601 int     67h             ;  - LIM EMS - GET EMM VERSION ;~ 01A2:1DBB
+cs=0x1a2;eip=0x001dbb; 	S(_INT(0x67));	// 3601 int     67h             ;  - LIM EMS - GET EMM VERSION ;~ 01A2:1DBB
 cs=0x1a2;eip=0x001dbd; 	T(MOV(bx, ax));	// 3603 mov     bx, ax ;~ 01A2:1DBD
 cs=0x1a2;eip=0x001dbf; 	T(MOV(ax, 2));	// 3604 mov     ax, 2 ;~ 01A2:1DBF
 cs=0x1a2;eip=0x001dc2; 	T(OR(bh, bh));	// 3605 or      bh, bh ;~ 01A2:1DC2
@@ -4020,14 +4021,14 @@ cs=0x1a2;eip=0x001dc6; 	T(MOV(ax, 3));	// 3607 mov     ax, 3 ;~ 01A2:1DC6
 cs=0x1a2;eip=0x001dc9; 	T(CMP(bl, 0x40));	// 3608 cmp     bl, 40h ; '@' ;~ 01A2:1DC9
 cs=0x1a2;eip=0x001dcc; 	J(JC(loc_11e00));	// 3609 jb      short loc_11E00 ;~ 01A2:1DCC
 cs=0x1a2;eip=0x001dce; 	T(MOV(ah, 0x41));	// 3610 mov     ah, 41h ; 'A' ;~ 01A2:1DCE
-cs=0x1a2;eip=0x001dd0; 	R(_INT(0x67));	// 3611 int     67h             ;  - LIM EMS - GET PAGE FRAME SEGMENT ;~ 01A2:1DD0
+cs=0x1a2;eip=0x001dd0; 	S(_INT(0x67));	// 3611 int     67h             ;  - LIM EMS - GET PAGE FRAME SEGMENT ;~ 01A2:1DD0
 cs=0x1a2;eip=0x001dd2; 	T(CMP(ah, 0));	// 3614 cmp     ah, 0 ;~ 01A2:1DD2
 cs=0x1a2;eip=0x001dd5; 	T(MOV(ax, 2));	// 3615 mov     ax, 2 ;~ 01A2:1DD5
 cs=0x1a2;eip=0x001dd8; 	J(JNZ(loc_11e00));	// 3616 jnz     short loc_11E00 ;~ 01A2:1DD8
 cs=0x1a2;eip=0x001dda; 	X(MOV(_ems_pageframe, bx));	// 3617 mov     _ems_pageframe, bx ;~ 01A2:1DDA
 cs=0x1a2;eip=0x001dde; 	T(MOV(ah, 0x43));	// 3618 mov     ah, 43h ; 'C' ;~ 01A2:1DDE
 cs=0x1a2;eip=0x001de0; 	T(MOV(bx, 1));	// 3619 mov     bx, 1 ;~ 01A2:1DE0
-cs=0x1a2;eip=0x001de3; 	R(_INT(0x67));	// 3620 int     67h             ;  - LIM EMS - GET HANDLE AND ALLOCATE MEMORY ;~ 01A2:1DE3
+cs=0x1a2;eip=0x001de3; 	S(_INT(0x67));	// 3620 int     67h             ;  - LIM EMS - GET HANDLE AND ALLOCATE MEMORY ;~ 01A2:1DE3
 cs=0x1a2;eip=0x001de5; 	T(CMP(ah, 0));	// 3623 cmp     ah, 0 ;~ 01A2:1DE5
 cs=0x1a2;eip=0x001de8; 	T(MOV(ax, 8));	// 3624 mov     ax, 8 ;~ 01A2:1DE8
 cs=0x1a2;eip=0x001deb; 	J(JNZ(loc_11e00));	// 3625 jnz     short loc_11E00 ;~ 01A2:1DEB
@@ -4072,7 +4073,7 @@ cs=0x1a2;eip=0x001e09; 	T(MOV(bx, 0x8000));	// 3647 mov     bx, 8000h ;~ 01A2:1E
 cs=0x1a2;eip=0x001e0c; 	J(CALL(_ems_mapmem,0));	// 3648 call    _ems_mapmem ;~ 01A2:1E0C
 cs=0x1a2;eip=0x001e0f; 	T(MOV(dx, _ems_handle));	// 3649 mov     dx, _ems_handle ;~ 01A2:1E0F
 cs=0x1a2;eip=0x001e13; 	T(MOV(ah, 0x45));	// 3650 mov     ah, 45h ; 'E' ;~ 01A2:1E13
-cs=0x1a2;eip=0x001e15; 	R(_INT(0x67));	// 3651 int     67h             ;  - LIM EMS - RELEASE HANDLE AND MEMORY ;~ 01A2:1E15
+cs=0x1a2;eip=0x001e15; 	S(_INT(0x67));	// 3651 int     67h             ;  - LIM EMS - RELEASE HANDLE AND MEMORY ;~ 01A2:1E15
 cs=0x1a2;eip=0x001e17; 	X(MOV(_ems_log_pagenum, 0));	// 3654 mov     _ems_log_pagenum, 0 ;~ 01A2:1E17
 locret_11e1d:
 	// 4623 
@@ -4107,7 +4108,7 @@ cs=0x1a2;eip=0x001e23; 	J(JNZ(locret_11e36));	// 3666 jnz     short locret_11E36
 cs=0x1a2;eip=0x001e25; 	T(MOV(dx, _ems_handle));	// 3667 mov     dx, _ems_handle ;~ 01A2:1E25
 cs=0x1a2;eip=0x001e29; 	T(MOV(bx, 1));	// 3668 mov     bx, 1 ;~ 01A2:1E29
 cs=0x1a2;eip=0x001e2c; 	T(MOV(ah, 0x51));	// 3669 mov     ah, 51h ; 'Q' ;~ 01A2:1E2C
-cs=0x1a2;eip=0x001e2e; 	R(_INT(0x67));	// 3670 int     67h             ;  - LIM EMS 4.0 - REALLOCATE PAGES ;~ 01A2:1E2E
+cs=0x1a2;eip=0x001e2e; 	S(_INT(0x67));	// 3670 int     67h             ;  - LIM EMS 4.0 - REALLOCATE PAGES ;~ 01A2:1E2E
 cs=0x1a2;eip=0x001e30; 	X(MOV(_ems_log_pagenum, 0));	// 3675 mov     _ems_log_pagenum, 0 ;~ 01A2:1E30
 locret_11e36:
 	// 4624 
@@ -4176,7 +4177,7 @@ loc_11e51:
 	// 4626 
 cs=0x1a2;eip=0x001e51; 	T(MOV(dx, _ems_handle));	// 3706 mov     dx, _ems_handle ;~ 01A2:1E51
 cs=0x1a2;eip=0x001e55; 	T(MOV(ax, 0x4700));	// 3707 mov     ax, 4700h ;~ 01A2:1E55
-cs=0x1a2;eip=0x001e58; 	R(_INT(0x67));	// 3708 int     67h             ;  - LIM EMS - SAVE MAPPING CONTEXT ;~ 01A2:1E58
+cs=0x1a2;eip=0x001e58; 	S(_INT(0x67));	// 3708 int     67h             ;  - LIM EMS - SAVE MAPPING CONTEXT ;~ 01A2:1E58
 cs=0x1a2;eip=0x001e5a; 	T(CMP(ah, 0));	// 3711 cmp     ah, 0 ;~ 01A2:1E5A
 cs=0x1a2;eip=0x001e5d; 	J(JZ(locret_11e67));	// 3712 jz      short locret_11E67 ;~ 01A2:1E5D
 cs=0x1a2;eip=0x001e5f; 	T(DEC(cx));	// 3713 dec     cx ;~ 01A2:1E5F
@@ -4220,7 +4221,7 @@ loc_11e79:
 	// 4628 
 cs=0x1a2;eip=0x001e79; 	T(MOV(dx, _ems_handle));	// 3735 mov     dx, _ems_handle ;~ 01A2:1E79
 cs=0x1a2;eip=0x001e7d; 	T(MOV(ax, 0x4800));	// 3736 mov     ax, 4800h ;~ 01A2:1E7D
-cs=0x1a2;eip=0x001e80; 	R(_INT(0x67));	// 3737 int     67h             ;  - LIM EMS - RESTORE MAPPING CONTEXT ;~ 01A2:1E80
+cs=0x1a2;eip=0x001e80; 	S(_INT(0x67));	// 3737 int     67h             ;  - LIM EMS - RESTORE MAPPING CONTEXT ;~ 01A2:1E80
 cs=0x1a2;eip=0x001e82; 	T(CMP(ah, 0));	// 3740 cmp     ah, 0 ;~ 01A2:1E82
 cs=0x1a2;eip=0x001e85; 	J(JZ(locret_11e8a));	// 3741 jz      short locret_11E8A ;~ 01A2:1E85
 cs=0x1a2;eip=0x001e87; 	T(DEC(cx));	// 3742 dec     cx ;~ 01A2:1E87
@@ -4266,7 +4267,7 @@ cs=0x1a2;eip=0x001e9e; 	X(PUSH(bx));	// 3765 push    bx ;~ 01A2:1E9E
 cs=0x1a2;eip=0x001e9f; 	T(MOV(dx, _ems_handle));	// 3766 mov     dx, _ems_handle ;~ 01A2:1E9F
 cs=0x1a2;eip=0x001ea3; 	X(PUSH(bx));	// 3767 push    bx ;~ 01A2:1EA3
 cs=0x1a2;eip=0x001ea4; 	T(MOV(ax, 0x4400));	// 3768 mov     ax, 4400h ;~ 01A2:1EA4
-cs=0x1a2;eip=0x001ea7; 	R(_INT(0x67));	// 3769 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EA7
+cs=0x1a2;eip=0x001ea7; 	S(_INT(0x67));	// 3769 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EA7
 cs=0x1a2;eip=0x001ea9; 	X(POP(bx));	// 3773 pop     bx ;~ 01A2:1EA9
 cs=0x1a2;eip=0x001eaa; 	T(INC(bx));	// 3774 inc     bx ;~ 01A2:1EAA
 cs=0x1a2;eip=0x001eab; 	J(JZ(loc_11eb3));	// 3775 jz      short loc_11EB3 ;~ 01A2:1EAB
@@ -4278,7 +4279,7 @@ cs=0x1a2;eip=0x001eb3; 	T(MOV(bx, 0x0FFFF));	// 3780 mov     bx, 0FFFFh ;~ 01A2:
 loc_11eb6:
 	// 4632 
 cs=0x1a2;eip=0x001eb6; 	T(MOV(ax, 0x4401));	// 3783 mov     ax, 4401h ;~ 01A2:1EB6
-cs=0x1a2;eip=0x001eb9; 	R(_INT(0x67));	// 3784 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EB9
+cs=0x1a2;eip=0x001eb9; 	S(_INT(0x67));	// 3784 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EB9
 cs=0x1a2;eip=0x001ebb; 	T(CMP(ah, 0));	// 3788 cmp     ah, 0 ;~ 01A2:1EBB
 cs=0x1a2;eip=0x001ebe; 	X(POP(bx));	// 3789 pop     bx ;~ 01A2:1EBE
 cs=0x1a2;eip=0x001ebf; 	J(JZ(locret_11ec4));	// 3790 jz      short locret_11EC4 ;~ 01A2:1EBF
@@ -4327,7 +4328,7 @@ cs=0x1a2;eip=0x001ed8; 	X(PUSH(bx));	// 3814 push    bx ;~ 01A2:1ED8
 cs=0x1a2;eip=0x001ed9; 	T(MOV(dx, _ems_handle));	// 3815 mov     dx, _ems_handle ;~ 01A2:1ED9
 cs=0x1a2;eip=0x001edd; 	X(PUSH(bx));	// 3816 push    bx ;~ 01A2:1EDD
 cs=0x1a2;eip=0x001ede; 	T(MOV(ax, 0x4402));	// 3817 mov     ax, 4402h ;~ 01A2:1EDE
-cs=0x1a2;eip=0x001ee1; 	R(_INT(0x67));	// 3818 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EE1
+cs=0x1a2;eip=0x001ee1; 	S(_INT(0x67));	// 3818 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EE1
 cs=0x1a2;eip=0x001ee3; 	X(POP(bx));	// 3822 pop     bx ;~ 01A2:1EE3
 cs=0x1a2;eip=0x001ee4; 	T(INC(bx));	// 3823 inc     bx ;~ 01A2:1EE4
 cs=0x1a2;eip=0x001ee5; 	J(JZ(loc_11eed));	// 3824 jz      short loc_11EED ;~ 01A2:1EE5
@@ -4339,7 +4340,7 @@ cs=0x1a2;eip=0x001eed; 	T(MOV(bx, 0x0FFFF));	// 3829 mov     bx, 0FFFFh ;~ 01A2:
 loc_11ef0:
 	// 4636 
 cs=0x1a2;eip=0x001ef0; 	T(MOV(ax, 0x4403));	// 3832 mov     ax, 4403h ;~ 01A2:1EF0
-cs=0x1a2;eip=0x001ef3; 	R(_INT(0x67));	// 3833 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EF3
+cs=0x1a2;eip=0x001ef3; 	S(_INT(0x67));	// 3833 int     67h             ;  - LIM EMS - MAP MEMORY ;~ 01A2:1EF3
 cs=0x1a2;eip=0x001ef5; 	T(CMP(ah, 0));	// 3837 cmp     ah, 0 ;~ 01A2:1EF5
 cs=0x1a2;eip=0x001ef8; 	X(POP(bx));	// 3838 pop     bx ;~ 01A2:1EF8
 cs=0x1a2;eip=0x001ef9; 	J(JZ(locret_11efe));	// 3839 jz      short locret_11EFE ;~ 01A2:1EF9
@@ -4389,7 +4390,7 @@ cs=0x1a2;eip=0x001f1b; 	T(MOV(ah, 0x51));	// 3862 mov     ah, 51h ; 'Q' ;~ 01A2:
 cs=0x1a2;eip=0x001f1d; 	T(MOV(dx, _ems_handle));	// 3863 mov     dx, _ems_handle ;~ 01A2:1F1D
 cs=0x1a2;eip=0x001f21; 	T(ADD(bx, _ems_log_pagenum));	// 3864 add     bx, _ems_log_pagenum ;~ 01A2:1F21
 cs=0x1a2;eip=0x001f25; 	X(PUSH(bx));	// 3865 push    bx ;~ 01A2:1F25
-cs=0x1a2;eip=0x001f26; 	R(_INT(0x67));	// 3866 int     67h             ;  - LIM EMS 4.0 - REALLOCATE PAGES ;~ 01A2:1F26
+cs=0x1a2;eip=0x001f26; 	S(_INT(0x67));	// 3866 int     67h             ;  - LIM EMS 4.0 - REALLOCATE PAGES ;~ 01A2:1F26
 cs=0x1a2;eip=0x001f28; 	X(POP(bx));	// 3871 pop     bx ;~ 01A2:1F28
 cs=0x1a2;eip=0x001f29; 	T(CMP(ah, 0));	// 3872 cmp     ah, 0 ;~ 01A2:1F29
 cs=0x1a2;eip=0x001f2c; 	J(JNZ(loc_11f3c));	// 3873 jnz     short loc_11F3C ;~ 01A2:1F2C
@@ -4461,7 +4462,7 @@ cs=0x1a2;eip=0x001f9a; 	T(MOV(dx, *(dw*)(raddr(ds,di+0x38))));	// 3923 mov     d
 cs=0x1a2;eip=0x001f9d; 	T(MOV(cx, *(dw*)(raddr(ds,di+0x3A))));	// 3924 mov     cx, [di+3Ah] ;~ 01A2:1F9D
 cs=0x1a2;eip=0x001fa0; 	T(MOV(bx, _fhandle_module));	// 3925 mov     bx, _fhandle_module ;~ 01A2:1FA0
 cs=0x1a2;eip=0x001fa4; 	T(MOV(ax, 0x4200));	// 3926 mov     ax, 4200h ;~ 01A2:1FA4
-cs=0x1a2;eip=0x001fa7; 	R(_INT(0x21));	// 3927 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1FA7
+cs=0x1a2;eip=0x001fa7; 	S(_INT(0x21));	// 3927 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:1FA7
 loc_11fa9:
 	// 4640 
 cs=0x1a2;eip=0x001fa9; 	T(MOV(bx, _fhandle_module));	// 3931 mov     bx, _fhandle_module ;~ 01A2:1FA9
@@ -4519,7 +4520,7 @@ cs=0x1a2;eip=0x002018; 	T(MOV(dx, *(dw*)(raddr(ds,di+0x38))));	// 3985 mov     d
 cs=0x1a2;eip=0x00201b; 	T(MOV(cx, *(dw*)(raddr(ds,di+0x3A))));	// 3986 mov     cx, [di+3Ah] ;~ 01A2:201B
 cs=0x1a2;eip=0x00201e; 	T(MOV(bx, _fhandle_module));	// 3987 mov     bx, _fhandle_module ;~ 01A2:201E
 cs=0x1a2;eip=0x002022; 	T(MOV(ax, 0x4200));	// 3988 mov     ax, 4200h ;~ 01A2:2022
-cs=0x1a2;eip=0x002025; 	R(_INT(0x21));	// 3989 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:2025
+cs=0x1a2;eip=0x002025; 	S(_INT(0x21));	// 3989 int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK) ;~ 01A2:2025
 loc_12027:
 	// 4647 
 cs=0x1a2;eip=0x002027; 	T(TEST(*(raddr(ds,di+0x3C)), 4));	// 3993 test    byte ptr [di+3Ch], 4 ;~ 01A2:2027
@@ -4564,7 +4565,7 @@ cs=0x1a2;eip=0x00208e; 	T(MOV(ah, 0x3F));	// 4032 mov     ah, 3Fh ; '?' ;~ 01A2:
 cs=0x1a2;eip=0x002090; 	X(PUSH(di));	// 4033 push    di ;~ 01A2:2090
 cs=0x1a2;eip=0x002091; 	X(PUSH(ds));	// 4034 push    ds ;~ 01A2:2091
 cs=0x1a2;eip=0x002092; 	T(LDS(dx, _audio_buf_pointer));	// 4035 lds     dx, _audio_buf_pointer ;~ 01A2:2092
-cs=0x1a2;eip=0x002096; 	R(_INT(0x21));	// 4036 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:2096
+cs=0x1a2;eip=0x002096; 	S(_INT(0x21));	// 4036 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:2096
 cs=0x1a2;eip=0x002098; 	X(POP(ds));	// 4039 pop     ds ;~ 01A2:2098
 cs=0x1a2;eip=0x002099; 	X(POP(di));	// 4040 pop     di ;~ 01A2:2099
 cs=0x1a2;eip=0x00209a; 	X(ADC(word_24662, 0));	// 4041 adc     word_24662, 0 ;~ 01A2:209A
@@ -4589,7 +4590,7 @@ cs=0x1a2;eip=0x0020cc; 	X(PUSH(di));	// 4061 push    di ;~ 01A2:20CC
 cs=0x1a2;eip=0x0020cd; 	X(PUSH(cx));	// 4062 push    cx ;~ 01A2:20CD
 cs=0x1a2;eip=0x0020ce; 	X(PUSH(ds));	// 4063 push    ds ;~ 01A2:20CE
 cs=0x1a2;eip=0x0020cf; 	T(LDS(dx, _audio_buf_pointer));	// 4064 lds     dx, _audio_buf_pointer ;~ 01A2:20CF
-cs=0x1a2;eip=0x0020d3; 	R(_INT(0x21));	// 4065 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:20D3
+cs=0x1a2;eip=0x0020d3; 	S(_INT(0x21));	// 4065 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:20D3
 cs=0x1a2;eip=0x0020d5; 	X(POP(ds));	// 4068 pop     ds ;~ 01A2:20D5
 cs=0x1a2;eip=0x0020d6; 	X(POP(cx));	// 4069 pop     cx ;~ 01A2:20D6
 cs=0x1a2;eip=0x0020d7; 	X(POP(di));	// 4070 pop     di ;~ 01A2:20D7
@@ -4862,7 +4863,7 @@ cs=0x1a2;eip=0x002277; 	X(PUSH(es));	// 4278 push    es ;~ 01A2:2277
 cs=0x1a2;eip=0x002278; 	X(PUSH(ds));	// 4279 push    ds ;~ 01A2:2278
 cs=0x1a2;eip=0x002279; 	T(MOV(ds, bp));	// 4280 mov     ds, bp ;~ 01A2:2279
 cs=0x1a2;eip=0x00227b; 	T(MOV(ah, 0x3F));	// 4282 mov     ah, 3Fh ;~ 01A2:227B
-cs=0x1a2;eip=0x00227d; 	R(_INT(0x21));	// 4283 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:227D
+cs=0x1a2;eip=0x00227d; 	S(_INT(0x21));	// 4283 int     21h             ; DOS - 2+ - READ FROM FILE WITH HANDLE ;~ 01A2:227D
 cs=0x1a2;eip=0x00227f; 	X(POP(ds));	// 4286 pop     ds ;~ 01A2:227F
 cs=0x1a2;eip=0x002280; 	X(PUSHF);	// 4288 pushf ;~ 01A2:2280
 cs=0x1a2;eip=0x002281; 	X(PUSH(ax));	// 4289 push    ax ;~ 01A2:2281
@@ -5565,19 +5566,19 @@ cs=0x1a2;eip=0x00272e; 	T(CLI);	// 4855 cli ;~ 01A2:272E
 cs=0x1a2;eip=0x00272f; 	T(MOV(dx, _gravis_port));	// 4856 mov     dx, _gravis_port ;~ 01A2:272F
 cs=0x1a2;eip=0x002733; 	T(DEC(dx));	// 4857 dec     dx ;~ 01A2:2733
 cs=0x1a2;eip=0x002734; 	T(MOV(al, *(raddr(ds,si+0x18))));	// 4858 mov     al, [si+18h] ;~ 01A2:2734
-cs=0x1a2;eip=0x002737; 	R(OUT(dx, al));	// 4859 out     dx, al ;~ 01A2:2737
+cs=0x1a2;eip=0x002737; 	S(OUT(dx, al));	// 4859 out     dx, al ;~ 01A2:2737
 cs=0x1a2;eip=0x002738; 	T(INC(dx));	// 4860 inc     dx ;~ 01A2:2738
 cs=0x1a2;eip=0x002739; 	T(MOV(al, 0x8A));	// 4861 mov     al, 8Ah ; 'Š' ;~ 01A2:2739
-cs=0x1a2;eip=0x00273b; 	R(OUT(dx, al));	// 4862 out     dx, al ;~ 01A2:273B
+cs=0x1a2;eip=0x00273b; 	S(OUT(dx, al));	// 4862 out     dx, al ;~ 01A2:273B
 cs=0x1a2;eip=0x00273c; 	T(INC(dx));	// 4863 inc     dx ;~ 01A2:273C
-cs=0x1a2;eip=0x00273d; 	R(IN(ax, dx));	// 4864 in      ax, dx ;~ 01A2:273D
+cs=0x1a2;eip=0x00273d; 	S(IN(ax, dx));	// 4864 in      ax, dx ;~ 01A2:273D
 cs=0x1a2;eip=0x00273e; 	T(DEC(dx));	// 4865 dec     dx ;~ 01A2:273E
 cs=0x1a2;eip=0x00273f; 	T(AND(ah, 0x1F));	// 4866 and     ah, 1Fh ;~ 01A2:273F
 cs=0x1a2;eip=0x002742; 	T(SHL(eax, 0x10));	// 4867 shl     eax, 10h ;~ 01A2:2742
 cs=0x1a2;eip=0x002746; 	T(MOV(al, 0x8B));	// 4868 mov     al, 8Bh ; '‹' ;~ 01A2:2746
-cs=0x1a2;eip=0x002748; 	R(OUT(dx, al));	// 4869 out     dx, al ;~ 01A2:2748
+cs=0x1a2;eip=0x002748; 	S(OUT(dx, al));	// 4869 out     dx, al ;~ 01A2:2748
 cs=0x1a2;eip=0x002749; 	T(INC(dx));	// 4870 inc     dx ;~ 01A2:2749
-cs=0x1a2;eip=0x00274a; 	R(IN(ax, dx));	// 4871 in      ax, dx ;~ 01A2:274A
+cs=0x1a2;eip=0x00274a; 	S(IN(ax, dx));	// 4871 in      ax, dx ;~ 01A2:274A
 cs=0x1a2;eip=0x00274b; 	T(DEC(dx));	// 4872 dec     dx ;~ 01A2:274B
 cs=0x1a2;eip=0x00274c; 	X(POPF);	// 4873 popf ;~ 01A2:274C
 cs=0x1a2;eip=0x00274d; 	X(MOV(*(dd*)(raddr(ds,si+4)), eax));	// 4874 mov     [si+4], eax ;~ 01A2:274D
@@ -7038,13 +7039,13 @@ cs=0x1a2;eip=0x00325d; 	T(CLI);	// 6426 cli ;~ 01A2:325D
 cs=0x1a2;eip=0x00325e; 	T(MOV(dx, _gravis_port));	// 6427 mov     dx, _gravis_port ;~ 01A2:325E
 cs=0x1a2;eip=0x003262; 	T(DEC(dx));	// 6428 dec     dx ;~ 01A2:3262
 cs=0x1a2;eip=0x003263; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 6429 mov     al, [bx+18h] ;~ 01A2:3263
-cs=0x1a2;eip=0x003266; 	R(OUT(dx, al));	// 6430 out     dx, al ;~ 01A2:3266
+cs=0x1a2;eip=0x003266; 	S(OUT(dx, al));	// 6430 out     dx, al ;~ 01A2:3266
 cs=0x1a2;eip=0x003267; 	T(INC(dx));	// 6431 inc     dx ;~ 01A2:3267
 cs=0x1a2;eip=0x003268; 	T(MOV(al, 1));	// 6432 mov     al, 1 ;~ 01A2:3268
-cs=0x1a2;eip=0x00326a; 	R(OUT(dx, al));	// 6433 out     dx, al ;~ 01A2:326A
+cs=0x1a2;eip=0x00326a; 	S(OUT(dx, al));	// 6433 out     dx, al ;~ 01A2:326A
 cs=0x1a2;eip=0x00326b; 	T(INC(dx));	// 6434 inc     dx ;~ 01A2:326B
 cs=0x1a2;eip=0x00326c; 	T(MOV(ax, cx));	// 6435 mov     ax, cx ;~ 01A2:326C
-cs=0x1a2;eip=0x00326e; 	R(OUT(dx, ax));	// 6436 out     dx, ax ;~ 01A2:326E
+cs=0x1a2;eip=0x00326e; 	S(OUT(dx, ax));	// 6436 out     dx, ax ;~ 01A2:326E
 cs=0x1a2;eip=0x00326f; 	T(DEC(dx));	// 6437 dec     dx ;~ 01A2:326F
 cs=0x1a2;eip=0x003270; 	X(POPF);	// 6438 popf ;~ 01A2:3270
 locret_13271:
@@ -7062,19 +7063,19 @@ cs=0x1a2;eip=0x003287; 	T(DEC(dx));	// 6457 dec     dx ;~ 01A2:3287
 cs=0x1a2;eip=0x003288; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 6458 mov     al, [bx+18h] ;~ 01A2:3288
 cs=0x1a2;eip=0x00328b; 	X(PUSHF);	// 6459 pushf ;~ 01A2:328B
 cs=0x1a2;eip=0x00328c; 	T(CLI);	// 6460 cli ;~ 01A2:328C
-cs=0x1a2;eip=0x00328d; 	R(OUT(dx, al));	// 6461 out     dx, al ;~ 01A2:328D
+cs=0x1a2;eip=0x00328d; 	S(OUT(dx, al));	// 6461 out     dx, al ;~ 01A2:328D
 cs=0x1a2;eip=0x00328e; 	T(INC(dx));	// 6462 inc     dx ;~ 01A2:328E
 cs=0x1a2;eip=0x00328f; 	T(MOV(al, 0));	// 6463 mov     al, 0 ;~ 01A2:328F
-cs=0x1a2;eip=0x003291; 	R(OUT(dx, al));	// 6464 out     dx, al ;~ 01A2:3291
+cs=0x1a2;eip=0x003291; 	S(OUT(dx, al));	// 6464 out     dx, al ;~ 01A2:3291
 cs=0x1a2;eip=0x003292; 	T(ADD(dl, 2));	// 6465 add     dl, 2 ;~ 01A2:3292
 cs=0x1a2;eip=0x003295; 	T(MOV(al, 3));	// 6466 mov     al, 3 ;~ 01A2:3295
-cs=0x1a2;eip=0x003297; 	R(OUT(dx, al));	// 6467 out     dx, al ;~ 01A2:3297
+cs=0x1a2;eip=0x003297; 	S(OUT(dx, al));	// 6467 out     dx, al ;~ 01A2:3297
 cs=0x1a2;eip=0x003298; 	T(SUB(dl, 2));	// 6468 sub     dl, 2 ;~ 01A2:3298
 cs=0x1a2;eip=0x00329b; 	T(MOV(al, 9));	// 6469 mov     al, 9 ;~ 01A2:329B
-cs=0x1a2;eip=0x00329d; 	R(OUT(dx, al));	// 6470 out     dx, al ;~ 01A2:329D
+cs=0x1a2;eip=0x00329d; 	S(OUT(dx, al));	// 6470 out     dx, al ;~ 01A2:329D
 cs=0x1a2;eip=0x00329e; 	T(INC(dx));	// 6471 inc     dx ;~ 01A2:329E
 cs=0x1a2;eip=0x00329f; 	T(XOR(ax, ax));	// 6472 xor     ax, ax ;~ 01A2:329F
-cs=0x1a2;eip=0x0032a1; 	R(OUT(dx, ax));	// 6473 out     dx, ax ;~ 01A2:32A1
+cs=0x1a2;eip=0x0032a1; 	S(OUT(dx, ax));	// 6473 out     dx, ax ;~ 01A2:32A1
 cs=0x1a2;eip=0x0032a2; 	T(DEC(dx));	// 6474 dec     dx ;~ 01A2:32A2
 cs=0x1a2;eip=0x0032a3; 	X(MOV(*(raddr(ds,bx+0x35)), 0));	// 6475 mov     byte ptr [bx+35h], 0 ;~ 01A2:32A3
 cs=0x1a2;eip=0x0032a7; 	X(POPF);	// 6476 popf ;~ 01A2:32A7
@@ -7112,18 +7113,18 @@ cs=0x1a2;eip=0x0032eb; 	X(PUSHF);	// 6513 pushf ;~ 01A2:32EB
 cs=0x1a2;eip=0x0032ec; 	T(MOV(dx, _gravis_port));	// 6514 mov     dx, _gravis_port ;~ 01A2:32EC
 cs=0x1a2;eip=0x0032f0; 	T(DEC(dx));	// 6515 dec     dx ;~ 01A2:32F0
 cs=0x1a2;eip=0x0032f1; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 6516 mov     al, [bx+18h] ;~ 01A2:32F1
-cs=0x1a2;eip=0x0032f4; 	R(OUT(dx, al));	// 6517 out     dx, al ;~ 01A2:32F4
+cs=0x1a2;eip=0x0032f4; 	S(OUT(dx, al));	// 6517 out     dx, al ;~ 01A2:32F4
 cs=0x1a2;eip=0x0032f5; 	T(INC(dx));	// 6518 inc     dx ;~ 01A2:32F5
 cs=0x1a2;eip=0x0032f6; 	T(MOV(al, 0x0D));	// 6519 mov     al, 0Dh ;~ 01A2:32F6
-cs=0x1a2;eip=0x0032f8; 	R(OUT(dx, al));	// 6520 out     dx, al ;~ 01A2:32F8
+cs=0x1a2;eip=0x0032f8; 	S(OUT(dx, al));	// 6520 out     dx, al ;~ 01A2:32F8
 cs=0x1a2;eip=0x0032f9; 	T(ADD(dl, 2));	// 6521 add     dl, 2 ;~ 01A2:32F9
 cs=0x1a2;eip=0x0032fc; 	T(MOV(al, 3));	// 6522 mov     al, 3 ;~ 01A2:32FC
-cs=0x1a2;eip=0x0032fe; 	R(OUT(dx, al));	// 6523 out     dx, al ;~ 01A2:32FE
+cs=0x1a2;eip=0x0032fe; 	S(OUT(dx, al));	// 6523 out     dx, al ;~ 01A2:32FE
 cs=0x1a2;eip=0x0032ff; 	T(SUB(dl, 2));	// 6524 sub     dl, 2 ;~ 01A2:32FF
 cs=0x1a2;eip=0x003302; 	T(MOV(al, 0x89));	// 6525 mov     al, 89h ; '‰' ;~ 01A2:3302
-cs=0x1a2;eip=0x003304; 	R(OUT(dx, al));	// 6526 out     dx, al ;~ 01A2:3304
+cs=0x1a2;eip=0x003304; 	S(OUT(dx, al));	// 6526 out     dx, al ;~ 01A2:3304
 cs=0x1a2;eip=0x003305; 	T(INC(dx));	// 6527 inc     dx ;~ 01A2:3305
-cs=0x1a2;eip=0x003306; 	R(IN(ax, dx));	// 6528 in      ax, dx ;~ 01A2:3306
+cs=0x1a2;eip=0x003306; 	S(IN(ax, dx));	// 6528 in      ax, dx ;~ 01A2:3306
 cs=0x1a2;eip=0x003307; 	T(DEC(dx));	// 6529 dec     dx ;~ 01A2:3307
 cs=0x1a2;eip=0x003308; 	T(OR(ah, 0x80));	// 6530 or      ah, 80h ;~ 01A2:3308
 cs=0x1a2;eip=0x00330b; 	T(CMP(ah, ch));	// 6531 cmp     ah, ch ;~ 01A2:330B
@@ -7139,28 +7140,28 @@ cs=0x1a2;eip=0x00331a; 	T(SUB(di, ax));	// 6540 sub     di, ax ;~ 01A2:331A
 cs=0x1a2;eip=0x00331c; 	T(CMP(di, 0x300));	// 6541 cmp     di, 300h ;~ 01A2:331C
 cs=0x1a2;eip=0x003320; 	J(JBE(loc_13356));	// 6542 jbe     short loc_13356 ;~ 01A2:3320
 cs=0x1a2;eip=0x003322; 	T(MOV(al, 7));	// 6543 mov     al, 7 ;~ 01A2:3322
-cs=0x1a2;eip=0x003324; 	R(OUT(dx, al));	// 6544 out     dx, al ;~ 01A2:3324
+cs=0x1a2;eip=0x003324; 	S(OUT(dx, al));	// 6544 out     dx, al ;~ 01A2:3324
 cs=0x1a2;eip=0x003325; 	T(ADD(dl, 2));	// 6545 add     dl, 2 ;~ 01A2:3325
 cs=0x1a2;eip=0x003328; 	T(MOV(al, ah));	// 6546 mov     al, ah ;~ 01A2:3328
-cs=0x1a2;eip=0x00332a; 	R(OUT(dx, al));	// 6547 out     dx, al ;~ 01A2:332A
+cs=0x1a2;eip=0x00332a; 	S(OUT(dx, al));	// 6547 out     dx, al ;~ 01A2:332A
 cs=0x1a2;eip=0x00332b; 	T(SUB(dl, 2));	// 6548 sub     dl, 2 ;~ 01A2:332B
 cs=0x1a2;eip=0x00332e; 	T(MOV(al, 8));	// 6549 mov     al, 8 ;~ 01A2:332E
-cs=0x1a2;eip=0x003330; 	R(OUT(dx, al));	// 6550 out     dx, al ;~ 01A2:3330
+cs=0x1a2;eip=0x003330; 	S(OUT(dx, al));	// 6550 out     dx, al ;~ 01A2:3330
 cs=0x1a2;eip=0x003331; 	T(ADD(dl, 2));	// 6551 add     dl, 2 ;~ 01A2:3331
 cs=0x1a2;eip=0x003334; 	T(MOV(al, ch));	// 6552 mov     al, ch ;~ 01A2:3334
-cs=0x1a2;eip=0x003336; 	R(OUT(dx, al));	// 6553 out     dx, al ;~ 01A2:3336
+cs=0x1a2;eip=0x003336; 	S(OUT(dx, al));	// 6553 out     dx, al ;~ 01A2:3336
 cs=0x1a2;eip=0x003337; 	T(SUB(dl, 2));	// 6554 sub     dl, 2 ;~ 01A2:3337
 cs=0x1a2;eip=0x00333a; 	T(MOV(al, 6));	// 6555 mov     al, 6 ;~ 01A2:333A
-cs=0x1a2;eip=0x00333c; 	R(OUT(dx, al));	// 6556 out     dx, al ;~ 01A2:333C
+cs=0x1a2;eip=0x00333c; 	S(OUT(dx, al));	// 6556 out     dx, al ;~ 01A2:333C
 cs=0x1a2;eip=0x00333d; 	T(ADD(dl, 2));	// 6557 add     dl, 2 ;~ 01A2:333D
 cs=0x1a2;eip=0x003340; 	T(MOV(al, 0x30));	// 6558 mov     al, 30h ; '0' ;~ 01A2:3340
-cs=0x1a2;eip=0x003342; 	R(OUT(dx, al));	// 6559 out     dx, al ;~ 01A2:3342
+cs=0x1a2;eip=0x003342; 	S(OUT(dx, al));	// 6559 out     dx, al ;~ 01A2:3342
 cs=0x1a2;eip=0x003343; 	T(SUB(dl, 2));	// 6560 sub     dl, 2 ;~ 01A2:3343
 cs=0x1a2;eip=0x003346; 	T(MOV(al, 0x0D));	// 6561 mov     al, 0Dh ;~ 01A2:3346
-cs=0x1a2;eip=0x003348; 	R(OUT(dx, al));	// 6562 out     dx, al ;~ 01A2:3348
+cs=0x1a2;eip=0x003348; 	S(OUT(dx, al));	// 6562 out     dx, al ;~ 01A2:3348
 cs=0x1a2;eip=0x003349; 	T(ADD(dl, 2));	// 6563 add     dl, 2 ;~ 01A2:3349
 cs=0x1a2;eip=0x00334c; 	T(MOV(al, cl));	// 6564 mov     al, cl ;~ 01A2:334C
-cs=0x1a2;eip=0x00334e; 	R(OUT(dx, al));	// 6565 out     dx, al ;~ 01A2:334E
+cs=0x1a2;eip=0x00334e; 	S(OUT(dx, al));	// 6565 out     dx, al ;~ 01A2:334E
 cs=0x1a2;eip=0x00334f; 	T(SUB(dl, 2));	// 6566 sub     dl, 2 ;~ 01A2:334F
 cs=0x1a2;eip=0x003352; 	X(POPF);	// 6567 popf ;~ 01A2:3352
 cs=0x1a2;eip=0x003353; 	X(POP(di));	// 6568 pop     di ;~ 01A2:3353
@@ -7171,10 +7172,10 @@ cs=0x1a2;eip=0x003355; 	J(RETN(0));	// 6572 retn ;~ 01A2:3355
 loc_13356:
 	// 4788 
 cs=0x1a2;eip=0x003356; 	T(MOV(al, 9));	// 6577 mov     al, 9 ;~ 01A2:3356
-cs=0x1a2;eip=0x003358; 	R(OUT(dx, al));	// 6578 out     dx, al ;~ 01A2:3358
+cs=0x1a2;eip=0x003358; 	S(OUT(dx, al));	// 6578 out     dx, al ;~ 01A2:3358
 cs=0x1a2;eip=0x003359; 	T(INC(dx));	// 6579 inc     dx ;~ 01A2:3359
 cs=0x1a2;eip=0x00335a; 	T(MOV(ax, *(dw*)(raddr(ds,bx+0x36))));	// 6580 mov     ax, [bx+36h] ;~ 01A2:335A
-cs=0x1a2;eip=0x00335d; 	R(OUT(dx, ax));	// 6581 out     dx, ax ;~ 01A2:335D
+cs=0x1a2;eip=0x00335d; 	S(OUT(dx, ax));	// 6581 out     dx, ax ;~ 01A2:335D
 cs=0x1a2;eip=0x00335e; 	T(DEC(dx));	// 6582 dec     dx ;~ 01A2:335E
 cs=0x1a2;eip=0x00335f; 	X(POPF);	// 6583 popf ;~ 01A2:335F
 cs=0x1a2;eip=0x003360; 	X(POP(di));	// 6584 pop     di ;~ 01A2:3360
@@ -7213,18 +7214,18 @@ cs=0x1a2;eip=0x0033a5; 	X(PUSHF);	// 6622 pushf ;~ 01A2:33A5
 cs=0x1a2;eip=0x0033a6; 	T(MOV(dx, _gravis_port));	// 6623 mov     dx, _gravis_port ;~ 01A2:33A6
 cs=0x1a2;eip=0x0033aa; 	T(DEC(dx));	// 6624 dec     dx ;~ 01A2:33AA
 cs=0x1a2;eip=0x0033ab; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 6625 mov     al, [bx+18h] ;~ 01A2:33AB
-cs=0x1a2;eip=0x0033ae; 	R(OUT(dx, al));	// 6626 out     dx, al ;~ 01A2:33AE
+cs=0x1a2;eip=0x0033ae; 	S(OUT(dx, al));	// 6626 out     dx, al ;~ 01A2:33AE
 cs=0x1a2;eip=0x0033af; 	T(INC(dx));	// 6627 inc     dx ;~ 01A2:33AF
 cs=0x1a2;eip=0x0033b0; 	T(MOV(al, 0x0D));	// 6628 mov     al, 0Dh ;~ 01A2:33B0
-cs=0x1a2;eip=0x0033b2; 	R(OUT(dx, al));	// 6629 out     dx, al ;~ 01A2:33B2
+cs=0x1a2;eip=0x0033b2; 	S(OUT(dx, al));	// 6629 out     dx, al ;~ 01A2:33B2
 cs=0x1a2;eip=0x0033b3; 	T(ADD(dl, 2));	// 6630 add     dl, 2 ;~ 01A2:33B3
 cs=0x1a2;eip=0x0033b6; 	T(MOV(al, 3));	// 6631 mov     al, 3 ;~ 01A2:33B6
-cs=0x1a2;eip=0x0033b8; 	R(OUT(dx, al));	// 6632 out     dx, al ;~ 01A2:33B8
+cs=0x1a2;eip=0x0033b8; 	S(OUT(dx, al));	// 6632 out     dx, al ;~ 01A2:33B8
 cs=0x1a2;eip=0x0033b9; 	T(SUB(dl, 2));	// 6633 sub     dl, 2 ;~ 01A2:33B9
 cs=0x1a2;eip=0x0033bc; 	T(MOV(al, 0x89));	// 6634 mov     al, 89h ; '‰' ;~ 01A2:33BC
-cs=0x1a2;eip=0x0033be; 	R(OUT(dx, al));	// 6635 out     dx, al ;~ 01A2:33BE
+cs=0x1a2;eip=0x0033be; 	S(OUT(dx, al));	// 6635 out     dx, al ;~ 01A2:33BE
 cs=0x1a2;eip=0x0033bf; 	T(INC(dx));	// 6636 inc     dx ;~ 01A2:33BF
-cs=0x1a2;eip=0x0033c0; 	R(IN(ax, dx));	// 6637 in      ax, dx ;~ 01A2:33C0
+cs=0x1a2;eip=0x0033c0; 	S(IN(ax, dx));	// 6637 in      ax, dx ;~ 01A2:33C0
 cs=0x1a2;eip=0x0033c1; 	T(DEC(dx));	// 6638 dec     dx ;~ 01A2:33C1
 cs=0x1a2;eip=0x0033c2; 	T(OR(ah, 0x80));	// 6639 or      ah, 80h ;~ 01A2:33C2
 cs=0x1a2;eip=0x0033c5; 	T(CMP(ah, ch));	// 6640 cmp     ah, ch ;~ 01A2:33C5
@@ -7240,43 +7241,43 @@ cs=0x1a2;eip=0x0033d4; 	T(SUB(di, ax));	// 6649 sub     di, ax ;~ 01A2:33D4
 cs=0x1a2;eip=0x0033d6; 	T(CMP(di, 0x300));	// 6650 cmp     di, 300h ;~ 01A2:33D6
 cs=0x1a2;eip=0x0033da; 	J(JBE(loc_13356));	// 6651 jbe     loc_13356 ;~ 01A2:33DA
 cs=0x1a2;eip=0x0033de; 	T(MOV(al, 7));	// 6652 mov     al, 7 ;~ 01A2:33DE
-cs=0x1a2;eip=0x0033e0; 	R(OUT(dx, al));	// 6653 out     dx, al ;~ 01A2:33E0
+cs=0x1a2;eip=0x0033e0; 	S(OUT(dx, al));	// 6653 out     dx, al ;~ 01A2:33E0
 cs=0x1a2;eip=0x0033e1; 	T(ADD(dl, 2));	// 6654 add     dl, 2 ;~ 01A2:33E1
 cs=0x1a2;eip=0x0033e4; 	T(MOV(al, ah));	// 6655 mov     al, ah ;~ 01A2:33E4
-cs=0x1a2;eip=0x0033e6; 	R(OUT(dx, al));	// 6656 out     dx, al ;~ 01A2:33E6
+cs=0x1a2;eip=0x0033e6; 	S(OUT(dx, al));	// 6656 out     dx, al ;~ 01A2:33E6
 cs=0x1a2;eip=0x0033e7; 	T(SUB(dl, 2));	// 6657 sub     dl, 2 ;~ 01A2:33E7
 cs=0x1a2;eip=0x0033ea; 	T(MOV(al, 8));	// 6658 mov     al, 8 ;~ 01A2:33EA
-cs=0x1a2;eip=0x0033ec; 	R(OUT(dx, al));	// 6659 out     dx, al ;~ 01A2:33EC
+cs=0x1a2;eip=0x0033ec; 	S(OUT(dx, al));	// 6659 out     dx, al ;~ 01A2:33EC
 cs=0x1a2;eip=0x0033ed; 	T(ADD(dl, 2));	// 6660 add     dl, 2 ;~ 01A2:33ED
 cs=0x1a2;eip=0x0033f0; 	T(MOV(al, ch));	// 6661 mov     al, ch ;~ 01A2:33F0
-cs=0x1a2;eip=0x0033f2; 	R(OUT(dx, al));	// 6662 out     dx, al ;~ 01A2:33F2
+cs=0x1a2;eip=0x0033f2; 	S(OUT(dx, al));	// 6662 out     dx, al ;~ 01A2:33F2
 cs=0x1a2;eip=0x0033f3; 	T(SUB(dl, 2));	// 6663 sub     dl, 2 ;~ 01A2:33F3
 cs=0x1a2;eip=0x0033f6; 	T(MOV(al, 6));	// 6664 mov     al, 6 ;~ 01A2:33F6
-cs=0x1a2;eip=0x0033f8; 	R(OUT(dx, al));	// 6665 out     dx, al ;~ 01A2:33F8
+cs=0x1a2;eip=0x0033f8; 	S(OUT(dx, al));	// 6665 out     dx, al ;~ 01A2:33F8
 cs=0x1a2;eip=0x0033f9; 	T(ADD(dl, 2));	// 6666 add     dl, 2 ;~ 01A2:33F9
 cs=0x1a2;eip=0x0033fc; 	T(MOV(al, 0x30));	// 6667 mov     al, 30h ; '0' ;~ 01A2:33FC
-cs=0x1a2;eip=0x0033fe; 	R(OUT(dx, al));	// 6668 out     dx, al ;~ 01A2:33FE
+cs=0x1a2;eip=0x0033fe; 	S(OUT(dx, al));	// 6668 out     dx, al ;~ 01A2:33FE
 cs=0x1a2;eip=0x0033ff; 	T(SUB(dl, 2));	// 6669 sub     dl, 2 ;~ 01A2:33FF
 cs=0x1a2;eip=0x003402; 	T(MOV(al, 0x0D));	// 6670 mov     al, 0Dh ;~ 01A2:3402
-cs=0x1a2;eip=0x003404; 	R(OUT(dx, al));	// 6671 out     dx, al ;~ 01A2:3404
+cs=0x1a2;eip=0x003404; 	S(OUT(dx, al));	// 6671 out     dx, al ;~ 01A2:3404
 cs=0x1a2;eip=0x003405; 	T(ADD(dl, 2));	// 6672 add     dl, 2 ;~ 01A2:3405
 cs=0x1a2;eip=0x003408; 	T(MOV(al, cl));	// 6673 mov     al, cl ;~ 01A2:3408
-cs=0x1a2;eip=0x00340a; 	R(OUT(dx, al));	// 6674 out     dx, al ;~ 01A2:340A
+cs=0x1a2;eip=0x00340a; 	S(OUT(dx, al));	// 6674 out     dx, al ;~ 01A2:340A
 cs=0x1a2;eip=0x00340b; 	T(SUB(dl, 2));	// 6675 sub     dl, 2 ;~ 01A2:340B
 loc_1340e:
 	// 4792 
 cs=0x1a2;eip=0x00340e; 	T(MOV(al, 0x8D));	// 6678 mov     al, 8Dh ;~ 01A2:340E
-cs=0x1a2;eip=0x003410; 	R(OUT(dx, al));	// 6679 out     dx, al ;~ 01A2:3410
+cs=0x1a2;eip=0x003410; 	S(OUT(dx, al));	// 6679 out     dx, al ;~ 01A2:3410
 cs=0x1a2;eip=0x003411; 	T(ADD(dl, 2));	// 6680 add     dl, 2 ;~ 01A2:3411
-cs=0x1a2;eip=0x003414; 	R(IN(al, dx));	// 6681 in      al, dx ;~ 01A2:3414
+cs=0x1a2;eip=0x003414; 	S(IN(al, dx));	// 6681 in      al, dx ;~ 01A2:3414
 cs=0x1a2;eip=0x003415; 	T(SUB(dl, 2));	// 6682 sub     dl, 2 ;~ 01A2:3415
 cs=0x1a2;eip=0x003418; 	T(SHR(al, 1));	// 6683 shr     al, 1 ;~ 01A2:3418
 cs=0x1a2;eip=0x00341a; 	J(JNC(loc_1340e));	// 6684 jnb     short loc_1340E ;~ 01A2:341A
 cs=0x1a2;eip=0x00341c; 	T(MOV(al, 9));	// 6685 mov     al, 9 ;~ 01A2:341C
-cs=0x1a2;eip=0x00341e; 	R(OUT(dx, al));	// 6686 out     dx, al ;~ 01A2:341E
+cs=0x1a2;eip=0x00341e; 	S(OUT(dx, al));	// 6686 out     dx, al ;~ 01A2:341E
 cs=0x1a2;eip=0x00341f; 	T(INC(dx));	// 6687 inc     dx ;~ 01A2:341F
 cs=0x1a2;eip=0x003420; 	T(MOV(ax, *(dw*)(raddr(ds,bx+0x36))));	// 6688 mov     ax, [bx+36h] ;~ 01A2:3420
-cs=0x1a2;eip=0x003423; 	R(OUT(dx, ax));	// 6689 out     dx, ax ;~ 01A2:3423
+cs=0x1a2;eip=0x003423; 	S(OUT(dx, ax));	// 6689 out     dx, ax ;~ 01A2:3423
 cs=0x1a2;eip=0x003424; 	T(DEC(dx));	// 6690 dec     dx ;~ 01A2:3424
 cs=0x1a2;eip=0x003425; 	X(POPF);	// 6691 popf ;~ 01A2:3425
 cs=0x1a2;eip=0x003426; 	X(POP(di));	// 6692 pop     di ;~ 01A2:3426
@@ -7342,13 +7343,13 @@ cs=0x1a2;eip=0x0034b0; 	T(CLI);	// 6762 cli ;~ 01A2:34B0
 cs=0x1a2;eip=0x0034b1; 	T(MOV(dx, _gravis_port));	// 6763 mov     dx, _gravis_port ;~ 01A2:34B1
 cs=0x1a2;eip=0x0034b5; 	T(DEC(dx));	// 6764 dec     dx ;~ 01A2:34B5
 cs=0x1a2;eip=0x0034b6; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 6765 mov     al, [bx+18h] ;~ 01A2:34B6
-cs=0x1a2;eip=0x0034b9; 	R(OUT(dx, al));	// 6766 out     dx, al ;~ 01A2:34B9
+cs=0x1a2;eip=0x0034b9; 	S(OUT(dx, al));	// 6766 out     dx, al ;~ 01A2:34B9
 cs=0x1a2;eip=0x0034ba; 	T(INC(dx));	// 6767 inc     dx ;~ 01A2:34BA
 cs=0x1a2;eip=0x0034bb; 	T(MOV(al, 0));	// 6768 mov     al, 0 ;~ 01A2:34BB
-cs=0x1a2;eip=0x0034bd; 	R(OUT(dx, al));	// 6769 out     dx, al ;~ 01A2:34BD
+cs=0x1a2;eip=0x0034bd; 	S(OUT(dx, al));	// 6769 out     dx, al ;~ 01A2:34BD
 cs=0x1a2;eip=0x0034be; 	T(ADD(dl, 2));	// 6770 add     dl, 2 ;~ 01A2:34BE
 cs=0x1a2;eip=0x0034c1; 	T(MOV(al, 3));	// 6771 mov     al, 3 ;~ 01A2:34C1
-cs=0x1a2;eip=0x0034c3; 	R(OUT(dx, al));	// 6772 out     dx, al ;~ 01A2:34C3
+cs=0x1a2;eip=0x0034c3; 	S(OUT(dx, al));	// 6772 out     dx, al ;~ 01A2:34C3
 cs=0x1a2;eip=0x0034c4; 	T(SUB(dl, 2));	// 6773 sub     dl, 2 ;~ 01A2:34C4
 cs=0x1a2;eip=0x0034c7; 	X(AND(*(raddr(ds,bx+0x17)), 0x0FE));	// 6774 and     byte ptr [bx+17h], 0FEh ;~ 01A2:34C7
 cs=0x1a2;eip=0x0034cb; 	T(MOV(al, *(raddr(ds,bx+2))));	// 6775 mov     al, [bx+2] ;~ 01A2:34CB
@@ -7378,17 +7379,17 @@ cs=0x1a2;eip=0x003519; 	T(MOV(edi, *(dd*)(raddr(ds,bx+0x40))));	// 6798 mov     
 cs=0x1a2;eip=0x00351d; 	T(SHL(edi, 9));	// 6799 shl     edi, 9 ;~ 01A2:351D
 cs=0x1a2;eip=0x003521; 	T(ADD(edi, ebp));	// 6800 add     edi, ebp ;~ 01A2:3521
 cs=0x1a2;eip=0x003524; 	T(MOV(al, 3));	// 6801 mov     al, 3 ;~ 01A2:3524
-cs=0x1a2;eip=0x003526; 	R(OUT(dx, al));	// 6802 out     dx, al ;~ 01A2:3526
+cs=0x1a2;eip=0x003526; 	S(OUT(dx, al));	// 6802 out     dx, al ;~ 01A2:3526
 cs=0x1a2;eip=0x003527; 	T(INC(dx));	// 6803 inc     dx ;~ 01A2:3527
 cs=0x1a2;eip=0x003528; 	T(MOV(ax, di));	// 6804 mov     ax, di ;~ 01A2:3528
-cs=0x1a2;eip=0x00352a; 	R(OUT(dx, ax));	// 6805 out     dx, ax ;~ 01A2:352A
+cs=0x1a2;eip=0x00352a; 	S(OUT(dx, ax));	// 6805 out     dx, ax ;~ 01A2:352A
 cs=0x1a2;eip=0x00352b; 	T(DEC(dx));	// 6806 dec     dx ;~ 01A2:352B
 cs=0x1a2;eip=0x00352c; 	T(SHR(edi, 0x10));	// 6807 shr     edi, 10h ;~ 01A2:352C
 cs=0x1a2;eip=0x003530; 	T(MOV(al, 2));	// 6808 mov     al, 2 ;~ 01A2:3530
-cs=0x1a2;eip=0x003532; 	R(OUT(dx, al));	// 6809 out     dx, al ;~ 01A2:3532
+cs=0x1a2;eip=0x003532; 	S(OUT(dx, al));	// 6809 out     dx, al ;~ 01A2:3532
 cs=0x1a2;eip=0x003533; 	T(INC(dx));	// 6810 inc     dx ;~ 01A2:3533
 cs=0x1a2;eip=0x003534; 	T(MOV(ax, di));	// 6811 mov     ax, di ;~ 01A2:3534
-cs=0x1a2;eip=0x003536; 	R(OUT(dx, ax));	// 6812 out     dx, ax ;~ 01A2:3536
+cs=0x1a2;eip=0x003536; 	S(OUT(dx, ax));	// 6812 out     dx, ax ;~ 01A2:3536
 cs=0x1a2;eip=0x003537; 	T(DEC(dx));	// 6813 dec     dx ;~ 01A2:3537
 cs=0x1a2;eip=0x003538; 	T(MOV(edi, *(dd*)(raddr(ds,bx+0x48))));	// 6814 mov     edi, [bx+48h] ;~ 01A2:3538
 cs=0x1a2;eip=0x00353c; 	T(TEST(*(raddr(ds,bx+0x19)), 4));	// 6815 test    byte ptr [bx+19h], 4 ;~ 01A2:353C
@@ -7399,17 +7400,17 @@ loc_13544:
 cs=0x1a2;eip=0x003544; 	T(SHL(edi, 9));	// 6821 shl     edi, 9 ;~ 01A2:3544
 cs=0x1a2;eip=0x003548; 	T(ADD(edi, ebp));	// 6822 add     edi, ebp ;~ 01A2:3548
 cs=0x1a2;eip=0x00354b; 	T(MOV(al, 5));	// 6823 mov     al, 5 ;~ 01A2:354B
-cs=0x1a2;eip=0x00354d; 	R(OUT(dx, al));	// 6824 out     dx, al ;~ 01A2:354D
+cs=0x1a2;eip=0x00354d; 	S(OUT(dx, al));	// 6824 out     dx, al ;~ 01A2:354D
 cs=0x1a2;eip=0x00354e; 	T(INC(dx));	// 6825 inc     dx ;~ 01A2:354E
 cs=0x1a2;eip=0x00354f; 	T(MOV(ax, di));	// 6826 mov     ax, di ;~ 01A2:354F
-cs=0x1a2;eip=0x003551; 	R(OUT(dx, ax));	// 6827 out     dx, ax ;~ 01A2:3551
+cs=0x1a2;eip=0x003551; 	S(OUT(dx, ax));	// 6827 out     dx, ax ;~ 01A2:3551
 cs=0x1a2;eip=0x003552; 	T(DEC(dx));	// 6828 dec     dx ;~ 01A2:3552
 cs=0x1a2;eip=0x003553; 	T(SHR(edi, 0x10));	// 6829 shr     edi, 10h ;~ 01A2:3553
 cs=0x1a2;eip=0x003557; 	T(MOV(al, 4));	// 6830 mov     al, 4 ;~ 01A2:3557
-cs=0x1a2;eip=0x003559; 	R(OUT(dx, al));	// 6831 out     dx, al ;~ 01A2:3559
+cs=0x1a2;eip=0x003559; 	S(OUT(dx, al));	// 6831 out     dx, al ;~ 01A2:3559
 cs=0x1a2;eip=0x00355a; 	T(INC(dx));	// 6832 inc     dx ;~ 01A2:355A
 cs=0x1a2;eip=0x00355b; 	T(MOV(ax, di));	// 6833 mov     ax, di ;~ 01A2:355B
-cs=0x1a2;eip=0x00355d; 	R(OUT(dx, ax));	// 6834 out     dx, ax ;~ 01A2:355D
+cs=0x1a2;eip=0x00355d; 	S(OUT(dx, ax));	// 6834 out     dx, ax ;~ 01A2:355D
 cs=0x1a2;eip=0x00355e; 	T(DEC(dx));	// 6835 dec     dx ;~ 01A2:355E
 loc_1355f:
 	// 4798 
@@ -7419,17 +7420,17 @@ cs=0x1a2;eip=0x003568; 	T(MOVZX(eax, *(dw*)(raddr(ds,bx+0x4C))));	// 6840 movzx 
 cs=0x1a2;eip=0x00356d; 	T(SHL(eax, 9));	// 6841 shl     eax, 9 ;~ 01A2:356D
 cs=0x1a2;eip=0x003571; 	T(ADD(edi, eax));	// 6842 add     edi, eax ;~ 01A2:3571
 cs=0x1a2;eip=0x003574; 	T(MOV(al, 0x0B));	// 6843 mov     al, 0Bh ;~ 01A2:3574
-cs=0x1a2;eip=0x003576; 	R(OUT(dx, al));	// 6844 out     dx, al ;~ 01A2:3576
+cs=0x1a2;eip=0x003576; 	S(OUT(dx, al));	// 6844 out     dx, al ;~ 01A2:3576
 cs=0x1a2;eip=0x003577; 	T(INC(dx));	// 6845 inc     dx ;~ 01A2:3577
 cs=0x1a2;eip=0x003578; 	T(MOV(ax, di));	// 6846 mov     ax, di ;~ 01A2:3578
-cs=0x1a2;eip=0x00357a; 	R(OUT(dx, ax));	// 6847 out     dx, ax ;~ 01A2:357A
+cs=0x1a2;eip=0x00357a; 	S(OUT(dx, ax));	// 6847 out     dx, ax ;~ 01A2:357A
 cs=0x1a2;eip=0x00357b; 	T(DEC(dx));	// 6848 dec     dx ;~ 01A2:357B
 cs=0x1a2;eip=0x00357c; 	T(SHR(edi, 0x10));	// 6849 shr     edi, 10h ;~ 01A2:357C
 cs=0x1a2;eip=0x003580; 	T(MOV(al, 0x0A));	// 6850 mov     al, 0Ah ;~ 01A2:3580
-cs=0x1a2;eip=0x003582; 	R(OUT(dx, al));	// 6851 out     dx, al ;~ 01A2:3582
+cs=0x1a2;eip=0x003582; 	S(OUT(dx, al));	// 6851 out     dx, al ;~ 01A2:3582
 cs=0x1a2;eip=0x003583; 	T(INC(dx));	// 6852 inc     dx ;~ 01A2:3583
 cs=0x1a2;eip=0x003584; 	T(MOV(ax, di));	// 6853 mov     ax, di ;~ 01A2:3584
-cs=0x1a2;eip=0x003586; 	R(OUT(dx, ax));	// 6854 out     dx, ax ;~ 01A2:3586
+cs=0x1a2;eip=0x003586; 	S(OUT(dx, ax));	// 6854 out     dx, ax ;~ 01A2:3586
 cs=0x1a2;eip=0x003587; 	T(DEC(dx));	// 6855 dec     dx ;~ 01A2:3587
 cs=0x1a2;eip=0x003588; 	T(MOV(ax, *(dw*)(raddr(ds,bx))));	// 6856 mov     ax, [bx] ;~ 01A2:3588
 cs=0x1a2;eip=0x00358a; 	J(CALL(_gravis_13215,0));	// 6857 call    _gravis_13215 ;~ 01A2:358A
@@ -7445,10 +7446,10 @@ cs=0x1a2;eip=0x0035a5; 	T(SHL(al, 2));	// 6866 shl     al, 2 ;~ 01A2:35A5
 cs=0x1a2;eip=0x0035a8; 	T(XOR(al, 0x20));	// 6867 xor     al, 20h ;~ 01A2:35A8
 cs=0x1a2;eip=0x0035aa; 	T(OR(ah, al));	// 6868 or      ah, al ;~ 01A2:35AA
 cs=0x1a2;eip=0x0035ac; 	T(MOV(al, 0));	// 6869 mov     al, 0 ;~ 01A2:35AC
-cs=0x1a2;eip=0x0035ae; 	R(OUT(dx, al));	// 6870 out     dx, al ;~ 01A2:35AE
+cs=0x1a2;eip=0x0035ae; 	S(OUT(dx, al));	// 6870 out     dx, al ;~ 01A2:35AE
 cs=0x1a2;eip=0x0035af; 	T(ADD(dl, 2));	// 6871 add     dl, 2 ;~ 01A2:35AF
 cs=0x1a2;eip=0x0035b2; 	T(MOV(al, ah));	// 6872 mov     al, ah ;~ 01A2:35B2
-cs=0x1a2;eip=0x0035b4; 	R(OUT(dx, al));	// 6873 out     dx, al ;~ 01A2:35B4
+cs=0x1a2;eip=0x0035b4; 	S(OUT(dx, al));	// 6873 out     dx, al ;~ 01A2:35B4
 cs=0x1a2;eip=0x0035b5; 	T(SUB(dl, 2));	// 6874 sub     dl, 2 ;~ 01A2:35B5
 cs=0x1a2;eip=0x0035b8; 	X(POPF);	// 6875 popf ;~ 01A2:35B8
 cs=0x1a2;eip=0x0035b9; 	T(MOV(al, *(raddr(ds,bx+8))));	// 6876 mov     al, [bx+8] ;~ 01A2:35B9
@@ -7520,7 +7521,7 @@ cs=0x1a2;eip=0x0042f7; 	J(CALL(_gravis_18216,0));	// 9062 call    _gravis_18216 
 cs=0x1a2;eip=0x0042fa; 	T(MOV(dx, _gravis_port));	// 9063 mov     dx, _gravis_port ;~ 01A2:42FA
 cs=0x1a2;eip=0x0042fe; 	T(SUB(dx, 0x103));	// 9064 sub     dx, 103h ;~ 01A2:42FE
 cs=0x1a2;eip=0x004302; 	T(MOV(al, byte_2463b));	// 9065 mov     al, byte_2463B ;~ 01A2:4302
-cs=0x1a2;eip=0x004305; 	R(OUT(dx, al));	// 9066 out     dx, al ;~ 01A2:4305
+cs=0x1a2;eip=0x004305; 	S(OUT(dx, al));	// 9066 out     dx, al ;~ 01A2:4305
 cs=0x1a2;eip=0x004306; 	X(MOV(off_245ca, m2c::k_gravis_13215));	// 9067 mov     off_245CA, offset _gravis_13215 ;~ 01A2:4306
 cs=0x1a2;eip=0x00430c; 	X(MOV(off_245c8, m2c::k_gravis_134a2));	// 9068 mov     off_245C8, offset _gravis_134A2 ;~ 01A2:430C
 cs=0x1a2;eip=0x004312; 	X(MOV(off_245cc, m2c::k_gravis_132a9));	// 9069 mov     off_245CC, offset _gravis_132A9 ;~ 01A2:4312
@@ -7536,7 +7537,8 @@ cs=0x1a2;eip=0x00432e; 	J(RETN(0));	// 9078 retn ;~ 01A2:432E
 loc_1432f:
 	// 4944 
 cs=0x1a2;eip=0x00432f; 	T(MOV(dx, offset(seg003,_acouldnotfindthe)));	// 9082 mov     dx, offset _aCouldNotFindThe ; "Could not find the ULTRASND environment"... ;~ 01A2:432F
-	R(return _group15(m2c::kseg000_4332_proc, _state););_gravis_int:
+	return _group15(m2c::kseg000_4332_proc, _state);
+_gravis_int:
 	// 9127 
 cs=0x1a2;eip=0x004358; 	X(PUSH(ax));	// 9128 push    ax ;~ 01A2:4358
 cs=0x1a2;eip=0x004359; 	X(PUSH(bx));	// 9129 push    bx ;~ 01A2:4359
@@ -7546,7 +7548,7 @@ cs=0x1a2;eip=0x00435c; 	X(PUSH(ds));	// 9132 push    ds ;~ 01A2:435C
 cs=0x1a2;eip=0x00435d; 	T(MOV(ax, seg_offset(seg003)));	// 9133 mov     ax, seg seg003 ;~ 01A2:435D
 cs=0x1a2;eip=0x004360; 	T(MOV(ds, ax));	// 9134 mov     ds, ax ;~ 01A2:4360
 cs=0x1a2;eip=0x004362; 	T(MOV(al, 0x20));	// 9135 mov     al, 20h ; ' ' ;~ 01A2:4362
-cs=0x1a2;eip=0x004364; 	R(OUT(0x20, al));	// 9136 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4364
+cs=0x1a2;eip=0x004364; 	S(OUT(0x20, al));	// 9136 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4364
 cs=0x1a2;eip=0x004366; 	T(MOV(bx, 1));	// 9137 mov     bx, 1 ;~ 01A2:4366
 cs=0x1a2;eip=0x004369; 	T(MOV(cl, _irq_number));	// 9138 mov     cl, _irq_number ;~ 01A2:4369
 cs=0x1a2;eip=0x00436d; 	T(SHL(bx, cl));	// 9139 shl     bx, cl ;~ 01A2:436D
@@ -7555,19 +7557,19 @@ cs=0x1a2;eip=0x004372; 	T(OR(bh, bh));	// 9141 or      bh, bh ;~ 01A2:4372
 cs=0x1a2;eip=0x004374; 	J(JZ(loc_1437f));	// 9142 jz      short loc_1437F ;~ 01A2:4374
 cs=0x1a2;eip=0x004376; 	T(MOV(dx, 0x0A1));	// 9143 mov     dx, 0A1h ; '¡' ;~ 01A2:4376
 cs=0x1a2;eip=0x004379; 	T(MOV(al, 0x20));	// 9144 mov     al, 20h ; ' ' ;~ 01A2:4379
-cs=0x1a2;eip=0x00437b; 	R(OUT(0x0A0, al));	// 9145 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:437B
+cs=0x1a2;eip=0x00437b; 	S(OUT(0x0A0, al));	// 9145 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:437B
 cs=0x1a2;eip=0x00437d; 	T(MOV(bl, bh));	// 9146 mov     bl, bh ;~ 01A2:437D
 loc_1437f:
 	// 4946 
-cs=0x1a2;eip=0x00437f; 	R(IN(al, dx));	// 9149 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:437F
+cs=0x1a2;eip=0x00437f; 	S(IN(al, dx));	// 9149 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:437F
 cs=0x1a2;eip=0x004380; 	T(OR(al, bl));	// 9150 or      al, bl ;~ 01A2:4380
-cs=0x1a2;eip=0x004382; 	R(OUT(dx, al));	// 9151 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4382
+cs=0x1a2;eip=0x004382; 	S(OUT(dx, al));	// 9151 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4382
 cs=0x1a2;eip=0x004383; 	T(STI);	// 9152 sti ;~ 01A2:4383
 loc_14384:
 	// 4947 
 cs=0x1a2;eip=0x004384; 	T(MOV(dx, _gravis_port));	// 9155 mov     dx, _gravis_port ;~ 01A2:4384
 cs=0x1a2;eip=0x004388; 	T(SUB(dx, 0x0FD));	// 9156 sub     dx, 0FDh ; 'ý' ;~ 01A2:4388
-cs=0x1a2;eip=0x00438c; 	R(IN(al, dx));	// 9157 in      al, dx ;~ 01A2:438C
+cs=0x1a2;eip=0x00438c; 	S(IN(al, dx));	// 9157 in      al, dx ;~ 01A2:438C
 cs=0x1a2;eip=0x00438d; 	T(TEST(al, 0x60));	// 9158 test    al, 1100000b ;~ 01A2:438D
 cs=0x1a2;eip=0x00438f; 	J(JNZ(loc_1444c));	// 9159 jnz     loc_1444C ;~ 01A2:438F
 loc_14393:
@@ -7593,9 +7595,9 @@ cs=0x1a2;eip=0x0043b2; 	T(MOV(bl, bh));	// 9180 mov     bl, bh ;~ 01A2:43B2
 loc_143b4:
 	// 4951 
 cs=0x1a2;eip=0x0043b4; 	T(NOT(bl));	// 9183 not     bl ;~ 01A2:43B4
-cs=0x1a2;eip=0x0043b6; 	R(IN(al, dx));	// 9184 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:43B6
+cs=0x1a2;eip=0x0043b6; 	S(IN(al, dx));	// 9184 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:43B6
 cs=0x1a2;eip=0x0043b7; 	T(AND(al, bl));	// 9185 and     al, bl ;~ 01A2:43B7
-cs=0x1a2;eip=0x0043b9; 	R(OUT(dx, al));	// 9186 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:43B9
+cs=0x1a2;eip=0x0043b9; 	S(OUT(dx, al));	// 9186 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:43B9
 cs=0x1a2;eip=0x0043ba; 	X(POP(ds));	// 9187 pop     ds ;~ 01A2:43BA
 cs=0x1a2;eip=0x0043bb; 	X(POP(dx));	// 9188 pop     dx ;~ 01A2:43BB
 cs=0x1a2;eip=0x0043bc; 	X(POP(cx));	// 9189 pop     cx ;~ 01A2:43BC
@@ -7609,12 +7611,12 @@ cs=0x1a2;eip=0x0043c1; 	T(MOV(dx, _gravis_port));	// 9197 mov     dx, _gravis_po
 cs=0x1a2;eip=0x0043c5; 	X(PUSHF);	// 9198 pushf ;~ 01A2:43C5
 cs=0x1a2;eip=0x0043c6; 	T(CLI);	// 9199 cli ;~ 01A2:43C6
 cs=0x1a2;eip=0x0043c7; 	T(MOV(al, 0x45));	// 9200 mov     al, 45h ; 'E' ;~ 01A2:43C7
-cs=0x1a2;eip=0x0043c9; 	R(OUT(dx, al));	// 9201 out     dx, al ;~ 01A2:43C9
+cs=0x1a2;eip=0x0043c9; 	S(OUT(dx, al));	// 9201 out     dx, al ;~ 01A2:43C9
 cs=0x1a2;eip=0x0043ca; 	T(ADD(dl, 2));	// 9202 add     dl, 2 ;~ 01A2:43CA
 cs=0x1a2;eip=0x0043cd; 	T(XOR(al, al));	// 9203 xor     al, al ;~ 01A2:43CD
-cs=0x1a2;eip=0x0043cf; 	R(OUT(dx, al));	// 9204 out     dx, al ;~ 01A2:43CF
+cs=0x1a2;eip=0x0043cf; 	S(OUT(dx, al));	// 9204 out     dx, al ;~ 01A2:43CF
 cs=0x1a2;eip=0x0043d0; 	T(MOV(al, 4));	// 9205 mov     al, 4 ;~ 01A2:43D0
-cs=0x1a2;eip=0x0043d2; 	R(OUT(dx, al));	// 9206 out     dx, al ;~ 01A2:43D2
+cs=0x1a2;eip=0x0043d2; 	S(OUT(dx, al));	// 9206 out     dx, al ;~ 01A2:43D2
 cs=0x1a2;eip=0x0043d3; 	X(POPF);	// 9207 popf ;~ 01A2:43D3
 cs=0x1a2;eip=0x0043d4; 	X(DEC(byte_24619));	// 9208 dec     byte_24619 ;~ 01A2:43D4
 cs=0x1a2;eip=0x0043d8; 	J(JNZ(loc_143f5));	// 9209 jnz     short loc_143F5 ;~ 01A2:43D8
@@ -7644,9 +7646,9 @@ cs=0x1a2;eip=0x0043fa; 	T(MOV(dx, _gravis_port));	// 9234 mov     dx, _gravis_po
 cs=0x1a2;eip=0x0043fe; 	X(PUSHF);	// 9235 pushf ;~ 01A2:43FE
 cs=0x1a2;eip=0x0043ff; 	T(CLI);	// 9236 cli ;~ 01A2:43FF
 cs=0x1a2;eip=0x004400; 	T(MOV(al, 0x41));	// 9237 mov     al, 41h ; 'A' ;~ 01A2:4400
-cs=0x1a2;eip=0x004402; 	R(OUT(dx, al));	// 9238 out     dx, al ;~ 01A2:4402
+cs=0x1a2;eip=0x004402; 	S(OUT(dx, al));	// 9238 out     dx, al ;~ 01A2:4402
 cs=0x1a2;eip=0x004403; 	T(ADD(dl, 2));	// 9239 add     dl, 2 ;~ 01A2:4403
-cs=0x1a2;eip=0x004406; 	R(IN(al, dx));	// 9240 in      al, dx ;~ 01A2:4406
+cs=0x1a2;eip=0x004406; 	S(IN(al, dx));	// 9240 in      al, dx ;~ 01A2:4406
 cs=0x1a2;eip=0x004407; 	T(SUB(dl, 2));	// 9241 sub     dl, 2 ;~ 01A2:4407
 cs=0x1a2;eip=0x00440a; 	X(POPF);	// 9242 popf ;~ 01A2:440A
 cs=0x1a2;eip=0x00440b; 	T(MOV(al, ah));	// 9243 mov     al, ah ;~ 01A2:440B
@@ -7683,9 +7685,9 @@ loc_1444e:
 	// 4957 
 cs=0x1a2;eip=0x00444e; 	T(MOV(dx, _gravis_port));	// 9279 mov     dx, _gravis_port ;~ 01A2:444E
 cs=0x1a2;eip=0x004452; 	T(MOV(al, 0x8F));	// 9280 mov     al, 8Fh ;~ 01A2:4452
-cs=0x1a2;eip=0x004454; 	R(OUT(dx, al));	// 9281 out     dx, al ;~ 01A2:4454
+cs=0x1a2;eip=0x004454; 	S(OUT(dx, al));	// 9281 out     dx, al ;~ 01A2:4454
 cs=0x1a2;eip=0x004455; 	T(ADD(dl, 2));	// 9282 add     dl, 2 ;~ 01A2:4455
-cs=0x1a2;eip=0x004458; 	R(IN(al, dx));	// 9283 in      al, dx ;~ 01A2:4458
+cs=0x1a2;eip=0x004458; 	S(IN(al, dx));	// 9283 in      al, dx ;~ 01A2:4458
 cs=0x1a2;eip=0x004459; 	T(SUB(dl, 2));	// 9284 sub     dl, 2 ;~ 01A2:4459
 cs=0x1a2;eip=0x00445c; 	T(MOV(ah, al));	// 9285 mov     ah, al ;~ 01A2:445C
 cs=0x1a2;eip=0x00445e; 	T(SHL(ah, 1));	// 9286 shl     ah, 1 ;~ 01A2:445E
@@ -7707,19 +7709,19 @@ cs=0x1a2;eip=0x00447c; 	T(DEC(dx));	// 9302 dec     dx ;~ 01A2:447C
 cs=0x1a2;eip=0x00447d; 	X(PUSHF);	// 9303 pushf ;~ 01A2:447D
 cs=0x1a2;eip=0x00447e; 	T(CLI);	// 9304 cli ;~ 01A2:447E
 cs=0x1a2;eip=0x00447f; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 9305 mov     al, [bx+18h] ;~ 01A2:447F
-cs=0x1a2;eip=0x004482; 	R(OUT(dx, al));	// 9306 out     dx, al ;~ 01A2:4482
+cs=0x1a2;eip=0x004482; 	S(OUT(dx, al));	// 9306 out     dx, al ;~ 01A2:4482
 cs=0x1a2;eip=0x004483; 	T(INC(dx));	// 9307 inc     dx ;~ 01A2:4483
 cs=0x1a2;eip=0x004484; 	T(MOV(al, 0x0D));	// 9308 mov     al, 0Dh ;~ 01A2:4484
-cs=0x1a2;eip=0x004486; 	R(OUT(dx, al));	// 9309 out     dx, al ;~ 01A2:4486
+cs=0x1a2;eip=0x004486; 	S(OUT(dx, al));	// 9309 out     dx, al ;~ 01A2:4486
 cs=0x1a2;eip=0x004487; 	T(ADD(dl, 2));	// 9310 add     dl, 2 ;~ 01A2:4487
 cs=0x1a2;eip=0x00448a; 	T(MOV(al, 3));	// 9311 mov     al, 3 ;~ 01A2:448A
-cs=0x1a2;eip=0x00448c; 	R(OUT(dx, al));	// 9312 out     dx, al ;~ 01A2:448C
+cs=0x1a2;eip=0x00448c; 	S(OUT(dx, al));	// 9312 out     dx, al ;~ 01A2:448C
 cs=0x1a2;eip=0x00448d; 	T(SUB(dl, 2));	// 9313 sub     dl, 2 ;~ 01A2:448D
 cs=0x1a2;eip=0x004490; 	T(MOV(al, 9));	// 9314 mov     al, 9 ;~ 01A2:4490
-cs=0x1a2;eip=0x004492; 	R(OUT(dx, al));	// 9315 out     dx, al ;~ 01A2:4492
+cs=0x1a2;eip=0x004492; 	S(OUT(dx, al));	// 9315 out     dx, al ;~ 01A2:4492
 cs=0x1a2;eip=0x004493; 	T(INC(dx));	// 9316 inc     dx ;~ 01A2:4493
 cs=0x1a2;eip=0x004494; 	T(MOV(ax, *(dw*)(raddr(ds,bx+0x36))));	// 9317 mov     ax, [bx+36h] ;~ 01A2:4494
-cs=0x1a2;eip=0x004497; 	R(OUT(dx, ax));	// 9318 out     dx, ax ;~ 01A2:4497
+cs=0x1a2;eip=0x004497; 	S(OUT(dx, ax));	// 9318 out     dx, ax ;~ 01A2:4497
 cs=0x1a2;eip=0x004498; 	T(DEC(dx));	// 9319 dec     dx ;~ 01A2:4498
 cs=0x1a2;eip=0x004499; 	X(POPF);	// 9320 popf ;~ 01A2:4499
 cs=0x1a2;eip=0x00449a; 	J(JMP(loc_1444e));	// 9321 jmp     short loc_1444E ;~ 01A2:449A
@@ -7736,60 +7738,60 @@ cs=0x1a2;eip=0x0044b1; 	T(DEC(dx));	// 9332 dec     dx ;~ 01A2:44B1
 cs=0x1a2;eip=0x0044b2; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 9333 mov     al, [bx+18h] ;~ 01A2:44B2
 cs=0x1a2;eip=0x0044b5; 	X(PUSHF);	// 9334 pushf ;~ 01A2:44B5
 cs=0x1a2;eip=0x0044b6; 	T(CLI);	// 9335 cli ;~ 01A2:44B6
-cs=0x1a2;eip=0x0044b7; 	R(OUT(dx, al));	// 9336 out     dx, al ;~ 01A2:44B7
+cs=0x1a2;eip=0x0044b7; 	S(OUT(dx, al));	// 9336 out     dx, al ;~ 01A2:44B7
 cs=0x1a2;eip=0x0044b8; 	T(INC(dx));	// 9337 inc     dx ;~ 01A2:44B8
 cs=0x1a2;eip=0x0044b9; 	T(MOV(al, 0x80));	// 9338 mov     al, 80h ; '€' ;~ 01A2:44B9
-cs=0x1a2;eip=0x0044bb; 	R(OUT(dx, al));	// 9339 out     dx, al ;~ 01A2:44BB
+cs=0x1a2;eip=0x0044bb; 	S(OUT(dx, al));	// 9339 out     dx, al ;~ 01A2:44BB
 cs=0x1a2;eip=0x0044bc; 	T(ADD(dl, 2));	// 9340 add     dl, 2 ;~ 01A2:44BC
-cs=0x1a2;eip=0x0044bf; 	R(IN(al, dx));	// 9341 in      al, dx ;~ 01A2:44BF
+cs=0x1a2;eip=0x0044bf; 	S(IN(al, dx));	// 9341 in      al, dx ;~ 01A2:44BF
 cs=0x1a2;eip=0x0044c0; 	T(SUB(dl, 2));	// 9342 sub     dl, 2 ;~ 01A2:44C0
 cs=0x1a2;eip=0x0044c3; 	T(AND(al, 3));	// 9343 and     al, 3 ;~ 01A2:44C3
 cs=0x1a2;eip=0x0044c5; 	J(JZ(loc_14527));	// 9344 jz      short loc_14527 ;~ 01A2:44C5
 cs=0x1a2;eip=0x0044c7; 	T(MOV(al, 0));	// 9345 mov     al, 0 ;~ 01A2:44C7
-cs=0x1a2;eip=0x0044c9; 	R(OUT(dx, al));	// 9346 out     dx, al ;~ 01A2:44C9
+cs=0x1a2;eip=0x0044c9; 	S(OUT(dx, al));	// 9346 out     dx, al ;~ 01A2:44C9
 cs=0x1a2;eip=0x0044ca; 	T(ADD(dl, 2));	// 9347 add     dl, 2 ;~ 01A2:44CA
 cs=0x1a2;eip=0x0044cd; 	T(MOV(al, 3));	// 9348 mov     al, 3 ;~ 01A2:44CD
-cs=0x1a2;eip=0x0044cf; 	R(OUT(dx, al));	// 9349 out     dx, al ;~ 01A2:44CF
+cs=0x1a2;eip=0x0044cf; 	S(OUT(dx, al));	// 9349 out     dx, al ;~ 01A2:44CF
 cs=0x1a2;eip=0x0044d0; 	T(SUB(dl, 2));	// 9350 sub     dl, 2 ;~ 01A2:44D0
 cs=0x1a2;eip=0x0044d3; 	T(MOV(al, 0x0D));	// 9351 mov     al, 0Dh ;~ 01A2:44D3
-cs=0x1a2;eip=0x0044d5; 	R(OUT(dx, al));	// 9352 out     dx, al ;~ 01A2:44D5
+cs=0x1a2;eip=0x0044d5; 	S(OUT(dx, al));	// 9352 out     dx, al ;~ 01A2:44D5
 cs=0x1a2;eip=0x0044d6; 	T(ADD(dl, 2));	// 9353 add     dl, 2 ;~ 01A2:44D6
 cs=0x1a2;eip=0x0044d9; 	T(MOV(al, 3));	// 9354 mov     al, 3 ;~ 01A2:44D9
-cs=0x1a2;eip=0x0044db; 	R(OUT(dx, al));	// 9355 out     dx, al ;~ 01A2:44DB
+cs=0x1a2;eip=0x0044db; 	S(OUT(dx, al));	// 9355 out     dx, al ;~ 01A2:44DB
 cs=0x1a2;eip=0x0044dc; 	T(SUB(dl, 2));	// 9356 sub     dl, 2 ;~ 01A2:44DC
 cs=0x1a2;eip=0x0044df; 	X(AND(*(raddr(ds,bx+0x17)), 0x0FE));	// 9357 and     byte ptr [bx+17h], 0FEh ;~ 01A2:44DF
 cs=0x1a2;eip=0x0044e3; 	X(MOV(*(raddr(ds,bx+0x35)), 0));	// 9358 mov     byte ptr [bx+35h], 0 ;~ 01A2:44E3
 cs=0x1a2;eip=0x0044e7; 	X(MOV(*(dw*)(raddr(ds,bx+0x36)), 0));	// 9359 mov     word ptr [bx+36h], 0 ;~ 01A2:44E7
 cs=0x1a2;eip=0x0044ec; 	T(MOV(al, 0x89));	// 9360 mov     al, 89h ; '‰' ;~ 01A2:44EC
-cs=0x1a2;eip=0x0044ee; 	R(OUT(dx, al));	// 9361 out     dx, al ;~ 01A2:44EE
+cs=0x1a2;eip=0x0044ee; 	S(OUT(dx, al));	// 9361 out     dx, al ;~ 01A2:44EE
 cs=0x1a2;eip=0x0044ef; 	T(INC(dx));	// 9362 inc     dx ;~ 01A2:44EF
-cs=0x1a2;eip=0x0044f0; 	R(IN(ax, dx));	// 9363 in      ax, dx ;~ 01A2:44F0
+cs=0x1a2;eip=0x0044f0; 	S(IN(ax, dx));	// 9363 in      ax, dx ;~ 01A2:44F0
 cs=0x1a2;eip=0x0044f1; 	T(DEC(dx));	// 9364 dec     dx ;~ 01A2:44F1
 cs=0x1a2;eip=0x0044f2; 	T(CMP(ah, 0x84));	// 9365 cmp     ah, 84h ; '„' ;~ 01A2:44F2
 cs=0x1a2;eip=0x0044f5; 	J(JBE(loc_1452b));	// 9366 jbe     short loc_1452B ;~ 01A2:44F5
 cs=0x1a2;eip=0x0044f7; 	T(MOV(al, 7));	// 9367 mov     al, 7 ;~ 01A2:44F7
-cs=0x1a2;eip=0x0044f9; 	R(OUT(dx, al));	// 9368 out     dx, al ;~ 01A2:44F9
+cs=0x1a2;eip=0x0044f9; 	S(OUT(dx, al));	// 9368 out     dx, al ;~ 01A2:44F9
 cs=0x1a2;eip=0x0044fa; 	T(ADD(dl, 2));	// 9369 add     dl, 2 ;~ 01A2:44FA
 cs=0x1a2;eip=0x0044fd; 	T(MOV(al, ah));	// 9370 mov     al, ah ;~ 01A2:44FD
-cs=0x1a2;eip=0x0044ff; 	R(OUT(dx, al));	// 9371 out     dx, al ;~ 01A2:44FF
+cs=0x1a2;eip=0x0044ff; 	S(OUT(dx, al));	// 9371 out     dx, al ;~ 01A2:44FF
 cs=0x1a2;eip=0x004500; 	T(SUB(dl, 2));	// 9372 sub     dl, 2 ;~ 01A2:4500
 cs=0x1a2;eip=0x004503; 	T(MOV(al, 8));	// 9373 mov     al, 8 ;~ 01A2:4503
-cs=0x1a2;eip=0x004505; 	R(OUT(dx, al));	// 9374 out     dx, al ;~ 01A2:4505
+cs=0x1a2;eip=0x004505; 	S(OUT(dx, al));	// 9374 out     dx, al ;~ 01A2:4505
 cs=0x1a2;eip=0x004506; 	T(ADD(dl, 2));	// 9375 add     dl, 2 ;~ 01A2:4506
 cs=0x1a2;eip=0x004509; 	T(MOV(al, 0x80));	// 9376 mov     al, 80h ; '€' ;~ 01A2:4509
-cs=0x1a2;eip=0x00450b; 	R(OUT(dx, al));	// 9377 out     dx, al ;~ 01A2:450B
+cs=0x1a2;eip=0x00450b; 	S(OUT(dx, al));	// 9377 out     dx, al ;~ 01A2:450B
 cs=0x1a2;eip=0x00450c; 	T(SUB(dl, 2));	// 9378 sub     dl, 2 ;~ 01A2:450C
 cs=0x1a2;eip=0x00450f; 	T(MOV(al, 6));	// 9379 mov     al, 6 ;~ 01A2:450F
-cs=0x1a2;eip=0x004511; 	R(OUT(dx, al));	// 9380 out     dx, al ;~ 01A2:4511
+cs=0x1a2;eip=0x004511; 	S(OUT(dx, al));	// 9380 out     dx, al ;~ 01A2:4511
 cs=0x1a2;eip=0x004512; 	T(ADD(dl, 2));	// 9381 add     dl, 2 ;~ 01A2:4512
 cs=0x1a2;eip=0x004515; 	T(MOV(al, 0x3F));	// 9382 mov     al, 3Fh ; '?' ;~ 01A2:4515
-cs=0x1a2;eip=0x004517; 	R(OUT(dx, al));	// 9383 out     dx, al ;~ 01A2:4517
+cs=0x1a2;eip=0x004517; 	S(OUT(dx, al));	// 9383 out     dx, al ;~ 01A2:4517
 cs=0x1a2;eip=0x004518; 	T(SUB(dl, 2));	// 9384 sub     dl, 2 ;~ 01A2:4518
 cs=0x1a2;eip=0x00451b; 	T(MOV(al, 0x0D));	// 9385 mov     al, 0Dh ;~ 01A2:451B
-cs=0x1a2;eip=0x00451d; 	R(OUT(dx, al));	// 9386 out     dx, al ;~ 01A2:451D
+cs=0x1a2;eip=0x00451d; 	S(OUT(dx, al));	// 9386 out     dx, al ;~ 01A2:451D
 cs=0x1a2;eip=0x00451e; 	T(ADD(dl, 2));	// 9387 add     dl, 2 ;~ 01A2:451E
 cs=0x1a2;eip=0x004521; 	T(MOV(al, 0x60));	// 9388 mov     al, 60h ; '`' ;~ 01A2:4521
-cs=0x1a2;eip=0x004523; 	R(OUT(dx, al));	// 9389 out     dx, al ;~ 01A2:4523
+cs=0x1a2;eip=0x004523; 	S(OUT(dx, al));	// 9389 out     dx, al ;~ 01A2:4523
 cs=0x1a2;eip=0x004524; 	T(SUB(dl, 2));	// 9390 sub     dl, 2 ;~ 01A2:4524
 loc_14527:
 	// 4960 
@@ -7798,10 +7800,10 @@ cs=0x1a2;eip=0x004528; 	J(JMP(loc_1444e));	// 9394 jmp     loc_1444E ;~ 01A2:452
 loc_1452b:
 	// 4961 
 cs=0x1a2;eip=0x00452b; 	T(MOV(al, 9));	// 9398 mov     al, 9 ;~ 01A2:452B
-cs=0x1a2;eip=0x00452d; 	R(OUT(dx, al));	// 9399 out     dx, al ;~ 01A2:452D
+cs=0x1a2;eip=0x00452d; 	S(OUT(dx, al));	// 9399 out     dx, al ;~ 01A2:452D
 cs=0x1a2;eip=0x00452e; 	T(INC(dx));	// 9400 inc     dx ;~ 01A2:452E
 cs=0x1a2;eip=0x00452f; 	T(XOR(ax, ax));	// 9401 xor     ax, ax ;~ 01A2:452F
-cs=0x1a2;eip=0x004531; 	R(OUT(dx, ax));	// 9402 out     dx, ax ;~ 01A2:4531
+cs=0x1a2;eip=0x004531; 	S(OUT(dx, ax));	// 9402 out     dx, ax ;~ 01A2:4531
 cs=0x1a2;eip=0x004532; 	T(DEC(dx));	// 9403 dec     dx ;~ 01A2:4532
 cs=0x1a2;eip=0x004533; 	X(POPF);	// 9404 popf ;~ 01A2:4533
 cs=0x1a2;eip=0x004534; 	J(JMP(loc_1444e));	// 9405 jmp     loc_1444E ;~ 01A2:4534
@@ -8753,11 +8755,13 @@ _eff_1387f:
 	// 7244 
 cs=0x1a2;eip=0x00387f; 	T(CMP(byte_24668, 0));	// 7246 cmp     byte_24668, 0 ;~ 01A2:387F
 cs=0x1a2;eip=0x003884; 	J(JNZ(_eff_nullsub));	// 7247 jnz     short _eff_nullsub ;~ 01A2:3884
-	R(return _group6(m2c::k_eff_13886, _state););_eff_1389d:
+	return _group6(m2c::k_eff_13886, _state);
+_eff_1389d:
 	// 7274 
 cs=0x1a2;eip=0x00389d; 	T(CMP(byte_24668, 0));	// 7276 cmp     byte_24668, 0 ;~ 01A2:389D
 cs=0x1a2;eip=0x0038a2; 	J(JNZ(_eff_nullsub));	// 7277 jnz     short _eff_nullsub ;~ 01A2:38A2
-	R(return _group7(m2c::k_eff_138a4, _state););seg000_38bd_proc:
+	return _group7(m2c::k_eff_138a4, _state);
+seg000_38bd_proc:
 	// 7306 
 loc_138bd:
 	// 4828 
@@ -8806,7 +8810,8 @@ loc_13cae:
 	// 4884 
 cs=0x1a2;eip=0x003cae; 	T(MOV(al, *(raddr(ds,bx+0x0B))));	// 8032 mov     al, [bx+0Bh] ;~ 01A2:3CAE
 cs=0x1a2;eip=0x003cb1; 	T(AND(al, 0x0F));	// 8033 and     al, 0Fh ;~ 01A2:3CB1
-	R(return _group8(m2c::k_eff_13cb3, _state););seg000_3df9_proc:
+	return _group8(m2c::k_eff_13cb3, _state);
+seg000_3df9_proc:
 	// 8288 
 loc_13df9:
 	// 4893 
@@ -9200,7 +9205,7 @@ cs=0x1a2;eip=0x003cdd; 	T(TEST(_flag_playsetttings, 2));	// 8071 test    _flag_p
 cs=0x1a2;eip=0x003ce2; 	J(JNZ(_eff_13ce8));	// 8072 jnz     short _eff_13CE8 ;~ 01A2:3CE2
 cs=0x1a2;eip=0x003ce4; 	T(CMP(al, 0x20));	// 8073 cmp     al, 20h ; ' ' ;~ 01A2:3CE4
 cs=0x1a2;eip=0x003ce6; 	J(JA(sub_13cf6));	// 8074 ja      short sub_13CF6 ;~ 01A2:3CE6
-	R(JMP(_eff_13ce8));_eff_13ce8:
+	S(JMP(_eff_13ce8));_eff_13ce8:
 	// 8081 
 cs=0x1a2;eip=0x003ce8; 	T(OR(al, al));	// 8083 or      al, al ;~ 01A2:3CE8
 cs=0x1a2;eip=0x003cea; 	J(JZ(locret_13cf5));	// 8084 jz      short locret_13CF5 ;~ 01A2:3CEA
@@ -9258,32 +9263,32 @@ cs=0x1a2;eip=0x003d51; 	T(CLI);	// 8144 cli ;~ 01A2:3D51
 cs=0x1a2;eip=0x003d52; 	T(MOV(dx, _gravis_port));	// 8145 mov     dx, _gravis_port ;~ 01A2:3D52
 cs=0x1a2;eip=0x003d56; 	T(SUB(dx, 0x0FB));	// 8146 sub     dx, 0FBh ; 'û' ;~ 01A2:3D56
 cs=0x1a2;eip=0x003d5a; 	T(MOV(al, 4));	// 8147 mov     al, 4 ;~ 01A2:3D5A
-cs=0x1a2;eip=0x003d5c; 	R(OUT(dx, al));	// 8148 out     dx, al ;~ 01A2:3D5C
+cs=0x1a2;eip=0x003d5c; 	S(OUT(dx, al));	// 8148 out     dx, al ;~ 01A2:3D5C
 cs=0x1a2;eip=0x003d5d; 	T(INC(dx));	// 8149 inc     dx ;~ 01A2:3D5D
 cs=0x1a2;eip=0x003d5e; 	T(MOV(al, 0x80));	// 8150 mov     al, 80h ; '€' ;~ 01A2:3D5E
-cs=0x1a2;eip=0x003d60; 	R(OUT(dx, al));	// 8151 out     dx, al ;~ 01A2:3D60
+cs=0x1a2;eip=0x003d60; 	S(OUT(dx, al));	// 8151 out     dx, al ;~ 01A2:3D60
 cs=0x1a2;eip=0x003d61; 	T(XOR(al, al));	// 8152 xor     al, al ;~ 01A2:3D61
-cs=0x1a2;eip=0x003d63; 	R(OUT(dx, al));	// 8153 out     dx, al ;~ 01A2:3D63
+cs=0x1a2;eip=0x003d63; 	S(OUT(dx, al));	// 8153 out     dx, al ;~ 01A2:3D63
 cs=0x1a2;eip=0x003d64; 	T(ADD(dx, 0x0FA));	// 8154 add     dx, 0FAh ; 'ú' ;~ 01A2:3D64
 cs=0x1a2;eip=0x003d68; 	T(MOV(al, 0x46));	// 8155 mov     al, 46h ; 'F' ;~ 01A2:3D68
-cs=0x1a2;eip=0x003d6a; 	R(OUT(dx, al));	// 8156 out     dx, al ;~ 01A2:3D6A
+cs=0x1a2;eip=0x003d6a; 	S(OUT(dx, al));	// 8156 out     dx, al ;~ 01A2:3D6A
 cs=0x1a2;eip=0x003d6b; 	T(ADD(dl, 2));	// 8157 add     dl, 2 ;~ 01A2:3D6B
 cs=0x1a2;eip=0x003d6e; 	T(MOV(al, ah));	// 8158 mov     al, ah ;~ 01A2:3D6E
-cs=0x1a2;eip=0x003d70; 	R(OUT(dx, al));	// 8159 out     dx, al ;~ 01A2:3D70
+cs=0x1a2;eip=0x003d70; 	S(OUT(dx, al));	// 8159 out     dx, al ;~ 01A2:3D70
 cs=0x1a2;eip=0x003d71; 	T(SUB(dl, 2));	// 8160 sub     dl, 2 ;~ 01A2:3D71
 cs=0x1a2;eip=0x003d74; 	T(MOV(al, 0x45));	// 8161 mov     al, 45h ; 'E' ;~ 01A2:3D74
-cs=0x1a2;eip=0x003d76; 	R(OUT(dx, al));	// 8162 out     dx, al ;~ 01A2:3D76
+cs=0x1a2;eip=0x003d76; 	S(OUT(dx, al));	// 8162 out     dx, al ;~ 01A2:3D76
 cs=0x1a2;eip=0x003d77; 	T(ADD(dl, 2));	// 8163 add     dl, 2 ;~ 01A2:3D77
 cs=0x1a2;eip=0x003d7a; 	T(XOR(al, al));	// 8164 xor     al, al ;~ 01A2:3D7A
-cs=0x1a2;eip=0x003d7c; 	R(OUT(dx, al));	// 8165 out     dx, al ;~ 01A2:3D7C
+cs=0x1a2;eip=0x003d7c; 	S(OUT(dx, al));	// 8165 out     dx, al ;~ 01A2:3D7C
 cs=0x1a2;eip=0x003d7d; 	T(MOV(al, 4));	// 8166 mov     al, 4 ;~ 01A2:3D7D
-cs=0x1a2;eip=0x003d7f; 	R(OUT(dx, al));	// 8167 out     dx, al ;~ 01A2:3D7F
+cs=0x1a2;eip=0x003d7f; 	S(OUT(dx, al));	// 8167 out     dx, al ;~ 01A2:3D7F
 cs=0x1a2;eip=0x003d80; 	T(SUB(dx, 0x0FD));	// 8168 sub     dx, 0FDh ; 'ý' ;~ 01A2:3D80
 cs=0x1a2;eip=0x003d84; 	T(MOV(al, 4));	// 8169 mov     al, 4 ;~ 01A2:3D84
-cs=0x1a2;eip=0x003d86; 	R(OUT(dx, al));	// 8170 out     dx, al ;~ 01A2:3D86
+cs=0x1a2;eip=0x003d86; 	S(OUT(dx, al));	// 8170 out     dx, al ;~ 01A2:3D86
 cs=0x1a2;eip=0x003d87; 	T(INC(dx));	// 8171 inc     dx ;~ 01A2:3D87
 cs=0x1a2;eip=0x003d88; 	T(MOV(al, 1));	// 8172 mov     al, 1 ;~ 01A2:3D88
-cs=0x1a2;eip=0x003d8a; 	R(OUT(dx, al));	// 8173 out     dx, al ;~ 01A2:3D8A
+cs=0x1a2;eip=0x003d8a; 	S(OUT(dx, al));	// 8173 out     dx, al ;~ 01A2:3D8A
 cs=0x1a2;eip=0x003d8b; 	X(POPF);	// 8174 popf ;~ 01A2:3D8B
 cs=0x1a2;eip=0x003d8c; 	J(RETN(0));	// 8175 retn ;~ 01A2:3D8C
 seg000_3db0_proc:
@@ -9297,7 +9302,7 @@ cs=0x1a2;eip=0x003db7; 	T(MOV(dx, 0x2D));	// 8215 mov     dx, 2Dh ; '-' ;~ 01A2:
 cs=0x1a2;eip=0x003dba; 	T(MOV(ax, 0x8426));	// 8216 mov     ax, 8426h ;~ 01A2:3DBA
 cs=0x1a2;eip=0x003dbd; 	T(DIV2(cx));	// 8217 div     cx ;~ 01A2:3DBD
 cs=0x1a2;eip=0x003dbf; 	J({;});	// 8218 jmp     short $+2 ;~ 01A2:3DBF
-	R(JMP(_set_timer));_set_timer:
+	S(JMP(_set_timer));_set_timer:
 	// 8224 
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x003dc1; 	X(MOV(*(dw*)(((db*)&_timer_word_14f6e)), ax));	// 8226 mov     cs:_timer_word_14F6E, ax ;~ 01A2:3DC1
@@ -9305,11 +9310,11 @@ cs=0x1a2;eip=0x003dc5; 	X(PUSHF);	// 8227 pushf ;~ 01A2:3DC5
 cs=0x1a2;eip=0x003dc6; 	T(CLI);	// 8228 cli ;~ 01A2:3DC6
 cs=0x1a2;eip=0x003dc7; 	X(PUSH(ax));	// 8229 push    ax ;~ 01A2:3DC7
 cs=0x1a2;eip=0x003dc8; 	T(MOV(al, 0x34));	// 8230 mov     al, 34h ; '4' ;~ 01A2:3DC8
-cs=0x1a2;eip=0x003dca; 	R(OUT(0x43, al));	// 8231 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DCA
+cs=0x1a2;eip=0x003dca; 	S(OUT(0x43, al));	// 8231 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DCA
 cs=0x1a2;eip=0x003dcc; 	X(POP(ax));	// 8232 pop     ax ;~ 01A2:3DCC
-cs=0x1a2;eip=0x003dcd; 	R(OUT(0x40, al));	// 8233 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DCD
+cs=0x1a2;eip=0x003dcd; 	S(OUT(0x40, al));	// 8233 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DCD
 cs=0x1a2;eip=0x003dcf; 	T(MOV(al, ah));	// 8234 mov     al, ah ;~ 01A2:3DCF
-cs=0x1a2;eip=0x003dd1; 	R(OUT(0x40, al));	// 8235 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DD1
+cs=0x1a2;eip=0x003dd1; 	S(OUT(0x40, al));	// 8235 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DD1
 cs=0x1a2;eip=0x003dd3; 	X(POPF);	// 8236 popf ;~ 01A2:3DD3
 cs=0x1a2;eip=0x003dd4; 	J(RETN(0));	// 8237 retn ;~ 01A2:3DD4
 _eff_13f05:
@@ -9739,13 +9744,13 @@ cs=0x1a2;eip=0x003a7e; 	T(DEC(dx));	// 7615 dec     dx ;~ 01A2:3A7E
 cs=0x1a2;eip=0x003a7f; 	T(MOV(al, *(raddr(ds,bx+0x18))));	// 7616 mov     al, [bx+18h] ;~ 01A2:3A7F
 cs=0x1a2;eip=0x003a82; 	X(PUSHF);	// 7617 pushf ;~ 01A2:3A82
 cs=0x1a2;eip=0x003a83; 	T(CLI);	// 7618 cli ;~ 01A2:3A83
-cs=0x1a2;eip=0x003a84; 	R(OUT(dx, al));	// 7619 out     dx, al ;~ 01A2:3A84
+cs=0x1a2;eip=0x003a84; 	S(OUT(dx, al));	// 7619 out     dx, al ;~ 01A2:3A84
 cs=0x1a2;eip=0x003a85; 	T(INC(dx));	// 7620 inc     dx ;~ 01A2:3A85
 cs=0x1a2;eip=0x003a86; 	T(MOV(al, 0x0C));	// 7621 mov     al, 0Ch ;~ 01A2:3A86
-cs=0x1a2;eip=0x003a88; 	R(OUT(dx, al));	// 7622 out     dx, al ;~ 01A2:3A88
+cs=0x1a2;eip=0x003a88; 	S(OUT(dx, al));	// 7622 out     dx, al ;~ 01A2:3A88
 cs=0x1a2;eip=0x003a89; 	T(ADD(dl, 2));	// 7623 add     dl, 2 ;~ 01A2:3A89
 cs=0x1a2;eip=0x003a8c; 	T(MOV(al, ah));	// 7624 mov     al, ah ;~ 01A2:3A8C
-cs=0x1a2;eip=0x003a8e; 	R(OUT(dx, al));	// 7625 out     dx, al ;~ 01A2:3A8E
+cs=0x1a2;eip=0x003a8e; 	S(OUT(dx, al));	// 7625 out     dx, al ;~ 01A2:3A8E
 cs=0x1a2;eip=0x003a8f; 	T(SUB(dl, 2));	// 7626 sub     dl, 2 ;~ 01A2:3A8F
 cs=0x1a2;eip=0x003a92; 	X(POPF);	// 7627 popf ;~ 01A2:3A92
 cs=0x1a2;eip=0x003a93; 	J(RETN(0));	// 7628 retn ;~ 01A2:3A93
@@ -10327,13 +10332,13 @@ cs=0x1a2;eip=0x003daf; 	J(RETN(0));	// 8205 retn ;~ 01A2:3DAF
 cs=0x1a2;eip=0x003dd5; 	X(PUSHF);	// 8246 pushf ;~ 01A2:3DD5
 cs=0x1a2;eip=0x003dd6; 	T(CLI);	// 8247 cli ;~ 01A2:3DD6
 cs=0x1a2;eip=0x003dd7; 	T(MOV(al, 0x36));	// 8248 mov     al, 36h ; '6' ;~ 01A2:3DD7
-cs=0x1a2;eip=0x003dd9; 	R(OUT(0x43, al));	// 8249 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DD9
+cs=0x1a2;eip=0x003dd9; 	S(OUT(0x43, al));	// 8249 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DD9
 cs=0x1a2;eip=0x003ddb; 	T(XOR(al, al));	// 8250 xor     al, al ;~ 01A2:3DDB
-cs=0x1a2;eip=0x003ddd; 	R(OUT(0x40, al));	// 8251 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DDD
+cs=0x1a2;eip=0x003ddd; 	S(OUT(0x40, al));	// 8251 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DDD
 cs=0x1a2;eip=0x003ddf; 	J({;});	// 8252 jmp     short $+2 ;~ 01A2:3DDF
 loc_13de1:
 	// 4892 
-cs=0x1a2;eip=0x003de1; 	R(OUT(0x40, al));	// 8256 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DE1
+cs=0x1a2;eip=0x003de1; 	S(OUT(0x40, al));	// 8256 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:3DE1
 cs=0x1a2;eip=0x003de3; 	X(POPF);	// 8257 popf ;~ 01A2:3DE3
 cs=0x1a2;eip=0x003de4; 	J(RETN(0));	// 8258 retn ;~ 01A2:3DE4
 
@@ -10951,7 +10956,7 @@ loc_14153:
 cs=0x1a2;eip=0x004153; 	T(CMP(_play_state, 2));	// 8852 cmp     _play_state, 2 ;~ 01A2:4153
 cs=0x1a2;eip=0x004158; 	J(JZ(loc_14184));	// 8853 jz      short loc_14184 ;~ 01A2:4158
 cs=0x1a2;eip=0x00415a; 	X(INC(word_245f0));	// 8854 inc     word_245F0 ;~ 01A2:415A
-	R(JMP(sub_1415e));sub_1415e:
+	S(JMP(sub_1415e));sub_1415e:
 	// 8861 
 cs=0x1a2;eip=0x00415e; 	T(MOV(ax, word_245fa));	// 8862 mov     ax, word_245FA ;~ 01A2:415E
 cs=0x1a2;eip=0x004161; 	T(CMP(word_245f0, ax));	// 8863 cmp     word_245F0, ax ;~ 01A2:4161
@@ -11013,7 +11018,7 @@ cs=0x1a2;eip=0x0041e8; 	T(MOV(dl, 1));	// 8925 mov     dl, 1 ;~ 01A2:41E8
 cs=0x1a2;eip=0x0041ea; 	T(MOV(bx, 0x5344));	// 8926 mov     bx, 5344h       ; DS ;~ 01A2:41EA
 cs=0x1a2;eip=0x0041ed; 	T(MOV(cx, 0x4D50));	// 8927 mov     cx, 4D50h       ; MP ;~ 01A2:41ED
 cs=0x1a2;eip=0x0041f0; 	T(MOV(ax, 0x60FF));	// 8928 mov     ax, 60FFh ;~ 01A2:41F0
-cs=0x1a2;eip=0x0041f3; 	R(_INT(0x2F));	// 8929 int     2Fh             ; IPLAY: get data seg ;~ 01A2:41F3
+cs=0x1a2;eip=0x0041f3; 	S(_INT(0x2F));	// 8929 int     2Fh             ; IPLAY: get data seg ;~ 01A2:41F3
 cs=0x1a2;eip=0x0041f5; 	J(RETN(0));	// 8930 retn ;~ 01A2:41F5
 
     assert(0);
@@ -11144,7 +11149,7 @@ cs=0x1a2;eip=0x004575; 	X(MOV(byte_24623, 1));	// 9460 mov     byte_24623, 1 ;~ 
 cs=0x1a2;eip=0x00457a; 	X(MOV(_bit_mode, 16));	// 9461 mov     _bit_mode, 16 ;~ 01A2:457A
 cs=0x1a2;eip=0x00457f; 	T(MOV(bx, 0x3F3F));	// 9462 mov     bx, 3F3Fh ;~ 01A2:457F
 cs=0x1a2;eip=0x004582; 	T(MOV(ax, 0x0BC00));	// 9463 mov     ax, 0BC00h      ; Return: if installed, BX XOR CX XOR DX = 4D56h ('MV') ;~ 01A2:4582
-cs=0x1a2;eip=0x004585; 	R(_INT(0x2F));	// 9466 int     2Fh             ; - Multiplex - Windows 3.0 EGA.SYS - INSTALLATION CHECK ;~ 01A2:4585
+cs=0x1a2;eip=0x004585; 	S(_INT(0x2F));	// 9466 int     2Fh             ; - Multiplex - Windows 3.0 EGA.SYS - INSTALLATION CHECK ;~ 01A2:4585
 cs=0x1a2;eip=0x004587; 	T(XOR(bx, cx));	// 9470 xor     bx, cx ;~ 01A2:4587
 cs=0x1a2;eip=0x004589; 	T(XOR(bx, dx));	// 9471 xor     bx, dx ;~ 01A2:4589
 cs=0x1a2;eip=0x00458b; 	T(MOV(dx, 0x0FC0));	// 9472 mov     dx, 0FC0h ;~ 01A2:458B
@@ -11162,7 +11167,7 @@ cs=0x1a2;eip=0x0045aa; 	X(MOV(_snd_base_port, dx));	// 9483 mov     _snd_base_po
 cs=0x1a2;eip=0x0045ae; 	T(XOR(dx, 0x388));	// 9484 xor     dx, 388h ;~ 01A2:45AE
 cs=0x1a2;eip=0x0045b2; 	X(MOV(_sound_port, dx));	// 9485 mov     _sound_port, dx ;~ 01A2:45B2
 cs=0x1a2;eip=0x0045b6; 	T(MOV(ax, 0x0BC04));	// 9486 mov     ax, 0BC04h      ; INT 2F - MediaVision MVSOUND.SYS - GET DMA AND IRQ CHANNELS ;~ 01A2:45B6
-cs=0x1a2;eip=0x0045b9; 	R(_INT(0x2F));	// 9492 int     2Fh             ; - Multiplex - Windows 3.0 EGA.SYS - ;~ 01A2:45B9
+cs=0x1a2;eip=0x0045b9; 	S(_INT(0x2F));	// 9492 int     2Fh             ; - Multiplex - Windows 3.0 EGA.SYS - ;~ 01A2:45B9
 cs=0x1a2;eip=0x0045bb; 	T(CMP(_irq_number, 0x0FF));	// 9493 cmp     _irq_number, 0FFh ;~ 01A2:45BB
 cs=0x1a2;eip=0x0045c0; 	J(JNZ(loc_145c6));	// 9494 jnz     short loc_145C6 ;~ 01A2:45C0
 cs=0x1a2;eip=0x0045c2; 	X(MOV(_irq_number, cl));	// 9495 mov     _irq_number, cl ;~ 01A2:45C2
@@ -11195,7 +11200,7 @@ cs=0x1a2;eip=0x0045f8; 	T(DIV2(cx));	// 9521 div     cx ;~ 01A2:45F8
 cs=0x1a2;eip=0x0045fa; 	X(MOV(_freq1, ax));	// 9522 mov     _freq1, ax ;~ 01A2:45FA
 cs=0x1a2;eip=0x0045fd; 	T(MOV(dx, 0x0B8B));	// 9523 mov     dx, 0B8Bh ;~ 01A2:45FD
 cs=0x1a2;eip=0x004600; 	T(XOR(dx, _sound_port));	// 9524 xor     dx, _sound_port ;~ 01A2:4600
-cs=0x1a2;eip=0x004604; 	R(IN(al, dx));	// 9525 in      al, dx ;~ 01A2:4604
+cs=0x1a2;eip=0x004604; 	S(IN(al, dx));	// 9525 in      al, dx ;~ 01A2:4604
 cs=0x1a2;eip=0x004605; 	T(MOV(eax, 0x1000));	// 9526 mov     eax, 1000h ;~ 01A2:4605
 cs=0x1a2;eip=0x00460b; 	T(MOV(cl, byte_2464a));	// 9527 mov     cl, byte_2464A ;~ 01A2:460B
 cs=0x1a2;eip=0x00460f; 	J(CALL(_alloc_dma_buf,0));	// 9528 call    _alloc_dma_buf ;~ 01A2:460F
@@ -11206,23 +11211,23 @@ cs=0x1a2;eip=0x00461c; 	T(CLI);	// 9532 cli ;~ 01A2:461C
 cs=0x1a2;eip=0x00461d; 	T(MOV(dx, 0x0B8A));	// 9533 mov     dx, 0B8Ah ;~ 01A2:461D
 cs=0x1a2;eip=0x004620; 	T(XOR(dx, _sound_port));	// 9534 xor     dx, _sound_port ;~ 01A2:4620
 cs=0x1a2;eip=0x004624; 	T(MOV(al, 0x21));	// 9535 mov     al, 21h ; '!' ;~ 01A2:4624
-cs=0x1a2;eip=0x004626; 	R(OUT(dx, al));	// 9536 out     dx, al ;~ 01A2:4626
+cs=0x1a2;eip=0x004626; 	S(OUT(dx, al));	// 9536 out     dx, al ;~ 01A2:4626
 cs=0x1a2;eip=0x004627; 	T(MOV(dx, 0x8389));	// 9537 mov     dx, 8389h ;~ 01A2:4627
 cs=0x1a2;eip=0x00462a; 	T(XOR(dx, _sound_port));	// 9538 xor     dx, _sound_port ;~ 01A2:462A
-cs=0x1a2;eip=0x00462e; 	R(IN(al, dx));	// 9539 in      al, dx ;~ 01A2:462E
+cs=0x1a2;eip=0x00462e; 	S(IN(al, dx));	// 9539 in      al, dx ;~ 01A2:462E
 cs=0x1a2;eip=0x00462f; 	T(AND(al, 0x0F0));	// 9540 and     al, 0F0h ;~ 01A2:462F
 cs=0x1a2;eip=0x004631; 	T(OR(al, 7));	// 9541 or      al, 7 ;~ 01A2:4631
-cs=0x1a2;eip=0x004633; 	R(OUT(dx, al));	// 9542 out     dx, al ;~ 01A2:4633
+cs=0x1a2;eip=0x004633; 	S(OUT(dx, al));	// 9542 out     dx, al ;~ 01A2:4633
 cs=0x1a2;eip=0x004634; 	T(MOV(dx, 0x0F8A));	// 9543 mov     dx, 0F8Ah ;~ 01A2:4634
 cs=0x1a2;eip=0x004637; 	T(XOR(dx, _sound_port));	// 9544 xor     dx, _sound_port ;~ 01A2:4637
 cs=0x1a2;eip=0x00463b; 	T(MOV(al, 0x0F9));	// 9545 mov     al, 0F9h ; 'ù' ;~ 01A2:463B
-cs=0x1a2;eip=0x00463d; 	R(OUT(dx, al));	// 9546 out     dx, al ;~ 01A2:463D
+cs=0x1a2;eip=0x00463d; 	S(OUT(dx, al));	// 9546 out     dx, al ;~ 01A2:463D
 cs=0x1a2;eip=0x00463e; 	T(MOV(dx, 0x0B89));	// 9547 mov     dx, 0B89h ;~ 01A2:463E
 cs=0x1a2;eip=0x004641; 	T(XOR(dx, _sound_port));	// 9548 xor     dx, _sound_port ;~ 01A2:4641
-cs=0x1a2;eip=0x004645; 	R(OUT(dx, al));	// 9549 out     dx, al ;~ 01A2:4645
+cs=0x1a2;eip=0x004645; 	S(OUT(dx, al));	// 9549 out     dx, al ;~ 01A2:4645
 cs=0x1a2;eip=0x004646; 	T(ADD(dl, 2));	// 9550 add     dl, 2 ;~ 01A2:4646
 cs=0x1a2;eip=0x004649; 	T(MOV(al, 8));	// 9551 mov     al, 8 ;~ 01A2:4649
-cs=0x1a2;eip=0x00464b; 	R(OUT(dx, al));	// 9552 out     dx, al ;~ 01A2:464B
+cs=0x1a2;eip=0x00464b; 	S(OUT(dx, al));	// 9552 out     dx, al ;~ 01A2:464B
 cs=0x1a2;eip=0x00464c; 	X(POPF);	// 9553 popf ;~ 01A2:464C
 cs=0x1a2;eip=0x00464d; 	T(CLC);	// 9554 clc ;~ 01A2:464D
 cs=0x1a2;eip=0x00464e; 	J(RETN(0));	// 9555 retn ;~ 01A2:464E
@@ -11351,7 +11356,7 @@ cs=0x1a2;eip=0x004d50; 	T(MOV(eax, 0x1000));	// 10678 mov     eax, 1000h ;~ 01A2
 cs=0x1a2;eip=0x004d56; 	T(MOV(cl, _dma_chn_mask));	// 10679 mov     cl, _dma_chn_mask ;~ 01A2:4D56
 cs=0x1a2;eip=0x004d5a; 	J(CALL(_alloc_dma_buf,0));	// 10680 call    _alloc_dma_buf ;~ 01A2:4D5A
 cs=0x1a2;eip=0x004d5d; 	X(MOV(*(dw*)(((db*)&_audio_buf_pointer)), 0));	// 10681 mov     word ptr _audio_buf_pointer, 0 ;~ 01A2:4D5D
-	R(return seg000_4d63_proc(0, _state););
+	return seg000_4d63_proc(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -11393,18 +11398,18 @@ cs=0x1a2;eip=0x004334; 	X(PUSHF);	// 9099 pushf ;~ 01A2:4334
 cs=0x1a2;eip=0x004335; 	T(CLI);	// 9100 cli ;~ 01A2:4335
 cs=0x1a2;eip=0x004336; 	T(MOV(dx, _gravis_port));	// 9101 mov     dx, _gravis_port ;~ 01A2:4336
 cs=0x1a2;eip=0x00433a; 	T(MOV(al, 0x45));	// 9102 mov     al, 45h ; 'E' ;~ 01A2:433A
-cs=0x1a2;eip=0x00433c; 	R(OUT(dx, al));	// 9103 out     dx, al ;~ 01A2:433C
+cs=0x1a2;eip=0x00433c; 	S(OUT(dx, al));	// 9103 out     dx, al ;~ 01A2:433C
 cs=0x1a2;eip=0x00433d; 	T(ADD(dl, 2));	// 9104 add     dl, 2 ;~ 01A2:433D
 cs=0x1a2;eip=0x004340; 	T(XOR(al, al));	// 9105 xor     al, al ;~ 01A2:4340
-cs=0x1a2;eip=0x004342; 	R(OUT(dx, al));	// 9106 out     dx, al ;~ 01A2:4342
+cs=0x1a2;eip=0x004342; 	S(OUT(dx, al));	// 9106 out     dx, al ;~ 01A2:4342
 cs=0x1a2;eip=0x004343; 	T(MOV(al, 4));	// 9107 mov     al, 4 ;~ 01A2:4343
-cs=0x1a2;eip=0x004345; 	R(OUT(dx, al));	// 9108 out     dx, al ;~ 01A2:4345
+cs=0x1a2;eip=0x004345; 	S(OUT(dx, al));	// 9108 out     dx, al ;~ 01A2:4345
 cs=0x1a2;eip=0x004346; 	T(SUB(dx, 0x0FD));	// 9109 sub     dx, 0FDh ; 'ý' ;~ 01A2:4346
 cs=0x1a2;eip=0x00434a; 	T(MOV(al, 4));	// 9110 mov     al, 4 ;~ 01A2:434A
-cs=0x1a2;eip=0x00434c; 	R(OUT(dx, al));	// 9111 out     dx, al ;~ 01A2:434C
+cs=0x1a2;eip=0x00434c; 	S(OUT(dx, al));	// 9111 out     dx, al ;~ 01A2:434C
 cs=0x1a2;eip=0x00434d; 	T(INC(dx));	// 9112 inc     dx ;~ 01A2:434D
 cs=0x1a2;eip=0x00434e; 	T(MOV(al, 1));	// 9113 mov     al, 1 ;~ 01A2:434E
-cs=0x1a2;eip=0x004350; 	R(OUT(dx, al));	// 9114 out     dx, al ;~ 01A2:4350
+cs=0x1a2;eip=0x004350; 	S(OUT(dx, al));	// 9114 out     dx, al ;~ 01A2:4350
 cs=0x1a2;eip=0x004351; 	X(POPF);	// 9115 popf ;~ 01A2:4351
 cs=0x1a2;eip=0x004352; 	J(CALL(sub_140b6,0));	// 9116 call    sub_140B6 ;~ 01A2:4352
 cs=0x1a2;eip=0x004355; 	J(RETN(0));	// 9117 retn ;~ 01A2:4355
@@ -11436,17 +11441,17 @@ cs=0x1a2;eip=0x004537; 	X(PUSHF);	// 9414 pushf ;~ 01A2:4537
 cs=0x1a2;eip=0x004538; 	T(CLI);	// 9415 cli ;~ 01A2:4538
 cs=0x1a2;eip=0x004539; 	T(MOV(dx, _gravis_port));	// 9416 mov     dx, _gravis_port ;~ 01A2:4539
 cs=0x1a2;eip=0x00453d; 	T(MOV(al, 0x45));	// 9417 mov     al, 45h ; 'E' ;~ 01A2:453D
-cs=0x1a2;eip=0x00453f; 	R(OUT(dx, al));	// 9418 out     dx, al ;~ 01A2:453F
+cs=0x1a2;eip=0x00453f; 	S(OUT(dx, al));	// 9418 out     dx, al ;~ 01A2:453F
 cs=0x1a2;eip=0x004540; 	T(ADD(dl, 2));	// 9419 add     dl, 2 ;~ 01A2:4540
 cs=0x1a2;eip=0x004543; 	T(XOR(al, al));	// 9420 xor     al, al ;~ 01A2:4543
-cs=0x1a2;eip=0x004545; 	R(OUT(dx, al));	// 9421 out     dx, al ;~ 01A2:4545
+cs=0x1a2;eip=0x004545; 	S(OUT(dx, al));	// 9421 out     dx, al ;~ 01A2:4545
 cs=0x1a2;eip=0x004546; 	T(SUB(dl, 2));	// 9422 sub     dl, 2 ;~ 01A2:4546
 cs=0x1a2;eip=0x004549; 	T(SUB(dx, 0x0FB));	// 9423 sub     dx, 0FBh ; 'û' ;~ 01A2:4549
 cs=0x1a2;eip=0x00454d; 	T(MOV(al, 4));	// 9424 mov     al, 4 ;~ 01A2:454D
-cs=0x1a2;eip=0x00454f; 	R(OUT(dx, al));	// 9425 out     dx, al ;~ 01A2:454F
+cs=0x1a2;eip=0x00454f; 	S(OUT(dx, al));	// 9425 out     dx, al ;~ 01A2:454F
 cs=0x1a2;eip=0x004550; 	T(INC(dx));	// 9426 inc     dx ;~ 01A2:4550
 cs=0x1a2;eip=0x004551; 	T(MOV(al, 0x81));	// 9427 mov     al, 81h ;~ 01A2:4551
-cs=0x1a2;eip=0x004553; 	R(OUT(dx, al));	// 9428 out     dx, al ;~ 01A2:4553
+cs=0x1a2;eip=0x004553; 	S(OUT(dx, al));	// 9428 out     dx, al ;~ 01A2:4553
 cs=0x1a2;eip=0x004554; 	X(POPF);	// 9429 popf ;~ 01A2:4554
 cs=0x1a2;eip=0x004555; 	J(RETN(0));	// 9430 retn ;~ 01A2:4555
 
@@ -11479,7 +11484,7 @@ cs=0x1a2;eip=0x00455b; 	X(AND(byte_2463b, 0x0FE));	// 9441 and     byte_2463B, 0
 cs=0x1a2;eip=0x004560; 	T(MOV(dx, _gravis_port));	// 9442 mov     dx, _gravis_port ;~ 01A2:4560
 cs=0x1a2;eip=0x004564; 	T(SUB(dx, 0x103));	// 9443 sub     dx, 103h ;~ 01A2:4564
 cs=0x1a2;eip=0x004568; 	T(MOV(al, byte_2463b));	// 9444 mov     al, byte_2463B ;~ 01A2:4568
-cs=0x1a2;eip=0x00456b; 	R(OUT(dx, al));	// 9445 out     dx, al ;~ 01A2:456B
+cs=0x1a2;eip=0x00456b; 	S(OUT(dx, al));	// 9445 out     dx, al ;~ 01A2:456B
 cs=0x1a2;eip=0x00456c; 	J(CALL(_restore_intvector,0));	// 9446 call    _restore_intvector ;~ 01A2:456C
 cs=0x1a2;eip=0x00456f; 	J(RETN(0));	// 9447 retn ;~ 01A2:456F
 
@@ -11519,7 +11524,7 @@ cs=0x1a2;eip=0x00466d; 	T(CLI);	// 9577 cli ;~ 01A2:466D
 cs=0x1a2;eip=0x00466e; 	T(MOV(dx, 0x0B8B));	// 9578 mov     dx, 0B8Bh ;~ 01A2:466E
 cs=0x1a2;eip=0x004671; 	T(XOR(dx, _sound_port));	// 9579 xor     dx, _sound_port ;~ 01A2:4671
 cs=0x1a2;eip=0x004675; 	T(MOV(al, 8));	// 9580 mov     al, 8 ;~ 01A2:4675
-cs=0x1a2;eip=0x004677; 	R(OUT(dx, al));	// 9581 out     dx, al ;~ 01A2:4677
+cs=0x1a2;eip=0x004677; 	S(OUT(dx, al));	// 9581 out     dx, al ;~ 01A2:4677
 cs=0x1a2;eip=0x004678; 	T(MOV(dx, 0x12));	// 9582 mov     dx, 12h ;~ 01A2:4678
 cs=0x1a2;eip=0x00467b; 	T(MOV(ax, 0x34DC));	// 9583 mov     ax, 34DCh ;~ 01A2:467B
 cs=0x1a2;eip=0x00467e; 	T(CMP(byte_24623, 1));	// 9584 cmp     byte_24623, 1 ;~ 01A2:467E
@@ -11533,7 +11538,7 @@ cs=0x1a2;eip=0x00468d; 	T(MOV(cx, ax));	// 9591 mov     cx, ax ;~ 01A2:468D
 cs=0x1a2;eip=0x00468f; 	T(MOV(dx, 0x138B));	// 9592 mov     dx, 138Bh ;~ 01A2:468F
 cs=0x1a2;eip=0x004692; 	T(XOR(dx, _sound_port));	// 9593 xor     dx, _sound_port ;~ 01A2:4692
 cs=0x1a2;eip=0x004696; 	T(MOV(al, 0x36));	// 9594 mov     al, 36h ; '6' ;~ 01A2:4696
-cs=0x1a2;eip=0x004698; 	R(OUT(dx, al));	// 9595 out     dx, al ;~ 01A2:4698
+cs=0x1a2;eip=0x004698; 	S(OUT(dx, al));	// 9595 out     dx, al ;~ 01A2:4698
 cs=0x1a2;eip=0x004699; 	J({;});	// 9596 jmp     short $+2 ;~ 01A2:4699
 loc_1469b:
 	// 4968 
@@ -11542,12 +11547,12 @@ loc_1469d:
 	// 4969 
 cs=0x1a2;eip=0x00469d; 	T(SUB(dl, 3));	// 9604 sub     dl, 3 ;~ 01A2:469D
 cs=0x1a2;eip=0x0046a0; 	T(MOV(al, cl));	// 9605 mov     al, cl ;~ 01A2:46A0
-cs=0x1a2;eip=0x0046a2; 	R(OUT(dx, al));	// 9606 out     dx, al ;~ 01A2:46A2
+cs=0x1a2;eip=0x0046a2; 	S(OUT(dx, al));	// 9606 out     dx, al ;~ 01A2:46A2
 cs=0x1a2;eip=0x0046a3; 	J({;});	// 9607 jmp     short $+2 ;~ 01A2:46A3
 loc_146a5:
 	// 4970 
 cs=0x1a2;eip=0x0046a5; 	T(MOV(al, ch));	// 9611 mov     al, ch ;~ 01A2:46A5
-cs=0x1a2;eip=0x0046a7; 	R(OUT(dx, al));	// 9612 out     dx, al ;~ 01A2:46A7
+cs=0x1a2;eip=0x0046a7; 	S(OUT(dx, al));	// 9612 out     dx, al ;~ 01A2:46A7
 cs=0x1a2;eip=0x0046a8; 	J({;});	// 9613 jmp     short $+2 ;~ 01A2:46A8
 loc_146aa:
 	// 4971 
@@ -11562,7 +11567,7 @@ loc_146bd:
 cs=0x1a2;eip=0x0046bd; 	T(MOV(dx, 0x138B));	// 9625 mov     dx, 138Bh ;~ 01A2:46BD
 cs=0x1a2;eip=0x0046c0; 	T(XOR(dx, _sound_port));	// 9626 xor     dx, _sound_port ;~ 01A2:46C0
 cs=0x1a2;eip=0x0046c4; 	T(MOV(al, 0x76));	// 9627 mov     al, 76h ; 'v' ;~ 01A2:46C4
-cs=0x1a2;eip=0x0046c6; 	R(OUT(dx, al));	// 9628 out     dx, al ;~ 01A2:46C6
+cs=0x1a2;eip=0x0046c6; 	S(OUT(dx, al));	// 9628 out     dx, al ;~ 01A2:46C6
 cs=0x1a2;eip=0x0046c7; 	J({;});	// 9629 jmp     short $+2 ;~ 01A2:46C7
 loc_146c9:
 	// 4973 
@@ -11571,29 +11576,29 @@ loc_146cb:
 	// 4974 
 cs=0x1a2;eip=0x0046cb; 	T(SUB(dl, 2));	// 9637 sub     dl, 2 ;~ 01A2:46CB
 cs=0x1a2;eip=0x0046ce; 	T(MOV(al, cl));	// 9638 mov     al, cl ;~ 01A2:46CE
-cs=0x1a2;eip=0x0046d0; 	R(OUT(dx, al));	// 9639 out     dx, al ;~ 01A2:46D0
+cs=0x1a2;eip=0x0046d0; 	S(OUT(dx, al));	// 9639 out     dx, al ;~ 01A2:46D0
 cs=0x1a2;eip=0x0046d1; 	J({;});	// 9640 jmp     short $+2 ;~ 01A2:46D1
 loc_146d3:
 	// 4975 
 cs=0x1a2;eip=0x0046d3; 	T(MOV(al, ch));	// 9644 mov     al, ch ;~ 01A2:46D3
-cs=0x1a2;eip=0x0046d5; 	R(OUT(dx, al));	// 9645 out     dx, al ;~ 01A2:46D5
+cs=0x1a2;eip=0x0046d5; 	S(OUT(dx, al));	// 9645 out     dx, al ;~ 01A2:46D5
 cs=0x1a2;eip=0x0046d6; 	J({;});	// 9646 jmp     short $+2 ;~ 01A2:46D6
 loc_146d8:
 	// 4976 
 cs=0x1a2;eip=0x0046d8; 	T(MOV(dx, 0x0F88));	// 9650 mov     dx, 0F88h ;~ 01A2:46D8
 cs=0x1a2;eip=0x0046db; 	T(XOR(dx, _sound_port));	// 9651 xor     dx, _sound_port ;~ 01A2:46DB
 cs=0x1a2;eip=0x0046df; 	T(XOR(al, al));	// 9652 xor     al, al ;~ 01A2:46DF
-cs=0x1a2;eip=0x0046e1; 	R(OUT(dx, al));	// 9653 out     dx, al ;~ 01A2:46E1
+cs=0x1a2;eip=0x0046e1; 	S(OUT(dx, al));	// 9653 out     dx, al ;~ 01A2:46E1
 cs=0x1a2;eip=0x0046e2; 	T(MOV(dx, 0x0B8A));	// 9654 mov     dx, 0B8Ah ;~ 01A2:46E2
 cs=0x1a2;eip=0x0046e5; 	T(XOR(dx, _sound_port));	// 9655 xor     dx, _sound_port ;~ 01A2:46E5
 cs=0x1a2;eip=0x0046e9; 	T(MOV(al, 0x0E1));	// 9656 mov     al, 0E1h ; 'á' ;~ 01A2:46E9
-cs=0x1a2;eip=0x0046eb; 	R(OUT(dx, al));	// 9657 out     dx, al ;~ 01A2:46EB
+cs=0x1a2;eip=0x0046eb; 	S(OUT(dx, al));	// 9657 out     dx, al ;~ 01A2:46EB
 cs=0x1a2;eip=0x0046ec; 	T(MOV(dx, 0x0F8A));	// 9658 mov     dx, 0F8Ah ;~ 01A2:46EC
 cs=0x1a2;eip=0x0046ef; 	T(XOR(dx, _sound_port));	// 9659 xor     dx, _sound_port ;~ 01A2:46EF
 cs=0x1a2;eip=0x0046f3; 	T(MOV(al, 0x0F9));	// 9660 mov     al, 0F9h ; 'ù' ;~ 01A2:46F3
-cs=0x1a2;eip=0x0046f5; 	R(OUT(dx, al));	// 9661 out     dx, al ;~ 01A2:46F5
+cs=0x1a2;eip=0x0046f5; 	S(OUT(dx, al));	// 9661 out     dx, al ;~ 01A2:46F5
 cs=0x1a2;eip=0x0046f6; 	T(AND(al, 0x0DF));	// 9662 and     al, 0DFh ;~ 01A2:46F6
-cs=0x1a2;eip=0x0046f8; 	R(OUT(dx, al));	// 9663 out     dx, al ;~ 01A2:46F8
+cs=0x1a2;eip=0x0046f8; 	S(OUT(dx, al));	// 9663 out     dx, al ;~ 01A2:46F8
 cs=0x1a2;eip=0x0046f9; 	X(MOV(byte_2466e, 1));	// 9664 mov     byte_2466E, 1 ;~ 01A2:46F9
 cs=0x1a2;eip=0x0046fe; 	X(POPF);	// 9665 popf ;~ 01A2:46FE
 cs=0x1a2;eip=0x0046ff; 	J(RETN(0));	// 9666 retn ;~ 01A2:46FF
@@ -11606,21 +11611,21 @@ cs=0x1a2;eip=0x004703; 	T(MOV(ax, seg_offset(seg003)));	// 9681 mov     ax, seg 
 cs=0x1a2;eip=0x004706; 	T(MOV(ds, ax));	// 9682 mov     ds, ax ;~ 01A2:4706
 cs=0x1a2;eip=0x004708; 	T(MOV(dx, 0x0B89));	// 9683 mov     dx, 0B89h ;~ 01A2:4708
 cs=0x1a2;eip=0x00470b; 	T(XOR(dx, _sound_port));	// 9684 xor     dx, _sound_port ;~ 01A2:470B
-cs=0x1a2;eip=0x00470f; 	R(IN(al, dx));	// 9685 in      al, dx ;~ 01A2:470F
+cs=0x1a2;eip=0x00470f; 	S(IN(al, dx));	// 9685 in      al, dx ;~ 01A2:470F
 cs=0x1a2;eip=0x004710; 	J({;});	// 9686 jmp     short $+2 ;~ 01A2:4710
 loc_14712:
 	// 4977 
-cs=0x1a2;eip=0x004712; 	R(OUT(dx, al));	// 9690 out     dx, al ;~ 01A2:4712
+cs=0x1a2;eip=0x004712; 	S(OUT(dx, al));	// 9690 out     dx, al ;~ 01A2:4712
 cs=0x1a2;eip=0x004713; 	T(TEST(al, 8));	// 9691 test    al, 8 ;~ 01A2:4713
 cs=0x1a2;eip=0x004715; 	J(JNZ(loc_14e10));	// 9692 jnz     loc_14E10 ;~ 01A2:4715
 cs=0x1a2;eip=0x004719; 	T(MOV(al, 0x20));	// 9693 mov     al, 20h ; ' ' ;~ 01A2:4719
 cs=0x1a2;eip=0x00471b; 	T(CMP(byte_2464b, 8));	// 9694 cmp     byte_2464B, 8 ;~ 01A2:471B
 cs=0x1a2;eip=0x004720; 	J(JC(loc_14726));	// 9695 jb      short loc_14726 ;~ 01A2:4720
-cs=0x1a2;eip=0x004722; 	R(OUT(0x0A0, al));	// 9696 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4722
+cs=0x1a2;eip=0x004722; 	S(OUT(0x0A0, al));	// 9696 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4722
 cs=0x1a2;eip=0x004724; 	J({;});	// 9697 jmp     short $+2 ;~ 01A2:4724
 loc_14726:
 	// 4978 
-cs=0x1a2;eip=0x004726; 	R(OUT(0x20, al));	// 9702 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4726
+cs=0x1a2;eip=0x004726; 	S(OUT(0x20, al));	// 9702 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4726
 cs=0x1a2;eip=0x004728; 	X(POP(ds));	// 9703 pop     ds ;~ 01A2:4728
 cs=0x1a2;eip=0x004729; 	X(POP(dx));	// 9704 pop     dx ;~ 01A2:4729
 cs=0x1a2;eip=0x00472a; 	X(POP(ax));	// 9705 pop     ax ;~ 01A2:472A
@@ -11641,7 +11646,7 @@ cs=0x1a2;eip=0x004e2b; 	X(PUSH(es));	// 10811 push    es ;~ 01A2:4E2B
 cs=0x1a2;eip=0x004e2c; 	X(PUSH(fs));	// 10812 push    fs ;~ 01A2:4E2C
 cs=0x1a2;eip=0x004e2e; 	X(PUSH(gs));	// 10813 push    gs ;~ 01A2:4E2E
 cs=0x1a2;eip=0x004e30; 	T(MOV(al, 0x20));	// 10814 mov     al, 20h ; ' ' ;~ 01A2:4E30
-cs=0x1a2;eip=0x004e32; 	R(OUT(0x20, al));	// 10815 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4E32
+cs=0x1a2;eip=0x004e32; 	S(OUT(0x20, al));	// 10815 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4E32
 cs=0x1a2;eip=0x004e34; 	T(TEST(*(db*)(((db*)&_config_word)+1), 0x10));	// 10816 test    byte ptr _config_word+1, 10h ;~ 01A2:4E34
 cs=0x1a2;eip=0x004e39; 	J(JZ(loc_14e4d));	// 10817 jz      short loc_14E4D ;~ 01A2:4E39
 cs=0x1a2;eip=0x004e3b; 	X(INC(byte_24621));	// 10818 inc     byte_24621 ;~ 01A2:4E3B
@@ -11659,13 +11664,13 @@ cs=0x1a2;eip=0x004e59; 	T(OR(bh, bh));	// 10830 or      bh, bh ;~ 01A2:4E59
 cs=0x1a2;eip=0x004e5b; 	J(JZ(loc_14e66));	// 10831 jz      short loc_14E66 ;~ 01A2:4E5B
 cs=0x1a2;eip=0x004e5d; 	T(MOV(dx, 0x0A1));	// 10832 mov     dx, 0A1h ; '¡' ;~ 01A2:4E5D
 cs=0x1a2;eip=0x004e60; 	T(MOV(al, 0x20));	// 10833 mov     al, 20h ; ' ' ;~ 01A2:4E60
-cs=0x1a2;eip=0x004e62; 	R(OUT(0x0A0, al));	// 10834 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4E62
+cs=0x1a2;eip=0x004e62; 	S(OUT(0x0A0, al));	// 10834 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4E62
 cs=0x1a2;eip=0x004e64; 	T(MOV(bl, bh));	// 10835 mov     bl, bh ;~ 01A2:4E64
 loc_14e66:
 	// 5041 
-cs=0x1a2;eip=0x004e66; 	R(IN(al, dx));	// 10838 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:4E66
+cs=0x1a2;eip=0x004e66; 	S(IN(al, dx));	// 10838 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:4E66
 cs=0x1a2;eip=0x004e67; 	T(OR(al, bl));	// 10839 or      al, bl ;~ 01A2:4E67
-cs=0x1a2;eip=0x004e69; 	R(OUT(dx, al));	// 10840 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4E69
+cs=0x1a2;eip=0x004e69; 	S(OUT(dx, al));	// 10840 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4E69
 cs=0x1a2;eip=0x004e6a; 	T(STI);	// 10841 sti ;~ 01A2:4E6A
 cs=0x1a2;eip=0x004e6b; 	T(MOV(ax, word_24602));	// 10842 mov     ax, word_24602 ;~ 01A2:4E6B
 loc_14e6e:
@@ -11697,9 +11702,9 @@ cs=0x1a2;eip=0x004e9f; 	T(MOV(bl, bh));	// 10869 mov     bl, bh ;~ 01A2:4E9F
 loc_14ea1:
 	// 5045 
 cs=0x1a2;eip=0x004ea1; 	T(NOT(bl));	// 10872 not     bl ;~ 01A2:4EA1
-cs=0x1a2;eip=0x004ea3; 	R(IN(al, dx));	// 10873 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:4EA3
+cs=0x1a2;eip=0x004ea3; 	S(IN(al, dx));	// 10873 in      al, dx          ; Interrupt Controller #2, 8259A ;~ 01A2:4EA3
 cs=0x1a2;eip=0x004ea4; 	T(AND(al, bl));	// 10874 and     al, bl ;~ 01A2:4EA4
-cs=0x1a2;eip=0x004ea6; 	R(OUT(dx, al));	// 10875 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4EA6
+cs=0x1a2;eip=0x004ea6; 	S(OUT(dx, al));	// 10875 out     dx, al          ; Interrupt Controller #2, 8259A ;~ 01A2:4EA6
 cs=0x1a2;eip=0x004ea7; 	X(POP(gs));	// 10876 pop     gs ;~ 01A2:4EA7
 cs=0x1a2;eip=0x004ea9; 	X(POP(fs));	// 10877 pop     fs ;~ 01A2:4EA9
 cs=0x1a2;eip=0x004eab; 	X(POP(es));	// 10878 pop     es ;~ 01A2:4EAB
@@ -11719,11 +11724,11 @@ ret_1a2_4ebf:
 cs=0x1a2;eip=0x004ebf; 	T(MOV(al, 0x20));	// 10893 mov     al, 20h ; ' ' ;~ 01A2:4EBF
 cs=0x1a2;eip=0x004ec1; 	T(CMP(_irq_number, 7));	// 10894 cmp     _irq_number, 7 ;~ 01A2:4EC1
 cs=0x1a2;eip=0x004ec6; 	J(JBE(loc_14ecc));	// 10895 jbe     short loc_14ECC ;~ 01A2:4EC6
-cs=0x1a2;eip=0x004ec8; 	R(OUT(0x0A0, al));	// 10896 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4EC8
+cs=0x1a2;eip=0x004ec8; 	S(OUT(0x0A0, al));	// 10896 out     0A0h, al        ; PIC 2  same as 0020 for PIC 1 ;~ 01A2:4EC8
 cs=0x1a2;eip=0x004eca; 	J({;});	// 10897 jmp     short $+2 ;~ 01A2:4ECA
 loc_14ecc:
 	// 5048 
-cs=0x1a2;eip=0x004ecc; 	R(OUT(0x20, al));	// 10902 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4ECC
+cs=0x1a2;eip=0x004ecc; 	S(OUT(0x20, al));	// 10902 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4ECC
 cs=0x1a2;eip=0x004ece; 	X(POP(ds));	// 10903 pop     ds ;~ 01A2:4ECE
 cs=0x1a2;eip=0x004ecf; 	X(POP(dx));	// 10904 pop     dx ;~ 01A2:4ECF
 cs=0x1a2;eip=0x004ed0; 	X(POP(ax));	// 10905 pop     ax ;~ 01A2:4ED0
@@ -11780,17 +11785,17 @@ cs=0x1a2;eip=0x00472c; 	X(PUSHF);	// 9715 pushf ;~ 01A2:472C
 cs=0x1a2;eip=0x00472d; 	T(CLI);	// 9716 cli ;~ 01A2:472D
 cs=0x1a2;eip=0x00472e; 	T(MOV(dx, 0x0F8A));	// 9717 mov     dx, 0F8Ah ;~ 01A2:472E
 cs=0x1a2;eip=0x004731; 	T(XOR(dx, _sound_port));	// 9718 xor     dx, _sound_port ;~ 01A2:4731
-cs=0x1a2;eip=0x004735; 	R(IN(al, dx));	// 9719 in      al, dx ;~ 01A2:4735
+cs=0x1a2;eip=0x004735; 	S(IN(al, dx));	// 9719 in      al, dx ;~ 01A2:4735
 cs=0x1a2;eip=0x004736; 	T(AND(al, 0x0BF));	// 9720 and     al, 0BFh ;~ 01A2:4736
 cs=0x1a2;eip=0x004738; 	T(OR(al, 0x10));	// 9721 or      al, 10h ;~ 01A2:4738
-cs=0x1a2;eip=0x00473a; 	R(OUT(dx, al));	// 9722 out     dx, al ;~ 01A2:473A
+cs=0x1a2;eip=0x00473a; 	S(OUT(dx, al));	// 9722 out     dx, al ;~ 01A2:473A
 cs=0x1a2;eip=0x00473b; 	T(MOV(dx, 0x0B8B));	// 9723 mov     dx, 0B8Bh ;~ 01A2:473B
 cs=0x1a2;eip=0x00473e; 	T(XOR(dx, _sound_port));	// 9724 xor     dx, _sound_port ;~ 01A2:473E
 cs=0x1a2;eip=0x004742; 	T(XOR(al, al));	// 9725 xor     al, al ;~ 01A2:4742
-cs=0x1a2;eip=0x004744; 	R(OUT(dx, al));	// 9726 out     dx, al ;~ 01A2:4744
+cs=0x1a2;eip=0x004744; 	S(OUT(dx, al));	// 9726 out     dx, al ;~ 01A2:4744
 cs=0x1a2;eip=0x004745; 	T(MOV(cl, byte_2464a));	// 9727 mov     cl, byte_2464A ;~ 01A2:4745
 cs=0x1a2;eip=0x004749; 	J(CALL(_set_dmachn_mask,0));	// 9728 call    _set_dmachn_mask ;~ 01A2:4749
-	R(return seg000_474c_proc(0, _state););
+	return seg000_474c_proc(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -11819,7 +11824,7 @@ _useless_1474c:
 cs=0x1a2;eip=0x00474c; 	T(MOV(dx, 0x0B8B));	// 9733 mov     dx, 0B8Bh ;~ 01A2:474C
 cs=0x1a2;eip=0x00474f; 	T(XOR(dx, _sound_port));	// 9734 xor     dx, _sound_port ;~ 01A2:474F
 cs=0x1a2;eip=0x004753; 	T(XOR(al, al));	// 9735 xor     al, al ;~ 01A2:4753
-cs=0x1a2;eip=0x004755; 	R(OUT(dx, al));	// 9736 out     dx, al ;~ 01A2:4755
+cs=0x1a2;eip=0x004755; 	S(OUT(dx, al));	// 9736 out     dx, al ;~ 01A2:4755
 cs=0x1a2;eip=0x004756; 	X(MOV(byte_2466e, 0));	// 9737 mov     byte_2466E, 0 ;~ 01A2:4756
 cs=0x1a2;eip=0x00475b; 	J(CALL(_restore_intvector,0));	// 9738 call    _restore_intvector ;~ 01A2:475B
 cs=0x1a2;eip=0x00475e; 	X(POPF);	// 9739 popf ;~ 01A2:475E
@@ -11875,31 +11880,31 @@ cs=0x1a2;eip=0x004763; 	J(RETN(0));	// 9748 retn ;~ 01A2:4763
     _proaud_spectr_14:
     _begin:
 cs=0x1a2;eip=0x004764; 	T(MOV(dx, 0x0B8B));	// 9756 mov     dx, 0B8Bh ;~ 01A2:4764
-cs=0x1a2;eip=0x004767; 	R(IN(al, dx));	// 9757 in      al, dx ;~ 01A2:4767
+cs=0x1a2;eip=0x004767; 	S(IN(al, dx));	// 9757 in      al, dx ;~ 01A2:4767
 cs=0x1a2;eip=0x004768; 	T(INC(al));	// 9758 inc     al ;~ 01A2:4768
 cs=0x1a2;eip=0x00476a; 	J(JNZ(loc_1479e));	// 9759 jnz     short loc_1479E ;~ 01A2:476A
 cs=0x1a2;eip=0x00476c; 	T(MOV(dx, 0x0B87));	// 9760 mov     dx, 0B87h ;~ 01A2:476C
-cs=0x1a2;eip=0x00476f; 	R(IN(al, dx));	// 9761 in      al, dx ;~ 01A2:476F
+cs=0x1a2;eip=0x00476f; 	S(IN(al, dx));	// 9761 in      al, dx ;~ 01A2:476F
 cs=0x1a2;eip=0x004770; 	T(INC(al));	// 9762 inc     al ;~ 01A2:4770
 cs=0x1a2;eip=0x004772; 	J(JNZ(loc_1479e));	// 9763 jnz     short loc_1479E ;~ 01A2:4772
 cs=0x1a2;eip=0x004774; 	T(MOV(dx, 0x0B8F));	// 9764 mov     dx, 0B8Fh ;~ 01A2:4774
-cs=0x1a2;eip=0x004777; 	R(IN(al, dx));	// 9765 in      al, dx ;~ 01A2:4777
+cs=0x1a2;eip=0x004777; 	S(IN(al, dx));	// 9765 in      al, dx ;~ 01A2:4777
 cs=0x1a2;eip=0x004778; 	T(INC(al));	// 9766 inc     al ;~ 01A2:4778
 cs=0x1a2;eip=0x00477a; 	J(JNZ(loc_1479e));	// 9767 jnz     short loc_1479E ;~ 01A2:477A
 cs=0x1a2;eip=0x00477c; 	T(MOV(dx, 0x0A8B));	// 9768 mov     dx, 0A8Bh ;~ 01A2:477C
-cs=0x1a2;eip=0x00477f; 	R(IN(al, dx));	// 9769 in      al, dx ;~ 01A2:477F
+cs=0x1a2;eip=0x00477f; 	S(IN(al, dx));	// 9769 in      al, dx ;~ 01A2:477F
 cs=0x1a2;eip=0x004780; 	T(INC(al));	// 9770 inc     al ;~ 01A2:4780
 cs=0x1a2;eip=0x004782; 	J(JNZ(loc_1479e));	// 9771 jnz     short loc_1479E ;~ 01A2:4782
 cs=0x1a2;eip=0x004784; 	T(MOV(dx, 0x0A83));	// 9772 mov     dx, 0A83h ;~ 01A2:4784
-cs=0x1a2;eip=0x004787; 	R(IN(al, dx));	// 9773 in      al, dx ;~ 01A2:4787
+cs=0x1a2;eip=0x004787; 	S(IN(al, dx));	// 9773 in      al, dx ;~ 01A2:4787
 cs=0x1a2;eip=0x004788; 	T(INC(al));	// 9774 inc     al ;~ 01A2:4788
 cs=0x1a2;eip=0x00478a; 	J(JNZ(loc_1479e));	// 9775 jnz     short loc_1479E ;~ 01A2:478A
 cs=0x1a2;eip=0x00478c; 	T(MOV(dx, 0x0A87));	// 9776 mov     dx, 0A87h ;~ 01A2:478C
-cs=0x1a2;eip=0x00478f; 	R(IN(al, dx));	// 9777 in      al, dx ;~ 01A2:478F
+cs=0x1a2;eip=0x00478f; 	S(IN(al, dx));	// 9777 in      al, dx ;~ 01A2:478F
 cs=0x1a2;eip=0x004790; 	T(INC(al));	// 9778 inc     al ;~ 01A2:4790
 cs=0x1a2;eip=0x004792; 	J(JNZ(loc_1479e));	// 9779 jnz     short loc_1479E ;~ 01A2:4792
 cs=0x1a2;eip=0x004794; 	T(MOV(dx, 0x0A8F));	// 9780 mov     dx, 0A8Fh ;~ 01A2:4794
-cs=0x1a2;eip=0x004797; 	R(IN(al, dx));	// 9781 in      al, dx ;~ 01A2:4797
+cs=0x1a2;eip=0x004797; 	S(IN(al, dx));	// 9781 in      al, dx ;~ 01A2:4797
 cs=0x1a2;eip=0x004798; 	T(INC(al));	// 9782 inc     al ;~ 01A2:4798
 cs=0x1a2;eip=0x00479a; 	J(JNZ(loc_1479e));	// 9783 jnz     short loc_1479E ;~ 01A2:479A
 cs=0x1a2;eip=0x00479c; 	T(STC);	// 9784 stc ;~ 01A2:479C
@@ -11991,7 +11996,7 @@ loc_14817:
 cs=0x1a2;eip=0x004817; 	T(OR(cl, ah));	// 9855 or      cl, ah ;~ 01A2:4817
 cs=0x1a2;eip=0x004819; 	T(MOV(dx, _base_port2));	// 9856 mov     dx, _base_port2 ;~ 01A2:4819
 cs=0x1a2;eip=0x00481d; 	T(MOV(al, cl));	// 9857 mov     al, cl ;~ 01A2:481D
-cs=0x1a2;eip=0x00481f; 	R(OUT(dx, al));	// 9858 out     dx, al ;~ 01A2:481F
+cs=0x1a2;eip=0x00481f; 	S(OUT(dx, al));	// 9858 out     dx, al ;~ 01A2:481F
 cs=0x1a2;eip=0x004820; 	J(CALL(_wss_1498a,0));	// 9859 call    _wss_1498A ;~ 01A2:4820
 cs=0x1a2;eip=0x004823; 	T(MOV(eax, 0x1000));	// 9860 mov     eax, 1000h ;~ 01A2:4823
 cs=0x1a2;eip=0x004829; 	T(MOV(cl, _dma_channel2));	// 9861 mov     cl, _dma_channel2 ;~ 01A2:4829
@@ -12013,7 +12018,7 @@ cs=0x1a2;eip=0x00499c; 	T(MOV(dx, _base_port2));	// 10057 mov     dx, _base_port
 cs=0x1a2;eip=0x0049a0; 	T(ADD(dx, 4));	// 10058 add     dx, 4 ;~ 01A2:49A0
 loc_149a3:
 	// 4988 
-cs=0x1a2;eip=0x0049a3; 	R(IN(al, dx));	// 10061 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:49A3
+cs=0x1a2;eip=0x0049a3; 	S(IN(al, dx));	// 10061 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:49A3
 cs=0x1a2;eip=0x0049a4; 	T(TEST(al, 0x80));	// 10063 test    al, 80h ;~ 01A2:49A4
 cs=0x1a2;eip=0x0049a6; 	J(JZ(loc_149b2));	// 10064 jz      short loc_149B2 ;~ 01A2:49A6
 cs=0x1a2;eip=0x0049a8; 	T(DEC(ecx));	// 10065 dec     ecx ;~ 01A2:49A8
@@ -12025,13 +12030,13 @@ cs=0x1a2;eip=0x0049af; 	J(return _group15(m2c::kloc_14332, _state););	// 10070 j
 loc_149b2:
 	// 4990 
 cs=0x1a2;eip=0x0049b2; 	T(MOV(al, 0x49));	// 10074 mov     al, 49h ; 'I' ;~ 01A2:49B2
-cs=0x1a2;eip=0x0049b4; 	R(OUT(dx, al));	// 10075 out     dx, al ;~ 01A2:49B4
+cs=0x1a2;eip=0x0049b4; 	S(OUT(dx, al));	// 10075 out     dx, al ;~ 01A2:49B4
 cs=0x1a2;eip=0x0049b5; 	T(INC(dx));	// 10076 inc     dx ;~ 01A2:49B5
 cs=0x1a2;eip=0x0049b6; 	T(MOV(al, 0x0C));	// 10077 mov     al, 0Ch ;~ 01A2:49B6
-cs=0x1a2;eip=0x0049b8; 	R(OUT(dx, al));	// 10078 out     dx, al ;~ 01A2:49B8
+cs=0x1a2;eip=0x0049b8; 	S(OUT(dx, al));	// 10078 out     dx, al ;~ 01A2:49B8
 cs=0x1a2;eip=0x0049b9; 	T(DEC(dx));	// 10079 dec     dx ;~ 01A2:49B9
 cs=0x1a2;eip=0x0049ba; 	T(MOV(al, 9));	// 10080 mov     al, 9 ;~ 01A2:49BA
-cs=0x1a2;eip=0x0049bc; 	R(OUT(dx, al));	// 10081 out     dx, al ;~ 01A2:49BC
+cs=0x1a2;eip=0x0049bc; 	S(OUT(dx, al));	// 10081 out     dx, al ;~ 01A2:49BC
 cs=0x1a2;eip=0x0049bd; 	T(MOV(ax, 0x1080));	// 10082 mov     ax, 1080h ;~ 01A2:49BD
 cs=0x1a2;eip=0x0049c0; 	J(CALL(_wss_writemixer,0));	// 10083 call    _wss_WriteMixer ;~ 01A2:49C0
 cs=0x1a2;eip=0x0049c3; 	T(MOV(ax, 0x1101));	// 10084 mov     ax, 1101h ;~ 01A2:49C3
@@ -12065,13 +12070,13 @@ cs=0x1a2;eip=0x004a00; 	T(MOV(ah, 0x48));	// 10108 mov     ah, 48h ; 'H' ;~ 01A2
 cs=0x1a2;eip=0x004a02; 	J(CALL(_wss_writemixer,0));	// 10109 call    _wss_WriteMixer ;~ 01A2:4A02
 cs=0x1a2;eip=0x004a05; 	T(MOV(dx, _base_port2));	// 10110 mov     dx, _base_port2 ;~ 01A2:4A05
 cs=0x1a2;eip=0x004a09; 	T(ADD(dx, 5));	// 10111 add     dx, 5 ;~ 01A2:4A09
-cs=0x1a2;eip=0x004a0c; 	R(IN(al, dx));	// 10112 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A0C
-cs=0x1a2;eip=0x004a0d; 	R(IN(al, dx));	// 10114 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A0D
+cs=0x1a2;eip=0x004a0c; 	S(IN(al, dx));	// 10112 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A0C
+cs=0x1a2;eip=0x004a0d; 	S(IN(al, dx));	// 10114 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A0D
 cs=0x1a2;eip=0x004a0e; 	T(DEC(dx));	// 10116 dec     dx ;~ 01A2:4A0E
 cs=0x1a2;eip=0x004a0f; 	T(MOV(ecx, 0x100000));	// 10117 mov     ecx, 100000h ;~ 01A2:4A0F
 loc_14a15:
 	// 4993 
-cs=0x1a2;eip=0x004a15; 	R(IN(al, dx));	// 10120 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A15
+cs=0x1a2;eip=0x004a15; 	S(IN(al, dx));	// 10120 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A15
 cs=0x1a2;eip=0x004a16; 	T(TEST(al, 0x80));	// 10122 test    al, 80h ;~ 01A2:4A16
 cs=0x1a2;eip=0x004a18; 	J(JZ(loc_14a1e));	// 10123 jz      short loc_14A1E ;~ 01A2:4A18
 cs=0x1a2;eip=0x004a1a; 	T(DEC(ecx));	// 10124 dec     ecx ;~ 01A2:4A1A
@@ -12082,8 +12087,8 @@ cs=0x1a2;eip=0x004a1e; 	T(MOV(ecx, 0x100000));	// 10128 mov     ecx, 100000h ;~ 
 loc_14a24:
 	// 4995 
 cs=0x1a2;eip=0x004a24; 	T(MOV(al, 8));	// 10131 mov     al, 8 ;~ 01A2:4A24
-cs=0x1a2;eip=0x004a26; 	R(OUT(dx, al));	// 10132 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A26
-cs=0x1a2;eip=0x004a27; 	R(IN(al, dx));	// 10135 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A27
+cs=0x1a2;eip=0x004a26; 	S(OUT(dx, al));	// 10132 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A26
+cs=0x1a2;eip=0x004a27; 	S(IN(al, dx));	// 10135 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A27
 cs=0x1a2;eip=0x004a28; 	T(CMP(al, 8));	// 10137 cmp     al, 8 ;~ 01A2:4A28
 cs=0x1a2;eip=0x004a2a; 	J(JZ(loc_14a30));	// 10138 jz      short loc_14A30 ;~ 01A2:4A2A
 cs=0x1a2;eip=0x004a2c; 	T(DEC(ecx));	// 10139 dec     ecx ;~ 01A2:4A2C
@@ -12094,8 +12099,8 @@ cs=0x1a2;eip=0x004a30; 	T(MOV(ecx, 0x100000));	// 10143 mov     ecx, 100000h ;~ 
 loc_14a36:
 	// 4997 
 cs=0x1a2;eip=0x004a36; 	T(MOV(al, 0x0B));	// 10146 mov     al, 0Bh ;~ 01A2:4A36
-cs=0x1a2;eip=0x004a38; 	R(OUT(dx, al));	// 10147 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A38
-cs=0x1a2;eip=0x004a39; 	R(IN(al, dx));	// 10150 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A39
+cs=0x1a2;eip=0x004a38; 	S(OUT(dx, al));	// 10147 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A38
+cs=0x1a2;eip=0x004a39; 	S(IN(al, dx));	// 10150 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A39
 cs=0x1a2;eip=0x004a3a; 	T(CMP(al, 0x0B));	// 10152 cmp     al, 0Bh ;~ 01A2:4A3A
 cs=0x1a2;eip=0x004a3c; 	J(JZ(loc_14a42));	// 10153 jz      short loc_14A42 ;~ 01A2:4A3C
 cs=0x1a2;eip=0x004a3e; 	T(DEC(ecx));	// 10154 dec     ecx ;~ 01A2:4A3E
@@ -12106,12 +12111,12 @@ cs=0x1a2;eip=0x004a42; 	T(MOV(ecx, 0x100000));	// 10158 mov     ecx, 100000h ;~ 
 loc_14a48:
 	// 4999 
 cs=0x1a2;eip=0x004a48; 	T(INC(dx));	// 10161 inc     dx ;~ 01A2:4A48
-cs=0x1a2;eip=0x004a49; 	R(IN(al, dx));	// 10162 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A49
+cs=0x1a2;eip=0x004a49; 	S(IN(al, dx));	// 10162 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A49
 cs=0x1a2;eip=0x004a4a; 	T(DEC(dx));	// 10164 dec     dx ;~ 01A2:4A4A
 cs=0x1a2;eip=0x004a4b; 	T(TEST(al, 0x20));	// 10165 test    al, 20h ;~ 01A2:4A4B
 cs=0x1a2;eip=0x004a4d; 	J(JZ(locret_14a56));	// 10166 jz      short locret_14A56 ;~ 01A2:4A4D
 cs=0x1a2;eip=0x004a4f; 	T(MOV(al, 0x0B));	// 10167 mov     al, 0Bh ;~ 01A2:4A4F
-cs=0x1a2;eip=0x004a51; 	R(OUT(dx, al));	// 10168 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A51
+cs=0x1a2;eip=0x004a51; 	S(OUT(dx, al));	// 10168 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A51
 cs=0x1a2;eip=0x004a52; 	T(DEC(ecx));	// 10171 dec     ecx ;~ 01A2:4A52
 cs=0x1a2;eip=0x004a54; 	J(JNZ(loc_14a48));	// 10172 jnz     short loc_14A48 ;~ 01A2:4A54
 locret_14a56:
@@ -12204,7 +12209,7 @@ cs=0x1a2;eip=0x0048f1; 	J(CALL(_wss_writemixer,0));	// 9926 call    _wss_WriteMi
 cs=0x1a2;eip=0x0048f4; 	T(MOV(dx, _base_port2));	// 9927 mov     dx, _base_port2 ;~ 01A2:48F4
 cs=0x1a2;eip=0x0048f8; 	T(ADD(dx, 6));	// 9928 add     dx, 6 ;~ 01A2:48F8
 cs=0x1a2;eip=0x0048fb; 	T(XOR(al, al));	// 9929 xor     al, al ;~ 01A2:48FB
-cs=0x1a2;eip=0x0048fd; 	R(OUT(dx, al));	// 9930 out     dx, al ;~ 01A2:48FD
+cs=0x1a2;eip=0x0048fd; 	S(OUT(dx, al));	// 9930 out     dx, al ;~ 01A2:48FD
 cs=0x1a2;eip=0x0048fe; 	T(MOV(ax, 0x0A02));	// 9931 mov     ax, 0A02h ;~ 01A2:48FE
 cs=0x1a2;eip=0x004901; 	J(CALL(_wss_writemixer,0));	// 9932 call    _wss_WriteMixer ;~ 01A2:4901
 cs=0x1a2;eip=0x004904; 	T(MOV(ax, 0x905));	// 9933 mov     ax, 905h ;~ 01A2:4904
@@ -12218,7 +12223,7 @@ _wss_int:
 cs=0x1a2;eip=0x004910; 	X(PUSH(ax));	// 9943 push    ax ;~ 01A2:4910
 cs=0x1a2;eip=0x004911; 	X(PUSH(dx));	// 9944 push    dx ;~ 01A2:4911
 cs=0x1a2;eip=0x004915; 	T(XOR(al, al));	// 9949 xor     al, al ;~ 01A2:4915
-cs=0x1a2;eip=0x004917; 	R(OUT(dx, al));	// 9950 out     dx, al ;~ 01A2:4917
+cs=0x1a2;eip=0x004917; 	S(OUT(dx, al));	// 9950 out     dx, al ;~ 01A2:4917
 cs=0x1a2;eip=0x004918; 	X(PUSH(ds));	// 9951 push    ds ;~ 01A2:4918
 cs=0x1a2;eip=0x004919; 	T(MOV(ax, seg_offset(seg003)));	// 9952 mov     ax, seg seg003 ;~ 01A2:4919
 cs=0x1a2;eip=0x00491c; 	T(MOV(ds, ax));	// 9953 mov     ds, ax ;~ 01A2:491C
@@ -12261,7 +12266,7 @@ cs=0x1a2;eip=0x004936; 	J(CALL(_wss_writemixer,0));	// 9970 call    _wss_WriteMi
 cs=0x1a2;eip=0x004939; 	T(MOV(dx, _base_port2));	// 9971 mov     dx, _base_port2 ;~ 01A2:4939
 cs=0x1a2;eip=0x00493d; 	T(ADD(dx, 6));	// 9972 add     dx, 6 ;~ 01A2:493D
 cs=0x1a2;eip=0x004940; 	T(XOR(al, al));	// 9973 xor     al, al ;~ 01A2:4940
-cs=0x1a2;eip=0x004942; 	R(OUT(dx, al));	// 9974 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4942
+cs=0x1a2;eip=0x004942; 	S(OUT(dx, al));	// 9974 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4942
 cs=0x1a2;eip=0x004943; 	T(MOV(ax, 0x0A00));	// 9977 mov     ax, 0A00h ;~ 01A2:4943
 cs=0x1a2;eip=0x004946; 	J(CALL(_wss_writemixer,0));	// 9978 call    _wss_WriteMixer ;~ 01A2:4946
 cs=0x1a2;eip=0x004949; 	T(MOV(ax, 0x904));	// 9979 mov     ax, 904h ;~ 01A2:4949
@@ -12322,23 +12327,23 @@ cs=0x1a2;eip=0x00495e; 	J(RETN(0));	// 9995 retn ;~ 01A2:495E
     _wss_1495f:
     _begin:
 cs=0x1a2;eip=0x00495f; 	T(MOV(dx, 0x533));	// 10003 mov     dx, 533h ;~ 01A2:495F
-cs=0x1a2;eip=0x004962; 	R(IN(al, dx));	// 10004 in      al, dx ;~ 01A2:4962
-cs=0x1a2;eip=0x004963; 	R(IN(al, dx));	// 10005 in      al, dx ;~ 01A2:4963
+cs=0x1a2;eip=0x004962; 	S(IN(al, dx));	// 10004 in      al, dx ;~ 01A2:4962
+cs=0x1a2;eip=0x004963; 	S(IN(al, dx));	// 10005 in      al, dx ;~ 01A2:4963
 cs=0x1a2;eip=0x004964; 	T(INC(al));	// 10006 inc     al ;~ 01A2:4964
 cs=0x1a2;eip=0x004966; 	J(JNZ(loc_14985));	// 10007 jnz     short loc_14985 ;~ 01A2:4966
 cs=0x1a2;eip=0x004968; 	T(MOV(dx, 0x607));	// 10008 mov     dx, 607h ;~ 01A2:4968
-cs=0x1a2;eip=0x00496b; 	R(IN(al, dx));	// 10009 in      al, dx ;~ 01A2:496B
-cs=0x1a2;eip=0x00496c; 	R(IN(al, dx));	// 10010 in      al, dx ;~ 01A2:496C
+cs=0x1a2;eip=0x00496b; 	S(IN(al, dx));	// 10009 in      al, dx ;~ 01A2:496B
+cs=0x1a2;eip=0x00496c; 	S(IN(al, dx));	// 10010 in      al, dx ;~ 01A2:496C
 cs=0x1a2;eip=0x00496d; 	T(INC(al));	// 10011 inc     al ;~ 01A2:496D
 cs=0x1a2;eip=0x00496f; 	J(JNZ(loc_14985));	// 10012 jnz     short loc_14985 ;~ 01A2:496F
 cs=0x1a2;eip=0x004971; 	T(MOV(dx, 0x0E83));	// 10013 mov     dx, 0E83h ;~ 01A2:4971
-cs=0x1a2;eip=0x004974; 	R(IN(al, dx));	// 10014 in      al, dx ;~ 01A2:4974
-cs=0x1a2;eip=0x004975; 	R(IN(al, dx));	// 10015 in      al, dx ;~ 01A2:4975
+cs=0x1a2;eip=0x004974; 	S(IN(al, dx));	// 10014 in      al, dx ;~ 01A2:4974
+cs=0x1a2;eip=0x004975; 	S(IN(al, dx));	// 10015 in      al, dx ;~ 01A2:4975
 cs=0x1a2;eip=0x004976; 	T(INC(al));	// 10016 inc     al ;~ 01A2:4976
 cs=0x1a2;eip=0x004978; 	J(JNZ(loc_14985));	// 10017 jnz     short loc_14985 ;~ 01A2:4978
 cs=0x1a2;eip=0x00497a; 	T(MOV(dx, 0x0F43));	// 10018 mov     dx, 0F43h ;~ 01A2:497A
-cs=0x1a2;eip=0x00497d; 	R(IN(al, dx));	// 10019 in      al, dx ;~ 01A2:497D
-cs=0x1a2;eip=0x00497e; 	R(IN(al, dx));	// 10020 in      al, dx ;~ 01A2:497E
+cs=0x1a2;eip=0x00497d; 	S(IN(al, dx));	// 10019 in      al, dx ;~ 01A2:497D
+cs=0x1a2;eip=0x00497e; 	S(IN(al, dx));	// 10020 in      al, dx ;~ 01A2:497E
 cs=0x1a2;eip=0x00497f; 	T(INC(al));	// 10021 inc     al ;~ 01A2:497F
 cs=0x1a2;eip=0x004981; 	J(JNZ(loc_14985));	// 10022 jnz     short loc_14985 ;~ 01A2:4981
 cs=0x1a2;eip=0x004983; 	T(STC);	// 10023 stc ;~ 01A2:4983
@@ -12375,9 +12380,9 @@ cs=0x1a2;eip=0x004989; 	J(RETN(0));	// 10031 retn ;~ 01A2:4989
     _begin:
 cs=0x1a2;eip=0x00498a; 	T(MOV(dx, _base_port2));	// 10040 mov     dx, _base_port2 ;~ 01A2:498A
 cs=0x1a2;eip=0x00498e; 	T(ADD(dx, 6));	// 10041 add     dx, 6 ;~ 01A2:498E
-cs=0x1a2;eip=0x004991; 	R(IN(al, dx));	// 10042 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4991
+cs=0x1a2;eip=0x004991; 	S(IN(al, dx));	// 10042 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4991
 cs=0x1a2;eip=0x004992; 	T(XOR(al, al));	// 10044 xor     al, al ;~ 01A2:4992
-cs=0x1a2;eip=0x004994; 	R(OUT(dx, al));	// 10045 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4994
+cs=0x1a2;eip=0x004994; 	S(OUT(dx, al));	// 10045 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4994
 cs=0x1a2;eip=0x004995; 	J(RETN(0));	// 10048 retn ;~ 01A2:4995
 
     assert(0);
@@ -12406,10 +12411,10 @@ cs=0x1a2;eip=0x004995; 	J(RETN(0));	// 10048 retn ;~ 01A2:4995
 cs=0x1a2;eip=0x004a57; 	T(MOV(dx, _base_port2));	// 10184 mov     dx, _base_port2 ;~ 01A2:4A57
 cs=0x1a2;eip=0x004a5b; 	T(XCHG(al, ah));	// 10185 xchg    al, ah ;~ 01A2:4A5B
 cs=0x1a2;eip=0x004a5d; 	T(ADD(dx, 4));	// 10186 add     dx, 4 ;~ 01A2:4A5D
-cs=0x1a2;eip=0x004a60; 	R(OUT(dx, al));	// 10187 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A60
+cs=0x1a2;eip=0x004a60; 	S(OUT(dx, al));	// 10187 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A60
 cs=0x1a2;eip=0x004a61; 	T(INC(dx));	// 10190 inc     dx ;~ 01A2:4A61
 cs=0x1a2;eip=0x004a62; 	T(XCHG(al, ah));	// 10191 xchg    al, ah ;~ 01A2:4A62
-cs=0x1a2;eip=0x004a64; 	R(OUT(dx, al));	// 10192 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A64
+cs=0x1a2;eip=0x004a64; 	S(OUT(dx, al));	// 10192 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A64
 cs=0x1a2;eip=0x004a65; 	J(RETN(0));	// 10194 retn ;~ 01A2:4A65
 
     assert(0);
@@ -12438,9 +12443,9 @@ cs=0x1a2;eip=0x004a65; 	J(RETN(0));	// 10194 retn ;~ 01A2:4A65
 cs=0x1a2;eip=0x004a66; 	T(MOV(dx, _base_port2));	// 10203 mov     dx, _base_port2 ;~ 01A2:4A66
 cs=0x1a2;eip=0x004a6a; 	T(ADD(dx, 4));	// 10204 add     dx, 4 ;~ 01A2:4A6A
 cs=0x1a2;eip=0x004a6d; 	T(MOV(al, ah));	// 10205 mov     al, ah ;~ 01A2:4A6D
-cs=0x1a2;eip=0x004a6f; 	R(OUT(dx, al));	// 10206 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A6F
+cs=0x1a2;eip=0x004a6f; 	S(OUT(dx, al));	// 10206 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4A6F
 cs=0x1a2;eip=0x004a70; 	T(INC(dx));	// 10209 inc     dx ;~ 01A2:4A70
-cs=0x1a2;eip=0x004a71; 	R(IN(al, dx));	// 10210 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A71
+cs=0x1a2;eip=0x004a71; 	S(IN(al, dx));	// 10210 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4A71
 cs=0x1a2;eip=0x004a72; 	J(RETN(0));	// 10212 retn ;~ 01A2:4A72
 
     assert(0);
@@ -12478,28 +12483,28 @@ cs=0x1a2;eip=0x004b2f; 	T(MOV(dx, _sb_base_port));	// 10312 mov     dx, _sb_base
 cs=0x1a2;eip=0x004b33; 	T(ADD(dl, 0x0C));	// 10313 add     dl, 0Ch ;~ 01A2:4B33
 loc_14b36:
 	// 5006 
-cs=0x1a2;eip=0x004b36; 	R(IN(al, dx));	// 10316 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B36
+cs=0x1a2;eip=0x004b36; 	S(IN(al, dx));	// 10316 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B36
 cs=0x1a2;eip=0x004b37; 	T(OR(al, al));	// 10318 or      al, al ;~ 01A2:4B37
 cs=0x1a2;eip=0x004b39; 	J(JS(loc_14b36));	// 10319 js      short loc_14B36 ;~ 01A2:4B39
 cs=0x1a2;eip=0x004b3b; 	T(MOV(al, 0x41));	// 10320 mov     al, 41h ; 'A' ;~ 01A2:4B3B
-cs=0x1a2;eip=0x004b3d; 	R(OUT(dx, al));	// 10321 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B3D
+cs=0x1a2;eip=0x004b3d; 	S(OUT(dx, al));	// 10321 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B3D
 loc_14b3e:
 	// 5007 
-cs=0x1a2;eip=0x004b3e; 	R(IN(al, dx));	// 10325 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B3E
+cs=0x1a2;eip=0x004b3e; 	S(IN(al, dx));	// 10325 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B3E
 cs=0x1a2;eip=0x004b3f; 	T(OR(al, al));	// 10327 or      al, al ;~ 01A2:4B3F
 cs=0x1a2;eip=0x004b41; 	J(JS(loc_14b3e));	// 10328 js      short loc_14B3E ;~ 01A2:4B41
 cs=0x1a2;eip=0x004b43; 	T(MOV(al, *(db*)(((db*)&_freq1)+1)));	// 10329 mov     al, byte ptr _freq1+1 ;~ 01A2:4B43
-cs=0x1a2;eip=0x004b46; 	R(OUT(dx, al));	// 10330 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B46
+cs=0x1a2;eip=0x004b46; 	S(OUT(dx, al));	// 10330 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B46
 loc_14b47:
 	// 5008 
-cs=0x1a2;eip=0x004b47; 	R(IN(al, dx));	// 10334 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B47
+cs=0x1a2;eip=0x004b47; 	S(IN(al, dx));	// 10334 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B47
 cs=0x1a2;eip=0x004b48; 	T(OR(al, al));	// 10336 or      al, al ;~ 01A2:4B48
 cs=0x1a2;eip=0x004b4a; 	J(JS(loc_14b47));	// 10337 js      short loc_14B47 ;~ 01A2:4B4A
 cs=0x1a2;eip=0x004b4c; 	T(MOV(al, *(db*)(((db*)&_freq1))));	// 10338 mov     al, byte ptr _freq1 ;~ 01A2:4B4C
-cs=0x1a2;eip=0x004b4f; 	R(OUT(dx, al));	// 10339 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B4F
+cs=0x1a2;eip=0x004b4f; 	S(OUT(dx, al));	// 10339 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B4F
 loc_14b50:
 	// 5009 
-cs=0x1a2;eip=0x004b50; 	R(IN(al, dx));	// 10343 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B50
+cs=0x1a2;eip=0x004b50; 	S(IN(al, dx));	// 10343 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B50
 cs=0x1a2;eip=0x004b51; 	T(OR(al, al));	// 10345 or      al, al ;~ 01A2:4B51
 cs=0x1a2;eip=0x004b53; 	J(JS(loc_14b50));	// 10346 js      short loc_14B50 ;~ 01A2:4B53
 cs=0x1a2;eip=0x004b55; 	T(CMP(_bit_mode, 16));	// 10347 cmp     _bit_mode, 16 ;~ 01A2:4B55
@@ -12519,20 +12524,20 @@ cs=0x1a2;eip=0x004b6f; 	X(MOV(*(dw*)(((db*)&word_14bbb)), ax));	// 10359 mov    
 cs=0x1a2;eip=0x004b73; 	T(MOV(ax, 0x10B6));	// 10360 mov     ax, 10B6h ;~ 01A2:4B73
 loc_14b76:
 	// 5011 
-cs=0x1a2;eip=0x004b76; 	R(OUT(dx, al));	// 10363 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B76
+cs=0x1a2;eip=0x004b76; 	S(OUT(dx, al));	// 10363 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B76
 loc_14b77:
 	// 5012 
-cs=0x1a2;eip=0x004b77; 	R(IN(al, dx));	// 10367 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B77
+cs=0x1a2;eip=0x004b77; 	S(IN(al, dx));	// 10367 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B77
 cs=0x1a2;eip=0x004b78; 	T(OR(al, al));	// 10369 or      al, al ;~ 01A2:4B78
 cs=0x1a2;eip=0x004b7a; 	J(JS(loc_14b77));	// 10370 js      short loc_14B77 ;~ 01A2:4B7A
 cs=0x1a2;eip=0x004b7c; 	T(MOV(al, byte_24623));	// 10371 mov     al, byte_24623 ;~ 01A2:4B7C
 cs=0x1a2;eip=0x004b7f; 	T(AND(al, 1));	// 10372 and     al, 1 ;~ 01A2:4B7F
 cs=0x1a2;eip=0x004b81; 	T(SHL(al, 5));	// 10373 shl     al, 5 ;~ 01A2:4B81
 cs=0x1a2;eip=0x004b84; 	T(OR(al, ah));	// 10374 or      al, ah ;~ 01A2:4B84
-cs=0x1a2;eip=0x004b86; 	R(OUT(dx, al));	// 10375 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B86
+cs=0x1a2;eip=0x004b86; 	S(OUT(dx, al));	// 10375 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B86
 loc_14b87:
 	// 5013 
-cs=0x1a2;eip=0x004b87; 	R(IN(al, dx));	// 10379 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B87
+cs=0x1a2;eip=0x004b87; 	S(IN(al, dx));	// 10379 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4B87
 cs=0x1a2;eip=0x004b88; 	T(OR(al, al));	// 10381 or      al, al ;~ 01A2:4B88
 cs=0x1a2;eip=0x004b8a; 	J(JS(loc_14b87));	// 10382 js      short loc_14B87 ;~ 01A2:4B8A
 cs=0x1a2;eip=0x004b8c; 	T(MOV(ax, word_2460e));	// 10383 mov     ax, word_2460E ;~ 01A2:4B8C
@@ -12542,14 +12547,14 @@ cs=0x1a2;eip=0x004b96; 	T(SHR(cl, 4));	// 10386 shr     cl, 4 ;~ 01A2:4B96
 cs=0x1a2;eip=0x004b99; 	T(AND(cl, 1));	// 10387 and     cl, 1 ;~ 01A2:4B99
 cs=0x1a2;eip=0x004b9c; 	T(SHR(ax, cl));	// 10388 shr     ax, cl ;~ 01A2:4B9C
 cs=0x1a2;eip=0x004b9e; 	T(DEC(ax));	// 10389 dec     ax ;~ 01A2:4B9E
-cs=0x1a2;eip=0x004b9f; 	R(OUT(dx, al));	// 10390 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B9F
+cs=0x1a2;eip=0x004b9f; 	S(OUT(dx, al));	// 10390 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4B9F
 loc_14ba0:
 	// 5014 
-cs=0x1a2;eip=0x004ba0; 	R(IN(al, dx));	// 10394 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BA0
+cs=0x1a2;eip=0x004ba0; 	S(IN(al, dx));	// 10394 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BA0
 cs=0x1a2;eip=0x004ba1; 	T(OR(al, al));	// 10396 or      al, al ;~ 01A2:4BA1
 cs=0x1a2;eip=0x004ba3; 	J(JS(loc_14ba0));	// 10397 js      short loc_14BA0 ;~ 01A2:4BA3
 cs=0x1a2;eip=0x004ba5; 	T(MOV(al, ah));	// 10398 mov     al, ah ;~ 01A2:4BA5
-cs=0x1a2;eip=0x004ba7; 	R(OUT(dx, al));	// 10399 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4BA7
+cs=0x1a2;eip=0x004ba7; 	S(OUT(dx, al));	// 10399 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4BA7
 cs=0x1a2;eip=0x004ba8; 	T(MOV(cl, _dma_chn_mask));	// 10401 mov     cl, _dma_chn_mask ;~ 01A2:4BA8
 cs=0x1a2;eip=0x004bac; 	J(CALL(_dma_186e3,0));	// 10402 call    _dma_186E3 ;~ 01A2:4BAC
 cs=0x1a2;eip=0x004baf; 	X(MOV(byte_2466e, 1));	// 10403 mov     byte_2466E, 1 ;~ 01A2:4BAF
@@ -12562,7 +12567,7 @@ _sb_callback:
 	// 5015 
 cs=0x1a2;eip=0x004bb8; 	X(PUSH(ax));	// 10413 push    ax ;~ 01A2:4BB8
 cs=0x1a2;eip=0x004bb9; 	X(PUSH(dx));	// 10414 push    dx ;~ 01A2:4BB9
-cs=0x1a2;eip=0x004bbd; 	R(IN(al, dx));	// 10420 in      al, dx ;~ 01A2:4BBD
+cs=0x1a2;eip=0x004bbd; 	S(IN(al, dx));	// 10420 in      al, dx ;~ 01A2:4BBD
 cs=0x1a2;eip=0x004bbe; 	X(PUSH(ds));	// 10421 push    ds ;~ 01A2:4BBE
 cs=0x1a2;eip=0x004bbf; 	T(MOV(ax, seg_offset(seg003)));	// 10422 mov     ax, seg seg003 ;~ 01A2:4BBF
 cs=0x1a2;eip=0x004bc2; 	T(MOV(ds, ax));	// 10423 mov     ds, ax ;~ 01A2:4BC2
@@ -12611,7 +12616,7 @@ cs=0x1a2;eip=0x004bd1; 	T(MOV(dx, _sb_base_port));	// 10436 mov     dx, _sb_base
 cs=0x1a2;eip=0x004bd5; 	T(ADD(dl, 0x0C));	// 10437 add     dl, 0Ch ;~ 01A2:4BD5
 loc_14bd8:
 	// 5016 
-cs=0x1a2;eip=0x004bd8; 	R(IN(al, dx));	// 10440 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BD8
+cs=0x1a2;eip=0x004bd8; 	S(IN(al, dx));	// 10440 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BD8
 cs=0x1a2;eip=0x004bd9; 	T(OR(al, al));	// 10442 or      al, al ;~ 01A2:4BD9
 cs=0x1a2;eip=0x004bdb; 	J(JS(loc_14bd8));	// 10443 js      short loc_14BD8 ;~ 01A2:4BDB
 cs=0x1a2;eip=0x004bdd; 	T(MOV(al, 0x0DA));	// 10444 mov     al, 0DAh ; 'Ú' ;~ 01A2:4BDD
@@ -12620,10 +12625,10 @@ cs=0x1a2;eip=0x004be4; 	J(JZ(loc_14be8));	// 10446 jz      short loc_14BE8 ;~ 01
 cs=0x1a2;eip=0x004be6; 	T(MOV(al, 0x0D9));	// 10447 mov     al, 0D9h ; 'Ù' ;~ 01A2:4BE6
 loc_14be8:
 	// 5017 
-cs=0x1a2;eip=0x004be8; 	R(OUT(dx, al));	// 10450 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4BE8
+cs=0x1a2;eip=0x004be8; 	S(OUT(dx, al));	// 10450 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4BE8
 loc_14be9:
 	// 5018 
-cs=0x1a2;eip=0x004be9; 	R(IN(al, dx));	// 10454 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BE9
+cs=0x1a2;eip=0x004be9; 	S(IN(al, dx));	// 10454 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4BE9
 cs=0x1a2;eip=0x004bea; 	T(OR(al, al));	// 10456 or      al, al ;~ 01A2:4BEA
 cs=0x1a2;eip=0x004bec; 	J(JS(loc_14be9));	// 10457 js      short loc_14BE9 ;~ 01A2:4BEC
 cs=0x1a2;eip=0x004bee; 	J(CALL(_restore_intvector,0));	// 10458 call    _restore_intvector ;~ 01A2:4BEE
@@ -12715,52 +12720,52 @@ cs=0x1a2;eip=0x004c8c; 	X(PUSHF);	// 10535 pushf ;~ 01A2:4C8C
 cs=0x1a2;eip=0x004c8d; 	T(CLI);	// 10536 cli ;~ 01A2:4C8D
 cs=0x1a2;eip=0x004c8e; 	T(MOV(dx, _sb_base_port));	// 10537 mov     dx, _sb_base_port ;~ 01A2:4C8E
 cs=0x1a2;eip=0x004c92; 	T(ADD(dl, 0x0E));	// 10538 add     dl, 0Eh ;~ 01A2:4C92
-cs=0x1a2;eip=0x004c95; 	R(IN(al, dx));	// 10539 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4C95
+cs=0x1a2;eip=0x004c95; 	S(IN(al, dx));	// 10539 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4C95
 cs=0x1a2;eip=0x004c96; 	T(SUB(dl, 2));	// 10542 sub     dl, 2 ;~ 01A2:4C96
 loc_14c99:
 	// 5022 
-cs=0x1a2;eip=0x004c99; 	R(IN(al, dx));	// 10545 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4C99
+cs=0x1a2;eip=0x004c99; 	S(IN(al, dx));	// 10545 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4C99
 cs=0x1a2;eip=0x004c9a; 	T(OR(al, al));	// 10547 or      al, al ;~ 01A2:4C9A
 cs=0x1a2;eip=0x004c9c; 	J(JS(loc_14c99));	// 10548 js      short loc_14C99 ;~ 01A2:4C9C
 cs=0x1a2;eip=0x004c9e; 	T(MOV(al, 0x40));	// 10549 mov     al, 40h ; '@' ;~ 01A2:4C9E
-cs=0x1a2;eip=0x004ca0; 	R(OUT(dx, al));	// 10550 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CA0
+cs=0x1a2;eip=0x004ca0; 	S(OUT(dx, al));	// 10550 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CA0
 loc_14ca1:
 	// 5023 
-cs=0x1a2;eip=0x004ca1; 	R(IN(al, dx));	// 10554 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CA1
+cs=0x1a2;eip=0x004ca1; 	S(IN(al, dx));	// 10554 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CA1
 cs=0x1a2;eip=0x004ca2; 	T(OR(al, al));	// 10556 or      al, al ;~ 01A2:4CA2
 cs=0x1a2;eip=0x004ca4; 	J(JS(loc_14ca1));	// 10557 js      short loc_14CA1 ;~ 01A2:4CA4
 cs=0x1a2;eip=0x004ca6; 	T(MOV(al, _sb_timeconst));	// 10558 mov     al, _sb_timeconst ;~ 01A2:4CA6
-cs=0x1a2;eip=0x004ca9; 	R(OUT(dx, al));	// 10559 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CA9
+cs=0x1a2;eip=0x004ca9; 	S(OUT(dx, al));	// 10559 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CA9
 loc_14caa:
 	// 5024 
-cs=0x1a2;eip=0x004caa; 	R(IN(al, dx));	// 10563 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CAA
+cs=0x1a2;eip=0x004caa; 	S(IN(al, dx));	// 10563 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CAA
 cs=0x1a2;eip=0x004cab; 	T(OR(al, al));	// 10565 or      al, al ;~ 01A2:4CAB
 cs=0x1a2;eip=0x004cad; 	J(JS(loc_14caa));	// 10566 js      short loc_14CAA ;~ 01A2:4CAD
 cs=0x1a2;eip=0x004caf; 	T(MOV(al, 0x48));	// 10567 mov     al, 48h ; 'H' ;~ 01A2:4CAF
-cs=0x1a2;eip=0x004cb1; 	R(OUT(dx, al));	// 10568 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CB1
+cs=0x1a2;eip=0x004cb1; 	S(OUT(dx, al));	// 10568 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CB1
 loc_14cb2:
 	// 5025 
-cs=0x1a2;eip=0x004cb2; 	R(IN(al, dx));	// 10572 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CB2
+cs=0x1a2;eip=0x004cb2; 	S(IN(al, dx));	// 10572 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CB2
 cs=0x1a2;eip=0x004cb3; 	T(OR(al, al));	// 10574 or      al, al ;~ 01A2:4CB3
 cs=0x1a2;eip=0x004cb5; 	J(JS(loc_14cb2));	// 10575 js      short loc_14CB2 ;~ 01A2:4CB5
 cs=0x1a2;eip=0x004cb7; 	T(MOV(ax, word_2460e));	// 10576 mov     ax, word_2460E ;~ 01A2:4CB7
 cs=0x1a2;eip=0x004cba; 	T(SHR(ax, 2));	// 10577 shr     ax, 2 ;~ 01A2:4CBA
 cs=0x1a2;eip=0x004cbd; 	T(DEC(ax));	// 10578 dec     ax ;~ 01A2:4CBD
-cs=0x1a2;eip=0x004cbe; 	R(OUT(dx, al));	// 10579 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CBE
+cs=0x1a2;eip=0x004cbe; 	S(OUT(dx, al));	// 10579 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CBE
 loc_14cbf:
 	// 5026 
-cs=0x1a2;eip=0x004cbf; 	R(IN(al, dx));	// 10583 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CBF
+cs=0x1a2;eip=0x004cbf; 	S(IN(al, dx));	// 10583 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CBF
 cs=0x1a2;eip=0x004cc0; 	T(OR(al, al));	// 10585 or      al, al ;~ 01A2:4CC0
 cs=0x1a2;eip=0x004cc2; 	J(JS(loc_14cbf));	// 10586 js      short loc_14CBF ;~ 01A2:4CC2
 cs=0x1a2;eip=0x004cc4; 	T(MOV(al, ah));	// 10587 mov     al, ah ;~ 01A2:4CC4
-cs=0x1a2;eip=0x004cc6; 	R(OUT(dx, al));	// 10588 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CC6
+cs=0x1a2;eip=0x004cc6; 	S(OUT(dx, al));	// 10588 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CC6
 loc_14cc7:
 	// 5027 
-cs=0x1a2;eip=0x004cc7; 	R(IN(al, dx));	// 10592 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CC7
+cs=0x1a2;eip=0x004cc7; 	S(IN(al, dx));	// 10592 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4CC7
 cs=0x1a2;eip=0x004cc8; 	T(OR(al, al));	// 10594 or      al, al ;~ 01A2:4CC8
 cs=0x1a2;eip=0x004cca; 	J(JS(loc_14cc7));	// 10595 js      short loc_14CC7 ;~ 01A2:4CCA
 cs=0x1a2;eip=0x004ccc; 	T(MOV(al, 0x90));	// 10596 mov     al, 90h ;~ 01A2:4CCC
-cs=0x1a2;eip=0x004cce; 	R(OUT(dx, al));	// 10597 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CCE
+cs=0x1a2;eip=0x004cce; 	S(OUT(dx, al));	// 10597 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4CCE
 cs=0x1a2;eip=0x004ccf; 	X(MOV(byte_2466e, 1));	// 10599 mov     byte_2466E, 1 ;~ 01A2:4CCF
 cs=0x1a2;eip=0x004cd4; 	T(MOV(si, m2c::kmyfunc));	// 10600 mov     si, offset myfunc ; myfunc ;~ 01A2:4CD4
 cs=0x1a2;eip=0x004cd7; 	T(MOV(al, _sb_irq_number));	// 10601 mov     al, _sb_irq_number ;~ 01A2:4CD7
@@ -12776,7 +12781,7 @@ myfunc:
 	// 5029 
 cs=0x1a2;eip=0x004ce8; 	X(PUSH(ax));	// 10613 push    ax ;~ 01A2:4CE8
 cs=0x1a2;eip=0x004ce9; 	X(PUSH(dx));	// 10614 push    dx ;~ 01A2:4CE9
-cs=0x1a2;eip=0x004ced; 	R(IN(al, dx));	// 10619 in      al, dx ;~ 01A2:4CED
+cs=0x1a2;eip=0x004ced; 	S(IN(al, dx));	// 10619 in      al, dx ;~ 01A2:4CED
 cs=0x1a2;eip=0x004cee; 	X(PUSH(ds));	// 10620 push    ds ;~ 01A2:4CEE
 cs=0x1a2;eip=0x004cef; 	T(MOV(ax, seg_offset(seg003)));	// 10621 mov     ax, seg seg003 ;~ 01A2:4CEF
 cs=0x1a2;eip=0x004cf2; 	T(MOV(ds, ax));	// 10622 mov     ds, ax ;~ 01A2:4CF2
@@ -12808,27 +12813,27 @@ cs=0x1a2;eip=0x004db9; 	T(MOV(dx, _sb_base_port));	// 10721 mov     dx, _sb_base
 cs=0x1a2;eip=0x004dbd; 	T(ADD(dl, 0x0C));	// 10722 add     dl, 0Ch ;~ 01A2:4DBD
 loc_14dc0:
 	// 5032 
-cs=0x1a2;eip=0x004dc0; 	R(IN(al, dx));	// 10725 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DC0
+cs=0x1a2;eip=0x004dc0; 	S(IN(al, dx));	// 10725 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DC0
 cs=0x1a2;eip=0x004dc1; 	T(OR(al, al));	// 10727 or      al, al ;~ 01A2:4DC1
 cs=0x1a2;eip=0x004dc3; 	J(JS(loc_14dc0));	// 10728 js      short loc_14DC0 ;~ 01A2:4DC3
 cs=0x1a2;eip=0x004dc5; 	T(MOV(al, 0x14));	// 10729 mov     al, 14h ;~ 01A2:4DC5
-cs=0x1a2;eip=0x004dc7; 	R(OUT(dx, al));	// 10730 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DC7
+cs=0x1a2;eip=0x004dc7; 	S(OUT(dx, al));	// 10730 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DC7
 loc_14dc8:
 	// 5033 
-cs=0x1a2;eip=0x004dc8; 	R(IN(al, dx));	// 10734 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DC8
+cs=0x1a2;eip=0x004dc8; 	S(IN(al, dx));	// 10734 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DC8
 cs=0x1a2;eip=0x004dc9; 	T(OR(al, al));	// 10736 or      al, al ;~ 01A2:4DC9
 cs=0x1a2;eip=0x004dcb; 	J(JS(loc_14dc8));	// 10737 js      short loc_14DC8 ;~ 01A2:4DCB
 cs=0x1a2;eip=0x004dcd; 	T(MOV(ax, word_2460e));	// 10738 mov     ax, word_2460E ;~ 01A2:4DCD
 cs=0x1a2;eip=0x004dd0; 	T(SHR(ax, 2));	// 10739 shr     ax, 2 ;~ 01A2:4DD0
 cs=0x1a2;eip=0x004dd3; 	T(DEC(ax));	// 10740 dec     ax ;~ 01A2:4DD3
-cs=0x1a2;eip=0x004dd4; 	R(OUT(dx, al));	// 10741 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DD4
+cs=0x1a2;eip=0x004dd4; 	S(OUT(dx, al));	// 10741 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DD4
 loc_14dd5:
 	// 5034 
-cs=0x1a2;eip=0x004dd5; 	R(IN(al, dx));	// 10745 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DD5
+cs=0x1a2;eip=0x004dd5; 	S(IN(al, dx));	// 10745 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4DD5
 cs=0x1a2;eip=0x004dd6; 	T(OR(al, al));	// 10747 or      al, al ;~ 01A2:4DD6
 cs=0x1a2;eip=0x004dd8; 	J(JS(loc_14dd5));	// 10748 js      short loc_14DD5 ;~ 01A2:4DD8
 cs=0x1a2;eip=0x004dda; 	T(MOV(al, ah));	// 10749 mov     al, ah ;~ 01A2:4DDA
-cs=0x1a2;eip=0x004ddc; 	R(OUT(dx, al));	// 10750 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DDC
+cs=0x1a2;eip=0x004ddc; 	S(OUT(dx, al));	// 10750 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4DDC
 cs=0x1a2;eip=0x004ddd; 	X(MOV(byte_2466e, 1));	// 10752 mov     byte_2466E, 1 ;~ 01A2:4DDD
 cs=0x1a2;eip=0x004de2; 	X(POPF);	// 10753 popf ;~ 01A2:4DE2
 cs=0x1a2;eip=0x004de3; 	J(RETN(0));	// 10754 retn ;~ 01A2:4DE3
@@ -12839,32 +12844,32 @@ cs=0x1a2;eip=0x004de5; 	X(PUSH(dx));	// 10764 push    dx ;~ 01A2:4DE5
 cs=0x1a2;eip=0x004de6; 	X(PUSH(ds));	// 10765 push    ds ;~ 01A2:4DE6
 cs=0x1a2;eip=0x004de7; 	T(MOV(ax, seg_offset(seg003)));	// 10766 mov     ax, seg seg003 ;~ 01A2:4DE7
 cs=0x1a2;eip=0x004dea; 	T(MOV(ds, ax));	// 10767 mov     ds, ax ;~ 01A2:4DEA
-cs=0x1a2;eip=0x004def; 	R(IN(al, dx));	// 10772 in      al, dx ;~ 01A2:4DEF
+cs=0x1a2;eip=0x004def; 	S(IN(al, dx));	// 10772 in      al, dx ;~ 01A2:4DEF
 cs=0x1a2;eip=0x004df0; 	T(SUB(dl, 2));	// 10773 sub     dl, 2 ;~ 01A2:4DF0
 loc_14df3:
 	// 5035 
-cs=0x1a2;eip=0x004df3; 	R(IN(al, dx));	// 10776 in      al, dx ;~ 01A2:4DF3
+cs=0x1a2;eip=0x004df3; 	S(IN(al, dx));	// 10776 in      al, dx ;~ 01A2:4DF3
 cs=0x1a2;eip=0x004df4; 	T(OR(al, al));	// 10777 or      al, al ;~ 01A2:4DF4
 cs=0x1a2;eip=0x004df6; 	J(JS(loc_14df3));	// 10778 js      short loc_14DF3 ;~ 01A2:4DF6
 cs=0x1a2;eip=0x004df8; 	T(MOV(al, 0x14));	// 10779 mov     al, 14h ;~ 01A2:4DF8
-cs=0x1a2;eip=0x004dfa; 	R(OUT(dx, al));	// 10780 out     dx, al ;~ 01A2:4DFA
+cs=0x1a2;eip=0x004dfa; 	S(OUT(dx, al));	// 10780 out     dx, al ;~ 01A2:4DFA
 loc_14dfb:
 	// 5036 
-cs=0x1a2;eip=0x004dfb; 	R(IN(al, dx));	// 10783 in      al, dx ;~ 01A2:4DFB
+cs=0x1a2;eip=0x004dfb; 	S(IN(al, dx));	// 10783 in      al, dx ;~ 01A2:4DFB
 cs=0x1a2;eip=0x004dfc; 	T(OR(al, al));	// 10784 or      al, al ;~ 01A2:4DFC
 cs=0x1a2;eip=0x004dfe; 	J(JS(loc_14dfb));	// 10785 js      short loc_14DFB ;~ 01A2:4DFE
 cs=0x1a2;eip=0x004e00; 	T(MOV(ax, word_2460e));	// 10786 mov     ax, word_2460E ;~ 01A2:4E00
 cs=0x1a2;eip=0x004e03; 	T(SHR(ax, 2));	// 10787 shr     ax, 2 ;~ 01A2:4E03
 cs=0x1a2;eip=0x004e06; 	T(DEC(ax));	// 10788 dec     ax ;~ 01A2:4E06
-cs=0x1a2;eip=0x004e07; 	R(OUT(dx, al));	// 10789 out     dx, al ;~ 01A2:4E07
+cs=0x1a2;eip=0x004e07; 	S(OUT(dx, al));	// 10789 out     dx, al ;~ 01A2:4E07
 loc_14e08:
 	// 5037 
-cs=0x1a2;eip=0x004e08; 	R(IN(al, dx));	// 10792 in      al, dx ;~ 01A2:4E08
+cs=0x1a2;eip=0x004e08; 	S(IN(al, dx));	// 10792 in      al, dx ;~ 01A2:4E08
 cs=0x1a2;eip=0x004e09; 	T(OR(al, al));	// 10793 or      al, al ;~ 01A2:4E09
 cs=0x1a2;eip=0x004e0b; 	J(JS(loc_14e08));	// 10794 js      short loc_14E08 ;~ 01A2:4E0B
 cs=0x1a2;eip=0x004e0d; 	T(MOV(al, ah));	// 10795 mov     al, ah ;~ 01A2:4E0D
-cs=0x1a2;eip=0x004e0f; 	R(OUT(dx, al));	// 10796 out     dx, al ;~ 01A2:4E0F
-	R(return _group16(m2c::kseg000_4e10_proc, _state););
+cs=0x1a2;eip=0x004e0f; 	S(OUT(dx, al));	// 10796 out     dx, al ;~ 01A2:4E0F
+	return _group16(m2c::kseg000_4e10_proc, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -12936,14 +12941,14 @@ cs=0x1a2;eip=0x004ee6; 	T(MOV(dx, _sb_base_port));	// 10920 mov     dx, _sb_base
 cs=0x1a2;eip=0x004eea; 	T(ADD(dl, 0x0C));	// 10921 add     dl, 0Ch ;~ 01A2:4EEA
 loc_14eed:
 	// 5049 
-cs=0x1a2;eip=0x004eed; 	R(IN(al, dx));	// 10924 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4EED
+cs=0x1a2;eip=0x004eed; 	S(IN(al, dx));	// 10924 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4EED
 cs=0x1a2;eip=0x004eee; 	T(OR(al, al));	// 10926 or      al, al ;~ 01A2:4EEE
 cs=0x1a2;eip=0x004ef0; 	J(JS(loc_14eed));	// 10927 js      short loc_14EED ;~ 01A2:4EF0
 cs=0x1a2;eip=0x004ef2; 	T(MOV(al, 0x0D0));	// 10928 mov     al, 0D0h ; 'Ð' ;~ 01A2:4EF2
-cs=0x1a2;eip=0x004ef4; 	R(OUT(dx, al));	// 10929 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4EF4
+cs=0x1a2;eip=0x004ef4; 	S(OUT(dx, al));	// 10929 out     dx, al          ; DMA controller, 8237A-5. ;~ 01A2:4EF4
 loc_14ef5:
 	// 5050 
-cs=0x1a2;eip=0x004ef5; 	R(IN(al, dx));	// 10933 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4EF5
+cs=0x1a2;eip=0x004ef5; 	S(IN(al, dx));	// 10933 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:4EF5
 cs=0x1a2;eip=0x004ef6; 	T(OR(al, al));	// 10935 or      al, al ;~ 01A2:4EF6
 cs=0x1a2;eip=0x004ef8; 	J(JS(loc_14ef5));	// 10936 js      short loc_14EF5 ;~ 01A2:4EF8
 cs=0x1a2;eip=0x004efa; 	J(CALL(_restore_intvector,0));	// 10937 call    _restore_intvector ;~ 01A2:4EFA
@@ -13101,7 +13106,9 @@ loc_14f3c:
 cs=0x1a2;eip=0x004f3c; 	X(MOV(*(dw*)(((db*)&word_14f6c)), 1));	// 10987 mov     cs:word_14F6C, 1 ;~ 01A2:4F3C
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f43; __disp=*(dd*)(((db*)&_int8addr));
-	R(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
+//        from_callf = true;
+printf("int8\n");
+	J(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
 _covox_init:
 	// 11026 
 cs=0x1a2;eip=0x004f74; 	X(MOV(_sndflags_24622, 3));	// 11028 mov     _sndflags_24622, 3 ;~ 01A2:4F74
@@ -13140,9 +13147,9 @@ cs=0x1a2;eip=0x004fbc; 	X(PUSH(ax));	// 11070 push    ax ;~ 01A2:4FBC
 cs=0x1a2;eip=0x004fbd; 	X(PUSH(dx));	// 11071 push    dx ;~ 01A2:4FBD
 cs=0x1a2;eip=0x004fbe; 	X(PUSH(ds));	// 11072 push    ds ;~ 01A2:4FBE
 cs=0x1a2;eip=0x004fc2; 	T(MOV(ds, dx));	// 11077 mov     ds, dx ;~ 01A2:4FC2
-cs=0x1a2;eip=0x004fca; 	R(OUT(dx, al));	// 11086 out     dx, al          ; Printer Data Latch: ;~ 01A2:4FCA
+cs=0x1a2;eip=0x004fca; 	S(OUT(dx, al));	// 11086 out     dx, al          ; Printer Data Latch: ;~ 01A2:4FCA
 cs=0x1a2;eip=0x004fcb; 	T(MOV(al, 0x20));	// 11088 mov     al, 20h ; ' ' ;~ 01A2:4FCB
-cs=0x1a2;eip=0x004fcd; 	R(OUT(0x20, al));	// 11089 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4FCD
+cs=0x1a2;eip=0x004fcd; 	S(OUT(0x20, al));	// 11089 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:4FCD
 cs=0x1a2;eip=0x004fcf; 	X(POP(ds));	// 11090 pop     ds ;~ 01A2:4FCF
 cs=0x1a2;eip=0x004fd0; 	X(POP(dx));	// 11091 pop     dx ;~ 01A2:4FD0
 cs=0x1a2;eip=0x004fd1; 	X(POP(ax));	// 11092 pop     ax ;~ 01A2:4FD1
@@ -13199,17 +13206,17 @@ loc_15047:
 cs=0x1a2;eip=0x005047; 	T(MOV(dx, seg_offset(seg000)));	// 11178 mov     dx, seg seg000 ;~ 01A2:5047
 cs=0x1a2;eip=0x00504a; 	T(MOV(ds, dx));	// 11179 mov     ds, dx ;~ 01A2:504A
 cs=0x1a2;eip=0x00504f; 	T(MOV(al, 2));	// 11185 mov     al, 2 ;~ 01A2:504F
-cs=0x1a2;eip=0x005051; 	R(OUT(dx, al));	// 11186 out     dx, al ;~ 01A2:5051
+cs=0x1a2;eip=0x005051; 	S(OUT(dx, al));	// 11186 out     dx, al ;~ 01A2:5051
 cs=0x1a2;eip=0x005052; 	T(SUB(dl, 2));	// 11187 sub     dl, 2 ;~ 01A2:5052
-cs=0x1a2;eip=0x005058; 	R(OUT(dx, al));	// 11193 out     dx, al          ; Printer Data Latch: ;~ 01A2:5058
+cs=0x1a2;eip=0x005058; 	S(OUT(dx, al));	// 11193 out     dx, al          ; Printer Data Latch: ;~ 01A2:5058
 cs=0x1a2;eip=0x005059; 	T(ADD(dl, 2));	// 11195 add     dl, 2 ;~ 01A2:5059
 cs=0x1a2;eip=0x00505c; 	T(MOV(al, 1));	// 11196 mov     al, 1 ;~ 01A2:505C
-cs=0x1a2;eip=0x00505e; 	R(OUT(dx, al));	// 11197 out     dx, al          ; Printer Control Bits: ;~ 01A2:505E
+cs=0x1a2;eip=0x00505e; 	S(OUT(dx, al));	// 11197 out     dx, al          ; Printer Control Bits: ;~ 01A2:505E
 cs=0x1a2;eip=0x00505f; 	T(SUB(dl, 2));	// 11203 sub     dl, 2 ;~ 01A2:505F
 cs=0x1a2;eip=0x005062; 	T(MOV(al, ah));	// 11204 mov     al, ah ;~ 01A2:5062
-cs=0x1a2;eip=0x005064; 	R(OUT(dx, al));	// 11205 out     dx, al          ; Printer Data Latch: ;~ 01A2:5064
+cs=0x1a2;eip=0x005064; 	S(OUT(dx, al));	// 11205 out     dx, al          ; Printer Data Latch: ;~ 01A2:5064
 cs=0x1a2;eip=0x005065; 	T(MOV(al, 0x20));	// 11207 mov     al, 20h ; ' ' ;~ 01A2:5065
-cs=0x1a2;eip=0x005067; 	R(OUT(0x20, al));	// 11208 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5067
+cs=0x1a2;eip=0x005067; 	S(OUT(0x20, al));	// 11208 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5067
 cs=0x1a2;eip=0x005069; 	X(POP(ds));	// 11209 pop     ds ;~ 01A2:5069
 cs=0x1a2;eip=0x00506a; 	X(POP(dx));	// 11211 pop     dx ;~ 01A2:506A
 cs=0x1a2;eip=0x00506b; 	X(POP(ax));	// 11212 pop     ax ;~ 01A2:506B
@@ -13294,7 +13301,7 @@ cs=0x1a2;eip=0x00512b; 	T(MOV(ds, bx));	// 11330 mov     ds, bx ;~ 01A2:512B
 cs=0x1a2;eip=0x00512d; 	T(MOV(bx, offset(seg003,_table_24898)));	// 11332 mov     bx, offset _table_24898 ;~ 01A2:512D
 cs=0x1a2;eip=0x005130; 	T(XLAT);	// 11333 xlat ;~ 01A2:5130
 cs=0x1a2;eip=0x005131; 	T(MOV(dx, 0x389));	// 11334 mov     dx, 389h ;~ 01A2:5131
-cs=0x1a2;eip=0x005134; 	R(OUT(dx, al));	// 11335 out     dx, al ;~ 01A2:5134
+cs=0x1a2;eip=0x005134; 	S(OUT(dx, al));	// 11335 out     dx, al ;~ 01A2:5134
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x005135; 	X(INC(*(dw*)(((db*)&word_15126))));	// 11336 inc     cs:word_15126 ;~ 01A2:5135
 cs=0x1a2;eip=0x00513a; 	J(JZ(loc_1514e));	// 11337 jz      short loc_1514E ;~ 01A2:513A
@@ -13304,7 +13311,7 @@ cs=0x1a2;eip=0x00513c; 	X(POP(ds));	// 11340 pop     ds ;~ 01A2:513C
 cs=0x1a2;eip=0x00513d; 	X(POP(dx));	// 11341 pop     dx ;~ 01A2:513D
 cs=0x1a2;eip=0x00513e; 	X(POP(bx));	// 11342 pop     bx ;~ 01A2:513E
 cs=0x1a2;eip=0x00513f; 	T(MOV(al, 0x20));	// 11343 mov     al, 20h ; ' ' ;~ 01A2:513F
-cs=0x1a2;eip=0x005141; 	R(OUT(0x20, al));	// 11344 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5141
+cs=0x1a2;eip=0x005141; 	S(OUT(0x20, al));	// 11344 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5141
 cs=0x1a2;eip=0x005143; 	X(POP(ax));	// 11345 pop     ax ;~ 01A2:5143
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x005144; 	X(DEC(*(dw*)(((db*)&word_14f6c))));	// 11346 dec     cs:word_14F6C ;~ 01A2:5144
@@ -13323,7 +13330,7 @@ cs=0x1a2;eip=0x00516c; 	X(MOV(_bit_mode, 8));	// 11383 mov     _bit_mode, 8 ;~ 0
 cs=0x1a2;eip=0x005171; 	X(PUSHF);	// 11384 pushf ;~ 01A2:5171
 cs=0x1a2;eip=0x005172; 	T(CLI);	// 11385 cli ;~ 01A2:5172
 cs=0x1a2;eip=0x005173; 	T(MOV(al, 0x90));	// 11386 mov     al, 90h ;~ 01A2:5173
-cs=0x1a2;eip=0x005175; 	R(OUT(0x43, al));	// 11387 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:5175
+cs=0x1a2;eip=0x005175; 	S(OUT(0x43, al));	// 11387 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:5175
 cs=0x1a2;eip=0x005177; 	T(MOV(dx, m2c::k_pcspeaker_interrupt));	// 11388 mov     dx, offset _pcspeaker_interrupt ;~ 01A2:5177
 cs=0x1a2;eip=0x00517a; 	J(CALL(_set_timer_int,0));	// 11389 call    _set_timer_int ;~ 01A2:517A
 cs=0x1a2;eip=0x00517d; 	T(SUB(ax, 0x0F00));	// 11390 sub     ax, 0F00h ;~ 01A2:517D
@@ -13346,9 +13353,9 @@ cs=0x1a2;eip=0x00519f; 	T(XOR(bh, bh));	// 11436 xor     bh, bh ;~ 01A2:519F
 cs=0x1a2;eip=0x0051a5; 	T(MOV(bl, *((_pc_timer_tbl)+bx)));	// 11442 mov     bl, cs:_pc_timer_tbl[bx] ;~ 01A2:51A5
 cs=0x1a2;eip=0x0051aa; 	T(MOV(bh, al));	// 11443 mov     bh, al ;~ 01A2:51AA
 cs=0x1a2;eip=0x0051ac; 	T(MOV(al, bl));	// 11444 mov     al, bl ;~ 01A2:51AC
-cs=0x1a2;eip=0x0051ae; 	R(OUT(0x42, al));	// 11445 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:51AE
+cs=0x1a2;eip=0x0051ae; 	S(OUT(0x42, al));	// 11445 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 01A2:51AE
 cs=0x1a2;eip=0x0051b0; 	T(MOV(al, 0x20));	// 11446 mov     al, 20h ; ' ' ;~ 01A2:51B0
-cs=0x1a2;eip=0x0051b2; 	R(OUT(0x20, al));	// 11447 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:51B2
+cs=0x1a2;eip=0x0051b2; 	S(OUT(0x20, al));	// 11447 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:51B2
 cs=0x1a2;eip=0x0051b4; 	T(MOV(al, bh));	// 11448 mov     al, bh ;~ 01A2:51B4
 cs=0x1a2;eip=0x0051b6; 	X(POP(ds));	// 11449 pop     ds ;~ 01A2:51B6
 cs=0x1a2;eip=0x0051b7; 	X(POP(bx));	// 11450 pop     bx ;~ 01A2:51B7
@@ -13429,11 +13436,12 @@ cs=0x1a2;eip=0x004f5d; 	J(CALL(_set_timer,0));	// 11002 call    _set_timer ;~ 01
 cs=0x1a2;eip=0x004f60; 	X(POP(ax));	// 11003 pop     ax ;~ 01A2:4F60
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f61; __disp=*(dd*)(((db*)&_int8addr));
+printf("int8_\n");
 	J(return __dispatch_call(__disp, _state););	// 11004 jmp     cs:_int8addr ;~ 01A2:4F61
 ret_1a2_4f66:
 	// 5054 
 cs=0x1a2;eip=0x004f66; 	T(XCHG(bx, bx));	// 11006 xchg    bx, bx ;~ 01A2:4F66
-	R(return _group22(m2c::k_covox_init, _state););
+	return _group22(m2c::k_covox_init, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -13694,9 +13702,9 @@ cs=0x1a2;eip=0x005161; 	J(RETN(0));	// 11372 retn ;~ 01A2:5161
     else goto __dispatch_call;
     _pcspeaker_set:
     _begin:
-cs=0x1a2;eip=0x00518e; 	R(IN(al, 0x61));	// 11405 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01A2:518E
+cs=0x1a2;eip=0x00518e; 	S(IN(al, 0x61));	// 11405 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01A2:518E
 cs=0x1a2;eip=0x005190; 	T(OR(al, 3));	// 11413 or      al, 3 ;~ 01A2:5190
-cs=0x1a2;eip=0x005192; 	R(OUT(0x61, al));	// 11414 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:5192
+cs=0x1a2;eip=0x005192; 	S(OUT(0x61, al));	// 11414 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:5192
 cs=0x1a2;eip=0x005194; 	J(CALL(_configure_timer,0));	// 11422 call    _configure_timer ;~ 01A2:5194
 cs=0x1a2;eip=0x005197; 	J(RETN(0));	// 11423 retn ;~ 01A2:5197
 
@@ -13724,9 +13732,9 @@ cs=0x1a2;eip=0x005197; 	J(RETN(0));	// 11423 retn ;~ 01A2:5197
     _pcspeaker_sndoff:
     _begin:
 cs=0x1a2;eip=0x0051da; 	J(CALL(_memfill8080,0));	// 11469 call    _memfill8080 ;~ 01A2:51DA
-cs=0x1a2;eip=0x0051dd; 	R(IN(al, 0x61));	// 11470 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01A2:51DD
+cs=0x1a2;eip=0x0051dd; 	S(IN(al, 0x61));	// 11470 in      al, 61h         ; PC/XT PPI port B bits: ;~ 01A2:51DD
 cs=0x1a2;eip=0x0051df; 	T(AND(al, 0x0FC));	// 11478 and     al, 0FCh ;~ 01A2:51DF
-cs=0x1a2;eip=0x0051e1; 	R(OUT(0x61, al));	// 11479 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:51E1
+cs=0x1a2;eip=0x0051e1; 	S(OUT(0x61, al));	// 11479 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:51E1
 cs=0x1a2;eip=0x0051e3; 	J(RETN(0));	// 11487 retn ;~ 01A2:51E3
 
     assert(0);
@@ -13930,7 +13938,7 @@ _midi_int8p:
 	// 5071 
 cs=0x1a2;eip=0x005354; 	X(PUSHAD);	// 11570 pushad ;~ 01A2:5354
 cs=0x1a2;eip=0x005356; 	T(MOV(al, 0x20));	// 11571 mov     al, 20h ; ' ' ;~ 01A2:5356
-cs=0x1a2;eip=0x005358; 	R(OUT(0x20, al));	// 11572 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5358
+cs=0x1a2;eip=0x005358; 	S(OUT(0x20, al));	// 11572 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:5358
 cs=0x1a2;eip=0x00535a; 	X(PUSH(ds));	// 11573 push    ds ;~ 01A2:535A
 cs=0x1a2;eip=0x00535b; 	X(PUSH(es));	// 11574 push    es ;~ 01A2:535B
 cs=0x1a2;eip=0x00535c; 	X(PUSH(fs));	// 11575 push    fs ;~ 01A2:535C
@@ -14136,7 +14144,7 @@ cs=0x1a2;eip=0x0053f5; 	T(INC(dx));	// 11686 inc     dx ;~ 01A2:53F5
 cs=0x1a2;eip=0x0053f6; 	T(XOR(cx, cx));	// 11687 xor     cx, cx ;~ 01A2:53F6
 loc_153f8:
 	// 5076 
-cs=0x1a2;eip=0x0053f8; 	R(IN(al, dx));	// 11690 in      al, dx ;~ 01A2:53F8
+cs=0x1a2;eip=0x0053f8; 	S(IN(al, dx));	// 11690 in      al, dx ;~ 01A2:53F8
 cs=0x1a2;eip=0x0053f9; 	T(TEST(al, 0x40));	// 11691 test    al, 40h ;~ 01A2:53F9
 cs=0x1a2;eip=0x0053fb; 	J(JZ(loc_15401));	// 11692 jz      short loc_15401 ;~ 01A2:53FB
 cs=0x1a2;eip=0x0053fd; 	T(DEC(cx));	// 11693 dec     cx ;~ 01A2:53FD
@@ -14145,11 +14153,11 @@ cs=0x1a2;eip=0x005400; 	J(RETN(0));	// 11695 retn ;~ 01A2:5400
 loc_15401:
 	// 5077 
 cs=0x1a2;eip=0x005401; 	T(MOV(al, ah));	// 11699 mov     al, ah ;~ 01A2:5401
-cs=0x1a2;eip=0x005403; 	R(OUT(dx, al));	// 11700 out     dx, al ;~ 01A2:5403
+cs=0x1a2;eip=0x005403; 	S(OUT(dx, al));	// 11700 out     dx, al ;~ 01A2:5403
 cs=0x1a2;eip=0x005404; 	T(XOR(cx, cx));	// 11701 xor     cx, cx ;~ 01A2:5404
 loc_15406:
 	// 5078 
-cs=0x1a2;eip=0x005406; 	R(IN(al, dx));	// 11704 in      al, dx ;~ 01A2:5406
+cs=0x1a2;eip=0x005406; 	S(IN(al, dx));	// 11704 in      al, dx ;~ 01A2:5406
 cs=0x1a2;eip=0x005407; 	T(SHL(al, 1));	// 11705 shl     al, 1 ;~ 01A2:5407
 cs=0x1a2;eip=0x005409; 	J(JNC(loc_1540e));	// 11706 jnb     short loc_1540E ;~ 01A2:5409
 cs=0x1a2;eip=0x00540b; 	T(DEC(cx));	// 11707 dec     cx ;~ 01A2:540B
@@ -14157,7 +14165,7 @@ cs=0x1a2;eip=0x00540c; 	J(JNZ(loc_15406));	// 11708 jnz     short loc_15406 ;~ 0
 loc_1540e:
 	// 5079 
 cs=0x1a2;eip=0x00540e; 	T(DEC(dx));	// 11711 dec     dx ;~ 01A2:540E
-cs=0x1a2;eip=0x00540f; 	R(IN(al, dx));	// 11712 in      al, dx ;~ 01A2:540F
+cs=0x1a2;eip=0x00540f; 	S(IN(al, dx));	// 11712 in      al, dx ;~ 01A2:540F
 cs=0x1a2;eip=0x005410; 	T(CMP(al, 0x0FE));	// 11713 cmp     al, 0FEh ; 'þ' ;~ 01A2:5410
 cs=0x1a2;eip=0x005412; 	J(RETN(0));	// 11714 retn ;~ 01A2:5412
 
@@ -14200,13 +14208,13 @@ cs=0x1a2;eip=0x005425; 	T(INC(dx));	// 11731 inc     dx ;~ 01A2:5425
 cs=0x1a2;eip=0x005426; 	T(MOV(cl, 0x0FF));	// 11732 mov     cl, 0FFh ;~ 01A2:5426
 loc_15428:
 	// 5081 
-cs=0x1a2;eip=0x005428; 	R(IN(al, dx));	// 11735 in      al, dx ;~ 01A2:5428
+cs=0x1a2;eip=0x005428; 	S(IN(al, dx));	// 11735 in      al, dx ;~ 01A2:5428
 cs=0x1a2;eip=0x005429; 	T(TEST(al, 0x40));	// 11736 test    al, 40h ;~ 01A2:5429
 cs=0x1a2;eip=0x00542b; 	J(JZ(loc_15439));	// 11737 jz      short loc_15439 ;~ 01A2:542B
 cs=0x1a2;eip=0x00542d; 	T(SHL(al, 1));	// 11738 shl     al, 1 ;~ 01A2:542D
 cs=0x1a2;eip=0x00542f; 	J(JC(loc_15434));	// 11739 jb      short loc_15434 ;~ 01A2:542F
 cs=0x1a2;eip=0x005431; 	T(DEC(dx));	// 11740 dec     dx ;~ 01A2:5431
-cs=0x1a2;eip=0x005432; 	R(IN(al, dx));	// 11741 in      al, dx ;~ 01A2:5432
+cs=0x1a2;eip=0x005432; 	S(IN(al, dx));	// 11741 in      al, dx ;~ 01A2:5432
 cs=0x1a2;eip=0x005433; 	T(INC(dx));	// 11742 inc     dx ;~ 01A2:5433
 loc_15434:
 	// 5082 
@@ -14217,7 +14225,7 @@ loc_15439:
 	// 5083 
 cs=0x1a2;eip=0x005439; 	T(DEC(dx));	// 11751 dec     dx ;~ 01A2:5439
 cs=0x1a2;eip=0x00543a; 	T(MOV(al, ah));	// 11752 mov     al, ah ;~ 01A2:543A
-cs=0x1a2;eip=0x00543c; 	R(OUT(dx, al));	// 11753 out     dx, al ;~ 01A2:543C
+cs=0x1a2;eip=0x00543c; 	S(OUT(dx, al));	// 11753 out     dx, al ;~ 01A2:543C
 cs=0x1a2;eip=0x00543d; 	X(SUB(byte_24678, al));	// 11754 sub     byte_24678, al ;~ 01A2:543D
 locret_15441:
 	// 5084 
@@ -14255,7 +14263,7 @@ cs=0x1a2;eip=0x005442; 	T(MOV(dx, word_2465c));	// 11766 mov     dx, word_2465C 
 cs=0x1a2;eip=0x005446; 	T(INC(dx));	// 11767 inc     dx ;~ 01A2:5446
 loc_15447:
 	// 5085 
-cs=0x1a2;eip=0x005447; 	R(IN(al, dx));	// 11770 in      al, dx ;~ 01A2:5447
+cs=0x1a2;eip=0x005447; 	S(IN(al, dx));	// 11770 in      al, dx ;~ 01A2:5447
 cs=0x1a2;eip=0x005448; 	T(DEC(cx));	// 11771 dec     cx ;~ 01A2:5448
 cs=0x1a2;eip=0x005449; 	J(JNZ(loc_15447));	// 11772 jnz     short loc_15447 ;~ 01A2:5449
 cs=0x1a2;eip=0x00544b; 	J(RETN(0));	// 11773 retn ;~ 01A2:544B
@@ -14773,7 +14781,7 @@ cs=0x1a2;eip=0x0058a4; 	T(SUB(edx, eax));	// 12309 sub     edx, eax ;~ 01A2:58A4
 cs=0x1a2;eip=0x0058a7; 	T(IMUL2_4(edx,ecx));	// 12310 imul    edx, ecx ;~ 01A2:58A7
 cs=0x1a2;eip=0x0058ab; 	T(SAR(edx, 8));	// 12311 sar     edx, 8 ;~ 01A2:58AB
 cs=0x1a2;eip=0x0058af; 	T(ADD(eax, edx));	// 12312 add     eax, edx ;~ 01A2:58AF
-	R(JMP(seg000_58b5_proc));seg000_58b5_proc:
+	S(JMP(seg000_58b5_proc));seg000_58b5_proc:
 	// 12320 
 cs=0x1a2;eip=0x0058b5; 	T(ADC(si, bp));	// 12320 adc     si, bp ;~ 01A2:58B5
 cs=0x1a2;eip=0x0058b7; 	T(XOR(edx, edx));	// 12321 xor     edx, edx ;~ 01A2:58B7
@@ -15760,7 +15768,7 @@ cs=0x1a2;eip=0x006369; 	T(SUB(edx, eax));	// 13495 sub     edx, eax ;~ 01A2:6369
 cs=0x1a2;eip=0x00636c; 	T(IMUL2_4(edx,ecx));	// 13496 imul    edx, ecx ;~ 01A2:636C
 cs=0x1a2;eip=0x006370; 	T(SAR(edx, 8));	// 13497 sar     edx, 8 ;~ 01A2:6370
 cs=0x1a2;eip=0x006374; 	T(ADD(eax, edx));	// 13498 add     eax, edx ;~ 01A2:6374
-	R(JMP(seg000_637a_proc));seg000_637a_proc:
+	S(JMP(seg000_637a_proc));seg000_637a_proc:
 	// 13506 
 cs=0x1a2;eip=0x00637a; 	T(ADC(si, bp));	// 13506 adc     si, bp ;~ 01A2:637A
 cs=0x1a2;eip=0x00637c; 	T(XOR(edx, edx));	// 13507 xor     edx, edx ;~ 01A2:637C
@@ -18206,7 +18214,7 @@ ret_1a2_8dbd:
 	// 5559 
 cs=0x1a2;eip=0x008dbd; 	T(XCHG(bx, bx));	// 19306 xchg    bx, bx ;~ 01A2:8DBD
 cs=0x1a2;eip=0x008dbf; 	T(NOP);	// 19307 nop ;~ 01A2:8DBF
-	R(return _group32(m2c::kseg001_0_proc, _state););
+	return _group32(m2c::kseg001_0_proc, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -18937,19 +18945,19 @@ cs=0x1a2;eip=0x007dc6; 	X(PUSHF);	// 16551 pushf ;~ 01A2:7DC6
 cs=0x1a2;eip=0x007dc7; 	T(CLI);	// 16552 cli ;~ 01A2:7DC7
 cs=0x1a2;eip=0x007dc8; 	T(MOV(dx, _gravis_port));	// 16553 mov     dx, _gravis_port ;~ 01A2:7DC8
 cs=0x1a2;eip=0x007dcc; 	T(MOV(al, 0x43));	// 16554 mov     al, 43h ; 'C' ;~ 01A2:7DCC
-cs=0x1a2;eip=0x007dce; 	R(OUT(dx, al));	// 16555 out     dx, al ;~ 01A2:7DCE
+cs=0x1a2;eip=0x007dce; 	S(OUT(dx, al));	// 16555 out     dx, al ;~ 01A2:7DCE
 cs=0x1a2;eip=0x007dcf; 	T(INC(dx));	// 16556 inc     dx ;~ 01A2:7DCF
 cs=0x1a2;eip=0x007dd0; 	T(MOV(ax, di));	// 16557 mov     ax, di ;~ 01A2:7DD0
-cs=0x1a2;eip=0x007dd2; 	R(OUT(dx, ax));	// 16558 out     dx, ax ;~ 01A2:7DD2
+cs=0x1a2;eip=0x007dd2; 	S(OUT(dx, ax));	// 16558 out     dx, ax ;~ 01A2:7DD2
 cs=0x1a2;eip=0x007dd3; 	T(DEC(dx));	// 16559 dec     dx ;~ 01A2:7DD3
 cs=0x1a2;eip=0x007dd4; 	T(MOV(al, 0x44));	// 16560 mov     al, 44h ; 'D' ;~ 01A2:7DD4
-cs=0x1a2;eip=0x007dd6; 	R(OUT(dx, al));	// 16561 out     dx, al ;~ 01A2:7DD6
+cs=0x1a2;eip=0x007dd6; 	S(OUT(dx, al));	// 16561 out     dx, al ;~ 01A2:7DD6
 cs=0x1a2;eip=0x007dd7; 	T(ADD(dl, 2));	// 16562 add     dl, 2 ;~ 01A2:7DD7
 cs=0x1a2;eip=0x007dda; 	T(MOV(eax, edi));	// 16563 mov     eax, edi ;~ 01A2:7DDA
 cs=0x1a2;eip=0x007ddd; 	T(SHR(eax, 0x10));	// 16564 shr     eax, 10h ;~ 01A2:7DDD
-cs=0x1a2;eip=0x007de1; 	R(OUT(dx, al));	// 16565 out     dx, al ;~ 01A2:7DE1
+cs=0x1a2;eip=0x007de1; 	S(OUT(dx, al));	// 16565 out     dx, al ;~ 01A2:7DE1
 cs=0x1a2;eip=0x007de2; 	T(ADD(dl, 2));	// 16566 add     dl, 2 ;~ 01A2:7DE2
-cs=0x1a2;eip=0x007de5; 	R(IN(al, dx));	// 16567 in      al, dx ;~ 01A2:7DE5
+cs=0x1a2;eip=0x007de5; 	S(IN(al, dx));	// 16567 in      al, dx ;~ 01A2:7DE5
 cs=0x1a2;eip=0x007de6; 	X(POPF);	// 16568 popf ;~ 01A2:7DE6
 cs=0x1a2;eip=0x007de7; 	J(RETN(0));	// 16569 retn ;~ 01A2:7DE7
 
@@ -18981,20 +18989,20 @@ cs=0x1a2;eip=0x007de9; 	T(CLI);	// 16579 cli ;~ 01A2:7DE9
 cs=0x1a2;eip=0x007dea; 	T(MOV(dx, _gravis_port));	// 16580 mov     dx, _gravis_port ;~ 01A2:7DEA
 cs=0x1a2;eip=0x007dee; 	T(MOV(ch, al));	// 16581 mov     ch, al ;~ 01A2:7DEE
 cs=0x1a2;eip=0x007df0; 	T(MOV(al, 0x43));	// 16582 mov     al, 43h ; 'C' ;~ 01A2:7DF0
-cs=0x1a2;eip=0x007df2; 	R(OUT(dx, al));	// 16583 out     dx, al ;~ 01A2:7DF2
+cs=0x1a2;eip=0x007df2; 	S(OUT(dx, al));	// 16583 out     dx, al ;~ 01A2:7DF2
 cs=0x1a2;eip=0x007df3; 	T(INC(dx));	// 16584 inc     dx ;~ 01A2:7DF3
 cs=0x1a2;eip=0x007df4; 	T(MOV(ax, di));	// 16585 mov     ax, di ;~ 01A2:7DF4
-cs=0x1a2;eip=0x007df6; 	R(OUT(dx, ax));	// 16586 out     dx, ax ;~ 01A2:7DF6
+cs=0x1a2;eip=0x007df6; 	S(OUT(dx, ax));	// 16586 out     dx, ax ;~ 01A2:7DF6
 cs=0x1a2;eip=0x007df7; 	T(DEC(dx));	// 16587 dec     dx ;~ 01A2:7DF7
 cs=0x1a2;eip=0x007df8; 	T(MOV(al, 0x44));	// 16588 mov     al, 44h ; 'D' ;~ 01A2:7DF8
-cs=0x1a2;eip=0x007dfa; 	R(OUT(dx, al));	// 16589 out     dx, al ;~ 01A2:7DFA
+cs=0x1a2;eip=0x007dfa; 	S(OUT(dx, al));	// 16589 out     dx, al ;~ 01A2:7DFA
 cs=0x1a2;eip=0x007dfb; 	T(ADD(dl, 2));	// 16590 add     dl, 2 ;~ 01A2:7DFB
 cs=0x1a2;eip=0x007dfe; 	T(MOV(eax, edi));	// 16591 mov     eax, edi ;~ 01A2:7DFE
 cs=0x1a2;eip=0x007e01; 	T(SHR(eax, 0x10));	// 16592 shr     eax, 10h ;~ 01A2:7E01
-cs=0x1a2;eip=0x007e05; 	R(OUT(dx, al));	// 16593 out     dx, al ;~ 01A2:7E05
+cs=0x1a2;eip=0x007e05; 	S(OUT(dx, al));	// 16593 out     dx, al ;~ 01A2:7E05
 cs=0x1a2;eip=0x007e06; 	T(ADD(dl, 2));	// 16594 add     dl, 2 ;~ 01A2:7E06
 cs=0x1a2;eip=0x007e09; 	T(MOV(al, ch));	// 16595 mov     al, ch ;~ 01A2:7E09
-cs=0x1a2;eip=0x007e0b; 	R(OUT(dx, al));	// 16596 out     dx, al ;~ 01A2:7E0B
+cs=0x1a2;eip=0x007e0b; 	S(OUT(dx, al));	// 16596 out     dx, al ;~ 01A2:7E0B
 cs=0x1a2;eip=0x007e0c; 	X(POPF);	// 16597 popf ;~ 01A2:7E0C
 cs=0x1a2;eip=0x007e0d; 	J(RETN(0));	// 16598 retn ;~ 01A2:7E0D
 
@@ -19026,29 +19034,29 @@ cs=0x1a2;eip=0x007e0f; 	T(CLI);	// 16607 cli ;~ 01A2:7E0F
 cs=0x1a2;eip=0x007e10; 	T(SHL(edi, 1));	// 16608 shl     edi, 1 ;~ 01A2:7E10
 cs=0x1a2;eip=0x007e13; 	T(MOV(dx, _gravis_port));	// 16609 mov     dx, _gravis_port ;~ 01A2:7E13
 cs=0x1a2;eip=0x007e17; 	T(MOV(al, 0x43));	// 16610 mov     al, 43h ; 'C' ;~ 01A2:7E17
-cs=0x1a2;eip=0x007e19; 	R(OUT(dx, al));	// 16611 out     dx, al ;~ 01A2:7E19
+cs=0x1a2;eip=0x007e19; 	S(OUT(dx, al));	// 16611 out     dx, al ;~ 01A2:7E19
 cs=0x1a2;eip=0x007e1a; 	T(INC(dx));	// 16612 inc     dx ;~ 01A2:7E1A
 cs=0x1a2;eip=0x007e1b; 	T(MOV(ax, di));	// 16613 mov     ax, di ;~ 01A2:7E1B
 cs=0x1a2;eip=0x007e1d; 	T(INC(ax));	// 16614 inc     ax ;~ 01A2:7E1D
-cs=0x1a2;eip=0x007e1e; 	R(OUT(dx, ax));	// 16615 out     dx, ax ;~ 01A2:7E1E
+cs=0x1a2;eip=0x007e1e; 	S(OUT(dx, ax));	// 16615 out     dx, ax ;~ 01A2:7E1E
 cs=0x1a2;eip=0x007e1f; 	T(DEC(dx));	// 16616 dec     dx ;~ 01A2:7E1F
 cs=0x1a2;eip=0x007e20; 	T(MOV(al, 0x44));	// 16617 mov     al, 44h ; 'D' ;~ 01A2:7E20
-cs=0x1a2;eip=0x007e22; 	R(OUT(dx, al));	// 16618 out     dx, al ;~ 01A2:7E22
+cs=0x1a2;eip=0x007e22; 	S(OUT(dx, al));	// 16618 out     dx, al ;~ 01A2:7E22
 cs=0x1a2;eip=0x007e23; 	T(ADD(dl, 2));	// 16619 add     dl, 2 ;~ 01A2:7E23
 cs=0x1a2;eip=0x007e26; 	T(MOV(eax, edi));	// 16620 mov     eax, edi ;~ 01A2:7E26
 cs=0x1a2;eip=0x007e29; 	T(SHR(eax, 0x10));	// 16621 shr     eax, 10h ;~ 01A2:7E29
-cs=0x1a2;eip=0x007e2d; 	R(OUT(dx, al));	// 16622 out     dx, al ;~ 01A2:7E2D
+cs=0x1a2;eip=0x007e2d; 	S(OUT(dx, al));	// 16622 out     dx, al ;~ 01A2:7E2D
 cs=0x1a2;eip=0x007e2e; 	T(ADD(dl, 2));	// 16623 add     dl, 2 ;~ 01A2:7E2E
-cs=0x1a2;eip=0x007e31; 	R(IN(al, dx));	// 16624 in      al, dx ;~ 01A2:7E31
+cs=0x1a2;eip=0x007e31; 	S(IN(al, dx));	// 16624 in      al, dx ;~ 01A2:7E31
 cs=0x1a2;eip=0x007e32; 	T(SUB(dx, 4));	// 16625 sub     dx, 4 ;~ 01A2:7E32
 cs=0x1a2;eip=0x007e35; 	T(MOV(ch, al));	// 16626 mov     ch, al ;~ 01A2:7E35
 cs=0x1a2;eip=0x007e37; 	T(MOV(al, 0x43));	// 16627 mov     al, 43h ; 'C' ;~ 01A2:7E37
-cs=0x1a2;eip=0x007e39; 	R(OUT(dx, al));	// 16628 out     dx, al ;~ 01A2:7E39
+cs=0x1a2;eip=0x007e39; 	S(OUT(dx, al));	// 16628 out     dx, al ;~ 01A2:7E39
 cs=0x1a2;eip=0x007e3a; 	T(INC(dx));	// 16629 inc     dx ;~ 01A2:7E3A
 cs=0x1a2;eip=0x007e3b; 	T(MOV(ax, di));	// 16630 mov     ax, di ;~ 01A2:7E3B
-cs=0x1a2;eip=0x007e3d; 	R(OUT(dx, ax));	// 16631 out     dx, ax ;~ 01A2:7E3D
+cs=0x1a2;eip=0x007e3d; 	S(OUT(dx, ax));	// 16631 out     dx, ax ;~ 01A2:7E3D
 cs=0x1a2;eip=0x007e3e; 	T(ADD(dx, 3));	// 16632 add     dx, 3 ;~ 01A2:7E3E
-cs=0x1a2;eip=0x007e41; 	R(IN(al, dx));	// 16633 in      al, dx ;~ 01A2:7E41
+cs=0x1a2;eip=0x007e41; 	S(IN(al, dx));	// 16633 in      al, dx ;~ 01A2:7E41
 cs=0x1a2;eip=0x007e42; 	T(MOV(ah, ch));	// 16634 mov     ah, ch ;~ 01A2:7E42
 cs=0x1a2;eip=0x007e44; 	T(SHR(edi, 1));	// 16635 shr     edi, 1 ;~ 01A2:7E44
 cs=0x1a2;eip=0x007e47; 	X(POPF);	// 16636 popf ;~ 01A2:7E47
@@ -19083,30 +19091,30 @@ cs=0x1a2;eip=0x007e4b; 	T(SHL(edi, 1));	// 16647 shl     edi, 1 ;~ 01A2:7E4B
 cs=0x1a2;eip=0x007e4e; 	T(MOV(dx, _gravis_port));	// 16648 mov     dx, _gravis_port ;~ 01A2:7E4E
 cs=0x1a2;eip=0x007e52; 	T(MOV(cx, ax));	// 16649 mov     cx, ax ;~ 01A2:7E52
 cs=0x1a2;eip=0x007e54; 	T(MOV(al, 0x43));	// 16650 mov     al, 43h ; 'C' ;~ 01A2:7E54
-cs=0x1a2;eip=0x007e56; 	R(OUT(dx, al));	// 16651 out     dx, al ;~ 01A2:7E56
+cs=0x1a2;eip=0x007e56; 	S(OUT(dx, al));	// 16651 out     dx, al ;~ 01A2:7E56
 cs=0x1a2;eip=0x007e57; 	T(INC(dx));	// 16652 inc     dx ;~ 01A2:7E57
 cs=0x1a2;eip=0x007e58; 	T(MOV(ax, di));	// 16653 mov     ax, di ;~ 01A2:7E58
-cs=0x1a2;eip=0x007e5a; 	R(OUT(dx, ax));	// 16654 out     dx, ax ;~ 01A2:7E5A
+cs=0x1a2;eip=0x007e5a; 	S(OUT(dx, ax));	// 16654 out     dx, ax ;~ 01A2:7E5A
 cs=0x1a2;eip=0x007e5b; 	T(DEC(dx));	// 16655 dec     dx ;~ 01A2:7E5B
 cs=0x1a2;eip=0x007e5c; 	T(MOV(al, 0x44));	// 16656 mov     al, 44h ; 'D' ;~ 01A2:7E5C
-cs=0x1a2;eip=0x007e5e; 	R(OUT(dx, al));	// 16657 out     dx, al ;~ 01A2:7E5E
+cs=0x1a2;eip=0x007e5e; 	S(OUT(dx, al));	// 16657 out     dx, al ;~ 01A2:7E5E
 cs=0x1a2;eip=0x007e5f; 	T(ADD(dl, 2));	// 16658 add     dl, 2 ;~ 01A2:7E5F
 cs=0x1a2;eip=0x007e62; 	T(MOV(eax, edi));	// 16659 mov     eax, edi ;~ 01A2:7E62
 cs=0x1a2;eip=0x007e65; 	T(SHR(eax, 0x10));	// 16660 shr     eax, 10h ;~ 01A2:7E65
-cs=0x1a2;eip=0x007e69; 	R(OUT(dx, al));	// 16661 out     dx, al ;~ 01A2:7E69
+cs=0x1a2;eip=0x007e69; 	S(OUT(dx, al));	// 16661 out     dx, al ;~ 01A2:7E69
 cs=0x1a2;eip=0x007e6a; 	T(ADD(dl, 2));	// 16662 add     dl, 2 ;~ 01A2:7E6A
 cs=0x1a2;eip=0x007e6d; 	T(MOV(al, cl));	// 16663 mov     al, cl ;~ 01A2:7E6D
-cs=0x1a2;eip=0x007e6f; 	R(OUT(dx, al));	// 16664 out     dx, al ;~ 01A2:7E6F
+cs=0x1a2;eip=0x007e6f; 	S(OUT(dx, al));	// 16664 out     dx, al ;~ 01A2:7E6F
 cs=0x1a2;eip=0x007e70; 	T(SUB(dx, 4));	// 16665 sub     dx, 4 ;~ 01A2:7E70
 cs=0x1a2;eip=0x007e73; 	T(MOV(al, 0x43));	// 16666 mov     al, 43h ; 'C' ;~ 01A2:7E73
-cs=0x1a2;eip=0x007e75; 	R(OUT(dx, al));	// 16667 out     dx, al ;~ 01A2:7E75
+cs=0x1a2;eip=0x007e75; 	S(OUT(dx, al));	// 16667 out     dx, al ;~ 01A2:7E75
 cs=0x1a2;eip=0x007e76; 	T(INC(dx));	// 16668 inc     dx ;~ 01A2:7E76
 cs=0x1a2;eip=0x007e77; 	T(MOV(ax, di));	// 16669 mov     ax, di ;~ 01A2:7E77
 cs=0x1a2;eip=0x007e79; 	T(INC(ax));	// 16670 inc     ax ;~ 01A2:7E79
-cs=0x1a2;eip=0x007e7a; 	R(OUT(dx, ax));	// 16671 out     dx, ax ;~ 01A2:7E7A
+cs=0x1a2;eip=0x007e7a; 	S(OUT(dx, ax));	// 16671 out     dx, ax ;~ 01A2:7E7A
 cs=0x1a2;eip=0x007e7b; 	T(ADD(dx, 3));	// 16672 add     dx, 3 ;~ 01A2:7E7B
 cs=0x1a2;eip=0x007e7e; 	T(MOV(al, ch));	// 16673 mov     al, ch ;~ 01A2:7E7E
-cs=0x1a2;eip=0x007e80; 	R(OUT(dx, al));	// 16674 out     dx, al ;~ 01A2:7E80
+cs=0x1a2;eip=0x007e80; 	S(OUT(dx, al));	// 16674 out     dx, al ;~ 01A2:7E80
 cs=0x1a2;eip=0x007e81; 	T(SHR(edi, 1));	// 16675 shr     edi, 1 ;~ 01A2:7E81
 cs=0x1a2;eip=0x007e84; 	X(POPF);	// 16676 popf ;~ 01A2:7E84
 cs=0x1a2;eip=0x007e85; 	J(RETN(0));	// 16677 retn ;~ 01A2:7E85
@@ -19136,32 +19144,32 @@ cs=0x1a2;eip=0x007e85; 	J(RETN(0));	// 16677 retn ;~ 01A2:7E85
     _begin:
 cs=0x1a2;eip=0x007e86; 	T(MOV(dx, _gravis_port));	// 16686 mov     dx, _gravis_port ;~ 01A2:7E86
 cs=0x1a2;eip=0x007e8a; 	T(MOV(al, 0x4C));	// 16687 mov     al, 4Ch ; 'L' ;~ 01A2:7E8A
-cs=0x1a2;eip=0x007e8c; 	R(OUT(dx, al));	// 16688 out     dx, al ;~ 01A2:7E8C
+cs=0x1a2;eip=0x007e8c; 	S(OUT(dx, al));	// 16688 out     dx, al ;~ 01A2:7E8C
 cs=0x1a2;eip=0x007e8d; 	T(ADD(dl, 2));	// 16689 add     dl, 2 ;~ 01A2:7E8D
 cs=0x1a2;eip=0x007e90; 	T(XOR(al, al));	// 16690 xor     al, al ;~ 01A2:7E90
-cs=0x1a2;eip=0x007e92; 	R(OUT(dx, al));	// 16691 out     dx, al ;~ 01A2:7E92
+cs=0x1a2;eip=0x007e92; 	S(OUT(dx, al));	// 16691 out     dx, al ;~ 01A2:7E92
 cs=0x1a2;eip=0x007e93; 	T(SUB(dl, 2));	// 16692 sub     dl, 2 ;~ 01A2:7E93
 cs=0x1a2;eip=0x007e96; 	T(ADD(dl, 4));	// 16693 add     dl, 4 ;~ 01A2:7E96
-cs=0x1a2;eip=0x007e99; 	R(IN(al, dx));	// 16694 in      al, dx ;~ 01A2:7E99
-cs=0x1a2;eip=0x007e9a; 	R(IN(al, dx));	// 16695 in      al, dx ;~ 01A2:7E9A
-cs=0x1a2;eip=0x007e9b; 	R(IN(al, dx));	// 16696 in      al, dx ;~ 01A2:7E9B
-cs=0x1a2;eip=0x007e9c; 	R(IN(al, dx));	// 16697 in      al, dx ;~ 01A2:7E9C
-cs=0x1a2;eip=0x007e9d; 	R(IN(al, dx));	// 16698 in      al, dx ;~ 01A2:7E9D
-cs=0x1a2;eip=0x007e9e; 	R(IN(al, dx));	// 16699 in      al, dx ;~ 01A2:7E9E
-cs=0x1a2;eip=0x007e9f; 	R(IN(al, dx));	// 16700 in      al, dx ;~ 01A2:7E9F
-cs=0x1a2;eip=0x007ea0; 	R(IN(al, dx));	// 16701 in      al, dx ;~ 01A2:7EA0
-cs=0x1a2;eip=0x007ea1; 	R(IN(al, dx));	// 16702 in      al, dx ;~ 01A2:7EA1
-cs=0x1a2;eip=0x007ea2; 	R(IN(al, dx));	// 16703 in      al, dx ;~ 01A2:7EA2
-cs=0x1a2;eip=0x007ea3; 	R(IN(al, dx));	// 16704 in      al, dx ;~ 01A2:7EA3
-cs=0x1a2;eip=0x007ea4; 	R(IN(al, dx));	// 16705 in      al, dx ;~ 01A2:7EA4
-cs=0x1a2;eip=0x007ea5; 	R(IN(al, dx));	// 16706 in      al, dx ;~ 01A2:7EA5
-cs=0x1a2;eip=0x007ea6; 	R(IN(al, dx));	// 16707 in      al, dx ;~ 01A2:7EA6
+cs=0x1a2;eip=0x007e99; 	S(IN(al, dx));	// 16694 in      al, dx ;~ 01A2:7E99
+cs=0x1a2;eip=0x007e9a; 	S(IN(al, dx));	// 16695 in      al, dx ;~ 01A2:7E9A
+cs=0x1a2;eip=0x007e9b; 	S(IN(al, dx));	// 16696 in      al, dx ;~ 01A2:7E9B
+cs=0x1a2;eip=0x007e9c; 	S(IN(al, dx));	// 16697 in      al, dx ;~ 01A2:7E9C
+cs=0x1a2;eip=0x007e9d; 	S(IN(al, dx));	// 16698 in      al, dx ;~ 01A2:7E9D
+cs=0x1a2;eip=0x007e9e; 	S(IN(al, dx));	// 16699 in      al, dx ;~ 01A2:7E9E
+cs=0x1a2;eip=0x007e9f; 	S(IN(al, dx));	// 16700 in      al, dx ;~ 01A2:7E9F
+cs=0x1a2;eip=0x007ea0; 	S(IN(al, dx));	// 16701 in      al, dx ;~ 01A2:7EA0
+cs=0x1a2;eip=0x007ea1; 	S(IN(al, dx));	// 16702 in      al, dx ;~ 01A2:7EA1
+cs=0x1a2;eip=0x007ea2; 	S(IN(al, dx));	// 16703 in      al, dx ;~ 01A2:7EA2
+cs=0x1a2;eip=0x007ea3; 	S(IN(al, dx));	// 16704 in      al, dx ;~ 01A2:7EA3
+cs=0x1a2;eip=0x007ea4; 	S(IN(al, dx));	// 16705 in      al, dx ;~ 01A2:7EA4
+cs=0x1a2;eip=0x007ea5; 	S(IN(al, dx));	// 16706 in      al, dx ;~ 01A2:7EA5
+cs=0x1a2;eip=0x007ea6; 	S(IN(al, dx));	// 16707 in      al, dx ;~ 01A2:7EA6
 cs=0x1a2;eip=0x007ea7; 	T(SUB(dl, 4));	// 16708 sub     dl, 4 ;~ 01A2:7EA7
 cs=0x1a2;eip=0x007eaa; 	T(MOV(al, 0x4C));	// 16709 mov     al, 4Ch ; 'L' ;~ 01A2:7EAA
-cs=0x1a2;eip=0x007eac; 	R(OUT(dx, al));	// 16710 out     dx, al ;~ 01A2:7EAC
+cs=0x1a2;eip=0x007eac; 	S(OUT(dx, al));	// 16710 out     dx, al ;~ 01A2:7EAC
 cs=0x1a2;eip=0x007ead; 	T(ADD(dl, 2));	// 16711 add     dl, 2 ;~ 01A2:7EAD
 cs=0x1a2;eip=0x007eb0; 	T(MOV(al, 1));	// 16712 mov     al, 1 ;~ 01A2:7EB0
-cs=0x1a2;eip=0x007eb2; 	R(OUT(dx, al));	// 16713 out     dx, al ;~ 01A2:7EB2
+cs=0x1a2;eip=0x007eb2; 	S(OUT(dx, al));	// 16713 out     dx, al ;~ 01A2:7EB2
 cs=0x1a2;eip=0x007eb3; 	T(SUB(dl, 2));	// 16714 sub     dl, 2 ;~ 01A2:7EB3
 cs=0x1a2;eip=0x007eb6; 	T(XOR(edi, edi));	// 16715 xor     edi, edi ;~ 01A2:7EB6
 cs=0x1a2;eip=0x007eb9; 	T(MOV(al, 0x0AA));	// 16716 mov     al, 0AAh ; 'ª' ;~ 01A2:7EB9
@@ -19176,10 +19184,10 @@ cs=0x1a2;eip=0x007ed0; 	T(XOR(al, al));	// 16724 xor     al, al ;~ 01A2:7ED0
 cs=0x1a2;eip=0x007ed2; 	J(CALL(_gravis_17de8,0));	// 16725 call    _gravis_17DE8 ;~ 01A2:7ED2
 cs=0x1a2;eip=0x007ed5; 	T(MOV(dx, _gravis_port));	// 16726 mov     dx, _gravis_port ;~ 01A2:7ED5
 cs=0x1a2;eip=0x007ed9; 	T(MOV(al, 0x4C));	// 16727 mov     al, 4Ch ; 'L' ;~ 01A2:7ED9
-cs=0x1a2;eip=0x007edb; 	R(OUT(dx, al));	// 16728 out     dx, al ;~ 01A2:7EDB
+cs=0x1a2;eip=0x007edb; 	S(OUT(dx, al));	// 16728 out     dx, al ;~ 01A2:7EDB
 cs=0x1a2;eip=0x007edc; 	T(ADD(dl, 2));	// 16729 add     dl, 2 ;~ 01A2:7EDC
 cs=0x1a2;eip=0x007edf; 	T(XOR(al, al));	// 16730 xor     al, al ;~ 01A2:7EDF
-cs=0x1a2;eip=0x007ee1; 	R(OUT(dx, al));	// 16731 out     dx, al ;~ 01A2:7EE1
+cs=0x1a2;eip=0x007ee1; 	S(OUT(dx, al));	// 16731 out     dx, al ;~ 01A2:7EE1
 cs=0x1a2;eip=0x007ee2; 	T(SUB(dl, 2));	// 16732 sub     dl, 2 ;~ 01A2:7EE2
 cs=0x1a2;eip=0x007ee5; 	X(POP(ax));	// 16733 pop     ax ;~ 01A2:7EE5
 cs=0x1a2;eip=0x007ee6; 	T(CMP(al, 0x0AA));	// 16734 cmp     al, 0AAh ; 'ª' ;~ 01A2:7EE6
@@ -19262,10 +19270,10 @@ cs=0x1a2;eip=0x007f2f; 	J(RETN(0));	// 16769 retn ;~ 01A2:7F2F
     _begin:
 cs=0x1a2;eip=0x007f30; 	T(MOV(dx, _gravis_port));	// 16777 mov     dx, _gravis_port ;~ 01A2:7F30
 cs=0x1a2;eip=0x007f34; 	T(MOV(al, 0x4C));	// 16778 mov     al, 4Ch ; 'L' ;~ 01A2:7F34
-cs=0x1a2;eip=0x007f36; 	R(OUT(dx, al));	// 16779 out     dx, al ;~ 01A2:7F36
+cs=0x1a2;eip=0x007f36; 	S(OUT(dx, al));	// 16779 out     dx, al ;~ 01A2:7F36
 cs=0x1a2;eip=0x007f37; 	T(ADD(dl, 2));	// 16780 add     dl, 2 ;~ 01A2:7F37
 cs=0x1a2;eip=0x007f3a; 	T(MOV(al, 1));	// 16781 mov     al, 1 ;~ 01A2:7F3A
-cs=0x1a2;eip=0x007f3c; 	R(OUT(dx, al));	// 16782 out     dx, al ;~ 01A2:7F3C
+cs=0x1a2;eip=0x007f3c; 	S(OUT(dx, al));	// 16782 out     dx, al ;~ 01A2:7F3C
 cs=0x1a2;eip=0x007f3d; 	T(SUB(dl, 2));	// 16783 sub     dl, 2 ;~ 01A2:7F3D
 cs=0x1a2;eip=0x007f40; 	T(XOR(edi, edi));	// 16784 xor     edi, edi ;~ 01A2:7F40
 cs=0x1a2;eip=0x007f43; 	T(MOV(al, 0x0AA));	// 16785 mov     al, 0AAh ; 'ª' ;~ 01A2:7F43
@@ -19283,10 +19291,10 @@ loc_17f65:
 	// 5455 
 cs=0x1a2;eip=0x007f65; 	T(MOV(dx, _gravis_port));	// 16798 mov     dx, _gravis_port ;~ 01A2:7F65
 cs=0x1a2;eip=0x007f69; 	T(MOV(al, 0x4C));	// 16799 mov     al, 4Ch ; 'L' ;~ 01A2:7F69
-cs=0x1a2;eip=0x007f6b; 	R(OUT(dx, al));	// 16800 out     dx, al ;~ 01A2:7F6B
+cs=0x1a2;eip=0x007f6b; 	S(OUT(dx, al));	// 16800 out     dx, al ;~ 01A2:7F6B
 cs=0x1a2;eip=0x007f6c; 	T(ADD(dl, 2));	// 16801 add     dl, 2 ;~ 01A2:7F6C
 cs=0x1a2;eip=0x007f6f; 	T(XOR(al, al));	// 16802 xor     al, al ;~ 01A2:7F6F
-cs=0x1a2;eip=0x007f71; 	R(OUT(dx, al));	// 16803 out     dx, al ;~ 01A2:7F71
+cs=0x1a2;eip=0x007f71; 	S(OUT(dx, al));	// 16803 out     dx, al ;~ 01A2:7F71
 cs=0x1a2;eip=0x007f72; 	T(SUB(dl, 2));	// 16804 sub     dl, 2 ;~ 01A2:7F72
 cs=0x1a2;eip=0x007f75; 	T(MOV(eax, edi));	// 16805 mov     eax, edi ;~ 01A2:7F75
 cs=0x1a2;eip=0x007f78; 	T(SHR(eax, 0x12));	// 16806 shr     eax, 12h ;~ 01A2:7F78
@@ -19320,7 +19328,7 @@ cs=0x1a2;eip=0x007f7c; 	J(RETN(0));	// 16807 retn ;~ 01A2:7F7C
 _gravis_17f7d:
 	// 16814 
 cs=0x1a2;eip=0x007f7d; 	T(MOV(ah, 0x62));	// 16818 mov     ah, 62h ;~ 01A2:7F7D
-cs=0x1a2;eip=0x007f7f; 	R(_INT(0x21));	// 16819 int     21h             ; DOS - 3+ - GET PSP ADDRESS ;~ 01A2:7F7F
+cs=0x1a2;eip=0x007f7f; 	S(_INT(0x21));	// 16819 int     21h             ; DOS - 3+ - GET PSP ADDRESS ;~ 01A2:7F7F
 cs=0x1a2;eip=0x007f81; 	T(MOV(es, bx));	// 16820 mov     es, bx ;~ 01A2:7F81
 cs=0x1a2;eip=0x007f83; 	T(MOV(es, *(dw*)(raddr(es,0x2C))));	// 16821 mov     es, word ptr es:2Ch ;~ 01A2:7F83
 cs=0x1a2;eip=0x007f88; 	T(XOR(di, di));	// 16822 xor     di, di ;~ 01A2:7F88
@@ -19539,188 +19547,188 @@ cs=0x1a2;eip=0x008099; 	X(PUSHF);	// 16997 pushf ;~ 01A2:8099
 cs=0x1a2;eip=0x00809a; 	T(CLI);	// 16998 cli ;~ 01A2:809A
 cs=0x1a2;eip=0x00809b; 	T(MOV(dx, _gravis_port));	// 16999 mov     dx, _gravis_port ;~ 01A2:809B
 cs=0x1a2;eip=0x00809f; 	T(MOV(al, 0x4C));	// 17000 mov     al, 4Ch ; 'L' ;~ 01A2:809F
-cs=0x1a2;eip=0x0080a1; 	R(OUT(dx, al));	// 17001 out     dx, al ;~ 01A2:80A1
+cs=0x1a2;eip=0x0080a1; 	S(OUT(dx, al));	// 17001 out     dx, al ;~ 01A2:80A1
 cs=0x1a2;eip=0x0080a2; 	T(ADD(dl, 2));	// 17002 add     dl, 2 ;~ 01A2:80A2
 cs=0x1a2;eip=0x0080a5; 	T(XOR(al, al));	// 17003 xor     al, al ;~ 01A2:80A5
-cs=0x1a2;eip=0x0080a7; 	R(OUT(dx, al));	// 17004 out     dx, al ;~ 01A2:80A7
+cs=0x1a2;eip=0x0080a7; 	S(OUT(dx, al));	// 17004 out     dx, al ;~ 01A2:80A7
 cs=0x1a2;eip=0x0080a8; 	T(SUB(dl, 2));	// 17005 sub     dl, 2 ;~ 01A2:80A8
 cs=0x1a2;eip=0x0080ab; 	T(MOV(cx, 0x10));	// 17006 mov     cx, 10h ;~ 01A2:80AB
 cs=0x1a2;eip=0x0080ae; 	J(CALL(_gravis_18201,0));	// 17007 call    _gravis_18201 ;~ 01A2:80AE
 cs=0x1a2;eip=0x0080b1; 	T(MOV(al, 0x4C));	// 17008 mov     al, 4Ch ; 'L' ;~ 01A2:80B1
-cs=0x1a2;eip=0x0080b3; 	R(OUT(dx, al));	// 17009 out     dx, al ;~ 01A2:80B3
+cs=0x1a2;eip=0x0080b3; 	S(OUT(dx, al));	// 17009 out     dx, al ;~ 01A2:80B3
 cs=0x1a2;eip=0x0080b4; 	T(ADD(dl, 2));	// 17010 add     dl, 2 ;~ 01A2:80B4
 cs=0x1a2;eip=0x0080b7; 	T(MOV(al, 1));	// 17011 mov     al, 1 ;~ 01A2:80B7
-cs=0x1a2;eip=0x0080b9; 	R(OUT(dx, al));	// 17012 out     dx, al ;~ 01A2:80B9
+cs=0x1a2;eip=0x0080b9; 	S(OUT(dx, al));	// 17012 out     dx, al ;~ 01A2:80B9
 cs=0x1a2;eip=0x0080ba; 	T(SUB(dl, 2));	// 17013 sub     dl, 2 ;~ 01A2:80BA
 cs=0x1a2;eip=0x0080bd; 	T(MOV(cx, 0x10));	// 17014 mov     cx, 10h ;~ 01A2:80BD
 cs=0x1a2;eip=0x0080c0; 	J(CALL(_gravis_18201,0));	// 17015 call    _gravis_18201 ;~ 01A2:80C0
 cs=0x1a2;eip=0x0080c3; 	T(SUB(dx, 3));	// 17016 sub     dx, 3 ;~ 01A2:80C3
 cs=0x1a2;eip=0x0080c6; 	T(MOV(al, 3));	// 17017 mov     al, 3 ;~ 01A2:80C6
-cs=0x1a2;eip=0x0080c8; 	R(OUT(dx, al));	// 17018 out     dx, al ;~ 01A2:80C8
+cs=0x1a2;eip=0x0080c8; 	S(OUT(dx, al));	// 17018 out     dx, al ;~ 01A2:80C8
 cs=0x1a2;eip=0x0080c9; 	T(MOV(cx, 0x10));	// 17019 mov     cx, 10h ;~ 01A2:80C9
 cs=0x1a2;eip=0x0080cc; 	J(CALL(_gravis_18201,0));	// 17020 call    _gravis_18201 ;~ 01A2:80CC
 cs=0x1a2;eip=0x0080cf; 	T(XOR(al, al));	// 17021 xor     al, al ;~ 01A2:80CF
-cs=0x1a2;eip=0x0080d1; 	R(OUT(dx, al));	// 17022 out     dx, al ;~ 01A2:80D1
+cs=0x1a2;eip=0x0080d1; 	S(OUT(dx, al));	// 17022 out     dx, al ;~ 01A2:80D1
 cs=0x1a2;eip=0x0080d2; 	T(ADD(dx, 3));	// 17023 add     dx, 3 ;~ 01A2:80D2
 cs=0x1a2;eip=0x0080d5; 	T(MOV(al, 0x41));	// 17024 mov     al, 41h ; 'A' ;~ 01A2:80D5
-cs=0x1a2;eip=0x0080d7; 	R(OUT(dx, al));	// 17025 out     dx, al ;~ 01A2:80D7
+cs=0x1a2;eip=0x0080d7; 	S(OUT(dx, al));	// 17025 out     dx, al ;~ 01A2:80D7
 cs=0x1a2;eip=0x0080d8; 	T(ADD(dl, 2));	// 17026 add     dl, 2 ;~ 01A2:80D8
 cs=0x1a2;eip=0x0080db; 	T(XOR(al, al));	// 17027 xor     al, al ;~ 01A2:80DB
-cs=0x1a2;eip=0x0080dd; 	R(OUT(dx, al));	// 17028 out     dx, al ;~ 01A2:80DD
+cs=0x1a2;eip=0x0080dd; 	S(OUT(dx, al));	// 17028 out     dx, al ;~ 01A2:80DD
 cs=0x1a2;eip=0x0080de; 	T(SUB(dl, 2));	// 17029 sub     dl, 2 ;~ 01A2:80DE
 cs=0x1a2;eip=0x0080e1; 	T(MOV(al, 0x45));	// 17030 mov     al, 45h ; 'E' ;~ 01A2:80E1
-cs=0x1a2;eip=0x0080e3; 	R(OUT(dx, al));	// 17031 out     dx, al ;~ 01A2:80E3
+cs=0x1a2;eip=0x0080e3; 	S(OUT(dx, al));	// 17031 out     dx, al ;~ 01A2:80E3
 cs=0x1a2;eip=0x0080e4; 	T(ADD(dl, 2));	// 17032 add     dl, 2 ;~ 01A2:80E4
 cs=0x1a2;eip=0x0080e7; 	T(XOR(al, al));	// 17033 xor     al, al ;~ 01A2:80E7
-cs=0x1a2;eip=0x0080e9; 	R(OUT(dx, al));	// 17034 out     dx, al ;~ 01A2:80E9
+cs=0x1a2;eip=0x0080e9; 	S(OUT(dx, al));	// 17034 out     dx, al ;~ 01A2:80E9
 cs=0x1a2;eip=0x0080ea; 	T(SUB(dl, 2));	// 17035 sub     dl, 2 ;~ 01A2:80EA
 cs=0x1a2;eip=0x0080ed; 	T(MOV(al, 0x49));	// 17036 mov     al, 49h ; 'I' ;~ 01A2:80ED
-cs=0x1a2;eip=0x0080ef; 	R(OUT(dx, al));	// 17037 out     dx, al ;~ 01A2:80EF
+cs=0x1a2;eip=0x0080ef; 	S(OUT(dx, al));	// 17037 out     dx, al ;~ 01A2:80EF
 cs=0x1a2;eip=0x0080f0; 	T(ADD(dl, 2));	// 17038 add     dl, 2 ;~ 01A2:80F0
 cs=0x1a2;eip=0x0080f3; 	T(XOR(al, al));	// 17039 xor     al, al ;~ 01A2:80F3
-cs=0x1a2;eip=0x0080f5; 	R(OUT(dx, al));	// 17040 out     dx, al ;~ 01A2:80F5
+cs=0x1a2;eip=0x0080f5; 	S(OUT(dx, al));	// 17040 out     dx, al ;~ 01A2:80F5
 cs=0x1a2;eip=0x0080f6; 	T(SUB(dl, 2));	// 17041 sub     dl, 2 ;~ 01A2:80F6
 cs=0x1a2;eip=0x0080f9; 	T(MOV(ah, byte_24629));	// 17042 mov     ah, byte_24629 ;~ 01A2:80F9
 cs=0x1a2;eip=0x0080fd; 	T(DEC(ah));	// 17043 dec     ah ;~ 01A2:80FD
 cs=0x1a2;eip=0x0080ff; 	T(AND(ah, 0x1F));	// 17044 and     ah, 1Fh ;~ 01A2:80FF
 cs=0x1a2;eip=0x008102; 	T(OR(ah, 0x0C0));	// 17045 or      ah, 0C0h ;~ 01A2:8102
 cs=0x1a2;eip=0x008105; 	T(MOV(al, 0x0E));	// 17046 mov     al, 0Eh ;~ 01A2:8105
-cs=0x1a2;eip=0x008107; 	R(OUT(dx, al));	// 17047 out     dx, al ;~ 01A2:8107
+cs=0x1a2;eip=0x008107; 	S(OUT(dx, al));	// 17047 out     dx, al ;~ 01A2:8107
 cs=0x1a2;eip=0x008108; 	T(ADD(dl, 2));	// 17048 add     dl, 2 ;~ 01A2:8108
 cs=0x1a2;eip=0x00810b; 	T(MOV(al, ah));	// 17049 mov     al, ah ;~ 01A2:810B
-cs=0x1a2;eip=0x00810d; 	R(OUT(dx, al));	// 17050 out     dx, al ;~ 01A2:810D
+cs=0x1a2;eip=0x00810d; 	S(OUT(dx, al));	// 17050 out     dx, al ;~ 01A2:810D
 cs=0x1a2;eip=0x00810e; 	T(SUB(dl, 2));	// 17051 sub     dl, 2 ;~ 01A2:810E
 cs=0x1a2;eip=0x008111; 	T(SUB(dx, 0x0FD));	// 17052 sub     dx, 0FDh ; 'ý' ;~ 01A2:8111
-cs=0x1a2;eip=0x008115; 	R(IN(al, dx));	// 17053 in      al, dx ;~ 01A2:8115
+cs=0x1a2;eip=0x008115; 	S(IN(al, dx));	// 17053 in      al, dx ;~ 01A2:8115
 cs=0x1a2;eip=0x008116; 	T(ADD(dx, 0x0FD));	// 17054 add     dx, 0FDh ; 'ý' ;~ 01A2:8116
 cs=0x1a2;eip=0x00811a; 	T(MOV(al, 0x41));	// 17055 mov     al, 41h ; 'A' ;~ 01A2:811A
-cs=0x1a2;eip=0x00811c; 	R(OUT(dx, al));	// 17056 out     dx, al ;~ 01A2:811C
+cs=0x1a2;eip=0x00811c; 	S(OUT(dx, al));	// 17056 out     dx, al ;~ 01A2:811C
 cs=0x1a2;eip=0x00811d; 	T(ADD(dl, 2));	// 17057 add     dl, 2 ;~ 01A2:811D
-cs=0x1a2;eip=0x008120; 	R(IN(al, dx));	// 17058 in      al, dx ;~ 01A2:8120
+cs=0x1a2;eip=0x008120; 	S(IN(al, dx));	// 17058 in      al, dx ;~ 01A2:8120
 cs=0x1a2;eip=0x008121; 	T(SUB(dl, 2));	// 17059 sub     dl, 2 ;~ 01A2:8121
 cs=0x1a2;eip=0x008124; 	T(MOV(al, 0x49));	// 17060 mov     al, 49h ; 'I' ;~ 01A2:8124
-cs=0x1a2;eip=0x008126; 	R(OUT(dx, al));	// 17061 out     dx, al ;~ 01A2:8126
+cs=0x1a2;eip=0x008126; 	S(OUT(dx, al));	// 17061 out     dx, al ;~ 01A2:8126
 cs=0x1a2;eip=0x008127; 	T(ADD(dl, 2));	// 17062 add     dl, 2 ;~ 01A2:8127
-cs=0x1a2;eip=0x00812a; 	R(IN(al, dx));	// 17063 in      al, dx ;~ 01A2:812A
+cs=0x1a2;eip=0x00812a; 	S(IN(al, dx));	// 17063 in      al, dx ;~ 01A2:812A
 cs=0x1a2;eip=0x00812b; 	T(SUB(dl, 2));	// 17064 sub     dl, 2 ;~ 01A2:812B
 cs=0x1a2;eip=0x00812e; 	T(MOV(al, 0x8F));	// 17065 mov     al, 8Fh ;~ 01A2:812E
-cs=0x1a2;eip=0x008130; 	R(OUT(dx, al));	// 17066 out     dx, al ;~ 01A2:8130
+cs=0x1a2;eip=0x008130; 	S(OUT(dx, al));	// 17066 out     dx, al ;~ 01A2:8130
 cs=0x1a2;eip=0x008131; 	T(ADD(dl, 2));	// 17067 add     dl, 2 ;~ 01A2:8131
-cs=0x1a2;eip=0x008134; 	R(IN(al, dx));	// 17068 in      al, dx ;~ 01A2:8134
+cs=0x1a2;eip=0x008134; 	S(IN(al, dx));	// 17068 in      al, dx ;~ 01A2:8134
 cs=0x1a2;eip=0x008135; 	T(SUB(dl, 2));	// 17069 sub     dl, 2 ;~ 01A2:8135
 cs=0x1a2;eip=0x008138; 	T(XOR(bl, bl));	// 17070 xor     bl, bl ;~ 01A2:8138
 loc_1813a:
 	// 5472 
 cs=0x1a2;eip=0x00813a; 	T(DEC(dx));	// 17073 dec     dx ;~ 01A2:813A
 cs=0x1a2;eip=0x00813b; 	T(MOV(al, bl));	// 17074 mov     al, bl ;~ 01A2:813B
-cs=0x1a2;eip=0x00813d; 	R(OUT(dx, al));	// 17075 out     dx, al ;~ 01A2:813D
+cs=0x1a2;eip=0x00813d; 	S(OUT(dx, al));	// 17075 out     dx, al ;~ 01A2:813D
 cs=0x1a2;eip=0x00813e; 	T(INC(dx));	// 17076 inc     dx ;~ 01A2:813E
 cs=0x1a2;eip=0x00813f; 	T(MOV(al, 0));	// 17077 mov     al, 0 ;~ 01A2:813F
-cs=0x1a2;eip=0x008141; 	R(OUT(dx, al));	// 17078 out     dx, al ;~ 01A2:8141
+cs=0x1a2;eip=0x008141; 	S(OUT(dx, al));	// 17078 out     dx, al ;~ 01A2:8141
 cs=0x1a2;eip=0x008142; 	T(ADD(dl, 2));	// 17079 add     dl, 2 ;~ 01A2:8142
 cs=0x1a2;eip=0x008145; 	T(MOV(al, 3));	// 17080 mov     al, 3 ;~ 01A2:8145
-cs=0x1a2;eip=0x008147; 	R(OUT(dx, al));	// 17081 out     dx, al ;~ 01A2:8147
+cs=0x1a2;eip=0x008147; 	S(OUT(dx, al));	// 17081 out     dx, al ;~ 01A2:8147
 cs=0x1a2;eip=0x008148; 	T(SUB(dl, 2));	// 17082 sub     dl, 2 ;~ 01A2:8148
 cs=0x1a2;eip=0x00814b; 	T(MOV(al, 0x0D));	// 17083 mov     al, 0Dh ;~ 01A2:814B
-cs=0x1a2;eip=0x00814d; 	R(OUT(dx, al));	// 17084 out     dx, al ;~ 01A2:814D
+cs=0x1a2;eip=0x00814d; 	S(OUT(dx, al));	// 17084 out     dx, al ;~ 01A2:814D
 cs=0x1a2;eip=0x00814e; 	T(ADD(dl, 2));	// 17085 add     dl, 2 ;~ 01A2:814E
 cs=0x1a2;eip=0x008151; 	T(MOV(al, 3));	// 17086 mov     al, 3 ;~ 01A2:8151
-cs=0x1a2;eip=0x008153; 	R(OUT(dx, al));	// 17087 out     dx, al ;~ 01A2:8153
+cs=0x1a2;eip=0x008153; 	S(OUT(dx, al));	// 17087 out     dx, al ;~ 01A2:8153
 cs=0x1a2;eip=0x008154; 	T(SUB(dl, 2));	// 17088 sub     dl, 2 ;~ 01A2:8154
 cs=0x1a2;eip=0x008157; 	T(MOV(cx, 8));	// 17089 mov     cx, 8 ;~ 01A2:8157
 cs=0x1a2;eip=0x00815a; 	J(CALL(_gravis_18201,0));	// 17090 call    _gravis_18201 ;~ 01A2:815A
 cs=0x1a2;eip=0x00815d; 	T(MOV(al, 1));	// 17091 mov     al, 1 ;~ 01A2:815D
-cs=0x1a2;eip=0x00815f; 	R(OUT(dx, al));	// 17092 out     dx, al ;~ 01A2:815F
+cs=0x1a2;eip=0x00815f; 	S(OUT(dx, al));	// 17092 out     dx, al ;~ 01A2:815F
 cs=0x1a2;eip=0x008160; 	T(INC(dx));	// 17093 inc     dx ;~ 01A2:8160
 cs=0x1a2;eip=0x008161; 	T(MOV(ax, 0x400));	// 17094 mov     ax, 400h ;~ 01A2:8161
-cs=0x1a2;eip=0x008164; 	R(OUT(dx, ax));	// 17095 out     dx, ax ;~ 01A2:8164
+cs=0x1a2;eip=0x008164; 	S(OUT(dx, ax));	// 17095 out     dx, ax ;~ 01A2:8164
 cs=0x1a2;eip=0x008165; 	T(DEC(dx));	// 17096 dec     dx ;~ 01A2:8165
 cs=0x1a2;eip=0x008166; 	T(MOV(al, 2));	// 17097 mov     al, 2 ;~ 01A2:8166
-cs=0x1a2;eip=0x008168; 	R(OUT(dx, al));	// 17098 out     dx, al ;~ 01A2:8168
+cs=0x1a2;eip=0x008168; 	S(OUT(dx, al));	// 17098 out     dx, al ;~ 01A2:8168
 cs=0x1a2;eip=0x008169; 	T(INC(dx));	// 17099 inc     dx ;~ 01A2:8169
 cs=0x1a2;eip=0x00816a; 	T(XOR(ax, ax));	// 17100 xor     ax, ax ;~ 01A2:816A
-cs=0x1a2;eip=0x00816c; 	R(OUT(dx, ax));	// 17101 out     dx, ax ;~ 01A2:816C
+cs=0x1a2;eip=0x00816c; 	S(OUT(dx, ax));	// 17101 out     dx, ax ;~ 01A2:816C
 cs=0x1a2;eip=0x00816d; 	T(DEC(dx));	// 17102 dec     dx ;~ 01A2:816D
 cs=0x1a2;eip=0x00816e; 	T(MOV(al, 3));	// 17103 mov     al, 3 ;~ 01A2:816E
-cs=0x1a2;eip=0x008170; 	R(OUT(dx, al));	// 17104 out     dx, al ;~ 01A2:8170
+cs=0x1a2;eip=0x008170; 	S(OUT(dx, al));	// 17104 out     dx, al ;~ 01A2:8170
 cs=0x1a2;eip=0x008171; 	T(INC(dx));	// 17105 inc     dx ;~ 01A2:8171
 cs=0x1a2;eip=0x008172; 	T(XOR(ax, ax));	// 17106 xor     ax, ax ;~ 01A2:8172
-cs=0x1a2;eip=0x008174; 	R(OUT(dx, ax));	// 17107 out     dx, ax ;~ 01A2:8174
+cs=0x1a2;eip=0x008174; 	S(OUT(dx, ax));	// 17107 out     dx, ax ;~ 01A2:8174
 cs=0x1a2;eip=0x008175; 	T(DEC(dx));	// 17108 dec     dx ;~ 01A2:8175
 cs=0x1a2;eip=0x008176; 	T(MOV(al, 4));	// 17109 mov     al, 4 ;~ 01A2:8176
-cs=0x1a2;eip=0x008178; 	R(OUT(dx, al));	// 17110 out     dx, al ;~ 01A2:8178
+cs=0x1a2;eip=0x008178; 	S(OUT(dx, al));	// 17110 out     dx, al ;~ 01A2:8178
 cs=0x1a2;eip=0x008179; 	T(INC(dx));	// 17111 inc     dx ;~ 01A2:8179
 cs=0x1a2;eip=0x00817a; 	T(XOR(ax, ax));	// 17112 xor     ax, ax ;~ 01A2:817A
-cs=0x1a2;eip=0x00817c; 	R(OUT(dx, ax));	// 17113 out     dx, ax ;~ 01A2:817C
+cs=0x1a2;eip=0x00817c; 	S(OUT(dx, ax));	// 17113 out     dx, ax ;~ 01A2:817C
 cs=0x1a2;eip=0x00817d; 	T(DEC(dx));	// 17114 dec     dx ;~ 01A2:817D
 cs=0x1a2;eip=0x00817e; 	T(MOV(al, 5));	// 17115 mov     al, 5 ;~ 01A2:817E
-cs=0x1a2;eip=0x008180; 	R(OUT(dx, al));	// 17116 out     dx, al ;~ 01A2:8180
+cs=0x1a2;eip=0x008180; 	S(OUT(dx, al));	// 17116 out     dx, al ;~ 01A2:8180
 cs=0x1a2;eip=0x008181; 	T(INC(dx));	// 17117 inc     dx ;~ 01A2:8181
 cs=0x1a2;eip=0x008182; 	T(XOR(ax, ax));	// 17118 xor     ax, ax ;~ 01A2:8182
-cs=0x1a2;eip=0x008184; 	R(OUT(dx, ax));	// 17119 out     dx, ax ;~ 01A2:8184
+cs=0x1a2;eip=0x008184; 	S(OUT(dx, ax));	// 17119 out     dx, ax ;~ 01A2:8184
 cs=0x1a2;eip=0x008185; 	T(DEC(dx));	// 17120 dec     dx ;~ 01A2:8185
 cs=0x1a2;eip=0x008186; 	T(MOV(al, 6));	// 17121 mov     al, 6 ;~ 01A2:8186
-cs=0x1a2;eip=0x008188; 	R(OUT(dx, al));	// 17122 out     dx, al ;~ 01A2:8188
+cs=0x1a2;eip=0x008188; 	S(OUT(dx, al));	// 17122 out     dx, al ;~ 01A2:8188
 cs=0x1a2;eip=0x008189; 	T(ADD(dl, 2));	// 17123 add     dl, 2 ;~ 01A2:8189
 cs=0x1a2;eip=0x00818c; 	T(MOV(al, 0x30));	// 17124 mov     al, 30h ; '0' ;~ 01A2:818C
-cs=0x1a2;eip=0x00818e; 	R(OUT(dx, al));	// 17125 out     dx, al ;~ 01A2:818E
+cs=0x1a2;eip=0x00818e; 	S(OUT(dx, al));	// 17125 out     dx, al ;~ 01A2:818E
 cs=0x1a2;eip=0x00818f; 	T(SUB(dl, 2));	// 17126 sub     dl, 2 ;~ 01A2:818F
 cs=0x1a2;eip=0x008192; 	T(MOV(al, 7));	// 17127 mov     al, 7 ;~ 01A2:8192
-cs=0x1a2;eip=0x008194; 	R(OUT(dx, al));	// 17128 out     dx, al ;~ 01A2:8194
+cs=0x1a2;eip=0x008194; 	S(OUT(dx, al));	// 17128 out     dx, al ;~ 01A2:8194
 cs=0x1a2;eip=0x008195; 	T(ADD(dl, 2));	// 17129 add     dl, 2 ;~ 01A2:8195
 cs=0x1a2;eip=0x008198; 	T(MOV(al, 0x10));	// 17130 mov     al, 10h ;~ 01A2:8198
-cs=0x1a2;eip=0x00819a; 	R(OUT(dx, al));	// 17131 out     dx, al ;~ 01A2:819A
+cs=0x1a2;eip=0x00819a; 	S(OUT(dx, al));	// 17131 out     dx, al ;~ 01A2:819A
 cs=0x1a2;eip=0x00819b; 	T(SUB(dl, 2));	// 17132 sub     dl, 2 ;~ 01A2:819B
 cs=0x1a2;eip=0x00819e; 	T(MOV(al, 8));	// 17133 mov     al, 8 ;~ 01A2:819E
-cs=0x1a2;eip=0x0081a0; 	R(OUT(dx, al));	// 17134 out     dx, al ;~ 01A2:81A0
+cs=0x1a2;eip=0x0081a0; 	S(OUT(dx, al));	// 17134 out     dx, al ;~ 01A2:81A0
 cs=0x1a2;eip=0x0081a1; 	T(ADD(dl, 2));	// 17135 add     dl, 2 ;~ 01A2:81A1
 cs=0x1a2;eip=0x0081a4; 	T(MOV(al, 0x0E0));	// 17136 mov     al, 0E0h ; 'à' ;~ 01A2:81A4
-cs=0x1a2;eip=0x0081a6; 	R(OUT(dx, al));	// 17137 out     dx, al ;~ 01A2:81A6
+cs=0x1a2;eip=0x0081a6; 	S(OUT(dx, al));	// 17137 out     dx, al ;~ 01A2:81A6
 cs=0x1a2;eip=0x0081a7; 	T(SUB(dl, 2));	// 17138 sub     dl, 2 ;~ 01A2:81A7
 cs=0x1a2;eip=0x0081aa; 	T(MOV(al, 9));	// 17139 mov     al, 9 ;~ 01A2:81AA
-cs=0x1a2;eip=0x0081ac; 	R(OUT(dx, al));	// 17140 out     dx, al ;~ 01A2:81AC
+cs=0x1a2;eip=0x0081ac; 	S(OUT(dx, al));	// 17140 out     dx, al ;~ 01A2:81AC
 cs=0x1a2;eip=0x0081ad; 	T(INC(dx));	// 17141 inc     dx ;~ 01A2:81AD
 cs=0x1a2;eip=0x0081ae; 	T(XOR(ax, ax));	// 17142 xor     ax, ax ;~ 01A2:81AE
-cs=0x1a2;eip=0x0081b0; 	R(OUT(dx, ax));	// 17143 out     dx, ax ;~ 01A2:81B0
+cs=0x1a2;eip=0x0081b0; 	S(OUT(dx, ax));	// 17143 out     dx, ax ;~ 01A2:81B0
 cs=0x1a2;eip=0x0081b1; 	T(DEC(dx));	// 17144 dec     dx ;~ 01A2:81B1
 cs=0x1a2;eip=0x0081b2; 	T(MOV(al, 0x0A));	// 17145 mov     al, 0Ah ;~ 01A2:81B2
-cs=0x1a2;eip=0x0081b4; 	R(OUT(dx, al));	// 17146 out     dx, al ;~ 01A2:81B4
+cs=0x1a2;eip=0x0081b4; 	S(OUT(dx, al));	// 17146 out     dx, al ;~ 01A2:81B4
 cs=0x1a2;eip=0x0081b5; 	T(INC(dx));	// 17147 inc     dx ;~ 01A2:81B5
 cs=0x1a2;eip=0x0081b6; 	T(XOR(ax, ax));	// 17148 xor     ax, ax ;~ 01A2:81B6
-cs=0x1a2;eip=0x0081b8; 	R(OUT(dx, ax));	// 17149 out     dx, ax ;~ 01A2:81B8
+cs=0x1a2;eip=0x0081b8; 	S(OUT(dx, ax));	// 17149 out     dx, ax ;~ 01A2:81B8
 cs=0x1a2;eip=0x0081b9; 	T(DEC(dx));	// 17150 dec     dx ;~ 01A2:81B9
 cs=0x1a2;eip=0x0081ba; 	T(MOV(al, 0x0B));	// 17151 mov     al, 0Bh ;~ 01A2:81BA
-cs=0x1a2;eip=0x0081bc; 	R(OUT(dx, al));	// 17152 out     dx, al ;~ 01A2:81BC
+cs=0x1a2;eip=0x0081bc; 	S(OUT(dx, al));	// 17152 out     dx, al ;~ 01A2:81BC
 cs=0x1a2;eip=0x0081bd; 	T(INC(dx));	// 17153 inc     dx ;~ 01A2:81BD
 cs=0x1a2;eip=0x0081be; 	T(XOR(ax, ax));	// 17154 xor     ax, ax ;~ 01A2:81BE
-cs=0x1a2;eip=0x0081c0; 	R(OUT(dx, ax));	// 17155 out     dx, ax ;~ 01A2:81C0
+cs=0x1a2;eip=0x0081c0; 	S(OUT(dx, ax));	// 17155 out     dx, ax ;~ 01A2:81C0
 cs=0x1a2;eip=0x0081c1; 	T(DEC(dx));	// 17156 dec     dx ;~ 01A2:81C1
 cs=0x1a2;eip=0x0081c2; 	T(INC(bl));	// 17157 inc     bl ;~ 01A2:81C2
 cs=0x1a2;eip=0x0081c4; 	T(CMP(bl, byte_24629));	// 17158 cmp     bl, byte_24629 ;~ 01A2:81C4
 cs=0x1a2;eip=0x0081c8; 	J(JC(loc_1813a));	// 17159 jb      loc_1813A ;~ 01A2:81C8
 cs=0x1a2;eip=0x0081cc; 	T(SUB(dx, 0x0FD));	// 17160 sub     dx, 0FDh ; 'ý' ;~ 01A2:81CC
-cs=0x1a2;eip=0x0081d0; 	R(IN(al, dx));	// 17161 in      al, dx ;~ 01A2:81D0
+cs=0x1a2;eip=0x0081d0; 	S(IN(al, dx));	// 17161 in      al, dx ;~ 01A2:81D0
 cs=0x1a2;eip=0x0081d1; 	T(ADD(dx, 0x0FD));	// 17162 add     dx, 0FDh ; 'ý' ;~ 01A2:81D1
 cs=0x1a2;eip=0x0081d5; 	T(MOV(al, 0x41));	// 17163 mov     al, 41h ; 'A' ;~ 01A2:81D5
-cs=0x1a2;eip=0x0081d7; 	R(OUT(dx, al));	// 17164 out     dx, al ;~ 01A2:81D7
+cs=0x1a2;eip=0x0081d7; 	S(OUT(dx, al));	// 17164 out     dx, al ;~ 01A2:81D7
 cs=0x1a2;eip=0x0081d8; 	T(ADD(dl, 2));	// 17165 add     dl, 2 ;~ 01A2:81D8
-cs=0x1a2;eip=0x0081db; 	R(IN(al, dx));	// 17166 in      al, dx ;~ 01A2:81DB
+cs=0x1a2;eip=0x0081db; 	S(IN(al, dx));	// 17166 in      al, dx ;~ 01A2:81DB
 cs=0x1a2;eip=0x0081dc; 	T(SUB(dl, 2));	// 17167 sub     dl, 2 ;~ 01A2:81DC
 cs=0x1a2;eip=0x0081df; 	T(MOV(al, 0x49));	// 17168 mov     al, 49h ; 'I' ;~ 01A2:81DF
-cs=0x1a2;eip=0x0081e1; 	R(OUT(dx, al));	// 17169 out     dx, al ;~ 01A2:81E1
+cs=0x1a2;eip=0x0081e1; 	S(OUT(dx, al));	// 17169 out     dx, al ;~ 01A2:81E1
 cs=0x1a2;eip=0x0081e2; 	T(ADD(dl, 2));	// 17170 add     dl, 2 ;~ 01A2:81E2
-cs=0x1a2;eip=0x0081e5; 	R(IN(al, dx));	// 17171 in      al, dx ;~ 01A2:81E5
+cs=0x1a2;eip=0x0081e5; 	S(IN(al, dx));	// 17171 in      al, dx ;~ 01A2:81E5
 cs=0x1a2;eip=0x0081e6; 	T(SUB(dl, 2));	// 17172 sub     dl, 2 ;~ 01A2:81E6
 cs=0x1a2;eip=0x0081e9; 	T(MOV(al, 0x8F));	// 17173 mov     al, 8Fh ;~ 01A2:81E9
-cs=0x1a2;eip=0x0081eb; 	R(OUT(dx, al));	// 17174 out     dx, al ;~ 01A2:81EB
+cs=0x1a2;eip=0x0081eb; 	S(OUT(dx, al));	// 17174 out     dx, al ;~ 01A2:81EB
 cs=0x1a2;eip=0x0081ec; 	T(ADD(dl, 2));	// 17175 add     dl, 2 ;~ 01A2:81EC
-cs=0x1a2;eip=0x0081ef; 	R(IN(al, dx));	// 17176 in      al, dx ;~ 01A2:81EF
+cs=0x1a2;eip=0x0081ef; 	S(IN(al, dx));	// 17176 in      al, dx ;~ 01A2:81EF
 cs=0x1a2;eip=0x0081f0; 	T(SUB(dl, 2));	// 17177 sub     dl, 2 ;~ 01A2:81F0
 cs=0x1a2;eip=0x0081f3; 	T(MOV(al, 0x4C));	// 17178 mov     al, 4Ch ; 'L' ;~ 01A2:81F3
-cs=0x1a2;eip=0x0081f5; 	R(OUT(dx, al));	// 17179 out     dx, al ;~ 01A2:81F5
+cs=0x1a2;eip=0x0081f5; 	S(OUT(dx, al));	// 17179 out     dx, al ;~ 01A2:81F5
 cs=0x1a2;eip=0x0081f6; 	T(ADD(dl, 2));	// 17180 add     dl, 2 ;~ 01A2:81F6
 cs=0x1a2;eip=0x0081f9; 	T(MOV(al, 7));	// 17181 mov     al, 7 ;~ 01A2:81F9
-cs=0x1a2;eip=0x0081fb; 	R(OUT(dx, al));	// 17182 out     dx, al ;~ 01A2:81FB
+cs=0x1a2;eip=0x0081fb; 	S(OUT(dx, al));	// 17182 out     dx, al ;~ 01A2:81FB
 cs=0x1a2;eip=0x0081fc; 	T(SUB(dl, 2));	// 17183 sub     dl, 2 ;~ 01A2:81FC
 cs=0x1a2;eip=0x0081ff; 	X(POPF);	// 17184 popf ;~ 01A2:81FF
 cs=0x1a2;eip=0x008200; 	J(RETN(0));	// 17185 retn ;~ 01A2:8200
@@ -19756,14 +19764,14 @@ cs=0x1a2;eip=0x008202; 	T(MOV(dx, _gravis_port));	// 17195 mov     dx, _gravis_p
 cs=0x1a2;eip=0x008206; 	T(ADD(dx, 4));	// 17196 add     dx, 4 ;~ 01A2:8206
 loc_18209:
 	// 5473 
-cs=0x1a2;eip=0x008209; 	R(IN(al, dx));	// 17199 in      al, dx ;~ 01A2:8209
-cs=0x1a2;eip=0x00820a; 	R(IN(al, dx));	// 17200 in      al, dx ;~ 01A2:820A
-cs=0x1a2;eip=0x00820b; 	R(IN(al, dx));	// 17201 in      al, dx ;~ 01A2:820B
-cs=0x1a2;eip=0x00820c; 	R(IN(al, dx));	// 17202 in      al, dx ;~ 01A2:820C
-cs=0x1a2;eip=0x00820d; 	R(IN(al, dx));	// 17203 in      al, dx ;~ 01A2:820D
-cs=0x1a2;eip=0x00820e; 	R(IN(al, dx));	// 17204 in      al, dx ;~ 01A2:820E
-cs=0x1a2;eip=0x00820f; 	R(IN(al, dx));	// 17205 in      al, dx ;~ 01A2:820F
-cs=0x1a2;eip=0x008210; 	R(IN(al, dx));	// 17206 in      al, dx ;~ 01A2:8210
+cs=0x1a2;eip=0x008209; 	S(IN(al, dx));	// 17199 in      al, dx ;~ 01A2:8209
+cs=0x1a2;eip=0x00820a; 	S(IN(al, dx));	// 17200 in      al, dx ;~ 01A2:820A
+cs=0x1a2;eip=0x00820b; 	S(IN(al, dx));	// 17201 in      al, dx ;~ 01A2:820B
+cs=0x1a2;eip=0x00820c; 	S(IN(al, dx));	// 17202 in      al, dx ;~ 01A2:820C
+cs=0x1a2;eip=0x00820d; 	S(IN(al, dx));	// 17203 in      al, dx ;~ 01A2:820D
+cs=0x1a2;eip=0x00820e; 	S(IN(al, dx));	// 17204 in      al, dx ;~ 01A2:820E
+cs=0x1a2;eip=0x00820f; 	S(IN(al, dx));	// 17205 in      al, dx ;~ 01A2:820F
+cs=0x1a2;eip=0x008210; 	S(IN(al, dx));	// 17206 in      al, dx ;~ 01A2:8210
 cs=0x1a2;eip=0x008211; 	T(DEC(cx));	// 17207 dec     cx ;~ 01A2:8211
 cs=0x1a2;eip=0x008212; 	J(JNZ(loc_18209));	// 17208 jnz     short loc_18209 ;~ 01A2:8212
 cs=0x1a2;eip=0x008214; 	X(POP(dx));	// 17209 pop     dx ;~ 01A2:8214
@@ -19829,52 +19837,52 @@ cs=0x1a2;eip=0x008265; 	T(MOV(si, dx));	// 17246 mov     si, dx ;~ 01A2:8265
 cs=0x1a2;eip=0x008267; 	T(di = si+0x0B);	// 17247 lea     di, [si+0Bh] ;~ 01A2:8267
 cs=0x1a2;eip=0x00826a; 	T(dx = si+0x0F);	// 17248 lea     dx, [si+0Fh] ;~ 01A2:826A
 cs=0x1a2;eip=0x00826d; 	T(MOV(al, 5));	// 17249 mov     al, 5 ;~ 01A2:826D
-cs=0x1a2;eip=0x00826f; 	R(OUT(dx, al));	// 17250 out     dx, al ;~ 01A2:826F
+cs=0x1a2;eip=0x00826f; 	S(OUT(dx, al));	// 17250 out     dx, al ;~ 01A2:826F
 cs=0x1a2;eip=0x008270; 	T(MOV(dx, si));	// 17251 mov     dx, si ;~ 01A2:8270
 cs=0x1a2;eip=0x008272; 	T(MOV(al, ah));	// 17252 mov     al, ah ;~ 01A2:8272
-cs=0x1a2;eip=0x008274; 	R(OUT(dx, al));	// 17253 out     dx, al ;~ 01A2:8274
+cs=0x1a2;eip=0x008274; 	S(OUT(dx, al));	// 17253 out     dx, al ;~ 01A2:8274
 cs=0x1a2;eip=0x008275; 	T(MOV(dx, di));	// 17254 mov     dx, di ;~ 01A2:8275
 cs=0x1a2;eip=0x008277; 	T(XOR(al, al));	// 17255 xor     al, al ;~ 01A2:8277
-cs=0x1a2;eip=0x008279; 	R(OUT(dx, al));	// 17256 out     dx, al ;~ 01A2:8279
+cs=0x1a2;eip=0x008279; 	S(OUT(dx, al));	// 17256 out     dx, al ;~ 01A2:8279
 cs=0x1a2;eip=0x00827a; 	T(dx = si+0x0F);	// 17257 lea     dx, [si+0Fh] ;~ 01A2:827A
 cs=0x1a2;eip=0x00827d; 	T(XOR(al, al));	// 17258 xor     al, al ;~ 01A2:827D
-cs=0x1a2;eip=0x00827f; 	R(OUT(dx, al));	// 17259 out     dx, al ;~ 01A2:827F
+cs=0x1a2;eip=0x00827f; 	S(OUT(dx, al));	// 17259 out     dx, al ;~ 01A2:827F
 cs=0x1a2;eip=0x008280; 	T(MOV(dx, si));	// 17260 mov     dx, si ;~ 01A2:8280
 cs=0x1a2;eip=0x008282; 	T(MOV(al, ah));	// 17261 mov     al, ah ;~ 01A2:8282
-cs=0x1a2;eip=0x008284; 	R(OUT(dx, al));	// 17262 out     dx, al ;~ 01A2:8284
+cs=0x1a2;eip=0x008284; 	S(OUT(dx, al));	// 17262 out     dx, al ;~ 01A2:8284
 cs=0x1a2;eip=0x008285; 	T(MOV(dx, di));	// 17263 mov     dx, di ;~ 01A2:8285
 cs=0x1a2;eip=0x008287; 	T(MOV(al, cl));	// 17264 mov     al, cl ;~ 01A2:8287
 cs=0x1a2;eip=0x008289; 	T(OR(al, 0x80));	// 17265 or      al, 80h ;~ 01A2:8289
-cs=0x1a2;eip=0x00828b; 	R(OUT(dx, al));	// 17266 out     dx, al ;~ 01A2:828B
+cs=0x1a2;eip=0x00828b; 	S(OUT(dx, al));	// 17266 out     dx, al ;~ 01A2:828B
 cs=0x1a2;eip=0x00828c; 	T(MOV(dx, si));	// 17267 mov     dx, si ;~ 01A2:828C
 cs=0x1a2;eip=0x00828e; 	T(MOV(al, ah));	// 17268 mov     al, ah ;~ 01A2:828E
 cs=0x1a2;eip=0x008290; 	T(OR(al, 0x40));	// 17269 or      al, 40h ;~ 01A2:8290
-cs=0x1a2;eip=0x008292; 	R(OUT(dx, al));	// 17270 out     dx, al ;~ 01A2:8292
+cs=0x1a2;eip=0x008292; 	S(OUT(dx, al));	// 17270 out     dx, al ;~ 01A2:8292
 cs=0x1a2;eip=0x008293; 	T(MOV(dx, di));	// 17271 mov     dx, di ;~ 01A2:8293
 cs=0x1a2;eip=0x008295; 	T(MOV(al, bl));	// 17272 mov     al, bl ;~ 01A2:8295
-cs=0x1a2;eip=0x008297; 	R(OUT(dx, al));	// 17273 out     dx, al ;~ 01A2:8297
+cs=0x1a2;eip=0x008297; 	S(OUT(dx, al));	// 17273 out     dx, al ;~ 01A2:8297
 cs=0x1a2;eip=0x008298; 	T(MOV(dx, si));	// 17274 mov     dx, si ;~ 01A2:8298
 cs=0x1a2;eip=0x00829a; 	T(MOV(al, ah));	// 17275 mov     al, ah ;~ 01A2:829A
-cs=0x1a2;eip=0x00829c; 	R(OUT(dx, al));	// 17276 out     dx, al ;~ 01A2:829C
+cs=0x1a2;eip=0x00829c; 	S(OUT(dx, al));	// 17276 out     dx, al ;~ 01A2:829C
 cs=0x1a2;eip=0x00829d; 	T(MOV(dx, di));	// 17277 mov     dx, di ;~ 01A2:829D
 cs=0x1a2;eip=0x00829f; 	T(MOV(al, cl));	// 17278 mov     al, cl ;~ 01A2:829F
-cs=0x1a2;eip=0x0082a1; 	R(OUT(dx, al));	// 17279 out     dx, al ;~ 01A2:82A1
+cs=0x1a2;eip=0x0082a1; 	S(OUT(dx, al));	// 17279 out     dx, al ;~ 01A2:82A1
 cs=0x1a2;eip=0x0082a2; 	T(MOV(dx, si));	// 17280 mov     dx, si ;~ 01A2:82A2
 cs=0x1a2;eip=0x0082a4; 	T(MOV(al, ah));	// 17281 mov     al, ah ;~ 01A2:82A4
 cs=0x1a2;eip=0x0082a6; 	T(OR(al, 0x40));	// 17282 or      al, 40h ;~ 01A2:82A6
-cs=0x1a2;eip=0x0082a8; 	R(OUT(dx, al));	// 17283 out     dx, al ;~ 01A2:82A8
+cs=0x1a2;eip=0x0082a8; 	S(OUT(dx, al));	// 17283 out     dx, al ;~ 01A2:82A8
 cs=0x1a2;eip=0x0082a9; 	T(MOV(dx, di));	// 17284 mov     dx, di ;~ 01A2:82A9
 cs=0x1a2;eip=0x0082ab; 	T(MOV(al, bl));	// 17285 mov     al, bl ;~ 01A2:82AB
-cs=0x1a2;eip=0x0082ad; 	R(OUT(dx, al));	// 17286 out     dx, al ;~ 01A2:82AD
+cs=0x1a2;eip=0x0082ad; 	S(OUT(dx, al));	// 17286 out     dx, al ;~ 01A2:82AD
 cs=0x1a2;eip=0x0082ae; 	T(dx = si+0x102);	// 17287 lea     dx, [si+102h] ;~ 01A2:82AE
 cs=0x1a2;eip=0x0082b2; 	T(XOR(al, al));	// 17288 xor     al, al ;~ 01A2:82B2
-cs=0x1a2;eip=0x0082b4; 	R(OUT(dx, al));	// 17289 out     dx, al ;~ 01A2:82B4
+cs=0x1a2;eip=0x0082b4; 	S(OUT(dx, al));	// 17289 out     dx, al ;~ 01A2:82B4
 cs=0x1a2;eip=0x0082b5; 	T(MOV(dx, si));	// 17290 mov     dx, si ;~ 01A2:82B5
 cs=0x1a2;eip=0x0082b7; 	T(MOV(al, ah));	// 17291 mov     al, ah ;~ 01A2:82B7
-cs=0x1a2;eip=0x0082b9; 	R(OUT(dx, al));	// 17292 out     dx, al ;~ 01A2:82B9
+cs=0x1a2;eip=0x0082b9; 	S(OUT(dx, al));	// 17292 out     dx, al ;~ 01A2:82B9
 cs=0x1a2;eip=0x0082ba; 	T(dx = si+0x102);	// 17293 lea     dx, [si+102h] ;~ 01A2:82BA
 cs=0x1a2;eip=0x0082be; 	T(XOR(al, al));	// 17294 xor     al, al ;~ 01A2:82BE
-cs=0x1a2;eip=0x0082c0; 	R(OUT(dx, al));	// 17295 out     dx, al ;~ 01A2:82C0
+cs=0x1a2;eip=0x0082c0; 	S(OUT(dx, al));	// 17295 out     dx, al ;~ 01A2:82C0
 cs=0x1a2;eip=0x0082c1; 	X(POPF);	// 17296 popf ;~ 01A2:82C1
 cs=0x1a2;eip=0x0082c2; 	J(RETN(0));	// 17297 retn ;~ 01A2:82C2
 
@@ -19953,22 +19961,22 @@ loc_18360:
 	// 5478 
 cs=0x1a2;eip=0x008360; 	T(MOV(dx, _gravis_port));	// 17373 mov     dx, _gravis_port ;~ 01A2:8360
 cs=0x1a2;eip=0x008364; 	T(MOV(al, 0x41));	// 17374 mov     al, 41h ; 'A' ;~ 01A2:8364
-cs=0x1a2;eip=0x008366; 	R(OUT(dx, al));	// 17375 out     dx, al ;~ 01A2:8366
+cs=0x1a2;eip=0x008366; 	S(OUT(dx, al));	// 17375 out     dx, al ;~ 01A2:8366
 cs=0x1a2;eip=0x008367; 	T(ADD(dl, 2));	// 17376 add     dl, 2 ;~ 01A2:8367
-cs=0x1a2;eip=0x00836a; 	R(IN(al, dx));	// 17377 in      al, dx ;~ 01A2:836A
+cs=0x1a2;eip=0x00836a; 	S(IN(al, dx));	// 17377 in      al, dx ;~ 01A2:836A
 cs=0x1a2;eip=0x00836b; 	T(SUB(dl, 2));	// 17378 sub     dl, 2 ;~ 01A2:836B
 cs=0x1a2;eip=0x00836e; 	T(MOV(al, 0x42));	// 17379 mov     al, 42h ; 'B' ;~ 01A2:836E
-cs=0x1a2;eip=0x008370; 	R(OUT(dx, al));	// 17380 out     dx, al ;~ 01A2:8370
+cs=0x1a2;eip=0x008370; 	S(OUT(dx, al));	// 17380 out     dx, al ;~ 01A2:8370
 cs=0x1a2;eip=0x008371; 	T(INC(dx));	// 17381 inc     dx ;~ 01A2:8371
 cs=0x1a2;eip=0x008372; 	T(MOV(ax, bp));	// 17382 mov     ax, bp ;~ 01A2:8372
-cs=0x1a2;eip=0x008374; 	R(OUT(dx, ax));	// 17383 out     dx, ax ;~ 01A2:8374
+cs=0x1a2;eip=0x008374; 	S(OUT(dx, ax));	// 17383 out     dx, ax ;~ 01A2:8374
 cs=0x1a2;eip=0x008375; 	T(DEC(dx));	// 17384 dec     dx ;~ 01A2:8375
 cs=0x1a2;eip=0x008376; 	X(MOV(byte_2466e, 1));	// 17385 mov     byte_2466E, 1 ;~ 01A2:8376
 cs=0x1a2;eip=0x00837b; 	T(MOV(al, 0x41));	// 17386 mov     al, 41h ; 'A' ;~ 01A2:837B
-cs=0x1a2;eip=0x00837d; 	R(OUT(dx, al));	// 17387 out     dx, al ;~ 01A2:837D
+cs=0x1a2;eip=0x00837d; 	S(OUT(dx, al));	// 17387 out     dx, al ;~ 01A2:837D
 cs=0x1a2;eip=0x00837e; 	T(ADD(dl, 2));	// 17388 add     dl, 2 ;~ 01A2:837E
 cs=0x1a2;eip=0x008381; 	T(MOV(al, bl));	// 17389 mov     al, bl ;~ 01A2:8381
-cs=0x1a2;eip=0x008383; 	R(OUT(dx, al));	// 17390 out     dx, al ;~ 01A2:8383
+cs=0x1a2;eip=0x008383; 	S(OUT(dx, al));	// 17390 out     dx, al ;~ 01A2:8383
 cs=0x1a2;eip=0x008384; 	T(SUB(dl, 2));	// 17391 sub     dl, 2 ;~ 01A2:8384
 cs=0x1a2;eip=0x008387; 	X(POPF);	// 17392 popf ;~ 01A2:8387
 cs=0x1a2;eip=0x008388; 	J(RETN(0));	// 17393 retn ;~ 01A2:8388
@@ -20035,52 +20043,52 @@ cs=0x1a2;eip=0x008394; 	J(RETN(0));	// 17409 retn ;~ 01A2:8394
 cs=0x1a2;eip=0x008395; 	X(PUSH(ax));	// 17418 push    ax ;~ 01A2:8395
 cs=0x1a2;eip=0x008396; 	X(PUSH(dx));	// 17419 push    dx ;~ 01A2:8396
 cs=0x1a2;eip=0x008397; 	T(MOV(dx, 0x388));	// 17420 mov     dx, 388h ;~ 01A2:8397
-cs=0x1a2;eip=0x00839a; 	R(OUT(dx, al));	// 17421 out     dx, al ;~ 01A2:839A
-cs=0x1a2;eip=0x00839b; 	R(IN(al, dx));	// 17422 in      al, dx ;~ 01A2:839B
-cs=0x1a2;eip=0x00839c; 	R(IN(al, dx));	// 17423 in      al, dx ;~ 01A2:839C
-cs=0x1a2;eip=0x00839d; 	R(IN(al, dx));	// 17424 in      al, dx ;~ 01A2:839D
-cs=0x1a2;eip=0x00839e; 	R(IN(al, dx));	// 17425 in      al, dx ;~ 01A2:839E
-cs=0x1a2;eip=0x00839f; 	R(IN(al, dx));	// 17426 in      al, dx ;~ 01A2:839F
-cs=0x1a2;eip=0x0083a0; 	R(IN(al, dx));	// 17427 in      al, dx ;~ 01A2:83A0
+cs=0x1a2;eip=0x00839a; 	S(OUT(dx, al));	// 17421 out     dx, al ;~ 01A2:839A
+cs=0x1a2;eip=0x00839b; 	S(IN(al, dx));	// 17422 in      al, dx ;~ 01A2:839B
+cs=0x1a2;eip=0x00839c; 	S(IN(al, dx));	// 17423 in      al, dx ;~ 01A2:839C
+cs=0x1a2;eip=0x00839d; 	S(IN(al, dx));	// 17424 in      al, dx ;~ 01A2:839D
+cs=0x1a2;eip=0x00839e; 	S(IN(al, dx));	// 17425 in      al, dx ;~ 01A2:839E
+cs=0x1a2;eip=0x00839f; 	S(IN(al, dx));	// 17426 in      al, dx ;~ 01A2:839F
+cs=0x1a2;eip=0x0083a0; 	S(IN(al, dx));	// 17427 in      al, dx ;~ 01A2:83A0
 cs=0x1a2;eip=0x0083a1; 	T(INC(dx));	// 17428 inc     dx ;~ 01A2:83A1
 cs=0x1a2;eip=0x0083a2; 	T(MOV(al, ah));	// 17429 mov     al, ah ;~ 01A2:83A2
-cs=0x1a2;eip=0x0083a4; 	R(OUT(dx, al));	// 17430 out     dx, al ;~ 01A2:83A4
+cs=0x1a2;eip=0x0083a4; 	S(OUT(dx, al));	// 17430 out     dx, al ;~ 01A2:83A4
 cs=0x1a2;eip=0x0083a5; 	T(DEC(dx));	// 17431 dec     dx ;~ 01A2:83A5
-cs=0x1a2;eip=0x0083a6; 	R(IN(al, dx));	// 17432 in      al, dx ;~ 01A2:83A6
-cs=0x1a2;eip=0x0083a7; 	R(IN(al, dx));	// 17433 in      al, dx ;~ 01A2:83A7
-cs=0x1a2;eip=0x0083a8; 	R(IN(al, dx));	// 17434 in      al, dx ;~ 01A2:83A8
-cs=0x1a2;eip=0x0083a9; 	R(IN(al, dx));	// 17435 in      al, dx ;~ 01A2:83A9
-cs=0x1a2;eip=0x0083aa; 	R(IN(al, dx));	// 17436 in      al, dx ;~ 01A2:83AA
-cs=0x1a2;eip=0x0083ab; 	R(IN(al, dx));	// 17437 in      al, dx ;~ 01A2:83AB
-cs=0x1a2;eip=0x0083ac; 	R(IN(al, dx));	// 17438 in      al, dx ;~ 01A2:83AC
-cs=0x1a2;eip=0x0083ad; 	R(IN(al, dx));	// 17439 in      al, dx ;~ 01A2:83AD
-cs=0x1a2;eip=0x0083ae; 	R(IN(al, dx));	// 17440 in      al, dx ;~ 01A2:83AE
-cs=0x1a2;eip=0x0083af; 	R(IN(al, dx));	// 17441 in      al, dx ;~ 01A2:83AF
-cs=0x1a2;eip=0x0083b0; 	R(IN(al, dx));	// 17442 in      al, dx ;~ 01A2:83B0
-cs=0x1a2;eip=0x0083b1; 	R(IN(al, dx));	// 17443 in      al, dx ;~ 01A2:83B1
-cs=0x1a2;eip=0x0083b2; 	R(IN(al, dx));	// 17444 in      al, dx ;~ 01A2:83B2
-cs=0x1a2;eip=0x0083b3; 	R(IN(al, dx));	// 17445 in      al, dx ;~ 01A2:83B3
-cs=0x1a2;eip=0x0083b4; 	R(IN(al, dx));	// 17446 in      al, dx ;~ 01A2:83B4
-cs=0x1a2;eip=0x0083b5; 	R(IN(al, dx));	// 17447 in      al, dx ;~ 01A2:83B5
-cs=0x1a2;eip=0x0083b6; 	R(IN(al, dx));	// 17448 in      al, dx ;~ 01A2:83B6
-cs=0x1a2;eip=0x0083b7; 	R(IN(al, dx));	// 17449 in      al, dx ;~ 01A2:83B7
-cs=0x1a2;eip=0x0083b8; 	R(IN(al, dx));	// 17450 in      al, dx ;~ 01A2:83B8
-cs=0x1a2;eip=0x0083b9; 	R(IN(al, dx));	// 17451 in      al, dx ;~ 01A2:83B9
-cs=0x1a2;eip=0x0083ba; 	R(IN(al, dx));	// 17452 in      al, dx ;~ 01A2:83BA
-cs=0x1a2;eip=0x0083bb; 	R(IN(al, dx));	// 17453 in      al, dx ;~ 01A2:83BB
-cs=0x1a2;eip=0x0083bc; 	R(IN(al, dx));	// 17454 in      al, dx ;~ 01A2:83BC
-cs=0x1a2;eip=0x0083bd; 	R(IN(al, dx));	// 17455 in      al, dx ;~ 01A2:83BD
-cs=0x1a2;eip=0x0083be; 	R(IN(al, dx));	// 17456 in      al, dx ;~ 01A2:83BE
-cs=0x1a2;eip=0x0083bf; 	R(IN(al, dx));	// 17457 in      al, dx ;~ 01A2:83BF
-cs=0x1a2;eip=0x0083c0; 	R(IN(al, dx));	// 17458 in      al, dx ;~ 01A2:83C0
-cs=0x1a2;eip=0x0083c1; 	R(IN(al, dx));	// 17459 in      al, dx ;~ 01A2:83C1
-cs=0x1a2;eip=0x0083c2; 	R(IN(al, dx));	// 17460 in      al, dx ;~ 01A2:83C2
-cs=0x1a2;eip=0x0083c3; 	R(IN(al, dx));	// 17461 in      al, dx ;~ 01A2:83C3
-cs=0x1a2;eip=0x0083c4; 	R(IN(al, dx));	// 17462 in      al, dx ;~ 01A2:83C4
-cs=0x1a2;eip=0x0083c5; 	R(IN(al, dx));	// 17463 in      al, dx ;~ 01A2:83C5
-cs=0x1a2;eip=0x0083c6; 	R(IN(al, dx));	// 17464 in      al, dx ;~ 01A2:83C6
-cs=0x1a2;eip=0x0083c7; 	R(IN(al, dx));	// 17465 in      al, dx ;~ 01A2:83C7
-cs=0x1a2;eip=0x0083c8; 	R(IN(al, dx));	// 17466 in      al, dx ;~ 01A2:83C8
+cs=0x1a2;eip=0x0083a6; 	S(IN(al, dx));	// 17432 in      al, dx ;~ 01A2:83A6
+cs=0x1a2;eip=0x0083a7; 	S(IN(al, dx));	// 17433 in      al, dx ;~ 01A2:83A7
+cs=0x1a2;eip=0x0083a8; 	S(IN(al, dx));	// 17434 in      al, dx ;~ 01A2:83A8
+cs=0x1a2;eip=0x0083a9; 	S(IN(al, dx));	// 17435 in      al, dx ;~ 01A2:83A9
+cs=0x1a2;eip=0x0083aa; 	S(IN(al, dx));	// 17436 in      al, dx ;~ 01A2:83AA
+cs=0x1a2;eip=0x0083ab; 	S(IN(al, dx));	// 17437 in      al, dx ;~ 01A2:83AB
+cs=0x1a2;eip=0x0083ac; 	S(IN(al, dx));	// 17438 in      al, dx ;~ 01A2:83AC
+cs=0x1a2;eip=0x0083ad; 	S(IN(al, dx));	// 17439 in      al, dx ;~ 01A2:83AD
+cs=0x1a2;eip=0x0083ae; 	S(IN(al, dx));	// 17440 in      al, dx ;~ 01A2:83AE
+cs=0x1a2;eip=0x0083af; 	S(IN(al, dx));	// 17441 in      al, dx ;~ 01A2:83AF
+cs=0x1a2;eip=0x0083b0; 	S(IN(al, dx));	// 17442 in      al, dx ;~ 01A2:83B0
+cs=0x1a2;eip=0x0083b1; 	S(IN(al, dx));	// 17443 in      al, dx ;~ 01A2:83B1
+cs=0x1a2;eip=0x0083b2; 	S(IN(al, dx));	// 17444 in      al, dx ;~ 01A2:83B2
+cs=0x1a2;eip=0x0083b3; 	S(IN(al, dx));	// 17445 in      al, dx ;~ 01A2:83B3
+cs=0x1a2;eip=0x0083b4; 	S(IN(al, dx));	// 17446 in      al, dx ;~ 01A2:83B4
+cs=0x1a2;eip=0x0083b5; 	S(IN(al, dx));	// 17447 in      al, dx ;~ 01A2:83B5
+cs=0x1a2;eip=0x0083b6; 	S(IN(al, dx));	// 17448 in      al, dx ;~ 01A2:83B6
+cs=0x1a2;eip=0x0083b7; 	S(IN(al, dx));	// 17449 in      al, dx ;~ 01A2:83B7
+cs=0x1a2;eip=0x0083b8; 	S(IN(al, dx));	// 17450 in      al, dx ;~ 01A2:83B8
+cs=0x1a2;eip=0x0083b9; 	S(IN(al, dx));	// 17451 in      al, dx ;~ 01A2:83B9
+cs=0x1a2;eip=0x0083ba; 	S(IN(al, dx));	// 17452 in      al, dx ;~ 01A2:83BA
+cs=0x1a2;eip=0x0083bb; 	S(IN(al, dx));	// 17453 in      al, dx ;~ 01A2:83BB
+cs=0x1a2;eip=0x0083bc; 	S(IN(al, dx));	// 17454 in      al, dx ;~ 01A2:83BC
+cs=0x1a2;eip=0x0083bd; 	S(IN(al, dx));	// 17455 in      al, dx ;~ 01A2:83BD
+cs=0x1a2;eip=0x0083be; 	S(IN(al, dx));	// 17456 in      al, dx ;~ 01A2:83BE
+cs=0x1a2;eip=0x0083bf; 	S(IN(al, dx));	// 17457 in      al, dx ;~ 01A2:83BF
+cs=0x1a2;eip=0x0083c0; 	S(IN(al, dx));	// 17458 in      al, dx ;~ 01A2:83C0
+cs=0x1a2;eip=0x0083c1; 	S(IN(al, dx));	// 17459 in      al, dx ;~ 01A2:83C1
+cs=0x1a2;eip=0x0083c2; 	S(IN(al, dx));	// 17460 in      al, dx ;~ 01A2:83C2
+cs=0x1a2;eip=0x0083c3; 	S(IN(al, dx));	// 17461 in      al, dx ;~ 01A2:83C3
+cs=0x1a2;eip=0x0083c4; 	S(IN(al, dx));	// 17462 in      al, dx ;~ 01A2:83C4
+cs=0x1a2;eip=0x0083c5; 	S(IN(al, dx));	// 17463 in      al, dx ;~ 01A2:83C5
+cs=0x1a2;eip=0x0083c6; 	S(IN(al, dx));	// 17464 in      al, dx ;~ 01A2:83C6
+cs=0x1a2;eip=0x0083c7; 	S(IN(al, dx));	// 17465 in      al, dx ;~ 01A2:83C7
+cs=0x1a2;eip=0x0083c8; 	S(IN(al, dx));	// 17466 in      al, dx ;~ 01A2:83C8
 cs=0x1a2;eip=0x0083c9; 	X(POP(dx));	// 17467 pop     dx ;~ 01A2:83C9
 cs=0x1a2;eip=0x0083ca; 	X(POP(ax));	// 17468 pop     ax ;~ 01A2:83CA
 cs=0x1a2;eip=0x0083cb; 	J(RETN(0));	// 17469 retn ;~ 01A2:83CB
@@ -20390,10 +20398,10 @@ cs=0x1a2;eip=0x0085dc; 	T(MOV(ax, seg_offset(seg003)));	// 17741 mov     ax, seg
 cs=0x1a2;eip=0x0085df; 	T(MOV(ds, ax));	// 17742 mov     ds, ax ;~ 01A2:85DF
 cs=0x1a2;eip=0x0085e1; 	T(MOV(dx, _sb_base_port));	// 17743 mov     dx, _sb_base_port ;~ 01A2:85E1
 cs=0x1a2;eip=0x0085e5; 	T(ADD(dl, 0x0E));	// 17744 add     dl, 0Eh ;~ 01A2:85E5
-cs=0x1a2;eip=0x0085e8; 	R(IN(al, dx));	// 17745 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:85E8
+cs=0x1a2;eip=0x0085e8; 	S(IN(al, dx));	// 17745 in      al, dx          ; DMA controller, 8237A-5. ;~ 01A2:85E8
 cs=0x1a2;eip=0x0085e9; 	X(INC(_sb_int_counter));	// 17748 inc     _sb_int_counter ;~ 01A2:85E9
 cs=0x1a2;eip=0x0085ed; 	T(MOV(al, 0x20));	// 17749 mov     al, 20h ; ' ' ;~ 01A2:85ED
-cs=0x1a2;eip=0x0085ef; 	R(OUT(0x20, al));	// 17750 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:85EF
+cs=0x1a2;eip=0x0085ef; 	S(OUT(0x20, al));	// 17750 out     20h, al         ; Interrupt controller, 8259A. ;~ 01A2:85EF
 cs=0x1a2;eip=0x0085f1; 	X(POP(ds));	// 17751 pop     ds ;~ 01A2:85F1
 cs=0x1a2;eip=0x0085f2; 	X(POP(dx));	// 17752 pop     dx ;~ 01A2:85F2
 cs=0x1a2;eip=0x0085f3; 	X(POP(ax));	// 17753 pop     ax ;~ 01A2:85F3
@@ -20433,73 +20441,73 @@ cs=0x1a2;eip=0x0085f4; 	J(IRET);	// 17754 iret ;~ 01A2:85F4
 cs=0x1a2;eip=0x0085f5; 	T(CMP(cl, 4));	// 17758 cmp     cl, 4 ;~ 01A2:85F5
 cs=0x1a2;eip=0x0085f8; 	J(JNC(loc_18631));	// 17759 jnb     short loc_18631 ;~ 01A2:85F8
 cs=0x1a2;eip=0x0085fa; 	T(XOR(al, al));	// 17760 xor     al, al ;~ 01A2:85FA
-cs=0x1a2;eip=0x0085fc; 	R(OUT(0x0C, al));	// 17761 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:85FC
+cs=0x1a2;eip=0x0085fc; 	S(OUT(0x0C, al));	// 17761 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:85FC
 cs=0x1a2;eip=0x0085fe; 	T(CMP(cl, 1));	// 17763 cmp     cl, 1 ;~ 01A2:85FE
 cs=0x1a2;eip=0x008601; 	J(JZ(loc_18616));	// 17764 jz      short loc_18616 ;~ 01A2:8601
 cs=0x1a2;eip=0x008603; 	T(CMP(cl, 2));	// 17765 cmp     cl, 2 ;~ 01A2:8603
 cs=0x1a2;eip=0x008606; 	J(JZ(loc_1861f));	// 17766 jz      short loc_1861F ;~ 01A2:8606
 cs=0x1a2;eip=0x008608; 	T(CMP(cl, 3));	// 17767 cmp     cl, 3 ;~ 01A2:8608
 cs=0x1a2;eip=0x00860b; 	J(JZ(loc_18628));	// 17768 jz      short loc_18628 ;~ 01A2:860B
-cs=0x1a2;eip=0x00860d; 	R(IN(al, 1));	// 17769 in      al, 1           ; DMA controller, 8237A-5. ;~ 01A2:860D
+cs=0x1a2;eip=0x00860d; 	S(IN(al, 1));	// 17769 in      al, 1           ; DMA controller, 8237A-5. ;~ 01A2:860D
 cs=0x1a2;eip=0x00860f; 	T(MOV(ah, al));	// 17771 mov     ah, al ;~ 01A2:860F
-cs=0x1a2;eip=0x008611; 	R(IN(al, 1));	// 17772 in      al, 1           ; DMA controller, 8237A-5. ;~ 01A2:8611
+cs=0x1a2;eip=0x008611; 	S(IN(al, 1));	// 17772 in      al, 1           ; DMA controller, 8237A-5. ;~ 01A2:8611
 cs=0x1a2;eip=0x008613; 	T(XCHG(al, ah));	// 17774 xchg    al, ah ;~ 01A2:8613
 cs=0x1a2;eip=0x008615; 	J(RETN(0));	// 17775 retn ;~ 01A2:8615
 loc_18616:
 	// 5493 
-cs=0x1a2;eip=0x008616; 	R(IN(al, 3));	// 17779 in      al, 3           ; DMA controller, 8237A-5. ;~ 01A2:8616
+cs=0x1a2;eip=0x008616; 	S(IN(al, 3));	// 17779 in      al, 3           ; DMA controller, 8237A-5. ;~ 01A2:8616
 cs=0x1a2;eip=0x008618; 	T(MOV(ah, al));	// 17781 mov     ah, al ;~ 01A2:8618
-cs=0x1a2;eip=0x00861a; 	R(IN(al, 3));	// 17782 in      al, 3           ; DMA controller, 8237A-5. ;~ 01A2:861A
+cs=0x1a2;eip=0x00861a; 	S(IN(al, 3));	// 17782 in      al, 3           ; DMA controller, 8237A-5. ;~ 01A2:861A
 cs=0x1a2;eip=0x00861c; 	T(XCHG(al, ah));	// 17784 xchg    al, ah ;~ 01A2:861C
 cs=0x1a2;eip=0x00861e; 	J(RETN(0));	// 17785 retn ;~ 01A2:861E
 loc_1861f:
 	// 5494 
-cs=0x1a2;eip=0x00861f; 	R(IN(al, 5));	// 17789 in      al, 5           ; DMA controller, 8237A-5. ;~ 01A2:861F
+cs=0x1a2;eip=0x00861f; 	S(IN(al, 5));	// 17789 in      al, 5           ; DMA controller, 8237A-5. ;~ 01A2:861F
 cs=0x1a2;eip=0x008621; 	T(MOV(ah, al));	// 17791 mov     ah, al ;~ 01A2:8621
-cs=0x1a2;eip=0x008623; 	R(IN(al, 5));	// 17792 in      al, 5           ; DMA controller, 8237A-5. ;~ 01A2:8623
+cs=0x1a2;eip=0x008623; 	S(IN(al, 5));	// 17792 in      al, 5           ; DMA controller, 8237A-5. ;~ 01A2:8623
 cs=0x1a2;eip=0x008625; 	T(XCHG(al, ah));	// 17794 xchg    al, ah ;~ 01A2:8625
 cs=0x1a2;eip=0x008627; 	J(RETN(0));	// 17795 retn ;~ 01A2:8627
 loc_18628:
 	// 5495 
-cs=0x1a2;eip=0x008628; 	R(IN(al, 7));	// 17799 in      al, 7           ; DMA controller, 8237A-5. ;~ 01A2:8628
+cs=0x1a2;eip=0x008628; 	S(IN(al, 7));	// 17799 in      al, 7           ; DMA controller, 8237A-5. ;~ 01A2:8628
 cs=0x1a2;eip=0x00862a; 	T(MOV(ah, al));	// 17801 mov     ah, al ;~ 01A2:862A
-cs=0x1a2;eip=0x00862c; 	R(IN(al, 7));	// 17802 in      al, 7           ; DMA controller, 8237A-5. ;~ 01A2:862C
+cs=0x1a2;eip=0x00862c; 	S(IN(al, 7));	// 17802 in      al, 7           ; DMA controller, 8237A-5. ;~ 01A2:862C
 cs=0x1a2;eip=0x00862e; 	T(XCHG(al, ah));	// 17804 xchg    al, ah ;~ 01A2:862E
 cs=0x1a2;eip=0x008630; 	J(RETN(0));	// 17805 retn ;~ 01A2:8630
 loc_18631:
 	// 5496 
 cs=0x1a2;eip=0x008631; 	T(XOR(al, al));	// 17809 xor     al, al ;~ 01A2:8631
-cs=0x1a2;eip=0x008633; 	R(OUT(0x0D8, al));	// 17810 out     0D8h, al ;~ 01A2:8633
+cs=0x1a2;eip=0x008633; 	S(OUT(0x0D8, al));	// 17810 out     0D8h, al ;~ 01A2:8633
 cs=0x1a2;eip=0x008635; 	T(CMP(cl, 5));	// 17811 cmp     cl, 5 ;~ 01A2:8635
 cs=0x1a2;eip=0x008638; 	J(JZ(loc_1864d));	// 17812 jz      short loc_1864D ;~ 01A2:8638
 cs=0x1a2;eip=0x00863a; 	T(CMP(cl, 6));	// 17813 cmp     cl, 6 ;~ 01A2:863A
 cs=0x1a2;eip=0x00863d; 	J(JZ(loc_18656));	// 17814 jz      short loc_18656 ;~ 01A2:863D
 cs=0x1a2;eip=0x00863f; 	T(CMP(cl, 7));	// 17815 cmp     cl, 7 ;~ 01A2:863F
 cs=0x1a2;eip=0x008642; 	J(JZ(loc_1865f));	// 17816 jz      short loc_1865F ;~ 01A2:8642
-cs=0x1a2;eip=0x008644; 	R(IN(al, 0x0C2));	// 17817 in      al, 0C2h        ; DMA controller, 8237A-5. ;~ 01A2:8644
+cs=0x1a2;eip=0x008644; 	S(IN(al, 0x0C2));	// 17817 in      al, 0C2h        ; DMA controller, 8237A-5. ;~ 01A2:8644
 cs=0x1a2;eip=0x008646; 	T(MOV(ah, al));	// 17819 mov     ah, al ;~ 01A2:8646
-cs=0x1a2;eip=0x008648; 	R(IN(al, 0x0C2));	// 17820 in      al, 0C2h        ; DMA controller, 8237A-5. ;~ 01A2:8648
+cs=0x1a2;eip=0x008648; 	S(IN(al, 0x0C2));	// 17820 in      al, 0C2h        ; DMA controller, 8237A-5. ;~ 01A2:8648
 cs=0x1a2;eip=0x00864a; 	T(XCHG(al, ah));	// 17822 xchg    al, ah ;~ 01A2:864A
 cs=0x1a2;eip=0x00864c; 	J(RETN(0));	// 17823 retn ;~ 01A2:864C
 loc_1864d:
 	// 5497 
-cs=0x1a2;eip=0x00864d; 	R(IN(al, 0x0C6));	// 17827 in      al, 0C6h        ; DMA controller, 8237A-5. ;~ 01A2:864D
+cs=0x1a2;eip=0x00864d; 	S(IN(al, 0x0C6));	// 17827 in      al, 0C6h        ; DMA controller, 8237A-5. ;~ 01A2:864D
 cs=0x1a2;eip=0x00864f; 	T(MOV(ah, al));	// 17829 mov     ah, al ;~ 01A2:864F
-cs=0x1a2;eip=0x008651; 	R(IN(al, 0x0C6));	// 17830 in      al, 0C6h        ; DMA controller, 8237A-5. ;~ 01A2:8651
+cs=0x1a2;eip=0x008651; 	S(IN(al, 0x0C6));	// 17830 in      al, 0C6h        ; DMA controller, 8237A-5. ;~ 01A2:8651
 cs=0x1a2;eip=0x008653; 	T(XCHG(al, ah));	// 17832 xchg    al, ah ;~ 01A2:8653
 cs=0x1a2;eip=0x008655; 	J(RETN(0));	// 17833 retn ;~ 01A2:8655
 loc_18656:
 	// 5498 
-cs=0x1a2;eip=0x008656; 	R(IN(al, 0x0CA));	// 17837 in      al, 0CAh        ; DMA controller, 8237A-5. ;~ 01A2:8656
+cs=0x1a2;eip=0x008656; 	S(IN(al, 0x0CA));	// 17837 in      al, 0CAh        ; DMA controller, 8237A-5. ;~ 01A2:8656
 cs=0x1a2;eip=0x008658; 	T(MOV(ah, al));	// 17841 mov     ah, al ;~ 01A2:8658
-cs=0x1a2;eip=0x00865a; 	R(IN(al, 0x0CA));	// 17842 in      al, 0CAh        ; DMA controller, 8237A-5. ;~ 01A2:865A
+cs=0x1a2;eip=0x00865a; 	S(IN(al, 0x0CA));	// 17842 in      al, 0CAh        ; DMA controller, 8237A-5. ;~ 01A2:865A
 cs=0x1a2;eip=0x00865c; 	T(XCHG(al, ah));	// 17846 xchg    al, ah ;~ 01A2:865C
 cs=0x1a2;eip=0x00865e; 	J(RETN(0));	// 17847 retn ;~ 01A2:865E
 loc_1865f:
 	// 5499 
-cs=0x1a2;eip=0x00865f; 	R(IN(al, 0x0CE));	// 17851 in      al, 0CEh        ; DMA controller, 8237A-5. ;~ 01A2:865F
+cs=0x1a2;eip=0x00865f; 	S(IN(al, 0x0CE));	// 17851 in      al, 0CEh        ; DMA controller, 8237A-5. ;~ 01A2:865F
 cs=0x1a2;eip=0x008661; 	T(MOV(ah, al));	// 17854 mov     ah, al ;~ 01A2:8661
-cs=0x1a2;eip=0x008663; 	R(IN(al, 0x0CE));	// 17855 in      al, 0CEh        ; DMA controller, 8237A-5. ;~ 01A2:8663
+cs=0x1a2;eip=0x008663; 	S(IN(al, 0x0CE));	// 17855 in      al, 0CEh        ; DMA controller, 8237A-5. ;~ 01A2:8663
 cs=0x1a2;eip=0x008665; 	T(XCHG(al, ah));	// 17858 xchg    al, ah ;~ 01A2:8665
 cs=0x1a2;eip=0x008667; 	J(RETN(0));	// 17859 retn ;~ 01A2:8667
 ret_1a2_8668:
@@ -20507,76 +20515,76 @@ ret_1a2_8668:
 cs=0x1a2;eip=0x008668; 	T(CMP(cl, 4));	// 17861 cmp     cl, 4 ;~ 01A2:8668
 cs=0x1a2;eip=0x00866b; 	J(JNC(loc_186a4));	// 17862 jnb     short loc_186A4 ;~ 01A2:866B
 cs=0x1a2;eip=0x00866d; 	T(XOR(al, al));	// 17863 xor     al, al ;~ 01A2:866D
-cs=0x1a2;eip=0x00866f; 	R(OUT(0x0C, al));	// 17864 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:866F
+cs=0x1a2;eip=0x00866f; 	S(OUT(0x0C, al));	// 17864 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:866F
 cs=0x1a2;eip=0x008671; 	T(CMP(cl, 1));	// 17866 cmp     cl, 1 ;~ 01A2:8671
 cs=0x1a2;eip=0x008674; 	J(JZ(loc_18689));	// 17867 jz      short loc_18689 ;~ 01A2:8674
 cs=0x1a2;eip=0x008676; 	T(CMP(cl, 2));	// 17868 cmp     cl, 2 ;~ 01A2:8676
 cs=0x1a2;eip=0x008679; 	J(JZ(loc_18692));	// 17869 jz      short loc_18692 ;~ 01A2:8679
 cs=0x1a2;eip=0x00867b; 	T(CMP(cl, 3));	// 17870 cmp     cl, 3 ;~ 01A2:867B
 cs=0x1a2;eip=0x00867e; 	J(JZ(loc_1869b));	// 17871 jz      short loc_1869B ;~ 01A2:867E
-cs=0x1a2;eip=0x008680; 	R(IN(al, 0));	// 17872 in      al, 0 ;~ 01A2:8680
+cs=0x1a2;eip=0x008680; 	S(IN(al, 0));	// 17872 in      al, 0 ;~ 01A2:8680
 cs=0x1a2;eip=0x008682; 	T(MOV(ah, al));	// 17873 mov     ah, al ;~ 01A2:8682
-cs=0x1a2;eip=0x008684; 	R(IN(al, 0));	// 17874 in      al, 0 ;~ 01A2:8684
+cs=0x1a2;eip=0x008684; 	S(IN(al, 0));	// 17874 in      al, 0 ;~ 01A2:8684
 cs=0x1a2;eip=0x008686; 	T(XCHG(al, ah));	// 17875 xchg    al, ah ;~ 01A2:8686
 cs=0x1a2;eip=0x008688; 	J(RETN(0));	// 17876 retn ;~ 01A2:8688
 loc_18689:
 	// 5501 
-cs=0x1a2;eip=0x008689; 	R(IN(al, 2));	// 17880 in      al, 2           ; DMA controller, 8237A-5. ;~ 01A2:8689
+cs=0x1a2;eip=0x008689; 	S(IN(al, 2));	// 17880 in      al, 2           ; DMA controller, 8237A-5. ;~ 01A2:8689
 cs=0x1a2;eip=0x00868b; 	T(MOV(ah, al));	// 17882 mov     ah, al ;~ 01A2:868B
-cs=0x1a2;eip=0x00868d; 	R(IN(al, 2));	// 17883 in      al, 2           ; DMA controller, 8237A-5. ;~ 01A2:868D
+cs=0x1a2;eip=0x00868d; 	S(IN(al, 2));	// 17883 in      al, 2           ; DMA controller, 8237A-5. ;~ 01A2:868D
 cs=0x1a2;eip=0x00868f; 	T(XCHG(al, ah));	// 17885 xchg    al, ah ;~ 01A2:868F
 cs=0x1a2;eip=0x008691; 	J(RETN(0));	// 17886 retn ;~ 01A2:8691
 loc_18692:
 	// 5502 
-cs=0x1a2;eip=0x008692; 	R(IN(al, 4));	// 17890 in      al, 4           ; DMA controller, 8237A-5. ;~ 01A2:8692
+cs=0x1a2;eip=0x008692; 	S(IN(al, 4));	// 17890 in      al, 4           ; DMA controller, 8237A-5. ;~ 01A2:8692
 cs=0x1a2;eip=0x008694; 	T(MOV(ah, al));	// 17892 mov     ah, al ;~ 01A2:8694
-cs=0x1a2;eip=0x008696; 	R(IN(al, 4));	// 17893 in      al, 4           ; DMA controller, 8237A-5. ;~ 01A2:8696
+cs=0x1a2;eip=0x008696; 	S(IN(al, 4));	// 17893 in      al, 4           ; DMA controller, 8237A-5. ;~ 01A2:8696
 cs=0x1a2;eip=0x008698; 	T(XCHG(al, ah));	// 17895 xchg    al, ah ;~ 01A2:8698
 cs=0x1a2;eip=0x00869a; 	J(RETN(0));	// 17896 retn ;~ 01A2:869A
 loc_1869b:
 	// 5503 
-cs=0x1a2;eip=0x00869b; 	R(IN(al, 6));	// 17900 in      al, 6           ; DMA controller, 8237A-5. ;~ 01A2:869B
+cs=0x1a2;eip=0x00869b; 	S(IN(al, 6));	// 17900 in      al, 6           ; DMA controller, 8237A-5. ;~ 01A2:869B
 cs=0x1a2;eip=0x00869d; 	T(MOV(ah, al));	// 17902 mov     ah, al ;~ 01A2:869D
-cs=0x1a2;eip=0x00869f; 	R(IN(al, 6));	// 17903 in      al, 6           ; DMA controller, 8237A-5. ;~ 01A2:869F
+cs=0x1a2;eip=0x00869f; 	S(IN(al, 6));	// 17903 in      al, 6           ; DMA controller, 8237A-5. ;~ 01A2:869F
 cs=0x1a2;eip=0x0086a1; 	T(XCHG(al, ah));	// 17905 xchg    al, ah ;~ 01A2:86A1
 cs=0x1a2;eip=0x0086a3; 	J(RETN(0));	// 17906 retn ;~ 01A2:86A3
 loc_186a4:
 	// 5504 
 cs=0x1a2;eip=0x0086a4; 	T(XOR(al, al));	// 17910 xor     al, al ;~ 01A2:86A4
-cs=0x1a2;eip=0x0086a6; 	R(OUT(0x0D8, al));	// 17911 out     0D8h, al ;~ 01A2:86A6
+cs=0x1a2;eip=0x0086a6; 	S(OUT(0x0D8, al));	// 17911 out     0D8h, al ;~ 01A2:86A6
 cs=0x1a2;eip=0x0086a8; 	T(CMP(cl, 5));	// 17912 cmp     cl, 5 ;~ 01A2:86A8
 cs=0x1a2;eip=0x0086ab; 	J(JZ(loc_186c2));	// 17913 jz      short loc_186C2 ;~ 01A2:86AB
 cs=0x1a2;eip=0x0086ad; 	T(CMP(cl, 6));	// 17914 cmp     cl, 6 ;~ 01A2:86AD
 cs=0x1a2;eip=0x0086b0; 	J(JZ(loc_186cd));	// 17915 jz      short loc_186CD ;~ 01A2:86B0
 cs=0x1a2;eip=0x0086b2; 	T(CMP(cl, 7));	// 17916 cmp     cl, 7 ;~ 01A2:86B2
 cs=0x1a2;eip=0x0086b5; 	J(JZ(loc_186d8));	// 17917 jz      short loc_186D8 ;~ 01A2:86B5
-cs=0x1a2;eip=0x0086b7; 	R(IN(al, 0x0C0));	// 17918 in      al, 0C0h        ; DMA controller, 8237A-5. ;~ 01A2:86B7
+cs=0x1a2;eip=0x0086b7; 	S(IN(al, 0x0C0));	// 17918 in      al, 0C0h        ; DMA controller, 8237A-5. ;~ 01A2:86B7
 cs=0x1a2;eip=0x0086b9; 	T(MOV(ah, al));	// 17920 mov     ah, al ;~ 01A2:86B9
-cs=0x1a2;eip=0x0086bb; 	R(IN(al, 0x0C0));	// 17921 in      al, 0C0h        ; DMA controller, 8237A-5. ;~ 01A2:86BB
+cs=0x1a2;eip=0x0086bb; 	S(IN(al, 0x0C0));	// 17921 in      al, 0C0h        ; DMA controller, 8237A-5. ;~ 01A2:86BB
 cs=0x1a2;eip=0x0086bd; 	T(XCHG(al, ah));	// 17923 xchg    al, ah ;~ 01A2:86BD
 cs=0x1a2;eip=0x0086bf; 	T(SHL(ax, 1));	// 17924 shl     ax, 1 ;~ 01A2:86BF
 cs=0x1a2;eip=0x0086c1; 	J(RETN(0));	// 17925 retn ;~ 01A2:86C1
 loc_186c2:
 	// 5505 
-cs=0x1a2;eip=0x0086c2; 	R(IN(al, 0x0C4));	// 17929 in      al, 0C4h        ; DMA controller, 8237A-5. ;~ 01A2:86C2
+cs=0x1a2;eip=0x0086c2; 	S(IN(al, 0x0C4));	// 17929 in      al, 0C4h        ; DMA controller, 8237A-5. ;~ 01A2:86C2
 cs=0x1a2;eip=0x0086c4; 	T(MOV(ah, al));	// 17931 mov     ah, al ;~ 01A2:86C4
-cs=0x1a2;eip=0x0086c6; 	R(IN(al, 0x0C4));	// 17932 in      al, 0C4h        ; DMA controller, 8237A-5. ;~ 01A2:86C6
+cs=0x1a2;eip=0x0086c6; 	S(IN(al, 0x0C4));	// 17932 in      al, 0C4h        ; DMA controller, 8237A-5. ;~ 01A2:86C6
 cs=0x1a2;eip=0x0086c8; 	T(XCHG(al, ah));	// 17934 xchg    al, ah ;~ 01A2:86C8
 cs=0x1a2;eip=0x0086ca; 	T(SHL(ax, 1));	// 17935 shl     ax, 1 ;~ 01A2:86CA
 cs=0x1a2;eip=0x0086cc; 	J(RETN(0));	// 17936 retn ;~ 01A2:86CC
 loc_186cd:
 	// 5506 
-cs=0x1a2;eip=0x0086cd; 	R(IN(al, 0x0C8));	// 17940 in      al, 0C8h        ; DMA 8237A-5. status register bits: ;~ 01A2:86CD
+cs=0x1a2;eip=0x0086cd; 	S(IN(al, 0x0C8));	// 17940 in      al, 0C8h        ; DMA 8237A-5. status register bits: ;~ 01A2:86CD
 cs=0x1a2;eip=0x0086cf; 	T(MOV(ah, al));	// 17943 mov     ah, al ;~ 01A2:86CF
-cs=0x1a2;eip=0x0086d1; 	R(IN(al, 0x0C8));	// 17944 in      al, 0C8h        ; DMA 8237A-5. status register bits: ;~ 01A2:86D1
+cs=0x1a2;eip=0x0086d1; 	S(IN(al, 0x0C8));	// 17944 in      al, 0C8h        ; DMA 8237A-5. status register bits: ;~ 01A2:86D1
 cs=0x1a2;eip=0x0086d3; 	T(XCHG(al, ah));	// 17947 xchg    al, ah ;~ 01A2:86D3
 cs=0x1a2;eip=0x0086d5; 	T(SHL(ax, 1));	// 17948 shl     ax, 1 ;~ 01A2:86D5
 cs=0x1a2;eip=0x0086d7; 	J(RETN(0));	// 17949 retn ;~ 01A2:86D7
 loc_186d8:
 	// 5507 
-cs=0x1a2;eip=0x0086d8; 	R(IN(al, 0x0CC));	// 17953 in      al, 0CCh        ; DMA controller, 8237A-5. ;~ 01A2:86D8
+cs=0x1a2;eip=0x0086d8; 	S(IN(al, 0x0CC));	// 17953 in      al, 0CCh        ; DMA controller, 8237A-5. ;~ 01A2:86D8
 cs=0x1a2;eip=0x0086da; 	T(MOV(ah, al));	// 17955 mov     ah, al ;~ 01A2:86DA
-cs=0x1a2;eip=0x0086dc; 	R(IN(al, 0x0CC));	// 17956 in      al, 0CCh        ; DMA controller, 8237A-5. ;~ 01A2:86DC
+cs=0x1a2;eip=0x0086dc; 	S(IN(al, 0x0CC));	// 17956 in      al, 0CCh        ; DMA controller, 8237A-5. ;~ 01A2:86DC
 cs=0x1a2;eip=0x0086de; 	T(XCHG(al, ah));	// 17958 xchg    al, ah ;~ 01A2:86DE
 cs=0x1a2;eip=0x0086e0; 	T(SHL(ax, 1));	// 17959 shl     ax, 1 ;~ 01A2:86E0
 cs=0x1a2;eip=0x0086e2; 	J(RETN(0));	// 17960 retn ;~ 01A2:86E2
@@ -20639,11 +20647,11 @@ cs=0x1a2;eip=0x008713; 	J(JZ(loc_188c2));	// 17983 jz      loc_188C2 ;~ 01A2:871
 cs=0x1a2;eip=0x008717; 	T(CMP(cl, 7));	// 17984 cmp     cl, 7 ;~ 01A2:8717
 cs=0x1a2;eip=0x00871a; 	J(JZ(loc_1890c));	// 17985 jz      loc_1890C ;~ 01A2:871A
 cs=0x1a2;eip=0x00871e; 	T(MOV(al, 4));	// 17986 mov     al, 4 ;~ 01A2:871E
-cs=0x1a2;eip=0x008720; 	R(OUT(0x0A, al));	// 17987 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:8720
+cs=0x1a2;eip=0x008720; 	S(OUT(0x0A, al));	// 17987 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:8720
 cs=0x1a2;eip=0x008722; 	T(XOR(al, al));	// 17991 xor     al, al ;~ 01A2:8722
-cs=0x1a2;eip=0x008724; 	R(OUT(0x0C, al));	// 17992 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:8724
+cs=0x1a2;eip=0x008724; 	S(OUT(0x0C, al));	// 17992 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:8724
 cs=0x1a2;eip=0x008726; 	T(MOV(al, _dma_mode));	// 17994 mov     al, _dma_mode ;~ 01A2:8726
-cs=0x1a2;eip=0x008729; 	R(OUT(0x0B, al));	// 17995 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:8729
+cs=0x1a2;eip=0x008729; 	S(OUT(0x0B, al));	// 17995 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:8729
 cs=0x1a2;eip=0x00872b; 	T(MOV(dx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18001 mov     dx, word ptr _audio_buf_pointer+2 ;~ 01A2:872B
 cs=0x1a2;eip=0x00872f; 	T(ROL(dx, 4));	// 18002 rol     dx, 4 ;~ 01A2:872F
 cs=0x1a2;eip=0x008732; 	T(MOV(ax, dx));	// 18003 mov     ax, dx ;~ 01A2:8732
@@ -20653,28 +20661,28 @@ cs=0x1a2;eip=0x008739; 	T(ADD(ax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18006
 cs=0x1a2;eip=0x00873d; 	T(ADC(dx, 0));	// 18007 adc     dx, 0 ;~ 01A2:873D
 cs=0x1a2;eip=0x008740; 	T(ADD(ax, *(dw*)(((db*)&dword_24694))));	// 18008 add     ax, word ptr dword_24694 ;~ 01A2:8740
 cs=0x1a2;eip=0x008744; 	T(ADC(dx, *(dw*)(((db*)&dword_24694)+2)));	// 18009 adc     dx, word ptr dword_24694+2 ;~ 01A2:8744
-cs=0x1a2;eip=0x008748; 	R(OUT(0, al));	// 18010 out     0, al ;~ 01A2:8748
+cs=0x1a2;eip=0x008748; 	S(OUT(0, al));	// 18010 out     0, al ;~ 01A2:8748
 cs=0x1a2;eip=0x00874a; 	T(MOV(al, ah));	// 18011 mov     al, ah ;~ 01A2:874A
-cs=0x1a2;eip=0x00874c; 	R(OUT(0, al));	// 18012 out     0, al ;~ 01A2:874C
+cs=0x1a2;eip=0x00874c; 	S(OUT(0, al));	// 18012 out     0, al ;~ 01A2:874C
 cs=0x1a2;eip=0x00874e; 	T(MOV(al, dl));	// 18013 mov     al, dl ;~ 01A2:874E
-cs=0x1a2;eip=0x008750; 	R(OUT(0x87, al));	// 18014 out     87h, al         ; DMA page register 74LS612: ;~ 01A2:8750
+cs=0x1a2;eip=0x008750; 	S(OUT(0x87, al));	// 18014 out     87h, al         ; DMA page register 74LS612: ;~ 01A2:8750
 cs=0x1a2;eip=0x008752; 	T(MOV(ax, word_2460e));	// 18016 mov     ax, word_2460E ;~ 01A2:8752
 cs=0x1a2;eip=0x008755; 	T(DEC(ax));	// 18017 dec     ax ;~ 01A2:8755
-cs=0x1a2;eip=0x008756; 	R(OUT(1, al));	// 18018 out     1, al           ; DMA controller, 8237A-5. ;~ 01A2:8756
+cs=0x1a2;eip=0x008756; 	S(OUT(1, al));	// 18018 out     1, al           ; DMA controller, 8237A-5. ;~ 01A2:8756
 cs=0x1a2;eip=0x008758; 	T(MOV(al, ah));	// 18020 mov     al, ah ;~ 01A2:8758
-cs=0x1a2;eip=0x00875a; 	R(OUT(1, al));	// 18021 out     1, al           ; DMA controller, 8237A-5. ;~ 01A2:875A
+cs=0x1a2;eip=0x00875a; 	S(OUT(1, al));	// 18021 out     1, al           ; DMA controller, 8237A-5. ;~ 01A2:875A
 cs=0x1a2;eip=0x00875c; 	T(XOR(al, al));	// 18023 xor     al, al ;~ 01A2:875C
-cs=0x1a2;eip=0x00875e; 	R(OUT(0x0A, al));	// 18024 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:875E
+cs=0x1a2;eip=0x00875e; 	S(OUT(0x0A, al));	// 18024 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:875E
 cs=0x1a2;eip=0x008760; 	J(RETN(0));	// 18028 retn ;~ 01A2:8760
 loc_18761:
 	// 5509 
 cs=0x1a2;eip=0x008761; 	T(MOV(al, 5));	// 18032 mov     al, 5 ;~ 01A2:8761
-cs=0x1a2;eip=0x008763; 	R(OUT(0x0A, al));	// 18033 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:8763
+cs=0x1a2;eip=0x008763; 	S(OUT(0x0A, al));	// 18033 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:8763
 cs=0x1a2;eip=0x008765; 	T(XOR(al, al));	// 18037 xor     al, al ;~ 01A2:8765
-cs=0x1a2;eip=0x008767; 	R(OUT(0x0C, al));	// 18038 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:8767
+cs=0x1a2;eip=0x008767; 	S(OUT(0x0C, al));	// 18038 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:8767
 cs=0x1a2;eip=0x008769; 	T(MOV(al, _dma_mode));	// 18040 mov     al, _dma_mode ;~ 01A2:8769
 cs=0x1a2;eip=0x00876c; 	T(OR(al, 1));	// 18041 or      al, 1 ;~ 01A2:876C
-cs=0x1a2;eip=0x00876e; 	R(OUT(0x0B, al));	// 18042 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:876E
+cs=0x1a2;eip=0x00876e; 	S(OUT(0x0B, al));	// 18042 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:876E
 cs=0x1a2;eip=0x008770; 	T(MOV(dx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18048 mov     dx, word ptr _audio_buf_pointer+2 ;~ 01A2:8770
 cs=0x1a2;eip=0x008774; 	T(ROL(dx, 4));	// 18049 rol     dx, 4 ;~ 01A2:8774
 cs=0x1a2;eip=0x008777; 	T(MOV(ax, dx));	// 18050 mov     ax, dx ;~ 01A2:8777
@@ -20684,28 +20692,28 @@ cs=0x1a2;eip=0x00877e; 	T(ADD(ax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18053
 cs=0x1a2;eip=0x008782; 	T(ADC(dx, 0));	// 18054 adc     dx, 0 ;~ 01A2:8782
 cs=0x1a2;eip=0x008785; 	T(ADD(ax, *(dw*)(((db*)&dword_24694))));	// 18055 add     ax, word ptr dword_24694 ;~ 01A2:8785
 cs=0x1a2;eip=0x008789; 	T(ADC(dx, *(dw*)(((db*)&dword_24694)+2)));	// 18056 adc     dx, word ptr dword_24694+2 ;~ 01A2:8789
-cs=0x1a2;eip=0x00878d; 	R(OUT(2, al));	// 18057 out     2, al           ; DMA controller, 8237A-5. ;~ 01A2:878D
+cs=0x1a2;eip=0x00878d; 	S(OUT(2, al));	// 18057 out     2, al           ; DMA controller, 8237A-5. ;~ 01A2:878D
 cs=0x1a2;eip=0x00878f; 	T(MOV(al, ah));	// 18060 mov     al, ah ;~ 01A2:878F
-cs=0x1a2;eip=0x008791; 	R(OUT(2, al));	// 18061 out     2, al           ; DMA controller, 8237A-5. ;~ 01A2:8791
+cs=0x1a2;eip=0x008791; 	S(OUT(2, al));	// 18061 out     2, al           ; DMA controller, 8237A-5. ;~ 01A2:8791
 cs=0x1a2;eip=0x008793; 	T(MOV(al, dl));	// 18064 mov     al, dl ;~ 01A2:8793
-cs=0x1a2;eip=0x008795; 	R(OUT(0x83, al));	// 18065 out     83h, al         ; DMA page register 74LS612: ;~ 01A2:8795
+cs=0x1a2;eip=0x008795; 	S(OUT(0x83, al));	// 18065 out     83h, al         ; DMA page register 74LS612: ;~ 01A2:8795
 cs=0x1a2;eip=0x008797; 	T(MOV(ax, word_2460e));	// 18067 mov     ax, word_2460E ;~ 01A2:8797
 cs=0x1a2;eip=0x00879a; 	T(DEC(ax));	// 18068 dec     ax ;~ 01A2:879A
-cs=0x1a2;eip=0x00879b; 	R(OUT(3, al));	// 18069 out     3, al           ; DMA controller, 8237A-5. ;~ 01A2:879B
+cs=0x1a2;eip=0x00879b; 	S(OUT(3, al));	// 18069 out     3, al           ; DMA controller, 8237A-5. ;~ 01A2:879B
 cs=0x1a2;eip=0x00879d; 	T(MOV(al, ah));	// 18071 mov     al, ah ;~ 01A2:879D
-cs=0x1a2;eip=0x00879f; 	R(OUT(3, al));	// 18072 out     3, al           ; DMA controller, 8237A-5. ;~ 01A2:879F
+cs=0x1a2;eip=0x00879f; 	S(OUT(3, al));	// 18072 out     3, al           ; DMA controller, 8237A-5. ;~ 01A2:879F
 cs=0x1a2;eip=0x0087a1; 	T(MOV(al, 1));	// 18074 mov     al, 1 ;~ 01A2:87A1
-cs=0x1a2;eip=0x0087a3; 	R(OUT(0x0A, al));	// 18075 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87A3
+cs=0x1a2;eip=0x0087a3; 	S(OUT(0x0A, al));	// 18075 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87A3
 cs=0x1a2;eip=0x0087a5; 	J(RETN(0));	// 18079 retn ;~ 01A2:87A5
 loc_187a6:
 	// 5510 
 cs=0x1a2;eip=0x0087a6; 	T(MOV(al, 6));	// 18083 mov     al, 6 ;~ 01A2:87A6
-cs=0x1a2;eip=0x0087a8; 	R(OUT(0x0A, al));	// 18084 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87A8
+cs=0x1a2;eip=0x0087a8; 	S(OUT(0x0A, al));	// 18084 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87A8
 cs=0x1a2;eip=0x0087aa; 	T(XOR(al, al));	// 18088 xor     al, al ;~ 01A2:87AA
-cs=0x1a2;eip=0x0087ac; 	R(OUT(0x0C, al));	// 18089 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:87AC
+cs=0x1a2;eip=0x0087ac; 	S(OUT(0x0C, al));	// 18089 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:87AC
 cs=0x1a2;eip=0x0087ae; 	T(MOV(al, _dma_mode));	// 18091 mov     al, _dma_mode ;~ 01A2:87AE
 cs=0x1a2;eip=0x0087b1; 	T(OR(al, 2));	// 18092 or      al, 2 ;~ 01A2:87B1
-cs=0x1a2;eip=0x0087b3; 	R(OUT(0x0B, al));	// 18093 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:87B3
+cs=0x1a2;eip=0x0087b3; 	S(OUT(0x0B, al));	// 18093 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:87B3
 cs=0x1a2;eip=0x0087b5; 	T(MOV(dx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18099 mov     dx, word ptr _audio_buf_pointer+2 ;~ 01A2:87B5
 cs=0x1a2;eip=0x0087b9; 	T(ROL(dx, 4));	// 18100 rol     dx, 4 ;~ 01A2:87B9
 cs=0x1a2;eip=0x0087bc; 	T(MOV(ax, dx));	// 18101 mov     ax, dx ;~ 01A2:87BC
@@ -20715,28 +20723,28 @@ cs=0x1a2;eip=0x0087c3; 	T(ADD(ax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18104
 cs=0x1a2;eip=0x0087c7; 	T(ADC(dx, 0));	// 18105 adc     dx, 0 ;~ 01A2:87C7
 cs=0x1a2;eip=0x0087ca; 	T(ADD(ax, *(dw*)(((db*)&dword_24694))));	// 18106 add     ax, word ptr dword_24694 ;~ 01A2:87CA
 cs=0x1a2;eip=0x0087ce; 	T(ADC(dx, *(dw*)(((db*)&dword_24694)+2)));	// 18107 adc     dx, word ptr dword_24694+2 ;~ 01A2:87CE
-cs=0x1a2;eip=0x0087d2; 	R(OUT(4, al));	// 18108 out     4, al           ; DMA controller, 8237A-5. ;~ 01A2:87D2
+cs=0x1a2;eip=0x0087d2; 	S(OUT(4, al));	// 18108 out     4, al           ; DMA controller, 8237A-5. ;~ 01A2:87D2
 cs=0x1a2;eip=0x0087d4; 	T(MOV(al, ah));	// 18111 mov     al, ah ;~ 01A2:87D4
-cs=0x1a2;eip=0x0087d6; 	R(OUT(4, al));	// 18112 out     4, al           ; DMA controller, 8237A-5. ;~ 01A2:87D6
+cs=0x1a2;eip=0x0087d6; 	S(OUT(4, al));	// 18112 out     4, al           ; DMA controller, 8237A-5. ;~ 01A2:87D6
 cs=0x1a2;eip=0x0087d8; 	T(MOV(al, dl));	// 18115 mov     al, dl ;~ 01A2:87D8
-cs=0x1a2;eip=0x0087da; 	R(OUT(0x81, al));	// 18116 out     81h, al         ; DMA page register 74LS612: ;~ 01A2:87DA
+cs=0x1a2;eip=0x0087da; 	S(OUT(0x81, al));	// 18116 out     81h, al         ; DMA page register 74LS612: ;~ 01A2:87DA
 cs=0x1a2;eip=0x0087dc; 	T(MOV(ax, word_2460e));	// 18118 mov     ax, word_2460E ;~ 01A2:87DC
 cs=0x1a2;eip=0x0087df; 	T(DEC(ax));	// 18119 dec     ax ;~ 01A2:87DF
-cs=0x1a2;eip=0x0087e0; 	R(OUT(5, al));	// 18120 out     5, al           ; DMA controller, 8237A-5. ;~ 01A2:87E0
+cs=0x1a2;eip=0x0087e0; 	S(OUT(5, al));	// 18120 out     5, al           ; DMA controller, 8237A-5. ;~ 01A2:87E0
 cs=0x1a2;eip=0x0087e2; 	T(MOV(al, ah));	// 18122 mov     al, ah ;~ 01A2:87E2
-cs=0x1a2;eip=0x0087e4; 	R(OUT(5, al));	// 18123 out     5, al           ; DMA controller, 8237A-5. ;~ 01A2:87E4
+cs=0x1a2;eip=0x0087e4; 	S(OUT(5, al));	// 18123 out     5, al           ; DMA controller, 8237A-5. ;~ 01A2:87E4
 cs=0x1a2;eip=0x0087e6; 	T(MOV(al, 2));	// 18125 mov     al, 2 ;~ 01A2:87E6
-cs=0x1a2;eip=0x0087e8; 	R(OUT(0x0A, al));	// 18126 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87E8
+cs=0x1a2;eip=0x0087e8; 	S(OUT(0x0A, al));	// 18126 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87E8
 cs=0x1a2;eip=0x0087ea; 	J(RETN(0));	// 18130 retn ;~ 01A2:87EA
 loc_187eb:
 	// 5511 
 cs=0x1a2;eip=0x0087eb; 	T(MOV(al, 7));	// 18134 mov     al, 7 ;~ 01A2:87EB
-cs=0x1a2;eip=0x0087ed; 	R(OUT(0x0A, al));	// 18135 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87ED
+cs=0x1a2;eip=0x0087ed; 	S(OUT(0x0A, al));	// 18135 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:87ED
 cs=0x1a2;eip=0x0087ef; 	T(XOR(al, al));	// 18139 xor     al, al ;~ 01A2:87EF
-cs=0x1a2;eip=0x0087f1; 	R(OUT(0x0C, al));	// 18140 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:87F1
+cs=0x1a2;eip=0x0087f1; 	S(OUT(0x0C, al));	// 18140 out     0Ch, al         ; DMA controller, 8237A-5. ;~ 01A2:87F1
 cs=0x1a2;eip=0x0087f3; 	T(MOV(al, _dma_mode));	// 18142 mov     al, _dma_mode ;~ 01A2:87F3
 cs=0x1a2;eip=0x0087f6; 	T(OR(al, 3));	// 18143 or      al, 3 ;~ 01A2:87F6
-cs=0x1a2;eip=0x0087f8; 	R(OUT(0x0B, al));	// 18144 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:87F8
+cs=0x1a2;eip=0x0087f8; 	S(OUT(0x0B, al));	// 18144 out     0Bh, al         ; DMA 8237A-5. mode register bits: ;~ 01A2:87F8
 cs=0x1a2;eip=0x0087fa; 	T(MOV(dx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18150 mov     dx, word ptr _audio_buf_pointer+2 ;~ 01A2:87FA
 cs=0x1a2;eip=0x0087fe; 	T(ROL(dx, 4));	// 18151 rol     dx, 4 ;~ 01A2:87FE
 cs=0x1a2;eip=0x008801; 	T(MOV(ax, dx));	// 18152 mov     ax, dx ;~ 01A2:8801
@@ -20746,137 +20754,137 @@ cs=0x1a2;eip=0x008808; 	T(ADD(ax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18155
 cs=0x1a2;eip=0x00880c; 	T(ADC(dx, 0));	// 18156 adc     dx, 0 ;~ 01A2:880C
 cs=0x1a2;eip=0x00880f; 	T(ADD(ax, *(dw*)(((db*)&dword_24694))));	// 18157 add     ax, word ptr dword_24694 ;~ 01A2:880F
 cs=0x1a2;eip=0x008813; 	T(ADC(dx, *(dw*)(((db*)&dword_24694)+2)));	// 18158 adc     dx, word ptr dword_24694+2 ;~ 01A2:8813
-cs=0x1a2;eip=0x008817; 	R(OUT(6, al));	// 18159 out     6, al           ; DMA controller, 8237A-5. ;~ 01A2:8817
+cs=0x1a2;eip=0x008817; 	S(OUT(6, al));	// 18159 out     6, al           ; DMA controller, 8237A-5. ;~ 01A2:8817
 cs=0x1a2;eip=0x008819; 	T(MOV(al, ah));	// 18162 mov     al, ah ;~ 01A2:8819
-cs=0x1a2;eip=0x00881b; 	R(OUT(6, al));	// 18163 out     6, al           ; DMA controller, 8237A-5. ;~ 01A2:881B
+cs=0x1a2;eip=0x00881b; 	S(OUT(6, al));	// 18163 out     6, al           ; DMA controller, 8237A-5. ;~ 01A2:881B
 cs=0x1a2;eip=0x00881d; 	T(MOV(al, dl));	// 18166 mov     al, dl ;~ 01A2:881D
-cs=0x1a2;eip=0x00881f; 	R(OUT(0x82, al));	// 18167 out     82h, al         ; DMA page register 74LS612: ;~ 01A2:881F
+cs=0x1a2;eip=0x00881f; 	S(OUT(0x82, al));	// 18167 out     82h, al         ; DMA page register 74LS612: ;~ 01A2:881F
 cs=0x1a2;eip=0x008821; 	T(MOV(ax, word_2460e));	// 18169 mov     ax, word_2460E ;~ 01A2:8821
 cs=0x1a2;eip=0x008824; 	T(DEC(ax));	// 18170 dec     ax ;~ 01A2:8824
-cs=0x1a2;eip=0x008825; 	R(OUT(7, al));	// 18171 out     7, al           ; DMA controller, 8237A-5. ;~ 01A2:8825
+cs=0x1a2;eip=0x008825; 	S(OUT(7, al));	// 18171 out     7, al           ; DMA controller, 8237A-5. ;~ 01A2:8825
 cs=0x1a2;eip=0x008827; 	T(MOV(al, ah));	// 18173 mov     al, ah ;~ 01A2:8827
-cs=0x1a2;eip=0x008829; 	R(OUT(7, al));	// 18174 out     7, al           ; DMA controller, 8237A-5. ;~ 01A2:8829
+cs=0x1a2;eip=0x008829; 	S(OUT(7, al));	// 18174 out     7, al           ; DMA controller, 8237A-5. ;~ 01A2:8829
 cs=0x1a2;eip=0x00882b; 	T(MOV(al, 3));	// 18176 mov     al, 3 ;~ 01A2:882B
-cs=0x1a2;eip=0x00882d; 	R(OUT(0x0A, al));	// 18177 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:882D
+cs=0x1a2;eip=0x00882d; 	S(OUT(0x0A, al));	// 18177 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:882D
 cs=0x1a2;eip=0x00882f; 	J(RETN(0));	// 18181 retn ;~ 01A2:882F
 loc_18830:
 	// 5512 
 cs=0x1a2;eip=0x008830; 	T(MOV(al, 4));	// 18185 mov     al, 4 ;~ 01A2:8830
-cs=0x1a2;eip=0x008832; 	R(OUT(0x0D4, al));	// 18186 out     0D4h, al ;~ 01A2:8832
+cs=0x1a2;eip=0x008832; 	S(OUT(0x0D4, al));	// 18186 out     0D4h, al ;~ 01A2:8832
 cs=0x1a2;eip=0x008834; 	T(XOR(al, al));	// 18187 xor     al, al ;~ 01A2:8834
-cs=0x1a2;eip=0x008836; 	R(OUT(0x0D8, al));	// 18188 out     0D8h, al ;~ 01A2:8836
+cs=0x1a2;eip=0x008836; 	S(OUT(0x0D8, al));	// 18188 out     0D8h, al ;~ 01A2:8836
 cs=0x1a2;eip=0x008838; 	T(MOV(al, _dma_mode));	// 18189 mov     al, _dma_mode ;~ 01A2:8838
-cs=0x1a2;eip=0x00883b; 	R(OUT(0x0D6, al));	// 18190 out     0D6h, al ;~ 01A2:883B
+cs=0x1a2;eip=0x00883b; 	S(OUT(0x0D6, al));	// 18190 out     0D6h, al ;~ 01A2:883B
 cs=0x1a2;eip=0x00883d; 	T(MOVZX(edx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18191 movzx   edx, word ptr _audio_buf_pointer+2 ;~ 01A2:883D
 cs=0x1a2;eip=0x008843; 	T(SHL(edx, 4));	// 18192 shl     edx, 4 ;~ 01A2:8843
 cs=0x1a2;eip=0x008847; 	T(MOVZX(eax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18193 movzx   eax, word ptr _audio_buf_pointer ;~ 01A2:8847
 cs=0x1a2;eip=0x00884d; 	T(ADD(eax, edx));	// 18194 add     eax, edx ;~ 01A2:884D
 cs=0x1a2;eip=0x008850; 	T(ADD(eax, dword_24694));	// 18195 add     eax, dword_24694 ;~ 01A2:8850
 cs=0x1a2;eip=0x008855; 	T(SHR(eax, 1));	// 18196 shr     eax, 1 ;~ 01A2:8855
-cs=0x1a2;eip=0x008858; 	R(OUT(0x0C0, al));	// 18197 out     0C0h, al        ; DMA controller, 8237A-5. ;~ 01A2:8858
+cs=0x1a2;eip=0x008858; 	S(OUT(0x0C0, al));	// 18197 out     0C0h, al        ; DMA controller, 8237A-5. ;~ 01A2:8858
 cs=0x1a2;eip=0x00885a; 	T(MOV(al, ah));	// 18200 mov     al, ah ;~ 01A2:885A
-cs=0x1a2;eip=0x00885c; 	R(OUT(0x0C0, al));	// 18201 out     0C0h, al        ; DMA controller, 8237A-5. ;~ 01A2:885C
+cs=0x1a2;eip=0x00885c; 	S(OUT(0x0C0, al));	// 18201 out     0C0h, al        ; DMA controller, 8237A-5. ;~ 01A2:885C
 cs=0x1a2;eip=0x00885e; 	T(SHR(eax, 0x0F));	// 18204 shr     eax, 0Fh ;~ 01A2:885E
-cs=0x1a2;eip=0x008862; 	R(OUT(0x8F, al));	// 18205 out     8Fh, al         ; DMA page register 74LS612: ;~ 01A2:8862
+cs=0x1a2;eip=0x008862; 	S(OUT(0x8F, al));	// 18205 out     8Fh, al         ; DMA page register 74LS612: ;~ 01A2:8862
 cs=0x1a2;eip=0x008864; 	T(MOV(ax, word_2460e));	// 18207 mov     ax, word_2460E ;~ 01A2:8864
 cs=0x1a2;eip=0x008867; 	T(SHR(ax, 1));	// 18208 shr     ax, 1 ;~ 01A2:8867
 cs=0x1a2;eip=0x008869; 	T(ADC(ax, 0));	// 18209 adc     ax, 0 ;~ 01A2:8869
 cs=0x1a2;eip=0x00886c; 	T(DEC(ax));	// 18210 dec     ax ;~ 01A2:886C
-cs=0x1a2;eip=0x00886d; 	R(OUT(0x0C2, al));	// 18211 out     0C2h, al        ; DMA controller, 8237A-5. ;~ 01A2:886D
+cs=0x1a2;eip=0x00886d; 	S(OUT(0x0C2, al));	// 18211 out     0C2h, al        ; DMA controller, 8237A-5. ;~ 01A2:886D
 cs=0x1a2;eip=0x00886f; 	T(MOV(al, ah));	// 18214 mov     al, ah ;~ 01A2:886F
-cs=0x1a2;eip=0x008871; 	R(OUT(0x0C2, al));	// 18215 out     0C2h, al        ; DMA controller, 8237A-5. ;~ 01A2:8871
+cs=0x1a2;eip=0x008871; 	S(OUT(0x0C2, al));	// 18215 out     0C2h, al        ; DMA controller, 8237A-5. ;~ 01A2:8871
 cs=0x1a2;eip=0x008873; 	T(XOR(al, al));	// 18218 xor     al, al ;~ 01A2:8873
-cs=0x1a2;eip=0x008875; 	R(OUT(0x0D4, al));	// 18219 out     0D4h, al ;~ 01A2:8875
+cs=0x1a2;eip=0x008875; 	S(OUT(0x0D4, al));	// 18219 out     0D4h, al ;~ 01A2:8875
 cs=0x1a2;eip=0x008877; 	J(RETN(0));	// 18220 retn ;~ 01A2:8877
 loc_18878:
 	// 5513 
 cs=0x1a2;eip=0x008878; 	T(MOV(al, 5));	// 18224 mov     al, 5 ;~ 01A2:8878
-cs=0x1a2;eip=0x00887a; 	R(OUT(0x0D4, al));	// 18225 out     0D4h, al ;~ 01A2:887A
+cs=0x1a2;eip=0x00887a; 	S(OUT(0x0D4, al));	// 18225 out     0D4h, al ;~ 01A2:887A
 cs=0x1a2;eip=0x00887c; 	T(XOR(al, al));	// 18226 xor     al, al ;~ 01A2:887C
-cs=0x1a2;eip=0x00887e; 	R(OUT(0x0D8, al));	// 18227 out     0D8h, al ;~ 01A2:887E
+cs=0x1a2;eip=0x00887e; 	S(OUT(0x0D8, al));	// 18227 out     0D8h, al ;~ 01A2:887E
 cs=0x1a2;eip=0x008880; 	T(MOV(al, _dma_mode));	// 18228 mov     al, _dma_mode ;~ 01A2:8880
 cs=0x1a2;eip=0x008883; 	T(OR(al, 1));	// 18229 or      al, 1 ;~ 01A2:8883
-cs=0x1a2;eip=0x008885; 	R(OUT(0x0D6, al));	// 18230 out     0D6h, al ;~ 01A2:8885
+cs=0x1a2;eip=0x008885; 	S(OUT(0x0D6, al));	// 18230 out     0D6h, al ;~ 01A2:8885
 cs=0x1a2;eip=0x008887; 	T(MOVZX(edx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18231 movzx   edx, word ptr _audio_buf_pointer+2 ;~ 01A2:8887
 cs=0x1a2;eip=0x00888d; 	T(SHL(edx, 4));	// 18232 shl     edx, 4 ;~ 01A2:888D
 cs=0x1a2;eip=0x008891; 	T(MOVZX(eax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18233 movzx   eax, word ptr _audio_buf_pointer ;~ 01A2:8891
 cs=0x1a2;eip=0x008897; 	T(ADD(eax, edx));	// 18234 add     eax, edx ;~ 01A2:8897
 cs=0x1a2;eip=0x00889a; 	T(ADD(eax, dword_24694));	// 18235 add     eax, dword_24694 ;~ 01A2:889A
 cs=0x1a2;eip=0x00889f; 	T(SHR(eax, 1));	// 18236 shr     eax, 1 ;~ 01A2:889F
-cs=0x1a2;eip=0x0088a2; 	R(OUT(0x0C4, al));	// 18237 out     0C4h, al        ; DMA controller, 8237A-5. ;~ 01A2:88A2
+cs=0x1a2;eip=0x0088a2; 	S(OUT(0x0C4, al));	// 18237 out     0C4h, al        ; DMA controller, 8237A-5. ;~ 01A2:88A2
 cs=0x1a2;eip=0x0088a4; 	T(MOV(al, ah));	// 18240 mov     al, ah ;~ 01A2:88A4
-cs=0x1a2;eip=0x0088a6; 	R(OUT(0x0C4, al));	// 18241 out     0C4h, al        ; DMA controller, 8237A-5. ;~ 01A2:88A6
+cs=0x1a2;eip=0x0088a6; 	S(OUT(0x0C4, al));	// 18241 out     0C4h, al        ; DMA controller, 8237A-5. ;~ 01A2:88A6
 cs=0x1a2;eip=0x0088a8; 	T(SHR(eax, 0x0F));	// 18244 shr     eax, 0Fh ;~ 01A2:88A8
-cs=0x1a2;eip=0x0088ac; 	R(OUT(0x8B, al));	// 18245 out     8Bh, al         ; DMA page register 74LS612: ;~ 01A2:88AC
+cs=0x1a2;eip=0x0088ac; 	S(OUT(0x8B, al));	// 18245 out     8Bh, al         ; DMA page register 74LS612: ;~ 01A2:88AC
 cs=0x1a2;eip=0x0088ae; 	T(MOV(ax, word_2460e));	// 18247 mov     ax, word_2460E ;~ 01A2:88AE
 cs=0x1a2;eip=0x0088b1; 	T(SHR(ax, 1));	// 18248 shr     ax, 1 ;~ 01A2:88B1
 cs=0x1a2;eip=0x0088b3; 	T(ADC(ax, 0));	// 18249 adc     ax, 0 ;~ 01A2:88B3
 cs=0x1a2;eip=0x0088b6; 	T(DEC(ax));	// 18250 dec     ax ;~ 01A2:88B6
-cs=0x1a2;eip=0x0088b7; 	R(OUT(0x0C6, al));	// 18251 out     0C6h, al        ; DMA controller, 8237A-5. ;~ 01A2:88B7
+cs=0x1a2;eip=0x0088b7; 	S(OUT(0x0C6, al));	// 18251 out     0C6h, al        ; DMA controller, 8237A-5. ;~ 01A2:88B7
 cs=0x1a2;eip=0x0088b9; 	T(MOV(al, ah));	// 18254 mov     al, ah ;~ 01A2:88B9
-cs=0x1a2;eip=0x0088bb; 	R(OUT(0x0C6, al));	// 18255 out     0C6h, al        ; DMA controller, 8237A-5. ;~ 01A2:88BB
+cs=0x1a2;eip=0x0088bb; 	S(OUT(0x0C6, al));	// 18255 out     0C6h, al        ; DMA controller, 8237A-5. ;~ 01A2:88BB
 cs=0x1a2;eip=0x0088bd; 	T(MOV(al, 1));	// 18258 mov     al, 1 ;~ 01A2:88BD
-cs=0x1a2;eip=0x0088bf; 	R(OUT(0x0D4, al));	// 18259 out     0D4h, al ;~ 01A2:88BF
+cs=0x1a2;eip=0x0088bf; 	S(OUT(0x0D4, al));	// 18259 out     0D4h, al ;~ 01A2:88BF
 cs=0x1a2;eip=0x0088c1; 	J(RETN(0));	// 18260 retn ;~ 01A2:88C1
 loc_188c2:
 	// 5514 
 cs=0x1a2;eip=0x0088c2; 	T(MOV(al, 6));	// 18264 mov     al, 6 ;~ 01A2:88C2
-cs=0x1a2;eip=0x0088c4; 	R(OUT(0x0D4, al));	// 18265 out     0D4h, al ;~ 01A2:88C4
+cs=0x1a2;eip=0x0088c4; 	S(OUT(0x0D4, al));	// 18265 out     0D4h, al ;~ 01A2:88C4
 cs=0x1a2;eip=0x0088c6; 	T(XOR(al, al));	// 18266 xor     al, al ;~ 01A2:88C6
-cs=0x1a2;eip=0x0088c8; 	R(OUT(0x0D8, al));	// 18267 out     0D8h, al ;~ 01A2:88C8
+cs=0x1a2;eip=0x0088c8; 	S(OUT(0x0D8, al));	// 18267 out     0D8h, al ;~ 01A2:88C8
 cs=0x1a2;eip=0x0088ca; 	T(MOV(al, _dma_mode));	// 18268 mov     al, _dma_mode ;~ 01A2:88CA
 cs=0x1a2;eip=0x0088cd; 	T(OR(al, 2));	// 18269 or      al, 2 ;~ 01A2:88CD
-cs=0x1a2;eip=0x0088cf; 	R(OUT(0x0D6, al));	// 18270 out     0D6h, al ;~ 01A2:88CF
+cs=0x1a2;eip=0x0088cf; 	S(OUT(0x0D6, al));	// 18270 out     0D6h, al ;~ 01A2:88CF
 cs=0x1a2;eip=0x0088d1; 	T(MOVZX(edx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18271 movzx   edx, word ptr _audio_buf_pointer+2 ;~ 01A2:88D1
 cs=0x1a2;eip=0x0088d7; 	T(SHL(edx, 4));	// 18272 shl     edx, 4 ;~ 01A2:88D7
 cs=0x1a2;eip=0x0088db; 	T(MOVZX(eax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18273 movzx   eax, word ptr _audio_buf_pointer ;~ 01A2:88DB
 cs=0x1a2;eip=0x0088e1; 	T(ADD(eax, edx));	// 18274 add     eax, edx ;~ 01A2:88E1
 cs=0x1a2;eip=0x0088e4; 	T(ADD(eax, dword_24694));	// 18275 add     eax, dword_24694 ;~ 01A2:88E4
 cs=0x1a2;eip=0x0088e9; 	T(SHR(eax, 1));	// 18276 shr     eax, 1 ;~ 01A2:88E9
-cs=0x1a2;eip=0x0088ec; 	R(OUT(0x0C8, al));	// 18277 out     0C8h, al        ; DMA 8237A-5. cmd reg bits: ;~ 01A2:88EC
+cs=0x1a2;eip=0x0088ec; 	S(OUT(0x0C8, al));	// 18277 out     0C8h, al        ; DMA 8237A-5. cmd reg bits: ;~ 01A2:88EC
 cs=0x1a2;eip=0x0088ee; 	T(MOV(al, ah));	// 18286 mov     al, ah ;~ 01A2:88EE
-cs=0x1a2;eip=0x0088f0; 	R(OUT(0x0C8, al));	// 18287 out     0C8h, al        ; DMA 8237A-5. cmd reg bits: ;~ 01A2:88F0
+cs=0x1a2;eip=0x0088f0; 	S(OUT(0x0C8, al));	// 18287 out     0C8h, al        ; DMA 8237A-5. cmd reg bits: ;~ 01A2:88F0
 cs=0x1a2;eip=0x0088f2; 	T(SHR(eax, 0x0F));	// 18296 shr     eax, 0Fh ;~ 01A2:88F2
-cs=0x1a2;eip=0x0088f6; 	R(OUT(0x89, al));	// 18297 out     89h, al         ; DMA page register 74LS612: ;~ 01A2:88F6
+cs=0x1a2;eip=0x0088f6; 	S(OUT(0x89, al));	// 18297 out     89h, al         ; DMA page register 74LS612: ;~ 01A2:88F6
 cs=0x1a2;eip=0x0088f8; 	T(MOV(ax, word_2460e));	// 18299 mov     ax, word_2460E ;~ 01A2:88F8
 cs=0x1a2;eip=0x0088fb; 	T(SHR(ax, 1));	// 18300 shr     ax, 1 ;~ 01A2:88FB
 cs=0x1a2;eip=0x0088fd; 	T(ADC(ax, 0));	// 18301 adc     ax, 0 ;~ 01A2:88FD
 cs=0x1a2;eip=0x008900; 	T(DEC(ax));	// 18302 dec     ax ;~ 01A2:8900
-cs=0x1a2;eip=0x008901; 	R(OUT(0x0CA, al));	// 18303 out     0CAh, al        ; DMA controller, 8237A-5. ;~ 01A2:8901
+cs=0x1a2;eip=0x008901; 	S(OUT(0x0CA, al));	// 18303 out     0CAh, al        ; DMA controller, 8237A-5. ;~ 01A2:8901
 cs=0x1a2;eip=0x008903; 	T(MOV(al, ah));	// 18307 mov     al, ah ;~ 01A2:8903
-cs=0x1a2;eip=0x008905; 	R(OUT(0x0CA, al));	// 18308 out     0CAh, al        ; DMA controller, 8237A-5. ;~ 01A2:8905
+cs=0x1a2;eip=0x008905; 	S(OUT(0x0CA, al));	// 18308 out     0CAh, al        ; DMA controller, 8237A-5. ;~ 01A2:8905
 cs=0x1a2;eip=0x008907; 	T(MOV(al, 2));	// 18312 mov     al, 2 ;~ 01A2:8907
-cs=0x1a2;eip=0x008909; 	R(OUT(0x0D4, al));	// 18313 out     0D4h, al ;~ 01A2:8909
+cs=0x1a2;eip=0x008909; 	S(OUT(0x0D4, al));	// 18313 out     0D4h, al ;~ 01A2:8909
 cs=0x1a2;eip=0x00890b; 	J(RETN(0));	// 18314 retn ;~ 01A2:890B
 loc_1890c:
 	// 5515 
 cs=0x1a2;eip=0x00890c; 	T(MOV(al, 7));	// 18318 mov     al, 7 ;~ 01A2:890C
-cs=0x1a2;eip=0x00890e; 	R(OUT(0x0D4, al));	// 18319 out     0D4h, al ;~ 01A2:890E
+cs=0x1a2;eip=0x00890e; 	S(OUT(0x0D4, al));	// 18319 out     0D4h, al ;~ 01A2:890E
 cs=0x1a2;eip=0x008910; 	T(MOV(al, _dma_mode));	// 18320 mov     al, _dma_mode ;~ 01A2:8910
 cs=0x1a2;eip=0x008913; 	T(OR(al, 3));	// 18321 or      al, 3 ;~ 01A2:8913
-cs=0x1a2;eip=0x008915; 	R(OUT(0x0D6, al));	// 18322 out     0D6h, al ;~ 01A2:8915
+cs=0x1a2;eip=0x008915; 	S(OUT(0x0D6, al));	// 18322 out     0D6h, al ;~ 01A2:8915
 cs=0x1a2;eip=0x008917; 	T(XOR(al, al));	// 18323 xor     al, al ;~ 01A2:8917
-cs=0x1a2;eip=0x008919; 	R(OUT(0x0D8, al));	// 18324 out     0D8h, al ;~ 01A2:8919
+cs=0x1a2;eip=0x008919; 	S(OUT(0x0D8, al));	// 18324 out     0D8h, al ;~ 01A2:8919
 cs=0x1a2;eip=0x00891b; 	T(MOVZX(edx, *(dw*)(((db*)&_audio_buf_pointer)+2)));	// 18325 movzx   edx, word ptr _audio_buf_pointer+2 ;~ 01A2:891B
 cs=0x1a2;eip=0x008921; 	T(SHL(edx, 4));	// 18326 shl     edx, 4 ;~ 01A2:8921
 cs=0x1a2;eip=0x008925; 	T(MOVZX(eax, *(dw*)(((db*)&_audio_buf_pointer))));	// 18327 movzx   eax, word ptr _audio_buf_pointer ;~ 01A2:8925
 cs=0x1a2;eip=0x00892b; 	T(ADD(eax, edx));	// 18328 add     eax, edx ;~ 01A2:892B
 cs=0x1a2;eip=0x00892e; 	T(ADD(eax, dword_24694));	// 18329 add     eax, dword_24694 ;~ 01A2:892E
 cs=0x1a2;eip=0x008933; 	T(SHR(eax, 1));	// 18330 shr     eax, 1 ;~ 01A2:8933
-cs=0x1a2;eip=0x008936; 	R(OUT(0x0CC, al));	// 18331 out     0CCh, al        ; DMA controller, 8237A-5. ;~ 01A2:8936
+cs=0x1a2;eip=0x008936; 	S(OUT(0x0CC, al));	// 18331 out     0CCh, al        ; DMA controller, 8237A-5. ;~ 01A2:8936
 cs=0x1a2;eip=0x008938; 	T(MOV(al, ah));	// 18333 mov     al, ah ;~ 01A2:8938
-cs=0x1a2;eip=0x00893a; 	R(OUT(0x0CC, al));	// 18334 out     0CCh, al        ; DMA controller, 8237A-5. ;~ 01A2:893A
+cs=0x1a2;eip=0x00893a; 	S(OUT(0x0CC, al));	// 18334 out     0CCh, al        ; DMA controller, 8237A-5. ;~ 01A2:893A
 cs=0x1a2;eip=0x00893c; 	T(SHR(eax, 0x0F));	// 18336 shr     eax, 0Fh ;~ 01A2:893C
-cs=0x1a2;eip=0x008940; 	R(OUT(0x8A, al));	// 18337 out     8Ah, al         ; DMA page register 74LS612: ;~ 01A2:8940
+cs=0x1a2;eip=0x008940; 	S(OUT(0x8A, al));	// 18337 out     8Ah, al         ; DMA page register 74LS612: ;~ 01A2:8940
 cs=0x1a2;eip=0x008942; 	T(MOV(ax, word_2460e));	// 18339 mov     ax, word_2460E ;~ 01A2:8942
 cs=0x1a2;eip=0x008945; 	T(SHR(ax, 1));	// 18340 shr     ax, 1 ;~ 01A2:8945
 cs=0x1a2;eip=0x008947; 	T(ADC(ax, 0));	// 18341 adc     ax, 0 ;~ 01A2:8947
 cs=0x1a2;eip=0x00894a; 	T(DEC(ax));	// 18342 dec     ax ;~ 01A2:894A
-cs=0x1a2;eip=0x00894b; 	R(OUT(0x0CE, al));	// 18343 out     0CEh, al        ; DMA controller, 8237A-5. ;~ 01A2:894B
+cs=0x1a2;eip=0x00894b; 	S(OUT(0x0CE, al));	// 18343 out     0CEh, al        ; DMA controller, 8237A-5. ;~ 01A2:894B
 cs=0x1a2;eip=0x00894d; 	T(MOV(al, ah));	// 18346 mov     al, ah ;~ 01A2:894D
-cs=0x1a2;eip=0x00894f; 	R(OUT(0x0CE, al));	// 18347 out     0CEh, al        ; DMA controller, 8237A-5. ;~ 01A2:894F
+cs=0x1a2;eip=0x00894f; 	S(OUT(0x0CE, al));	// 18347 out     0CEh, al        ; DMA controller, 8237A-5. ;~ 01A2:894F
 cs=0x1a2;eip=0x008951; 	T(MOV(al, 3));	// 18350 mov     al, 3 ;~ 01A2:8951
-cs=0x1a2;eip=0x008953; 	R(OUT(0x0D4, al));	// 18351 out     0D4h, al ;~ 01A2:8953
+cs=0x1a2;eip=0x008953; 	S(OUT(0x0D4, al));	// 18351 out     0D4h, al ;~ 01A2:8953
 cs=0x1a2;eip=0x008955; 	J(RETN(0));	// 18352 retn ;~ 01A2:8955
 
     assert(0);
@@ -20914,13 +20922,13 @@ cs=0x1a2;eip=0x008956; 	T(MOV(al, cl));	// 18361 mov     al, cl ;~ 01A2:8956
 cs=0x1a2;eip=0x008958; 	T(CMP(al, 4));	// 18362 cmp     al, 4 ;~ 01A2:8958
 cs=0x1a2;eip=0x00895a; 	J(JNC(loc_18961));	// 18363 jnb     short loc_18961 ;~ 01A2:895A
 cs=0x1a2;eip=0x00895c; 	T(OR(al, 4));	// 18364 or      al, 4 ;~ 01A2:895C
-cs=0x1a2;eip=0x00895e; 	R(OUT(0x0A, al));	// 18365 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:895E
+cs=0x1a2;eip=0x00895e; 	S(OUT(0x0A, al));	// 18365 out     0Ah, al         ; DMA controller, 8237A-5. ;~ 01A2:895E
 cs=0x1a2;eip=0x008960; 	J(RETN(0));	// 18369 retn ;~ 01A2:8960
 loc_18961:
 	// 5516 
 cs=0x1a2;eip=0x008961; 	T(AND(al, 3));	// 18373 and     al, 3 ;~ 01A2:8961
 cs=0x1a2;eip=0x008963; 	T(OR(al, 4));	// 18374 or      al, 4 ;~ 01A2:8963
-cs=0x1a2;eip=0x008965; 	R(OUT(0x0D4, al));	// 18375 out     0D4h, al ;~ 01A2:8965
+cs=0x1a2;eip=0x008965; 	S(OUT(0x0D4, al));	// 18375 out     0D4h, al ;~ 01A2:8965
 cs=0x1a2;eip=0x008967; 	J(RETN(0));	// 18376 retn ;~ 01A2:8967
 
     assert(0);
@@ -21074,9 +21082,9 @@ cs=0x1a2;eip=0x008a3d; 	X(PUSHF);	// 18477 pushf ;~ 01A2:8A3D
 cs=0x1a2;eip=0x008a3e; 	X(PUSH(es));	// 18478 push    es ;~ 01A2:8A3E
 cs=0x1a2;eip=0x008a3f; 	T(CLI);	// 18479 cli ;~ 01A2:8A3F
 cs=0x1a2;eip=0x008a40; 	T(MOVZX(cx, al));	// 18480 movzx   cx, al ;~ 01A2:8A40
-cs=0x1a2;eip=0x008a43; 	R(IN(al, 0x0A1));	// 18481 in      al, 0A1h        ; Interrupt Controller #2, 8259A ;~ 01A2:8A43
+cs=0x1a2;eip=0x008a43; 	S(IN(al, 0x0A1));	// 18481 in      al, 0A1h        ; Interrupt Controller #2, 8259A ;~ 01A2:8A43
 cs=0x1a2;eip=0x008a45; 	T(MOV(ah, al));	// 18482 mov     ah, al ;~ 01A2:8A45
-cs=0x1a2;eip=0x008a47; 	R(IN(al, 0x21));	// 18483 in      al, 21h         ; Interrupt controller, 8259A. ;~ 01A2:8A47
+cs=0x1a2;eip=0x008a47; 	S(IN(al, 0x21));	// 18483 in      al, 21h         ; Interrupt controller, 8259A. ;~ 01A2:8A47
 cs=0x1a2;eip=0x008a49; 	X(MOV(_interrupt_mask, ax));	// 18484 mov     _interrupt_mask, ax ;~ 01A2:8A49
 cs=0x1a2;eip=0x008a4c; 	T(MOV(bx, 0x0FFFE));	// 18485 mov     bx, 0FFFEh ;~ 01A2:8A4C
 cs=0x1a2;eip=0x008a4f; 	T(ROL(bx, cl));	// 18486 rol     bx, cl ;~ 01A2:8A4F
@@ -21089,9 +21097,9 @@ loc_18a5c:
 cs=0x1a2;eip=0x008a5c; 	T(ADD(cl, 8));	// 18493 add     cl, 8 ;~ 01A2:8A5C
 cs=0x1a2;eip=0x008a5f; 	T(SHL(cx, 2));	// 18494 shl     cx, 2 ;~ 01A2:8A5F
 cs=0x1a2;eip=0x008a62; 	T(AND(ax, bx));	// 18495 and     ax, bx ;~ 01A2:8A62
-cs=0x1a2;eip=0x008a64; 	R(OUT(0x21, al));	// 18496 out     21h, al         ; Interrupt controller, 8259A. ;~ 01A2:8A64
+cs=0x1a2;eip=0x008a64; 	S(OUT(0x21, al));	// 18496 out     21h, al         ; Interrupt controller, 8259A. ;~ 01A2:8A64
 cs=0x1a2;eip=0x008a66; 	T(MOV(al, ah));	// 18497 mov     al, ah ;~ 01A2:8A66
-cs=0x1a2;eip=0x008a68; 	R(OUT(0x0A1, al));	// 18498 out     0A1h, al        ; Interrupt Controller #2, 8259A ;~ 01A2:8A68
+cs=0x1a2;eip=0x008a68; 	S(OUT(0x0A1, al));	// 18498 out     0A1h, al        ; Interrupt Controller #2, 8259A ;~ 01A2:8A68
 cs=0x1a2;eip=0x008a6a; 	X(MOV(_intvectoffset, cx));	// 18499 mov     _intvectoffset, cx ;~ 01A2:8A6A
 cs=0x1a2;eip=0x008a6e; 	T(MOV(bx, cx));	// 18500 mov     bx, cx ;~ 01A2:8A6E
 cs=0x1a2;eip=0x008a70; 	T(XOR(ax, ax));	// 18501 xor     ax, ax ;~ 01A2:8A70
@@ -21134,9 +21142,9 @@ cs=0x1a2;eip=0x008a8b; 	X(PUSHF);	// 18524 pushf ;~ 01A2:8A8B
 cs=0x1a2;eip=0x008a8c; 	X(PUSH(es));	// 18525 push    es ;~ 01A2:8A8C
 cs=0x1a2;eip=0x008a8d; 	T(CLI);	// 18526 cli ;~ 01A2:8A8D
 cs=0x1a2;eip=0x008a8e; 	T(MOV(ax, _interrupt_mask));	// 18527 mov     ax, _interrupt_mask ;~ 01A2:8A8E
-cs=0x1a2;eip=0x008a91; 	R(OUT(0x21, al));	// 18528 out     21h, al         ; Interrupt controller, 8259A. ;~ 01A2:8A91
+cs=0x1a2;eip=0x008a91; 	S(OUT(0x21, al));	// 18528 out     21h, al         ; Interrupt controller, 8259A. ;~ 01A2:8A91
 cs=0x1a2;eip=0x008a93; 	T(MOV(al, ah));	// 18529 mov     al, ah ;~ 01A2:8A93
-cs=0x1a2;eip=0x008a95; 	R(OUT(0x0A1, al));	// 18530 out     0A1h, al        ; Interrupt Controller #2, 8259A ;~ 01A2:8A95
+cs=0x1a2;eip=0x008a95; 	S(OUT(0x0A1, al));	// 18530 out     0A1h, al        ; Interrupt Controller #2, 8259A ;~ 01A2:8A95
 cs=0x1a2;eip=0x008a97; 	T(MOV(bx, _intvectoffset));	// 18531 mov     bx, _intvectoffset ;~ 01A2:8A97
 cs=0x1a2;eip=0x008a9b; 	T(XOR(ax, ax));	// 18532 xor     ax, ax ;~ 01A2:8A9B
 cs=0x1a2;eip=0x008a9d; 	T(MOV(es, ax));	// 18533 mov     es, ax ;~ 01A2:8A9D
@@ -21173,7 +21181,7 @@ cs=0x1a2;eip=0x008aae; 	J(RETN(0));	// 18542 retn ;~ 01A2:8AAE
     _begin:
 cs=0x1a2;eip=0x008aaf; 	X(PUSH(es));	// 18550 push    es ;~ 01A2:8AAF
 cs=0x1a2;eip=0x008ab0; 	T(MOV(ah, 0x35));	// 18551 mov     ah, 35h ;~ 01A2:8AB0
-cs=0x1a2;eip=0x008ab2; 	R(_INT(0x21));	// 18552 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 01A2:8AB2
+cs=0x1a2;eip=0x008ab2; 	S(_INT(0x21));	// 18552 int     21h             ; DOS - 2+ - GET INTERRUPT VECTOR ;~ 01A2:8AB2
 cs=0x1a2;eip=0x008ab4; 	T(MOV(dx, es));	// 18555 mov     dx, es ;~ 01A2:8AB4
 cs=0x1a2;eip=0x008ab6; 	X(POP(es));	// 18556 pop     es ;~ 01A2:8AB6
 cs=0x1a2;eip=0x008ab7; 	J(RETN(0));	// 18558 retn ;~ 01A2:8AB7
@@ -21205,7 +21213,7 @@ cs=0x1a2;eip=0x008ab8; 	X(PUSH(ds));	// 18567 push    ds ;~ 01A2:8AB8
 cs=0x1a2;eip=0x008ab9; 	T(MOV(ds, dx));	// 18568 mov     ds, dx ;~ 01A2:8AB9
 cs=0x1a2;eip=0x008abb; 	T(MOV(dx, bx));	// 18569 mov     dx, bx ;~ 01A2:8ABB
 cs=0x1a2;eip=0x008abd; 	T(MOV(ah, 0x25));	// 18570 mov     ah, 25h ;~ 01A2:8ABD
-cs=0x1a2;eip=0x008abf; 	R(_INT(0x21));	// 18571 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 01A2:8ABF
+cs=0x1a2;eip=0x008abf; 	S(_INT(0x21));	// 18571 int     21h             ; DOS - SET INTERRUPT VECTOR ;~ 01A2:8ABF
 cs=0x1a2;eip=0x008ac1; 	X(POP(ds));	// 18574 pop     ds ;~ 01A2:8AC1
 cs=0x1a2;eip=0x008ac2; 	J(RETN(0));	// 18575 retn ;~ 01A2:8AC2
 
@@ -21237,7 +21245,7 @@ cs=0x1a2;eip=0x008ac7; 	T(SHR(ebx, 4));	// 18586 shr     ebx, 4 ;~ 01A2:8AC7
 cs=0x1a2;eip=0x008acb; 	T(CMP(ebx, 0x10000));	// 18587 cmp     ebx, 10000h ;~ 01A2:8ACB
 cs=0x1a2;eip=0x008ad2; 	J(JNC(loc_18ad9));	// 18588 jnb     short loc_18AD9 ;~ 01A2:8AD2
 cs=0x1a2;eip=0x008ad4; 	T(MOV(ah, 0x48));	// 18589 mov     ah, 48h ;~ 01A2:8AD4
-cs=0x1a2;eip=0x008ad6; 	R(_INT(0x21));	// 18590 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 01A2:8AD6
+cs=0x1a2;eip=0x008ad6; 	S(_INT(0x21));	// 18590 int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 01A2:8AD6
 cs=0x1a2;eip=0x008ad8; 	J(RETN(0));	// 18592 retn ;~ 01A2:8AD8
 loc_18ad9:
 	// 5522 
@@ -21272,7 +21280,7 @@ cs=0x1a2;eip=0x008add; 	J(RETN(0));	// 18598 retn ;~ 01A2:8ADD
 cs=0x1a2;eip=0x008ade; 	X(PUSH(es));	// 18607 push    es ;~ 01A2:8ADE
 cs=0x1a2;eip=0x008adf; 	T(MOV(es, ax));	// 18608 mov     es, ax ;~ 01A2:8ADF
 cs=0x1a2;eip=0x008ae1; 	T(MOV(ah, 0x49));	// 18610 mov     ah, 49h ;~ 01A2:8AE1
-cs=0x1a2;eip=0x008ae3; 	R(_INT(0x21));	// 18611 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:8AE3
+cs=0x1a2;eip=0x008ae3; 	S(_INT(0x21));	// 18611 int     21h             ; DOS - 2+ - FREE MEMORY ;~ 01A2:8AE3
 cs=0x1a2;eip=0x008ae5; 	X(POP(es));	// 18613 pop     es ;~ 01A2:8AE5
 cs=0x1a2;eip=0x008ae6; 	J(RETN(0));	// 18614 retn ;~ 01A2:8AE6
 
@@ -21305,7 +21313,7 @@ cs=0x1a2;eip=0x008aef; 	T(CMP(ebx, 0x10000));	// 18625 cmp     ebx, 10000h ;~ 01
 cs=0x1a2;eip=0x008af6; 	J(JNC(loc_18aff));	// 18626 jnb     short loc_18AFF ;~ 01A2:8AF6
 cs=0x1a2;eip=0x008af8; 	T(MOV(es, ax));	// 18627 mov     es, ax ;~ 01A2:8AF8
 cs=0x1a2;eip=0x008afa; 	T(MOV(ah, 0x4A));	// 18628 mov     ah, 4Ah ;~ 01A2:8AFA
-cs=0x1a2;eip=0x008afc; 	R(_INT(0x21));	// 18629 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 01A2:8AFC
+cs=0x1a2;eip=0x008afc; 	S(_INT(0x21));	// 18629 int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 01A2:8AFC
 cs=0x1a2;eip=0x008afe; 	J(RETN(0));	// 18632 retn ;~ 01A2:8AFE
 loc_18aff:
 	// 5523 
@@ -21340,11 +21348,11 @@ cs=0x1a2;eip=0x008b03; 	J(RETN(0));	// 18638 retn ;~ 01A2:8B03
 cs=0x1a2;eip=0x008b04; 	X(PUSH(ax));	// 18647 push    ax ;~ 01A2:8B04
 cs=0x1a2;eip=0x008b05; 	T(MOVZX(bx, al));	// 18648 movzx   bx, al ;~ 01A2:8B05
 cs=0x1a2;eip=0x008b08; 	T(MOV(ax, 0x5801));	// 18649 mov     ax, 5801h ;~ 01A2:8B08
-cs=0x1a2;eip=0x008b0b; 	R(_INT(0x21));	// 18650 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B0B
+cs=0x1a2;eip=0x008b0b; 	S(_INT(0x21));	// 18650 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B0B
 cs=0x1a2;eip=0x008b0d; 	X(POP(bx));	// 18652 pop     bx ;~ 01A2:8B0D
 cs=0x1a2;eip=0x008b0e; 	T(SHR(bx, 8));	// 18653 shr     bx, 8 ;~ 01A2:8B0E
 cs=0x1a2;eip=0x008b11; 	T(MOV(ax, 0x5803));	// 18654 mov     ax, 5803h ;~ 01A2:8B11
-cs=0x1a2;eip=0x008b14; 	R(_INT(0x21));	// 18655 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B14
+cs=0x1a2;eip=0x008b14; 	S(_INT(0x21));	// 18655 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B14
 cs=0x1a2;eip=0x008b16; 	J(RETN(0));	// 18657 retn ;~ 01A2:8B16
 
     assert(0);
@@ -21371,10 +21379,10 @@ cs=0x1a2;eip=0x008b16; 	J(RETN(0));	// 18657 retn ;~ 01A2:8B16
     _getmemallocstrat:
     _begin:
 cs=0x1a2;eip=0x008b17; 	T(MOV(ax, 0x5800));	// 18666 mov     ax, 5800h ;~ 01A2:8B17
-cs=0x1a2;eip=0x008b1a; 	R(_INT(0x21));	// 18667 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B1A
+cs=0x1a2;eip=0x008b1a; 	S(_INT(0x21));	// 18667 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B1A
 cs=0x1a2;eip=0x008b1c; 	X(PUSH(ax));	// 18669 push    ax ;~ 01A2:8B1C
 cs=0x1a2;eip=0x008b1d; 	T(MOV(ax, 0x5802));	// 18670 mov     ax, 5802h ;~ 01A2:8B1D
-cs=0x1a2;eip=0x008b20; 	R(_INT(0x21));	// 18671 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B20
+cs=0x1a2;eip=0x008b20; 	S(_INT(0x21));	// 18671 int     21h             ; DOS - 3+ - GET/SET MEMORY ALLOCATION STRATEGY ;~ 01A2:8B20
 cs=0x1a2;eip=0x008b22; 	X(POP(bx));	// 18673 pop     bx ;~ 01A2:8B22
 cs=0x1a2;eip=0x008b23; 	T(MOV(ah, al));	// 18674 mov     ah, al ;~ 01A2:8B23
 cs=0x1a2;eip=0x008b25; 	T(MOV(al, bl));	// 18675 mov     al, bl ;~ 01A2:8B25
@@ -21443,7 +21451,7 @@ cs=0x1a2;eip=0x008b3a; 	X(PUSH(dx));	// 18708 push    dx ;~ 01A2:8B3A
 cs=0x1a2;eip=0x008b3b; 	T(MOV(dx, _sb_base_port));	// 18709 mov     dx, _sb_base_port ;~ 01A2:8B3B
 cs=0x1a2;eip=0x008b3f; 	T(ADD(dl, 4));	// 18710 add     dl, 4 ;~ 01A2:8B3F
 cs=0x1a2;eip=0x008b42; 	T(XCHG(al, ah));	// 18711 xchg    al, ah ;~ 01A2:8B42
-cs=0x1a2;eip=0x008b44; 	R(OUT(dx, al));	// 18712 out     dx, al ;~ 01A2:8B44
+cs=0x1a2;eip=0x008b44; 	S(OUT(dx, al));	// 18712 out     dx, al ;~ 01A2:8B44
 cs=0x1a2;eip=0x008b45; 	J({;});	// 18713 jmp     short $+2 ;~ 01A2:8B45
 loc_18b47:
 	// 5524 
@@ -21452,7 +21460,7 @@ loc_18b49:
 	// 5525 
 cs=0x1a2;eip=0x008b49; 	T(INC(dx));	// 18721 inc     dx ;~ 01A2:8B49
 cs=0x1a2;eip=0x008b4a; 	T(MOV(al, ah));	// 18722 mov     al, ah ;~ 01A2:8B4A
-cs=0x1a2;eip=0x008b4c; 	R(OUT(dx, al));	// 18723 out     dx, al ;~ 01A2:8B4C
+cs=0x1a2;eip=0x008b4c; 	S(OUT(dx, al));	// 18723 out     dx, al ;~ 01A2:8B4C
 cs=0x1a2;eip=0x008b4d; 	X(POP(dx));	// 18724 pop     dx ;~ 01A2:8B4D
 cs=0x1a2;eip=0x008b4e; 	X(POP(ax));	// 18725 pop     ax ;~ 01A2:8B4E
 cs=0x1a2;eip=0x008b4f; 	J(RETN(0));	// 18726 retn ;~ 01A2:8B4F
@@ -21486,7 +21494,7 @@ cs=0x1a2;eip=0x008b50; 	X(PUSH(dx));	// 18735 push    dx ;~ 01A2:8B50
 cs=0x1a2;eip=0x008b51; 	T(MOV(dx, _sb_base_port));	// 18736 mov     dx, _sb_base_port ;~ 01A2:8B51
 cs=0x1a2;eip=0x008b55; 	T(ADD(dl, 4));	// 18737 add     dl, 4 ;~ 01A2:8B55
 cs=0x1a2;eip=0x008b58; 	T(MOV(al, ah));	// 18738 mov     al, ah ;~ 01A2:8B58
-cs=0x1a2;eip=0x008b5a; 	R(OUT(dx, al));	// 18739 out     dx, al ;~ 01A2:8B5A
+cs=0x1a2;eip=0x008b5a; 	S(OUT(dx, al));	// 18739 out     dx, al ;~ 01A2:8B5A
 cs=0x1a2;eip=0x008b5b; 	J({;});	// 18740 jmp     short $+2 ;~ 01A2:8B5B
 loc_18b5d:
 	// 5526 
@@ -21494,7 +21502,7 @@ cs=0x1a2;eip=0x008b5d; 	J({;});	// 18744 jmp     short $+2 ;~ 01A2:8B5D
 loc_18b5f:
 	// 5527 
 cs=0x1a2;eip=0x008b5f; 	T(INC(dx));	// 18748 inc     dx ;~ 01A2:8B5F
-cs=0x1a2;eip=0x008b60; 	R(IN(al, dx));	// 18749 in      al, dx ;~ 01A2:8B60
+cs=0x1a2;eip=0x008b60; 	S(IN(al, dx));	// 18749 in      al, dx ;~ 01A2:8B60
 cs=0x1a2;eip=0x008b61; 	X(POP(dx));	// 18750 pop     dx ;~ 01A2:8B61
 cs=0x1a2;eip=0x008b62; 	J(RETN(0));	// 18751 retn ;~ 01A2:8B62
 
@@ -21531,7 +21539,7 @@ cs=0x1a2;eip=0x008b6a; 	T(ADD(dl, 0x0C));	// 18764 add     dl, 0Ch ;~ 01A2:8B6A
 cs=0x1a2;eip=0x008b6d; 	T(MOV(cx, 0x1000));	// 18765 mov     cx, 1000h ;~ 01A2:8B6D
 loc_18b70:
 	// 5528 
-cs=0x1a2;eip=0x008b70; 	R(IN(al, dx));	// 18768 in      al, dx ;~ 01A2:8B70
+cs=0x1a2;eip=0x008b70; 	S(IN(al, dx));	// 18768 in      al, dx ;~ 01A2:8B70
 cs=0x1a2;eip=0x008b71; 	T(OR(al, al));	// 18769 or      al, al ;~ 01A2:8B71
 cs=0x1a2;eip=0x008b73; 	J(JNS(loc_18b7c));	// 18770 jns     short loc_18B7C ;~ 01A2:8B73
 cs=0x1a2;eip=0x008b75; 	T(DEC(cx));	// 18771 dec     cx ;~ 01A2:8B75
@@ -21543,7 +21551,7 @@ cs=0x1a2;eip=0x008b7b; 	J(RETN(0));	// 18776 retn ;~ 01A2:8B7B
 loc_18b7c:
 	// 5529 
 cs=0x1a2;eip=0x008b7c; 	X(POP(ax));	// 18780 pop     ax ;~ 01A2:8B7C
-cs=0x1a2;eip=0x008b7d; 	R(OUT(dx, al));	// 18781 out     dx, al ;~ 01A2:8B7D
+cs=0x1a2;eip=0x008b7d; 	S(OUT(dx, al));	// 18781 out     dx, al ;~ 01A2:8B7D
 cs=0x1a2;eip=0x008b7e; 	X(POP(cx));	// 18782 pop     cx ;~ 01A2:8B7E
 cs=0x1a2;eip=0x008b7f; 	X(POP(dx));	// 18783 pop     dx ;~ 01A2:8B7F
 cs=0x1a2;eip=0x008b80; 	J(RETN(0));	// 18784 retn ;~ 01A2:8B80
@@ -21581,7 +21589,7 @@ cs=0x1a2;eip=0x008b88; 	T(ADD(dl, 0x0E));	// 18797 add     dl, 0Eh ;~ 01A2:8B88
 cs=0x1a2;eip=0x008b8b; 	T(MOV(cx, 0x1000));	// 18798 mov     cx, 1000h ;~ 01A2:8B8B
 loc_18b8e:
 	// 5530 
-cs=0x1a2;eip=0x008b8e; 	R(IN(al, dx));	// 18801 in      al, dx ;~ 01A2:8B8E
+cs=0x1a2;eip=0x008b8e; 	S(IN(al, dx));	// 18801 in      al, dx ;~ 01A2:8B8E
 cs=0x1a2;eip=0x008b8f; 	T(OR(al, al));	// 18802 or      al, al ;~ 01A2:8B8F
 cs=0x1a2;eip=0x008b91; 	J(JS(loc_18b9c));	// 18803 js      short loc_18B9C ;~ 01A2:8B91
 cs=0x1a2;eip=0x008b93; 	T(DEC(cx));	// 18804 dec     cx ;~ 01A2:8B93
@@ -21595,7 +21603,7 @@ loc_18b9c:
 	// 5531 
 cs=0x1a2;eip=0x008b9c; 	X(POP(ax));	// 18814 pop     ax ;~ 01A2:8B9C
 cs=0x1a2;eip=0x008b9d; 	T(SUB(dl, 4));	// 18815 sub     dl, 4 ;~ 01A2:8B9D
-cs=0x1a2;eip=0x008ba0; 	R(IN(al, dx));	// 18816 in      al, dx ;~ 01A2:8BA0
+cs=0x1a2;eip=0x008ba0; 	S(IN(al, dx));	// 18816 in      al, dx ;~ 01A2:8BA0
 cs=0x1a2;eip=0x008ba1; 	X(POP(cx));	// 18817 pop     cx ;~ 01A2:8BA1
 cs=0x1a2;eip=0x008ba2; 	X(POP(dx));	// 18818 pop     dx ;~ 01A2:8BA2
 cs=0x1a2;eip=0x008ba3; 	J(RETN(0));	// 18819 retn ;~ 01A2:8BA3
@@ -21628,13 +21636,13 @@ cs=0x1a2;eip=0x008ba3; 	J(RETN(0));	// 18819 retn ;~ 01A2:8BA3
 cs=0x1a2;eip=0x008ba4; 	T(MOV(dx, _sb_base_port));	// 18828 mov     dx, _sb_base_port ;~ 01A2:8BA4
 cs=0x1a2;eip=0x008ba8; 	T(ADD(dl, 6));	// 18829 add     dl, 6 ;~ 01A2:8BA8
 cs=0x1a2;eip=0x008bab; 	T(MOV(al, 1));	// 18830 mov     al, 1 ;~ 01A2:8BAB
-cs=0x1a2;eip=0x008bad; 	R(OUT(dx, al));	// 18831 out     dx, al ;~ 01A2:8BAD
+cs=0x1a2;eip=0x008bad; 	S(OUT(dx, al));	// 18831 out     dx, al ;~ 01A2:8BAD
 cs=0x1a2;eip=0x008bae; 	T(MOV(ax, 0x400));	// 18832 mov     ax, 400h ;~ 01A2:8BAE
 loc_18bb1:
 	// 5532 
 cs=0x1a2;eip=0x008bb1; 	T(DEC(ax));	// 18835 dec     ax ;~ 01A2:8BB1
 cs=0x1a2;eip=0x008bb2; 	J(JNZ(loc_18bb1));	// 18836 jnz     short loc_18BB1 ;~ 01A2:8BB2
-cs=0x1a2;eip=0x008bb4; 	R(OUT(dx, al));	// 18837 out     dx, al ;~ 01A2:8BB4
+cs=0x1a2;eip=0x008bb4; 	S(OUT(dx, al));	// 18837 out     dx, al ;~ 01A2:8BB4
 cs=0x1a2;eip=0x008bb5; 	J(CALL(_readsb,0));	// 18838 call    _ReadSB ;~ 01A2:8BB5
 cs=0x1a2;eip=0x008bb8; 	T(CMP(al, 0x0AA));	// 18839 cmp     al, 0AAh ; 'ª' ;~ 01A2:8BB8
 cs=0x1a2;eip=0x008bba; 	J(JNZ(loc_18bbe));	// 18840 jnz     short loc_18BBE ;~ 01A2:8BBA
@@ -21699,7 +21707,7 @@ cs=0x1a2;eip=0x008bc8; 	J(RETN(0));	// 18859 retn ;~ 01A2:8BC8
     _initclockfromrtc:
     _begin:
 cs=0x1a2;eip=0x008bc9; 	T(MOV(ah, 2));	// 18868 mov     ah, 2 ;~ 01A2:8BC9
-cs=0x1a2;eip=0x008bcb; 	R(_INT(0x1A));	// 18869 int     1Ah             ; CLOCK - READ REAL TIME CLOCK (AT,XT286,CONV,PS) ;~ 01A2:8BCB
+cs=0x1a2;eip=0x008bcb; 	S(_INT(0x1A));	// 18869 int     1Ah             ; CLOCK - READ REAL TIME CLOCK (AT,XT286,CONV,PS) ;~ 01A2:8BCB
 cs=0x1a2;eip=0x008bcd; 	T(XOR(eax, eax));	// 18873 xor     eax, eax ;~ 01A2:8BCD
 cs=0x1a2;eip=0x008bd0; 	T(MOV(al, dh));	// 18874 mov     al, dh ;~ 01A2:8BD0
 cs=0x1a2;eip=0x008bd2; 	T(MOV(ah, al));	// 18875 mov     ah, al ;~ 01A2:8BD2
@@ -21755,7 +21763,7 @@ cs=0x1a2;eip=0x008c18; 	J(RETN(0));	// 18901 retn ;~ 01A2:8C18
 cs=0x1a2;eip=0x008c19; 	T(ROR(eax, 0x10));	// 18909 ror     eax, 10h ;~ 01A2:8C19
 cs=0x1a2;eip=0x008c1d; 	J(CALL(_u16tox,0));	// 18910 call    _u16tox ;~ 01A2:8C1D
 cs=0x1a2;eip=0x008c20; 	T(ROR(eax, 0x10));	// 18911 ror     eax, 10h ;~ 01A2:8C20
-	R(return _u16tox(0, _state););
+	return _u16tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21782,7 +21790,7 @@ cs=0x1a2;eip=0x008c20; 	T(ROR(eax, 0x10));	// 18911 ror     eax, 10h ;~ 01A2:8C2
 cs=0x1a2;eip=0x008c24; 	T(XCHG(al, ah));	// 18920 xchg    al, ah ;~ 01A2:8C24
 cs=0x1a2;eip=0x008c26; 	J(CALL(_u8tox,0));	// 18921 call    _u8tox ;~ 01A2:8C26
 cs=0x1a2;eip=0x008c29; 	T(MOV(al, ah));	// 18922 mov     al, ah ;~ 01A2:8C29
-	R(return _u8tox(0, _state););
+	return _u8tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21810,7 +21818,7 @@ cs=0x1a2;eip=0x008c2b; 	X(PUSH(ax));	// 18931 push    ax ;~ 01A2:8C2B
 cs=0x1a2;eip=0x008c2c; 	T(SHR(al, 4));	// 18932 shr     al, 4 ;~ 01A2:8C2C
 cs=0x1a2;eip=0x008c2f; 	J(CALL(_u4tox,0));	// 18933 call    _u4tox ;~ 01A2:8C2F
 cs=0x1a2;eip=0x008c32; 	X(POP(ax));	// 18934 pop     ax ;~ 01A2:8C32
-	R(return _u4tox(0, _state););
+	return _u4tox(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21870,7 +21878,7 @@ cs=0x1a2;eip=0x008c40; 	J(RETN(0));	// 18951 retn ;~ 01A2:8C40
     _my_i8toa10_0:
     _begin:
 cs=0x1a2;eip=0x008c41; 	T(CBW);	// 18959 cbw ;~ 01A2:8C41
-	R(return _my_i16toa10_0(0, _state););
+	return _my_i16toa10_0(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21895,7 +21903,7 @@ cs=0x1a2;eip=0x008c41; 	T(CBW);	// 18959 cbw ;~ 01A2:8C41
     _my_i16toa10_0:
     _begin:
 cs=0x1a2;eip=0x008c42; 	T(CWDE);	// 18967 cwde ;~ 01A2:8C42
-	R(return _group31(m2c::k_my_i32toa10_0, _state););
+	return _group31(m2c::k_my_i32toa10_0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21934,7 +21942,7 @@ cs=0x1a2;eip=0x008c5b; 	T(XOR(cx, cx));	// 19005 xor     cx, cx ;~ 01A2:8C5B
 _my_i32toa10_1:
 	// 5535 
 cs=0x1a2;eip=0x008c5d; 	T(MOV(ebx, 10));	// 19009 mov     ebx, 10 ;~ 01A2:8C5D
-	R(return _my_u32toa_0(0, _state););
+	return _my_u32toa_0(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21961,7 +21969,7 @@ cs=0x1a2;eip=0x008c5d; 	T(MOV(ebx, 10));	// 19009 mov     ebx, 10 ;~ 01A2:8C5D
     _my_u8toa_10:
     _begin:
 cs=0x1a2;eip=0x008c55; 	T(XOR(ah, ah));	// 18989 xor     ah, ah ;~ 01A2:8C55
-	R(return _my_u16toa_10(0, _state););
+	return _my_u16toa_10(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -21986,7 +21994,7 @@ cs=0x1a2;eip=0x008c55; 	T(XOR(ah, ah));	// 18989 xor     ah, ah ;~ 01A2:8C55
     _my_u16toa_10:
     _begin:
 cs=0x1a2;eip=0x008c57; 	T(MOVZX(eax, ax));	// 18997 movzx   eax, ax ;~ 01A2:8C57
-	R(return _group31(m2c::k_my_u32toa10_0, _state););
+	return _group31(m2c::k_my_u32toa10_0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM
@@ -22020,7 +22028,7 @@ cs=0x1a2;eip=0x008c73; 	X(POP(edx));	// 19023 pop     edx ;~ 01A2:8C73
 loc_18c75:
 	// 5536 
 cs=0x1a2;eip=0x008c75; 	T(OR(dl, '0'));	// 19026 or      dl, '0' ;~ 01A2:8C75
-	R(return _my_putdigit(0, _state););
+	return _my_putdigit(0, _state);
     assert(0);
     __dispatch_call:
 #ifdef DOSBOX_CUSTOM

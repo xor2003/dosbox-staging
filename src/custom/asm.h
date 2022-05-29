@@ -868,7 +868,7 @@ inline long getdata(const long& s)
     }
 
 #if DOSBOX_CUSTOM
-#define STI {CPU_STI();}
+#define STI {CPU_STI();m2c::execute_irqs();}
 #define CLI {CPU_CLI();}
 #else
 #define STI UNIMPLEMENTED
@@ -1599,7 +1599,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define CMC {AFFECT_CF(GET_CF() ^ 1);}
 
 #define PUSHF {PUSH( (m2c::MWORDSIZE)m2cflags.getvalue() );}
-#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);}
+#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::execute_irqs();}
 
 //#define PUSHF {PUSH( (dd) ((GET_CF()?1:0)|(GET_PF()?4:0)|(GET_AF()?0x10:0)|(GET_ZF()?0x40:0)|(GET_SF()?0x80:0)|(GET_DF()?0x400:0)|(GET_OF()?0x800:0)) );}
 //#define POPF {dd averytemporary; POP(averytemporary); CF=averytemporary&1;  PF=(averytemporary&4);AF=(averytemporary&0x10);ZF=(averytemporary&0x40);SF=(averytemporary&0x80);DF=(averytemporary&0x400);OF=(averytemporary&0x800);}
@@ -1664,26 +1664,32 @@ struct StackPop
    size_t deep;
 };
 
+#ifdef NO_SHADOW_STACK
 #define RETN(i) {if (m2c::RETN_(i, _state)) {return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#else
+#define RETN(i) {m2c::RETN_(i, _state);return true;}
+#endif
 
     static bool RETN_(size_t i, struct _STATE *_state) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
-#ifndef NO_SHADOW_STACK
+//#ifndef NO_SHADOW_STACK
         shadow_stack.itisret();
-#endif
+//#endif
         POP(ip);
         bool ret(true);
-#ifndef NO_SHADOW_STACK
+//#ifndef NO_SHADOW_STACK
         ret = shadow_stack.itwascall();
         int skip = shadow_stack.getneedtoskipcallndclean();
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
+//assert(0);
         }
-#endif
+//#endif
         esp += i;
+log_debug("retn target %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after ret %x\n", stackPointer);
             m2c::_indent -= 1;
@@ -1696,8 +1702,8 @@ log_debug("~~will throw exception skip call=%d\n",skip);
 //shadow_stack.print(0);
 throw StackPop(skip);
 }
-        if (ret) {m2c::shadow_stack.decreasedeep();}
 #endif
+        if (ret) {m2c::shadow_stack.decreasedeep();}
 	return(ret);
     }
 
@@ -1720,7 +1726,7 @@ throw StackPop(skip);
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
-            exit(1);
+//assert(0);
         }
 //        log_error("~~RETF after 1pop\n");
 //        bool need = shadow_stack.needtoskipcalls();
@@ -1730,7 +1736,7 @@ throw StackPop(skip);
         POP(cs);
 //        log_error("~~RETF after 2pop\n");
         esp += i;
-log_debug("new %x:%x\n", cs,ip);
+log_debug("retf target %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after retf %x\n", stackPointer);
             m2c::_indent -= 1;
@@ -1744,25 +1750,28 @@ log_debug("~~will throw exception skip call=%d\n",skip);
 throw StackPop(skip);
           }
 
-        m2c::shadow_stack.decreasedeep();
 #endif
+        m2c::shadow_stack.decreasedeep();
         return ret;
     }
 
-//#define CALL(label, disp) {if (!m2c::CALL_(label, _state, disp)) {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#ifdef NO_SHADOW_STACK
+#define CALL(label, disp) {if (!m2c::CALL_(label, _state, disp)) {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+#else
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
-
+#endif
     static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
-#ifndef NO_SHADOW_STACK
+//#ifndef NO_SHADOW_STACK
         shadow_stack.itiscall();
-#endif
+//#endif
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
         m2c::MWORDSIZE return_addr = ip;
 #if DOSBOX_CUSTOM
-        if (compare_instructions) ip+=inst_size(cs,eip);
+        if (compare_instructions) eip+=inst_size(cs,eip);
 #endif
+        dw oldsp=sp;
         PUSH(return_addr);
 
         if (debug>2) {
@@ -1774,8 +1783,9 @@ throw StackPop(skip);
         _state->call_source = 2;
         try{
             label(_i, _state);
+            if (sp!=oldsp && sp!=oldsp+2) log_debug("~~old SP %x != SP %x\n",oldsp, sp);
  if(return_addr != ip&& ((dw)(ip - return_addr)) > 5 ) {
-  log_error("~~Return address not equal to call addr %x %x\n",return_addr,ip);
+  log_error("~~Return address not equal to call addr: call from=%x poped ip=%x\n",return_addr,ip);
 return false;
  }
         }
@@ -1809,7 +1819,7 @@ shadow_stack.decreasedeep();
 	return;}
 */
 #if DOSBOX_CUSTOM
-#define IRET {m2c::fix_segs();CPU_IRET(false,0);m2c::execute_irqs();return true;}
+#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::execute_irqs(); return true;}
 #else
 #define IRET RETF(0)
 #endif
@@ -1845,11 +1855,13 @@ shadow_stack.decreasedeep();
 //    #define R(a) {m2c::run_hw_interrupts();log_debug("%05d %04X:%08X  %-54s EAX:%08X EBX:%08X ECX:%08X EDX:%08X ESI:%08X EDI:%08X EBP:%08X ESP:%08X DS:%04X ES:%04X FS:%04X GS:%04X SS:%04X CF:%d ZF:%d SF:%d OF:%d AF:%d PF:%d IF:%d\n", \
 //                         __LINE__,cs,eip,#a,       eax,     ebx,     ecx,     edx,     esi,     edi,     ebp,     esp,     ds,     es,     fs,     gs,     ss,     GET_CF(), GET_ZF(), GET_SF(), GET_OF(), GET_AF(), GET_PF(), GET_IF());} 
 
+// Run emulated instruction and compare with m2c instruction results
+
 #define R(a) { if (compare_jump) {m2c::Jend();}\
               m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); \
                 {a;} }
 
-// Run emulated instruction and compare with m2c instruction results
+#define S(a) {m2c::Sstart(__FILE__,__LINE__,#a);}
 
 #define J(a) {  \
         if (m2c::Jstart(__FILE__,__LINE__,#a)){ \
@@ -2026,6 +2038,8 @@ int8_t asm2C_IN(int16_t data,_STATE* _state);
     extern bool Jstart(const char *file, int line, const char *instr);
 
     extern void Jend();
+
+    extern bool Sstart(const char *file, int line, const char *instr);
 
     extern bool Tstart(const char *file, int line, const char *instr);
 

@@ -330,7 +330,7 @@ namespace m2c
   {
     if (collect_rt_info) shadow_memory.collect_segs();
 //    X86_REGREF
-//    log_debug ("CPU_Cycles %d\n", CPU_Cycles);
+//    log_debug("CPU_Cycles %d\n", CPU_Cycles);
     if (CPU_Cycles > 0)
       {
         CPU_Cycles--;
@@ -346,11 +346,30 @@ namespace m2c
 
   void single_step ()
   {
-    X86_REGREF
     m2c::fix_segs ();
+
+        if (*raddr(Segs.val[1],cpu_regs.ip.word[0])==0xcd) //int x
+     {   
+   log_debug("Inside single step cur cs:ip %x:%x executing int %x\n",Segs.val[1],cpu_regs.ip.word[0],*raddr(Segs.val[1],cpu_regs.ip.word[0]+1));
+        ++cpu_regs.ip.word[0];
+        _INT(*raddr(Segs.val[1],cpu_regs.ip.word[0]++));
+   log_debug("Finished single step cur cs:ip %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
+        return;
+     } else if (*raddr(Segs.val[1],cpu_regs.ip.word[0])==0xcc) //int3?
+     {   
+   log_debug("Inside single step cur cs:ip %x:%x executing int 3\n",Segs.val[1],cpu_regs.ip.word[0]);
+        ++cpu_regs.ip.word[0];
+        _INT(3);
+   log_debug("Finished single step cur cs:ip %x:%x\n",Segs.val[1],cpu_regs.ip.word[0]);
+        return;
+     }
+
+    X86_REGREF
+
     old_cycles = CPU_Cycles;
     dd oldeip = (Segs.val[1] << 16) + cpu_regs.ip.word[0];
     dd neweip (oldeip);
+
     Bits nc_retcode;
     doing_single_step=true;
     shadow_stack.disable();
@@ -540,6 +559,10 @@ throw;
 
   void stackDump(_STATE* _state)
   {
+     static bool already = false;
+     if (already) return;
+      already = true;
+
     m2c::print_traces();
 #ifndef _WIN32
 print_backtrace(0);
@@ -806,6 +829,7 @@ cpu_regs.ip.word[0] += instr_size; // for call
   }
 
 
+
   void Jend()
   {
     if (!compare_instructions || !compare_jump)
@@ -874,6 +898,45 @@ stackDump();
         exit (1);
       }
     cpu_regs.flags = bckpflags;
+  }
+
+  bool Sstart (const char *file, int line, const char *instr)
+  {
+
+    if (compare_jump) Jend();
+
+    run_hw_interrupts ();
+
+    log_regs_dbx(file, line, instr, cpu_regs, Segs);
+    if (!compare_instructions)
+      return true;
+
+    oldip = cpu_regs.ip.word[0];
+
+    dd ip1 = cpu_regs.ip.word[0];
+    dw seg = Segs.val[1];
+
+    bool compare (compare_instructions  && !already_checked[(seg << 4) + ip1]);
+    
+    single_step ();
+
+    if (!compare)
+      {
+        if (CPU_Cycles > 0)
+          --CPU_Cycles;
+        return false;
+      }
+    already_checked[(seg << 4) + ip1] = true;
+
+    dd ip2 = cpu_regs.ip.word[0];
+    size_t instr_size = ip2 - ip1;
+//printf("~ %x %x\n",ip1,ip2);
+    if (memcmp (m2c::lm + (seg << 4) + ip1, ((db *) & m2c::m) + (seg << 4) + ip1, instr_size) != 0)
+      {
+        process_self_mod(seg, ip1, instr_size);
+        return false;
+      }
+    return true;
   }
 
   bool Tstart (const char *file, int line, const char *instr)
@@ -1114,7 +1177,7 @@ stackDump();
     X86_REGREF 
     if (cs == newcs && newip == eip)
     {
-    log_debug ("Called from interpreter. return1");
+    printf ("Called from interpreter. return1");
       return;                   // Most probably a call of interpreter int from interpreter
     }
     cs = newcs;
@@ -1122,7 +1185,7 @@ stackDump();
 
     if (from_interpreter)
     { from_interpreter = false;
-    log_debug ("Called from interpreter. return2");
+    printf ("Called from interpreter. return2");
       return; }
     compare_jump = false;
 
@@ -1130,7 +1193,7 @@ stackDump();
     fix_segs ();
     return_point.push (*(dd *) raddr (ss, sp));
 if (debug > 0)
-    log_debug ("Enter interp current cs=%x ip=%x sp=%x ret_point:%x retp.size()=%d\n", cs, ip, sp,
+    printf ("Enter interp current cs=%x ip=%x sp=%x ret_point:%x retp.size()=%d\n", cs, ip, sp,
                return_point.top (), return_point.size ());
 
     do
@@ -1145,7 +1208,7 @@ if (debug > 0)
         log_error ("Error cs:ip != return_point %x\n", return_point.top ());
       }
 if (debug > 0)
-    log_debug ("Exit interp cs=%x ip=%x sp=%x\n", cs, ip, sp);
+    printf ("Exit interp cs=%x ip=%x sp=%x\n", cs, ip, sp);
 
     if (oldsp + 4 != sp && cs != 0xf000)
       {
@@ -1154,120 +1217,6 @@ if (debug > 0)
 //        exit (1);
       }
     return_point.pop ();
-  }
-
-  void ShadowStack::push (_STATE * _state, dd value)
-  {
-     
-     if (!m_active && !m_forceactive) return;
-//     m2c::log_info("+++ShadowStack::push %x\n",value);
-
-//    if (m2c::debug)
-      {
-        X86_REGREF Frame f;
-        f.cs = cs;
-        f.ip = eip;
-        f.sp = sp;
-        f.value = value;
-        f.addcounter = m2c::counter;
-        f.remcounter = 0;
-        f.pointer_ = (dw *) m2c::raddr_ (ss, sp);
-        f.itwascall = m_itiscall;
-        f.call_deep = m_itiscall?++m_deep:0;
-        if (m_current == m_ss.size ())
-          m_ss.resize (m_current + 1);
-        print_frame(f);
-        m_ss[m_current++] = f;
-     m2c::log_debug("m_itiscall=%d m_deep=%d\n",m_itiscall,m_deep);
-//     m2c::log_info("ssize=%d\n",m_ss.size());
-      }
-      m_itiscall = false;
-//     m2c::log_info("---ShadowStack::push\n");
-  }
-
-  void ShadowStack::pop (_STATE * _state)
-  {
-     if (!m_active && !m_forceactive) return;
-//    if (m2c::debug)
-      {
-        X86_REGREF
-//       m_needtoskipcall=0;
-                  log_error ("m_needtoskipcall %d\n", m_needtoskipcall);
-//    m2c::log_info("ssize=%d\n",m_ss.size() );
-          if (!m_ss.empty () && m_current)
-          {
-            size_t counter = m2c::counter;
-            dd tsp;
-            size_t tcount = 0;
-            do
-              {
-                tsp = m_ss[m_current - 1].sp;
-                if ((tcount++) > 0)
-                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss[m_current - 1].addcounter, tsp);
-                if (tsp <= sp)
-                  m_ss[--m_current].remcounter = counter;
-                  if (m_ss[m_current].itwascall) ++m_needtoskipcall;
-                print_frame(m_ss[m_current]);
-              }
-
-            while (tsp < sp);
-
-           if (m_itisret && m_ss[m_current].itwascall) --m_needtoskipcall;
-
-      m_currentdeep = m_ss[m_current].call_deep;
-                  log_error ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall);
-          }
-      
-      }
-      m_itisret = false;
-  }
-
-        void ShadowStack::decreasedeep(){
-log_error("decreasedeep m_deep=%d ",m_deep);
-//pop(0);
-//m_deep=m_currentdeep-1;
---m_deep;
-log_error("m_deep=%d ",m_deep);
-}
-        bool ShadowStack::needtoskipcalls(){
-/*
-log_error("ret m_currentdeep=%d ",m_currentdeep);
-m_needtoskipcall=m_currentdeep?m_deep-m_currentdeep:0; 
-if (m_needtoskipcall<0) {m_needtoskipcall=0;}
-//m_deep=m_currentdeep?m_currentdeep-1:m_deep; 
---m_deep;
-log_error("m_deep=%d ",m_deep);
-m_currentdeep=0;
-log_error("m_currentdeep=%d\n",m_currentdeep);
-*/
-log_error("m_needtoskipcall=%d\n",m_needtoskipcall);
-return m_needtoskipcall;}
-
-
-  void ShadowStack::print_frame(const Frame& f)
-  {
-            log_debug("~~ %4d %8x %8x %04x:%04x %4x %4x %4x\n", f.itwascall, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value, *f.pointer_);
-  }
-
-  void ShadowStack::print (_STATE * _state)
-  {
-    if (m2c::debug)
-      {
-        X86_REGREF if (!m_ss.empty ())
-          printf (" Shadow Stack memory dump (incl left garbage):\n");
-        printf ("%4s %8s %8s %4s:%4s %4s %4s %4s\n", "Call", "Alloc", "Dealloc", "cs", "ip", "sp", "Value", "Current value");
-        for (int i = m_ss.size () - 1; i >= 0; i--)
-          {
-            Frame f = m_ss[i];
-            if (i == m_current - 1)
-              printf ("  ");
-            printf ("%4d %8x %8x %04x:%04x %4x %4x", f.call_deep, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, f.value);
-            if (*f.pointer_ != f.value)
-              printf (" %4x\n", *f.pointer_);
-            else
-              printf ("\n");
-          }
-      }
   }
 
     int log_debug(const char *format, ...) {

@@ -174,7 +174,8 @@ Bits CPU_Core_Normal_Run(void) {
 		  return CBRET_NONE;
                 } // stop interpretation
 
-if (SegBase(cs)!=0xf0000 && trace_instructions)
+//if (SegBase(cs)!=0xf0000 && trace_instructions)
+if (trace_instructions)
 {
   print_instruction(SegBase(cs)>>4,cpu_regs.ip.dword[0]);
 //printf("i%x:%x %s\n",SegBase(cs)>>4,cpu_regs.ip.dword[0], dline);

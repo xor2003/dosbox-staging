@@ -384,7 +384,8 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &_start;}
     if ((__disp >> 16) == 0xf000)
 	{m2c::log_debug("Calling BIOS %x\n",__disp);
 /*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
-if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+//if (from_callf) 
+m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
 m2c::log_debug("doing return1\n");
 //m2c::shadow_stack.noneedreturn();
 return true;}

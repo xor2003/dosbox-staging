@@ -589,6 +589,8 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 #endif
 	if (!cpu.pmode) {
 		/* Save everything on a 16-bit stack */
+		m2c::log_debug("CPU_Interrupt %x cs:ip=%x:%x\n",num,Segs.val[cs],reg_eip);
+
 		CPU_Push16(reg_flags & 0xffff);
 		CPU_Push16(SegValue(cs));
 		CPU_Push16(oldeip);
