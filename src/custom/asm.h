@@ -752,10 +752,10 @@ inline long getdata(const long& s)
 #define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
 #define AFFECT_PF(a) m2cflags.setPF(a)
 
+#ifdef DOSBOX_CUSTOM
 #define PUSH(a) {m2c::PUSH_(a);}
 #define POP(a) {m2c::POP_(a);}
 
-#ifdef DOSBOX_CUSTOM
 
     template<typename S>
     void PUSH_(S a);
@@ -778,8 +778,10 @@ inline long getdata(const long& s)
 
 #else
 
+#define PUSH(a) {m2c::PUSH_(a, _state);}
+#define POP(a) {m2c::POP_(a, _state);}
     template<typename S>
-    inline void PUSH_(S a)
+    inline void PUSH_(S a, _STATE *_state)
 {
   X86_REGREF
   dd averytemporary=a;stackPointer-=sizeof(a); 
@@ -789,13 +791,13 @@ inline long getdata(const long& s)
  #endif
 
  #ifndef NO_SHADOW_STACK
-  m2c::shadow_stack.push(_state,(dd)(a))
+  m2c::shadow_stack.push(_state,(dd)(a));
  #endif
                }
 //		assert((m2c::raddr_(ss,stackPointer) - ((db*)&stack))>8);}
 
     template<typename S>
-    inline void POP_(S& a)
+    inline void POP_(S& a, _STATE *_state)
 {
   X86_REGREF
  #ifndef NO_SHADOW_STACK
@@ -868,7 +870,7 @@ inline long getdata(const long& s)
     }
 
 #if DOSBOX_CUSTOM
-#define STI {CPU_STI();m2c::execute_irqs();}
+#define STI {CPU_STI();m2c::defered_irqs=true;}
 #define CLI {CPU_CLI();}
 #else
 #define STI UNIMPLEMENTED
@@ -1599,7 +1601,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define CMC {AFFECT_CF(GET_CF() ^ 1);}
 
 #define PUSHF {PUSH( (m2c::MWORDSIZE)m2cflags.getvalue() );}
-#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::execute_irqs();}
+#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::defered_irqs=true;}
 
 //#define PUSHF {PUSH( (dd) ((GET_CF()?1:0)|(GET_PF()?4:0)|(GET_AF()?0x10:0)|(GET_ZF()?0x40:0)|(GET_SF()?0x80:0)|(GET_DF()?0x400:0)|(GET_OF()?0x800:0)) );}
 //#define POPF {dd averytemporary; POP(averytemporary); CF=averytemporary&1;  PF=(averytemporary&4);AF=(averytemporary&0x10);ZF=(averytemporary&0x40);SF=(averytemporary&0x80);DF=(averytemporary&0x400);OF=(averytemporary&0x800);}
@@ -1664,22 +1666,21 @@ struct StackPop
    size_t deep;
 };
 
-#ifdef NO_SHADOW_STACK
-#define RETN(i) {if (m2c::RETN_(i, _state)) {return true;} else  {__disp=(cs<<16)+eip;goto __dispatch_call;}}
+//#ifndef NO_SHADOW_STACK
+#define RETN(i) {if (m2c::RETN_(i, _state)) {return true;} else  {__disp=(cs<<16)+eip;return __dispatch_call(__disp,_state);}}
+/*
 #else
 #define RETN(i) {m2c::RETN_(i, _state);return true;}
 #endif
+*/
 
     static bool RETN_(size_t i, struct _STATE *_state) {
         X86_REGREF
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
-//#ifndef NO_SHADOW_STACK
         shadow_stack.itisret();
-//#endif
         POP(ip);
         bool ret(true);
-//#ifndef NO_SHADOW_STACK
         ret = shadow_stack.itwascall();
         int skip = shadow_stack.getneedtoskipcallndclean();
         if (!ret) {
@@ -1687,7 +1688,6 @@ struct StackPop
 //            m2c::stackDump();
 //assert(0);
         }
-//#endif
         esp += i;
 log_debug("retn target %x:%x\n", cs,ip);
         if (debug>2) {
@@ -1754,12 +1754,13 @@ throw StackPop(skip);
         m2c::shadow_stack.decreasedeep();
         return ret;
     }
-
+/*
 #ifdef NO_SHADOW_STACK
 #define CALL(label, disp) {if (!m2c::CALL_(label, _state, disp)) {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 #else
+*/
 #define CALL(label, disp) {m2c::CALL_(label, _state, disp);}
-#endif
+//#endif
     static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
@@ -1819,7 +1820,7 @@ shadow_stack.decreasedeep();
 	return;}
 */
 #if DOSBOX_CUSTOM
-#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::execute_irqs(); return true;}
+#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::defered_irqs=true; return true;}
 #else
 #define IRET RETF(0)
 #endif
@@ -1861,7 +1862,11 @@ shadow_stack.decreasedeep();
               m2c::run_hw_interrupts(); m2c::log_regs_dbx(__FILE__,__LINE__,#a, cpu_regs, Segs); \
                 {a;} }
 
-#define S(a) {m2c::Sstart(__FILE__,__LINE__,#a);}
+#define S(a) {  \
+        if (m2c::Sstart(__FILE__,__LINE__,#a)){ \
+    {a;}} \
+        }
+//#define S(a) R(a)
 
 #define J(a) {  \
         if (m2c::Jstart(__FILE__,__LINE__,#a)){ \
@@ -1887,6 +1892,7 @@ shadow_stack.decreasedeep();
 #define J(a) {a;}
 #define T(a) {a;}
 #define X(a) {a;}
+#define S(a) {a;}
 
 #else
 
@@ -1894,6 +1900,7 @@ shadow_stack.decreasedeep();
 #define J(a) R(a)
 #define T(a) R(a)
 #define X(a) R(a)
+#define S(a) R(a)
 
 #endif
 
@@ -1974,15 +1981,15 @@ enum  _offsets;
 
 #define OUT(port, value) m2c::OUT_(port,value)
 
-    static void OUT_(dw port, db value) { IO_WriteB(port, value); }
+    static void OUT_(dw port, db value) { IO_WriteB(port, value);/*printf("W %x <- %x\n",port,value);*/ }
 
-    static void OUT_(dw port, dw value) { IO_WriteW(port, value); }
+    static void OUT_(dw port, dw value) { /*printf("wrong\n");*/IO_WriteW(port, value); }
 
 #define IN(res, port) m2c::IN_(res, port)
 
-    static void IN_(db &res, dw port) { res = IO_ReadB(port); }
+    static void IN_(db &res, dw port) { res = IO_ReadB(port); /*printf("R %x -> %x\n",port,res);*/ }
 
-    static void IN_(dw &res, dw port) { res = IO_ReadW(port); }
+    static void IN_(dw &res, dw port) { /*printf("wrong\n");*/ res = IO_ReadW(port); }
 
 #else
 
@@ -2061,6 +2068,7 @@ int8_t asm2C_IN(int16_t data,_STATE* _state);
 #define TODW(X) (*(dw*)(&(X)))
 #define TODD(X) (*(dd*)(&(X)))
 #define TODQ(X) (*(dq*)(&(X)))
+   extern bool defered_irqs;
 
 
 } // namespace m2c

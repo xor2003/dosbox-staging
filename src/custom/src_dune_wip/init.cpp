@@ -1,4 +1,6 @@
+#include "../asm.h"
 #include <cstring>
+#include <cstdio>
 
 void init_get_fname(char *dst, char *src);
 
@@ -12,7 +14,7 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 
 	init_get_fname(fname, name);
 
-	if (strcmp(fname, "game_drv.exe")) return false;
+	if (strcmp(fname, "dncdprg.exe")) return false;
 
 	return true;
 }
@@ -22,9 +24,9 @@ namespace m2c
 {
   void load_drivers()
   {
-//    fread(raddr(0x24ed,0x100),0xffff,1,fopen("DN386.HSQ","r"));
-//    fread(raddr(0x47d8,0x100),0xffff,1,fopen("DNSBP.HSQ","r"));
-//    fread(raddr(0x4d44,0x100),0xffff,1,fopen("DNMID.HSQ","r"));
+    fread(raddr(0x24ed,0x100),0xffff,1,fopen("DN386.HSQ","r"));
+    fread(raddr(0x47d8,0x100),0xffff,1,fopen("DNSBP.HSQ","r"));
+    fread(raddr(0x4d44,0x100),0xffff,1,fopen("DNMID.HSQ","r"));
     
 
   }

@@ -1,10 +1,6 @@
 #include "_data.h"
 namespace m2c{
-static struct Memory mm;
-struct Memory& m = mm;
-
-static struct Memory t;
-struct Memory& types = t;
+struct Memory m;
 
 db(& stack)[STACK_SIZE]=m.stack;
 db(& heap)[HEAP_SIZE]=m.heap;
@@ -4012,7 +4008,7 @@ db (& callbackflags)[128] = m2c::m.callbackflags;
 db (& callbackflags2)[128] = m2c::m.callbackflags2;
 db (& dummy0_313fa)[6] = m2c::m.dummy0_313fa;
 db& in_kb_parse_key = m2c::m.in_kb_parse_key;
-db (& callbacks)[256] = m2c::m.callbacks;
+db (& callbacks_)[256] = m2c::m.callbacks_;
 db (& dummy0_31502)[32] = m2c::m.dummy0_31502;
 dw& word_3fb02 = m2c::m.word_3fb02;
 dw& word_3fb04 = m2c::m.word_3fb04;

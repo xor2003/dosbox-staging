@@ -2425,7 +2425,7 @@ cs=0x2044;eip=0x001a0c; 	T(SHL(bx, 1));	// 65955 shl     bx, 1 ;~ 2044:1A0C
 cs=0x2044;eip=0x001a0e; 	X(PUSH(di));	// 65956 push    di ;~ 2044:1A0E
 cs=0x2044;eip=0x001a0f; 	X(PUSH(si));	// 65957 push    si ;~ 2044:1A0F
 cs=0x2044;eip=0x001a10; 	T(SHL(bx, 1));	// 65958 shl     bx, 1 ;~ 2044:1A10
-cs=0x2044;eip=0x001a12; 	R(CALLF(__dispatch_call,*(dd*)((callbacks)+bx)));	// 65959 call    dword ptr callbacks[bx] ;~ 2044:1A12
+cs=0x2044;eip=0x001a12; 	R(CALLF(__dispatch_call,*(dd*)((callbacks_)+bx)));	// 65959 call    dword ptr callbacks_[bx] ;~ 2044:1A12
 cs=0x2044;eip=0x001a16; 	X(POP(si));	// 65960 pop     si ;~ 2044:1A16
 cs=0x2044;eip=0x001a17; 	X(POP(di));	// 65961 pop     di ;~ 2044:1A17
 cs=0x2044;eip=0x001a18; 	T(XOR(ax, ax));	// 65962 xor     ax, ax ;~ 2044:1A18
@@ -2466,7 +2466,7 @@ cs=0x2044;eip=0x001a3e; 	X(PUSH(bp));	// 65999 push    bp ;~ 2044:1A3E
 cs=0x2044;eip=0x001a3f; 	T(MOV(bp, sp));	// 66000 mov     bp, sp ;~ 2044:1A3F
 cs=0x2044;eip=0x001a41; 	T(MOV(ax, *(dw*)(raddr(ss,bp+arg_2))));	// 66001 mov     ax, [bp+arg_2] ;~ 2044:1A41
 cs=0x2044;eip=0x001a44; 	T(MOV(cx, 0x40));	// 66002 mov     cx, 40h ; '@' ;~ 2044:1A44
-cs=0x2044;eip=0x001a47; 	T(MOV(bx, offset(dseg,callbacks)));	// 66003 mov     bx, offset callbacks ;~ 2044:1A47
+cs=0x2044;eip=0x001a47; 	T(MOV(bx, offset(dseg,callbacks_)));	// 66003 mov     bx, offset callbacks_ ;~ 2044:1A47
 cs=0x2044;eip=0x001a4a; 	T(MOV(dx, *(dw*)(raddr(ss,bp+arg_4))));	// 66004 mov     dx, [bp+arg_4] ;~ 2044:1A4A
 loc_3046d:
 	// 8918 

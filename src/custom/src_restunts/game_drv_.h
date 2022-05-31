@@ -4074,7 +4074,7 @@ extern db (& callbackflags)[128];
 extern db (& callbackflags2)[128];
 extern db (& dummy0_313fa)[6];
 extern db& in_kb_parse_key;
-extern db (& callbacks)[256];
+extern db (& callbacks_)[256];
 extern db (& dummy0_31502)[32];
 extern dw& word_3fb02;
 extern dw& word_3fb04;

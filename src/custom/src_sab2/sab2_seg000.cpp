@@ -32,27 +32,27 @@ cs=0x192;eip=0x00010f; 	T(MOV(ds, ax));	// 50 mov     ds, ax ;~ 00D0:010F
 cs=0x192;eip=0x000111; 	T(MOV(es, ax));	// 52 mov     es, ax ;~ 00D0:0111
 cs=0x192;eip=0x000113; 	X(MOV(byte_14a2c, 0));	// 54 mov     byte_14A2C, 0 ;~ 00D0:0113
 cs=0x192;eip=0x000118; 	T(MOV(ah, 0x0F));	// 55 mov     ah, 0Fh ;~ 00D0:0118
-cs=0x192;eip=0x00011a; 	R(_INT(0x10));	// 56 int     10h             ; - VIDEO - GET CURRENT VIDEO MODE ;~ 00D0:011A
+cs=0x192;eip=0x00011a; 	S(_INT(0x10));	// 56 int     10h             ; - VIDEO - GET CURRENT VIDEO MODE ;~ 00D0:011A
 cs=0x192;eip=0x00011c; 	X(MOV(byte_14a23, al));	// 60 mov     byte_14A23, al ;~ 00D0:011C
 cs=0x192;eip=0x00011f; 	T(CMP(al, 7));	// 61 cmp     al, 7 ;~ 00D0:011F
 cs=0x192;eip=0x000121; 	J(JC(loc_10196));	// 62 jb      short loc_10196 ;~ 00D0:0121
 cs=0x192;eip=0x000123; 	T(MOV(dx, 0x1B82));	// 63 mov     dx, 1B82h ;~ 00D0:0123
 cs=0x192;eip=0x000126; 	T(MOV(ah, 9));	// 64 mov     ah, 9 ;~ 00D0:0126
-cs=0x192;eip=0x000128; 	R(_INT(0x21));	// 65 int     21h             ; DOS - PRINT STRING ;~ 00D0:0128
+cs=0x192;eip=0x000128; 	S(_INT(0x21));	// 65 int     21h             ; DOS - PRINT STRING ;~ 00D0:0128
 cs=0x192;eip=0x00012a; 	J(JMP(loc_10191));	// 67 jmp     short loc_10191 ;~ 00D0:012A
 loc_1012d:
 	// 4370 
 cs=0x192;eip=0x00012d; 	T(MOV(al, byte_14a23));	// 74 mov     al, byte_14A23 ;~ 00D0:012D
 cs=0x192;eip=0x000130; 	T(MOV(ah, 0));	// 75 mov     ah, 0 ;~ 00D0:0130
-cs=0x192;eip=0x000132; 	R(_INT(0x10));	// 76 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 00D0:0132
+cs=0x192;eip=0x000132; 	S(_INT(0x10));	// 76 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 00D0:0132
 cs=0x192;eip=0x000134; 	J(CALL(sub_105f2,0));	// 78 call    sub_105F2 ;~ 00D0:0134
 cs=0x192;eip=0x000137; 	T(MOV(dx, 0x0D8C));	// 79 mov     dx, 0D8Ch ;~ 00D0:0137
 cs=0x192;eip=0x00013a; 	T(MOV(ah, 0x13));	// 80 mov     ah, 13h ;~ 00D0:013A
-cs=0x192;eip=0x00013c; 	R(_INT(0x21));	// 81 int     21h             ; DOS - DELETE FILE via FCB ;~ 00D0:013C
+cs=0x192;eip=0x00013c; 	S(_INT(0x21));	// 81 int     21h             ; DOS - DELETE FILE via FCB ;~ 00D0:013C
 cs=0x192;eip=0x00013e; 	X(MOV(byte_1a60d, 0x1A));	// 85 mov     byte_1A60D, 1Ah ;~ 00D0:013E
 cs=0x192;eip=0x000143; 	T(MOV(dx, 0x0D8C));	// 86 mov     dx, 0D8Ch ;~ 00D0:0143
 cs=0x192;eip=0x000146; 	T(MOV(ah, 0x16));	// 87 mov     ah, 16h ;~ 00D0:0146
-cs=0x192;eip=0x000148; 	R(_INT(0x21));	// 88 int     21h             ; DOS - CREATE A DISK FILE ;~ 00D0:0148
+cs=0x192;eip=0x000148; 	S(_INT(0x21));	// 88 int     21h             ; DOS - CREATE A DISK FILE ;~ 00D0:0148
 cs=0x192;eip=0x00014a; 	T(OR(al, al));	// 90 or      al, al ;~ 00D0:014A
 cs=0x192;eip=0x00014c; 	J(JNZ(loc_1018a));	// 91 jnz     short loc_1018A ;~ 00D0:014C
 cs=0x192;eip=0x00014e; 	X(MOV(*(db*)(((db*)&word_13bf8)), 0));	// 92 mov     byte ptr word_13BF8, 0 ;~ 00D0:014E
@@ -60,34 +60,34 @@ cs=0x192;eip=0x000153; 	X(MOV(byte_13c0c, 0));	// 93 mov     byte_13C0C, 0 ;~ 00
 cs=0x192;eip=0x000158; 	J(CALL(sub_1062d,0));	// 94 call    sub_1062D ;~ 00D0:0158
 cs=0x192;eip=0x00015b; 	T(MOV(dx, 0x76AE));	// 95 mov     dx, 76AEh ;~ 00D0:015B
 cs=0x192;eip=0x00015e; 	T(MOV(ah, 0x1A));	// 96 mov     ah, 1Ah ;~ 00D0:015E
-cs=0x192;eip=0x000160; 	R(_INT(0x21));	// 97 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:0160
+cs=0x192;eip=0x000160; 	S(_INT(0x21));	// 97 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:0160
 cs=0x192;eip=0x000162; 	T(MOV(dx, 0x0D8C));	// 99 mov     dx, 0D8Ch ;~ 00D0:0162
 cs=0x192;eip=0x000165; 	T(MOV(ah, 0x15));	// 100 mov     ah, 15h ;~ 00D0:0165
-cs=0x192;eip=0x000167; 	R(_INT(0x21));	// 101 int     21h             ; DOS - SEQUENTIAL DISK RECORD WRITE ;~ 00D0:0167
+cs=0x192;eip=0x000167; 	S(_INT(0x21));	// 101 int     21h             ; DOS - SEQUENTIAL DISK RECORD WRITE ;~ 00D0:0167
 cs=0x192;eip=0x000169; 	T(OR(al, al));	// 103 or      al, al ;~ 00D0:0169
 cs=0x192;eip=0x00016b; 	J(JNZ(loc_1018a));	// 104 jnz     short loc_1018A ;~ 00D0:016B
 cs=0x192;eip=0x00016d; 	T(MOV(dx, 0x772E));	// 105 mov     dx, 772Eh ;~ 00D0:016D
 cs=0x192;eip=0x000170; 	T(MOV(ah, 0x1A));	// 106 mov     ah, 1Ah ;~ 00D0:0170
-cs=0x192;eip=0x000172; 	R(_INT(0x21));	// 107 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:0172
+cs=0x192;eip=0x000172; 	S(_INT(0x21));	// 107 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:0172
 cs=0x192;eip=0x000174; 	T(MOV(dx, 0x0D8C));	// 109 mov     dx, 0D8Ch ;~ 00D0:0174
 cs=0x192;eip=0x000177; 	T(MOV(ah, 0x15));	// 110 mov     ah, 15h ;~ 00D0:0177
-cs=0x192;eip=0x000179; 	R(_INT(0x21));	// 111 int     21h             ; DOS - SEQUENTIAL DISK RECORD WRITE ;~ 00D0:0179
+cs=0x192;eip=0x000179; 	S(_INT(0x21));	// 111 int     21h             ; DOS - SEQUENTIAL DISK RECORD WRITE ;~ 00D0:0179
 cs=0x192;eip=0x00017b; 	T(OR(al, al));	// 113 or      al, al ;~ 00D0:017B
 cs=0x192;eip=0x00017d; 	J(JNZ(loc_1018a));	// 114 jnz     short loc_1018A ;~ 00D0:017D
 cs=0x192;eip=0x00017f; 	T(MOV(dx, 0x0D8C));	// 115 mov     dx, 0D8Ch ;~ 00D0:017F
 cs=0x192;eip=0x000182; 	T(MOV(ah, 0x10));	// 116 mov     ah, 10h ;~ 00D0:0182
-cs=0x192;eip=0x000184; 	R(_INT(0x21));	// 117 int     21h             ; DOS - CLOSE DISK FILE ;~ 00D0:0184
+cs=0x192;eip=0x000184; 	S(_INT(0x21));	// 117 int     21h             ; DOS - CLOSE DISK FILE ;~ 00D0:0184
 cs=0x192;eip=0x000186; 	T(OR(al, al));	// 121 or      al, al ;~ 00D0:0186
 cs=0x192;eip=0x000188; 	J(JZ(loc_10191));	// 122 jz      short loc_10191 ;~ 00D0:0188
 loc_1018a:
 	// 4371 
 cs=0x192;eip=0x00018a; 	T(MOV(dx, 0x0D8C));	// 126 mov     dx, 0D8Ch ;~ 00D0:018A
 cs=0x192;eip=0x00018d; 	T(MOV(ah, 0x13));	// 127 mov     ah, 13h ;~ 00D0:018D
-cs=0x192;eip=0x00018f; 	R(_INT(0x21));	// 128 int     21h             ; DOS - DELETE FILE via FCB ;~ 00D0:018F
+cs=0x192;eip=0x00018f; 	S(_INT(0x21));	// 128 int     21h             ; DOS - DELETE FILE via FCB ;~ 00D0:018F
 loc_10191:
 	// 4372 
 cs=0x192;eip=0x000191; 	T(MOV(ax, 0x4C00));	// 135 mov     ax, 4C00h ;~ 00D0:0191
-cs=0x192;eip=0x000194; 	R(_INT(0x21));	// 136 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 00D0:0194
+cs=0x192;eip=0x000194; 	S(_INT(0x21));	// 136 int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT) ;~ 00D0:0194
 loc_10196:
 	// 4373 
 cs=0x192;eip=0x000196; 	T(MOV(dx, 5));	// 141 mov     dx, 5 ;~ 00D0:0196
@@ -102,29 +102,29 @@ loc_101a8:
 	// 4374 
 cs=0x192;eip=0x0001a8; 	X(PUSH(dx));	// 152 push    dx ;~ 00D0:01A8
 cs=0x192;eip=0x0001a9; 	T(MOV(ah, 0));	// 153 mov     ah, 0 ;~ 00D0:01A9
-cs=0x192;eip=0x0001ab; 	R(_INT(0x1A));	// 154 int     1Ah             ; CLOCK - GET TIME OF DAY ;~ 00D0:01AB
+cs=0x192;eip=0x0001ab; 	S(_INT(0x1A));	// 154 int     1Ah             ; CLOCK - GET TIME OF DAY ;~ 00D0:01AB
 cs=0x192;eip=0x0001ad; 	X(MOV(word_14a1e, dx));	// 159 mov     word_14A1E, dx ;~ 00D0:01AD
 cs=0x192;eip=0x0001b1; 	T(MOV(dx, 0x0D8C));	// 160 mov     dx, 0D8Ch ;~ 00D0:01B1
 cs=0x192;eip=0x0001b4; 	T(MOV(ah, 0x0F));	// 161 mov     ah, 0Fh ;~ 00D0:01B4
-cs=0x192;eip=0x0001b6; 	R(_INT(0x21));	// 162 int     21h             ; DOS - OPEN DISK FILE ;~ 00D0:01B6
+cs=0x192;eip=0x0001b6; 	S(_INT(0x21));	// 162 int     21h             ; DOS - OPEN DISK FILE ;~ 00D0:01B6
 cs=0x192;eip=0x0001b8; 	T(OR(al, al));	// 165 or      al, al ;~ 00D0:01B8
 cs=0x192;eip=0x0001ba; 	J(JNZ(loc_101fb));	// 166 jnz     short loc_101FB ;~ 00D0:01BA
 cs=0x192;eip=0x0001bc; 	T(MOV(dx, 0x0BA2));	// 167 mov     dx, 0BA2h ;~ 00D0:01BC
 cs=0x192;eip=0x0001bf; 	T(MOV(ah, 0x1A));	// 168 mov     ah, 1Ah ;~ 00D0:01BF
-cs=0x192;eip=0x0001c1; 	R(_INT(0x21));	// 169 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:01C1
+cs=0x192;eip=0x0001c1; 	S(_INT(0x21));	// 169 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:01C1
 cs=0x192;eip=0x0001c3; 	T(MOV(dx, 0x0D8C));	// 171 mov     dx, 0D8Ch ;~ 00D0:01C3
 cs=0x192;eip=0x0001c6; 	X(MOV(*(db*)(((db*)&word_13bf8)), 0));	// 172 mov     byte ptr word_13BF8, 0 ;~ 00D0:01C6
 cs=0x192;eip=0x0001cb; 	X(MOV(byte_13c0c, 0));	// 173 mov     byte_13C0C, 0 ;~ 00D0:01CB
 cs=0x192;eip=0x0001d0; 	T(MOV(ah, 0x14));	// 174 mov     ah, 14h ;~ 00D0:01D0
-cs=0x192;eip=0x0001d2; 	R(_INT(0x21));	// 175 int     21h             ; DOS - SEQUENTIAL DISK FILE READ ;~ 00D0:01D2
+cs=0x192;eip=0x0001d2; 	S(_INT(0x21));	// 175 int     21h             ; DOS - SEQUENTIAL DISK FILE READ ;~ 00D0:01D2
 cs=0x192;eip=0x0001d4; 	T(OR(al, al));	// 177 or      al, al ;~ 00D0:01D4
 cs=0x192;eip=0x0001d6; 	J(JNZ(loc_101fb));	// 178 jnz     short loc_101FB ;~ 00D0:01D6
 cs=0x192;eip=0x0001d8; 	T(MOV(dx, 0x0C22));	// 179 mov     dx, 0C22h ;~ 00D0:01D8
 cs=0x192;eip=0x0001db; 	T(MOV(ah, 0x1A));	// 180 mov     ah, 1Ah ;~ 00D0:01DB
-cs=0x192;eip=0x0001dd; 	R(_INT(0x21));	// 181 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:01DD
+cs=0x192;eip=0x0001dd; 	S(_INT(0x21));	// 181 int     21h             ; DOS - SET DISK TRANSFER AREA ADDRESS ;~ 00D0:01DD
 cs=0x192;eip=0x0001df; 	T(MOV(dx, 0x0D8C));	// 183 mov     dx, 0D8Ch ;~ 00D0:01DF
 cs=0x192;eip=0x0001e2; 	T(MOV(ah, 0x14));	// 184 mov     ah, 14h ;~ 00D0:01E2
-cs=0x192;eip=0x0001e4; 	R(_INT(0x21));	// 185 int     21h             ; DOS - SEQUENTIAL DISK FILE READ ;~ 00D0:01E4
+cs=0x192;eip=0x0001e4; 	S(_INT(0x21));	// 185 int     21h             ; DOS - SEQUENTIAL DISK FILE READ ;~ 00D0:01E4
 cs=0x192;eip=0x0001e6; 	T(OR(al, al));	// 187 or      al, al ;~ 00D0:01E6
 cs=0x192;eip=0x0001e8; 	J(JNZ(loc_101fb));	// 188 jnz     short loc_101FB ;~ 00D0:01E8
 cs=0x192;eip=0x0001ea; 	T(MOV(si, 0x0BA2));	// 189 mov     si, 0BA2h ;~ 00D0:01EA
@@ -157,10 +157,10 @@ cs=0x192;eip=0x000216; 	X(POP(dx));	// 215 pop     dx ;~ 00D0:0216
 cs=0x192;eip=0x000217; 	X(PUSH(dx));	// 216 push    dx ;~ 00D0:0217
 cs=0x192;eip=0x000218; 	T(MOV(ah, 0));	// 217 mov     ah, 0 ;~ 00D0:0218
 cs=0x192;eip=0x00021a; 	T(MOV(al, dh));	// 218 mov     al, dh ;~ 00D0:021A
-cs=0x192;eip=0x00021c; 	R(_INT(0x10));	// 219 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 00D0:021C
+cs=0x192;eip=0x00021c; 	S(_INT(0x10));	// 219 int     10h             ; - VIDEO - SET VIDEO MODE ;~ 00D0:021C
 cs=0x192;eip=0x00021e; 	T(MOV(bx, 0));	// 221 mov     bx, 0 ;~ 00D0:021E
 cs=0x192;eip=0x000221; 	T(MOV(ah, 0x0B));	// 222 mov     ah, 0Bh ;~ 00D0:0221
-cs=0x192;eip=0x000223; 	R(_INT(0x10));	// 223 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0223
+cs=0x192;eip=0x000223; 	S(_INT(0x10));	// 223 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0223
 cs=0x192;eip=0x000225; 	T(MOV(si, 0x6FD));	// 226 mov     si, 6FDh ;~ 00D0:0225
 cs=0x192;eip=0x000228; 	J(CALL(sub_104b7,0));	// 227 call    sub_104B7 ;~ 00D0:0228
 cs=0x192;eip=0x00022b; 	T(MOV(di, 0x3F3D));	// 228 mov     di, 3F3Dh ;~ 00D0:022B
@@ -187,13 +187,13 @@ cs=0x192;eip=0x00024a; 	J(CALL(sub_105bb,0));	// 248 call    sub_105BB ;~ 00D0:0
 cs=0x192;eip=0x00024d; 	X(POP(ax));	// 249 pop     ax ;~ 00D0:024D
 cs=0x192;eip=0x00024e; 	T(CBW);	// 250 cbw ;~ 00D0:024E
 cs=0x192;eip=0x00024f; 	X(MOV(word_14a10, ax));	// 251 mov     word_14A10, ax ;~ 00D0:024F
-cs=0x192;eip=0x000252; 	R(_INT(0x10));	// 252 int     10h             ; - VIDEO - ;~ 00D0:0252
+cs=0x192;eip=0x000252; 	S(_INT(0x10));	// 252 int     10h             ; - VIDEO - ;~ 00D0:0252
 cs=0x192;eip=0x000254; 	T(MOV(bx, 0));	// 253 mov     bx, 0 ;~ 00D0:0254
 cs=0x192;eip=0x000257; 	T(MOV(ah, 0x0B));	// 254 mov     ah, 0Bh ;~ 00D0:0257
-cs=0x192;eip=0x000259; 	R(_INT(0x10));	// 255 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0259
+cs=0x192;eip=0x000259; 	S(_INT(0x10));	// 255 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0259
 cs=0x192;eip=0x00025b; 	T(MOV(bx, 0x100));	// 258 mov     bx, 100h ;~ 00D0:025B
 cs=0x192;eip=0x00025e; 	T(MOV(ah, 0x0B));	// 259 mov     ah, 0Bh ;~ 00D0:025E
-cs=0x192;eip=0x000260; 	R(_INT(0x10));	// 260 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0260
+cs=0x192;eip=0x000260; 	S(_INT(0x10));	// 260 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0260
 cs=0x192;eip=0x000262; 	X(MOV(byte_14a2c, 1));	// 263 mov     byte_14A2C, 1 ;~ 00D0:0262
 cs=0x192;eip=0x000267; 	J(CALL(sub_105cd,0));	// 264 call    sub_105CD ;~ 00D0:0267
 cs=0x192;eip=0x00026a; 	J(CALL(sub_10620,0));	// 265 call    sub_10620 ;~ 00D0:026A
@@ -205,7 +205,7 @@ cs=0x192;eip=0x000273; 	T(INC(bx));	// 270 inc     bx ;~ 00D0:0273
 cs=0x192;eip=0x000274; 	T(MOV(cx, 0x0A));	// 271 mov     cx, 0Ah ;~ 00D0:0274
 loc_10277:
 	// 4381 
-cs=0x192;eip=0x000277; 	R(LOOP(loc_10277));	// 274 loop    loc_10277 ;~ 00D0:0277
+cs=0x192;eip=0x000277; 	S(LOOP(loc_10277));	// 274 loop    loc_10277 ;~ 00D0:0277
 cs=0x192;eip=0x000279; 	T(CMP(byte_14a22, 1));	// 275 cmp     byte_14A22, 1 ;~ 00D0:0279
 cs=0x192;eip=0x00027e; 	J(JNZ(loc_10273));	// 276 jnz     short loc_10273 ;~ 00D0:027E
 cs=0x192;eip=0x000280; 	T(CMP(bx, 0x600));	// 277 cmp     bx, 600h ;~ 00D0:0280
@@ -295,13 +295,13 @@ cs=0x192;eip=0x00032b; 	J(CALL(sub_104b7,0));	// 360 call    sub_104B7 ;~ 00D0:0
 cs=0x192;eip=0x00032e; 	J(CALL(sub_105c6,0));	// 361 call    sub_105C6 ;~ 00D0:032E
 cs=0x192;eip=0x000331; 	J(CALL(sub_105bb,0));	// 362 call    sub_105BB ;~ 00D0:0331
 cs=0x192;eip=0x000334; 	T(MOV(ax, word_14a10));	// 363 mov     ax, word_14A10 ;~ 00D0:0334
-cs=0x192;eip=0x000337; 	R(_INT(0x10));	// 364 int     10h             ; - VIDEO - ;~ 00D0:0337
+cs=0x192;eip=0x000337; 	S(_INT(0x10));	// 364 int     10h             ; - VIDEO - ;~ 00D0:0337
 cs=0x192;eip=0x000339; 	T(MOV(bx, 0));	// 365 mov     bx, 0 ;~ 00D0:0339
 cs=0x192;eip=0x00033c; 	T(MOV(ah, 0x0B));	// 366 mov     ah, 0Bh ;~ 00D0:033C
-cs=0x192;eip=0x00033e; 	R(_INT(0x10));	// 367 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:033E
+cs=0x192;eip=0x00033e; 	S(_INT(0x10));	// 367 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:033E
 cs=0x192;eip=0x000340; 	T(MOV(bx, 0x100));	// 370 mov     bx, 100h ;~ 00D0:0340
 cs=0x192;eip=0x000343; 	T(MOV(ah, 0x0B));	// 371 mov     ah, 0Bh ;~ 00D0:0343
-cs=0x192;eip=0x000345; 	R(_INT(0x10));	// 372 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0345
+cs=0x192;eip=0x000345; 	S(_INT(0x10));	// 372 int     10h             ; - VIDEO - SET COLOR PALETTE ;~ 00D0:0345
 cs=0x192;eip=0x000347; 	X(MOV(byte_14a2c, 1));	// 375 mov     byte_14A2C, 1 ;~ 00D0:0347
 cs=0x192;eip=0x00034c; 	T(MOV(di, 0x1688));	// 376 mov     di, 1688h ;~ 00D0:034C
 cs=0x192;eip=0x00034f; 	T(MOV(bx, 0x182F));	// 377 mov     bx, 182Fh ;~ 00D0:034F
@@ -440,10 +440,10 @@ cs=0x192;eip=0x00046d; 	J(CALL(sub_1269b,0));	// 512 call    sub_1269B ;~ 00D0:0
 cs=0x192;eip=0x000470; 	J(CALL(sub_1259e,0));	// 513 call    sub_1259E ;~ 00D0:0470
 cs=0x192;eip=0x000473; 	J(CALL(sub_10c0d,0));	// 514 call    sub_10C0D ;~ 00D0:0473
 cs=0x192;eip=0x000476; 	T(MOV(ah, 1));	// 515 mov     ah, 1 ;~ 00D0:0476
-cs=0x192;eip=0x000478; 	R(_INT(0x16));	// 516 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:0478
+cs=0x192;eip=0x000478; 	S(_INT(0x16));	// 516 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:0478
 cs=0x192;eip=0x00047a; 	J(JZ(loc_10464));	// 520 jz      short loc_10464 ;~ 00D0:047A
 cs=0x192;eip=0x00047c; 	T(MOV(ah, 0));	// 521 mov     ah, 0 ;~ 00D0:047C
-cs=0x192;eip=0x00047e; 	R(_INT(0x16));	// 522 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:047E
+cs=0x192;eip=0x00047e; 	S(_INT(0x16));	// 522 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:047E
 cs=0x192;eip=0x000480; 	X(INC(*(db*)(((db*)&word_14a36)+1)));	// 524 inc     byte ptr word_14A36+1 ;~ 00D0:0480
 cs=0x192;eip=0x000484; 	X(INC(word_14a1c));	// 525 inc     word_14A1C ;~ 00D0:0484
 cs=0x192;eip=0x000488; 	T(CMP(*(db*)(((db*)&word_14a36)+1), 0x20));	// 526 cmp     byte ptr word_14A36+1, 20h ; ' ' ;~ 00D0:0488
@@ -503,7 +503,7 @@ cs=0x192;eip=0x0004f7; 	T(MOV(cx, 1));	// 586 mov     cx, 1 ;~ 00D0:04F7
 cs=0x192;eip=0x0004fa; 	T(MOV(bl, byte_14a24));	// 587 mov     bl, byte_14A24 ;~ 00D0:04FA
 cs=0x192;eip=0x0004fe; 	T(MOV(bh, 0));	// 588 mov     bh, 0 ;~ 00D0:04FE
 cs=0x192;eip=0x000500; 	T(MOV(ah, 9));	// 589 mov     ah, 9 ;~ 00D0:0500
-cs=0x192;eip=0x000502; 	R(_INT(0x10));	// 590 int     10h             ; - VIDEO - WRITE ATTRIBUTES/CHARACTERS AT CURSOR POSITION ;~ 00D0:0502
+cs=0x192;eip=0x000502; 	S(_INT(0x10));	// 590 int     10h             ; - VIDEO - WRITE ATTRIBUTES/CHARACTERS AT CURSOR POSITION ;~ 00D0:0502
 loc_10504:
 	// 4403 
 cs=0x192;eip=0x000504; 	T(MOV(dx, word_14a02));	// 596 mov     dx, word_14A02 ;~ 00D0:0504
@@ -524,7 +524,7 @@ cs=0x192;eip=0x00051e; 	X(MOV(word_14a02, dx));	// 612 mov     word_14A02, dx ;~
 cs=0x192;eip=0x000522; 	T(ADD(dx, 4));	// 613 add     dx, 4 ;~ 00D0:0522
 cs=0x192;eip=0x000525; 	T(MOV(bh, 0));	// 614 mov     bh, 0 ;~ 00D0:0525
 cs=0x192;eip=0x000527; 	T(MOV(ah, 2));	// 615 mov     ah, 2 ;~ 00D0:0527
-cs=0x192;eip=0x000529; 	R(_INT(0x10));	// 616 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 00D0:0529
+cs=0x192;eip=0x000529; 	S(_INT(0x10));	// 616 int     10h             ; - VIDEO - SET CURSOR POSITION ;~ 00D0:0529
 cs=0x192;eip=0x00052b; 	X(POP(si));	// 619 pop     si ;~ 00D0:052B
 cs=0x192;eip=0x00052c; 	J(JMP(sub_104b7));	// 620 jmp     short sub_104B7 ;~ 00D0:052C
 loc_1052e:
@@ -613,10 +613,10 @@ sub_105bb:
 cs=0x192;eip=0x0005bb; 	T(MOV(ah, 1));	// 725 mov     ah, 1 ;~ 00D0:05BB
 ret_d0_5bd:
 	// 4411 
-cs=0x192;eip=0x0005bd; 	R(_INT(0x16));	// 726 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:05BD
+cs=0x192;eip=0x0005bd; 	S(_INT(0x16));	// 726 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:05BD
 cs=0x192;eip=0x0005bf; 	J(JZ(sub_105bb));	// 730 jz      short sub_105BB ;~ 00D0:05BF
 cs=0x192;eip=0x0005c1; 	T(MOV(ah, 0));	// 731 mov     ah, 0 ;~ 00D0:05C1
-cs=0x192;eip=0x0005c3; 	R(_INT(0x16));	// 732 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:05C3
+cs=0x192;eip=0x0005c3; 	S(_INT(0x16));	// 732 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:05C3
 cs=0x192;eip=0x0005c5; 	J(RETN(0));	// 734 retn ;~ 00D0:05C5
 sub_105c6:
 	// 741 
@@ -624,7 +624,7 @@ cs=0x192;eip=0x0005c6; 	T(MOV(ch, 0x20));	// 743 mov     ch, 20h ; ' ' ;~ 00D0:0
 ret_d0_5c8:
 	// 4412 
 cs=0x192;eip=0x0005c8; 	T(MOV(ah, 1));	// 744 mov     ah, 1 ;~ 00D0:05C8
-cs=0x192;eip=0x0005ca; 	R(_INT(0x10));	// 745 int     10h             ; - VIDEO - SET CURSOR CHARACTERISTICS ;~ 00D0:05CA
+cs=0x192;eip=0x0005ca; 	S(_INT(0x10));	// 745 int     10h             ; - VIDEO - SET CURSOR CHARACTERISTICS ;~ 00D0:05CA
 cs=0x192;eip=0x0005cc; 	J(RETN(0));	// 749 retn ;~ 00D0:05CC
 sub_105cd:
 	// 756 
@@ -2337,13 +2337,13 @@ sub_110a4:
 cs=0x192;eip=0x0010a4; 	T(MOV(ah, 1));	// 2458 mov     ah, 1 ;~ 00D0:10A4
 ret_d0_10a6:
 	// 4642 
-cs=0x192;eip=0x0010a6; 	R(_INT(0x16));	// 2459 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:10A6
+cs=0x192;eip=0x0010a6; 	S(_INT(0x16));	// 2459 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:10A6
 cs=0x192;eip=0x0010a8; 	J(JNZ(loc_110ad));	// 2463 jnz     short loc_110AD ;~ 00D0:10A8
 cs=0x192;eip=0x0010aa; 	J(JMP(loc_1112c));	// 2464 jmp     loc_1112C ;~ 00D0:10AA
 loc_110ad:
 	// 4643 
 cs=0x192;eip=0x0010ad; 	T(MOV(ah, 0));	// 2468 mov     ah, 0 ;~ 00D0:10AD
-cs=0x192;eip=0x0010af; 	R(_INT(0x16));	// 2469 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:10AF
+cs=0x192;eip=0x0010af; 	S(_INT(0x16));	// 2469 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:10AF
 cs=0x192;eip=0x0010b1; 	T(MOV(cx, 5));	// 2471 mov     cx, 5 ;~ 00D0:10B1
 cs=0x192;eip=0x0010b4; 	T(MOV(bx, 0x5800));	// 2472 mov     bx, 5800h ;~ 00D0:10B4
 loc_110b7:
@@ -2375,7 +2375,7 @@ loc_110de:
 cs=0x192;eip=0x0010de; 	J(CALL(sub_12ad8,0));	// 2500 call    sub_12AD8 ;~ 00D0:10DE
 cs=0x192;eip=0x0010e1; 	J(JZ(loc_110de));	// 2501 jz      short loc_110DE ;~ 00D0:10E1
 cs=0x192;eip=0x0010e3; 	T(MOV(ah, 0));	// 2502 mov     ah, 0 ;~ 00D0:10E3
-cs=0x192;eip=0x0010e5; 	R(_INT(0x16));	// 2503 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:10E5
+cs=0x192;eip=0x0010e5; 	S(_INT(0x16));	// 2503 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:10E5
 loc_110e7:
 	// 4649 
 cs=0x192;eip=0x0010e7; 	J(JMP(sub_110a4));	// 2507 jmp     short sub_110A4 ;~ 00D0:10E7
@@ -5308,7 +5308,7 @@ ret_d0_2777:
 	// 5022 
 cs=0x192;eip=0x002777; 	T(MOV(al, byte_1a716));	// 5857 mov     al, byte_1A716 ;~ 00D0:2777
 cs=0x192;eip=0x00277a; 	T(AND(al, 0x0FC));	// 5858 and     al, 0FCh ;~ 00D0:277A
-cs=0x192;eip=0x00277c; 	R(OUT(0x61, al));	// 5859 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:277C
+cs=0x192;eip=0x00277c; 	S(OUT(0x61, al));	// 5859 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:277C
 cs=0x192;eip=0x00277e; 	J(RETN(0));	// 5867 retn ;~ 00D0:277E
 seg000_277f_proc:
 	// 5873 
@@ -5507,7 +5507,7 @@ loc_128d2:
 cs=0x192;eip=0x0028d2; 	X(PUSH(cx));	// 6072 push    cx ;~ 00D0:28D2
 cs=0x192;eip=0x0028d3; 	J(CALL(sub_10620,0));	// 6073 call    sub_10620 ;~ 00D0:28D3
 cs=0x192;eip=0x0028d6; 	T(MOV(ah, 1));	// 6074 mov     ah, 1 ;~ 00D0:28D6
-cs=0x192;eip=0x0028d8; 	R(_INT(0x16));	// 6075 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:28D8
+cs=0x192;eip=0x0028d8; 	S(_INT(0x16));	// 6075 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:28D8
 cs=0x192;eip=0x0028da; 	X(POP(cx));	// 6079 pop     cx ;~ 00D0:28DA
 cs=0x192;eip=0x0028db; 	J(JNZ(loc_128e2));	// 6080 jnz     short loc_128E2 ;~ 00D0:28DB
 cs=0x192;eip=0x0028dd; 	J(LOOP(loc_128d2));	// 6081 loop    loc_128D2 ;~ 00D0:28DD
@@ -5517,7 +5517,7 @@ cs=0x192;eip=0x0028df; 	J(JMP(loc_12739));	// 6085 jmp     loc_12739 ;~ 00D0:28D
 loc_128e2:
 	// 5045 
 cs=0x192;eip=0x0028e2; 	T(MOV(ah, 0));	// 6089 mov     ah, 0 ;~ 00D0:28E2
-cs=0x192;eip=0x0028e4; 	R(_INT(0x16));	// 6090 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:28E4
+cs=0x192;eip=0x0028e4; 	S(_INT(0x16));	// 6090 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:28E4
 cs=0x192;eip=0x0028e6; 	T(CMP(al, 3));	// 6092 cmp     al, 3 ;~ 00D0:28E6
 cs=0x192;eip=0x0028e8; 	J(JZ(loc_128f3));	// 6093 jz      short loc_128F3 ;~ 00D0:28E8
 cs=0x192;eip=0x0028ea; 	T(CMP(al, 0x0E));	// 6094 cmp     al, 0Eh ;~ 00D0:28EA
@@ -5676,17 +5676,17 @@ sub_12a13:
 cs=0x192;eip=0x002a13; 	T(MOV(ah, 0));	// 6275 mov     ah, 0 ;~ 00D0:2A13
 ret_d0_2a15:
 	// 5062 
-cs=0x192;eip=0x002a15; 	R(_INT(0x16));	// 6276 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:2A15
+cs=0x192;eip=0x002a15; 	S(_INT(0x16));	// 6276 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:2A15
 cs=0x192;eip=0x002a17; 	J(RETN(0));	// 6278 retn ;~ 00D0:2A17
 sub_12a18:
 	// 6285 
 cs=0x192;eip=0x002a18; 	T(MOV(ah, 1));	// 6287 mov     ah, 1 ;~ 00D0:2A18
 ret_d0_2a1a:
 	// 5063 
-cs=0x192;eip=0x002a1a; 	R(_INT(0x16));	// 6288 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:2A1A
+cs=0x192;eip=0x002a1a; 	S(_INT(0x16));	// 6288 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:2A1A
 cs=0x192;eip=0x002a1c; 	J(JZ(locret_12a24));	// 6292 jz      short locret_12A24 ;~ 00D0:2A1C
 cs=0x192;eip=0x002a1e; 	T(MOV(ah, 0));	// 6293 mov     ah, 0 ;~ 00D0:2A1E
-cs=0x192;eip=0x002a20; 	R(_INT(0x16));	// 6294 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:2A20
+cs=0x192;eip=0x002a20; 	S(_INT(0x16));	// 6294 int     16h             ; KEYBOARD - READ CHAR FROM BUFFER, WAIT IF EMPTY ;~ 00D0:2A20
 cs=0x192;eip=0x002a22; 	J(JMP(sub_12a18));	// 6296 jmp     short sub_12A18 ;~ 00D0:2A22
 locret_12a24:
 	// 5064 
@@ -5836,7 +5836,7 @@ cs=0x192;eip=0x002ae9; 	T(MOV(ax, *(dw*)(raddr(es,0x72))));	// 6478 mov     ax, 
 cs=0x192;eip=0x002aed; 	X(MOV(word_1a6f2, ax));	// 6479 mov     word_1A6F2, ax ;~ 00D0:2AED
 cs=0x192;eip=0x002af0; 	X(MOV(*(dw*)(raddr(es,0x70)), m2c::kloc_12d56));	// 6480 mov     word ptr es:70h, offset loc_12D56 ;~ 00D0:2AF0
 cs=0x192;eip=0x002af7; 	X(MOV(*(dw*)(raddr(es,0x72)), cs));	// 6481 mov     word ptr es:72h, cs ;~ 00D0:2AF7
-cs=0x192;eip=0x002afc; 	R(IN(al, 0x61));	// 6482 in      al, 61h         ; PC/XT PPI port B bits: ;~ 00D0:2AFC
+cs=0x192;eip=0x002afc; 	S(IN(al, 0x61));	// 6482 in      al, 61h         ; PC/XT PPI port B bits: ;~ 00D0:2AFC
 cs=0x192;eip=0x002afe; 	T(AND(al, 0x0FC));	// 6490 and     al, 0FCh ;~ 00D0:2AFE
 cs=0x192;eip=0x002b00; 	X(MOV(byte_1a716, al));	// 6491 mov     byte_1A716, al ;~ 00D0:2B00
 cs=0x192;eip=0x002b03; 	T(MOV(bx, 0x79DF));	// 6492 mov     bx, 79DFh ;~ 00D0:2B03
@@ -5956,7 +5956,7 @@ cs=0x192;eip=0x002bb7; 	T(INC(si));	// 6614 inc     si ;~ 00D0:2BB7
 cs=0x192;eip=0x002bb8; 	X(MOV(word_1a6f4, si));	// 6615 mov     word_1A6F4, si ;~ 00D0:2BB8
 cs=0x192;eip=0x002bbc; 	X(PUSH(ax));	// 6616 push    ax ;~ 00D0:2BBC
 cs=0x192;eip=0x002bbd; 	T(MOV(ah, 1));	// 6617 mov     ah, 1 ;~ 00D0:2BBD
-cs=0x192;eip=0x002bbf; 	R(_INT(0x16));	// 6618 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:2BBF
+cs=0x192;eip=0x002bbf; 	S(_INT(0x16));	// 6618 int     16h             ; KEYBOARD - CHECK BUFFER, DO NOT CLEAR ;~ 00D0:2BBF
 cs=0x192;eip=0x002bc1; 	X(POP(ax));	// 6622 pop     ax ;~ 00D0:2BC1
 cs=0x192;eip=0x002bc2; 	J(JZ(loc_12bc7));	// 6623 jz      short loc_12BC7 ;~ 00D0:2BC2
 cs=0x192;eip=0x002bc4; 	J(JMP(loc_12abc));	// 6624 jmp     loc_12ABC ;~ 00D0:2BC4
@@ -6090,11 +6090,11 @@ loc_12cb9:
 cs=0x192;eip=0x002cb9; 	X(MOV(word_1a702, ax));	// 6762 mov     word_1A702, ax ;~ 00D0:2CB9
 loc_12cbc:
 	// 5109 
-cs=0x192;eip=0x002cbc; 	R(LOOP(loc_12cbc));	// 6765 loop    loc_12CBC ;~ 00D0:2CBC
+cs=0x192;eip=0x002cbc; 	S(LOOP(loc_12cbc));	// 6765 loop    loc_12CBC ;~ 00D0:2CBC
 cs=0x192;eip=0x002cbe; 	T(MOV(al, byte_1a716));	// 6766 mov     al, byte_1A716 ;~ 00D0:2CBE
 cs=0x192;eip=0x002cc1; 	T(XOR(al, byte_14a12));	// 6767 xor     al, byte_14A12 ;~ 00D0:2CC1
 cs=0x192;eip=0x002cc5; 	X(MOV(byte_1a716, al));	// 6768 mov     byte_1A716, al ;~ 00D0:2CC5
-cs=0x192;eip=0x002cc8; 	R(OUT(0x61, al));	// 6769 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:2CC8
+cs=0x192;eip=0x002cc8; 	S(OUT(0x61, al));	// 6769 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:2CC8
 cs=0x192;eip=0x002cca; 	T(MOV(cx, word_1a700));	// 6777 mov     cx, word_1A700 ;~ 00D0:2CCA
 cs=0x192;eip=0x002cce; 	X(DEC(byte_1a714));	// 6778 dec     byte_1A714 ;~ 00D0:2CCE
 cs=0x192;eip=0x002cd2; 	T(MOV(al, byte_1a714));	// 6779 mov     al, byte_1A714 ;~ 00D0:2CD2
@@ -6292,7 +6292,7 @@ cs=0x192;eip=0x002df0; 	T(NOP);	// 6983 nop ;~ 00D0:2DF0
 cs=0x192;eip=0x002df1; 	J(JNZ(loc_12ded));	// 6984 jnz     short loc_12DED ;~ 00D0:2DF1
 cs=0x192;eip=0x002df3; 	T(XOR(dl, byte_14a12));	// 6985 xor     dl, byte_14A12 ;~ 00D0:2DF3
 cs=0x192;eip=0x002df7; 	T(MOV(al, dl));	// 6986 mov     al, dl ;~ 00D0:2DF7
-cs=0x192;eip=0x002df9; 	R(OUT(0x61, al));	// 6987 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:2DF9
+cs=0x192;eip=0x002df9; 	S(OUT(0x61, al));	// 6987 out     61h, al         ; PC/XT PPI port B bits: ;~ 00D0:2DF9
 cs=0x192;eip=0x002dfb; 	T(INC(bx));	// 6995 inc     bx ;~ 00D0:2DFB
 cs=0x192;eip=0x002dfc; 	T(DEC(dh));	// 6996 dec     dh ;~ 00D0:2DFC
 cs=0x192;eip=0x002dfe; 	J(JNZ(loc_12ddc));	// 6997 jnz     short loc_12DDC ;~ 00D0:2DFE

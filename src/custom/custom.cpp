@@ -26,7 +26,7 @@ namespace m2c
 bool trace_instructions = true; //m2c::debug >= 1;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
 bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
-bool collect_rt_info = true;
+bool collect_rt_info = false;
 bool collect_rt_info_vars = false;
 
 static const size_t
@@ -128,6 +128,7 @@ init_get_fname (char *dst, char *src)
 }
 
 namespace m2c{
+bool defered_irqs = false;
 std::string exename;
 static void print_traces ();
 
@@ -308,7 +309,6 @@ namespace m2c
 #endif
         }
         already_in_hw_int = false;
-
       }
     else if (!GET_IF () && fix_segs () && !PIC_RunQueue ())     // Can only call PIC_RunQueue() separatelly if IF=0
       {                         // So no IRQ interrupts will be started
@@ -331,13 +331,14 @@ namespace m2c
     if (collect_rt_info) shadow_memory.collect_segs();
 //    X86_REGREF
 //    log_debug("CPU_Cycles %d\n", CPU_Cycles);
-    if (CPU_Cycles > 0)
+    if (!defered_irqs && CPU_Cycles > 0)
       {
         CPU_Cycles--;
       }
 
-    if (CPU_Cycles == 0)
+    if (defered_irqs || CPU_Cycles == 0)
       {
+        defered_irqs = false;
 //    log_debug ("CPU_CycleLeft %d\n", CPU_CycleLeft);
         execute_irqs ();
       }
@@ -919,7 +920,7 @@ stackDump();
     bool compare (compare_instructions  && !already_checked[(seg << 4) + ip1]);
     
     single_step ();
-
+/*(
     if (!compare)
       {
         if (CPU_Cycles > 0)
@@ -927,7 +928,7 @@ stackDump();
         return false;
       }
     already_checked[(seg << 4) + ip1] = true;
-
+*/
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
 //printf("~ %x %x\n",ip1,ip2);
@@ -936,7 +937,7 @@ stackDump();
         process_self_mod(seg, ip1, instr_size);
         return false;
       }
-    return true;
+    return false;
   }
 
   bool Tstart (const char *file, int line, const char *instr)
@@ -1192,10 +1193,11 @@ stackDump();
     dw oldsp = sp;
     fix_segs ();
     return_point.push (*(dd *) raddr (ss, sp));
+/*
 if (debug > 0)
     printf ("Enter interp current cs=%x ip=%x sp=%x ret_point:%x retp.size()=%d\n", cs, ip, sp,
                return_point.top (), return_point.size ());
-
+*/
     do
       {
 //  log_debug("start\n");
@@ -1207,9 +1209,10 @@ if (debug > 0)
       {
         log_error ("Error cs:ip != return_point %x\n", return_point.top ());
       }
+/*
 if (debug > 0)
     printf ("Exit interp cs=%x ip=%x sp=%x\n", cs, ip, sp);
-
+*/
     if (oldsp + 4 != sp && cs != 0xf000)
       {
         log_error ("Error it should consume 4 bytes from stack\n"); // callf to bios consumes 0 bytes

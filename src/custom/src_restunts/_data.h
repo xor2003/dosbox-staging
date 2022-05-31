@@ -4167,7 +4167,7 @@ db callbackflags2[128]; // 2d19:41ea
 db dummy0_313fa[6]; // 2d19:426a
 db in_kb_parse_key; // 2d19:4270
 db dummy0_31401[1];
-db callbacks[256]; // 2d19:4272
+db callbacks_[256]; // 2d19:4272
 db dummy0_31502[32]; // 2d19:4372
 dw word_3fb02; // 2d19:4392
 dw word_3fb04; // 2d19:4394

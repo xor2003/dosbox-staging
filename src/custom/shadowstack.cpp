@@ -36,7 +36,12 @@ namespace m2c{
 //    if (m2c::debug)
       {
         X86_REGREF
-//       m_needtoskipcall=0;
+          if (!m_ss.empty () && m_current && sp - m_ss.at(m_current - 1).sp > 10)
+          {
+                  log_error("Difference of SP and frame SP is to big\n");
+                  return;
+          }
+
                   log_debug ("m_needtoskipcall %d\n", m_needtoskipcall);
 //    m2c::log_info("ssize=%d\n",m_ss.size() );
           if (!m_ss.empty () && m_current)
