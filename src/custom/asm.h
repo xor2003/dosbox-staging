@@ -204,7 +204,7 @@ uint8_t&  Z##l = *(uint8_t *)& e##Z ;
 uint32_t& e##Z = _state->e##Z; \
 uint16_t& Z = *(uint16_t *)& e##Z ;
 
-#ifndef DOSBOX_CUSTOM //masm2c
+#if DOSBOX_CUSTOM==0 || M2CDEBUG==-1 //masm2c or decomp
     class ShadowStack {
         struct Frame {
             const char *file;

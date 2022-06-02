@@ -900,27 +900,27 @@ cs=0x37eb;eip=0x0004f8; 	T(NEG(ax));	// 118922 neg     ax ;~ 37EB:04F8
 cs=0x37eb;eip=0x0004fa; 	T(ADD(ax, 0x0FFFF));	// 118923 add     ax, 0FFFFh ;~ 37EB:04FA
 cs=0x37eb;eip=0x0004fd; 	T(MOV(cx, ax));	// 118924 mov     cx, ax ;~ 37EB:04FD
 cs=0x37eb;eip=0x0004ff; 	T(MOV(al, 0x0B6));	// 118925 mov     al, 0B6h ; '¶' ;~ 37EB:04FF
-cs=0x37eb;eip=0x000501; 	R(OUT(0x43, al));	// 118926 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0501
+cs=0x37eb;eip=0x000501; 	S(OUT(0x43, al));	// 118926 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0501
 cs=0x37eb;eip=0x000503; 	T(MOV(al, 0x0FF));	// 118927 mov     al, 0FFh ;~ 37EB:0503
-cs=0x37eb;eip=0x000505; 	R(OUT(0x42, al));	// 118928 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0505
-cs=0x37eb;eip=0x000507; 	R(OUT(0x42, al));	// 118929 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0507
-cs=0x37eb;eip=0x000509; 	R(IN(al, 0x61));	// 118930 in      al, 61h         ; PC/XT PPI port B bits: ;~ 37EB:0509
+cs=0x37eb;eip=0x000505; 	S(OUT(0x42, al));	// 118928 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0505
+cs=0x37eb;eip=0x000507; 	S(OUT(0x42, al));	// 118929 out     42h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0507
+cs=0x37eb;eip=0x000509; 	S(IN(al, 0x61));	// 118930 in      al, 61h         ; PC/XT PPI port B bits: ;~ 37EB:0509
 cs=0x37eb;eip=0x00050b; 	T(OR(al, 1));	// 118938 or      al, 1 ;~ 37EB:050B
-cs=0x37eb;eip=0x00050d; 	R(OUT(0x61, al));	// 118939 out     61h, al         ; PC/XT PPI port B bits: ;~ 37EB:050D
+cs=0x37eb;eip=0x00050d; 	S(OUT(0x61, al));	// 118939 out     61h, al         ; PC/XT PPI port B bits: ;~ 37EB:050D
 loc_4699f:
 	// 10036 
 cs=0x37eb;eip=0x00050f; 	T(MOV(al, 0x80));	// 118949 mov     al, 80h ; '€' ;~ 37EB:050F
-cs=0x37eb;eip=0x000511; 	R(OUT(0x43, al));	// 118950 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0511
-cs=0x37eb;eip=0x000513; 	R(IN(al, 0x42));	// 118951 in      al, 42h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0513
+cs=0x37eb;eip=0x000511; 	S(OUT(0x43, al));	// 118950 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0511
+cs=0x37eb;eip=0x000513; 	S(IN(al, 0x42));	// 118951 in      al, 42h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0513
 cs=0x37eb;eip=0x000515; 	T(XCHG(al, ah));	// 118952 xchg    al, ah ;~ 37EB:0515
-cs=0x37eb;eip=0x000517; 	R(IN(al, 0x42));	// 118953 in      al, 42h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0517
+cs=0x37eb;eip=0x000517; 	S(IN(al, 0x42));	// 118953 in      al, 42h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0517
 cs=0x37eb;eip=0x000519; 	T(XCHG(al, ah));	// 118954 xchg    al, ah ;~ 37EB:0519
 cs=0x37eb;eip=0x00051b; 	T(CMP(ax, cx));	// 118955 cmp     ax, cx ;~ 37EB:051B
-printf("Wait %x %x\n",ax,cx);
+//printf("Wait %x %x\n",ax,cx);
 //cs=0x37eb;eip=0x00051d; 	J(JNC(loc_4699f));	// 118956 jnb     short loc_4699F ;~ 37EB:051D
-cs=0x37eb;eip=0x00051f; 	R(IN(al, 0x61));	// 118957 in      al, 61h         ; PC/XT PPI port B bits: ;~ 37EB:051F
+cs=0x37eb;eip=0x00051f; 	S(IN(al, 0x61));	// 118957 in      al, 61h         ; PC/XT PPI port B bits: ;~ 37EB:051F
 cs=0x37eb;eip=0x000521; 	T(AND(al, 0x0FE));	// 118965 and     al, 0FEh ;~ 37EB:0521
-cs=0x37eb;eip=0x000523; 	R(OUT(0x61, al));	// 118966 out     61h, al         ; PC/XT PPI port B bits: ;~ 37EB:0523
+cs=0x37eb;eip=0x000523; 	S(OUT(0x61, al));	// 118966 out     61h, al         ; PC/XT PPI port B bits: ;~ 37EB:0523
 cs=0x37eb;eip=0x000525; 	X(POP(cx));	// 118974 pop     cx ;~ 37EB:0525
 cs=0x37eb;eip=0x000526; 	X(POP(ax));	// 118975 pop     ax ;~ 37EB:0526
 cs=0x37eb;eip=0x000527; 	J(RETN(0));	// 118976 retn ;~ 37EB:0527
@@ -1617,12 +1617,12 @@ cs=0x37eb;eip=0x0007e3; 	X(MOV(*(raddr(cs,si+0x97D)), al));	// 119445 mov     cs
 cs=0x37eb;eip=0x0007e8; 	T(MOV(al, ah));	// 119446 mov     al, ah ;~ 37EB:07E8
 	cs=seg_offset(seg041);
 cs=0x37eb;eip=0x0007ea; 	T(MOV(dx, *(dw*)(((db*)&word_46e02))));	// 119447 mov     dx, cs:word_46E02 ;~ 37EB:07EA
-cs=0x37eb;eip=0x0007ef; 	R(OUT(dx, al));	// 119448 out     dx, al ;~ 37EB:07EF
+cs=0x37eb;eip=0x0007ef; 	S(OUT(dx, al));	// 119448 out     dx, al ;~ 37EB:07EF
 cs=0x37eb;eip=0x0007f0; 	T(MOV(ax, 1));	// 119449 mov     ax, 1 ;~ 37EB:07F0
 cs=0x37eb;eip=0x0007f3; 	J(CALL(sub_46986,0));	// 119450 call    sub_46986 ;~ 37EB:07F3
 cs=0x37eb;eip=0x0007f6; 	X(POP(ax));	// 119451 pop     ax ;~ 37EB:07F6
 cs=0x37eb;eip=0x0007f7; 	T(INC(dx));	// 119452 inc     dx ;~ 37EB:07F7
-cs=0x37eb;eip=0x0007f8; 	R(OUT(dx, al));	// 119453 out     dx, al ;~ 37EB:07F8
+cs=0x37eb;eip=0x0007f8; 	S(OUT(dx, al));	// 119453 out     dx, al ;~ 37EB:07F8
 cs=0x37eb;eip=0x0007f9; 	X(PUSH(ax));	// 119454 push    ax ;~ 37EB:07F9
 cs=0x37eb;eip=0x0007fa; 	T(MOV(ax, 1));	// 119455 mov     ax, 1 ;~ 37EB:07FA
 cs=0x37eb;eip=0x0007fd; 	J(CALL(sub_46986,0));	// 119456 call    sub_46986 ;~ 37EB:07FD
@@ -1660,7 +1660,7 @@ cs=0x37eb;eip=0x000805; 	X(PUSH(dx));	// 119470 push    dx ;~ 37EB:0805
 cs=0x37eb;eip=0x000806; 	T(XOR(ax, ax));	// 119471 xor     ax, ax ;~ 37EB:0806
 	cs=seg_offset(seg041);
 cs=0x37eb;eip=0x000808; 	T(MOV(dx, *(dw*)(((db*)&word_46e02))));	// 119472 mov     dx, cs:word_46E02 ;~ 37EB:0808
-cs=0x37eb;eip=0x00080d; 	R(IN(al, dx));	// 119473 in      al, dx ;~ 37EB:080D
+cs=0x37eb;eip=0x00080d; 	S(IN(al, dx));	// 119473 in      al, dx ;~ 37EB:080D
 cs=0x37eb;eip=0x00080e; 	X(POP(dx));	// 119474 pop     dx ;~ 37EB:080E
 cs=0x37eb;eip=0x00080f; 	J(RETN(0));	// 119475 retn ;~ 37EB:080F
 
@@ -1887,17 +1887,17 @@ cs=0x37eb;eip=0x000b48; 	J(CALL(sub_46c57,0));	// 119651 call    sub_46C57 ;~ 37
 cs=0x37eb;eip=0x000b4b; 	T(MOV(ax, 0x0B02E));	// 119652 mov     ax, 0B02Eh ;~ 37EB:0B4B
 cs=0x37eb;eip=0x000b4e; 	J(CALL(sub_46c57,0));	// 119653 call    sub_46C57 ;~ 37EB:0B4E
 cs=0x37eb;eip=0x000b51; 	T(MOV(al, 0x36));	// 119654 mov     al, 36h ; '6' ;~ 37EB:0B51
-cs=0x37eb;eip=0x000b53; 	R(OUT(0x43, al));	// 119655 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B53
+cs=0x37eb;eip=0x000b53; 	S(OUT(0x43, al));	// 119655 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B53
 cs=0x37eb;eip=0x000b55; 	T(XOR(al, al));	// 119656 xor     al, al ;~ 37EB:0B55
-cs=0x37eb;eip=0x000b57; 	R(OUT(0x40, al));	// 119657 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B57
-cs=0x37eb;eip=0x000b59; 	R(OUT(0x40, al));	// 119658 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B59
+cs=0x37eb;eip=0x000b57; 	S(OUT(0x40, al));	// 119657 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B57
+cs=0x37eb;eip=0x000b59; 	S(OUT(0x40, al));	// 119658 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B59
 loc_46feb:
 	// 10049 
 cs=0x37eb;eip=0x000b5b; 	T(MOV(al, 6));	// 119661 mov     al, 6 ;~ 37EB:0B5B
-cs=0x37eb;eip=0x000b5d; 	R(OUT(0x43, al));	// 119662 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B5D
-cs=0x37eb;eip=0x000b5f; 	R(IN(al, 0x40));	// 119663 in      al, 40h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B5F
+cs=0x37eb;eip=0x000b5d; 	S(OUT(0x43, al));	// 119662 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B5D
+cs=0x37eb;eip=0x000b5f; 	S(IN(al, 0x40));	// 119663 in      al, 40h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B5F
 cs=0x37eb;eip=0x000b61; 	T(MOV(cl, al));	// 119664 mov     cl, al ;~ 37EB:0B61
-cs=0x37eb;eip=0x000b63; 	R(IN(al, 0x40));	// 119665 in      al, 40h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B63
+cs=0x37eb;eip=0x000b63; 	S(IN(al, 0x40));	// 119665 in      al, 40h         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B63
 cs=0x37eb;eip=0x000b65; 	T(MOV(ch, al));	// 119666 mov     ch, al ;~ 37EB:0B65
 cs=0x37eb;eip=0x000b67; 	T(CMP(cx, 0x0F6AD));	// 119667 cmp     cx, 0F6ADh ;~ 37EB:0B67
 cs=0x37eb;eip=0x000b6b; 	J(JG(loc_46feb));	// 119668 jg      short loc_46FEB ;~ 37EB:0B6B
@@ -1950,11 +1950,11 @@ cs=0x37eb;eip=0x000b96; 	T(CMP(cx, dx));	// 119695 cmp     cx, dx ;~ 37EB:0B96
 cs=0x37eb;eip=0x000b98; 	T(ADC(ax, 0));	// 119696 adc     ax, 0 ;~ 37EB:0B98
 cs=0x37eb;eip=0x000b9b; 	T(MOV(cx, ax));	// 119697 mov     cx, ax ;~ 37EB:0B9B
 cs=0x37eb;eip=0x000b9d; 	T(MOV(al, 0x36));	// 119698 mov     al, 36h ; '6' ;~ 37EB:0B9D
-cs=0x37eb;eip=0x000b9f; 	R(OUT(0x43, al));	// 119699 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B9F
+cs=0x37eb;eip=0x000b9f; 	S(OUT(0x43, al));	// 119699 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0B9F
 cs=0x37eb;eip=0x000ba1; 	T(MOV(al, cl));	// 119700 mov     al, cl ;~ 37EB:0BA1
-cs=0x37eb;eip=0x000ba3; 	R(OUT(0x40, al));	// 119701 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BA3
+cs=0x37eb;eip=0x000ba3; 	S(OUT(0x40, al));	// 119701 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BA3
 cs=0x37eb;eip=0x000ba5; 	T(MOV(al, ch));	// 119702 mov     al, ch ;~ 37EB:0BA5
-cs=0x37eb;eip=0x000ba7; 	R(OUT(0x40, al));	// 119703 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BA7
+cs=0x37eb;eip=0x000ba7; 	S(OUT(0x40, al));	// 119703 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BA7
 cs=0x37eb;eip=0x000ba9; 	T(MOV(ax, 0x2E9C));	// 119704 mov     ax, 2E9Ch ;~ 37EB:0BA9
 cs=0x37eb;eip=0x000bac; 	T(XOR(dx, dx));	// 119705 xor     dx, dx ;~ 37EB:0BAC
 cs=0x37eb;eip=0x000bae; 	T(DIV2(cx));	// 119706 div     cx ;~ 37EB:0BAE
@@ -2024,11 +2024,11 @@ cs=0x37eb;eip=0x000bf2; 	T(OR(ax, *(dw*)(((db*)&dword_4717b))));	// 119745 or   
 cs=0x37eb;eip=0x000bf7; 	J(JZ(loc_470ba));	// 119746 jz      short loc_470BA ;~ 37EB:0BF7
 cs=0x37eb;eip=0x000bf9; 	T(CLI);	// 119747 cli ;~ 37EB:0BF9
 cs=0x37eb;eip=0x000bfa; 	T(MOV(al, 0x36));	// 119748 mov     al, 36h ; '6' ;~ 37EB:0BFA
-cs=0x37eb;eip=0x000bfc; 	R(OUT(0x43, al));	// 119749 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BFC
+cs=0x37eb;eip=0x000bfc; 	S(OUT(0x43, al));	// 119749 out     43h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0BFC
 cs=0x37eb;eip=0x000bfe; 	T(MOV(ax, 0x2E9C));	// 119750 mov     ax, 2E9Ch ;~ 37EB:0BFE
-cs=0x37eb;eip=0x000c01; 	R(OUT(0x40, al));	// 119751 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0C01
+cs=0x37eb;eip=0x000c01; 	S(OUT(0x40, al));	// 119751 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0C01
 cs=0x37eb;eip=0x000c03; 	T(MOV(al, ah));	// 119752 mov     al, ah ;~ 37EB:0C03
-cs=0x37eb;eip=0x000c05; 	R(OUT(0x40, al));	// 119753 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0C05
+cs=0x37eb;eip=0x000c05; 	S(OUT(0x40, al));	// 119753 out     40h, al         ; Timer 8253-5 (AT: 8254.2). ;~ 37EB:0C05
 cs=0x37eb;eip=0x000c07; 	T(XOR(ax, ax));	// 119754 xor     ax, ax ;~ 37EB:0C07
 cs=0x37eb;eip=0x000c09; 	T(MOV(ds, ax));	// 119755 mov     ds, ax ;~ 37EB:0C09
 cs=0x37eb;eip=0x000c0b; 	T(MOV(di, 0x20));	// 119757 mov     di, 20h ; ' ' ;~ 37EB:0C0B
@@ -2087,11 +2087,11 @@ cs=0x37eb;eip=0x000c3a; 	J(JZ(loc_470fb));	// 119783 jz      short loc_470FB ;~ 
 cs=0x37eb;eip=0x000c3c; 	T(MOV(al, 0x40));	// 119784 mov     al, 40h ; '@' ;~ 37EB:0C3C
 	cs=seg_offset(seg041);
 cs=0x37eb;eip=0x000c3e; 	T(MOV(dx, *(dw*)(((db*)&word_46e02))));	// 119785 mov     dx, cs:word_46E02 ;~ 37EB:0C3E
-cs=0x37eb;eip=0x000c43; 	R(OUT(dx, al));	// 119786 out     dx, al ;~ 37EB:0C43
+cs=0x37eb;eip=0x000c43; 	S(OUT(dx, al));	// 119786 out     dx, al ;~ 37EB:0C43
 cs=0x37eb;eip=0x000c44; 	T(MOV(cx, 0x0A));	// 119787 mov     cx, 0Ah ;~ 37EB:0C44
 loc_470d7:
 	// 10052 
-cs=0x37eb;eip=0x000c47; 	R(IN(al, dx));	// 119790 in      al, dx ;~ 37EB:0C47
+cs=0x37eb;eip=0x000c47; 	S(IN(al, dx));	// 119790 in      al, dx ;~ 37EB:0C47
 cs=0x37eb;eip=0x000c48; 	J(LOOP(loc_470d7));	// 119791 loop    loc_470D7 ;~ 37EB:0C48
 	cs=seg_offset(seg041);
 cs=0x37eb;eip=0x000c4a; 	T(LES(bx, *(dd*)(((db*)&dword_47173))));	// 119792 les     bx, cs:dword_47173 ;~ 37EB:0C4A
@@ -2100,7 +2100,7 @@ cs=0x37eb;eip=0x000c52; 	T(XOR(ah, ah));	// 119794 xor     ah, ah ;~ 37EB:0C52
 cs=0x37eb;eip=0x000c54; 	T(MOV(si, ax));	// 119795 mov     si, ax ;~ 37EB:0C54
 cs=0x37eb;eip=0x000c56; 	T(MOV(al, *(raddr(cs,si+0x0CF3))));	// 119796 mov     al, cs:[si+0CF3h] ;~ 37EB:0C56
 cs=0x37eb;eip=0x000c5b; 	T(INC(dx));	// 119797 inc     dx ;~ 37EB:0C5B
-cs=0x37eb;eip=0x000c5c; 	R(OUT(dx, al));	// 119798 out     dx, al ;~ 37EB:0C5C
+cs=0x37eb;eip=0x000c5c; 	S(OUT(dx, al));	// 119798 out     dx, al ;~ 37EB:0C5C
 cs=0x37eb;eip=0x000c5d; 	T(INC(bx));	// 119799 inc     bx ;~ 37EB:0C5D
 	cs=seg_offset(seg041);
 cs=0x37eb;eip=0x000c5e; 	X(MOV(*(dw*)(((db*)&dword_47173)), bx));	// 119800 mov     word ptr cs:dword_47173, bx ;~ 37EB:0C5E
@@ -2155,7 +2155,7 @@ cs=0x37eb;eip=0x000cb4; __disp=*(dd*)(((db*)&dword_4717b));
 loc_47149:
 	// 10057 
 cs=0x37eb;eip=0x000cb9; 	T(MOV(al, 0x20));	// 119843 mov     al, 20h ; ' ' ;~ 37EB:0CB9
-cs=0x37eb;eip=0x000cbb; 	R(OUT(0x20, al));	// 119844 out     20h, al         ; Interrupt controller, 8259A. ;~ 37EB:0CBB
+cs=0x37eb;eip=0x000cbb; 	S(OUT(0x20, al));	// 119844 out     20h, al         ; Interrupt controller, 8259A. ;~ 37EB:0CBB
 cs=0x37eb;eip=0x000cbd; 	X(POP(es));	// 119845 pop     es ;~ 37EB:0CBD
 cs=0x37eb;eip=0x000cbe; 	X(POP(si));	// 119846 pop     si ;~ 37EB:0CBE
 cs=0x37eb;eip=0x000cbf; 	X(POP(dx));	// 119847 pop     dx ;~ 37EB:0CBF
