@@ -19,10 +19,11 @@ namespace m2c{
         f.pointer_ = (dw *) m2c::raddr_ (ss, sp);
         f.itwascall = m_itiscall;
         f.call_deep = m_itiscall?++m_deep:0;
-        if (m_current == m_ss.size ())
-          m_ss.resize (m_current + 1);
+        //if (m_current == m_ss.size ())
+        //  m_ss.resize (m_current + 1);
         print_frame(f);
-        m_ss.at(m_current++) = f;
+        m_current = esp;
+        m_ss[esp] = f;
      m2c::log_debug("m_itiscall=%d m_deep=%d\n",m_itiscall,m_deep);
 //     m2c::log_info("ssize=%d\n",m_ss.size());
       }
@@ -30,13 +31,22 @@ namespace m2c{
 //     m2c::log_info("---ShadowStack::push\n");
   }
 
+ bool ShadowStack::itwascall() {
+   X86_REGREF
+   return m_ss[esp].itwascall;
+  }
+
   void ShadowStack::pop (_STATE * _state)
   {
-     if (!m_active && !m_forceactive) return;
+     if (!m_active && !m_forceactive) 
+       {
+                  log_debug ("non-active %x %x\n", m_active, m_forceactive);
+		return;
+	}
 //    if (m2c::debug)
       {
         X86_REGREF
-          if (!m_ss.empty () && m_current && sp - m_ss.at(m_current - 1).sp > 10)
+          if (!m_ss.empty () && m_current && sp - m_ss.at(m_current).sp > 10)
           {
                   log_error("Difference of SP and frame SP is to big\n");
                   return;
@@ -51,20 +61,21 @@ namespace m2c{
             size_t tcount = 0;
             do
               {
-                tsp = m_ss.at(m_current - 1).sp;
+                tsp = m_ss.at(m_current ).sp;
                 if ((tcount++) > 0)
-                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current - 1).addcounter, tsp);
+                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current).addcounter, tsp);
                 if (tsp <= sp)
-                  m_ss.at(--m_current).remcounter = counter;
+                  m_ss.at(m_current).remcounter = counter;
                   if (m_ss.at(m_current).itwascall) ++m_needtoskipcall;
                 print_frame(m_ss.at(m_current));
+                m_current += 2; 
               }
 
             while (tsp < sp);
 
-           if (m_itisret && m_ss.at(m_current).itwascall) --m_needtoskipcall;
+           if (m_itisret && m_ss.at(m_current-2).itwascall) --m_needtoskipcall;
 
-      m_currentdeep = m_ss.at(m_current).call_deep;
+      m_currentdeep = m_ss.at(m_current-2).call_deep;
                   log_debug ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall);
           }
       
@@ -109,7 +120,8 @@ return m_needtoskipcall;}
         for (int i = m_ss.size () - 1; i >= 0; i--)
           {
             Frame f = m_ss.at(i);
-            if (i == m_current - 1)
+            if (!f.init) continue;
+            if (i == m_current)
               printf ("  ");
             printf ("%4d %8x %8x %04x:%04x sp=%4x %4x", f.call_deep, f.addcounter, f.remcounter, f.cs, f.ip, f.sp, (dw) f.value);
             if ((dw) *f.pointer_ != (dw) f.value)

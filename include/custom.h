@@ -25,6 +25,7 @@ extern void Jend();
 class _STATE;
     class ShadowStack {
         struct Frame {
+            bool init=false;
             const char *file;
             size_t line;
             dd sp;
@@ -44,6 +45,9 @@ class _STATE;
         bool m_itisret=false;
         size_t m_deep=1;
     public:
+        ShadowStack() : m_ss(0x10000)
+        {}
+
         int m_needtoskipcall=0;
         bool m_active=true;
         bool m_forceactive=false;
@@ -64,7 +68,7 @@ class _STATE;
 
         void itiscall() {m_itiscall=true;}
         void itisret() {m_itisret=true;}
-        bool itwascall() {return m_ss[m_current].itwascall;}
+        bool itwascall();
 
         void decreasedeep();
         bool needtoskipcalls();

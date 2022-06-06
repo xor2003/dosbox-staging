@@ -1689,9 +1689,11 @@ struct StackPop
         if (debug>2) log_debug("before ret %x\n", stackPointer);
 
         shadow_stack.itisret();
-        POP(ip);
+
         bool ret(true);
         ret = shadow_stack.itwascall();
+
+        POP(ip);
         int skip = shadow_stack.getneedtoskipcallndclean();
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
@@ -1726,13 +1728,13 @@ throw StackPop(skip);
 
 //        m2c::MWORDSIZE averytemporary9 = 0;
 //        log_error("~~RETF before 1pop\n");
-#ifndef NO_SHADOW_STACK
-        shadow_stack.itisret();
-#endif
-        POP(ip);
         bool ret(true);
 #ifndef NO_SHADOW_STACK
+        shadow_stack.itisret();
         ret = shadow_stack.itwascall();
+#endif
+        POP(ip);
+#ifndef NO_SHADOW_STACK
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
