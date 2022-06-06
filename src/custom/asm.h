@@ -4,6 +4,11 @@
 
 #define MYINLINE inline
 
+#if M2CDEBUG==-1
+#define OPTINLINE __attribute__ ((noinline))
+#else
+#define OPTINLINE MYINLINE
+#endif
 #include <cstdlib>
 #include <cstdarg>
 #include <cmath>
@@ -43,6 +48,7 @@ extern bool collect_rt_info;
 extern volatile bool compare_jump;
 
 extern bool compare_instructions;
+extern bool complex_self_modifications;
 
 void increaseticks();
 #include <callback.h>
@@ -761,27 +767,28 @@ inline long getdata(const long& s)
     void PUSH_(S a);
 
     template<>
-    inline void PUSH_<dw>(dw a) { fix_segs();CPU_Push16(a); }
+    OPTINLINE void PUSH_<dw>(dw a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<dd>(dd a) { fix_segs();CPU_Push32(a); }
+    OPTINLINE void PUSH_<dd>(dd a) { fix_segs();CPU_Push32(a); }
 
     template<>
-    inline void PUSH_<short int>(short int a) { fix_segs();CPU_Push16(a); }
+    OPTINLINE void PUSH_<short int>(short int a) { fix_segs();CPU_Push16(a); }
 
     template<>
-    inline void PUSH_<int>(int a) { fix_segs();CPU_Push32(a); }
+    OPTINLINE void PUSH_<int>(int a) { fix_segs();CPU_Push32(a); }
 
-    inline void POP_(dw &a) { fix_segs();a = CPU_Pop16(); }
 
-    inline void POP_(dd &a) { fix_segs();a = CPU_Pop32(); }
+    OPTINLINE void POP_(dw &a) { fix_segs();a = CPU_Pop16(); }
+
+    OPTINLINE void POP_(dd &a) { fix_segs();a = CPU_Pop32(); }
 
 #else
 
 #define PUSH(a) {m2c::PUSH_(a, _state);}
 #define POP(a) {m2c::POP_(a, _state);}
     template<typename S>
-    inline void PUSH_(S a, _STATE *_state)
+    OPTINLINE void PUSH_(S a, _STATE *_state)
 {
   X86_REGREF
   dd averytemporary=a;stackPointer-=sizeof(a); 
@@ -797,7 +804,7 @@ inline long getdata(const long& s)
 //		assert((m2c::raddr_(ss,stackPointer) - ((db*)&stack))>8);}
 
     template<typename S>
-    inline void POP_(S& a, _STATE *_state)
+    OPTINLINE void POP_(S& a, _STATE *_state)
 {
   X86_REGREF
  #ifndef NO_SHADOW_STACK
@@ -869,8 +876,11 @@ inline long getdata(const long& s)
         POP(ax);
     }
 
+extern bool defered_irqs;
+OPTINLINE static void defer_irqs()
+{defered_irqs=true;}
 #if DOSBOX_CUSTOM
-#define STI {CPU_STI();m2c::defered_irqs=true;}
+#define STI {CPU_STI();m2c::defer_irqs();}
 #define CLI {CPU_CLI();}
 #else
 #define STI UNIMPLEMENTED
@@ -1556,9 +1566,9 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 
     template<class D>
     MYINLINE void XCHG_(D &dest, D &src) {
-        D t = dest;
-        dest = src;
-        src = t;
+        D t = m2c::getdata(dest);
+        m2c::setdata(&dest, m2c::getdata(src));
+        m2c::setdata(&src, t);
     }//std::swap(dest,src); TODO
 
 
@@ -1601,7 +1611,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define CMC {AFFECT_CF(GET_CF() ^ 1);}
 
 #define PUSHF {PUSH( (m2c::MWORDSIZE)m2cflags.getvalue() );}
-#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::defered_irqs=true;}
+#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::defer_irqs();}
 
 //#define PUSHF {PUSH( (dd) ((GET_CF()?1:0)|(GET_PF()?4:0)|(GET_AF()?0x10:0)|(GET_ZF()?0x40:0)|(GET_SF()?0x80:0)|(GET_DF()?0x400:0)|(GET_OF()?0x800:0)) );}
 //#define POPF {dd averytemporary; POP(averytemporary); CF=averytemporary&1;  PF=(averytemporary&4);AF=(averytemporary&0x10);ZF=(averytemporary&0x40);SF=(averytemporary&0x80);DF=(averytemporary&0x400);OF=(averytemporary&0x800);}

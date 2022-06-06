@@ -26,6 +26,7 @@ namespace m2c
 bool trace_instructions = true; //m2c::debug >= 1;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
 bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool complex_self_modifications = false;
 bool collect_rt_info = false;
 bool collect_rt_info_vars = false;
 
@@ -920,15 +921,16 @@ stackDump();
     bool compare (compare_instructions  && !already_checked[(seg << 4) + ip1]);
     
     single_step ();
-/*(
+
     if (!compare)
       {
         if (CPU_Cycles > 0)
           --CPU_Cycles;
-        return false;
+	if (!complex_self_modifications)
+          return false;
       }
     already_checked[(seg << 4) + ip1] = true;
-*/
+
     dd ip2 = cpu_regs.ip.word[0];
     size_t instr_size = ip2 - ip1;
 //printf("~ %x %x\n",ip1,ip2);
@@ -970,7 +972,8 @@ stackDump();
       {
         if (CPU_Cycles > 0)
           --CPU_Cycles;
-        return false;
+	if (!complex_self_modifications)
+           return false;
       }
     already_checked[(seg << 4) + ip1] = true;
 
@@ -984,6 +987,10 @@ stackDump();
       }
     else
       {
+        if (!compare)
+         {
+           return false;
+         }
         realflags = cpu_regs.flags;
         cpu_regs.flags &= FLAG_CF | FLAG_SF | FLAG_ZF | FLAG_OF;
         realSegs = Segs;
@@ -1083,7 +1090,8 @@ stackDump();
       {
         if (CPU_Cycles > 0)
           --CPU_Cycles;
-        return false;
+	if (!complex_self_modifications)
+           return false;
       }
     already_checked[(seg << 4) + ip1] = true;
 
@@ -1097,6 +1105,10 @@ stackDump();
       }
     else
       {
+        if (!compare)
+         {
+           return false;
+         }
         realflags = cpu_regs.flags;
         cpu_regs.flags &= FLAG_CF | FLAG_SF | FLAG_ZF | FLAG_OF;
         realSegs = Segs;
