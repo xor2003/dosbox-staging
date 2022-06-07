@@ -508,7 +508,7 @@ cs=0x1a2;eip=0x00029f; 	T(LODSB);	// 471 lodsb ;~ 01A2:029F
 cs=0x1a2;eip=0x0002a0; 	T(XOR(ah, ah));	// 472 xor     ah, ah ;~ 01A2:02A0
 cs=0x1a2;eip=0x0002a2; 	T(SHL(al, 1));	// 473 shl     al, 1 ;~ 01A2:02A2
 cs=0x1a2;eip=0x0002a4; 	J(JZ(loc_102b5));	// 474 jz      short loc_102B5 ;~ 01A2:02A4
-cs=0x1a2;eip=0x0002a6; 	T(XCHG(ax, si));	// 475 xchg    ax, si ;~ 01A2:02A6
+cs=0x1a2;eip=0x0002a6; 	X(XCHG(ax, si));	// 475 xchg    ax, si ;~ 01A2:02A6
 loc_102a7:
 	// 4382 
 cs=0x1a2;eip=0x0002a7; 	T(ADD(si, 0x40EC));	// 479 add     si, 40ECh ;~ 01A2:02A7
@@ -620,7 +620,7 @@ cs=0x1a2;eip=0x00034f; 	T(ADD(si, ax));	// 655 add     si, ax ;~ 01A2:034F
 cs=0x1a2;eip=0x000351; 	T(LODSW);	// 656 lodsw ;~ 01A2:0351
 cs=0x1a2;eip=0x000352; 	T(CMP(cx, ax));	// 657 cmp     cx, ax ;~ 01A2:0352
 cs=0x1a2;eip=0x000354; 	J(JL(loc_10358));	// 658 jl      short loc_10358 ;~ 01A2:0354
-cs=0x1a2;eip=0x000356; 	T(XCHG(dx, di));	// 659 xchg    dx, di ;~ 01A2:0356
+cs=0x1a2;eip=0x000356; 	X(XCHG(dx, di));	// 659 xchg    dx, di ;~ 01A2:0356
 loc_10358:
 	// 4394 
 cs=0x1a2;eip=0x000358; 	T(MOV(si, dx));	// 662 mov     si, dx ;~ 01A2:0358
@@ -674,19 +674,19 @@ cs=0x1a2;eip=0x0003a7; 	T(ADD(si, ax));	// 711 add     si, ax ;~ 01A2:03A7
 cs=0x1a2;eip=0x0003a9; 	T(LODSW);	// 712 lodsw ;~ 01A2:03A9
 cs=0x1a2;eip=0x0003aa; 	T(CMP(cx, bx));	// 713 cmp     cx, bx ;~ 01A2:03AA
 cs=0x1a2;eip=0x0003ac; 	J(JG(loc_103b2));	// 714 jg      short loc_103B2 ;~ 01A2:03AC
-cs=0x1a2;eip=0x0003ae; 	T(XCHG(cx, bx));	// 715 xchg    cx, bx ;~ 01A2:03AE
-cs=0x1a2;eip=0x0003b0; 	T(XCHG(di, bp));	// 716 xchg    di, bp ;~ 01A2:03B0
+cs=0x1a2;eip=0x0003ae; 	X(XCHG(cx, bx));	// 715 xchg    cx, bx ;~ 01A2:03AE
+cs=0x1a2;eip=0x0003b0; 	X(XCHG(di, bp));	// 716 xchg    di, bp ;~ 01A2:03B0
 loc_103b2:
 	// 4397 
 cs=0x1a2;eip=0x0003b2; 	T(CMP(cx, ax));	// 719 cmp     cx, ax ;~ 01A2:03B2
 cs=0x1a2;eip=0x0003b4; 	J(JG(loc_103b9));	// 720 jg      short loc_103B9 ;~ 01A2:03B4
-cs=0x1a2;eip=0x0003b6; 	T(XCHG(ax, cx));	// 721 xchg    ax, cx ;~ 01A2:03B6
-cs=0x1a2;eip=0x0003b7; 	T(XCHG(dx, di));	// 722 xchg    dx, di ;~ 01A2:03B7
+cs=0x1a2;eip=0x0003b6; 	X(XCHG(ax, cx));	// 721 xchg    ax, cx ;~ 01A2:03B6
+cs=0x1a2;eip=0x0003b7; 	X(XCHG(dx, di));	// 722 xchg    dx, di ;~ 01A2:03B7
 loc_103b9:
 	// 4398 
 cs=0x1a2;eip=0x0003b9; 	T(CMP(bx, ax));	// 725 cmp     bx, ax ;~ 01A2:03B9
 cs=0x1a2;eip=0x0003bb; 	J(JG(loc_103bf));	// 726 jg      short loc_103BF ;~ 01A2:03BB
-cs=0x1a2;eip=0x0003bd; 	T(XCHG(dx, bp));	// 727 xchg    dx, bp ;~ 01A2:03BD
+cs=0x1a2;eip=0x0003bd; 	X(XCHG(dx, bp));	// 727 xchg    dx, bp ;~ 01A2:03BD
 loc_103bf:
 	// 4399 
 cs=0x1a2;eip=0x0003bf; 	T(MOV(si, di));	// 730 mov     si, di ;~ 01A2:03BF
@@ -884,7 +884,7 @@ cs=0x1a2;eip=0x000536; 	T(LODSW);	// 982 lodsw ;~ 01A2:0536
 loc_10537:
 	// 4417 
 cs=0x1a2;eip=0x000537; 	T(ADD(ax, 0x1234));	// 985 add     ax, 1234h ;~ 01A2:0537
-cs=0x1a2;eip=0x00053a; 	T(XCHG(ax, bx));	// 986 xchg    ax, bx ;~ 01A2:053A
+cs=0x1a2;eip=0x00053a; 	X(XCHG(ax, bx));	// 986 xchg    ax, bx ;~ 01A2:053A
 cs=0x1a2;eip=0x00053b; 	X(PUSH(ds));	// 987 push    ds ;~ 01A2:053B
 cs=0x1a2;eip=0x00053c; 	J(CALL(sub_14ce1,0));	// 988 call    sub_14CE1 ;~ 01A2:053C
 cs=0x1a2;eip=0x00053f; 	X(POP(ds));	// 989 pop     ds ;~ 01A2:053F
@@ -1248,9 +1248,9 @@ cs=0x1a2;eip=0x0007e6; 	T(LODSW);	// 1423 lodsw ;~ 01A2:07E6
 cs=0x1a2;eip=0x0007e7; 	T(MOV(si, ax));	// 1424 mov     si, ax ;~ 01A2:07E7
 cs=0x1a2;eip=0x0007e9; 	T(CMP(bp, si));	// 1425 cmp     bp, si ;~ 01A2:07E9
 cs=0x1a2;eip=0x0007eb; 	J(JGE(loc_107f3));	// 1426 jge     short loc_107F3 ;~ 01A2:07EB
-cs=0x1a2;eip=0x0007ed; 	T(XCHG(di, cx));	// 1427 xchg    di, cx ;~ 01A2:07ED
-cs=0x1a2;eip=0x0007ef; 	T(XCHG(bx, dx));	// 1428 xchg    bx, dx ;~ 01A2:07EF
-cs=0x1a2;eip=0x0007f1; 	T(XCHG(bp, si));	// 1429 xchg    bp, si ;~ 01A2:07F1
+cs=0x1a2;eip=0x0007ed; 	X(XCHG(di, cx));	// 1427 xchg    di, cx ;~ 01A2:07ED
+cs=0x1a2;eip=0x0007ef; 	X(XCHG(bx, dx));	// 1428 xchg    bx, dx ;~ 01A2:07EF
+cs=0x1a2;eip=0x0007f1; 	X(XCHG(bp, si));	// 1429 xchg    bp, si ;~ 01A2:07F1
 loc_107f3:
 	// 4435 
 cs=0x1a2;eip=0x0007f3; 	T(OR(bp, bp));	// 1432 or      bp, bp ;~ 01A2:07F3
@@ -1261,7 +1261,7 @@ loc_107fb:
 	// 4436 
 cs=0x1a2;eip=0x0007fb; 	T(OR(si, si));	// 1439 or      si, si ;~ 01A2:07FB
 cs=0x1a2;eip=0x0007fd; 	J(JNS(loc_10821));	// 1440 jns     short loc_10821 ;~ 01A2:07FD
-cs=0x1a2;eip=0x0007ff; 	T(XCHG(dx, cx));	// 1441 xchg    dx, cx ;~ 01A2:07FF
+cs=0x1a2;eip=0x0007ff; 	X(XCHG(dx, cx));	// 1441 xchg    dx, cx ;~ 01A2:07FF
 cs=0x1a2;eip=0x000801; 	T(MOV(ax, di));	// 1442 mov     ax, di ;~ 01A2:0801
 cs=0x1a2;eip=0x000803; 	T(SUB(ax, dx));	// 1443 sub     ax, dx ;~ 01A2:0803
 cs=0x1a2;eip=0x000805; 	T(IMUL1_2(bp));	// 1444 imul    bp ;~ 01A2:0805
@@ -1280,7 +1280,7 @@ cs=0x1a2;eip=0x00081d; 	T(MOV(si, bp));	// 1456 mov     si, bp ;~ 01A2:081D
 cs=0x1a2;eip=0x00081f; 	T(XOR(bp, bp));	// 1457 xor     bp, bp ;~ 01A2:081F
 loc_10821:
 	// 4437 
-cs=0x1a2;eip=0x000821; 	T(XCHG(bx, dx));	// 1460 xchg    bx, dx ;~ 01A2:0821
+cs=0x1a2;eip=0x000821; 	X(XCHG(bx, dx));	// 1460 xchg    bx, dx ;~ 01A2:0821
 loc_10823:
 	// 4438 
 cs=0x1a2;eip=0x000823; 	T(ADD(bp, 0x1234));	// 1463 add     bp, 1234h ;~ 01A2:0823
@@ -1414,7 +1414,7 @@ cs=0x1a2;eip=0x0008fb; 	T(MOV(dx, ax));	// 1592 mov     dx, ax ;~ 01A2:08FB
 cs=0x1a2;eip=0x0008fd; 	T(LODSW);	// 1593 lodsw ;~ 01A2:08FD
 cs=0x1a2;eip=0x0008fe; 	T(MOV(bx, ax));	// 1594 mov     bx, ax ;~ 01A2:08FE
 cs=0x1a2;eip=0x000900; 	T(LODSW);	// 1595 lodsw ;~ 01A2:0900
-cs=0x1a2;eip=0x000901; 	T(XCHG(ax, bx));	// 1596 xchg    ax, bx ;~ 01A2:0901
+cs=0x1a2;eip=0x000901; 	X(XCHG(ax, bx));	// 1596 xchg    ax, bx ;~ 01A2:0901
 cs=0x1a2;eip=0x000902; 	X(PUSH(ds));	// 1597 push    ds ;~ 01A2:0902
 cs=0x1a2;eip=0x000903; 	J(CALL(sub_14ce1,0));	// 1598 call    sub_14CE1 ;~ 01A2:0903
 cs=0x1a2;eip=0x000906; 	X(POP(ds));	// 1599 pop     ds ;~ 01A2:0906
@@ -1651,7 +1651,7 @@ cs=0x1a2;eip=0x000aa2; 	T(MOV(dx, ax));	// 1832 mov     dx, ax ;~ 01A2:0AA2
 cs=0x1a2;eip=0x000aa4; 	T(LODSW);	// 1833 lodsw ;~ 01A2:0AA4
 cs=0x1a2;eip=0x000aa5; 	T(MOV(bx, ax));	// 1834 mov     bx, ax ;~ 01A2:0AA5
 cs=0x1a2;eip=0x000aa7; 	T(LODSW);	// 1835 lodsw ;~ 01A2:0AA7
-cs=0x1a2;eip=0x000aa8; 	T(XCHG(ax, bx));	// 1836 xchg    ax, bx ;~ 01A2:0AA8
+cs=0x1a2;eip=0x000aa8; 	X(XCHG(ax, bx));	// 1836 xchg    ax, bx ;~ 01A2:0AA8
 cs=0x1a2;eip=0x000aa9; 	X(PUSH(ds));	// 1837 push    ds ;~ 01A2:0AA9
 cs=0x1a2;eip=0x000aaa; 	J(CALL(sub_14ce1,0));	// 1838 call    sub_14CE1 ;~ 01A2:0AAA
 cs=0x1a2;eip=0x000aad; 	X(POP(ds));	// 1839 pop     ds ;~ 01A2:0AAD
@@ -3698,7 +3698,7 @@ cs=0x1a2;eip=0x0025e3; 	T(MOV(cx, ax));	// 5245 mov     cx, ax ;~ 01A2:25E3
 cs=0x1a2;eip=0x0025e5; 	T(LODSW);	// 5246 lodsw ;~ 01A2:25E5
 cs=0x1a2;eip=0x0025e6; 	T(MOV(bx, ax));	// 5247 mov     bx, ax ;~ 01A2:25E6
 cs=0x1a2;eip=0x0025e8; 	T(LODSW);	// 5248 lodsw ;~ 01A2:25E8
-cs=0x1a2;eip=0x0025e9; 	T(XCHG(ax, cx));	// 5249 xchg    ax, cx ;~ 01A2:25E9
+cs=0x1a2;eip=0x0025e9; 	X(XCHG(ax, cx));	// 5249 xchg    ax, cx ;~ 01A2:25E9
 cs=0x1a2;eip=0x0025ea; 	X(PUSH(si));	// 5250 push    si ;~ 01A2:25EA
 cs=0x1a2;eip=0x0025eb; 	J(CALL(sub_13699,0));	// 5251 call    sub_13699 ;~ 01A2:25EB
 cs=0x1a2;eip=0x0025ee; 	X(POP(si));	// 5252 pop     si ;~ 01A2:25EE
@@ -4959,8 +4959,8 @@ loc_149f0:
 	// 4977 
 cs=0x1a2;eip=0x0049f0; 	T(CMP(bx, dx));	// 11295 cmp     bx, dx ;~ 01A2:49F0
 cs=0x1a2;eip=0x0049f2; 	J(JL(loc_149f7));	// 11296 jl      short loc_149F7 ;~ 01A2:49F2
-cs=0x1a2;eip=0x0049f4; 	T(XCHG(bx, dx));	// 11297 xchg    bx, dx ;~ 01A2:49F4
-cs=0x1a2;eip=0x0049f6; 	T(XCHG(ax, cx));	// 11298 xchg    ax, cx ;~ 01A2:49F6
+cs=0x1a2;eip=0x0049f4; 	X(XCHG(bx, dx));	// 11297 xchg    bx, dx ;~ 01A2:49F4
+cs=0x1a2;eip=0x0049f6; 	X(XCHG(ax, cx));	// 11298 xchg    ax, cx ;~ 01A2:49F6
 loc_149f7:
 	// 4978 
 cs=0x1a2;eip=0x0049f7; 	T(MOV(di, cx));	// 11301 mov     di, cx ;~ 01A2:49F7
@@ -4971,11 +4971,11 @@ cs=0x1a2;eip=0x0049fb; 	T(ADD(di, 0x1234));	// 11306 add     di, 1234h ;~ 01A2:4
 cs=0x1a2;eip=0x0049ff; 	T(CMP(cx, ax));	// 11307 cmp     cx, ax ;~ 01A2:49FF
 cs=0x1a2;eip=0x004a01; 	J(JL(loc_14a06));	// 11308 jl      short loc_14A06 ;~ 01A2:4A01
 cs=0x1a2;eip=0x004a03; 	T(STD);	// 11309 std ;~ 01A2:4A03
-cs=0x1a2;eip=0x004a04; 	T(XCHG(ax, cx));	// 11310 xchg    ax, cx ;~ 01A2:4A04
+cs=0x1a2;eip=0x004a04; 	X(XCHG(ax, cx));	// 11310 xchg    ax, cx ;~ 01A2:4A04
 cs=0x1a2;eip=0x004a05; 	T(NOP);	// 11311 nop ;~ 01A2:4A05
 loc_14a06:
 	// 4980 
-cs=0x1a2;eip=0x004a06; 	T(XCHG(ax, cx));	// 11314 xchg    ax, cx ;~ 01A2:4A06
+cs=0x1a2;eip=0x004a06; 	X(XCHG(ax, cx));	// 11314 xchg    ax, cx ;~ 01A2:4A06
 cs=0x1a2;eip=0x004a07; 	T(SUB(cx, ax));	// 11315 sub     cx, ax ;~ 01A2:4A07
 cs=0x1a2;eip=0x004a09; 	T(MOV(ax, bx));	// 11316 mov     ax, bx ;~ 01A2:4A09
 cs=0x1a2;eip=0x004a0b; 	X(STOSW);	// 11317 stosw ;~ 01A2:4A0B
@@ -5036,7 +5036,7 @@ cs=0x1a2;eip=0x004a67; 	X(PUSH(si));	// 11375 push    si ;~ 01A2:4A67
 cs=0x1a2;eip=0x004a68; 	T(MOV(di, ax));	// 11376 mov     di, ax ;~ 01A2:4A68
 cs=0x1a2;eip=0x004a6a; 	T(CMP(di, cx));	// 11377 cmp     di, cx ;~ 01A2:4A6A
 cs=0x1a2;eip=0x004a6c; 	J(JL(loc_14a70));	// 11378 jl      short loc_14A70 ;~ 01A2:4A6C
-cs=0x1a2;eip=0x004a6e; 	T(XCHG(di, cx));	// 11379 xchg    di, cx ;~ 01A2:4A6E
+cs=0x1a2;eip=0x004a6e; 	X(XCHG(di, cx));	// 11379 xchg    di, cx ;~ 01A2:4A6E
 loc_14a70:
 	// 4987 
 cs=0x1a2;eip=0x004a70; 	T(MOV(bx, cx));	// 11382 mov     bx, cx ;~ 01A2:4A70
@@ -5059,7 +5059,7 @@ cs=0x1a2;eip=0x004a8d; 	J(JZ(loc_14a9a));	// 11399 jz      short loc_14A9A ;~ 01
 cs=0x1a2;eip=0x004a8f; 	T(MOV(al, *(raddr(ds,di+0x77E9))));	// 11400 mov     al, [di+77E9h] ;~ 01A2:4A8F
 cs=0x1a2;eip=0x004a93; 	R(OUT(dx, al));	// 11401 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:4A93
 cs=0x1a2;eip=0x004a94; 	T(MOV(al, ah));	// 11402 mov     al, ah ;~ 01A2:4A94
-cs=0x1a2;eip=0x004a96; 	X(XCHG(al, *(raddr(es,si))));	// 11403 xchg    al, es:[si] ;~ 01A2:4A96
+cs=0x1a2;eip=0x004a96; 	S(XCHG(al, *(raddr(es,si))));	// 11403 xchg    al, es:[si] ;~ 01A2:4A96
 cs=0x1a2;eip=0x004a99; 	T(INC(si));	// 11404 inc     si ;~ 01A2:4A99
 loc_14a9a:
 	// 4989 
@@ -5070,7 +5070,7 @@ cs=0x1a2;eip=0x004aa2; 	T(MOV(di, cx));	// 11410 mov     di, cx ;~ 01A2:4AA2
 cs=0x1a2;eip=0x004aa4; 	T(MOV(al, *(raddr(ds,di+0x77E2))));	// 11411 mov     al, [di+77E2h] ;~ 01A2:4AA4
 cs=0x1a2;eip=0x004aa8; 	R(OUT(dx, al));	// 11412 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:4AA8
 cs=0x1a2;eip=0x004aa9; 	T(MOV(al, ah));	// 11413 mov     al, ah ;~ 01A2:4AA9
-cs=0x1a2;eip=0x004aab; 	X(XCHG(al, *(raddr(es,bx))));	// 11414 xchg    al, es:[bx] ;~ 01A2:4AAB
+cs=0x1a2;eip=0x004aab; 	S(XCHG(al, *(raddr(es,bx))));	// 11414 xchg    al, es:[bx] ;~ 01A2:4AAB
 cs=0x1a2;eip=0x004aae; 	T(DEC(bx));	// 11415 dec     bx ;~ 01A2:4AAE
 cs=0x1a2;eip=0x004aaf; 	T(NOP);	// 11416 nop ;~ 01A2:4AAF
 loc_14ab0:
@@ -5109,7 +5109,8 @@ cs=0x1a2;eip=0x004adc; 	T(MOV(di, cx));	// 11452 mov     di, cx ;~ 01A2:4ADC
 cs=0x1a2;eip=0x004ade; 	T(AND(al, *(raddr(ds,di+0x77E2))));	// 11453 and     al, [di+77E2h] ;~ 01A2:4ADE
 cs=0x1a2;eip=0x004ae2; 	R(OUT(dx, al));	// 11454 out     dx, al ;~ 01A2:4AE2
 cs=0x1a2;eip=0x004ae3; 	T(MOV(al, ah));	// 11455 mov     al, ah ;~ 01A2:4AE3
-cs=0x1a2;eip=0x004ae5; 	X(XCHG(al, *(raddr(es,bx))));	// 11456 xchg    al, es:[bx] ;~ 01A2:4AE5
+//printf("al=%x raddr(es,bx)=[%x] %x\n",al,raddr(es,bx)-(db*)&m2c::m,m2c::getdata(*raddr(es,bx)));
+cs=0x1a2;eip=0x004ae5; 	S(XCHG(al, *(raddr(es,bx))));	// 11456 xchg    al, es:[bx] ;~ 01A2:4AE5
 cs=0x1a2;eip=0x004ae8; 	J(JMP(loc_14ac6));	// 11457 jmp     short loc_14AC6 ;~ 01A2:4AE8
 sub_14ce1:
 	// 11805 
@@ -5308,8 +5309,8 @@ cs=0x1a2;eip=0x004e52; 	T(MOV(bx, bp));	// 11997 mov     bx, bp ;~ 01A2:4E52
 cs=0x1a2;eip=0x004e54; 	T(MOV(bp, di));	// 11998 mov     bp, di ;~ 01A2:4E54
 cs=0x1a2;eip=0x004e56; 	T(CMP(bx, si));	// 11999 cmp     bx, si ;~ 01A2:4E56
 cs=0x1a2;eip=0x004e58; 	J(JLE(loc_14e5e));	// 12000 jle     short loc_14E5E ;~ 01A2:4E58
-cs=0x1a2;eip=0x004e5a; 	T(XCHG(bx, si));	// 12001 xchg    bx, si ;~ 01A2:4E5A
-cs=0x1a2;eip=0x004e5c; 	T(XCHG(bp, cx));	// 12002 xchg    bp, cx ;~ 01A2:4E5C
+cs=0x1a2;eip=0x004e5a; 	X(XCHG(bx, si));	// 12001 xchg    bx, si ;~ 01A2:4E5A
+cs=0x1a2;eip=0x004e5c; 	X(XCHG(bp, cx));	// 12002 xchg    bp, cx ;~ 01A2:4E5C
 loc_14e5e:
 	// 5040 
 cs=0x1a2;eip=0x004e5e; 	T(CMP(cx, bp));	// 12005 cmp     cx, bp ;~ 01A2:4E5E
@@ -5338,7 +5339,7 @@ loc_14e94:
 	// 5042 
 cs=0x1a2;eip=0x004e94; 	X(MOV(*(raddr(cs,m2c::kloc_14eef+1)), 0x0EF));	// 12031 mov     byte ptr cs:loc_14EEF+1, 0EFh ; 'ï' ;~ 01A2:4E94
 cs=0x1a2;eip=0x004e9a; 	X(MOV(*(raddr(cs,m2c::kloc_14f20+1)), 0x0EF));	// 12032 mov     byte ptr cs:loc_14F20+1, 0EFh ; 'ï' ;~ 01A2:4E9A
-cs=0x1a2;eip=0x004ea0; 	T(XCHG(cx, bp));	// 12033 xchg    cx, bp ;~ 01A2:4EA0
+cs=0x1a2;eip=0x004ea0; 	X(XCHG(cx, bp));	// 12033 xchg    cx, bp ;~ 01A2:4EA0
 loc_14ea2:
 	// 5043 
 cs=0x1a2;eip=0x004ea2; 	T(SUB(bp, cx));	// 12036 sub     bp, cx ;~ 01A2:4EA2
@@ -5399,7 +5400,7 @@ cs=0x1a2;eip=0x004efb; 	X(MOV(*(raddr(ds,di)), bl));	// 12094 mov     [di], bl ;
 cs=0x1a2;eip=0x004efd; 	J(RETN(0));	// 12095 retn ;~ 01A2:4EFD
 loc_14efe:
 	// 5051 
-cs=0x1a2;eip=0x004efe; 	T(XCHG(bp, si));	// 12099 xchg    bp, si ;~ 01A2:4EFE
+cs=0x1a2;eip=0x004efe; 	X(XCHG(bp, si));	// 12099 xchg    bp, si ;~ 01A2:4EFE
 cs=0x1a2;eip=0x004f00; 	T(OR(si, si));	// 12100 or      si, si ;~ 01A2:4F00
 cs=0x1a2;eip=0x004f02; 	J(JZ(loc_14f32));	// 12101 jz      short loc_14F32 ;~ 01A2:4F02
 cs=0x1a2;eip=0x004f04; 	T(OR(bp, bp));	// 12102 or      bp, bp ;~ 01A2:4F04
@@ -7810,8 +7811,8 @@ cs=0x1a2;eip=0x00234c; 	T(SUB(dx, *(dw*)(raddr(ds,si+4))));	// 4802 sub     dx, 
 cs=0x1a2;eip=0x00234f; 	T(SUB(bp, *(dw*)(raddr(ds,si+6))));	// 4803 sub     bp, [si+6] ;~ 01A2:234F
 cs=0x1a2;eip=0x002352; 	T(SUB(di, *(dw*)(raddr(ds,si+8))));	// 4804 sub     di, [si+8] ;~ 01A2:2352
 cs=0x1a2;eip=0x002355; 	T(IMUL1_2(dx));	// 4805 imul    dx ;~ 01A2:2355
-cs=0x1a2;eip=0x002357; 	T(XCHG(ax, bx));	// 4806 xchg    ax, bx ;~ 01A2:2357
-cs=0x1a2;eip=0x002358; 	T(XCHG(dx, bp));	// 4807 xchg    dx, bp ;~ 01A2:2358
+cs=0x1a2;eip=0x002357; 	X(XCHG(ax, bx));	// 4806 xchg    ax, bx ;~ 01A2:2357
+cs=0x1a2;eip=0x002358; 	X(XCHG(dx, bp));	// 4807 xchg    dx, bp ;~ 01A2:2358
 cs=0x1a2;eip=0x00235a; 	T(IMUL1_2(dx));	// 4808 imul    dx ;~ 01A2:235A
 cs=0x1a2;eip=0x00235c; 	T(ADD(bx, ax));	// 4809 add     bx, ax ;~ 01A2:235C
 cs=0x1a2;eip=0x00235e; 	T(ADC(bp, dx));	// 4810 adc     bp, dx ;~ 01A2:235E
@@ -7877,8 +7878,8 @@ cs=0x1a2;eip=0x002392; 	T(SUB(bx, *(dw*)(raddr(ds,si+4))));	// 4852 sub     bx, 
 cs=0x1a2;eip=0x002395; 	T(SUB(bp, *(dw*)(raddr(ds,si+8))));	// 4853 sub     bp, [si+8] ;~ 01A2:2395
 cs=0x1a2;eip=0x002398; 	T(MOV(cx, dx));	// 4854 mov     cx, dx ;~ 01A2:2398
 cs=0x1a2;eip=0x00239a; 	T(IMUL1_2(bp));	// 4855 imul    bp ;~ 01A2:239A
-cs=0x1a2;eip=0x00239c; 	T(XCHG(ax, cx));	// 4856 xchg    ax, cx ;~ 01A2:239C
-cs=0x1a2;eip=0x00239d; 	T(XCHG(dx, bx));	// 4857 xchg    dx, bx ;~ 01A2:239D
+cs=0x1a2;eip=0x00239c; 	X(XCHG(ax, cx));	// 4856 xchg    ax, cx ;~ 01A2:239C
+cs=0x1a2;eip=0x00239d; 	X(XCHG(dx, bx));	// 4857 xchg    dx, bx ;~ 01A2:239D
 cs=0x1a2;eip=0x00239f; 	T(IMUL1_2(dx));	// 4858 imul    dx ;~ 01A2:239F
 cs=0x1a2;eip=0x0023a1; 	T(SUB(cx, ax));	// 4859 sub     cx, ax ;~ 01A2:23A1
 cs=0x1a2;eip=0x0023a3; 	T(SBB(bx, dx));	// 4860 sbb     bx, dx ;~ 01A2:23A3
@@ -8254,7 +8255,7 @@ cs=0x1a2;eip=0x002802; 	J(RETN(0));	// 5634 retn ;~ 01A2:2802
 cs=0x1a2;eip=0x002803; 	X(PUSH(bp));	// 5648 push    bp ;~ 01A2:2803
 cs=0x1a2;eip=0x002804; 	T(MOV(bp, sp));	// 5649 mov     bp, sp ;~ 01A2:2804
 cs=0x1a2;eip=0x002806; 	T(MOV(ax, *(dw*)(raddr(ss,bp+arg_0))));	// 5650 mov     ax, [bp+arg_0] ;~ 01A2:2806
-cs=0x1a2;eip=0x002809; 	T(XCHG(ah, al));	// 5651 xchg    ah, al ;~ 01A2:2809
+cs=0x1a2;eip=0x002809; 	X(XCHG(ah, al));	// 5651 xchg    ah, al ;~ 01A2:2809
 cs=0x1a2;eip=0x00280b; 	X(POP(bp));	// 5652 pop     bp ;~ 01A2:280B
 cs=0x1a2;eip=0x00280c; 	J(RETN(0));	// 5653 retn ;~ 01A2:280C
 
@@ -8747,7 +8748,7 @@ cs=0x1a2;eip=0x002a70; 	T(MOV(dx, ax));	// 6236 mov     dx, ax ;~ 01A2:2A70
 cs=0x1a2;eip=0x002a72; 	T(LODSW);	// 6237 lodsw ;~ 01A2:2A72
 cs=0x1a2;eip=0x002a73; 	T(MOV(bx, ax));	// 6238 mov     bx, ax ;~ 01A2:2A73
 cs=0x1a2;eip=0x002a75; 	T(LODSW);	// 6239 lodsw ;~ 01A2:2A75
-cs=0x1a2;eip=0x002a76; 	T(XCHG(ax, bx));	// 6240 xchg    ax, bx ;~ 01A2:2A76
+cs=0x1a2;eip=0x002a76; 	X(XCHG(ax, bx));	// 6240 xchg    ax, bx ;~ 01A2:2A76
 cs=0x1a2;eip=0x002a77; 	X(PUSH(ds));	// 6241 push    ds ;~ 01A2:2A77
 cs=0x1a2;eip=0x002a78; 	J(CALL(sub_14ce1,0));	// 6242 call    sub_14CE1 ;~ 01A2:2A78
 cs=0x1a2;eip=0x002a7b; 	X(POP(ds));	// 6243 pop     ds ;~ 01A2:2A7B
@@ -10326,7 +10327,7 @@ cs=0x1a2;eip=0x0036db; 	T(SUB(bp, ax));	// 8130 sub     bp, ax ;~ 01A2:36DB
 cs=0x1a2;eip=0x0036dd; 	T(SBB(di, dx));	// 8131 sbb     di, dx ;~ 01A2:36DD
 cs=0x1a2;eip=0x0036df; 	T(MOV(ax, di));	// 8132 mov     ax, di ;~ 01A2:36DF
 cs=0x1a2;eip=0x0036e1; 	T(SHL(ax, 1));	// 8133 shl     ax, 1 ;~ 01A2:36E1
-cs=0x1a2;eip=0x0036e3; 	T(XCHG(ax, si));	// 8134 xchg    ax, si ;~ 01A2:36E3
+cs=0x1a2;eip=0x0036e3; 	X(XCHG(ax, si));	// 8134 xchg    ax, si ;~ 01A2:36E3
 cs=0x1a2;eip=0x0036e4; 	X(IMUL1_2(word_1d88e));	// 8135 imul    word_1D88E ;~ 01A2:36E4
 cs=0x1a2;eip=0x0036e8; 	T(MOV(bp, ax));	// 8136 mov     bp, ax ;~ 01A2:36E8
 cs=0x1a2;eip=0x0036ea; 	T(MOV(di, dx));	// 8137 mov     di, dx ;~ 01A2:36EA
@@ -10336,7 +10337,7 @@ cs=0x1a2;eip=0x0036f2; 	T(ADD(bp, ax));	// 8140 add     bp, ax ;~ 01A2:36F2
 cs=0x1a2;eip=0x0036f4; 	T(ADC(di, dx));	// 8141 adc     di, dx ;~ 01A2:36F4
 cs=0x1a2;eip=0x0036f6; 	T(MOV(ax, di));	// 8142 mov     ax, di ;~ 01A2:36F6
 cs=0x1a2;eip=0x0036f8; 	T(SHL(ax, 1));	// 8143 shl     ax, 1 ;~ 01A2:36F8
-cs=0x1a2;eip=0x0036fa; 	T(XCHG(ax, bx));	// 8144 xchg    ax, bx ;~ 01A2:36FA
+cs=0x1a2;eip=0x0036fa; 	X(XCHG(ax, bx));	// 8144 xchg    ax, bx ;~ 01A2:36FA
 cs=0x1a2;eip=0x0036fb; 	T(MOV(cx, ax));	// 8145 mov     cx, ax ;~ 01A2:36FB
 cs=0x1a2;eip=0x0036fd; 	X(IMUL1_2(word_1d88c));	// 8146 imul    word_1D88C ;~ 01A2:36FD
 cs=0x1a2;eip=0x003701; 	T(MOV(bp, ax));	// 8147 mov     bp, ax ;~ 01A2:3701
@@ -10345,7 +10346,7 @@ cs=0x1a2;eip=0x003705; 	T(MOV(ax, bx));	// 8149 mov     ax, bx ;~ 01A2:3705
 cs=0x1a2;eip=0x003707; 	X(IMUL1_2(word_1d88a));	// 8150 imul    word_1D88A ;~ 01A2:3707
 cs=0x1a2;eip=0x00370b; 	T(SUB(bp, ax));	// 8151 sub     bp, ax ;~ 01A2:370B
 cs=0x1a2;eip=0x00370d; 	T(SBB(di, dx));	// 8152 sbb     di, dx ;~ 01A2:370D
-cs=0x1a2;eip=0x00370f; 	T(XCHG(cx, di));	// 8153 xchg    cx, di ;~ 01A2:370F
+cs=0x1a2;eip=0x00370f; 	X(XCHG(cx, di));	// 8153 xchg    cx, di ;~ 01A2:370F
 cs=0x1a2;eip=0x003711; 	T(SHL(cx, 1));	// 8154 shl     cx, 1 ;~ 01A2:3711
 cs=0x1a2;eip=0x003713; 	T(MOV(ax, di));	// 8155 mov     ax, di ;~ 01A2:3713
 cs=0x1a2;eip=0x003715; 	X(IMUL1_2(word_1d88a));	// 8156 imul    word_1D88A ;~ 01A2:3715
@@ -10367,7 +10368,7 @@ cs=0x1a2;eip=0x00373b; 	T(SUB(bp, ax));	// 8171 sub     bp, ax ;~ 01A2:373B
 cs=0x1a2;eip=0x00373d; 	T(SBB(di, dx));	// 8172 sbb     di, dx ;~ 01A2:373D
 cs=0x1a2;eip=0x00373f; 	T(MOV(ax, di));	// 8173 mov     ax, di ;~ 01A2:373F
 cs=0x1a2;eip=0x003741; 	T(SHL(ax, 1));	// 8174 shl     ax, 1 ;~ 01A2:3741
-cs=0x1a2;eip=0x003743; 	T(XCHG(ax, si));	// 8175 xchg    ax, si ;~ 01A2:3743
+cs=0x1a2;eip=0x003743; 	X(XCHG(ax, si));	// 8175 xchg    ax, si ;~ 01A2:3743
 cs=0x1a2;eip=0x003744; 	X(IMUL1_2(word_1d892));	// 8176 imul    word_1D892 ;~ 01A2:3744
 cs=0x1a2;eip=0x003748; 	T(MOV(bp, ax));	// 8177 mov     bp, ax ;~ 01A2:3748
 cs=0x1a2;eip=0x00374a; 	T(MOV(di, dx));	// 8178 mov     di, dx ;~ 01A2:374A
@@ -14535,16 +14536,16 @@ loc_14b2c:
 	// 4998 
 cs=0x1a2;eip=0x004b2c; 	X(PUSH(dx));	// 11509 push    dx ;~ 01A2:4B2C
 cs=0x1a2;eip=0x004b2d; 	X(PUSH(ax));	// 11510 push    ax ;~ 01A2:4B2D
-cs=0x1a2;eip=0x004b2e; 	T(XCHG(ax, dx));	// 11511 xchg    ax, dx ;~ 01A2:4B2E
+cs=0x1a2;eip=0x004b2e; 	X(XCHG(ax, dx));	// 11511 xchg    ax, dx ;~ 01A2:4B2E
 cs=0x1a2;eip=0x004b2f; 	T(CMP(ax, cx));	// 11512 cmp     ax, cx ;~ 01A2:4B2F
 cs=0x1a2;eip=0x004b31; 	J(JL(loc_14b36));	// 11513 jl      short loc_14B36 ;~ 01A2:4B31
-cs=0x1a2;eip=0x004b33; 	T(XCHG(ax, cx));	// 11514 xchg    ax, cx ;~ 01A2:4B33
-cs=0x1a2;eip=0x004b34; 	T(XCHG(dx, bx));	// 11515 xchg    dx, bx ;~ 01A2:4B34
+cs=0x1a2;eip=0x004b33; 	X(XCHG(ax, cx));	// 11514 xchg    ax, cx ;~ 01A2:4B33
+cs=0x1a2;eip=0x004b34; 	X(XCHG(dx, bx));	// 11515 xchg    dx, bx ;~ 01A2:4B34
 loc_14b36:
 	// 4999 
 cs=0x1a2;eip=0x004b36; 	T(SUB(dx, bx));	// 11518 sub     dx, bx ;~ 01A2:4B36
 cs=0x1a2;eip=0x004b38; 	T(SUB(ax, cx));	// 11519 sub     ax, cx ;~ 01A2:4B38
-cs=0x1a2;eip=0x004b3a; 	T(XCHG(ax, cx));	// 11520 xchg    ax, cx ;~ 01A2:4B3A
+cs=0x1a2;eip=0x004b3a; 	X(XCHG(ax, cx));	// 11520 xchg    ax, cx ;~ 01A2:4B3A
 cs=0x1a2;eip=0x004b3b; 	T(SUB(ax, bp));	// 11521 sub     ax, bp ;~ 01A2:4B3B
 cs=0x1a2;eip=0x004b3d; 	T(NEG(ax));	// 11522 neg     ax ;~ 01A2:4B3D
 cs=0x1a2;eip=0x004b3f; 	T(IMUL1_2(dx));	// 11523 imul    dx ;~ 01A2:4B3F
@@ -14643,16 +14644,16 @@ loc_14ba8:
 	// 5004 
 cs=0x1a2;eip=0x004ba8; 	X(PUSH(dx));	// 11596 push    dx ;~ 01A2:4BA8
 cs=0x1a2;eip=0x004ba9; 	X(PUSH(ax));	// 11597 push    ax ;~ 01A2:4BA9
-cs=0x1a2;eip=0x004baa; 	T(XCHG(ax, dx));	// 11598 xchg    ax, dx ;~ 01A2:4BAA
+cs=0x1a2;eip=0x004baa; 	X(XCHG(ax, dx));	// 11598 xchg    ax, dx ;~ 01A2:4BAA
 cs=0x1a2;eip=0x004bab; 	T(CMP(ax, cx));	// 11599 cmp     ax, cx ;~ 01A2:4BAB
 cs=0x1a2;eip=0x004bad; 	J(JL(loc_14bb2));	// 11600 jl      short loc_14BB2 ;~ 01A2:4BAD
-cs=0x1a2;eip=0x004baf; 	T(XCHG(ax, cx));	// 11601 xchg    ax, cx ;~ 01A2:4BAF
-cs=0x1a2;eip=0x004bb0; 	T(XCHG(dx, bx));	// 11602 xchg    dx, bx ;~ 01A2:4BB0
+cs=0x1a2;eip=0x004baf; 	X(XCHG(ax, cx));	// 11601 xchg    ax, cx ;~ 01A2:4BAF
+cs=0x1a2;eip=0x004bb0; 	X(XCHG(dx, bx));	// 11602 xchg    dx, bx ;~ 01A2:4BB0
 loc_14bb2:
 	// 5005 
 cs=0x1a2;eip=0x004bb2; 	T(SUB(dx, bx));	// 11605 sub     dx, bx ;~ 01A2:4BB2
 cs=0x1a2;eip=0x004bb4; 	T(SUB(ax, cx));	// 11606 sub     ax, cx ;~ 01A2:4BB4
-cs=0x1a2;eip=0x004bb6; 	T(XCHG(ax, cx));	// 11607 xchg    ax, cx ;~ 01A2:4BB6
+cs=0x1a2;eip=0x004bb6; 	X(XCHG(ax, cx));	// 11607 xchg    ax, cx ;~ 01A2:4BB6
 cs=0x1a2;eip=0x004bb7; 	T(SUB(ax, bp));	// 11608 sub     ax, bp ;~ 01A2:4BB7
 cs=0x1a2;eip=0x004bb9; 	T(NEG(ax));	// 11609 neg     ax ;~ 01A2:4BB9
 cs=0x1a2;eip=0x004bbb; 	T(IMUL1_2(dx));	// 11610 imul    dx ;~ 01A2:4BBB
@@ -14753,7 +14754,7 @@ cs=0x1a2;eip=0x004c24; 	X(PUSH(dx));	// 11683 push    dx ;~ 01A2:4C24
 cs=0x1a2;eip=0x004c25; 	X(PUSH(ax));	// 11684 push    ax ;~ 01A2:4C25
 cs=0x1a2;eip=0x004c26; 	T(SUB(dx, bx));	// 11685 sub     dx, bx ;~ 01A2:4C26
 cs=0x1a2;eip=0x004c28; 	T(SUB(ax, cx));	// 11686 sub     ax, cx ;~ 01A2:4C28
-cs=0x1a2;eip=0x004c2a; 	T(XCHG(ax, cx));	// 11687 xchg    ax, cx ;~ 01A2:4C2A
+cs=0x1a2;eip=0x004c2a; 	X(XCHG(ax, cx));	// 11687 xchg    ax, cx ;~ 01A2:4C2A
 cs=0x1a2;eip=0x004c2b; 	T(SUB(ax, bp));	// 11688 sub     ax, bp ;~ 01A2:4C2B
 cs=0x1a2;eip=0x004c2d; 	T(NEG(ax));	// 11689 neg     ax ;~ 01A2:4C2D
 cs=0x1a2;eip=0x004c2f; 	T(IMUL1_2(dx));	// 11690 imul    dx ;~ 01A2:4C2F
@@ -14852,7 +14853,7 @@ cs=0x1a2;eip=0x004c96; 	X(PUSH(dx));	// 11762 push    dx ;~ 01A2:4C96
 cs=0x1a2;eip=0x004c97; 	X(PUSH(ax));	// 11763 push    ax ;~ 01A2:4C97
 cs=0x1a2;eip=0x004c98; 	T(SUB(dx, bx));	// 11764 sub     dx, bx ;~ 01A2:4C98
 cs=0x1a2;eip=0x004c9a; 	T(SUB(ax, cx));	// 11765 sub     ax, cx ;~ 01A2:4C9A
-cs=0x1a2;eip=0x004c9c; 	T(XCHG(ax, cx));	// 11766 xchg    ax, cx ;~ 01A2:4C9C
+cs=0x1a2;eip=0x004c9c; 	X(XCHG(ax, cx));	// 11766 xchg    ax, cx ;~ 01A2:4C9C
 cs=0x1a2;eip=0x004c9d; 	T(SUB(ax, bp));	// 11767 sub     ax, bp ;~ 01A2:4C9D
 cs=0x1a2;eip=0x004c9f; 	T(NEG(ax));	// 11768 neg     ax ;~ 01A2:4C9F
 cs=0x1a2;eip=0x004ca1; 	T(IMUL1_2(dx));	// 11769 imul    dx ;~ 01A2:4CA1
@@ -14975,12 +14976,12 @@ loc_150ea:
 cs=0x1a2;eip=0x0050ea; 	T(LODSB);	// 12480 lodsb ;~ 01A2:50EA
 cs=0x1a2;eip=0x0050eb; 	R(OUT(dx, al));	// 12481 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:50EB
 cs=0x1a2;eip=0x0050ec; 	T(MOV(al, ah));	// 12482 mov     al, ah ;~ 01A2:50EC
-cs=0x1a2;eip=0x0050ee; 	X(XCHG(al, *(raddr(es,di))));	// 12483 xchg    al, es:[di] ;~ 01A2:50EE
+cs=0x1a2;eip=0x0050ee; 	S(XCHG(al, *(raddr(es,di))));	// 12483 xchg    al, es:[di] ;~ 01A2:50EE
 cs=0x1a2;eip=0x0050f1; 	T(INC(di));	// 12484 inc     di ;~ 01A2:50F1
 cs=0x1a2;eip=0x0050f2; 	T(LODSB);	// 12485 lodsb ;~ 01A2:50F2
 cs=0x1a2;eip=0x0050f3; 	R(OUT(dx, al));	// 12486 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:50F3
 cs=0x1a2;eip=0x0050f4; 	T(MOV(al, ah));	// 12487 mov     al, ah ;~ 01A2:50F4
-cs=0x1a2;eip=0x0050f6; 	X(XCHG(al, *(raddr(es,di))));	// 12488 xchg    al, es:[di] ;~ 01A2:50F6
+cs=0x1a2;eip=0x0050f6; 	S(XCHG(al, *(raddr(es,di))));	// 12488 xchg    al, es:[di] ;~ 01A2:50F6
 cs=0x1a2;eip=0x0050f9; 	T(ADD(di, 0x27));	// 12489 add     di, 27h ; ''' ;~ 01A2:50F9
 cs=0x1a2;eip=0x0050fc; 	J(LOOP(loc_150ea));	// 12490 loop    loc_150EA ;~ 01A2:50FC
 cs=0x1a2;eip=0x0050fe; 	T(SUB(di, 0x27E));	// 12491 sub     di, 27Eh ;~ 01A2:50FE
@@ -15244,7 +15245,7 @@ loc_151f0:
 cs=0x1a2;eip=0x0051f0; 	T(LODSB);	// 12713 lodsb ;~ 01A2:51F0
 cs=0x1a2;eip=0x0051f1; 	R(OUT(dx, al));	// 12714 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:51F1
 cs=0x1a2;eip=0x0051f2; 	T(MOV(al, ah));	// 12715 mov     al, ah ;~ 01A2:51F2
-cs=0x1a2;eip=0x0051f4; 	X(XCHG(al, *(raddr(es,di))));	// 12716 xchg    al, es:[di] ;~ 01A2:51F4
+cs=0x1a2;eip=0x0051f4; 	S(XCHG(al, *(raddr(es,di))));	// 12716 xchg    al, es:[di] ;~ 01A2:51F4
 cs=0x1a2;eip=0x0051f7; 	T(ADD(di, 0x28));	// 12717 add     di, 28h ; '(' ;~ 01A2:51F7
 cs=0x1a2;eip=0x0051fa; 	J(LOOP(loc_151f0));	// 12718 loop    loc_151F0 ;~ 01A2:51FA
 cs=0x1a2;eip=0x0051fc; 	T(SUB(di, 0x13F));	// 12719 sub     di, 13Fh ;~ 01A2:51FC
@@ -15318,7 +15319,7 @@ cs=0x1a2;eip=0x005262; 	T(LODSB);	// 12794 lodsb ;~ 01A2:5262
 cs=0x1a2;eip=0x005263; 	T(NOT(al));	// 12795 not     al ;~ 01A2:5263
 cs=0x1a2;eip=0x005265; 	R(OUT(dx, al));	// 12796 out     dx, al          ; EGA port: graphics controller data register ;~ 01A2:5265
 cs=0x1a2;eip=0x005266; 	T(MOV(al, ah));	// 12797 mov     al, ah ;~ 01A2:5266
-cs=0x1a2;eip=0x005268; 	X(XCHG(al, *(raddr(es,di))));	// 12798 xchg    al, es:[di] ;~ 01A2:5268
+cs=0x1a2;eip=0x005268; 	S(XCHG(al, *(raddr(es,di))));	// 12798 xchg    al, es:[di] ;~ 01A2:5268
 cs=0x1a2;eip=0x00526b; 	T(ADD(di, 0x28));	// 12799 add     di, 28h ; '(' ;~ 01A2:526B
 cs=0x1a2;eip=0x00526e; 	J(LOOP(loc_15262));	// 12800 loop    loc_15262 ;~ 01A2:526E
 cs=0x1a2;eip=0x005270; 	T(MOV(al, 0x0FF));	// 12801 mov     al, 0FFh ;~ 01A2:5270
@@ -28705,7 +28706,7 @@ loc_1a612:
 cs=0x1a2;eip=0x00a612; 	X(MOV(*(dw*)((&byte_25810)), si));	// 24147 mov     word ptr byte_25810, si ;~ 01A2:A612
 cs=0x1a2;eip=0x00a616; 	T(MOV(al, *(raddr(ds,si-0x7F5E))));	// 24148 mov     al, [si-7F5Eh] ;~ 01A2:A616
 cs=0x1a2;eip=0x00a61a; 	T(CBW);	// 24149 cbw ;~ 01A2:A61A
-cs=0x1a2;eip=0x00a61b; 	T(XCHG(ax, si));	// 24150 xchg    ax, si ;~ 01A2:A61B
+cs=0x1a2;eip=0x00a61b; 	X(XCHG(ax, si));	// 24150 xchg    ax, si ;~ 01A2:A61B
 cs=0x1a2;eip=0x00a61c; 	J(JMP(loc_1a62b));	// 24151 jmp     short loc_1A62B ;~ 01A2:A61C
 loc_1a61e:
 	// 5712 
@@ -28866,8 +28867,8 @@ cs=0x1a2;eip=0x00a682; 	T(XOR(ah, ah));	// 24243 xor     ah, ah ;~ 01A2:A682
 cs=0x1a2;eip=0x00a684; 	X(LODS(*(raddr(es,si)),si,1));	// 24244 lods    byte ptr es:[si] ;~ 01A2:A684
 cs=0x1a2;eip=0x00a686; 	T(INC(ax));	// 24245 inc     ax ;~ 01A2:A686
 cs=0x1a2;eip=0x00a687; 	T(MOV(bp, es));	// 24246 mov     bp, es ;~ 01A2:A687
-cs=0x1a2;eip=0x00a689; 	T(XCHG(dx, si));	// 24247 xchg    dx, si ;~ 01A2:A689
-cs=0x1a2;eip=0x00a68b; 	T(XCHG(ax, bx));	// 24248 xchg    ax, bx ;~ 01A2:A68B
+cs=0x1a2;eip=0x00a689; 	X(XCHG(dx, si));	// 24247 xchg    dx, si ;~ 01A2:A689
+cs=0x1a2;eip=0x00a68b; 	X(XCHG(ax, bx));	// 24248 xchg    ax, bx ;~ 01A2:A68B
 cs=0x1a2;eip=0x00a68c; 	T(MOV(si, *(dw*)(((db*)&dword_1d7e5))));	// 24249 mov     si, word ptr dword_1D7E5 ;~ 01A2:A68C
 cs=0x1a2;eip=0x00a690; 	T(ADD(si, 2));	// 24250 add     si, 2 ;~ 01A2:A690
 cs=0x1a2;eip=0x00a693; 	T(MOV(cx, 1));	// 24251 mov     cx, 1 ;~ 01A2:A693
@@ -28903,8 +28904,8 @@ cs=0x1a2;eip=0x00a6cd; 	X(	REP MOVSB);	// 24281 rep movsb ;~ 01A2:A6CD
 cs=0x1a2;eip=0x00a6cf; 	T(XOR(al, al));	// 24282 xor     al, al ;~ 01A2:A6CF
 cs=0x1a2;eip=0x00a6d1; 	X(STOSB);	// 24283 stosb ;~ 01A2:A6D1
 cs=0x1a2;eip=0x00a6d2; 	T(MOV(ds, bp));	// 24284 mov     ds, bp ;~ 01A2:A6D2
-cs=0x1a2;eip=0x00a6d4; 	T(XCHG(si, dx));	// 24286 xchg    si, dx ;~ 01A2:A6D4
-cs=0x1a2;eip=0x00a6d6; 	T(XCHG(bx, cx));	// 24287 xchg    bx, cx ;~ 01A2:A6D6
+cs=0x1a2;eip=0x00a6d4; 	X(XCHG(si, dx));	// 24286 xchg    si, dx ;~ 01A2:A6D4
+cs=0x1a2;eip=0x00a6d6; 	X(XCHG(bx, cx));	// 24287 xchg    bx, cx ;~ 01A2:A6D6
 cs=0x1a2;eip=0x00a6d8; 	T(MOV(ax, bx));	// 24288 mov     ax, bx ;~ 01A2:A6D8
 cs=0x1a2;eip=0x00a6da; 	T(MOV(dx, ax));	// 24289 mov     dx, ax ;~ 01A2:A6DA
 cs=0x1a2;eip=0x00a6dc; 	T(INC(bx));	// 24290 inc     bx ;~ 01A2:A6DC
@@ -29014,7 +29015,7 @@ cs=0x1a2;eip=0x00a701; 	J(JNZ(loc_1a704));	// 24328 jnz     short loc_1A704 ;~ 0
 cs=0x1a2;eip=0x00a703; 	T(INC(bx));	// 24329 inc     bx ;~ 01A2:A703
 loc_1a704:
 	// 5722 
-cs=0x1a2;eip=0x00a704; 	T(XCHG(ah, al));	// 24333 xchg    ah, al ;~ 01A2:A704
+cs=0x1a2;eip=0x00a704; 	X(XCHG(ah, al));	// 24333 xchg    ah, al ;~ 01A2:A704
 cs=0x1a2;eip=0x00a706; 	T(XOR(al, al));	// 24334 xor     al, al ;~ 01A2:A706
 cs=0x1a2;eip=0x00a708; 	T(STC);	// 24335 stc ;~ 01A2:A708
 cs=0x1a2;eip=0x00a709; 	J(JCXZ(locret_1a720));	// 24336 jcxz    short locret_1A720 ;~ 01A2:A709
@@ -30157,7 +30158,7 @@ cs=0x1a2;eip=0x00acde; 	T(SUB(di, cx));	// 25279 sub     di, cx ;~ 01A2:ACDE
 cs=0x1a2;eip=0x00ace0; 	X(PUSH(es));	// 25280 push    es ;~ 01A2:ACE0
 cs=0x1a2;eip=0x00ace1; 	X(POP(ds));	// 25281 pop     ds ;~ 01A2:ACE1
 cs=0x1a2;eip=0x00ace2; 	X(POP(es));	// 25282 pop     es ;~ 01A2:ACE2
-cs=0x1a2;eip=0x00ace3; 	T(XCHG(si, di));	// 25284 xchg    si, di ;~ 01A2:ACE3
+cs=0x1a2;eip=0x00ace3; 	X(XCHG(si, di));	// 25284 xchg    si, di ;~ 01A2:ACE3
 cs=0x1a2;eip=0x00ace5; 	T(TEST(si, 1));	// 25285 test    si, 1 ;~ 01A2:ACE5
 cs=0x1a2;eip=0x00ace9; 	J(JZ(loc_1aced));	// 25286 jz      short loc_1ACED ;~ 01A2:ACE9
 cs=0x1a2;eip=0x00aceb; 	X(MOVSB);	// 25287 movsb ;~ 01A2:ACEB
@@ -31086,7 +31087,7 @@ cs=0x1a2;eip=0x00b021; 	J(RETN(0));	// 26019 retn ;~ 01A2:B021
     sub_1b022:
     _begin:
 cs=0x1a2;eip=0x00b022; 	T(MOV(ax, *(dw*)(raddr(ds,si))));	// 26029 mov     ax, [si] ;~ 01A2:B022
-cs=0x1a2;eip=0x00b024; 	T(XCHG(al, ah));	// 26030 xchg    al, ah ;~ 01A2:B024
+cs=0x1a2;eip=0x00b024; 	X(XCHG(al, ah));	// 26030 xchg    al, ah ;~ 01A2:B024
 cs=0x1a2;eip=0x00b026; 	X(MOV(*(dw*)(raddr(ds,si)), ax));	// 26031 mov     [si], ax ;~ 01A2:B026
 cs=0x1a2;eip=0x00b028; 	T(INC(si));	// 26032 inc     si ;~ 01A2:B028
 cs=0x1a2;eip=0x00b029; 	T(INC(si));	// 26033 inc     si ;~ 01A2:B029
@@ -31117,9 +31118,9 @@ cs=0x1a2;eip=0x00b02c; 	J(RETN(0));	// 26035 retn ;~ 01A2:B02C
     sub_1b02d:
     _begin:
 cs=0x1a2;eip=0x00b02d; 	T(MOV(ax, *(dw*)(raddr(ds,si))));	// 26044 mov     ax, [si] ;~ 01A2:B02D
-cs=0x1a2;eip=0x00b02f; 	T(XCHG(al, ah));	// 26045 xchg    al, ah ;~ 01A2:B02F
+cs=0x1a2;eip=0x00b02f; 	X(XCHG(al, ah));	// 26045 xchg    al, ah ;~ 01A2:B02F
 cs=0x1a2;eip=0x00b031; 	T(MOV(bx, *(dw*)(raddr(ds,si+2))));	// 26046 mov     bx, [si+2] ;~ 01A2:B031
-cs=0x1a2;eip=0x00b034; 	T(XCHG(bl, bh));	// 26047 xchg    bl, bh ;~ 01A2:B034
+cs=0x1a2;eip=0x00b034; 	X(XCHG(bl, bh));	// 26047 xchg    bl, bh ;~ 01A2:B034
 cs=0x1a2;eip=0x00b036; 	X(MOV(*(dw*)(raddr(ds,si+2)), ax));	// 26048 mov     [si+2], ax ;~ 01A2:B036
 cs=0x1a2;eip=0x00b039; 	X(MOV(*(dw*)(raddr(ds,si)), bx));	// 26049 mov     [si], bx ;~ 01A2:B039
 cs=0x1a2;eip=0x00b03b; 	T(ADD(si, 4));	// 26050 add     si, 4 ;~ 01A2:B03B
@@ -32492,7 +32493,7 @@ cs=0x1a2;eip=0x00b6d0; 	R(IN(al, 0x61));	// 27081 in      al, 61h         ; PC/X
 cs=0x1a2;eip=0x00b6d2; 	T(MOV(ah, al));	// 27089 mov     ah, al ;~ 01A2:B6D2
 cs=0x1a2;eip=0x00b6d4; 	T(OR(al, 0x80));	// 27090 or      al, 80h ;~ 01A2:B6D4
 cs=0x1a2;eip=0x00b6d6; 	R(OUT(0x61, al));	// 27091 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:B6D6
-cs=0x1a2;eip=0x00b6d8; 	T(XCHG(ah, al));	// 27099 xchg    ah, al ;~ 01A2:B6D8
+cs=0x1a2;eip=0x00b6d8; 	X(XCHG(ah, al));	// 27099 xchg    ah, al ;~ 01A2:B6D8
 cs=0x1a2;eip=0x00b6da; 	R(OUT(0x61, al));	// 27100 out     61h, al         ; PC/XT PPI port B bits: ;~ 01A2:B6DA
 cs=0x1a2;eip=0x00b6dc; 	X(POP(ax));	// 27108 pop     ax ;~ 01A2:B6DC
 loc_1b6dd:
@@ -35006,7 +35007,7 @@ cs=0x1a2;eip=0x00c2cf; 	T(MOV(bp, *(dw*)(raddr(cs,bp-0x404C))));	// 29195 mov   
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x00c2d4; 	X(MOV(*(dw*)((&byte_1bfcc)), bp));	// 29196 mov     word ptr cs:byte_1BFCC, bp ;~ 01A2:C2D4
 cs=0x1a2;eip=0x00c2d9; 	X(POP(bp));	// 29197 pop     bp ;~ 01A2:C2D9
-cs=0x1a2;eip=0x00c2da; 	T(XCHG(ax, bp));	// 29198 xchg    ax, bp ;~ 01A2:C2DA
+cs=0x1a2;eip=0x00c2da; 	X(XCHG(ax, bp));	// 29198 xchg    ax, bp ;~ 01A2:C2DA
 cs=0x1a2;eip=0x00c2db; 	T(SHR(ax, 1));	// 29199 shr     ax, 1 ;~ 01A2:C2DB
 cs=0x1a2;eip=0x00c2dd; 	T(SHR(ax, 1));	// 29200 shr     ax, 1 ;~ 01A2:C2DD
 cs=0x1a2;eip=0x00c2df; 	T(SHR(ax, 1));	// 29201 shr     ax, 1 ;~ 01A2:C2DF
@@ -35014,7 +35015,7 @@ cs=0x1a2;eip=0x00c2df; 	T(SHR(ax, 1));	// 29201 shr     ax, 1 ;~ 01A2:C2DF
 cs=0x1a2;eip=0x00c2e1; 	X(ADD(*(dw*)((&byte_1bfd0)), ax));	// 29202 add     word ptr cs:byte_1BFD0, ax ;~ 01A2:C2E1
 cs=0x1a2;eip=0x00c2e6; 	T(ADD(si, ax));	// 29203 add     si, ax ;~ 01A2:C2E6
 cs=0x1a2;eip=0x00c2e8; 	T(ADD(di, ax));	// 29204 add     di, ax ;~ 01A2:C2E8
-cs=0x1a2;eip=0x00c2ea; 	T(XCHG(ax, bp));	// 29205 xchg    ax, bp ;~ 01A2:C2EA
+cs=0x1a2;eip=0x00c2ea; 	X(XCHG(ax, bp));	// 29205 xchg    ax, bp ;~ 01A2:C2EA
 cs=0x1a2;eip=0x00c2eb; 	T(SUB(dx, bp));	// 29206 sub     dx, bp ;~ 01A2:C2EB
 loc_1c2ed:
 	// 5960 
@@ -37777,8 +37778,8 @@ cs=0x1a2;eip=0x00d36f; 	T(MOV(bx, bp));	// 31732 mov     bx, bp ;~ 01A2:D36F
 cs=0x1a2;eip=0x00d371; 	T(MOV(bp, di));	// 31733 mov     bp, di ;~ 01A2:D371
 cs=0x1a2;eip=0x00d373; 	T(CMP(bx, si));	// 31734 cmp     bx, si ;~ 01A2:D373
 cs=0x1a2;eip=0x00d375; 	J(JLE(loc_1d37b));	// 31735 jle     short loc_1D37B ;~ 01A2:D375
-cs=0x1a2;eip=0x00d377; 	T(XCHG(bx, si));	// 31736 xchg    bx, si ;~ 01A2:D377
-cs=0x1a2;eip=0x00d379; 	T(XCHG(bp, cx));	// 31737 xchg    bp, cx ;~ 01A2:D379
+cs=0x1a2;eip=0x00d377; 	X(XCHG(bx, si));	// 31736 xchg    bx, si ;~ 01A2:D377
+cs=0x1a2;eip=0x00d379; 	X(XCHG(bp, cx));	// 31737 xchg    bp, cx ;~ 01A2:D379
 loc_1d37b:
 	// 6191 
 cs=0x1a2;eip=0x00d37b; 	T(CMP(cx, bp));	// 31740 cmp     cx, bp ;~ 01A2:D37B
@@ -37807,7 +37808,7 @@ loc_1d3b1:
 	// 6193 
 cs=0x1a2;eip=0x00d3b1; 	X(MOV(*(raddr(cs,m2c::kloc_1d40c+1)), 0x0EF));	// 31766 mov     byte ptr cs:loc_1D40C+1, 0EFh ; 'ï' ;~ 01A2:D3B1
 cs=0x1a2;eip=0x00d3b7; 	X(MOV(*(raddr(cs,m2c::kloc_1d43f+1)), 0x0EF));	// 31767 mov     byte ptr cs:loc_1D43F+1, 0EFh ; 'ï' ;~ 01A2:D3B7
-cs=0x1a2;eip=0x00d3bd; 	T(XCHG(cx, bp));	// 31768 xchg    cx, bp ;~ 01A2:D3BD
+cs=0x1a2;eip=0x00d3bd; 	X(XCHG(cx, bp));	// 31768 xchg    cx, bp ;~ 01A2:D3BD
 loc_1d3bf:
 	// 6194 
 cs=0x1a2;eip=0x00d3bf; 	T(SUB(bp, cx));	// 31771 sub     bp, cx ;~ 01A2:D3BF
@@ -37868,7 +37869,7 @@ cs=0x1a2;eip=0x00d418; 	X(MOV(*(raddr(ds,di)), bl));	// 31829 mov     [di], bl ;
 cs=0x1a2;eip=0x00d41a; 	J(JMP(loc_1d541));	// 31830 jmp     loc_1D541 ;~ 01A2:D41A
 loc_1d41d:
 	// 6202 
-cs=0x1a2;eip=0x00d41d; 	T(XCHG(bp, si));	// 31834 xchg    bp, si ;~ 01A2:D41D
+cs=0x1a2;eip=0x00d41d; 	X(XCHG(bp, si));	// 31834 xchg    bp, si ;~ 01A2:D41D
 cs=0x1a2;eip=0x00d41f; 	T(OR(si, si));	// 31835 or      si, si ;~ 01A2:D41F
 cs=0x1a2;eip=0x00d421; 	J(JZ(loc_1d453));	// 31836 jz      short loc_1D453 ;~ 01A2:D421
 cs=0x1a2;eip=0x00d423; 	T(OR(bp, bp));	// 31837 or      bp, bp ;~ 01A2:D423
@@ -38178,7 +38179,7 @@ cs=0x1a2;eip=0x00d5a8; 	T(MOV(si, *(dw*)(raddr(ss,bp+arg_2))));	// 32084 mov    
 cs=0x1a2;eip=0x00d5ab; 	T(MOV(ax, *(dw*)(raddr(ss,bp+arg_6))));	// 32085 mov     ax, [bp+arg_6] ;~ 01A2:D5AB
 cs=0x1a2;eip=0x00d5ae; 	T(CMP(si, ax));	// 32086 cmp     si, ax ;~ 01A2:D5AE
 cs=0x1a2;eip=0x00d5b0; 	J(JLE(loc_1d5b3));	// 32087 jle     short loc_1D5B3 ;~ 01A2:D5B0
-cs=0x1a2;eip=0x00d5b2; 	T(XCHG(ax, si));	// 32088 xchg    ax, si ;~ 01A2:D5B2
+cs=0x1a2;eip=0x00d5b2; 	X(XCHG(ax, si));	// 32088 xchg    ax, si ;~ 01A2:D5B2
 loc_1d5b3:
 	// 6221 
 cs=0x1a2;eip=0x00d5b3; 	T(SUB(ax, si));	// 32091 sub     ax, si ;~ 01A2:D5B3
@@ -38190,7 +38191,7 @@ cs=0x1a2;eip=0x00d5c2; 	T(MOV(dx, *(dw*)(raddr(ss,bp+arg_0))));	// 32096 mov    
 cs=0x1a2;eip=0x00d5c5; 	T(MOV(bp, *(dw*)(raddr(ss,bp+arg_4))));	// 32097 mov     bp, [bp+arg_4] ;~ 01A2:D5C5
 cs=0x1a2;eip=0x00d5c8; 	T(CMP(dx, bp));	// 32098 cmp     dx, bp ;~ 01A2:D5C8
 cs=0x1a2;eip=0x00d5ca; 	J(JLE(loc_1d5ce));	// 32099 jle     short loc_1D5CE ;~ 01A2:D5CA
-cs=0x1a2;eip=0x00d5cc; 	T(XCHG(dx, bp));	// 32100 xchg    dx, bp ;~ 01A2:D5CC
+cs=0x1a2;eip=0x00d5cc; 	X(XCHG(dx, bp));	// 32100 xchg    dx, bp ;~ 01A2:D5CC
 loc_1d5ce:
 	// 6222 
 cs=0x1a2;eip=0x00d5ce; 	J(JMP(loc_1d660));	// 32103 jmp     loc_1D660 ;~ 01A2:D5CE
@@ -38234,7 +38235,7 @@ cs=0x1a2;eip=0x00d5fa; 	T(MOV(si, *(dw*)(raddr(ss,bp+arg_2))));	// 32148 mov    
 cs=0x1a2;eip=0x00d5fd; 	T(MOV(ax, *(dw*)(raddr(ss,bp+arg_6))));	// 32149 mov     ax, [bp+arg_6] ;~ 01A2:D5FD
 cs=0x1a2;eip=0x00d600; 	T(CMP(si, ax));	// 32150 cmp     si, ax ;~ 01A2:D600
 cs=0x1a2;eip=0x00d602; 	J(JLE(loc_1d605));	// 32151 jle     short loc_1D605 ;~ 01A2:D602
-cs=0x1a2;eip=0x00d604; 	T(XCHG(ax, si));	// 32152 xchg    ax, si ;~ 01A2:D604
+cs=0x1a2;eip=0x00d604; 	X(XCHG(ax, si));	// 32152 xchg    ax, si ;~ 01A2:D604
 loc_1d605:
 	// 6223 
 cs=0x1a2;eip=0x00d605; 	T(MOV(dx, *(dw*)((byte_26510)+0x192)));	// 32155 mov     dx, word ptr ss:byte_26510+192h ;~ 01A2:D605
@@ -38268,7 +38269,7 @@ cs=0x1a2;eip=0x00d637; 	T(MOV(dx, *(dw*)(raddr(ss,bp+arg_0))));	// 32185 mov    
 cs=0x1a2;eip=0x00d63a; 	T(MOV(bp, *(dw*)(raddr(ss,bp+arg_4))));	// 32186 mov     bp, [bp+arg_4] ;~ 01A2:D63A
 cs=0x1a2;eip=0x00d63d; 	T(CMP(dx, bp));	// 32187 cmp     dx, bp ;~ 01A2:D63D
 cs=0x1a2;eip=0x00d63f; 	J(JLE(loc_1d643));	// 32188 jle     short loc_1D643 ;~ 01A2:D63F
-cs=0x1a2;eip=0x00d641; 	T(XCHG(dx, bp));	// 32189 xchg    dx, bp ;~ 01A2:D641
+cs=0x1a2;eip=0x00d641; 	X(XCHG(dx, bp));	// 32189 xchg    dx, bp ;~ 01A2:D641
 loc_1d643:
 	// 6228 
 cs=0x1a2;eip=0x00d643; 	T(MOV(ax, *(dw*)((byte_26510)+0x196)));	// 32192 mov     ax, word ptr ss:byte_26510+196h ;~ 01A2:D643

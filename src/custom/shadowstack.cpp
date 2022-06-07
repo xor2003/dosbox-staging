@@ -10,6 +10,7 @@ namespace m2c{
 //    if (m2c::debug)
       {
         X86_REGREF Frame f;
+        f.init=true;
         f.cs = cs;
         f.ip = eip;
         f.sp = sp;
@@ -40,43 +41,57 @@ namespace m2c{
   {
      if (!m_active && !m_forceactive) 
        {
-                  log_debug ("non-active %x %x\n", m_active, m_forceactive);
+//                  log_debug ("non-active %x %x\n", m_active, m_forceactive);
 		return;
 	}
+//    log_debug ("ShadowStack::pop\n");
 //    if (m2c::debug)
       {
         X86_REGREF
-          if (!m_ss.empty () && m_current && sp - m_ss.at(m_current).sp > 10)
+/*
+          if (m_ss.at(m_current).init && esp - m_ss.at(m_current).sp > 10)
           {
                   log_error("Difference of SP and frame SP is to big\n");
                   return;
           }
-
-                  log_debug ("m_needtoskipcall %d\n", m_needtoskipcall);
+*/
+                  log_debug ("m_needtoskipcall %d m_current %x esp %x\n", m_needtoskipcall, m_current, esp);
 //    m2c::log_info("ssize=%d\n",m_ss.size() );
-          if (!m_ss.empty () && m_current)
+          if (m_current > esp) {m_current = esp;
+//                  log_debug ("~m_current %x esp %x\n", m_current, esp);
+}
+
+//          if (m_current)
           {
+//     log_debug ("~1\n");
             size_t counter = m2c::counter;
             dd tsp;
             size_t tcount = 0;
             do
               {
+//     log_debug ("~2\n");
+                if (m_ss.at(m_current).init) {
+//     log_debug ("~3\n");
                 tsp = m_ss.at(m_current ).sp;
                 if ((tcount++) > 0)
                   log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current).addcounter, tsp);
-                if (tsp <= sp)
+//                if (tsp <= sp)
                   m_ss.at(m_current).remcounter = counter;
-                  if (m_ss.at(m_current).itwascall) ++m_needtoskipcall;
+                  if (m_ss.at(m_current).itwascall) {++m_needtoskipcall;log_debug("increased m_needtoskipcall=%d\n",m_needtoskipcall);}
                 print_frame(m_ss.at(m_current));
+                }
+//		else log_debug ("m_current %x not initialized\n", m_current);
+
                 m_current += 2; 
+//                  log_debug ("m_current %x\n", m_current);
               }
 
-            while (tsp < sp);
-
-           if (m_itisret && m_ss.at(m_current-2).itwascall) --m_needtoskipcall;
+            while (m_current <= esp);
+//log_debug("m_itisret %d m_current %x m_ss.at(m_current-2).itwascall %d\n",m_itisret, m_current, m_ss.at(m_current-2).itwascall);
+           if (m_itisret && m_ss.at(m_current-2).itwascall) {--m_needtoskipcall;log_debug("decreased m_needtoskipcall=%d\n",m_needtoskipcall);}
 
       m_currentdeep = m_ss.at(m_current-2).call_deep;
-                  log_debug ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall);
+                  log_debug ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d m_itisret %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall,m_itisret);
           }
       
       }
@@ -88,7 +103,7 @@ log_debug("decreasedeep m_deep=%d ",m_deep);
 //pop(0);
 //m_deep=m_currentdeep-1;
 --m_deep;
-log_debug("m_deep=%d ",m_deep);
+//log_debug("m_deep=%d ",m_deep);
 }
         bool ShadowStack::needtoskipcalls(){
 /*

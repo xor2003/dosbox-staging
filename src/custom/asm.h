@@ -195,253 +195,18 @@ dd other_flags;
 int call_source;
     };
 
-#define REGDEF_hl(Z)   \
-uint32_t& e##Z##x = _state->e##Z##x; \
-uint16_t& Z##x = *(uint16_t *)& e##Z##x; \
-uint8_t& Z##l = *(uint8_t *)& e##Z##x; \
-uint8_t& Z##h = *(((uint8_t *)& e##Z##x)+1);
 
-#define REGDEF_l(Z) \
-uint32_t& e##Z = _state->e##Z; \
-uint16_t& Z = *(uint16_t *)& e##Z ; \
-uint8_t&  Z##l = *(uint8_t *)& e##Z ;
+#if M2CDEBUG==-1 //decomp
 
-#define REGDEF_nol(Z) \
-uint32_t& e##Z = _state->e##Z; \
-uint16_t& Z = *(uint16_t *)& e##Z ;
+#include "asm_regs_decomp.h"
 
-#if DOSBOX_CUSTOM==0 || M2CDEBUG==-1 //masm2c or decomp
-    class ShadowStack {
-        struct Frame {
-            const char *file;
-            size_t line;
-            dd sp;
-            dw cs;
-            dd ip;
-            dd value;
-            dw *pointer_;
-            size_t addcounter;
-            size_t remcounter;
-            bool itwascall;
-            size_t call_deep;
-        };
+#elif DOSBOX_CUSTOM==0 //masm2c
 
-        std::vector<Frame> m_ss;
-        size_t m_current=0;
-        bool m_itiscall=false;
-        bool m_itisret=false;
-        size_t m_deep=1;
-    public:
-        int m_needtoskipcall=0;
-        bool m_active=true;
-        bool m_forceactive=false;
-
-        size_t m_currentdeep=0;
-
-        void enable() {m_active=true;}
-        void disable() {m_active=false;}
-        void forceenable() {m_forceactive=true;}
-        void forcedisable() {m_forceactive=false;}
-
-        void push(_STATE *_state, dd value);
-
-        void pop(_STATE *_state);
-
-        void print(_STATE *_state);
-        void print_frame(const Frame& f);
-
-        void itiscall() {m_itiscall=true;}
-        void itisret() {m_itisret=true;}
-        bool itwascall() {return m_ss[m_current].itwascall;}
-
-        void decreasedeep();
-        bool needtoskipcalls();
-        size_t getneedtoskipcallndclean(){int ret = m_needtoskipcall; m_needtoskipcall = 0; return ret;}
-        void noneedreturn(){--m_needtoskipcall;}
-    };
-
-    extern ShadowStack shadow_stack;
-
-class eflags
-{
-
- _STATE* _state;
-public:
- explicit eflags(_STATE* _state):_state(_state)
- {}
-dd getvalue() const noexcept
- { flagsUnion f;
-  f.value=_state->other_flags & ~0x8000; // 286+
-  f.bits._CF=_state->CF;
-  f.bits._PF=_state->PF;
-  f.bits._AF=_state->AF;
-  f.bits._ZF=_state->ZF;
-  f.bits._SF=_state->SF;
-  f.bits._TF=_state->TF;
-  f.bits._IF=_state->IF;
-  f.bits._DF=_state->DF;
-  f.bits._OF=_state->OF;
-  return f.value; 
- }
-void setvalue(dd v) noexcept
-{
- flagsUnion f;
- f.value = v;
- _state->other_flags=v;
- _state->CF=f.bits._CF;
- _state->PF=f.bits._PF;
- _state->AF=f.bits._AF;
- _state->ZF=f.bits._ZF;
- _state->SF=f.bits._SF;
- _state->TF=f.bits._TF;
- _state->IF=f.bits._IF;
- _state->DF=f.bits._DF;
- _state->OF=f.bits._OF;
- }
-#define REGDEF_flags(Z) \
-    inline bool set##Z##F(bool i) noexcept {return _state-> Z##F=i;} \
-    inline bool get##Z##F() const noexcept {return _state-> Z##F;}
-    inline void reset(){
- _state->CF=false;
- _state->PF=false;
- _state->AF=false;
- _state->ZF=false;
- _state->SF=false;
- _state->TF=false;
- _state->IF=false;
- _state->DF=false;
- _state->OF=false;
-}
- 
- REGDEF_flags(C)
- REGDEF_flags(P)
- REGDEF_flags(A)
- REGDEF_flags(Z)
- REGDEF_flags(S)
- REGDEF_flags(T)
- REGDEF_flags(I)
- REGDEF_flags(D)
- REGDEF_flags(O)
-};
-
-#define X86_REGREF \
-    REGDEF_hl(a);     \
-    REGDEF_hl(b);     \
-    REGDEF_hl(c);     \
-    REGDEF_hl(d);     \
-                      \
-    REGDEF_l(si);     \
-    REGDEF_l(di);     \
-    REGDEF_l(sp);     \
-    REGDEF_l(bp);     \
-                      \
-    REGDEF_nol(ip);   \
-                      \
-dw& cs = _state->cs;         \
-dw& ds = _state->ds;         \
-dw& es = _state->es;         \
-dw& fs = _state->fs;         \
-dw& gs = _state->gs;         \
-dw& ss = _state->ss;         \
-                      \
-bool& CF = _state->CF;       \
-bool& PF = _state->PF;       \
-bool& AF = _state->AF;       \
-bool& ZF = _state->ZF;       \
-bool& SF = _state->SF;       \
-bool& DF = _state->DF;       \
-bool& OF = _state->OF;       \
-bool& IF = _state->IF;       \
-m2c::eflags m2cflags(_state); \
-dd& stackPointer = _state->esp;\
-m2c::_offsets __disp; \
-dw _source;
+#include "asm_regs_m2c.h"
 
 #else // libdosbox
 
-class eflags
-{
- dd& _value;
-    public:
-eflags(uint32_t& flags): _value((dd&)flags)
-{}
-
-dd getvalue() const noexcept
-{ return _value; }
-void setvalue(dd v) noexcept
-{ _value=v; }
-#define REGDEF_flags(Z) \
-    inline bool set##Z##F(bool i) noexcept {return (reinterpret_cast<flagsUnion*>(&_value)->bits._##Z##F=i);} \
-    inline bool get##Z##F() const noexcept {return reinterpret_cast<flagsUnion*>(&_value)->bits._##Z##F;}
-    inline void reset(){_value=0;}
-
-        REGDEF_flags(C)
-
-        REGDEF_flags(P)
-
-        REGDEF_flags(A)
-
-        REGDEF_flags(Z)
-
-        REGDEF_flags(S)
-
-        REGDEF_flags(T)
-
-        REGDEF_flags(I)
-
-        REGDEF_flags(D)
-
-        REGDEF_flags(O)
-    };
-
-// #define m2cflags cpu_regs.flags
-
-#define X86_REGREF \
-db& al =  cpu_regs.regs[REGI_AX].byte[BL_INDEX]; \
-db& ah =  cpu_regs.regs[REGI_AX].byte[BH_INDEX]; \
-dw& ax =  cpu_regs.regs[REGI_AX].word[W_INDEX]; \
-dd& eax =  *(dd*)&cpu_regs.regs[REGI_AX].dword[DW_INDEX]; \
- \
-db& bl =  cpu_regs.regs[REGI_BX].byte[BL_INDEX]; \
-db& bh =  cpu_regs.regs[REGI_BX].byte[BH_INDEX]; \
-dw& bx =  cpu_regs.regs[REGI_BX].word[W_INDEX]; \
-dd& ebx =  *(dd*)&cpu_regs.regs[REGI_BX].dword[DW_INDEX]; \
- \
-db& cl =  cpu_regs.regs[REGI_CX].byte[BL_INDEX]; \
-db& ch =  cpu_regs.regs[REGI_CX].byte[BH_INDEX]; \
-dw& cx =  cpu_regs.regs[REGI_CX].word[W_INDEX]; \
-dd& ecx =  *(dd*)&cpu_regs.regs[REGI_CX].dword[DW_INDEX]; \
- \
-db& dl =  cpu_regs.regs[REGI_DX].byte[BL_INDEX]; \
-db& dh =  cpu_regs.regs[REGI_DX].byte[BH_INDEX]; \
-dw& dx =  cpu_regs.regs[REGI_DX].word[W_INDEX]; \
-dd& edx =  *(dd*)&cpu_regs.regs[REGI_DX].dword[DW_INDEX]; \
- \
-dw& si =  cpu_regs.regs[REGI_SI].word[W_INDEX]; \
-dd& esi =  *(dd*)&cpu_regs.regs[REGI_SI].dword[DW_INDEX]; \
- \
-dw& di =  cpu_regs.regs[REGI_DI].word[W_INDEX]; \
-dd& edi =  *(dd*)&cpu_regs.regs[REGI_DI].dword[DW_INDEX]; \
- \
-dw& sp =  cpu_regs.regs[REGI_SP].word[W_INDEX]; \
-dd& esp =  *(dd*)&cpu_regs.regs[REGI_SP].dword[DW_INDEX]; \
- \
-dw& bp =  cpu_regs.regs[REGI_BP].word[W_INDEX]; \
-dd& ebp =  *(dd*)&cpu_regs.regs[REGI_BP].dword[DW_INDEX]; \
- \
-dw& ip =  cpu_regs.ip.word[W_INDEX]; \
-dd& eip =  *(dd*)&cpu_regs.ip.dword[DW_INDEX]; \
-dw& cs = Segs.val[SegNames::cs]; \
-dw& ds = Segs.val[SegNames::ds]; \
-dw& es = Segs.val[SegNames::es]; \
-dw& fs = Segs.val[SegNames::fs]; \
-dw& gs = Segs.val[SegNames::gs]; \
-dw& ss = Segs.val[SegNames::ss]; \
-                      \
-m2c::eflags m2cflags(cpu_regs.flags); \
-dd& stackPointer = esp;\
-m2c::_offsets __disp; \
-dd _source;
+#include "asm_regs_dbx.h"
 
 
 #endif
@@ -797,7 +562,7 @@ inline long getdata(const long& s)
  		m2c::log_debug("after push %x\n",stackPointer); 
  #endif
 
- #ifndef NO_SHADOW_STACK
+ #ifdef SHADOW_STACK
   m2c::shadow_stack.push(_state,(dd)(a));
  #endif
                }
@@ -807,7 +572,7 @@ inline long getdata(const long& s)
     OPTINLINE void POP_(S& a, _STATE *_state)
 {
   X86_REGREF
- #ifndef NO_SHADOW_STACK
+ #ifdef SHADOW_STACK
   m2c::shadow_stack.pop(_state);
  #endif
 
@@ -1676,7 +1441,7 @@ struct StackPop
    size_t deep;
 };
 
-//#ifndef NO_SHADOW_STACK
+//#ifdef SHADOW_STACK
 #define RETN(i) {if (m2c::RETN_(i, _state)) {return true;} else  {__disp=(cs<<16)+eip;return __dispatch_call(__disp,_state);}}
 /*
 #else
@@ -1695,19 +1460,20 @@ struct StackPop
 
         POP(ip);
         int skip = shadow_stack.getneedtoskipcallndclean();
+//log_debug("skip %d\n", skip);
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
 //            m2c::stackDump();
 //assert(0);
         }
         esp += i;
-log_debug("retn target %x:%x\n", cs,ip);
+//log_debug("retn target %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after ret %x\n", stackPointer);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-#ifndef NO_SHADOW_STACK
+#ifdef SHADOW_STACK
         if (skip>0) 
           {
 log_debug("~~will throw exception skip call=%d\n",skip);
@@ -1729,20 +1495,21 @@ throw StackPop(skip);
 //        m2c::MWORDSIZE averytemporary9 = 0;
 //        log_error("~~RETF before 1pop\n");
         bool ret(true);
-#ifndef NO_SHADOW_STACK
+#ifdef SHADOW_STACK
         shadow_stack.itisret();
         ret = shadow_stack.itwascall();
 #endif
         POP(ip);
-#ifndef NO_SHADOW_STACK
+#ifdef SHADOW_STACK
         if (!ret) {
             log_error("Warning. Return address wasn't created by native CALL (found %x)\n", ip);
-//            m2c::stackDump();
+//            m2c::stackDump();-
 //assert(0);
         }
 //        log_error("~~RETF after 1pop\n");
 //        bool need = shadow_stack.needtoskipcalls();
         int skip = shadow_stack.getneedtoskipcallndclean();
+log_debug("skip %d\n", skip);
 #endif
 //        log_error("~~RETF before 2pop\n");
         POP(cs);
@@ -1754,7 +1521,7 @@ log_debug("retf target %x:%x\n", cs,ip);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
-#ifndef NO_SHADOW_STACK
+#ifdef SHADOW_STACK
         if (skip>0) 
           {
 log_debug("~~will throw exception skip call=%d\n",skip);
@@ -1767,7 +1534,7 @@ throw StackPop(skip);
         return ret;
     }
 /*
-#ifdef NO_SHADOW_STACK
+#ifndef SHADOW_STACK
 #define CALL(label, disp) {if (!m2c::CALL_(label, _state, disp)) {__disp=(cs<<16)+eip;goto __dispatch_call;}}
 #else
 */
@@ -1776,7 +1543,7 @@ throw StackPop(skip);
     static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
         from_callf = true;
-//#ifndef NO_SHADOW_STACK
+//#ifdef SHADOW_STACK
         shadow_stack.itiscall();
 //#endif
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
@@ -1799,12 +1566,12 @@ throw StackPop(skip);
             if (sp!=oldsp && sp!=oldsp+2) log_debug("~~old SP %x != SP %x\n",oldsp, sp);
  if(return_addr != ip&& ((dw)(ip - return_addr)) > 5 ) {
   log_error("~~Return address not equal to call addr: call from=%x poped ip=%x\n",return_addr,ip);
-return false;
+//return false;
  }
         }
         catch(const StackPop& ex)
         {
-#ifndef NO_SHADOW_STACK
+#ifdef SHADOW_STACK
 shadow_stack.decreasedeep();
              if (ex.deep > 0)
              {  log_debug("~~Rethrowing upper\n");
@@ -1832,7 +1599,7 @@ shadow_stack.decreasedeep();
 	return;}
 */
 #if DOSBOX_CUSTOM
-#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::defered_irqs=true; return true;}
+#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::defer_irqs(); return true;}
 #else
 #define IRET RETF(0)
 #endif
