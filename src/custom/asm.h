@@ -32,7 +32,20 @@ extern bool from_callf;
 
 #include "custom.h"
 #include "regs.h"
+
+#if M2CDEBUG != -1
 #include "cpu.h"
+#else
+void CPU_IRET(bool use32,Bitu oldeip);
+bool CPU_CLI(void);
+bool CPU_STI(void);
+void CPU_Exception(Bitu which,Bitu error=0);
+Bitu CPU_Pop16(void);
+Bitu CPU_Pop32(void);
+void CPU_Push16(Bitu value);
+void CPU_Push32(Bitu value);
+#endif
+
 #include "mem.h"
 #include "inout.h"
 
@@ -124,6 +137,8 @@ extern db vgaPalette[256*3];
     bool fix_segs();
 
 #if DOSBOX_CUSTOM
+struct CPU_Regs;
+struct Segments;
     extern void log_regs_dbx(const char *file, int line, const char *instr, const CPU_Regs &r, const Segments &s);
 
 
@@ -558,7 +573,7 @@ inline long getdata(const long& s)
   X86_REGREF
   dd averytemporary=a;stackPointer-=sizeof(a); 
 		memcpy (m2c::raddr_(ss,stackPointer), &averytemporary, sizeof (a)); 
- #ifdef M2CDEBUG
+ #if M2CDEBUG > 0
  		m2c::log_debug("after push %x\n",stackPointer); 
  #endif
 
@@ -576,7 +591,7 @@ inline long getdata(const long& s)
   m2c::shadow_stack.pop(_state);
  #endif
 
- #ifdef M2CDEBUG
+ #if M2CDEBUG > 0
      m2c::log_debug("before pop %x\n",stackPointer);
  #endif
   memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);
@@ -1393,29 +1408,37 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     static void RETN_(size_t i, struct _STATE *_state)
     {
         X86_REGREF
+ #if M2CDEBUG > 0
        if (debug>2) log_debug("before ret %x\n",stackPointer);
+ #endif
        m2c::MWORDSIZE averytemporary9=0; POP(averytemporary9);
        eip=averytemporary9;
        esp+=i;
+ #if M2CDEBUG > 0
        if (debug>2) {log_debug("after ret %x\n",stackPointer);
        m2c::_indent -= 1;
        m2c::_str = m2c::log_spaces(m2c::_indent);
           log_debug("return eip %x\n",eip);}
+ #endif
     }
 
 #define RETF(i) {m2c::RETF_(i, _state); __disp=(cs<<16)+eip;goto __dispatch_call;}
     static void RETF_(size_t i, struct _STATE *_state)
     {
         X86_REGREF
+ #if M2CDEBUG > 0
             if (debug>2) log_debug("before retf %x\n",stackPointer);
+ #endif
        m2c::MWORDSIZE averytemporary9=0; POP(averytemporary9);
        eip=averytemporary9;
         dw averytemporary11;POP(averytemporary11); cs=averytemporary11;
        esp+=i;
+ #if M2CDEBUG > 0
        if (debug>2) {log_debug("after retf %x\n",stackPointer);
        m2c::_indent -= 1;
        m2c::_str = m2c::log_spaces(m2c::_indent);
           log_debug("return eip %x\n",eip);}
+ #endif
     }
 
 
@@ -1425,8 +1448,10 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     from_callf=true;
           MWORDSIZE averytemporary8=eip+2; PUSH(averytemporary8);
 
+ #if M2CDEBUG > 0
           if (debug>2) {log_debug("after call %x\n",stackPointer);
           if (_state) {++m2c::_indent;m2c::_str=m2c::log_spaces(_state->_indent);};}
+ #endif
      }
 
 #else
@@ -1451,7 +1476,9 @@ struct StackPop
 
     static bool RETN_(size_t i, struct _STATE *_state) {
         X86_REGREF
+ #if M2CDEBUG > 0
         if (debug>2) log_debug("before ret %x\n", stackPointer);
+ #endif
 
         shadow_stack.itisret();
 
@@ -1468,15 +1495,19 @@ struct StackPop
         }
         esp += i;
 //log_debug("retn target %x:%x\n", cs,ip);
+ #if M2CDEBUG > 0
         if (debug>2) {
             log_debug("after ret %x\n", stackPointer);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+ #endif
 #ifdef SHADOW_STACK
         if (skip>0) 
           {
+ #if M2CDEBUG > 0
 log_debug("~~will throw exception skip call=%d\n",skip);
+ #endif
 //shadow_stack.print(0);
 throw StackPop(skip);
 }
@@ -1490,7 +1521,9 @@ throw StackPop(skip);
 
     static bool RETF_(size_t i, struct _STATE *_state) {
         X86_REGREF
+ #if M2CDEBUG > 0
         if (debug>2) log_debug("before retf %x\n", stackPointer);
+ #endif
 
 //        m2c::MWORDSIZE averytemporary9 = 0;
 //        log_error("~~RETF before 1pop\n");
@@ -1509,22 +1542,28 @@ throw StackPop(skip);
 //        log_error("~~RETF after 1pop\n");
 //        bool need = shadow_stack.needtoskipcalls();
         int skip = shadow_stack.getneedtoskipcallndclean();
+ #if M2CDEBUG > 0
 log_debug("skip %d\n", skip);
+ #endif
 #endif
 //        log_error("~~RETF before 2pop\n");
         POP(cs);
 //        log_error("~~RETF after 2pop\n");
         esp += i;
+ #if M2CDEBUG > 0
 log_debug("retf target %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after retf %x\n", stackPointer);
             m2c::_indent -= 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+ #endif
 #ifdef SHADOW_STACK
         if (skip>0) 
           {
+ #if M2CDEBUG > 0
 log_debug("~~will throw exception skip call=%d\n",skip);
+ #endif
 //shadow_stack.print(0);
 throw StackPop(skip);
           }
@@ -1554,16 +1593,20 @@ throw StackPop(skip);
         dw oldsp=sp;
         PUSH(return_addr);
 
+ #if M2CDEBUG > 0
         if (debug>2) {
             log_debug("after call %x\n", stackPointer);
 // 	  if (_state) {++_state->_indent;_state->_str=m2c::log_spaces(_state->_indent);};
             m2c::_indent += 1;
             m2c::_str = m2c::log_spaces(m2c::_indent);
         }
+ #endif
         _state->call_source = 2;
         try{
             label(_i, _state);
+ #if M2CDEBUG > 0
             if (sp!=oldsp && sp!=oldsp+2) log_debug("~~old SP %x != SP %x\n",oldsp, sp);
+ #endif
  if(return_addr != ip&& ((dw)(ip - return_addr)) > 5 ) {
   log_error("~~Return address not equal to call addr: call from=%x poped ip=%x\n",return_addr,ip);
 //return false;
@@ -1574,11 +1617,17 @@ throw StackPop(skip);
 #ifdef SHADOW_STACK
 shadow_stack.decreasedeep();
              if (ex.deep > 0)
-             {  log_debug("~~Rethrowing upper\n");
+             {
+ #if M2CDEBUG > 0
+  log_debug("~~Rethrowing upper\n");
+ #endif
 		throw StackPop(ex.deep-1);
              }
              else
-             {  log_debug("~~Finished with skipping calls\n");
+             {
+ #if M2CDEBUG > 0
+  log_debug("~~Finished with skipping calls\n");
+ #endif
 		
              }
 

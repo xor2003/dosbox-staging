@@ -1,4 +1,10 @@
+#ifdef DOSBOX_CUSTOM
+#define DOSBOX_REGS_H
+#include "custom.h"
+#else
 #include "shadowstack.h"
+#endif
+
     extern ShadowStack shadow_stack;
 
 #define REGDEF_hl(Z)   \
