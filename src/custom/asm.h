@@ -222,6 +222,10 @@ dw _source;
 #if M2CDEBUG == -1
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
     class eflags {
         bool _CF=0;
         bool _PF=0; 
@@ -231,7 +235,11 @@ dw _source;
         bool _TF=0;     
         bool _IF=0;      
         bool _DF=0;       
+<<<<<<< HEAD
         bool _OF=0;
+=======
+        bool _OF=0;        
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
     public:
 #define REGDEF_flags(Z) \
     MYINLINE bool set##Z##F(bool i){return (_##Z##F=i);} \
@@ -270,18 +278,27 @@ dw _source;
 
 
 #define REGDEF_hl(Z)   \
+<<<<<<< HEAD
 static uint32_t e##Z##x; \
+=======
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 uint16_t& Z##x = *(uint16_t *)& e##Z##x; \
 uint8_t& Z##l = *(uint8_t *)& e##Z##x; \
 uint8_t& Z##h = *(((uint8_t *)& e##Z##x)+1);
 
 #define REGDEF_l(Z) \
+<<<<<<< HEAD
 static uint32_t e##Z; \
+=======
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 uint16_t& Z = *(uint16_t *)& e##Z ; \
 uint8_t&  Z##l = *(uint8_t *)& e##Z ;
 
 #define REGDEF_nol(Z) \
+<<<<<<< HEAD
 static uint32_t e##Z; \
+=======
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 uint16_t& Z = *(uint16_t *)& e##Z ;
 
 #define X86_REGREF \
@@ -297,8 +314,14 @@ uint16_t& Z = *(uint16_t *)& e##Z ;
                       \
     REGDEF_nol(ip);   \
                       \
+<<<<<<< HEAD
 dd& stackPointer = esp;\
 m2c::_offsets __disp; \
+=======
+dw& stackPointer = sp;\
+m2c::_offsets __disp; \
+m2c::eflags m2cflags; \
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 dd _source;
 
 
@@ -331,7 +354,10 @@ dw ss;
 #define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
 #define AFFECT_PF(a) m2cflags.setPF(a)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 #else
 
     class fBits {
@@ -768,6 +794,10 @@ static MYINLINE void setdata(dd* d, dd s)
 #define PUSHAD m2c::PUSHAD_()
 
     static void PUSHAD_() {
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
         X86_REGREF
         dw oldesp = esp;
         PUSH(eax);
@@ -778,11 +808,19 @@ static MYINLINE void setdata(dd* d, dd s)
         PUSH(ebp);
         PUSH(esi);
         PUSH(edi);
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
     }
 
 #define POPAD m2c::POPAD_()
 
     static void POPAD_() {
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
         X86_REGREF
         POP(edi);
         POP(esi);
@@ -792,6 +830,10 @@ static MYINLINE void setdata(dd* d, dd s)
         POP(edx);
         POP(ecx);
         POP(eax);
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
     }
 
 #define PUSHA {dw oldsp=sp;PUSH(ax);PUSH(cx);PUSH(dx);PUSH(bx); PUSH(oldsp);PUSH(bp);PUSH(si);PUSH(di);}
@@ -2042,7 +2084,16 @@ enum  _offsets;
 
 #ifdef DOSBOX_CUSTOM
 //#define GETIP		(core.cseip-SegBase(cs)-MemBase)
+<<<<<<< HEAD
 #define _INT(num) {m2c::fix_segs();CALLBACK_RunRealInt(num);}
+=======
+
+static void _INT_(db num,dd& eax, dd& ebx, dd& ecx, dd& edx, dd& esi, dd& edi, dd& ebp, dd& esp)
+{
+   m2c::fix_segs();CALLBACK_RunRealInt(num);
+}
+#define _INT(num) {m2c::_INT_(num,eax,ebx,ecx,edx,esi,edi,ebp,esp);}
+>>>>>>> e3e68d452f9b438de058d277f9505ecda69e06c1
 
 #define TESTJUMPTOBACKGROUND  //if (jumpToBackGround) CALL(moveToBackGround);
 
