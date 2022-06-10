@@ -35,7 +35,7 @@ extern bool from_callf;
 
 #if M2CDEBUG != -1
 #include "cpu.h"
-#else
+#elif DOSBOX_CUSTOM
 void CPU_IRET(bool use32,Bitu oldeip);
 bool CPU_CLI(void);
 bool CPU_STI(void);
@@ -1494,8 +1494,8 @@ struct StackPop
 //assert(0);
         }
         esp += i;
-//log_debug("retn target %x:%x\n", cs,ip);
  #if M2CDEBUG > 0
+//log_debug("retn target %x:%x\n", cs,ip);
         if (debug>2) {
             log_debug("after ret %x\n", stackPointer);
             m2c::_indent -= 1;
