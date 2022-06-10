@@ -1,3 +1,6 @@
+[![Linux builds](https://github.com/xor2003/libdosbox/actions/workflows/linux.yml/badge.svg)](https://github.com/xor2003/libdosbox/actions/workflows/linux.yml)
+[![Windows builds](https://github.com/xor2003/libdosbox/actions/workflows/windows.yml/badge.svg)](https://github.com/xor2003/libdosbox/actions/workflows/windows.yml)
+
 LibDosBox
 
 A reverse engineering toolkit which helps you precisely convert DOS 16 bit (segment model) binary code into working C++.
