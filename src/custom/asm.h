@@ -33,9 +33,7 @@ extern bool from_callf;
 #include "custom.h"
 #include "regs.h"
 
-#if M2CDEBUG != -1
-#include "cpu.h"
-#elif DOSBOX_CUSTOM
+#if M2CDEBUG == -1
 void CPU_IRET(bool use32,Bitu oldeip);
 bool CPU_CLI(void);
 bool CPU_STI(void);
@@ -44,6 +42,10 @@ Bitu CPU_Pop16(void);
 Bitu CPU_Pop32(void);
 void CPU_Push16(Bitu value);
 void CPU_Push32(Bitu value);
+struct CPU_Regs;
+struct Segments;
+#else
+#include "cpu.h"
 #endif
 
 #include "mem.h"
@@ -137,8 +139,6 @@ extern db vgaPalette[256*3];
     bool fix_segs();
 
 #if DOSBOX_CUSTOM
-struct CPU_Regs;
-struct Segments;
     extern void log_regs_dbx(const char *file, int line, const char *instr, const CPU_Regs &r, const Segments &s);
 
 
