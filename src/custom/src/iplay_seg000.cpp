@@ -13079,8 +13079,10 @@ cs=0x1a2;eip=0x004f11; 	J(RETN(0));	// 10955 retn ;~ 01A2:4F11
 _timer_int_end:
 	// 10962 
 	cs=seg_offset(seg000);
+printf("int8\n");
 cs=0x1a2;eip=0x004f12; 	T(CMP(*(&byte_14f70), 0));	// 10964 cmp     cs:byte_14F70, 0 ;~ 01A2:4F12
 cs=0x1a2;eip=0x004f18; 	J(JZ(loc_14f3c));	// 10965 jz      short loc_14F3C ;~ 01A2:4F18
+printf("int8 fun\n");
 cs=0x1a2;eip=0x004f1a; 	X(PUSHAD);	// 10966 pushad ;~ 01A2:4F1A
 cs=0x1a2;eip=0x004f1c; 	X(PUSH(ds));	// 10967 push    ds ;~ 01A2:4F1C
 cs=0x1a2;eip=0x004f1d; 	X(PUSH(es));	// 10968 push    es ;~ 01A2:4F1D
@@ -13107,7 +13109,7 @@ cs=0x1a2;eip=0x004f3c; 	X(MOV(*(dw*)(((db*)&word_14f6c)), 1));	// 10987 mov     
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f43; __disp=*(dd*)(((db*)&_int8addr));
 //        from_callf = true;
-printf("int8\n");
+printf("bios int8\n");
 	J(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
 _covox_init:
 	// 11026 
