@@ -142,8 +142,8 @@ jobs:
 
       - name: Summarize warnings
         if:   matrix.conf.run_tests != true
-        env:
-          #max_warnings: ${{ matrix.conf.max_warnings }}
+        #env:
+        #  max_warnings: ${{ matrix.conf.max_warnings }}
         run:  ./scripts/count-warnings.py -lf build.log
 
 

@@ -89,8 +89,8 @@ jobs:
 
       - name:  Summarize warnings
         shell: pwsh
-        env:
-          #max_warnings: ${{ matrix.conf.max_warnings }}
+        #env:
+        #  max_warnings: ${{ matrix.conf.max_warnings }}
         run: python scripts\count-warnings.py -f --msvc vs\build.log
 
 
