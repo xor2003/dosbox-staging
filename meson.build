@@ -42,7 +42,7 @@ summary('Build type',     get_option('buildtype'), section : 'Build Summary')
 summary('Install prefix', get_option('prefix'),    section : 'Build Summary')
 
 extra_flags = ['-ggdb3','-gdwarf-4','-rdynamic','-I/usr/include/SDL2','-Wmaybe-uninitialized', '-Wno-unused-variable','-mno-ms-bitfields', '-Wno-multichar', '-Wno-ad
-dress-of-packed-member','-DDOSBOX_CUSTOM', '-DM2CDEBUG=-1','-DNOSDL']
+dress-of-packed-member','-DDOSBOX_CUSTOM', '-DM2CDEBUG=0','-DNOSDL']
 if host_machine.system() == 'windows'
   extra_flags += '-Wno-pedantic-ms-format'
 endif
