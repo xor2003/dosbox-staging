@@ -12567,6 +12567,7 @@ _sb_callback:
 	// 5015 
 cs=0x1a2;eip=0x004bb8; 	X(PUSH(ax));	// 10413 push    ax ;~ 01A2:4BB8
 cs=0x1a2;eip=0x004bb9; 	X(PUSH(dx));	// 10414 push    dx ;~ 01A2:4BB9
+cs=0x1a2;eip=0x004bba; T(MOV(dx,word_14bbb));
 cs=0x1a2;eip=0x004bbd; 	S(IN(al, dx));	// 10420 in      al, dx ;~ 01A2:4BBD
 cs=0x1a2;eip=0x004bbe; 	X(PUSH(ds));	// 10421 push    ds ;~ 01A2:4BBE
 cs=0x1a2;eip=0x004bbf; 	T(MOV(ax, seg_offset(seg003)));	// 10422 mov     ax, seg seg003 ;~ 01A2:4BBF
