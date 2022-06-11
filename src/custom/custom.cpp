@@ -331,7 +331,7 @@ namespace m2c
   {
     if (collect_rt_info) shadow_memory.collect_segs();
 //    X86_REGREF
-//    log_debug("CPU_Cycles %d\n", CPU_Cycles);
+//printf("CPU_Cycles %d\n", CPU_Cycles);
     if (!defered_irqs && CPU_Cycles > 0)
       {
         CPU_Cycles--;

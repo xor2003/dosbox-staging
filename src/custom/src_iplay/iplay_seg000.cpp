@@ -12781,6 +12781,7 @@ myfunc:
 	// 5029 
 cs=0x1a2;eip=0x004ce8; 	X(PUSH(ax));	// 10613 push    ax ;~ 01A2:4CE8
 cs=0x1a2;eip=0x004ce9; 	X(PUSH(dx));	// 10614 push    dx ;~ 01A2:4CE9
+cs=0x1a2;eip=0x004cea; 	T(MOV(dx, word_14ceb));	// 10767 mov     ds, ax ;~ 01A2:4DEA
 cs=0x1a2;eip=0x004ced; 	S(IN(al, dx));	// 10619 in      al, dx ;~ 01A2:4CED
 cs=0x1a2;eip=0x004cee; 	X(PUSH(ds));	// 10620 push    ds ;~ 01A2:4CEE
 cs=0x1a2;eip=0x004cef; 	T(MOV(ax, seg_offset(seg003)));	// 10621 mov     ax, seg seg003 ;~ 01A2:4CEF
@@ -12844,6 +12845,7 @@ cs=0x1a2;eip=0x004de5; 	X(PUSH(dx));	// 10764 push    dx ;~ 01A2:4DE5
 cs=0x1a2;eip=0x004de6; 	X(PUSH(ds));	// 10765 push    ds ;~ 01A2:4DE6
 cs=0x1a2;eip=0x004de7; 	T(MOV(ax, seg_offset(seg003)));	// 10766 mov     ax, seg seg003 ;~ 01A2:4DE7
 cs=0x1a2;eip=0x004dea; 	T(MOV(ds, ax));	// 10767 mov     ds, ax ;~ 01A2:4DEA
+cs=0x1a2;eip=0x004dec; 	T(MOV(dx, word_14ded));	// 10767 mov     ds, ax ;~ 01A2:4DEA
 cs=0x1a2;eip=0x004def; 	S(IN(al, dx));	// 10772 in      al, dx ;~ 01A2:4DEF
 cs=0x1a2;eip=0x004df0; 	T(SUB(dl, 2));	// 10773 sub     dl, 2 ;~ 01A2:4DF0
 loc_14df3:
@@ -13079,8 +13081,10 @@ cs=0x1a2;eip=0x004f11; 	J(RETN(0));	// 10955 retn ;~ 01A2:4F11
 _timer_int_end:
 	// 10962 
 	cs=seg_offset(seg000);
+//printf("int8\n");
 cs=0x1a2;eip=0x004f12; 	T(CMP(*(&byte_14f70), 0));	// 10964 cmp     cs:byte_14F70, 0 ;~ 01A2:4F12
 cs=0x1a2;eip=0x004f18; 	J(JZ(loc_14f3c));	// 10965 jz      short loc_14F3C ;~ 01A2:4F18
+//printf("int8 fun\n");
 cs=0x1a2;eip=0x004f1a; 	X(PUSHAD);	// 10966 pushad ;~ 01A2:4F1A
 cs=0x1a2;eip=0x004f1c; 	X(PUSH(ds));	// 10967 push    ds ;~ 01A2:4F1C
 cs=0x1a2;eip=0x004f1d; 	X(PUSH(es));	// 10968 push    es ;~ 01A2:4F1D
@@ -13107,7 +13111,7 @@ cs=0x1a2;eip=0x004f3c; 	X(MOV(*(dw*)(((db*)&word_14f6c)), 1));	// 10987 mov     
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f43; __disp=*(dd*)(((db*)&_int8addr));
 //        from_callf = true;
-printf("int8\n");
+//printf("bios int8\n");
 	J(return __dispatch_call(__disp, _state););	// 10988 jmp     cs:_int8addr ;~ 01A2:4F43
 _covox_init:
 	// 11026 
@@ -13345,6 +13349,7 @@ seg000_5198_proc:
 	// 11428 
 _pcspeaker_interrupt:
 	// 5066 
+//printf("spkr int\n");
 cs=0x1a2;eip=0x005198; 	X(PUSH(bx));	// 11429 push    bx ;~ 01A2:5198
 cs=0x1a2;eip=0x005199; 	X(PUSH(ds));	// 11430 push    ds ;~ 01A2:5199
 cs=0x1a2;eip=0x00519d; 	T(MOV(ds, bx));	// 11435 mov     ds, bx ;~ 01A2:519D
@@ -13436,7 +13441,7 @@ cs=0x1a2;eip=0x004f5d; 	J(CALL(_set_timer,0));	// 11002 call    _set_timer ;~ 01
 cs=0x1a2;eip=0x004f60; 	X(POP(ax));	// 11003 pop     ax ;~ 01A2:4F60
 	cs=seg_offset(seg000);
 cs=0x1a2;eip=0x004f61; __disp=*(dd*)(((db*)&_int8addr));
-printf("int8_\n");
+//printf("int8_\n");
 	J(return __dispatch_call(__disp, _state););	// 11004 jmp     cs:_int8addr ;~ 01A2:4F61
 ret_1a2_4f66:
 	// 5054 
@@ -20304,6 +20309,7 @@ cs=0x1a2;eip=0x00853f; 	J(RETN(0));	// 17656 retn ;~ 01A2:853F
     _begin:
 _sb_test_interrupt:
 	// 17573 
+//printf("sb_test_int\n");
 cs=0x1a2;eip=0x00849a; 	X(MOV(_sb_int_counter, 0));	// 17575 mov     _sb_int_counter, 0 ;~ 01A2:849A
 cs=0x1a2;eip=0x00849f; 	T(MOV(si, m2c::k_sb16_handler_int));	// 17576 mov     si, offset _sb16_handler_int ; myfunc ;~ 01A2:849F
 cs=0x1a2;eip=0x0084a2; 	T(MOV(al, _sb_irq_number));	// 17577 mov     al, _sb_irq_number ;~ 01A2:84A2
@@ -20391,6 +20397,7 @@ cs=0x1a2;eip=0x0085d7; 	T(CLC);	// 17727 clc ;~ 01A2:85D7
 cs=0x1a2;eip=0x0085d8; 	J(RETN(0));	// 17728 retn ;~ 01A2:85D8
 _sb16_handler_int:
 	// 17736 
+//printf("sb_int\n");
 cs=0x1a2;eip=0x0085d9; 	X(PUSH(ax));	// 17738 push    ax ;~ 01A2:85D9
 cs=0x1a2;eip=0x0085da; 	X(PUSH(dx));	// 17739 push    dx ;~ 01A2:85DA
 cs=0x1a2;eip=0x0085db; 	X(PUSH(ds));	// 17740 push    ds ;~ 01A2:85DB
