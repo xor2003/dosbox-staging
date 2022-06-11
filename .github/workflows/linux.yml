@@ -45,7 +45,7 @@ jobs:
           - name: GCC, +tests
             os: ubuntu-20.04
             run_tests: true
-            #max_warnings: -1
+            max_warnings: 500
 
           - name: GCC, +debugger
             os: ubuntu-20.04
@@ -143,7 +143,7 @@ jobs:
       - name: Summarize warnings
         if:   matrix.conf.run_tests != true
         env:
-          max_warnings: ${{ matrix.conf.max_warnings }}
+          MAX_WARNINGS: ${{ matrix.conf.max_warnings }}
         run:  ./scripts/count-warnings.py -lf build.log
 
 
