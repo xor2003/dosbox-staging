@@ -1,5 +1,5 @@
 libsrc_sources = files([
-  'iplay.cpp','iplay_default_seg.cpp','iplay_seg000.cpp','iplay_seg001.cpp',
+  'vga.exe.cpp',  'vga.exe_default_seg.cpp',  'vga.exe_seg000.cpp',
   'init.cpp',
   '_data.cpp',
 ])

@@ -85,9 +85,9 @@ static void
 write_strsignal (int signal)
 {
 
-#if (defined (__gnu_linux__))
-    if (signal < 0 || signal >= _NSIG || _sys_siglist[signal] == NULL)
-#endif
+//#if (defined (__gnu_linux__))
+    //if (signal < 0 || signal >= _NSIG || _sys_siglist[signal] == NULL)
+//#endif
 
     {
 
@@ -129,10 +129,10 @@ write_strsignal (int signal)
 
     }
 
-#if (defined (__gnu_linux__))
-    else
-        WRITE_WORD(_sys_siglist[signal]);
-#endif
+//#if (defined (__gnu_linux__))
+    //else
+        //WRITE_WORD(_sys_siglist[signal]);
+//#endif
 
 }
 
