@@ -12,7 +12,7 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 
 	init_get_fname(fname, name);
 
-	if (strcmp(fname, "vga.exe")) return false;
+	if (strcmp(fname, "game_drv.exe")) return false;
 
 	return true;
 }
