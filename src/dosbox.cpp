@@ -181,8 +181,8 @@ Bitu Normal_Loop() {
 #endif
 			if (!return_point.empty() && return_point.top()==((Segs.val[cs]<<16) + (reg_eip&0xffff))) return 0;
 		} else {
-			if (!GFX_Events())
-				return 0;
+//			if (!GFX_Events())
+//				return 0;
 			if (ticksRemain > 0) {
 				TIMER_AddTick();
 				ticksRemain--;
