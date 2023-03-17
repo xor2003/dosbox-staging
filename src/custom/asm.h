@@ -631,7 +631,7 @@ inline long getdata(const long& s)
 
     static void PUSHA_(_STATE* _state) {
         X86_REGREF
-        dd oldsp = sp;
+        dw oldsp = sp;
         PUSH(ax);
         PUSH(cx);
         PUSH(dx);
