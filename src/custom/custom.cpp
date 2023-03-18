@@ -160,7 +160,25 @@ void graphics()
     std::this_thread::sleep_for(interval);
 
     // Execute gfx function.
-    GFX_Events();
+    if (!GFX_Events())
+	{exit(0);}
+  }
+}
+
+void cycles()
+{
+  // Calculate the time interval between each execution of your function.
+  const std::chrono::milliseconds interval(1);
+
+  // Use a while loop to continuously execute your function at the desired interval.
+  while (true) {
+    // Pause the thread for the calculated time interval before executing the function again.
+    std::this_thread::sleep_for(interval);
+     if (CPU_Cycles > 0)
+      {
+        CPU_Cycles--;
+      }
+
   }
 }
 
@@ -174,8 +192,9 @@ custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
     atexit (m2c::stackDumpZ);
     registered = true;
 
-    static std::thread t(graphics);
-}
+    static std::thread graphics_thread(graphics);
+    //static std::thread cycles_thread(cycles);
+  }
   /* run all detectors */
   if (masm2c_init (name, relocate, init_cs, init_ip))
     {
@@ -334,7 +353,6 @@ namespace m2c
       }
     else if (!GET_IF () && fix_segs () && !PIC_RunQueue ())     // Can only call PIC_RunQueue() separatelly if IF=0
       {                         // So no IRQ interrupts will be started
-        //GFX_Events ();
         if (ticksRemain > 0)
           {
             TIMER_AddTick ();
@@ -350,7 +368,7 @@ namespace m2c
 
   void run_hw_interrupts ()
   {
-    if (collect_rt_info) shadow_memory.collect_segs();
+    //if (collect_rt_info) shadow_memory.collect_segs();
 //    X86_REGREF
 //printf("CPU_Cycles %d\n", CPU_Cycles);
     if (!defered_irqs && CPU_Cycles > 0)
@@ -789,6 +807,7 @@ char jump_name[100]="";
 
     if (compare_jump) Jend();
 
+    if (collect_rt_info) shadow_memory.collect_segs();
     run_hw_interrupts ();
     log_regs_dbx(file, line, instr, cpu_regs, Segs);
     if (!compare_instructions)
@@ -928,6 +947,7 @@ stackDump();
 
     if (compare_jump) Jend();
 
+    if (collect_rt_info) shadow_memory.collect_segs();
     run_hw_interrupts ();
 
     log_regs_dbx(file, line, instr, cpu_regs, Segs);
@@ -968,6 +988,7 @@ stackDump();
 
     if (compare_jump) Jend();
 
+    if (collect_rt_info) shadow_memory.collect_segs();
     run_hw_interrupts ();
 
     log_regs_dbx(file, line, instr, cpu_regs, Segs);
@@ -1085,6 +1106,7 @@ stackDump();
 
     if (compare_jump) Jend();
 
+    if (collect_rt_info) shadow_memory.collect_segs();
     run_hw_interrupts ();
     log_regs_dbx(file, line, instr, cpu_regs, Segs);
     if (!compare_instructions)
@@ -1262,7 +1284,19 @@ if (debug > 0)
         va_start(args, format);
         char str[256];
         result = vsprintf(str, format, args);
-//        result = vprintf(format, args);
+        log_regs_dbx("", 0, str, cpu_regs, Segs);
+        va_end(args);
+
+        return result;
+    }
+
+    int log_error(const char *format, ...) {
+        int result;
+        va_list args;
+
+        va_start(args, format);
+        char str[256]="ERROR ";
+        result = vsprintf(str+6, format, args);
         log_regs_dbx("", 0, str, cpu_regs, Segs);
         va_end(args);
 

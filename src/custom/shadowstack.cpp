@@ -74,13 +74,12 @@ namespace m2c{
 //     log_debug ("~3\n");
                 tsp = m_ss.at(m_current ).sp;
                 if ((tcount++) > 0)
-                  log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current).addcounter, tsp);
-//                if (tsp <= sp)
+                    log_error ("uncontrolled pop meet in past which added %x sp=%x\n", m_ss.at(m_current).addcounter, tsp);
                   m_ss.at(m_current).remcounter = counter;
                   if (m_ss.at(m_current).itwascall) {++m_needtoskipcall;log_debug("increased m_needtoskipcall=%d\n",m_needtoskipcall);}
-                print_frame(m_ss.at(m_current));
+                  print_frame(m_ss.at(m_current));
                 }
-//		else log_debug ("m_current %x not initialized\n", m_current);
+		else {log_error ("m_current %x not initialized\n", m_current);}
 
                 m_current += 2; 
 //                  log_debug ("m_current %x\n", m_current);
