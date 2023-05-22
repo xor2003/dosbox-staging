@@ -17,13 +17,18 @@ This helps identify where IDA failed to disassemble.
 The toolkit helps to create working fake-assembler C++ code with real variables.
 
 (If you want real C code you will have to rewrite by hand or convert:
-for example 
-clang++ -> LLVM IR -> Iril -> MSIL -> dotPeak -> C# -> C++
-or 
+for example:
+
+masm2c -> angr based decomplier
+Full decompilation is WIP: TODO create x86-16 lifter using Gymrat)
+
 clang++ -> LLVM IR -> Rellic -> C++
 or
-masm2c -> angr decomplier
-Full decompilation is WIP)
+
+clang++ -> LLVM IR -> Iril -> MSIL -> dotPeak -> C#/Vala -> C++
+or 
+
+TODO: Find a tool for automatic unit-test generation.
 
 [![Test drive 3](http://img.youtube.com/vi/MzK9RVgeWGM/0.jpg)](http://www.youtube.com/watch?v=MzK9RVgeWGM "Test drive 3")
 
