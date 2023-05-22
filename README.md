@@ -30,6 +30,8 @@ or
 
 TODO: Find a tool for automatic unit-test generation.
 
+Video demo of working translated game code (it takes about week to translate):
+
 [![Test drive 3](http://img.youtube.com/vi/MzK9RVgeWGM/0.jpg)](http://www.youtube.com/watch?v=MzK9RVgeWGM "Test drive 3")
 
 [![Cryo Dune](http://img.youtube.com/vi/f-HArAmtXTc/0.jpg)](http://www.youtube.com/watch?v=f-HArAmtXTc "Cryo Dune")
