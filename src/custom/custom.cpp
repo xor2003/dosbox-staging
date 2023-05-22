@@ -14,9 +14,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include <thread>
-#include <chrono>
-
 extern Bitu DasmI386(char* buffer, PhysPt pc, Bitu cur_ip, bool bit32);
 
 namespace m2c
@@ -149,22 +146,6 @@ void loguru_fatal(const loguru::Message& message)
 { m2c::stackDumpZ();
 }
 
-void graphics()
-{
-  // Calculate the time interval between each execution of your function.
-  const std::chrono::milliseconds interval(40);
-
-  // Use a while loop to continuously execute your function at the desired interval.
-  while (true) {
-    // Pause the thread for the calculated time interval before executing the function again.
-    std::this_thread::sleep_for(interval);
-
-    // Execute gfx function.
-    GFX_Events();
-  }
-}
-
-
 void
 custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
 {
@@ -173,8 +154,6 @@ custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
     loguru::set_fatal_handler(loguru_fatal);
     atexit (m2c::stackDumpZ);
     registered = true;
-
-    static std::thread t(graphics);
 }
   /* run all detectors */
   if (masm2c_init (name, relocate, init_cs, init_ip))
@@ -334,7 +313,7 @@ namespace m2c
       }
     else if (!GET_IF () && fix_segs () && !PIC_RunQueue ())     // Can only call PIC_RunQueue() separatelly if IF=0
       {                         // So no IRQ interrupts will be started
-        //GFX_Events ();
+        GFX_Events ();
         if (ticksRemain > 0)
           {
             TIMER_AddTick ();
