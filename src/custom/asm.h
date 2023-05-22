@@ -426,9 +426,8 @@ inline long getdata(const long& s)
 
 
     extern int log_debug(const char *format, ...);
-    extern int log_error(const char *fmt, ...);
 //#define log_debug printf
-//#define log_error log_debug
+#define log_error log_debug
 #define log_info log_debug
 
     extern const char *log_spaces(int n);
@@ -661,8 +660,8 @@ extern bool defered_irqs;
 OPTINLINE static void defer_irqs()
 {defered_irqs=true;}
 #if DOSBOX_CUSTOM
-#define STI {CPU_STI();m2c::execute_irqs();}
-#define CLI {m2c::execute_irqs();CPU_CLI();}
+#define STI {CPU_STI();m2c::defer_irqs();}
+#define CLI {CPU_CLI();}
 #else
 #define STI UNIMPLEMENTED
 #define CLI UNIMPLEMENTED
@@ -1392,7 +1391,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 #define CMC {AFFECT_CF(GET_CF() ^ 1);}
 
 #define PUSHF {PUSH( (m2c::MWORDSIZE)m2cflags.getvalue() );}
-#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::execute_irqs();}
+#define POPF {m2c::MWORDSIZE averytemporary; POP(averytemporary); m2cflags.setvalue(averytemporary);m2c::defer_irqs();}
 
 //#define PUSHF {PUSH( (dd) ((GET_CF()?1:0)|(GET_PF()?4:0)|(GET_AF()?0x10:0)|(GET_ZF()?0x40:0)|(GET_SF()?0x80:0)|(GET_DF()?0x400:0)|(GET_OF()?0x800:0)) );}
 //#define POPF {dd averytemporary; POP(averytemporary); CF=averytemporary&1;  PF=(averytemporary&4);AF=(averytemporary&0x10);ZF=(averytemporary&0x40);SF=(averytemporary&0x80);DF=(averytemporary&0x400);OF=(averytemporary&0x800);}
@@ -1582,7 +1581,6 @@ throw StackPop(skip);
 //#endif
     static bool CALL_(m2cf *label, struct _STATE *_state, _offsets _i = 0) {
         X86_REGREF
-
         from_callf = true;
 //#ifdef SHADOW_STACK
         shadow_stack.itiscall();
@@ -1650,7 +1648,7 @@ shadow_stack.decreasedeep();
 	return;}
 */
 #if DOSBOX_CUSTOM
-#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::execute_irqs(); return true;}
+#define IRET {m2c::fix_segs();CPU_IRET(false,0);if (compare_jump) m2c::Jend(); m2c::defer_irqs(); return true;}
 #else
 #define IRET RETF(0)
 #endif
@@ -1807,27 +1805,19 @@ enum  _offsets;
 
 #ifdef DOSBOX_CUSTOM
 
-#define _INT(num) {m2c::execute_irqs(); m2c::fix_segs();CALLBACK_RunRealInt(num);m2c::execute_irqs(); }
+#define _INT(num) {m2c::fix_segs();CALLBACK_RunRealInt(num);}
 
 #define OUT(port, value) m2c::OUT_(port,value)
 
-    static void OUT_(dw port, db value) { IO_WriteB(port, value);/*printf("W %x <- %x\n",port,value);*/     
-    execute_irqs();
-}
+    static void OUT_(dw port, db value) { IO_WriteB(port, value);/*printf("W %x <- %x\n",port,value);*/ }
 
-    static void OUT_(dw port, dw value) { /*printf("wrong\n");*/IO_WriteW(port, value); 
-    execute_irqs();
-}
+    static void OUT_(dw port, dw value) { /*printf("wrong\n");*/IO_WriteW(port, value); }
 
 #define IN(res, port) m2c::IN_(res, port)
 
-    static void IN_(db &res, dw port) { 
-    execute_irqs();
-    res = IO_ReadB(port); /*printf("R %x -> %x\n",port,res);*/ }
+    static void IN_(db &res, dw port) { res = IO_ReadB(port); /*printf("R %x -> %x\n",port,res);*/ }
 
-    static void IN_(dw &res, dw port) {
-    execute_irqs();
- /*printf("wrong\n");*/ res = IO_ReadW(port); }
+    static void IN_(dw &res, dw port) { /*printf("wrong\n");*/ res = IO_ReadW(port); }
 
 #else
 
