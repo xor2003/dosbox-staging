@@ -5,9 +5,17 @@ LibDosBox
 
 A reverse engineering toolkit that enables the precise conversion of 16-bit DOS binary code into working C++ code. 
 It is a fork of the DOSBox-staging emulator, but game code is executed by real CPU, and DOS interrupts and hardware are emulated by DOSBox. 
+
+You just play the game and the code is checked at run-time for wrong translation.
+
+Libdosbox is a library that executes each instruction twice:
+1. First, it emulates the instruction using the dosbox interpreter.
+2. Second, it emulates the instruction using a fake-asm C++ function that emulates this instruction (native code). 
+3. Libdosbox compares the changes made by both (to registers, flags, memory) at the instruction level.
+This helps identify where IDA failed to disassemble.
+
 The toolkit helps to create working fake-assembler C++ code with real variables.
 
-It will help to make working fake-assembler C++ code with real variables. 
 (If you want real C code you will have to rewrite by hand or convert:
 for example 
 clang++ -> LLVM IR -> Iril -> MSIL -> dotPeak -> C# -> C++
