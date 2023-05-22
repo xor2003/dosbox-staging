@@ -31,7 +31,6 @@ extern bool from_callf;
 #include <typeinfo>
 
 #include "custom.h"
-#include "regs.h"
 
 #if M2CDEBUG == -1
 void CPU_IRET(bool use32,Bitu oldeip);
@@ -45,6 +44,7 @@ void CPU_Push32(Bitu value);
 struct CPU_Regs;
 struct Segments;
 #else
+#include "regs.h"
 #include "cpu.h"
 #endif
 
