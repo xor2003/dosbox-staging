@@ -159,6 +159,7 @@ custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
   /* run all detectors */
   if (masm2c_init (name, relocate, init_cs, init_ip))
     {
+      printf("It is target binary. Rise binary enter flags\n");
       custom_runs++;
       init_runs++;
     }
@@ -169,11 +170,15 @@ void
 custom_exit_prog (Bit8u exitcode)
 {
   if (!custom_runs)
+    {
+    printf("It wasn't a target binary. Ignoring\n");
     return;
+    }
 
   custom_runs--;
   if (init_runs)
     {
+      printf("Doing deinit\n");
       masm2c_exit (exitcode);
       exit (0);
 
@@ -1343,7 +1348,9 @@ using json = nlohmann::json;
        j = *this;
 
        std::string s=j.dump();
-       FILE *f = fopen((exename+".json").c_str(),"w");
+       std::string json_file_name = exename+".json";
+       printf("Dumping run-time info into %s\n", json_file_name.c_str());
+       FILE *f = fopen(json_file_name.c_str(),"w");
        fwrite(s.c_str(),s.size(),1,f);
        fclose(f);
        printf("Saved json\n");
