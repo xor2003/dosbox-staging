@@ -141,21 +141,6 @@ struct _STATE;
 
 }
 
-
-
-class custom_prog {
-	public:
-		virtual bool probe(char *name, Bit16u relocate,
-				Bit16u init_cs, Bit16u init_ip) = 0;
-		virtual void remove(Bit8u exitcode) = 0;
-		virtual void suspend() = 0;
-		virtual void resume() = 0;
-
-		virtual int fcall_handler(Bitu seg, Bitu off) = 0;
-		virtual int ncall_handler(Bit16u off) = 0;
-	private:
-};
-
 extern bool trace_instructions;
 extern volatile bool defered_custom_call; // int was called by interpreter which m2c have to execute later
 extern bool from_callf; // check if m2c's interrupt called from interpreter or callf from m2c to interperter's bios
