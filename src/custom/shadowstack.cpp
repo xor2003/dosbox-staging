@@ -1,7 +1,7 @@
 #include "asm.h"
 
 namespace m2c{
-  void ShadowStack::push (_STATE * _state, dd value)
+  void ShadowStack::push(_STATE * _state, dd value)
   {
      
      if (!m_active && !m_forceactive) return;
@@ -37,7 +37,7 @@ namespace m2c{
    return m_ss[esp].itwascall;
   }
 
-  void ShadowStack::pop (_STATE * _state)
+  void ShadowStack::pop(_STATE * _state)
   {
      if (!m_active && !m_forceactive) 
        {

@@ -15,7 +15,7 @@
 
 
 extern db (& dummy1)[6688];
-extern db (& _text)[0];
+extern db (& _text)[16];
 extern db (& dummy2)[84];
 extern char (& byte_10164)[1];
 namespace m2c{
@@ -30,7 +30,7 @@ void   Initializer();
 bool mainproc(m2c::_offsets, struct m2c::_STATE*);
 bool _group1(m2c::_offsets, struct m2c::_STATE*);
 bool _main(m2c::_offsets, struct m2c::_STATE*);
-bool _int8(m2c::_offsets, struct m2c::_STATE*);
+bool _int8_(m2c::_offsets, struct m2c::_STATE*);
 bool __dispatch_call(m2c::_offsets __disp, struct m2c::_STATE* _state);
 
 //};

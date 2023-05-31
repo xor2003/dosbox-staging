@@ -181,9 +181,6 @@
     <ClCompile Include="..\src\hardware\keyboard.cpp">
       <Filter>src\hardware</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\hardware\ne2000.cpp">
-      <Filter>src\hardware</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\hardware\mame\fmopl.cpp">
       <Filter>src\hardware\mame</Filter>
     </ClCompile>
@@ -499,12 +496,6 @@
     <ClCompile Include="..\src\misc\pacer.cpp">
       <Filter>src\misc</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\libs\loguru\loguru.cpp">
-      <Filter>src\libs\loguru</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libs\whereami\whereami.c">
-      <Filter>src\libs\whereami</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\dos\program_biostest.cpp" />
     <ClCompile Include="..\src\dos\program_boot.cpp" />
     <ClCompile Include="..\src\dos\program_imgmount.cpp" />
@@ -516,6 +507,14 @@
     <ClCompile Include="..\src\dos\program_mount_common.cpp" />
     <ClCompile Include="..\src\dos\program_mount.cpp" />
     <ClCompile Include="..\src\dos\program_rescan.cpp" />
+    <ClCompile Include="..\src\dos\program_serial.cpp" />
+    <ClCompile Include="..\src\libs\loguru\loguru.cpp" />
+    <ClCompile Include="..\src\libs\whereami\whereami.c" />
+    <ClCompile Include="..\src\custom\custom.cpp" />
+    <ClCompile Include="..\src\custom\shadowstack.cpp" />
+    <ClCompile Include="..\src\custom\test\init.cpp" />
+    <ClCompile Include="..\src\custom\test\_data.cpp" />
+    <ClCompile Include="..\src\custom\test\int8.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\bios.h">
@@ -557,9 +556,6 @@
     <ClInclude Include="..\include\drives.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ethernet.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\envelope.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -597,9 +593,6 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\mouse.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ne2000.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\paging.h">
@@ -860,12 +853,6 @@
     <ClInclude Include="..\src\midi\midi_win32.h">
       <Filter>src\midi</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\misc\ethernet.h">
-      <Filter>src\misc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\misc\ethernet_slirp.h">
-      <Filter>src\misc</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\dos\program_autotype.h">
       <Filter>src\dos</Filter>
     </ClInclude>
@@ -962,12 +949,19 @@
     <ClInclude Include="..\src\cpu\core_dyn_x86\risc_x64.h">
       <Filter>src\cpu\core_dyn_x86</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\libs\loguru\loguru.hpp">
-      <Filter>src\libs\loguru</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\libs\whereami\whereami.h">
-      <Filter>src\libs\whereami</Filter>
-    </ClInclude>
+    <ClInclude Include="..\src\dos\program_serial.h" />
+    <ClInclude Include="..\src\libs\loguru\loguru.hpp" />
+    <ClInclude Include="..\src\libs\whereami\whereami.h" />
+    <ClInclude Include="..\include\ansi_code_markup.h" />
+    <ClInclude Include="..\include\bitops.h" />
+    <ClInclude Include="..\include\custom.h" />
+    <ClInclude Include="..\src\custom\asm.h" />
+    <ClInclude Include="..\src\custom\asm_16.h" />
+    <ClInclude Include="..\src\custom\asm_32.h" />
+    <ClInclude Include="..\src\custom\custom_hooks.h" />
+    <ClInclude Include="..\src\custom\test\int8.h" />
+    <ClInclude Include="..\src\custom\test\init.h" />
+    <ClInclude Include="..\src\custom\test\_data.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\src\winres.rc">

@@ -8,7 +8,7 @@
 namespace m2c{
 struct Memory{
 db dummy1[0x1920];
-db _text[0];
+db _text[16];
 db dummy3[0x100];
 db dummy2[84];
 char byte_10164[1];

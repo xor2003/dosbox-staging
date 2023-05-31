@@ -22,7 +22,7 @@ extern void Jend();
 
     extern int log_debug(const char *format, ...);
 
-class _STATE;
+struct _STATE;
     class ShadowStack {
         struct Frame {
             bool init=false;
