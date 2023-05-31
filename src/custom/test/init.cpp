@@ -1,4 +1,5 @@
 #include <cstring>
+#include <cstdio>
 
 void init_get_fname(char *dst, char *src);
 
@@ -11,7 +12,7 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 	int ver;
 
 	init_get_fname(fname, name);
-
+	printf(fname);
 	if (strcmp(fname, "int8.com")) return false;
 
 	return true;
