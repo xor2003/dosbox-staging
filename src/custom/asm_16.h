@@ -113,6 +113,65 @@ static inline db* raddr_(dw segment,dw offset) {return (db *)&m + (segment<<4) +
 #define LOOPE(label) if (--cx && GET_ZF()) GOTOLABEL(label)
 #define LOOPNE(label) if (--cx && !GET_ZF()) GOTOLABEL(label)
 
+#define ENTER(bytes, nest) {m2c::ENTER_(_state,bytes,nest);}
+static void ENTER_(_STATE* _state, size_t Size, size_t NestingLevel)
+{
+X86_REGREF
+NestingLevel = NestingLevel % 32;
+const int StackSize = 16;
+const int OperandSize = 16;
+dd FrameTemp;
+if(StackSize == 32) {
+	PUSH(ebp);
+	FrameTemp = esp;
+}
+else { //StackSize = 16
+	PUSH(ebp);
+	FrameTemp = esp;
+}
+
+if(NestingLevel == 0) goto Continue;
+else {
+	for(size_t i = 1; i < NestingLevel; ++i) {
+		if(OperandSize == 32) {
+			if(StackSize == 32) {
+				ebp = ebp - 4;
+				PUSH(ebp); //doubleword push
+			}
+			else { //StackSize == 16
+				bp = bp - 4;
+				PUSH(bp); //doubleword push
+			}
+		}
+		else { //OperandSize = 16
+			if(StackSize == 32) {
+				ebp = ebp - 2;
+				PUSH(ebp); //doubleword push
+			}
+			else { //StackSize == 16
+				bp = bp - 2;
+				PUSH(bp); //doubleword push
+			}
+		}
+	}
+	
+	if(OperandSize == 32) {PUSH((dd)FrameTemp);} //doubleword push
+	else {PUSH((dw)FrameTemp);} //OperandSize == 16, word push
+}
+
+Continue:
+if(StackSize == 32) {
+	ebp = FrameTemp;
+	esp = ebp - Size;
+}
+else { //StackSize == 16
+	bp = FrameTemp;
+	sp = bp - Size;
+}
+}
+
+#define LEAVE {MOV(sp, bp);POP(bp);}
+
 
 #endif
 

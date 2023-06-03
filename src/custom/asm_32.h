@@ -74,7 +74,7 @@ static inline db* raddr_(dw segment,dd offset) {return reinterpret_cast<db *>(of
  #define LOOPE(label) --ecx; if (ecx!=0 && GET_ZF()) GOTOLABEL(label) //TODO
  #define LOOPNE(label) --ecx; if (ecx!=0 && !GET_ZF()) GOTOLABEL(label) //TODO
 
-
+#define LEAVE {MOV(esp, ebp);POP(ebp);}
 
 #endif
 

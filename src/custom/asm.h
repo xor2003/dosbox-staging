@@ -495,49 +495,6 @@ inline long getdata(const long& s)
 #define INLINE
 #endif
 
-#if _BITS == 32
-#include "asm_32.h"
-#else
-
-#include "asm_16.h"
-
-#endif
-#define raddr(s, o) m2c::raddr_(s, o)
-
-#define realAddress(offset, segment) m2c::raddr_(segment,offset)
-
-
-#define seg_offset(segment) ((dw)(((db*)(&segment)-(db*)(&m2c::m))>>4))
-
-// DJGPP
-#define MASK_LINEAR(addr)     (((size_t)addr) & 0x000FFFFF)
-#define RM_TO_LINEAR(addr)    (((((size_t)addr) & 0xFFFF0000) >> 12) + (((size_t)addr) & 0xFFFF))
-#define RM_OFFSET(addr)       (((size_t)addr) & 0xF)
-#define RM_SEGMENT(addr)      ((((size_t)addr) >> 4) & 0xFFFF)
-
-
-    extern class ShadowStack shadow_stack;
-
-#define GET_DF() m2cflags.getDF()
-#define GET_CF() m2cflags.getCF()
-#define GET_AF() m2cflags.getAF()
-#define GET_OF() m2cflags.getOF()
-#define GET_SF() m2cflags.getSF()
-#define GET_ZF() m2cflags.getZF()
-#define GET_PF() m2cflags.getPF()
-#define GET_IF() m2cflags.getIF()
-#define AFFECT_DF(a) m2cflags.setDF(a)
-#define AFFECT_CF(a) m2cflags.setCF(a)
-#define AFFECT_AF(a) m2cflags.setAF(a)
-#define AFFECT_OF(a) m2cflags.setOF(a)
-#define AFFECT_IF(a) m2cflags.setIF(a)
-#define ISNEGATIVE(f, a) ( (a) & (1 << (m2c::bitsizeof(f)-1)) )
-#define AFFECT_SF(a) m2cflags.setSF(a)
-#define AFFECT_SF_(f, a) {AFFECT_SF(ISNEGATIVE(f,a));}
-#define AFFECT_ZF(a) m2cflags.setZF(a)
-#define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
-#define AFFECT_PF(a) m2cflags.setPF(a)
-
 #ifdef DOSBOX_CUSTOM
 #define PUSH(a) {m2c::PUSH_(a);}
 #define POP(a) {m2c::POP_(a);}
@@ -597,6 +554,50 @@ inline long getdata(const long& s)
   memcpy (&a, m2c::raddr_(ss,stackPointer), sizeof (a));stackPointer+=sizeof(a);
 }
 #endif
+
+#if _BITS == 32
+#include "asm_32.h"
+#else
+
+#include "asm_16.h"
+
+#endif
+#define raddr(s, o) m2c::raddr_(s, o)
+
+#define realAddress(offset, segment) m2c::raddr_(segment,offset)
+
+
+#define seg_offset(segment) ((dw)(((db*)(&segment)-(db*)(&m2c::m))>>4))
+
+// DJGPP
+#define MASK_LINEAR(addr)     (((size_t)addr) & 0x000FFFFF)
+#define RM_TO_LINEAR(addr)    (((((size_t)addr) & 0xFFFF0000) >> 12) + (((size_t)addr) & 0xFFFF))
+#define RM_OFFSET(addr)       (((size_t)addr) & 0xF)
+#define RM_SEGMENT(addr)      ((((size_t)addr) >> 4) & 0xFFFF)
+
+
+    extern class ShadowStack shadow_stack;
+
+#define GET_DF() m2cflags.getDF()
+#define GET_CF() m2cflags.getCF()
+#define GET_AF() m2cflags.getAF()
+#define GET_OF() m2cflags.getOF()
+#define GET_SF() m2cflags.getSF()
+#define GET_ZF() m2cflags.getZF()
+#define GET_PF() m2cflags.getPF()
+#define GET_IF() m2cflags.getIF()
+#define AFFECT_DF(a) m2cflags.setDF(a)
+#define AFFECT_CF(a) m2cflags.setCF(a)
+#define AFFECT_AF(a) m2cflags.setAF(a)
+#define AFFECT_OF(a) m2cflags.setOF(a)
+#define AFFECT_IF(a) m2cflags.setIF(a)
+#define ISNEGATIVE(f, a) ( (a) & (1 << (m2c::bitsizeof(f)-1)) )
+#define AFFECT_SF(a) m2cflags.setSF(a)
+#define AFFECT_SF_(f, a) {AFFECT_SF(ISNEGATIVE(f,a));}
+#define AFFECT_ZF(a) m2cflags.setZF(a)
+#define AFFECT_ZFifz(a) m2cflags.setZF((a)==0)
+#define AFFECT_PF(a) m2cflags.setPF(a)
+
 
 #define PUSHAD m2c::PUSHAD_(_state)
 
@@ -1325,7 +1326,6 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
     MYINLINE void MOV_(D *dest, const S &src) { m2c::setdata(dest, static_cast<D>(m2c::getdata(src))); }
 //{ *dest = static_cast<D>(src); }
 
-#define LEAVE {MOV(esp, ebp));POP(ebp);}
 #define LFS(dest, src) {dw seg= *(dw*)((db*)&(src) + sizeof(dest));dest = src;fs=seg;}
 #define LES(dest, src) {dw seg= *(dw*)((db*)&(src) + sizeof(dest));dest = src;es=seg;}
 #define LGS(dest, src) {dw seg= *(dw*)((db*)&(src) + sizeof(dest));dest = src;gs=seg;}
@@ -1480,12 +1480,14 @@ struct StackPop
         if (debug>2) log_debug("before ret %x\n", stackPointer);
  #endif
 
-        shadow_stack.itisret();
-
         bool ret(true);
+#ifdef SHADOW_STACK
+        shadow_stack.itisret();
         ret = shadow_stack.itwascall();
+#endif
 
         POP(ip);
+#ifdef SHADOW_STACK
         int skip = shadow_stack.getneedtoskipcallndclean();
 //log_debug("skip %d\n", skip);
         if (!ret) {
@@ -1493,6 +1495,7 @@ struct StackPop
 //            m2c::stackDump();
 //assert(0);
         }
+#endif
         esp += i;
  #if M2CDEBUG > 0
 //log_debug("retn target %x:%x\n", cs,ip);
