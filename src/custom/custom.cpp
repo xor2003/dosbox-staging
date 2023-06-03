@@ -148,7 +148,7 @@ void loguru_fatal(const loguru::Message& message)
 }
 
 void
-custom_init_prog (char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
+custom_init_prog(char *name, Bit16u relocate, Bit16u init_cs, Bit16u init_ip)
 {
   static bool registered=false;
   if (!registered) {
