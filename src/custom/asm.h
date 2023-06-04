@@ -496,7 +496,7 @@ inline long getdata(const long& s)
 #endif
 
 #ifdef DOSBOX_CUSTOM
-#define PUSH(a) {m2c::PUSH_(a);}
+#define PUSH(a) {m2c::PUSH_((dw)a);}  // WARNING !!! Hacking to word
 #define POP(a) {m2c::POP_(a);}
 
 

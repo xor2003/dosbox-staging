@@ -44,13 +44,18 @@ So if IDA for example was incorrectly pick a wrong segment or wrongly converted 
 
 To translate game code:
 1. Load the game .exe into IDA Pro.
-2. Make sure code is disassembled and data is not.
-3. Do "View" -> "Unhide all".
-4. "File" -> Produce .lst and .map
-5. Convert .lst using Masm2c into .cpp
-6. Put .cpp into /src/custom/src and binary/data to /src
-7. Prepare meson.build and init.cpp inside /src/custom/src/
-8. Build and execute "dosbox game.exe"
+2. Do "View" -> "Unhide all".
+3. Generate .map file: File -> Produce file -> Create MAP file (with all checkpoints enabled)
+4. Build libdosbox (see BUILD.md) with collect_rt_info_vars = true and collect_rt_info = true (see custom.cpp)
+5. Play the game. Exit and make sure non-empty .json file was generated
+6. Use json2idc.py script to convert .json and .map file into .idc
+7. Load generated .idc file (It will automatically mark code and data and rename some variables)
+8. File -> Produce file -> Create INC file
+9. File -> Produce file -> Create LST file
+10. Convert .lst using masm2c into many .cpp (if IDA used MASM reverved words rename it in IDA and repeat: takes ~1 hour)
+11. Put .cpp into /src/custom/src and game binary/data to build/
+12. Prepare meson.build and init.cpp inside /src/custom/src/ (see on other project /src/custom/src_*) 
+13. Build (with compare_instructions = true) and execute "dosbox game.exe"
 
 The toolkit is currently limited to real mode 16-bit DOS software only. 
 

@@ -101,7 +101,14 @@ set_target_assembler("Generic for intel 80x86");
         outfile.write(f'set_name(0x{addr:x},"_{symbol}",SN_FORCE);\n')
     outfile.write("""
 print("Applied addresses and types");
-//print(get_root_filename());
+
+// unhide all functions
+//auto ea = get_func_attr(INF_MIN_EA, FUNCATTR_START);
+//while (ea != BADADDR) {
+  //set_visible_func(ea, true);
+  //ea = get_func_attr(ea, FUNCATTR_START);
+//}
+
 // produce a listing file
 auto fpl = fopen(get_root_filename() + ".lst", "w");
 gen_file(OFILE_LST, fpl, 0x10000, BADADDR, GENFLG_ASMTYPE);

@@ -3,6 +3,7 @@
 
 void init_get_fname(char *dst, char *src);
 
+//Initializer - is startet if executed file is SCHICKM.EXE/BLADEM.EXE or GEN.EXE
 //Returns true if the desired programm is started
 bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned short ip)
 {
@@ -11,9 +12,10 @@ bool masm2c_init(char *name, unsigned short reloc, unsigned short _cs, unsigned 
 	int ver;
 
 	init_get_fname(fname, name);
-	printf("~~ %s\n", fname);
-        return false;
-        //return strcmp(fname, "mount.com") != 0;
+	printf("%s\n", fname);
+	if (strcmp(fname, "detroit.exe")) return false;
+
+	return true;
 }
 
 

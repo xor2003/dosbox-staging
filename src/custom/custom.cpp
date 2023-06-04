@@ -24,11 +24,11 @@ namespace m2c
   extern std::string exename;
 }
 
-bool trace_instructions = true; //m2c::debug >= 1;
+bool trace_instructions = false; //m2c::debug >= 1;
 bool trace_instructions_to_stdout = false; //m2c::debug >= 1;
-bool compare_instructions = true; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
+bool compare_instructions = false; //m2c::debug >= 1;// 1 || m2c::debug == 2 || m2c::debug == 3;
 bool complex_self_modifications = false;
-bool collect_rt_info = true;
+bool collect_rt_info = false;
 bool collect_rt_info_vars = true;
 
 static const size_t
