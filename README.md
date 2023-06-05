@@ -64,3 +64,9 @@ to ensure that data and code addresses remain the same for translated code and d
 So translated program behave we same way as when executed under Dosbox.
 
 Once the program is working as expected, hardware emulation can be replaced with custom emulation, and some game functions can be rewritten using some decompiler if you want
+
+You can download IDA 5.0 free from here:
+https://www.scummvm.org/news/20180331/
+https://github.com/Info-security/binary-auditing-training/raw/master/idafree50.exe
+
+15bed40e1fd1c8d095b1d7d9f47fef18  /tmp/idafree50.exe
