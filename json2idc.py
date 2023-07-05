@@ -50,6 +50,7 @@ if not json_fname.endswith('.json'):
 idc_fname = json_fname.replace('.json', '.idc')
 
 symbols = read_segments_map(map_fname)
+cs = set()
 
 with open(idc_fname, 'w') as outfile:
     outfile.write('''#include <idc.idc>
@@ -78,6 +79,8 @@ set_target_assembler("Generic for intel 80x86");
                 if seg in instr and len(instr[seg]) == 1:
                     outfile.write(
                         f'split_sreg_range(0x{addr:x},"{seg}",0x{seg_dbx2ida(instr[seg][0]):x},2); // 0x{daddr} 0x{instr[seg][0]:x}\n')
+            if instr["cs"]:
+                cs.add(instr["cs"][0])
 
         if 'Data' in j:
             for daddr, data in j['Data'].items():  # Set variables sizes
@@ -121,5 +124,8 @@ print("Generated lst");
 //fclose(fpm);
 //print("Generated map");
 }""")
+    print("Code segments:")
+    for seg in sorted(cs):
+        print(f"{seg_dbx2ida(seg):x}")
 
 
