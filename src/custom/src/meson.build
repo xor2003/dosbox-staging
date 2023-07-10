@@ -1,8 +1,10 @@
 libsrc_sources = files([
+  '_data.cpp',
   'f.exe.cpp',
   'f.exe_default_seg.cpp',
   'f.exe_seg000.cpp',
   'f.exe_seg001.cpp',
+  'f.exe_seg003.cpp',
   'f.exe_seg004.cpp',
   'f.exe_seg127c.cpp',
   'f.exe_seg2623.cpp',
@@ -10,8 +12,7 @@ libsrc_sources = files([
   'f.exe_seg37ca.cpp',
   'f.exe_seg3897.cpp',
   'f.exe_seg48ae.cpp',
-  'init.cpp',
-  '_data.cpp'
+  'init.cpp'
 ])
 
 libsrc = static_library('src', libsrc_sources,
