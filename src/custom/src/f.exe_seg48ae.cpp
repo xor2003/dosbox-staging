@@ -13,7 +13,7 @@
     else goto __dispatch_call;
     sub_4999e:
     _begin:
-cs=0x3a50;eip=0x000ebe; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ebe; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79285                  jmp     far ptr 0:0 ;~ 3A50:0EBE
 
             assert(0);
@@ -39,7 +39,7 @@ cs=0x3a50;eip=0x000ebe; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499a3:
     _begin:
-cs=0x3a50;eip=0x000ec3; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ec3; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79296                  jmp     far ptr 0:0 ;~ 3A50:0EC3
 
             assert(0);
@@ -65,7 +65,7 @@ cs=0x3a50;eip=0x000ec3; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499a8:
     _begin:
-cs=0x3a50;eip=0x000ec8; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ec8; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79305                  jmp     far ptr 0:0 ;~ 3A50:0EC8
 
             assert(0);
@@ -91,7 +91,7 @@ cs=0x3a50;eip=0x000ec8; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499ad:
     _begin:
-cs=0x3a50;eip=0x000ecd; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ecd; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79314                  jmp     far ptr 0:0 ;~ 3A50:0ECD
 
             assert(0);
@@ -117,7 +117,7 @@ cs=0x3a50;eip=0x000ecd; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499b2:
     _begin:
-cs=0x3a50;eip=0x000ed2; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ed2; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79324                  jmp     far ptr 0:0 ;~ 3A50:0ED2
 
             assert(0);
@@ -143,7 +143,7 @@ cs=0x3a50;eip=0x000ed2; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499b7:
     _begin:
-cs=0x3a50;eip=0x000ed7; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ed7; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79333                  jmp     far ptr 0:0 ;~ 3A50:0ED7
 
             assert(0);
@@ -169,7 +169,7 @@ cs=0x3a50;eip=0x000ed7; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499bc:
     _begin:
-cs=0x3a50;eip=0x000edc; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000edc; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79343                  jmp     far ptr 0:0 ;~ 3A50:0EDC
 
             assert(0);
@@ -195,19 +195,19 @@ cs=0x3a50;eip=0x000edc; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_ee1_proc:
     _begin:
-cs=0x3a50;eip=0x000ee1; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ee1; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79347                  jmp     far ptr 0:0 ;~ 3A50:0EE1
 ret_3a50_ee6:
 	// 7190 
-cs=0x3a50;eip=0x000ee6; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ee6; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79349                  jmp     far ptr 0:0 ;~ 3A50:0EE6
 ret_3a50_eeb:
 	// 7191 
-cs=0x3a50;eip=0x000eeb; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000eeb; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79351                  jmp     far ptr 0:0 ;~ 3A50:0EEB
 ret_3a50_ef0:
 	// 7192 
-cs=0x3a50;eip=0x000ef0; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ef0; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79353                  jmp     far ptr 0:0 ;~ 3A50:0EF0
 
             assert(0);
@@ -236,7 +236,7 @@ cs=0x3a50;eip=0x000ef0; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499d5:
     _begin:
-cs=0x3a50;eip=0x000ef5; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ef5; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79361                  jmp     far ptr 0:0 ;~ 3A50:0EF5
 
             assert(0);
@@ -262,7 +262,7 @@ cs=0x3a50;eip=0x000ef5; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499da:
     _begin:
-cs=0x3a50;eip=0x000efa; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000efa; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79371                  jmp     far ptr 0:0 ;~ 3A50:0EFA
 
             assert(0);
@@ -288,7 +288,7 @@ cs=0x3a50;eip=0x000efa; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499df:
     _begin:
-cs=0x3a50;eip=0x000eff; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000eff; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79382                  jmp     far ptr 0:0 ;~ 3A50:0EFF
 
             assert(0);
@@ -314,7 +314,7 @@ cs=0x3a50;eip=0x000eff; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499e4:
     _begin:
-cs=0x3a50;eip=0x000f04; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f04; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79392                  jmp     far ptr 0:0 ;~ 3A50:0F04
 
             assert(0);
@@ -340,7 +340,7 @@ cs=0x3a50;eip=0x000f04; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499e9:
     _begin:
-cs=0x3a50;eip=0x000f09; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f09; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79402                  jmp     far ptr 0:0 ;~ 3A50:0F09
 
             assert(0);
@@ -366,7 +366,7 @@ cs=0x3a50;eip=0x000f09; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499ee:
     _begin:
-cs=0x3a50;eip=0x000f0e; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f0e; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79412                  jmp     far ptr 0:0 ;~ 3A50:0F0E
 
             assert(0);
@@ -392,7 +392,7 @@ cs=0x3a50;eip=0x000f0e; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_f13_proc:
     _begin:
-cs=0x3a50;eip=0x000f13; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f13; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79416                  jmp     far ptr 0:0 ;~ 3A50:0F13
 
             assert(0);
@@ -418,7 +418,7 @@ cs=0x3a50;eip=0x000f13; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_499f8:
     _begin:
-cs=0x3a50;eip=0x000f18; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f18; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79424                  jmp     far ptr 0:0 ;~ 3A50:0F18
 
             assert(0);
@@ -444,23 +444,23 @@ cs=0x3a50;eip=0x000f18; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_f1d_proc:
     _begin:
-cs=0x3a50;eip=0x000f1d; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f1d; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79428                  jmp     far ptr 0:0 ;~ 3A50:0F1D
 ret_3a50_f22:
 	// 7193 
-cs=0x3a50;eip=0x000f22; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f22; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79430                  jmp     far ptr 0:0 ;~ 3A50:0F22
 ret_3a50_f27:
 	// 7194 
-cs=0x3a50;eip=0x000f27; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f27; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79432                  jmp     far ptr 0:0 ;~ 3A50:0F27
 ret_3a50_f2c:
 	// 7195 
-cs=0x3a50;eip=0x000f2c; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f2c; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79434                  jmp     far ptr 0:0 ;~ 3A50:0F2C
 ret_3a50_f31:
 	// 7196 
-cs=0x3a50;eip=0x000f31; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f31; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79436                  jmp     far ptr 0:0 ;~ 3A50:0F31
 
             assert(0);
@@ -490,7 +490,7 @@ cs=0x3a50;eip=0x000f31; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a16:
     _begin:
-cs=0x3a50;eip=0x000f36; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f36; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79444                  jmp     far ptr 0:0 ;~ 3A50:0F36
 
             assert(0);
@@ -516,7 +516,7 @@ cs=0x3a50;eip=0x000f36; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a1b:
     _begin:
-cs=0x3a50;eip=0x000f3b; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f3b; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79454                  jmp     far ptr 0:0 ;~ 3A50:0F3B
 
             assert(0);
@@ -542,7 +542,7 @@ cs=0x3a50;eip=0x000f3b; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a20:
     _begin:
-cs=0x3a50;eip=0x000f40; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f40; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79464                  jmp     far ptr 0:0 ;~ 3A50:0F40
 
             assert(0);
@@ -568,7 +568,7 @@ cs=0x3a50;eip=0x000f40; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a25:
     _begin:
-cs=0x3a50;eip=0x000f45; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f45; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79473                  jmp     far ptr 0:0 ;~ 3A50:0F45
 
             assert(0);
@@ -594,7 +594,7 @@ cs=0x3a50;eip=0x000f45; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a2a:
     _begin:
-cs=0x3a50;eip=0x000f4a; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f4a; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79482                  jmp     far ptr 0:0 ;~ 3A50:0F4A
 
             assert(0);
@@ -620,7 +620,7 @@ cs=0x3a50;eip=0x000f4a; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a2f:
     _begin:
-cs=0x3a50;eip=0x000f4f; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f4f; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79492                  jmp     far ptr 0:0 ;~ 3A50:0F4F
 
             assert(0);
@@ -646,7 +646,7 @@ cs=0x3a50;eip=0x000f4f; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_f54_proc:
     _begin:
-cs=0x3a50;eip=0x000f54; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f54; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79496                  jmp     far ptr 0:0 ;~ 3A50:0F54
 
             assert(0);
@@ -672,7 +672,7 @@ cs=0x3a50;eip=0x000f54; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a39:
     _begin:
-cs=0x3a50;eip=0x000f59; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f59; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79504                  jmp     far ptr 0:0 ;~ 3A50:0F59
 
             assert(0);
@@ -698,7 +698,7 @@ cs=0x3a50;eip=0x000f59; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a3e:
     _begin:
-cs=0x3a50;eip=0x000f5e; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f5e; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79514                  jmp     far ptr 0:0 ;~ 3A50:0F5E
 
             assert(0);
@@ -724,7 +724,7 @@ cs=0x3a50;eip=0x000f5e; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a43:
     _begin:
-cs=0x3a50;eip=0x000f63; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f63; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79524                  jmp     far ptr 0:0 ;~ 3A50:0F63
 
             assert(0);
@@ -750,7 +750,7 @@ cs=0x3a50;eip=0x000f63; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a48:
     _begin:
-cs=0x3a50;eip=0x000f68; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f68; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79535                  jmp     far ptr 0:0 ;~ 3A50:0F68
 
             assert(0);
@@ -776,7 +776,7 @@ cs=0x3a50;eip=0x000f68; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a4d:
     _begin:
-cs=0x3a50;eip=0x000f6d; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f6d; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79545                  jmp     far ptr 0:0 ;~ 3A50:0F6D
 
             assert(0);
@@ -802,7 +802,7 @@ cs=0x3a50;eip=0x000f6d; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a52:
     _begin:
-cs=0x3a50;eip=0x000f72; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f72; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79554                  jmp     far ptr 0:0 ;~ 3A50:0F72
 
             assert(0);
@@ -828,7 +828,7 @@ cs=0x3a50;eip=0x000f72; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a57:
     _begin:
-cs=0x3a50;eip=0x000f77; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f77; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79564                  jmp     far ptr 0:0 ;~ 3A50:0F77
 
             assert(0);
@@ -854,11 +854,11 @@ cs=0x3a50;eip=0x000f77; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_f7c_proc:
     _begin:
-cs=0x3a50;eip=0x000f7c; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f7c; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79568                  jmp     far ptr 0:0 ;~ 3A50:0F7C
 ret_3a50_f81:
 	// 7197 
-cs=0x3a50;eip=0x000f81; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f81; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79570                  jmp     far ptr 0:0 ;~ 3A50:0F81
 
             assert(0);
@@ -885,7 +885,7 @@ cs=0x3a50;eip=0x000f81; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a66:
     _begin:
-cs=0x3a50;eip=0x000f86; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f86; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79577                  jmp     far ptr 0:0 ;~ 3A50:0F86
 
             assert(0);
@@ -911,7 +911,7 @@ cs=0x3a50;eip=0x000f86; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a6b:
     _begin:
-cs=0x3a50;eip=0x000f8b; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f8b; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79588                  jmp     far ptr 0:0 ;~ 3A50:0F8B
 
             assert(0);
@@ -937,7 +937,7 @@ cs=0x3a50;eip=0x000f8b; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a70:
     _begin:
-cs=0x3a50;eip=0x000f90; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f90; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79598                  jmp     far ptr 0:0 ;~ 3A50:0F90
 
             assert(0);
@@ -963,7 +963,7 @@ cs=0x3a50;eip=0x000f90; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_f95_proc:
     _begin:
-cs=0x3a50;eip=0x000f95; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f95; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79602                  jmp     far ptr 0:0 ;~ 3A50:0F95
 
             assert(0);
@@ -989,7 +989,7 @@ cs=0x3a50;eip=0x000f95; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a7a:
     _begin:
-cs=0x3a50;eip=0x000f9a; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f9a; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79609                  jmp     far ptr 0:0 ;~ 3A50:0F9A
 
             assert(0);
@@ -1015,7 +1015,7 @@ cs=0x3a50;eip=0x000f9a; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a7f:
     _begin:
-cs=0x3a50;eip=0x000f9f; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000f9f; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79619                  jmp     far ptr 0:0 ;~ 3A50:0F9F
 
             assert(0);
@@ -1041,7 +1041,7 @@ cs=0x3a50;eip=0x000f9f; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a84:
     _begin:
-cs=0x3a50;eip=0x000fa4; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fa4; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79628                  jmp     far ptr 0:0 ;~ 3A50:0FA4
 
             assert(0);
@@ -1067,15 +1067,15 @@ cs=0x3a50;eip=0x000fa4; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_fa9_proc:
     _begin:
-cs=0x3a50;eip=0x000fa9; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fa9; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79632                  jmp     far ptr 0:0 ;~ 3A50:0FA9
 ret_3a50_fae:
 	// 7198 
-cs=0x3a50;eip=0x000fae; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fae; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79634                  jmp     far ptr 0:0 ;~ 3A50:0FAE
 ret_3a50_fb3:
 	// 7199 
-cs=0x3a50;eip=0x000fb3; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fb3; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79636                  jmp     far ptr 0:0 ;~ 3A50:0FB3
 
             assert(0);
@@ -1103,7 +1103,7 @@ cs=0x3a50;eip=0x000fb3; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a98:
     _begin:
-cs=0x3a50;eip=0x000fb8; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fb8; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79644                  jmp     far ptr 0:0 ;~ 3A50:0FB8
 
             assert(0);
@@ -1129,7 +1129,7 @@ cs=0x3a50;eip=0x000fb8; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49a9d:
     _begin:
-cs=0x3a50;eip=0x000fbd; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fbd; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79654                  jmp     far ptr 0:0 ;~ 3A50:0FBD
 
             assert(0);
@@ -1155,7 +1155,7 @@ cs=0x3a50;eip=0x000fbd; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49aa2:
     _begin:
-cs=0x3a50;eip=0x000fc2; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fc2; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79663                  jmp     far ptr 0:0 ;~ 3A50:0FC2
 
             assert(0);
@@ -1181,7 +1181,7 @@ cs=0x3a50;eip=0x000fc2; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49aa7:
     _begin:
-cs=0x3a50;eip=0x000fc7; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fc7; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79672                  jmp     far ptr 0:0 ;~ 3A50:0FC7
 
             assert(0);
@@ -1207,7 +1207,7 @@ cs=0x3a50;eip=0x000fc7; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49aac:
     _begin:
-cs=0x3a50;eip=0x000fcc; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fcc; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79681                  jmp     far ptr 0:0 ;~ 3A50:0FCC
 
             assert(0);
@@ -1233,7 +1233,7 @@ cs=0x3a50;eip=0x000fcc; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ab1:
     _begin:
-cs=0x3a50;eip=0x000fd1; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fd1; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79691                  jmp     far ptr 0:0 ;~ 3A50:0FD1
 
             assert(0);
@@ -1259,7 +1259,7 @@ cs=0x3a50;eip=0x000fd1; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ab6:
     _begin:
-cs=0x3a50;eip=0x000fd6; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fd6; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79700                  jmp     far ptr 0:0 ;~ 3A50:0FD6
 
             assert(0);
@@ -1285,7 +1285,7 @@ cs=0x3a50;eip=0x000fd6; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_fdb_proc:
     _begin:
-cs=0x3a50;eip=0x000fdb; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fdb; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79704                  jmp     far ptr 0:0 ;~ 3A50:0FDB
 
             assert(0);
@@ -1311,7 +1311,7 @@ cs=0x3a50;eip=0x000fdb; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ac0:
     _begin:
-cs=0x3a50;eip=0x000fe0; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fe0; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79712                  jmp     far ptr 0:0 ;~ 3A50:0FE0
 
             assert(0);
@@ -1337,7 +1337,7 @@ cs=0x3a50;eip=0x000fe0; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ac5:
     _begin:
-cs=0x3a50;eip=0x000fe5; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fe5; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79722                  jmp     far ptr 0:0 ;~ 3A50:0FE5
 
             assert(0);
@@ -1363,7 +1363,7 @@ cs=0x3a50;eip=0x000fe5; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     seg48ae_fea_proc:
     _begin:
-cs=0x3a50;eip=0x000fea; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fea; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79726                  jmp     far ptr 0:0 ;~ 3A50:0FEA
 
             assert(0);
@@ -1389,7 +1389,7 @@ cs=0x3a50;eip=0x000fea; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49acf:
     _begin:
-cs=0x3a50;eip=0x000fef; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000fef; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79734                  jmp     far ptr 0:0 ;~ 3A50:0FEF
 
             assert(0);
@@ -1415,7 +1415,7 @@ cs=0x3a50;eip=0x000fef; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ad4:
     _begin:
-cs=0x3a50;eip=0x000ff4; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ff4; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79744                  jmp     far ptr 0:0 ;~ 3A50:0FF4
 
             assert(0);
@@ -1441,7 +1441,7 @@ cs=0x3a50;eip=0x000ff4; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ad9:
     _begin:
-cs=0x3a50;eip=0x000ff9; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x000ff9; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79754                  jmp     far ptr 0:0 ;~ 3A50:0FF9
 
             assert(0);
@@ -1467,7 +1467,7 @@ cs=0x3a50;eip=0x000ff9; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ae3:
     _begin:
-cs=0x3a50;eip=0x001003; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001003; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79769                  jmp     far ptr 0:0 ;~ 3A50:1003
 
             assert(0);
@@ -1493,7 +1493,7 @@ cs=0x3a50;eip=0x001003; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49af2:
     _begin:
-cs=0x3a50;eip=0x001012; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001012; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79790                  jmp     far ptr 0:0 ;~ 3A50:1012
 
             assert(0);
@@ -1519,7 +1519,7 @@ cs=0x3a50;eip=0x001012; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49af7:
     _begin:
-cs=0x3a50;eip=0x001017; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001017; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79800                  jmp     far ptr 0:0 ;~ 3A50:1017
 
             assert(0);
@@ -1545,7 +1545,7 @@ cs=0x3a50;eip=0x001017; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49afc:
     _begin:
-cs=0x3a50;eip=0x00101c; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x00101c; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79810                  jmp     far ptr 0:0 ;~ 3A50:101C
 
             assert(0);
@@ -1571,7 +1571,7 @@ cs=0x3a50;eip=0x00101c; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b01:
     _begin:
-cs=0x3a50;eip=0x001021; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001021; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79820                  jmp     far ptr 0:0 ;~ 3A50:1021
 
             assert(0);
@@ -1597,7 +1597,7 @@ cs=0x3a50;eip=0x001021; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b0b:
     _begin:
-cs=0x3a50;eip=0x00102b; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x00102b; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79835                  jmp     far ptr 0:0 ;~ 3A50:102B
 
             assert(0);
@@ -1623,7 +1623,7 @@ cs=0x3a50;eip=0x00102b; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b15:
     _begin:
-cs=0x3a50;eip=0x001035; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001035; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79852                  jmp     far ptr 0:0 ;~ 3A50:1035
 
             assert(0);
@@ -1649,7 +1649,7 @@ cs=0x3a50;eip=0x001035; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b1a:
     _begin:
-cs=0x3a50;eip=0x00103a; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x00103a; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79862                  jmp     far ptr 0:0 ;~ 3A50:103A
 
             assert(0);
@@ -1675,7 +1675,7 @@ cs=0x3a50;eip=0x00103a; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b29:
     _begin:
-cs=0x3a50;eip=0x001049; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001049; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79883                  jmp     far ptr 0:0 ;~ 3A50:1049
 
             assert(0);
@@ -1701,7 +1701,7 @@ cs=0x3a50;eip=0x001049; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b38:
     _begin:
-cs=0x3a50;eip=0x001058; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001058; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79904                  jmp     far ptr 0:0 ;~ 3A50:1058
 
             assert(0);
@@ -1727,7 +1727,7 @@ cs=0x3a50;eip=0x001058; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b65:
     _begin:
-cs=0x3a50;eip=0x001085; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x001085; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79955                  jmp     far ptr 0:0 ;~ 3A50:1085
 
             assert(0);
@@ -1753,7 +1753,7 @@ cs=0x3a50;eip=0x001085; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b6f:
     _begin:
-cs=0x3a50;eip=0x00108f; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x00108f; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 79970                  jmp     far ptr 0:0 ;~ 3A50:108F
 
             assert(0);
@@ -1779,7 +1779,7 @@ cs=0x3a50;eip=0x00108f; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b92:
     _begin:
-cs=0x3a50;eip=0x0010b2; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010b2; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80011                  jmp     far ptr 0:0 ;~ 3A50:10B2
 
             assert(0);
@@ -1805,7 +1805,7 @@ cs=0x3a50;eip=0x0010b2; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b97:
     _begin:
-cs=0x3a50;eip=0x0010b7; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010b7; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80021                  jmp     far ptr 0:0 ;~ 3A50:10B7
 
             assert(0);
@@ -1831,7 +1831,7 @@ cs=0x3a50;eip=0x0010b7; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49b9c:
     _begin:
-cs=0x3a50;eip=0x0010bc; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010bc; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80030                  jmp     far ptr 0:0 ;~ 3A50:10BC
 
             assert(0);
@@ -1857,7 +1857,7 @@ cs=0x3a50;eip=0x0010bc; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49ba6:
     _begin:
-cs=0x3a50;eip=0x0010c6; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010c6; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80045                  jmp     far ptr 0:0 ;~ 3A50:10C6
 
             assert(0);
@@ -1883,7 +1883,7 @@ cs=0x3a50;eip=0x0010c6; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49bab:
     _begin:
-cs=0x3a50;eip=0x0010cb; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010cb; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80055                  jmp     far ptr 0:0 ;~ 3A50:10CB
 
             assert(0);
@@ -1909,7 +1909,7 @@ cs=0x3a50;eip=0x0010cb; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49bb0:
     _begin:
-cs=0x3a50;eip=0x0010d0; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010d0; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80064                  jmp     far ptr 0:0 ;~ 3A50:10D0
 
             assert(0);
@@ -1935,7 +1935,7 @@ cs=0x3a50;eip=0x0010d0; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49bb5:
     _begin:
-cs=0x3a50;eip=0x0010d5; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010d5; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80073                  jmp     far ptr 0:0 ;~ 3A50:10D5
 
             assert(0);
@@ -1961,7 +1961,7 @@ cs=0x3a50;eip=0x0010d5; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49bba:
     _begin:
-cs=0x3a50;eip=0x0010da; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010da; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80082                  jmp     far ptr 0:0 ;~ 3A50:10DA
 
             assert(0);
@@ -1987,7 +1987,7 @@ cs=0x3a50;eip=0x0010da; __disp=*(dd*)(raddr(ds,0));
     else goto __dispatch_call;
     sub_49bbf:
     _begin:
-cs=0x3a50;eip=0x0010df; __disp=*(dd*)(raddr(ds,0));
+cs=0x3a50;eip=0x0010df; __disp=*(dd*)(raddr(cs,eip+1));
 	J(return __dispatch_call(__disp, _state););	// 80092                  jmp     far ptr 0:0 ;~ 3A50:10DF
 
             assert(0);
