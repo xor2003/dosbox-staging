@@ -108,14 +108,14 @@ cs=0x1a2;eip=0x000080; 	X(MOV(*(dw*)(raddr(es,0x0E)), ax));	// 121              
 cs=0x1a2;eip=0x000084; 	T(ax = 0;);	// 122                  mov     ax, 0 ;~ 01A2:0084
 cs=0x1a2;eip=0x000087; 	T(es = ax;);	// 123                  mov     es, ax ;~ 01A2:0087
 cs=0x1a2;eip=0x000089; 	X(MOV(*(dw*)(raddr(es,0x4F0)), bx));	// 125                  mov     es:4F0h, bx ;~ 01A2:0089
-cs=0x1a2;eip=0x00008e; 	X(word_267b0 = bx;);	// 126                  mov     word_267B0, bx ;~ 01A2:008E
+cs=0x1a2;eip=0x00008e; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_267ae+2)), bx));	// 126                  mov     word ptr loc_267AE+2, bx ;~ 01A2:008E
 cs=0x1a2;eip=0x000092; 	T(ax = 1;);	// 127                  mov     ax, 1 ;~ 01A2:0092
 cs=0x1a2;eip=0x000095; 	X(MOV(*(dw*)(raddr(es,0x4F2)), ax));	// 128                  mov     es:4F2h, ax ;~ 01A2:0095
 cs=0x1a2;eip=0x000099; 	T(ax = 0;);	// 129                  mov     ax, 0 ;~ 01A2:0099
 cs=0x1a2;eip=0x00009c; 	X(MOV(*(dw*)(raddr(es,0x4F4)), ax));	// 130                  mov     es:4F4h, ax ;~ 01A2:009C
 cs=0x1a2;eip=0x0000a0; 	X(POP(es));	// 131                  pop     es ;~ 01A2:00A0
 cs=0x1a2;eip=0x0000a1; 	T(al = 0x0D;);	// 133                  mov     al, 0Dh ;~ 01A2:00A1
-cs=0x1a2;eip=0x0000a3; 	X(byte_267c3 = al;);	// 134                  mov     byte_267C3, al ;~ 01A2:00A3
+cs=0x1a2;eip=0x0000a3; 	X(MOV(*(raddr(ds,m2c::kloc_267c2+1)), al));	// 134                  mov     byte ptr loc_267C2+1, al ;~ 01A2:00A3
 cs=0x1a2;eip=0x0000a6; 	T(MOV(cl, *(raddr(cs,m2c::kloc_10080))));	// 135                  mov     cl, byte ptr cs:loc_10080 ;~ 01A2:00A6
 cs=0x1a2;eip=0x0000ab; 	T(SUB(ch, ch));	// 136                  sub     ch, ch ;~ 01A2:00AB
 cs=0x1a2;eip=0x0000ad; 	J(JCXZ(loc_100b9));	// 137                  jcxz    short loc_100B9 ;~ 01A2:00AD
@@ -128,12 +128,12 @@ cs=0x1a2;eip=0x0000b7; 	X(	REP MOVSB);	// 142                  rep movsb ;~ 01A2
 loc_100b9:
 	// 4377 
 cs=0x1a2;eip=0x0000b9; 	T(ax = cs;);	// 145                  mov     ax, cs ;~ 01A2:00B9
-cs=0x1a2;eip=0x0000bb; 	X(word_267b8 = ax;);	// 146                  mov     word_267B8, ax ;~ 01A2:00BB
-cs=0x1a2;eip=0x0000be; 	X(word_267bc = ax;);	// 147                  mov     word_267BC, ax ;~ 01A2:00BE
-cs=0x1a2;eip=0x0000c1; 	X(word_267c0 = ax;);	// 148                  mov     word_267C0, ax ;~ 01A2:00C1
+cs=0x1a2;eip=0x0000bb; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_267b7+1)), ax));	// 146                  mov     word ptr loc_267B7+1, ax ;~ 01A2:00BB
+cs=0x1a2;eip=0x0000be; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_267b9+3)), ax));	// 147                  mov     word ptr loc_267B9+3, ax ;~ 01A2:00BE
+cs=0x1a2;eip=0x0000c1; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_267bf+1)), ax));	// 148                  mov     word ptr loc_267BF+1, ax ;~ 01A2:00C1
 cs=0x1a2;eip=0x0000c4; 	T(dx = 0x52E;);	// 149                  mov     dx, 52Eh ;~ 01A2:00C4
 cs=0x1a2;eip=0x0000c7; 	T(bx = 0x584;);	// 150                  mov     bx, 584h ;~ 01A2:00C7
-cs=0x1a2;eip=0x0000ca; 	X(word_267b2 = sp;);	// 151                  mov     word_267B2, sp ;~ 01A2:00CA
+cs=0x1a2;eip=0x0000ca; 	X(MOV(*(dw*)(raddr(ds,m2c::kloc_267b1+1)), sp));	// 151                  mov     word ptr loc_267B1+1, sp ;~ 01A2:00CA
 cs=0x1a2;eip=0x0000ce; 	T(ax = 0x4B00;);	// 152                  mov     ax, 4B00h ;~ 01A2:00CE
 cs=0x1a2;eip=0x0000d1; 	S(_INT(0x21));	// 153                  int     21h             ; DOS - 2+ - LOAD OR EXECUTE (EXEC) ;~ 01A2:00D1
 cs=0x1a2;eip=0x0000d3; 	T(cx = cs;);	// 157                  mov     cx, cs ;~ 01A2:00D3
@@ -332,7 +332,7 @@ loc_10288:
 	// 4390 
 cs=0x1a2;eip=0x000288; 	T(ah = 0x48;);	// 397                  mov     ah, 48h ; 'H' ;~ 01A2:0288
 cs=0x1a2;eip=0x00028a; 	T(SUB(bx, 0x400));	// 398                  sub     bx, 400h ;~ 01A2:028A
-cs=0x1a2;eip=0x00028e; 	X(word_1045b = bx;);	// 399                  mov     word_1045B, bx ;~ 01A2:028E
+cs=0x1a2;eip=0x00028e; 	X(*(dw*)((aendexe)+5) = bx;);	// 399                  mov     word ptr aEndExe+5, bx ; "XE" ;~ 01A2:028E
 cs=0x1a2;eip=0x000292; 	S(_INT(0x21));	// 400                  int     21h             ; DOS - 2+ - ALLOCATE MEMORY ;~ 01A2:0292
 cs=0x1a2;eip=0x000294; 	J(JNC(loc_1029f));	// 402                  jnb     short loc_1029F ;~ 01A2:0294
 cs=0x1a2;eip=0x000296; 	T(dx = 0x46C;);	// 403                  mov     dx, 46Ch ;~ 01A2:0296
@@ -341,8 +341,8 @@ cs=0x1a2;eip=0x00029b; 	S(_INT(0x21));	// 405                  int     21h      
 cs=0x1a2;eip=0x00029d; 	J(JMP(loc_1026e));	// 407                  jmp     short loc_1026E ;~ 01A2:029D
 loc_1029f:
 	// 4391 
-cs=0x1a2;eip=0x00029f; 	X(word_10459 = ax;);	// 411                  mov     word_10459, ax ;~ 01A2:029F
-cs=0x1a2;eip=0x0002a2; 	X(*(dw*)(&byte_1045d) = ax;);	// 412                  mov     word ptr byte_1045D, ax ;~ 01A2:02A2
+cs=0x1a2;eip=0x00029f; 	X(*(dw*)((aendexe)+3) = ax;);	// 411                  mov     word ptr aEndExe+3, ax ; ".EXE" ;~ 01A2:029F
+cs=0x1a2;eip=0x0002a2; 	X(*(dw*)((aendexe)+7) = ax;);	// 412                  mov     word ptr aEndExe+7, ax ; "" ;~ 01A2:02A2
 cs=0x1a2;eip=0x0002a5; 	X(*(dw*)((adsexe)+1) = ax;);	// 413                  mov     word ptr aDsExe+1, ax ; "s.EXE" ;~ 01A2:02A5
 cs=0x1a2;eip=0x0002a8; 	T(bx = 0x45D;);	// 414                  mov     bx, 45Dh ;~ 01A2:02A8
 cs=0x1a2;eip=0x0002ab; 	T(ax = 0x4B03;);	// 415                  mov     ax, 4B03h ;~ 01A2:02AB
@@ -376,7 +376,7 @@ cs=0x1a2;eip=0x0002dd; 	T(sp = word_10582;);	// 451                  mov     sp,
 cs=0x1a2;eip=0x0002e2; 	T(ax = cs;);	// 452                  mov     ax, cs ;~ 01A2:02E2
 cs=0x1a2;eip=0x0002e4; 	S(ss = ax;);	// 453                  mov     ss, ax ;~ 01A2:02E4
 cs=0x1a2;eip=0x0002e6; 	T(ds = ax;);	// 454                  mov     ds, ax ;~ 01A2:02E6
-cs=0x1a2;eip=0x0002e8; 	T(es = word_10459;);	// 455                  mov     es, word_10459 ;~ 01A2:02E8
+cs=0x1a2;eip=0x0002e8; 	T(es = *(dw*)((aendexe)+3););	// 455                  mov     es, word ptr aEndExe+3 ; ".EXE" ;~ 01A2:02E8
 cs=0x1a2;eip=0x0002ec; 	T(di = 0x18;);	// 457                  mov     di, 18h ;~ 01A2:02EC
 cs=0x1a2;eip=0x0002ef; 	T(MOV(ax, *(dw*)(raddr(es,di))));	// 458                  mov     ax, es:[di] ;~ 01A2:02EF
 cs=0x1a2;eip=0x0002f2; 	X(*(dw*)(((db*)&dword_1057c)+2) = ax;);	// 459                  mov     word ptr dword_1057C+2, ax ;~ 01A2:02F2
@@ -396,7 +396,7 @@ cs=0x1a2;eip=0x000314; 	T(SHR(cx, 1));	// 472                  shr     cx, 1 ;~ 
 cs=0x1a2;eip=0x000316; 	T(SHR(cx, 1));	// 473                  shr     cx, 1 ;~ 01A2:0316
 cs=0x1a2;eip=0x000318; 	T(SHR(cx, 1));	// 474                  shr     cx, 1 ;~ 01A2:0318
 cs=0x1a2;eip=0x00031a; 	T(ADD(bx, cx));	// 475                  add     bx, cx ;~ 01A2:031A
-cs=0x1a2;eip=0x00031c; 	T(CMP(bx, word_1045b));	// 476                  cmp     bx, word_1045B ;~ 01A2:031C
+cs=0x1a2;eip=0x00031c; 	T(CMP(bx, *(dw*)((aendexe)+5)));	// 476                  cmp     bx, word ptr aEndExe+5 ; "XE" ;~ 01A2:031C
 cs=0x1a2;eip=0x000320; 	J(JBE(loc_1032c));	// 477                  jbe     short loc_1032C ;~ 01A2:0320
 cs=0x1a2;eip=0x000322; 	T(dx = 0x4C8;);	// 478                  mov     dx, 4C8h ;~ 01A2:0322
 cs=0x1a2;eip=0x000325; 	T(ah = 9;);	// 479                  mov     ah, 9 ;~ 01A2:0325
@@ -406,7 +406,7 @@ loc_1032c:
 	// 4395 
 cs=0x1a2;eip=0x00032c; 	T(ADD(bx, 8));	// 486                  add     bx, 8 ;~ 01A2:032C
 cs=0x1a2;eip=0x00032f; 	T(ah = 0x4A;);	// 487                  mov     ah, 4Ah ; 'J' ;~ 01A2:032F
-cs=0x1a2;eip=0x000331; 	T(cx = word_10459;);	// 488                  mov     cx, word_10459 ;~ 01A2:0331
+cs=0x1a2;eip=0x000331; 	T(cx = *(dw*)((aendexe)+3););	// 488                  mov     cx, word ptr aEndExe+3 ; ".EXE" ;~ 01A2:0331
 cs=0x1a2;eip=0x000335; 	T(es = cx;);	// 489                  mov     es, cx ;~ 01A2:0335
 cs=0x1a2;eip=0x000337; 	S(_INT(0x21));	// 490                  int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK) ;~ 01A2:0337
 cs=0x1a2;eip=0x000339; 	J(JNC(loc_10345));	// 493                  jnb     short loc_10345 ;~ 01A2:0339
@@ -419,7 +419,7 @@ loc_10345:
 cs=0x1a2;eip=0x000345; 	T(ax = cs;);	// 502                  mov     ax, cs ;~ 01A2:0345
 cs=0x1a2;eip=0x000347; 	T(ds = ax;);	// 503                  mov     ds, ax ;~ 01A2:0347
 cs=0x1a2;eip=0x000349; 	T(es = ax;);	// 504                  mov     es, ax ;~ 01A2:0349
-cs=0x1a2;eip=0x00034b; 	T(ax = word_10459;);	// 506                  mov     ax, word_10459 ;~ 01A2:034B
+cs=0x1a2;eip=0x00034b; 	T(ax = *(dw*)((aendexe)+3););	// 506                  mov     ax, word ptr aEndExe+3 ; ".EXE" ;~ 01A2:034B
 cs=0x1a2;eip=0x00034e; 	J(RETN(0));	// 507                  retn ;~ 01A2:034E
 
             assert(0);
