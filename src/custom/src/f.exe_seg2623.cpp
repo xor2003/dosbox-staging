@@ -438,7 +438,8 @@ cs=0x17c5;eip=0x0002a8; 	T(ADD(sp, 2));	// 35725                  add     sp, 2 
 cs=0x17c5;eip=0x0002ab; 	T(ax = 1;);	// 35726                  mov     ax, 1 ;~ 17C5:02AB
 cs=0x17c5;eip=0x0002ae; 	X(PUSH(ax));	// 35727                  push    ax ;~ 17C5:02AE
 cs=0x17c5;eip=0x0002af; 	J(CALLF(sub_4999e,0));	// 35728                  call    far ptr sub_4999E ;~ 17C5:02AF
-cs=0x17c5;eip=0x0002b6; 	T(ADD(cl, *(raddr(ds,bx+di-0x1BA))));	// 35732                  add     cl, [bx+di-1BAh] ;~ 17C5:02B6
+cs=0x17c5;eip=0x0002b4; 	T(ADD(sp, 2));
+cs=0x17c5;eip=0x0002b7; 	T(*(dw*)(raddr(ss,bp-2))=ax);
 cs=0x17c5;eip=0x0002ba; 	T(ax = 1;);	// 35733                  mov     ax, 1 ;~ 17C5:02BA
 cs=0x17c5;eip=0x0002bd; 	X(PUSH(ax));	// 35734                  push    ax ;~ 17C5:02BD
 cs=0x17c5;eip=0x0002be; 	X(PUSH(*(dw*)(raddr(ss,bp-2))));	// 35735                  push    word ptr [bp-2] ;~ 17C5:02BE
