@@ -136,13 +136,12 @@ dw word_10586; // 01a2:0586
 db dummyf_1fa8[32]; // 01a2:0588
 db dummyf_1fc8[32]; // 01a2:05a8
 db dummyf_1fe8[32]; // 01a2:05c8
-db dummyf_2008[32]; // 01a2:05e8
-db dummyf_2028; // 01a2:0608
-db dummyf_2029; // 01a2:0609
-db dummyf_202a; // 01a2:060a
-db dummyf_202b; // 01a2:060b
-db dummyf_202c; // 01a2:060c
-db dummyf_202d; // 01a2:060d
+db dummyf_2008; // 01a2:05e8
+db dummyf_2009; // 01a2:05e9
+db dummyf_200a; // 01a2:05ea
+db dummyf_200b; // 01a2:05eb
+dw dummyf_200c; // 01a2:05ec
+db dummyf_200e[32]; // 01a2:05ee
 db dummyf_202e; // 01a2:060e
 db dummyf_202f; // 01a2:060f
 db dummyf_2030; // 01a2:0610
@@ -324,10 +323,7 @@ db dummyf_2795[209]; // 0204:0755
 db dummyf_2866[84]; // 0204:0755
 db dummyf_28ba[34]; // 0204:0755
 db dummyf_28dc[56]; // 0204:0755
-db byte_10ef4; // 0204:08d4
-db dummyf_2915[34]; // 0204:08d5
-db dummyf_2937[31]; // 0204:08d5
-db dummyf_2956; // 0204:0916
+db dummyf_2914[67];
 db dummyf_2957[11]; // 0204:0917
 db dummyf_2962[13]; // 0204:0917
 db dummyf_296f[14]; // 0204:0917
@@ -378,10 +374,8 @@ db __jpt_13a6f; // 0204:12b4
 db dummyf_32f5;
 db dummyf_32f6; // 0204:12b6
 db dummyf_32f7; // 0204:12b7
-db dummyf_32f8[329];
-db dummyf_3441; // 0204:1401
-db dummyf_3442; // 0204:1402
-db dummyf_3443; // 0204:1403
+db dummyf_32f8[300];
+db dummyf_3424[32]; // 0204:13e4
 db dummyf_3444; // 0204:1404
 db dummyf_3445;
 db dummyf_3446; // 0204:1406
@@ -394,687 +388,562 @@ db dummyf_344c;
 db dummyf_344d;
 db dummyf_344e;
 db dummyf_344f;
-char __af15iiadlib3149[21]; // 0204:1410
-db dummyf_3465;
-db dummyf_3466;
-db dummyf_3467;
-dw dummyf_3468; // 0204:1428
-dw dummyf_346a; // 0204:142a
-dw dummyf_346c; // 0204:142c
-dw dummyf_346e; // 0204:142e
-dw dummyf_3470;
-dw dummyf_3472; // 0204:1432
-dw dummyf_3474; // 0204:1434
-dw dummyf_3476; // 0204:1436
-dw dummyf_3478; // 0204:1438
-dw dummyf_347a; // 0204:143a
-dw dummyf_347c; // 0204:143c
-dw dummyf_347e; // 0204:143e
-dw dummyf_3480; // 0204:1440
-dw dummyf_3482; // 0204:1442
-dw dummyf_3484; // 0204:1444
-dw dummyf_3486; // 0204:1446
-db dummyf_3488[32]; // 0204:1448
-db dummyf_34a8[32]; // 0204:1468
-db dummyf_34c8[32]; // 0204:1488
-db dummyf_34e8[32]; // 0204:14a8
-db dummyf_3508[32]; // 0204:14c8
-db dummyf_3528[32]; // 0204:14e8
-db dummyf_3548[32]; // 0204:1508
-db dummyf_3568[32]; // 0204:1528
-db dummyf_3588[32]; // 0204:1548
-db dummyf_35a8[32]; // 0204:1568
-db dummyf_35c8[32]; // 0204:1588
-db dummyf_35e8[32]; // 0204:15a8
-db dummyf_3608[32]; // 0204:15c8
-db dummyf_3628; // 0204:15e8
-db dummyf_3629; // 0204:15e9
-db dummyf_362a; // 0204:15ea
-db dummyf_362b; // 0204:15eb
-db dummyf_362c; // 0204:15ec
-db dummyf_362d; // 0204:15ed
-db dummyf_362e; // 0204:15ee
-db dummyf_362f; // 0204:15ef
-db dummyf_3630; // 0204:15f0
-db dummyf_3631; // 0204:15f1
-db dummyf_3632; // 0204:15f2
-db dummyf_3633; // 0204:15f3
-db dummyf_3634; // 0204:15f4
-db dummyf_3635; // 0204:15f5
-db dummyf_3636; // 0204:15f6
-db dummyf_3637; // 0204:15f7
-db dummyf_3638; // 0204:15f8
-db dummyf_3639; // 0204:15f9
-db dummyf_363a; // 0204:15fa
-db dummyf_363b; // 0204:15fb
-db dummyf_363c; // 0204:15fc
-db dummyf_363d; // 0204:15fd
-db dummyf_363e; // 0204:15fe
-db dummyf_363f; // 0204:15ff
-db dummyf_3640;
-db dummyf_3641;
-db seg_11c22[11]; // 0204:1602
-db dummyf_364d[11]; // 0204:1602
-db dummyf_3658[10]; // 0204:1602
-db dummyf_3662[12]; // 0204:1602
-db dummyf_366e[12]; // 0204:1602
-db dummyf_367a[11]; // 0204:1602
-db dummyf_3685[7]; // 0204:1602
-char __anoadlibboardpr[33]; // 0204:164c
-db unk_11c8d; // 0204:166d
-db dummyf_36ae;
-db _unk_11c8f; // 0204:166f
-db dummyf_36b0; // 0204:1670
+char af15iiadlib3149[21]; // 0345:0000
+db dummyf_3465[3];
+dw dummyf_3468; // 0345:0018
+dw dummyf_346a; // 0345:001a
+db dummyf_346c; // 0345:001c
+db dummyf_346d;
+db dummyf_346e; // 0345:001e
+db dummyf_346f; // 0345:001f
+db dummyf_3470;
+db dummyf_3471;
+db dummyf_3472; // 0345:0022
+db dummyf_3473;
+db dummyf_3474; // 0345:0024
+db dummyf_3475; // 0345:0025
+db dummyf_3476; // 0345:0026
+db dummyf_3477; // 0345:0027
+db dummyf_3478; // 0345:0028
+db dummyf_3479; // 0345:0029
+db dummyf_347a; // 0345:002a
+db dummyf_347b; // 0345:002b
+db dummyf_347c; // 0345:002c
+db dummyf_347d; // 0345:002d
+db dummyf_347e; // 0345:002e
+db dummyf_347f; // 0345:002f
+db dummyf_3480; // 0345:0030
+db dummyf_3481; // 0345:0031
+db dummyf_3482; // 0345:0032
+db dummyf_3483; // 0345:0033
+db dummyf_3484; // 0345:0034
+db dummyf_3485; // 0345:0035
+db dummyf_3486; // 0345:0036
+db dummyf_3487; // 0345:0037
+db dummyf_3488[438]; // 0345:0038
+db dummyf_363e[32]; // 0345:01ee
+db dummyf_365e[32]; // 0345:020e
+db dummyf_367e;
+db dummyf_367f;
+db dummyf_3680; // 0345:0230
+db dummyf_3681; // 0345:0231
+db dummyf_3682; // 0345:0232
+db dummyf_3683; // 0345:0233
+dd dummyf_3684; // 0345:0234
+db dummyf_3688;
+db dummyf_3689;
+db byte_11c6a; // 0345:023a
+db byte_11c6b; // 0345:023b
+char anoadlibboardpr[33]; // 0345:023c
+dw word_11c8d; // 0345:025d
+dw word_11c8f; // 0345:025f
 db dummyf_36b1;
 db dummyf_36b2;
-db _unk_11c93; // 0204:1673
-db dummyf_36b4; // 0204:1674
-db byte_11c95; // 0204:1675
-db byte_11c96; // 0204:1676
-db _unk_11c97; // 0204:1677
-db dummyf_36b8;
-db _unk_11c99; // 0204:1679
-db dummyf_36ba;
+dw word_11c93; // 0345:0263
+db byte_11c95; // 0345:0265
+db byte_11c96; // 0345:0266
+dw word_11c97; // 0345:0267
+dw word_11c99; // 0345:0269
 db dummyf_36bb;
 db dummyf_36bc;
-db byte_11c9d; // 0204:167d
-db dummyf_36be; // 0204:167e
-db dummyf_36bf; // 0204:167f
-db dummyf_36c0; // 0204:1680
-db dummyf_36c1; // 0204:1681
-db dummyf_36c2; // 0204:1682
-db dummyf_36c3; // 0204:1683
-db dummyf_36c4; // 0204:1684
-db dummyf_36c5; // 0204:1685
-db dummyf_36c6; // 0204:1686
-db dummyf_36c7; // 0204:1687
-db dummyf_36c8; // 0204:1688
-dw word_11ca9; // 0204:1689
-db byte_11cab; // 0204:168b
-db _unk_11cac; // 0204:168c
-db dummyf_36cd;
-dw _unk_11cae; // 0204:168e
-db _unk_11cb0; // 0204:1690
-db dummyf_36d1;
+db unk_11c9d; // 0345:026d
+db dummyf_36be; // 0345:026e
+db dummyf_36bf; // 0345:026f
+db dummyf_36c0; // 0345:0270
+db dummyf_36c1; // 0345:0271
+db dummyf_36c2; // 0345:0272
+db dummyf_36c3; // 0345:0273
+db dummyf_36c4; // 0345:0274
+db dummyf_36c5; // 0345:0275
+db dummyf_36c6; // 0345:0276
+db dummyf_36c7; // 0345:0277
+db dummyf_36c8; // 0345:0278
+dw word_11ca9; // 0345:0279
+db byte_11cab; // 0345:027b
+dw word_11cac; // 0345:027c
+dw word_11cae; // 0345:027e
+dw word_11cb0; // 0345:0280
 db dummyf_36d2;
 db dummyf_36d3;
-dw _unk_11cb4; // 0204:1694
-db byte_11cb6; // 0204:1696
-db byte_11cb7; // 0204:1697
-dw _unk_11cb8; // 0204:1698
-db dummyf_36da[32]; // 0204:169a
-db byte_11cda; // 0204:16ba
-db byte_11cdb; // 0204:16bb
-db byte_11cdc; // 0204:16bc
-db dummyf_36fd;
-db dummyf_36fe[6]; // 0204:16be
-db dummyf_3704; // 0204:16c4
-db dummyf_3705; // 0204:16c5
-db dummyf_3706; // 0204:16c6
-db dummyf_3707; // 0204:16c7
-db dummyf_3708[4]; // 0204:16c8
-db dummyf_370c; // 0204:16cc
-db dummyf_370d; // 0204:16cd
-db dummyf_370e; // 0204:16ce
-db dummyf_370f; // 0204:16cf
-db dummyf_3710; // 0204:16d0
-db dummyf_3711; // 0204:16d1
-db dummyf_3712; // 0204:16d2
-db dummyf_3713; // 0204:16d3
-db dummyf_3714[6]; // 0204:16d4
-db dummyf_371a; // 0204:16da
-db dummyf_371b; // 0204:16db
-db dummyf_371c; // 0204:16dc
-db dummyf_371d; // 0204:16dd
-db dummyf_371e; // 0204:16de
-db dummyf_371f[2]; // 0204:16df
-db dummyf_3721[32]; // 0204:16e1
-db dummyf_3741;
-db dummyf_3742; // 0204:1702
-db dummyf_3743;
-db dummyf_3744;
-db dummyf_3745; // 0204:1705
-db dummyf_3746; // 0204:1706
-db dummyf_3747;
-db dummyf_3748;
-db dummyf_3749; // 0204:1709
-db dummyf_374a;
-db dummyf_374b;
-db dummyf_374c;
-db dummyf_374d;
-db dummyf_374e;
-db dummyf_374f;
-db dummyf_3750;
-db dummyf_3751;
-db dummyf_3752[13]; // 0204:1712
-db dummyf_375f[2]; // 0204:1712
-db dummyf_3761;
-db dummyf_3762;
-db dummyf_3763;
-db dummyf_3764;
-db dummyf_3765;
-db dummyf_3766;
-db dummyf_3767;
-db dummyf_3768[13]; // 0204:1728
-db dummyf_3775; // 0204:1728
-db dummyf_3776;
-db dummyf_3777;
-db dummyf_3778;
-db dummyf_3779;
-db dummyf_377a;
-db dummyf_377b;
-db dummyf_377c;
-db dummyf_377d;
-db dummyf_377e[13]; // 0204:173e
-db dummyf_378b[2]; // 0204:173e
-db dummyf_378d;
-db dummyf_378e; // 0204:174e
-db dummyf_378f; // 0204:174f
-db dummyf_3790; // 0204:1750
-db dummyf_3791; // 0204:1751
-db dummyf_3792;
-db dummyf_3793;
-db dummyf_3794[13]; // 0204:1754
-db dummyf_37a1; // 0204:1754
-db dummyf_37a2[32]; // 0204:1762
-db dummyf_37c2; // 0204:1782
-db dummyf_37c3; // 0204:1783
-db dummyf_37c4;
-db dummyf_37c5;
-db dummyf_37c6; // 0204:1786
-db dummyf_37c7;
-db dummyf_37c8;
-db dummyf_37c9; // 0204:1789
-db dummyf_37ca; // 0204:178a
-db dummyf_37cb;
-db dummyf_37cc;
-db dummyf_37cd; // 0204:178d
-db dummyf_37ce;
-db dummyf_37cf;
-db dummyf_37d0;
-db dummyf_37d1;
-db dummyf_37d2;
-db dummyf_37d3;
-db dummyf_37d4;
-db dummyf_37d5;
-db dummyf_37d6[13]; // 0204:1796
-db dummyf_37e3[2]; // 0204:1796
-db dummyf_37e5;
-db dummyf_37e6; // 0204:17a6
-db dummyf_37e7; // 0204:17a7
-db dummyf_37e8;
-db dummyf_37e9;
-db dummyf_37ea;
-db dummyf_37eb;
-db dummyf_37ec[13]; // 0204:17ac
-db dummyf_37f9; // 0204:17ac
-db dummyf_37fa;
-db dummyf_37fb;
-db dummyf_37fc;
-db dummyf_37fd;
-db dummyf_37fe;
-db dummyf_37ff;
-db dummyf_3800;
-db dummyf_3801;
-db dummyf_3802[13]; // 0204:17c2
-db dummyf_380f[2]; // 0204:17c2
-db dummyf_3811;
-db dummyf_3812;
-db dummyf_3813;
-db dummyf_3814; // 0204:17d4
-db dummyf_3815; // 0204:17d5
-db dummyf_3816; // 0204:17d6
-db dummyf_3817; // 0204:17d7
-db dummyf_3818[13]; // 0204:17d8
-db dummyf_3825; // 0204:17d8
-db dummyf_3826;
-db dummyf_3827;
-db dummyf_3828;
-db dummyf_3829;
-db dummyf_382a;
-db dummyf_382b;
-db dummyf_382c;
-db dummyf_382d;
-db dummyf_382e[15]; // 0204:17ee
-db dummyf_383d;
-db dummyf_383e;
-db dummyf_383f;
-db dummyf_3840;
-db dummyf_3841;
-db dummyf_3842;
-db dummyf_3843;
-db dummyf_3844[14]; // 0204:1804
-db dummyf_3852[32]; // 0204:1812
-db dummyf_3872[32]; // 0204:1832
-db dummyf_3892[32]; // 0204:1852
-db dummyf_38b2[32]; // 0204:1872
-db dummyf_38d2[32]; // 0204:1892
-db dummyf_38f2[32]; // 0204:18b2
-db dummyf_3912[32]; // 0204:18d2
-db dummyf_3932[32]; // 0204:18f2
-db dummyf_3952[32]; // 0204:1912
-db dummyf_3972[32]; // 0204:1932
-db dummyf_3992[32]; // 0204:1952
-db dummyf_39b2[32]; // 0204:1972
-db dummyf_39d2[32]; // 0204:1992
-db dummyf_39f2[32]; // 0204:19b2
-db dummyf_3a12[32]; // 0204:19d2
-db dummyf_3a32[32]; // 0204:19f2
-db dummyf_3a52[32]; // 0204:1a12
-db dummyf_3a72[32]; // 0204:1a32
-db dummyf_3a92[32]; // 0204:1a52
-db dummyf_3ab2[32]; // 0204:1a72
-db dummyf_3ad2[32]; // 0204:1a92
-db dummyf_3af2[32]; // 0204:1ab2
-db dummyf_3b12[32]; // 0204:1ad2
-db dummyf_3b32[32]; // 0204:1af2
-db dummyf_3b52[32]; // 0204:1b12
-db dummyf_3b72[32]; // 0204:1b32
-db dummyf_3b92[32]; // 0204:1b52
-db dummyf_3bb2[32]; // 0204:1b72
-db dummyf_3bd2[32]; // 0204:1b92
+dw word_11cb4; // 0345:0284
+db byte_11cb6; // 0345:0286
+db byte_11cb7; // 0345:0287
+dw word_11cb8; // 0345:0288
+db dummyf_36da[32]; // 0345:028a
+db byte_11cda; // 0345:02aa
+db byte_11cdb; // 0345:02ab
+db byte_11cdc; // 0345:02ac
+db dummyf_36fd[32]; // 0345:02ad
+db dummyf_371d[32]; // 0345:02cd
+db dummyf_373d[32]; // 0345:02ed
+db dummyf_375d[32]; // 0345:030d
+db dummyf_377d[32]; // 0345:032d
+db dummyf_379d[32]; // 0345:034d
+db dummyf_37bd[32]; // 0345:036d
+db dummyf_37dd[32]; // 0345:038d
+db dummyf_37fd[32]; // 0345:03ad
+db dummyf_381d[32]; // 0345:03cd
+db dummyf_383d[32]; // 0345:03ed
+db dummyf_385d[32]; // 0345:040d
+db dummyf_387d[32]; // 0345:042d
+db dummyf_389d[32]; // 0345:044d
+db dummyf_38bd[32]; // 0345:046d
+db dummyf_38dd[32]; // 0345:048d
+db dummyf_38fd[32]; // 0345:04ad
+db dummyf_391d[32]; // 0345:04cd
+db dummyf_393d[32]; // 0345:04ed
+db dummyf_395d[32]; // 0345:050d
+db dummyf_397d[32]; // 0345:052d
+db dummyf_399d[32]; // 0345:054d
+db dummyf_39bd[32]; // 0345:056d
+db dummyf_39dd[32]; // 0345:058d
+db dummyf_39fd[32]; // 0345:05ad
+db dummyf_3a1d[32]; // 0345:05cd
+db dummyf_3a3d[32]; // 0345:05ed
+db dummyf_3a5d[32]; // 0345:060d
+db dummyf_3a7d[32]; // 0345:062d
+db dummyf_3a9d[32]; // 0345:064d
+db dummyf_3abd[32]; // 0345:066d
+db dummyf_3add[32]; // 0345:068d
+db dummyf_3afd[32]; // 0345:06ad
+db dummyf_3b1d[32]; // 0345:06cd
+db dummyf_3b3d[32]; // 0345:06ed
+db dummyf_3b5d[32]; // 0345:070d
+db dummyf_3b7d[32]; // 0345:072d
+db dummyf_3b9d[32]; // 0345:074d
+db dummyf_3bbd[32]; // 0345:076d
+db dummyf_3bdd;
+db dummyf_3bde;
+db dummyf_3bdf;
+db dummyf_3be0; // 0345:0790
+db dummyf_3be1;
+db dummyf_3be2; // 0345:0792
+db dummyf_3be3; // 0345:0793
+db dummyf_3be4; // 0345:0794
+db dummyf_3be5;
+db dummyf_3be6; // 0345:0796
+db dummyf_3be7;
+db dummyf_3be8; // 0345:0798
+db dummyf_3be9; // 0345:0799
+db dummyf_3bea;
+db dummyf_3beb;
+db dummyf_3bec;
+db dummyf_3bed; // 0345:079d
+db dummyf_3bee;
+db dummyf_3bef;
+db dummyf_3bf0;
+db dummyf_3bf1;
 db dummyf_3bf2;
 db dummyf_3bf3;
 db dummyf_3bf4;
 db dummyf_3bf5;
-db byte_121d6; // 0204:1bb6
-db dummyf_3bf7; // 0204:1bb7
-db dummyf_3bf8[9]; // 0204:1bb8
-db dummyf_3c01[32]; // 0204:1bc1
-db dummyf_3c21; // 0204:1be1
-db dummyf_3c22; // 0204:1be2
-db dummyf_3c23; // 0204:1be3
-db dummyf_3c24; // 0204:1be4
-db dummyf_3c25; // 0204:1be5
-db dummyf_3c26;
-db dummyf_3c27;
-db dummyf_3c28; // 0204:1be8
-db dummyf_3c29; // 0204:1be9
-db dummyf_3c2a; // 0204:1bea
-db dummyf_3c2b; // 0204:1beb
-db dummyf_3c2c; // 0204:1bec
-db dummyf_3c2d; // 0204:1bed
-db dummyf_3c2e;
-db dummyf_3c2f;
-db dummyf_3c30; // 0204:1bf0
-db dummyf_3c31; // 0204:1bf1
-db dummyf_3c32; // 0204:1bf2
-db dummyf_3c33; // 0204:1bf3
-db dummyf_3c34; // 0204:1bf4
-db dummyf_3c35; // 0204:1bf5
-db dummyf_3c36;
+db unk_121d6; // 0345:07a6
+db dummyf_3bf7[32]; // 0345:07a7
+db dummyf_3c17[32]; // 0345:07c7
 db dummyf_3c37;
-db _unk_12218[9]; // 0204:1bf8
+db unk_12218; // 0345:07e8
+db dummyf_3c39; // 0345:07e9
+db dummyf_3c3a; // 0345:07ea
+db dummyf_3c3b; // 0345:07eb
+db dummyf_3c3c; // 0345:07ec
+db dummyf_3c3d; // 0345:07ed
+db dummyf_3c3e; // 0345:07ee
+db dummyf_3c3f; // 0345:07ef
+db dummyf_3c40; // 0345:07f0
 db dummyf_3c41;
 db dummyf_3c42;
 db dummyf_3c43;
-db _unk_12224[8]; // 0204:1c04
+db unk_12224; // 0345:07f4
+db dummyf_3c45; // 0345:07f5
+db dummyf_3c46; // 0345:07f6
+db dummyf_3c47; // 0345:07f7
+db dummyf_3c48; // 0345:07f8
+db dummyf_3c49; // 0345:07f9
+db dummyf_3c4a;
+db dummyf_3c4b;
 db dummyf_3c4c;
 db dummyf_3c4d;
-db byte_1222e; // 0204:1c0e
-db dummyf_3c4f; // 0204:1c0f
-db dummyf_3c50; // 0204:1c10
-db dummyf_3c51; // 0204:1c11
-db dummyf_3c52; // 0204:1c12
-db dummyf_3c53; // 0204:1c13
-db dummyf_3c54; // 0204:1c14
-db dummyf_3c55; // 0204:1c15
-db dummyf_3c56; // 0204:1c16
-db dummyf_3c57; // 0204:1c17
-db dummyf_3c58; // 0204:1c18
+db unk_1222e; // 0345:07fe
+db dummyf_3c4f; // 0345:07ff
+db dummyf_3c50; // 0345:0800
+db dummyf_3c51; // 0345:0801
+db dummyf_3c52; // 0345:0802
+db dummyf_3c53; // 0345:0803
+db dummyf_3c54; // 0345:0804
+db dummyf_3c55; // 0345:0805
+db dummyf_3c56; // 0345:0806
+db dummyf_3c57; // 0345:0807
+db dummyf_3c58; // 0345:0808
 db dummyf_3c59;
 db dummyf_3c5a;
 db dummyf_3c5b;
-db byte_1223c; // 0204:1c1c
-db dummyf_3c5d; // 0204:1c1d
-db dummyf_3c5e; // 0204:1c1e
-db dummyf_3c5f; // 0204:1c1f
-db dummyf_3c60; // 0204:1c20
-db dummyf_3c61; // 0204:1c21
-db dummyf_3c62; // 0204:1c22
-db dummyf_3c63; // 0204:1c23
+db unk_1223c; // 0345:080c
+db dummyf_3c5d; // 0345:080d
+db dummyf_3c5e; // 0345:080e
+db dummyf_3c5f; // 0345:080f
+db dummyf_3c60; // 0345:0810
+db dummyf_3c61; // 0345:0811
+db dummyf_3c62; // 0345:0812
+db dummyf_3c63; // 0345:0813
 db dummyf_3c64;
 db dummyf_3c65;
-db byte_12246; // 0204:1c26
-db dummyf_3c67; // 0204:1c27
-db dummyf_3c68; // 0204:1c28
-db dummyf_3c69; // 0204:1c29
-db dummyf_3c6a; // 0204:1c2a
-db dummyf_3c6b; // 0204:1c2b
-db dummyf_3c6c; // 0204:1c2c
-db dummyf_3c6d; // 0204:1c2d
+db unk_12246; // 0345:0816
+db dummyf_3c67; // 0345:0817
+db dummyf_3c68; // 0345:0818
+db dummyf_3c69; // 0345:0819
+db dummyf_3c6a; // 0345:081a
+db dummyf_3c6b; // 0345:081b
+db dummyf_3c6c; // 0345:081c
+db dummyf_3c6d; // 0345:081d
 db dummyf_3c6e;
 db dummyf_3c6f;
-db byte_12250; // 0204:1c30
-db dummyf_3c71; // 0204:1c31
-db dummyf_3c72; // 0204:1c32
-db dummyf_3c73; // 0204:1c33
-db dummyf_3c74; // 0204:1c34
-db dummyf_3c75; // 0204:1c35
+db unk_12250; // 0345:0820
+db dummyf_3c71; // 0345:0821
+db dummyf_3c72; // 0345:0822
+db dummyf_3c73; // 0345:0823
+db dummyf_3c74; // 0345:0824
+db dummyf_3c75; // 0345:0825
 db dummyf_3c76;
 db dummyf_3c77;
-db byte_12258; // 0204:1c38
-db dummyf_3c79; // 0204:1c39
-db dummyf_3c7a; // 0204:1c3a
-db dummyf_3c7b; // 0204:1c3b
-db dummyf_3c7c; // 0204:1c3c
-db dummyf_3c7d; // 0204:1c3d
+db unk_12258; // 0345:0828
+db dummyf_3c79; // 0345:0829
+db dummyf_3c7a; // 0345:082a
+db dummyf_3c7b; // 0345:082b
+db dummyf_3c7c; // 0345:082c
+db dummyf_3c7d; // 0345:082d
 db dummyf_3c7e;
 db dummyf_3c7f;
-db byte_12260; // 0204:1c40
-db dummyf_3c81; // 0204:1c41
-db dummyf_3c82; // 0204:1c42
-db dummyf_3c83; // 0204:1c43
-db dummyf_3c84; // 0204:1c44
-db dummyf_3c85; // 0204:1c45
+db unk_12260; // 0345:0830
+db dummyf_3c81; // 0345:0831
+db dummyf_3c82; // 0345:0832
+db dummyf_3c83; // 0345:0833
+db dummyf_3c84; // 0345:0834
+db dummyf_3c85; // 0345:0835
 db dummyf_3c86;
 db dummyf_3c87;
-db byte_12268; // 0204:1c48
+db unk_12268; // 0345:0838
 db dummyf_3c89;
-db dummyf_3c8a; // 0204:1c4a
-db dummyf_3c8b; // 0204:1c4b
-db dummyf_3c8c; // 0204:1c4c
-db dummyf_3c8d; // 0204:1c4d
-db dummyf_3c8e; // 0204:1c4e
-db dummyf_3c8f; // 0204:1c4f
+db dummyf_3c8a; // 0345:083a
+db dummyf_3c8b; // 0345:083b
+db dummyf_3c8c; // 0345:083c
+db dummyf_3c8d; // 0345:083d
+db dummyf_3c8e; // 0345:083e
+db dummyf_3c8f; // 0345:083f
 db dummyf_3c90;
 db dummyf_3c91;
-db byte_12272; // 0204:1c52
+db unk_12272; // 0345:0842
 db dummyf_3c93;
-db byte_12274; // 0204:1c54
-db dummyf_3c95; // 0204:1c55
-db dummyf_3c96; // 0204:1c56
-db dummyf_3c97; // 0204:1c57
-db dummyf_3c98; // 0204:1c58
-db dummyf_3c99; // 0204:1c59
-db dummyf_3c9a; // 0204:1c5a
-db dummyf_3c9b; // 0204:1c5b
+db unk_12274; // 0345:0844
+db dummyf_3c95; // 0345:0845
+db dummyf_3c96; // 0345:0846
+db dummyf_3c97; // 0345:0847
+db dummyf_3c98; // 0345:0848
+db dummyf_3c99; // 0345:0849
+db dummyf_3c9a; // 0345:084a
+db dummyf_3c9b; // 0345:084b
 db dummyf_3c9c;
 db dummyf_3c9d;
-db byte_1227e; // 0204:1c5e
-db dummyf_3c9f; // 0204:1c5f
-db dummyf_3ca0; // 0204:1c60
-db dummyf_3ca1; // 0204:1c61
-db dummyf_3ca2; // 0204:1c62
-db dummyf_3ca3; // 0204:1c63
-db dummyf_3ca4; // 0204:1c64
-db dummyf_3ca5; // 0204:1c65
+db unk_1227e; // 0345:084e
+db dummyf_3c9f; // 0345:084f
+db dummyf_3ca0; // 0345:0850
+db dummyf_3ca1; // 0345:0851
+db dummyf_3ca2; // 0345:0852
+db dummyf_3ca3; // 0345:0853
+db dummyf_3ca4; // 0345:0854
+db dummyf_3ca5; // 0345:0855
 db dummyf_3ca6;
 db dummyf_3ca7;
-db _unk_12288[12]; // 0204:1c68
-db dummyf_3cb4[6]; // 0204:1c68
-db byte_1229a; // 0204:1c7a
-db dummyf_3cbb; // 0204:1c7b
-db dummyf_3cbc; // 0204:1c7c
-db dummyf_3cbd; // 0204:1c7d
-db dummyf_3cbe; // 0204:1c7e
-db dummyf_3cbf; // 0204:1c7f
-db dummyf_3cc0; // 0204:1c80
-db dummyf_3cc1; // 0204:1c81
-db dummyf_3cc2; // 0204:1c82
-db dummyf_3cc3; // 0204:1c83
-db dummyf_3cc4; // 0204:1c84
-db dummyf_3cc5; // 0204:1c85
+db unk_12288; // 0345:0858
+db dummyf_3ca9; // 0345:0859
+db dummyf_3caa; // 0345:085a
+db dummyf_3cab;
+db dummyf_3cac; // 0345:085c
+db dummyf_3cad; // 0345:085d
+db dummyf_3cae; // 0345:085e
+db dummyf_3caf; // 0345:085f
+db dummyf_3cb0; // 0345:0860
+db dummyf_3cb1; // 0345:0861
+db dummyf_3cb2; // 0345:0862
+db dummyf_3cb3; // 0345:0863
+db dummyf_3cb4;
+db dummyf_3cb5; // 0345:0865
+db dummyf_3cb6;
+db dummyf_3cb7;
+db dummyf_3cb8;
+db dummyf_3cb9;
+db unk_1229a; // 0345:086a
+db dummyf_3cbb; // 0345:086b
+db dummyf_3cbc; // 0345:086c
+db dummyf_3cbd; // 0345:086d
+db dummyf_3cbe; // 0345:086e
+db dummyf_3cbf; // 0345:086f
+db dummyf_3cc0; // 0345:0870
+db dummyf_3cc1; // 0345:0871
+db dummyf_3cc2; // 0345:0872
+db dummyf_3cc3; // 0345:0873
+db dummyf_3cc4; // 0345:0874
+db dummyf_3cc5; // 0345:0875
 db dummyf_3cc6;
-db dummyf_3cc7; // 0204:1c87
+db dummyf_3cc7; // 0345:0877
 db dummyf_3cc8;
 db dummyf_3cc9;
 db dummyf_3cca;
 db dummyf_3ccb;
-db byte_122ac; // 0204:1c8c
-db dummyf_3ccd; // 0204:1c8d
-db dummyf_3cce; // 0204:1c8e
-db dummyf_3ccf; // 0204:1c8f
-db dummyf_3cd0; // 0204:1c90
-db dummyf_3cd1; // 0204:1c91
+db unk_122ac; // 0345:087c
+db dummyf_3ccd; // 0345:087d
+db dummyf_3cce; // 0345:087e
+db dummyf_3ccf; // 0345:087f
+db dummyf_3cd0; // 0345:0880
+db dummyf_3cd1; // 0345:0881
 db dummyf_3cd2;
 db dummyf_3cd3;
-db byte_122b4; // 0204:1c94
-db dummyf_3cd5; // 0204:1c95
-db dummyf_3cd6; // 0204:1c96
-db dummyf_3cd7; // 0204:1c97
-db dummyf_3cd8; // 0204:1c98
-db dummyf_3cd9; // 0204:1c99
+db unk_122b4; // 0345:0884
+db dummyf_3cd5; // 0345:0885
+db dummyf_3cd6; // 0345:0886
+db dummyf_3cd7; // 0345:0887
+db dummyf_3cd8; // 0345:0888
+db dummyf_3cd9; // 0345:0889
 db dummyf_3cda;
 db dummyf_3cdb;
-db byte_122bc; // 0204:1c9c
-db dummyf_3cdd[32]; // 0204:1c9d
-db dummyf_3cfd[32]; // 0204:1cbd
-db dummyf_3d1d[32]; // 0204:1cdd
-db dummyf_3d3d; // 0204:1cfd
-db dummyf_3d3e; // 0204:1cfe
-db dummyf_3d3f; // 0204:1cff
-db dummyf_3d40; // 0204:1d00
-db dummyf_3d41; // 0204:1d01
-db dummyf_3d42; // 0204:1d02
-db dummyf_3d43; // 0204:1d03
-db dummyf_3d44; // 0204:1d04
-db dummyf_3d45; // 0204:1d05
-db dummyf_3d46; // 0204:1d06
-db dummyf_3d47; // 0204:1d07
-db dummyf_3d48; // 0204:1d08
-db dummyf_3d49; // 0204:1d09
-db dummyf_3d4a; // 0204:1d0a
-db dummyf_3d4b; // 0204:1d0b
-db dummyf_3d4c; // 0204:1d0c
-db dummyf_3d4d; // 0204:1d0d
-db dummyf_3d4e; // 0204:1d0e
-db dummyf_3d4f; // 0204:1d0f
-db dummyf_3d50; // 0204:1d10
-db dummyf_3d51; // 0204:1d11
-db dummyf_3d52; // 0204:1d12
+db unk_122bc; // 0345:088c
+db dummyf_3cdd[32]; // 0345:088d
+db dummyf_3cfd[32]; // 0345:08ad
+db dummyf_3d1d[32]; // 0345:08cd
+db dummyf_3d3d; // 0345:08ed
+db dummyf_3d3e; // 0345:08ee
+db dummyf_3d3f; // 0345:08ef
+db dummyf_3d40; // 0345:08f0
+db dummyf_3d41; // 0345:08f1
+db dummyf_3d42; // 0345:08f2
+db dummyf_3d43; // 0345:08f3
+db dummyf_3d44; // 0345:08f4
+db dummyf_3d45; // 0345:08f5
+db dummyf_3d46; // 0345:08f6
+db dummyf_3d47; // 0345:08f7
+db dummyf_3d48; // 0345:08f8
+db dummyf_3d49; // 0345:08f9
+db dummyf_3d4a; // 0345:08fa
+db dummyf_3d4b; // 0345:08fb
+db dummyf_3d4c; // 0345:08fc
+db dummyf_3d4d; // 0345:08fd
+db dummyf_3d4e; // 0345:08fe
+db dummyf_3d4f; // 0345:08ff
+db dummyf_3d50; // 0345:0900
+db dummyf_3d51; // 0345:0901
+db dummyf_3d52; // 0345:0902
 db dummyf_3d53;
 db dummyf_3d54;
 db dummyf_3d55;
-db byte_12336; // 0204:1d16
-db dummyf_3d57[32]; // 0204:1d17
-db dummyf_3d77[32]; // 0204:1d37
-db dummyf_3d97[32]; // 0204:1d57
-db dummyf_3db7; // 0204:1d77
-db dummyf_3db8; // 0204:1d78
-db dummyf_3db9; // 0204:1d79
-db dummyf_3dba; // 0204:1d7a
-db dummyf_3dbb; // 0204:1d7b
-db dummyf_3dbc; // 0204:1d7c
-db dummyf_3dbd; // 0204:1d7d
-db dummyf_3dbe; // 0204:1d7e
-db dummyf_3dbf; // 0204:1d7f
-db dummyf_3dc0; // 0204:1d80
-db dummyf_3dc1; // 0204:1d81
-db dummyf_3dc2; // 0204:1d82
-db dummyf_3dc3; // 0204:1d83
-db dummyf_3dc4; // 0204:1d84
-db dummyf_3dc5; // 0204:1d85
-db dummyf_3dc6; // 0204:1d86
-db dummyf_3dc7; // 0204:1d87
-db dummyf_3dc8; // 0204:1d88
-db dummyf_3dc9; // 0204:1d89
-db dummyf_3dca; // 0204:1d8a
-db dummyf_3dcb; // 0204:1d8b
-db dummyf_3dcc; // 0204:1d8c
+db unk_12336; // 0345:0906
+db dummyf_3d57[32]; // 0345:0907
+db dummyf_3d77[32]; // 0345:0927
+db dummyf_3d97[32]; // 0345:0947
+db dummyf_3db7; // 0345:0967
+db dummyf_3db8; // 0345:0968
+db dummyf_3db9; // 0345:0969
+db dummyf_3dba; // 0345:096a
+db dummyf_3dbb; // 0345:096b
+db dummyf_3dbc; // 0345:096c
+db dummyf_3dbd; // 0345:096d
+db dummyf_3dbe; // 0345:096e
+db dummyf_3dbf; // 0345:096f
+db dummyf_3dc0; // 0345:0970
+db dummyf_3dc1; // 0345:0971
+db dummyf_3dc2; // 0345:0972
+db dummyf_3dc3; // 0345:0973
+db dummyf_3dc4; // 0345:0974
+db dummyf_3dc5; // 0345:0975
+db dummyf_3dc6; // 0345:0976
+db dummyf_3dc7; // 0345:0977
+db dummyf_3dc8; // 0345:0978
+db dummyf_3dc9; // 0345:0979
+db dummyf_3dca; // 0345:097a
+db dummyf_3dcb; // 0345:097b
+db dummyf_3dcc; // 0345:097c
 db dummyf_3dcd;
 db dummyf_3dce;
 db dummyf_3dcf;
-db byte_123b0; // 0204:1d90
-db dummyf_3dd1[32]; // 0204:1d91
-db dummyf_3df1[32]; // 0204:1db1
+db unk_123b0; // 0345:0980
+db dummyf_3dd1[32]; // 0345:0981
+db dummyf_3df1[32]; // 0345:09a1
 db dummyf_3e11;
-db dummyf_3e12; // 0204:1dd2
-db dummyf_3e13; // 0204:1dd3
-db dummyf_3e14; // 0204:1dd4
-db dummyf_3e15; // 0204:1dd5
-db dummyf_3e16; // 0204:1dd6
-db dummyf_3e17; // 0204:1dd7
-db dummyf_3e18; // 0204:1dd8
-db dummyf_3e19; // 0204:1dd9
-db dummyf_3e1a; // 0204:1dda
-db dummyf_3e1b; // 0204:1ddb
-db dummyf_3e1c; // 0204:1ddc
+db dummyf_3e12; // 0345:09c2
+db dummyf_3e13; // 0345:09c3
+db dummyf_3e14; // 0345:09c4
+db dummyf_3e15; // 0345:09c5
+db dummyf_3e16; // 0345:09c6
+db dummyf_3e17; // 0345:09c7
+db dummyf_3e18; // 0345:09c8
+db dummyf_3e19; // 0345:09c9
+db dummyf_3e1a; // 0345:09ca
+db dummyf_3e1b; // 0345:09cb
+db dummyf_3e1c; // 0345:09cc
 db dummyf_3e1d;
 db dummyf_3e1e;
 db dummyf_3e1f;
-db byte_12400; // 0204:1de0
-db dummyf_3e21[32]; // 0204:1de1
-db dummyf_3e41; // 0204:1e01
-db dummyf_3e42; // 0204:1e02
-db dummyf_3e43; // 0204:1e03
-db dummyf_3e44; // 0204:1e04
-db dummyf_3e45; // 0204:1e05
-db dummyf_3e46; // 0204:1e06
-db dummyf_3e47; // 0204:1e07
-db dummyf_3e48; // 0204:1e08
-db dummyf_3e49; // 0204:1e09
-db dummyf_3e4a; // 0204:1e0a
-db dummyf_3e4b; // 0204:1e0b
-db dummyf_3e4c; // 0204:1e0c
-db dummyf_3e4d; // 0204:1e0d
-db dummyf_3e4e; // 0204:1e0e
-db dummyf_3e4f; // 0204:1e0f
-db dummyf_3e50; // 0204:1e10
-db dummyf_3e51; // 0204:1e11
-db dummyf_3e52; // 0204:1e12
-db dummyf_3e53; // 0204:1e13
-db dummyf_3e54; // 0204:1e14
-db dummyf_3e55; // 0204:1e15
-db dummyf_3e56; // 0204:1e16
-db dummyf_3e57; // 0204:1e17
-db dummyf_3e58; // 0204:1e18
-db dummyf_3e59; // 0204:1e19
-db dummyf_3e5a; // 0204:1e1a
-db dummyf_3e5b; // 0204:1e1b
-db dummyf_3e5c; // 0204:1e1c
+db unk_12400; // 0345:09d0
+db dummyf_3e21[32]; // 0345:09d1
+db dummyf_3e41; // 0345:09f1
+db dummyf_3e42; // 0345:09f2
+db dummyf_3e43; // 0345:09f3
+db dummyf_3e44; // 0345:09f4
+db dummyf_3e45; // 0345:09f5
+db dummyf_3e46; // 0345:09f6
+db dummyf_3e47; // 0345:09f7
+db dummyf_3e48; // 0345:09f8
+db dummyf_3e49; // 0345:09f9
+db dummyf_3e4a; // 0345:09fa
+db dummyf_3e4b; // 0345:09fb
+db dummyf_3e4c; // 0345:09fc
+db dummyf_3e4d; // 0345:09fd
+db dummyf_3e4e; // 0345:09fe
+db dummyf_3e4f; // 0345:09ff
+db dummyf_3e50; // 0345:0a00
+db dummyf_3e51; // 0345:0a01
+db dummyf_3e52; // 0345:0a02
+db dummyf_3e53; // 0345:0a03
+db dummyf_3e54; // 0345:0a04
+db dummyf_3e55; // 0345:0a05
+db dummyf_3e56; // 0345:0a06
+db dummyf_3e57; // 0345:0a07
+db dummyf_3e58; // 0345:0a08
+db dummyf_3e59; // 0345:0a09
+db dummyf_3e5a; // 0345:0a0a
+db dummyf_3e5b; // 0345:0a0b
+db dummyf_3e5c; // 0345:0a0c
 db dummyf_3e5d;
 db dummyf_3e5e;
 db dummyf_3e5f;
-db byte_12440; // 0204:1e20
-db dummyf_3e61[32]; // 0204:1e21
-db dummyf_3e81[32]; // 0204:1e41
-db dummyf_3ea1; // 0204:1e61
-db dummyf_3ea2; // 0204:1e62
-db dummyf_3ea3; // 0204:1e63
-db dummyf_3ea4; // 0204:1e64
-db dummyf_3ea5; // 0204:1e65
-db dummyf_3ea6; // 0204:1e66
-db dummyf_3ea7; // 0204:1e67
-db dummyf_3ea8; // 0204:1e68
-db dummyf_3ea9; // 0204:1e69
-db dummyf_3eaa; // 0204:1e6a
-db dummyf_3eab; // 0204:1e6b
-db dummyf_3eac; // 0204:1e6c
-db dummyf_3ead; // 0204:1e6d
-db dummyf_3eae; // 0204:1e6e
-db dummyf_3eaf; // 0204:1e6f
-db dummyf_3eb0; // 0204:1e70
+db unk_12440; // 0345:0a10
+db dummyf_3e61[32]; // 0345:0a11
+db dummyf_3e81[32]; // 0345:0a31
+db dummyf_3ea1; // 0345:0a51
+db dummyf_3ea2; // 0345:0a52
+db dummyf_3ea3; // 0345:0a53
+db dummyf_3ea4; // 0345:0a54
+db dummyf_3ea5; // 0345:0a55
+db dummyf_3ea6; // 0345:0a56
+db dummyf_3ea7; // 0345:0a57
+db dummyf_3ea8; // 0345:0a58
+db dummyf_3ea9; // 0345:0a59
+db dummyf_3eaa; // 0345:0a5a
+db dummyf_3eab; // 0345:0a5b
+db dummyf_3eac; // 0345:0a5c
+db dummyf_3ead; // 0345:0a5d
+db dummyf_3eae; // 0345:0a5e
+db dummyf_3eaf; // 0345:0a5f
+db dummyf_3eb0; // 0345:0a60
 db dummyf_3eb1;
 db dummyf_3eb2;
 db dummyf_3eb3;
-db byte_12494; // 0204:1e74
-db dummyf_3eb5[32]; // 0204:1e75
-db dummyf_3ed5[32]; // 0204:1e95
-db dummyf_3ef5[32]; // 0204:1eb5
-db dummyf_3f15[32]; // 0204:1ed5
-db dummyf_3f35; // 0204:1ef5
-db dummyf_3f36; // 0204:1ef6
-db dummyf_3f37; // 0204:1ef7
-db dummyf_3f38; // 0204:1ef8
-db dummyf_3f39; // 0204:1ef9
-db dummyf_3f3a; // 0204:1efa
-db dummyf_3f3b; // 0204:1efb
-db dummyf_3f3c; // 0204:1efc
-db dummyf_3f3d; // 0204:1efd
-db dummyf_3f3e; // 0204:1efe
-db dummyf_3f3f; // 0204:1eff
-db dummyf_3f40; // 0204:1f00
+db unk_12494; // 0345:0a64
+db dummyf_3eb5[32]; // 0345:0a65
+db dummyf_3ed5[32]; // 0345:0a85
+db dummyf_3ef5[32]; // 0345:0aa5
+db dummyf_3f15[32]; // 0345:0ac5
+db dummyf_3f35; // 0345:0ae5
+db dummyf_3f36; // 0345:0ae6
+db dummyf_3f37; // 0345:0ae7
+db dummyf_3f38; // 0345:0ae8
+db dummyf_3f39; // 0345:0ae9
+db dummyf_3f3a; // 0345:0aea
+db dummyf_3f3b; // 0345:0aeb
+db dummyf_3f3c; // 0345:0aec
+db dummyf_3f3d; // 0345:0aed
+db dummyf_3f3e; // 0345:0aee
+db dummyf_3f3f; // 0345:0aef
+db dummyf_3f40; // 0345:0af0
 db dummyf_3f41;
-db dummyf_3f42; // 0204:1f02
+db dummyf_3f42; // 0345:0af2
 db dummyf_3f43;
 db dummyf_3f44;
 db dummyf_3f45;
-db byte_12526; // 0204:1f06
-db dummyf_3f47; // 0204:1f07
-db dummyf_3f48; // 0204:1f08
-db dummyf_3f49; // 0204:1f09
-db dummyf_3f4a; // 0204:1f0a
-db dummyf_3f4b; // 0204:1f0b
-db dummyf_3f4c; // 0204:1f0c
-db dummyf_3f4d; // 0204:1f0d
-db dummyf_3f4e; // 0204:1f0e
-db dummyf_3f4f; // 0204:1f0f
-db dummyf_3f50; // 0204:1f10
-db dummyf_3f51; // 0204:1f11
+db unk_12526; // 0345:0af6
+db dummyf_3f47; // 0345:0af7
+db dummyf_3f48; // 0345:0af8
+db dummyf_3f49; // 0345:0af9
+db dummyf_3f4a; // 0345:0afa
+db dummyf_3f4b; // 0345:0afb
+db dummyf_3f4c; // 0345:0afc
+db dummyf_3f4d; // 0345:0afd
+db dummyf_3f4e; // 0345:0afe
+db dummyf_3f4f; // 0345:0aff
+db dummyf_3f50; // 0345:0b00
+db dummyf_3f51; // 0345:0b01
 db dummyf_3f52;
 db dummyf_3f53;
-db byte_12534; // 0204:1f14
-db dummyf_3f55; // 0204:1f15
-db dummyf_3f56; // 0204:1f16
-db dummyf_3f57; // 0204:1f17
-db dummyf_3f58; // 0204:1f18
-db dummyf_3f59; // 0204:1f19
-db dummyf_3f5a; // 0204:1f1a
-db dummyf_3f5b; // 0204:1f1b
-db dummyf_3f5c; // 0204:1f1c
-db dummyf_3f5d; // 0204:1f1d
-db dummyf_3f5e; // 0204:1f1e
-db dummyf_3f5f; // 0204:1f1f
+db unk_12534; // 0345:0b04
+db dummyf_3f55; // 0345:0b05
+db dummyf_3f56; // 0345:0b06
+db dummyf_3f57; // 0345:0b07
+db dummyf_3f58; // 0345:0b08
+db dummyf_3f59; // 0345:0b09
+db dummyf_3f5a; // 0345:0b0a
+db dummyf_3f5b; // 0345:0b0b
+db dummyf_3f5c; // 0345:0b0c
+db dummyf_3f5d; // 0345:0b0d
+db dummyf_3f5e; // 0345:0b0e
+db dummyf_3f5f; // 0345:0b0f
 db dummyf_3f60;
 db dummyf_3f61;
-db byte_12542; // 0204:1f22
-db dummyf_3f63; // 0204:1f23
-db dummyf_3f64; // 0204:1f24
-db dummyf_3f65; // 0204:1f25
-db dummyf_3f66; // 0204:1f26
-db dummyf_3f67; // 0204:1f27
-db dummyf_3f68; // 0204:1f28
-db dummyf_3f69; // 0204:1f29
-db dummyf_3f6a; // 0204:1f2a
-db dummyf_3f6b; // 0204:1f2b
-db dummyf_3f6c; // 0204:1f2c
-db dummyf_3f6d; // 0204:1f2d
+db unk_12542; // 0345:0b12
+db dummyf_3f63; // 0345:0b13
+db dummyf_3f64; // 0345:0b14
+db dummyf_3f65; // 0345:0b15
+db dummyf_3f66; // 0345:0b16
+db dummyf_3f67; // 0345:0b17
+db dummyf_3f68; // 0345:0b18
+db dummyf_3f69; // 0345:0b19
+db dummyf_3f6a; // 0345:0b1a
+db dummyf_3f6b; // 0345:0b1b
+db dummyf_3f6c; // 0345:0b1c
+db dummyf_3f6d; // 0345:0b1d
 db dummyf_3f6e;
 db dummyf_3f6f;
-db byte_12550; // 0204:1f30
-db dummyf_3f71; // 0204:1f31
-db dummyf_3f72; // 0204:1f32
-db dummyf_3f73; // 0204:1f33
-db dummyf_3f74; // 0204:1f34
-db dummyf_3f75; // 0204:1f35
-db dummyf_3f76; // 0204:1f36
-db dummyf_3f77; // 0204:1f37
-db dummyf_3f78; // 0204:1f38
-db dummyf_3f79; // 0204:1f39
-db dummyf_3f7a; // 0204:1f3a
-db dummyf_3f7b; // 0204:1f3b
+db unk_12550; // 0345:0b20
+db dummyf_3f71; // 0345:0b21
+db dummyf_3f72; // 0345:0b22
+db dummyf_3f73; // 0345:0b23
+db dummyf_3f74; // 0345:0b24
+db dummyf_3f75; // 0345:0b25
+db dummyf_3f76; // 0345:0b26
+db dummyf_3f77; // 0345:0b27
+db dummyf_3f78; // 0345:0b28
+db dummyf_3f79; // 0345:0b29
+db dummyf_3f7a; // 0345:0b2a
+db dummyf_3f7b; // 0345:0b2b
 db dummyf_3f7c;
 db dummyf_3f7d;
-db byte_1255e; // 0204:1f3e
-db dummyf_3f7f; // 0204:1f3f
-db dummyf_3f80; // 0204:1f40
-db dummyf_3f81; // 0204:1f41
-db dummyf_3f82; // 0204:1f42
-db dummyf_3f83; // 0204:1f43
-db dummyf_3f84; // 0204:1f44
-db dummyf_3f85; // 0204:1f45
-db dummyf_3f86; // 0204:1f46
-db dummyf_3f87; // 0204:1f47
-db dummyf_3f88; // 0204:1f48
-db dummyf_3f89; // 0204:1f49
+db unk_1255e; // 0345:0b2e
+db dummyf_3f7f; // 0345:0b2f
+db dummyf_3f80; // 0345:0b30
+db dummyf_3f81; // 0345:0b31
+db dummyf_3f82; // 0345:0b32
+db dummyf_3f83; // 0345:0b33
+db dummyf_3f84; // 0345:0b34
+db dummyf_3f85; // 0345:0b35
+db dummyf_3f86; // 0345:0b36
+db dummyf_3f87; // 0345:0b37
+db dummyf_3f88; // 0345:0b38
+db dummyf_3f89; // 0345:0b39
 db dummyf_3f8a;
 db dummyf_3f8b;
-db byte_1256c; // 0204:1f4c
-db dummyf_3f8d; // 0204:1f4d
-db dummyf_3f8e; // 0204:1f4e
-db dummyf_3f8f; // 0204:1f4f
-db dummyf_3f90; // 0204:1f50
-db dummyf_3f91; // 0204:1f51
-db dummyf_3f92; // 0204:1f52
-db dummyf_3f93; // 0204:1f53
-db dummyf_3f94; // 0204:1f54
-db dummyf_3f95; // 0204:1f55
-db dummyf_3f96; // 0204:1f56
-db dummyf_3f97; // 0204:1f57
-db dummyf_3f98;
-db dummyf_3f99;
-char __acopyrightc1989[64]; // 0204:1f5a
+db unk_1256c; // 0345:0b3c
+db dummyf_3f8d[32]; // 0345:0b3d
+db dummyf_3fad[32]; // 0345:0b5d
+db dummyf_3fcd; // 0345:0b7d
+db dummyf_3fce; // 0345:0b7e
+db dummyf_3fcf; // 0345:0b7f
+db dummyf_3fd0; // 0345:0b80
+db dummyf_3fd1; // 0345:0b81
+db dummyf_3fd2; // 0345:0b82
+db dummyf_3fd3; // 0345:0b83
+db dummyf_3fd4; // 0345:0b84
+db dummyf_3fd5; // 0345:0b85
+db dummyf_3fd6; // 0345:0b86
+db dummyf_3fd7; // 0345:0b87
+db dummyf_3fd8; // 0345:0b88
+db dummyf_3fd9;
 db dummyf_3fda;
 db dummyf_3fdb;
 db dummyf_3fdc;
@@ -1083,20 +952,25 @@ db dummyf_3fde;
 db dummyf_3fdf;
 db dummyf_3fe0;
 db dummyf_3fe1;
-db _unk_125c2; // 0204:1fa2
-db dummyf_3fe3;
-dw word_125c4; // 0204:1fa4
-db _unk_125c6; // 0204:1fa6
-db dummyf_3fe7;
-db _unk_125c8; // 0204:1fa8
-db dummyf_3fe9;
-db byte_125ca; // 0204:1faa
+dw word_125c2; // 0345:0b92
+dw word_125c4; // 0345:0b94
+dw word_125c6; // 0345:0b96
+dw word_125c8; // 0345:0b98
+db byte_125ca; // 0345:0b9a
 db dummyf_3feb;
-db byte_125cc; // 0204:1fac
-db dummyf_3fed[3];
-db dummyf_3ff0[7]; // 0204:1fb0
-db dummyf_3ff7; // 0204:1fb7
-db dummyf_3ff8; // 0204:1fb8
+db byte_125cc; // 0345:0b9c
+db dummyf_3fed;
+db dummyf_3fee;
+db dummyf_3fef;
+db dummyf_3ff0; // 0345:0ba0
+db dummyf_3ff1; // 0345:0ba1
+db dummyf_3ff2; // 0345:0ba2
+db dummyf_3ff3;
+db dummyf_3ff4; // 0345:0ba4
+db dummyf_3ff5; // 0345:0ba5
+db dummyf_3ff6; // 0345:0ba6
+db dummyf_3ff7; // 0345:0ba7
+db dummyf_3ff8; // 0345:0ba8
 db dummyf_3ff9;
 db dummyf_3ffa;
 db dummyf_3ffb;
@@ -1104,11 +978,19 @@ db dummyf_3ffc;
 db dummyf_3ffd;
 db dummyf_3ffe;
 db dummyf_3fff;
-db byte_125e0; // 0204:1fc0
-db dummyf_4001[3];
-db dummyf_4004[7]; // 0204:1fc4
-db dummyf_400b; // 0204:1fcb
-db dummyf_400c; // 0204:1fcc
+db byte_125e0; // 0345:0bb0
+db dummyf_4001;
+db dummyf_4002;
+db dummyf_4003;
+db dummyf_4004; // 0345:0bb4
+db dummyf_4005; // 0345:0bb5
+db dummyf_4006; // 0345:0bb6
+db dummyf_4007;
+db dummyf_4008; // 0345:0bb8
+db dummyf_4009; // 0345:0bb9
+db dummyf_400a; // 0345:0bba
+db dummyf_400b; // 0345:0bbb
+db dummyf_400c; // 0345:0bbc
 db dummyf_400d;
 db dummyf_400e;
 db dummyf_400f;
@@ -1116,11 +998,19 @@ db dummyf_4010;
 db dummyf_4011;
 db dummyf_4012;
 db dummyf_4013;
-db byte_125f4; // 0204:1fd4
-db dummyf_4015[3];
-db dummyf_4018[7]; // 0204:1fd8
-db dummyf_401f; // 0204:1fdf
-db dummyf_4020; // 0204:1fe0
+db byte_125f4; // 0345:0bc4
+db dummyf_4015;
+db dummyf_4016;
+db dummyf_4017;
+db dummyf_4018; // 0345:0bc8
+db dummyf_4019; // 0345:0bc9
+db dummyf_401a; // 0345:0bca
+db dummyf_401b;
+db dummyf_401c; // 0345:0bcc
+db dummyf_401d; // 0345:0bcd
+db dummyf_401e; // 0345:0bce
+db dummyf_401f; // 0345:0bcf
+db dummyf_4020; // 0345:0bd0
 db dummyf_4021;
 db dummyf_4022;
 db dummyf_4023;
@@ -1128,16 +1018,19 @@ db dummyf_4024;
 db dummyf_4025;
 db dummyf_4026;
 db dummyf_4027;
-db byte_12608[3]; // 0204:1fe8
+db unk_12608; // 0345:0bd8
+db dummyf_4029;
+db dummyf_402a;
 db dummyf_402b;
-db dummyf_402c; // 0204:1fec
-db dummyf_402d; // 0204:1fed
-db dummyf_402e; // 0204:1fee
+db dummyf_402c; // 0345:0bdc
+db dummyf_402d; // 0345:0bdd
+db dummyf_402e; // 0345:0bde
 db dummyf_402f;
-db dummyf_4030[2]; // 0204:1ff0
-db dummyf_4032; // 0204:1ff2
-db dummyf_4033; // 0204:1ff3
-db dummyf_4034; // 0204:1ff4
+db dummyf_4030; // 0345:0be0
+db dummyf_4031; // 0345:0be1
+db dummyf_4032; // 0345:0be2
+db dummyf_4033; // 0345:0be3
+db dummyf_4034; // 0345:0be4
 db dummyf_4035;
 db dummyf_4036;
 db dummyf_4037;
@@ -1145,16 +1038,19 @@ db dummyf_4038;
 db dummyf_4039;
 db dummyf_403a;
 db dummyf_403b;
-db byte_1261c[3]; // 0204:1ffc
+db byte_1261c; // 0345:0bec
+db dummyf_403d;
+db dummyf_403e;
 db dummyf_403f;
-db dummyf_4040; // 0204:2000
-db dummyf_4041; // 0204:2001
-db dummyf_4042; // 0204:2002
+db dummyf_4040; // 0345:0bf0
+db dummyf_4041; // 0345:0bf1
+db dummyf_4042; // 0345:0bf2
 db dummyf_4043;
-db dummyf_4044[2]; // 0204:2004
-db dummyf_4046; // 0204:2006
-db dummyf_4047; // 0204:2007
-db dummyf_4048; // 0204:2008
+db dummyf_4044; // 0345:0bf4
+db dummyf_4045; // 0345:0bf5
+db dummyf_4046; // 0345:0bf6
+db dummyf_4047; // 0345:0bf7
+db dummyf_4048; // 0345:0bf8
 db dummyf_4049;
 db dummyf_404a;
 db dummyf_404b;
@@ -1162,36 +1058,8 @@ db dummyf_404c;
 db dummyf_404d;
 db dummyf_404e;
 db dummyf_404f;
-db byte_12630[3]; // 0204:2010
-db dummyf_4053;
-db dummyf_4054; // 0204:2014
-db dummyf_4055; // 0204:2015
-db dummyf_4056; // 0204:2016
-db dummyf_4057;
-db dummyf_4058[2]; // 0204:2018
-db dummyf_405a; // 0204:201a
-db dummyf_405b; // 0204:201b
-db dummyf_405c; // 0204:201c
-db dummyf_405d;
-db dummyf_405e;
-db dummyf_405f;
-db dummyf_4060;
-db dummyf_4061;
-db dummyf_4062;
-db dummyf_4063;
-db dummyf_4064;
-db dummyf_4065;
-db dummyf_4066;
-db dummyf_4067;
-db dummyf_4068;
-db dummyf_4069;
-db dummyf_406a;
-db dummyf_406b;
-db dummyf_406c;
-db dummyf_406d;
-db dummyf_406e;
-db dummyf_406f;
-db dummyf_4070;
+db unk_12630; // 0345:0c00
+db dummyf_4051[32]; // 0345:0c01
 db dummyf_4071;
 db dummyf_4072;
 db dummyf_4073;
@@ -1199,28 +1067,56 @@ db dummyf_4074;
 db dummyf_4075;
 db dummyf_4076;
 db dummyf_4077;
-db byte_12658; // 0204:2038
-db byte_12659; // 0204:2039
-db _unk_1265a; // 0204:203a
-db dummyf_407b;
-dw word_1265c; // 0204:203c
-db byte_1265e; // 0204:203e
-db byte_1265f; // 0204:203f
-db byte_12660; // 0204:2040
-db dummyf_4081;
-db dummyf_4082;
-db dummyf_4083[39]; // 0204:2043
-db dummyf_40aa[30]; // 0204:2043
-db dummyf_40c8[29]; // 0204:2043
-db dummyf_40e5[29]; // 0204:2043
-db dummyf_4102[14]; // 0204:2043
-db dummyf_4110[39]; // 0204:2043
-db dummyf_4137[8]; // 0204:2043
-db byte_1271f; // 0204:20ff
-db dummyf_4140[40]; // 0204:2100
-db dummyf_4168[27]; // 0204:2100
-db dummyf_4183[32]; // 0204:2143
-db dummyf_41a3[32]; // 0204:2163
+db byte_12658; // 0345:0c28
+db byte_12659; // 0345:0c29
+dw word_1265a; // 0345:0c2a
+dw word_1265c; // 0345:0c2c
+db byte_1265e; // 0345:0c2e
+db byte_1265f; // 0345:0c2f
+db byte_12660; // 0345:0c30
+db dummyf_4081[32]; // 0345:0c31
+db dummyf_40a1[32]; // 0345:0c51
+db dummyf_40c1[32]; // 0345:0c71
+db dummyf_40e1[32]; // 0345:0c91
+db dummyf_4101[32]; // 0345:0cb1
+db dummyf_4121;
+db dummyf_4122; // 0345:0cd2
+db dummyf_4123; // 0345:0cd3
+db dummyf_4124; // 0345:0cd4
+db dummyf_4125; // 0345:0cd5
+db dummyf_4126; // 0345:0cd6
+db dummyf_4127; // 0345:0cd7
+db dummyf_4128;
+db dummyf_4129;
+db dummyf_412a;
+db dummyf_412b;
+db dummyf_412c;
+db dummyf_412d;
+db dummyf_412e;
+db dummyf_412f;
+db dummyf_4130;
+db dummyf_4131;
+db dummyf_4132; // 0345:0ce2
+db dummyf_4133;
+db dummyf_4134;
+db dummyf_4135; // 0345:0ce5
+db dummyf_4136; // 0345:0ce6
+db dummyf_4137; // 0345:0ce7
+db dummyf_4138;
+db dummyf_4139;
+db dummyf_413a;
+db dummyf_413b;
+db dummyf_413c;
+db dummyf_413d;
+db dummyf_413e;
+db byte_1271f; // 0345:0cef
+db dummyf_4140[32]; // 0345:0cf0
+db dummyf_4160[32]; // 0345:0d10
+db dummyf_4180[32]; // 0345:0d30
+db dummyf_41a0[32]; // 0345:0d50
+db dummyf_41c0;
+db dummyf_41c1;
+db dummyf_41c2;
 db dummyf_41c3;
 db dummyf_41c4;
 db dummyf_41c5;
@@ -1244,19 +1140,21 @@ db dummyf_41d6;
 db dummyf_41d7;
 db dummyf_41d8;
 db dummyf_41d9;
-db _unk_127ba; // 0204:219a
-db dummyf_41db;
-db _unk_127bc; // 0204:219c
-db dummyf_41dd;
-db _unk_127be; // 0204:219e
-db dummyf_41df; // 0204:219f
-db dummyf_41e0[8]; // 041e:0000
+dw word_127ba; // 0345:0d8a
+dw word_127bc; // 0345:0d8c
+dw word_127be; // 0345:0d8e
+db dummyf_41e0;
+db dummyf_41e1;
+db dummyf_41e2;
+db dummyf_41e3;
+db dummyf_41e4;
+db dummyf_41e5;
+db dummyf_41e6;
+db dummyf_41e7;
 db dummyf_41e8;
-db unk_127c9; // 041e:0009
-db dummyf_41ea; // 041e:000a
-db byte_127cb; // 041e:000b
-db dummyf_41ec[32]; // 041e:000c
-db dummyf_420c; // 041e:002c
+dw seg_127c9; // 041e:0009
+dw word_127cb; // 041e:000b
+db dummyf_41ed[32]; // 041e:000d
 db dummyf_420d; // 041e:002d
 db dummyf_420e; // 041e:002e
 db dummyf_420f; // 041e:002f
@@ -1344,7 +1242,7 @@ dw dummyf_47e0; // 041e:0600
 dw dummyf_47e2; // 041e:0602
 dw dummyf_47e4; // 041e:0604
 dw dummyf_47e6; // 041e:0606
-dw dummyf_47e8; // 041e:0608
+dw off_12dc8; // 041e:0608
 dw dummyf_47ea; // 041e:060a
 dw dummyf_47ec; // 041e:060c
 db dummyf_47ee[15];
@@ -1353,47 +1251,7 @@ db dummyf_47fe[38];
 db dummyf_4824; // 041e:0644
 db dummyf_4825[31];
 db dummyf_4844; // 041e:0664
-db dummyf_4845[1270];
-db dummyf_4d3b; // 041e:0b5b
-db dummyf_4d3c[67];
-db dummyf_4d7f; // 041e:0b9f
-db dummyf_4d80[513];
-db dummyf_4f81; // 041e:0da1
-db dummyf_4f82[57];
-db dummyf_4fbb; // 041e:0ddb
-db dummyf_4fbc[83];
-db dummyf_500f; // 041e:0e2f
-db dummyf_5010[47];
-db dummyf_503f; // 041e:0e5f
-db dummyf_5040[23];
-db dummyf_5057; // 041e:0e77
-db dummyf_5058[133];
-db dummyf_50dd; // 041e:0efd
-db dummyf_50de[33];
-db dummyf_50ff; // 041e:0f1f
-db dummyf_5100[101];
-db dummyf_5165; // 041e:0f85
-db dummyf_5166[65];
-db dummyf_51a7; // 041e:0fc7
-db dummyf_51a8[277];
-db dummyf_52bd; // 041e:10dd
-db dummyf_52be[207];
-db dummyf_538d; // 041e:11ad
-db dummyf_538e[37];
-db dummyf_53b3; // 041e:11d3
-db dummyf_53b4[9];
-db dummyf_53bd; // 041e:11dd
-db dummyf_53be[47];
-db dummyf_53ed; // 041e:120d
-db dummyf_53ee[95];
-db dummyf_544d; // 041e:126d
-db dummyf_544e[45];
-db dummyf_547b; // 041e:129b
-db dummyf_547c; // 041e:129c
-db dummyf_547d; // 041e:129d
-db dummyf_547e;
-db dummyf_547f; // 041e:129f
-db dummyf_5480[20];
+db dummyf_4845[3151];
 dw jpt_13a6f; // 041e:12b4
 dw dummyf_5496; // 041e:12b4
 dw dummyf_5498; // 041e:12b4
@@ -1401,21 +1259,9 @@ dw dummyf_549a; // 041e:12b4
 dw dummyf_549c; // 041e:12b4
 dw dummyf_549e; // 041e:12b4
 dw dummyf_54a0; // 041e:12b4
-db dummyf_54a2;
-db dummyf_54a3;
-db dummyf_54a4[3];
-db dummyf_54a7; // 041e:12c7
-db dummyf_54a8[391];
-db dummyf_562f; // 041e:144f
-db dummyf_5630[29];
-db dummyf_564d; // 041e:146d
-db dummyf_564e[93];
-db dummyf_56ab; // 041e:14cb
-db dummyf_56ac[79];
+db dummyf_54a2[601];
 db dummyf_56fb;
-db dummyf_56fc; // 041e:151c
-db dummyf_56fd; // 041e:151d
-db dummyf_56fe[25];
+db dummyf_56fc[27];
 db dummyf_5717; // 041e:1537
 db dummyf_5718; // 041e:1538
 db dummyf_5719; // 041e:1539
@@ -1433,74 +1279,72 @@ db dummyf_5760; // 041e:1580
 db dummyf_5761[2];
 db dummyf_5763; // 041e:1583
 db dummyf_5764; // 041e:1584
-db dummyf_5765[6];
-db dummyf_576b; // 041e:158b
-db dummyf_576c; // 041e:158c
-db dummyf_576d[3];
-db dummyf_5770; // 041e:1590
+db dummyf_5765[12];
 db dummyf_5771; // 041e:1591
 db dummyf_5772; // 041e:1592
 db dummyf_5773; // 041e:1593
-db dummyf_5774;
-db dummyf_5775; // 041e:1595
-db dummyf_5776; // 041e:1596
-db dummyf_5777; // 041e:1597
-db dummyf_5778; // 041e:1598
-db dummyf_5779; // 041e:1599
-db dummyf_577a; // 041e:159a
+db dummyf_5774[7];
 db dummyf_577b;
 db dummyf_577c;
 db dummyf_577d;
 db dummyf_577e;
 db dummyf_577f;
-db __amiscovrexe0511; // 041e:15a0
-db dummyf_5781; // 041e:15a1
-db dummyf_5782; // 041e:15a2
-db dummyf_5783; // 041e:15a3
-db dummyf_5784; // 041e:15a4
-db dummyf_5785; // 041e:15a5
-db dummyf_5786; // 041e:15a6
-db dummyf_5787; // 041e:15a7
-db dummyf_5788; // 041e:15a8
-db dummyf_5789; // 041e:15a9
-db dummyf_578a; // 041e:15aa
-db dummyf_578b; // 041e:15ab
-db dummyf_578c; // 041e:15ac
-db dummyf_578d; // 041e:15ad
-db dummyf_578e; // 041e:15ae
-db dummyf_578f; // 041e:15af
-db dummyf_5790; // 041e:15b0
-db dummyf_5791; // 041e:15b1
-db byte_13d72; // 041e:15b2
-db dummyf_5793; // 041e:15b3
-dw dummyf_5794;
-dw dummyf_5796;
-dw dummyf_5798; // 041e:15b8
-dw dummyf_579a; // 041e:15ba
-dw dummyf_579c; // 041e:15bc
-dw dummyf_579e; // 041e:15be
-dw dummyf_57a0; // 041e:15c0
-dw dummyf_57a2; // 041e:15c2
-dw dummyf_57a4; // 041e:15c4
-dw dummyf_57a6; // 041e:15c6
-dw dummyf_57a8;
-dw dummyf_57aa; // 041e:15ca
-dw dummyf_57ac; // 041e:15cc
-dw dummyf_57ae; // 041e:15ce
-char __acopyrightc1988[64]; // 041e:15d0
-db dummyf_57f0[155];
-db dummyf_588b; // 041e:16ab
-db dummyf_588c[21];
-db dummyf_58a1; // 041e:16c1
-db dummyf_58a2; // 041e:16c2
-db dummyf_58a3; // 041e:16c3
-db dummyf_58a4; // 041e:16c4
-db dummyf_58a5; // 041e:16c5
-db dummyf_58a6; // 041e:16c6
-db dummyf_58a7; // 041e:16c7
-db dummyf_58a8; // 041e:16c8
-db dummyf_58a9; // 041e:16c9
-db dummyf_58aa; // 041e:16ca
+db dummyf_5780; // 0578:0000
+db dummyf_5781; // 0578:0001
+db dummyf_5782; // 0578:0002
+db dummyf_5783; // 0578:0003
+db dummyf_5784; // 0578:0004
+db dummyf_5785; // 0578:0005
+db dummyf_5786; // 0578:0006
+db dummyf_5787; // 0578:0007
+db dummyf_5788; // 0578:0008
+db dummyf_5789; // 0578:0009
+db dummyf_578a; // 0578:000a
+db dummyf_578b; // 0578:000b
+db dummyf_578c; // 0578:000c
+db dummyf_578d; // 0578:000d
+db dummyf_578e; // 0578:000e
+db unk_13d6f; // 0578:000f
+db dummyf_5790; // 0578:0010
+db dummyf_5791; // 0578:0011
+db unk_13d72; // 0578:0012
+db dummyf_5793; // 0578:0013
+db dummyf_5794;
+db dummyf_5795[3];
+dw dummyf_5798; // 0578:0018
+dw dummyf_579a; // 0578:001a
+db dummyf_579c; // 0578:001c
+db dummyf_579d;
+db dummyf_579e; // 0578:001e
+db dummyf_579f;
+db dummyf_57a0; // 0578:0020
+db dummyf_57a1;
+db dummyf_57a2; // 0578:0022
+db dummyf_57a3;
+db dummyf_57a4; // 0578:0024
+db dummyf_57a5;
+db dummyf_57a6; // 0578:0026
+db dummyf_57a7;
+db dummyf_57a8;
+db dummyf_57a9;
+db dummyf_57aa; // 0578:002a
+db dummyf_57ab;
+db dummyf_57ac; // 0578:002c
+db dummyf_57ad;
+db dummyf_57ae; // 0578:002e
+db dummyf_57af;
+char acopyrightc1988_0[64]; // 0578:0030
+db dummyf_57f0[177];
+db dummyf_58a1; // 057f:00b1
+db dummyf_58a2; // 057f:00b2
+db dummyf_58a3; // 057f:00b3
+db dummyf_58a4; // 057f:00b4
+db dummyf_58a5; // 057f:00b5
+db dummyf_58a6; // 057f:00b6
+db dummyf_58a7; // 057f:00b7
+db dummyf_58a8; // 057f:00b8
+db dummyf_58a9; // 057f:00b9
+db dummyf_58aa; // 057f:00ba
 db dummyf_58ab;
 db dummyf_58ac;
 db dummyf_58ad;
@@ -1510,16 +1354,12 @@ char __amgraphicexe091[21]; // 058b:0000
 db dummyf_58c5;
 db dummyf_58c6;
 db dummyf_58c7;
-db dummyf_58c8; // 058b:0018
-db dummyf_58c9; // 058b:0019
-db dummyf_58ca; // 058b:001a
-db dummyf_58cb; // 058b:001b
+dw dummyf_58c8; // 058b:0018
+dw dummyf_58ca; // 058b:001a
 db dummyf_58cc;
 db dummyf_58cd;
-db dummyf_58ce; // 058b:001e
-db dummyf_58cf; // 058b:001f
-db dummyf_58d0; // 058b:0020
-db dummyf_58d1; // 058b:0021
+dw dummyf_58ce; // 058b:001e
+dw dummyf_58d0; // 058b:0020
 dw dummyf_58d2; // 058b:0022
 dw dummyf_58d4; // 058b:0024
 dw dummyf_58d6; // 058b:0026
@@ -2123,34 +1963,64 @@ db dummyf_627e[32]; // 058b:09ce
 db dummyf_629e[32]; // 058b:09ee
 db dummyf_62be[32]; // 058b:0a0e
 db dummyf_62de[32]; // 058b:0a2e
-db dummyf_62fe[32]; // 058b:0a4e
-db dummyf_631e[32]; // 058b:0a6e
-db dummyf_633e[32]; // 058b:0a8e
-db dummyf_635e[32]; // 058b:0aae
-db dummyf_637e[32]; // 058b:0ace
-db dummyf_639e[32]; // 058b:0aee
-db dummyf_63be[32]; // 058b:0b0e
-db dummyf_63de[32]; // 058b:0b2e
-db dummyf_63fe[32]; // 058b:0b4e
-db dummyf_641e[32]; // 058b:0b6e
-db dummyf_643e[32]; // 058b:0b8e
-db dummyf_645e[32]; // 058b:0bae
-db dummyf_647e[32]; // 058b:0bce
-db dummyf_649e[32]; // 058b:0bee
-db dummyf_64be[32]; // 058b:0c0e
-db dummyf_64de[32]; // 058b:0c2e
-db dummyf_64fe[32]; // 058b:0c4e
-db dummyf_651e[32]; // 058b:0c6e
-db dummyf_653e[32]; // 058b:0c8e
-db dummyf_655e[32]; // 058b:0cae
-db dummyf_657e[32]; // 058b:0cce
-db dummyf_659e[32]; // 058b:0cee
-db dummyf_65be[32]; // 058b:0d0e
-db dummyf_65de[32]; // 058b:0d2e
-db dummyf_65fe[32]; // 058b:0d4e
-db dummyf_661e[32]; // 058b:0d6e
-db dummyf_663e[32]; // 058b:0d8e
-db dummyf_665e[32]; // 058b:0dae
+db dummyf_62fe; // 058b:0a4e
+db dummyf_62ff;
+db dummyf_6300;
+db dummyf_6301;
+db dummyf_6302;
+db dummyf_6303;
+db dummyf_6304;
+db dummyf_6305;
+db dummyf_6306;
+db dummyf_6307;
+db dummyf_6308;
+db dummyf_6309;
+db byte_148ea; // 058b:0a5a
+db dummyf_630b[32]; // 058b:0a5b
+db dummyf_632b[32]; // 058b:0a7b
+db dummyf_634b[32]; // 058b:0a9b
+db dummyf_636b[32]; // 058b:0abb
+db dummyf_638b[32]; // 058b:0adb
+db dummyf_63ab[32]; // 058b:0afb
+db dummyf_63cb[32]; // 058b:0b1b
+db dummyf_63eb[32]; // 058b:0b3b
+db dummyf_640b[32]; // 058b:0b5b
+db dummyf_642b[32]; // 058b:0b7b
+db dummyf_644b[32]; // 058b:0b9b
+db dummyf_646b;
+db dummyf_646c;
+db dummyf_646d;
+db dummyf_646e;
+db dummyf_646f;
+db dummyf_6470;
+db dummyf_6471;
+db dummyf_6472;
+db dummyf_6473; // 058b:0bc3
+dw dummyf_6474; // 058b:0bc4
+db dummyf_6476[32]; // 058b:0bc6
+db dummyf_6496[32]; // 058b:0be6
+db dummyf_64b6[32]; // 058b:0c06
+db dummyf_64d6[32]; // 058b:0c26
+db dummyf_64f6[32]; // 058b:0c46
+db dummyf_6516[32]; // 058b:0c66
+db dummyf_6536[32]; // 058b:0c86
+db dummyf_6556[32]; // 058b:0ca6
+db dummyf_6576[32]; // 058b:0cc6
+db dummyf_6596[32]; // 058b:0ce6
+db dummyf_65b6[32]; // 058b:0d06
+db dummyf_65d6[32]; // 058b:0d26
+db dummyf_65f6[32]; // 058b:0d46
+db dummyf_6616[32]; // 058b:0d66
+db dummyf_6636[32]; // 058b:0d86
+db dummyf_6656[32]; // 058b:0da6
+db dummyf_6676; // 058b:0dc6
+db dummyf_6677; // 058b:0dc7
+db dummyf_6678; // 058b:0dc8
+db dummyf_6679;
+db dummyf_667a; // 058b:0dca
+db dummyf_667b; // 058b:0dcb
+db dummyf_667c; // 058b:0dcc
+db dummyf_667d; // 058b:0dcd
 db dummyf_667e;
 db dummyf_667f; // 058b:0dcf
 db dummyf_6680;
@@ -2359,7 +2229,7 @@ db dummyf_7576; // 058b:1cc6
 db dummyf_7577;
 db byte_15b58[6]; // 058b:1cc8
 char acopyrightc1988[63]; // 058b:1cce
-db dummyf_75bd[1];
+db dummyf_75bd;
 db dummyf_75be[2]; // 075b:000e
 db dummyf_75c0[13]; // 075b:0010
 db dummyf_75cd[12]; // 075b:0010
@@ -2406,12 +2276,10 @@ db dummyf_7753[33];
 db dummyf_7774; // 075b:01c4
 db dummyf_7775[13];
 dw word_15d62; // 075b:01d2
-db _unk_15d64; // 075b:01d4
-db dummyf_7785; // 075b:01d5
+dw _unk_15d64; // 075b:01d4
 dw word_15d66; // 075b:01d6
 dw word_15d68; // 075b:01d8
-db byte_15d6a; // 075b:01da
-db dummyf_778b;
+dw word_15d6a; // 075b:01da
 dw word_15d6c; // 075b:01dc
 dw word_15d6e; // 075b:01de
 db dummyf_7790[73];
@@ -2452,19 +2320,19 @@ db dummyf_800c[122];
 db dummyf_8086; // 075b:0ad6
 db dummyf_8087; // 075b:0ad7
 char af15[3]; // 075b:0ad8
-db dummyf_808b[32]; // 075b:0adb
-db dummyf_80ab[32]; // 075b:0afb
-db dummyf_80cb[32]; // 075b:0b1b
-db dummyf_80eb;
-db dummyf_80ec;
-db dummyf_80ed;
-db dummyf_80ee;
-db dummyf_80ef;
-db dummyf_80f0;
+db dummyf_808b;
+db dummyf_808c;
+db dummyf_808d;
+db dummyf_808e;
+db dummyf_808f;
+db unk_16670; // 0809:0000
+db dummyf_8091[32]; // 0809:0001
+db dummyf_80b1[32]; // 0809:0021
+db dummyf_80d1[32]; // 0809:0041
 db dummyf_80f1;
 db dummyf_80f2;
 db dummyf_80f3;
-db dummyf_80f4; // 075b:0b44
+db dummyf_80f4; // 0809:0064
 db dummyf_80f5;
 db dummyf_80f6;
 db dummyf_80f7;
@@ -2474,701 +2342,788 @@ db dummyf_80fa;
 db dummyf_80fb;
 db dummyf_80fc;
 db dummyf_80fd;
-db dummyf_80fe; // 075b:0b4e
+db dummyf_80fe; // 0809:006e
 db dummyf_80ff;
 db dummyf_8100;
-db unk_166e1; // 075b:0b51
-db dummyf_8102[32]; // 075b:0b52
-db dummyf_8122[32]; // 075b:0b72
-db dummyf_8142[32]; // 075b:0b92
-db dummyf_8162[32]; // 075b:0bb2
-db dummyf_8182[32]; // 075b:0bd2
-db dummyf_81a2[32]; // 075b:0bf2
-db dummyf_81c2[32]; // 075b:0c12
-db dummyf_81e2[32]; // 075b:0c32
-db dummyf_8202[32]; // 075b:0c52
-db dummyf_8222[32]; // 075b:0c72
-db dummyf_8242[32]; // 075b:0c92
-db dummyf_8262[32]; // 075b:0cb2
-db dummyf_8282[32]; // 075b:0cd2
-db dummyf_82a2[32]; // 075b:0cf2
-db dummyf_82c2[32]; // 075b:0d12
-db dummyf_82e2[32]; // 075b:0d32
-db dummyf_8302[32]; // 075b:0d52
-db dummyf_8322[32]; // 075b:0d72
-db dummyf_8342[32]; // 075b:0d92
-db dummyf_8362[32]; // 075b:0db2
-db dummyf_8382[32]; // 075b:0dd2
-db dummyf_83a2[32]; // 075b:0df2
-db dummyf_83c2[32]; // 075b:0e12
-db dummyf_83e2[32]; // 075b:0e32
-db dummyf_8402[32]; // 075b:0e52
-db dummyf_8422[32]; // 075b:0e72
-db dummyf_8442[32]; // 075b:0e92
-db dummyf_8462[32]; // 075b:0eb2
-db dummyf_8482[32]; // 075b:0ed2
-db dummyf_84a2[32]; // 075b:0ef2
-db dummyf_84c2[32]; // 075b:0f12
-db dummyf_84e2[32]; // 075b:0f32
-db dummyf_8502[32]; // 075b:0f52
-db dummyf_8522[32]; // 075b:0f72
-db dummyf_8542[32]; // 075b:0f92
-db dummyf_8562[32]; // 075b:0fb2
-db dummyf_8582[32]; // 075b:0fd2
-db dummyf_85a2[32]; // 075b:0ff2
-db dummyf_85c2[32]; // 075b:1012
-db dummyf_85e2[32]; // 075b:1032
-db dummyf_8602[32]; // 075b:1052
-db dummyf_8622;
-db dummyf_8623;
-db dummyf_8624;
-db dummyf_8625; // 075b:1075
-db dummyf_8626; // 075b:1076
-db dummyf_8627; // 075b:1077
-db dummyf_8628; // 075b:1078
-db dummyf_8629; // 075b:1079
-db dummyf_862a;
-db dummyf_862b[23]; // 075b:107b
-db dummyf_8642[13]; // 075b:107b
-db dummyf_864f[95]; // 075b:107b
-db dummyf_86ae[50]; // 075b:107b
-db dummyf_86e0[20]; // 075b:107b
-db dummyf_86f4[20]; // 075b:107b
-db dummyf_8708[20]; // 075b:107b
-db dummyf_871c[20]; // 075b:107b
-db dummyf_8730[20]; // 075b:107b
-db dummyf_8744[20]; // 075b:107b
-db dummyf_8758[29]; // 075b:107b
-db dummyf_8775[11]; // 075b:107b
-db dummyf_8780[12]; // 075b:107b
-db dummyf_878c[75]; // 075b:107b
-db dummyf_87d7[70]; // 075b:107b
-db dummyf_881d[39]; // 075b:107b
-db dummyf_8844[40]; // 075b:107b
-db dummyf_886c[40]; // 075b:107b
-db dummyf_8894[33]; // 075b:107b
-db dummyf_88b5[14]; // 075b:107b
-db dummyf_88c3[15]; // 075b:107b
-db dummyf_88d2[128]; // 075b:107b
-db dummyf_8952[40]; // 075b:107b
-db dummyf_897a[40]; // 075b:107b
-db dummyf_89a2[40]; // 075b:107b
-db dummyf_89ca[35]; // 075b:107b
-db dummyf_89ed[165]; // 075b:107b
-db dummyf_8a92[20]; // 075b:107b
-db dummyf_8aa6[20]; // 075b:107b
-db dummyf_8aba[20]; // 075b:107b
-db dummyf_8ace[20]; // 075b:107b
-db dummyf_8ae2[20]; // 075b:107b
-db dummyf_8af6[20]; // 075b:107b
-db dummyf_8b0a[23]; // 075b:107b
-db dummyf_8b21[120]; // 075b:107b
-db dummyf_8b99[78]; // 075b:107b
-db dummyf_8be7[40]; // 075b:107b
-db dummyf_8c0f[40]; // 075b:107b
-db dummyf_8c37[42]; // 075b:107b
-db dummyf_8c61[118]; // 075b:107b
-db dummyf_8cd7[60]; // 075b:107b
-db dummyf_8d13[40]; // 075b:107b
-db dummyf_8d3b[40]; // 075b:107b
-db dummyf_8d63[40]; // 075b:107b
-db dummyf_8d8b[35]; // 075b:107b
-db dummyf_8dae[130]; // 075b:107b
-db dummyf_8e30[45]; // 075b:107b
-db dummyf_8e5d[20]; // 075b:107b
-db dummyf_8e71[20]; // 075b:107b
-db dummyf_8e85[20]; // 075b:107b
-db dummyf_8e99[20]; // 075b:107b
-db dummyf_8ead[20]; // 075b:107b
-db dummyf_8ec1[20]; // 075b:107b
-db dummyf_8ed5[98]; // 075b:107b
-db dummyf_8f37[66]; // 075b:107b
-db dummyf_8f79[48]; // 075b:107b
-db dummyf_8fa9[39]; // 075b:107b
-db dummyf_8fd0[40]; // 075b:107b
-db dummyf_8ff8[42]; // 075b:107b
-db dummyf_9022[120]; // 075b:107b
-db dummyf_909a[59]; // 075b:107b
-db dummyf_90d5[39]; // 075b:107b
-db dummyf_90fc[40]; // 075b:107b
-db dummyf_9124[40]; // 075b:107b
-db dummyf_914c[30]; // 075b:107b
-db dummyf_916a[130]; // 075b:107b
-db dummyf_91ec[45]; // 075b:107b
-db dummyf_9219[20]; // 075b:107b
-db dummyf_922d; // 075b:107b
-db dummyf_922e[19]; // 075b:1c7e
-db dummyf_9241[20]; // 075b:1c7e
-db dummyf_9255[20]; // 075b:1c7e
-db dummyf_9269[20]; // 075b:1c7e
-db dummyf_927d[20]; // 075b:1c7e
-db dummyf_9291[25]; // 075b:1c7e
-db dummyf_92aa[142]; // 075b:1c7e
-db dummyf_9338[40]; // 075b:1c7e
-db dummyf_9360[39]; // 075b:1c7e
-db dummyf_9387[40]; // 075b:1c7e
-db dummyf_93af[40]; // 075b:1c7e
-db dummyf_93d7[152]; // 075b:1c7e
-db dummyf_946f[48]; // 075b:1c7e
-db dummyf_949f[40]; // 075b:1c7e
-db dummyf_94c7[40]; // 075b:1c7e
-db dummyf_94ef[40]; // 075b:1c7e
-db dummyf_9517[152]; // 075b:1c7e
-db dummyf_95af[16]; // 075b:1c7e
-db dummyf_95bf[28]; // 075b:1c7e
-db dummyf_95db[19]; // 075b:1c7e
-db dummyf_95ee[20]; // 075b:1c7e
-db dummyf_9602[20]; // 075b:1c7e
-db dummyf_9616[20]; // 075b:1c7e
-db dummyf_962a[20]; // 075b:1c7e
-db dummyf_963e[20]; // 075b:1c7e
-db dummyf_9652[133]; // 075b:1c7e
-db dummyf_96d7[30]; // 075b:1c7e
-db dummyf_96f5[33]; // 075b:1c7e
-db dummyf_9716[40]; // 075b:1c7e
-db dummyf_973e[40]; // 075b:1c7e
-db dummyf_9766[40]; // 075b:1c7e
-db dummyf_978e[140]; // 075b:1c7e
-db dummyf_981a[30]; // 075b:1c7e
-db dummyf_9838[40]; // 075b:1c7e
-db dummyf_9860[40]; // 075b:1c7e
-db dummyf_9888[40]; // 075b:1c7e
-db dummyf_98b0[40]; // 075b:1c7e
-db dummyf_98d8[159]; // 075b:1c7e
-db dummyf_9977[27]; // 075b:1c7e
-db dummyf_9992[19]; // 075b:1c7e
-db dummyf_99a5[20]; // 075b:1c7e
-db dummyf_99b9[20]; // 075b:1c7e
-db dummyf_99cd[20]; // 075b:1c7e
-db dummyf_99e1[20]; // 075b:1c7e
-db dummyf_99f5[20]; // 075b:1c7e
-db dummyf_9a09[100]; // 075b:1c7e
-db dummyf_9a6d[82]; // 075b:1c7e
-db dummyf_9abf[44]; // 075b:1c7e
-db dummyf_9aeb[40]; // 075b:1c7e
-db dummyf_9b13[40]; // 075b:1c7e
-db dummyf_9b3b[46]; // 075b:1c7e
-db dummyf_9b69[136]; // 075b:1c7e
-db dummyf_9bf1[38]; // 075b:1c7e
-db dummyf_9c17[40]; // 075b:1c7e
-db dummyf_9c3f[40]; // 075b:1c7e
-db dummyf_9c67[40]; // 075b:1c7e
-db dummyf_9c8f[111]; // 075b:1c7e
-db byte_182de[62]; // 075b:274e
-db dummyf_9d3c[23]; // 075b:274e
-db dummyf_9d53[19]; // 075b:274e
-db dummyf_9d66[20]; // 075b:274e
-db dummyf_9d7a[20]; // 075b:274e
-db dummyf_9d8e[20]; // 075b:274e
-db dummyf_9da2[20]; // 075b:274e
-db dummyf_9db6[20]; // 075b:274e
-db dummyf_9dca[30]; // 075b:274e
-db dummyf_9de8[115]; // 075b:274e
-db dummyf_9e5b[44]; // 075b:274e
-db dummyf_9e87[47]; // 075b:274e
-db dummyf_9eb6[40]; // 075b:274e
-db dummyf_9ede[40]; // 075b:274e
-db dummyf_9f06[34]; // 075b:274e
-db dummyf_9f28[114]; // 075b:274e
-db dummyf_9f9a[45]; // 075b:274e
-db dummyf_9fc7[38]; // 075b:274e
-db dummyf_9fed[39]; // 075b:274e
-db dummyf_a014[40]; // 075b:274e
-db dummyf_a03c[40]; // 075b:274e
-db dummyf_a064[111]; // 075b:274e
-db dummyf_a0d3[47]; // 075b:274e
-db dummyf_a102[27]; // 075b:274e
-db dummyf_a11d[20]; // 075b:274e
-db dummyf_a131[20]; // 075b:274e
-db dummyf_a145[20]; // 075b:274e
-db dummyf_a159[20]; // 075b:274e
-db dummyf_a16d[20]; // 075b:274e
-db dummyf_a181[20]; // 075b:274e
-db dummyf_a195[23]; // 075b:274e
-db dummyf_a1ac[114]; // 075b:274e
-db dummyf_a21e[60]; // 075b:274e
-db dummyf_a25a[39]; // 075b:274e
-db dummyf_a281[40]; // 075b:274e
-db dummyf_a2a9[40]; // 075b:274e
-db dummyf_a2d1[86]; // 075b:274e
-db dummyf_a327[55]; // 075b:274e
-db dummyf_a35e[60]; // 075b:274e
-db dummyf_a39a[39]; // 075b:274e
-db dummyf_a3c1[40]; // 075b:274e
-db dummyf_a3e9[40]; // 075b:274e
-db dummyf_a411[130]; // 075b:274e
-db dummyf_a493[55]; // 075b:274e
-db dummyf_a4ca[25]; // 075b:274e
-db dummyf_a4e3[20]; // 075b:274e
-db dummyf_a4f7[20]; // 075b:274e
-db dummyf_a50b[20]; // 075b:274e
-db dummyf_a51f[20]; // 075b:274e
-db dummyf_a533[20]; // 075b:274e
-db dummyf_a547[20]; // 075b:274e
-db dummyf_a55b[124]; // 075b:274e
-db dummyf_a5d7[57]; // 075b:274e
-db dummyf_a610[32]; // 075b:274e
-db dummyf_a630[32]; // 075b:274e
-db dummyf_a650[32]; // 075b:274e
-db dummyf_a670[117]; // 075b:274e
-db dummyf_a6e5[102]; // 075b:274e
-db dummyf_a74b[29]; // 075b:274e
-db dummyf_a768[69]; // 075b:274e
-db dummyf_a7ad[29]; // 075b:274e
-db dummyf_a7ca[144]; // 075b:274e
-db dummyf_a85a[69]; // 075b:274e
-db dummyf_a89f[14]; // 075b:274e
-db dummyf_a8ad[16]; // 075b:274e
-db dummyf_a8bd[23]; // 075b:274e
-db dummyf_a8d4[24]; // 075b:274e
-db dummyf_a8ec[16]; // 075b:274e
-db dummyf_a8fc[14]; // 075b:274e
-db dummyf_a90a[142]; // 075b:274e
-db dummyf_a998[62]; // 075b:274e
-db byte_18fb6[15]; // 075b:3426
-db dummyf_a9e5[13]; // 075b:3426
-db dummyf_a9f2[21]; // 075b:3426
-db dummyf_aa07[14]; // 075b:3426
-db dummyf_aa15[16]; // 075b:3426
-db dummyf_aa25[20]; // 075b:3426
-db dummyf_aa39[13]; // 075b:3426
-db dummyf_aa46[142]; // 075b:3426
-db dummyf_aad4[62]; // 075b:3426
-db dummyf_ab12[18]; // 075b:3426
-db dummyf_ab24[14]; // 075b:3426
-db dummyf_ab32[10]; // 075b:3426
-db dummyf_ab3c[14]; // 075b:3426
-db dummyf_ab4a[20]; // 075b:3426
-db dummyf_ab5e[15]; // 075b:3426
-db dummyf_ab6d[10]; // 075b:3426
-db dummyf_ab77[13]; // 075b:3426
-db dummyf_ab84[98]; // 075b:3426
-db dummyf_abe6[110]; // 075b:3426
-db dummyf_ac54[15]; // 075b:3426
-db dummyf_ac63[19]; // 075b:3426
-db dummyf_ac76[15]; // 075b:3426
-db dummyf_ac85[15]; // 075b:3426
-db dummyf_ac94[15]; // 075b:3426
-db dummyf_aca3[11]; // 075b:3426
-db dummyf_acae[20]; // 075b:3426
-db dummyf_acc2[97]; // 075b:3426
-db dummyf_ad23[114]; // 075b:3426
-db dummyf_ad95[22]; // 075b:3426
-db dummyf_adab[18]; // 075b:3426
-db dummyf_adbd[15]; // 075b:3426
-db dummyf_adcc[21]; // 075b:3426
-db dummyf_ade1[14]; // 075b:3426
-db dummyf_adef[20]; // 075b:3426
-db dummyf_ae03[200]; // 075b:3426
-db dummyf_aecb[47]; // 075b:3426
-db dummyf_aefa[26]; // 075b:3426
-db dummyf_af14[26]; // 075b:3426
-db dummyf_af2e[120]; // 075b:3426
-db dummyf_afa6[122]; // 075b:3426
-db dummyf_b020[32]; // 075b:3426
-db dummyf_b040[32]; // 075b:3426
-db dummyf_b060[32]; // 075b:3426
-db dummyf_b080[212]; // 075b:3426
-db dummyf_b154[31]; // 075b:3426
-db dummyf_b173[75]; // 075b:3426
-db dummyf_b1be[151]; // 075b:3426
-db dummyf_b255[38]; // 075b:3426
-db dummyf_b27b[36]; // 075b:3426
-db dummyf_b29f[16]; // 075b:3426
-db dummyf_b2af[24]; // 075b:3426
-db dummyf_b2c7[19]; // 075b:3426
-db dummyf_b2da[26]; // 075b:3426
-db dummyf_b2f4[13]; // 075b:3426
-db dummyf_b301[97]; // 075b:3426
-db dummyf_b362[106]; // 075b:3426
-db dummyf_b3cc[17]; // 075b:3426
-db dummyf_b3dd[16]; // 075b:3426
-db dummyf_b3ed[17]; // 075b:3426
-db dummyf_b3fe[19]; // 075b:3426
-db dummyf_b411[17]; // 075b:3426
-db dummyf_b422[21]; // 075b:3426
-db dummyf_b437[13]; // 075b:3426
-db dummyf_b444[27]; // 075b:3426
-db dummyf_b45f[156]; // 075b:3426
-db dummyf_b4fb[28]; // 075b:3426
-db dummyf_b517[19]; // 075b:3426
-db dummyf_b52a[13]; // 075b:3426
-db dummyf_b537[16]; // 075b:3426
-db dummyf_b547[19]; // 075b:3426
-db dummyf_b55a[19]; // 075b:3426
-db dummyf_b56d[14]; // 075b:3426
-db dummyf_b57b[8]; // 075b:3426
-db dummyf_b583; // 075b:3fd3
-db dummyf_b584; // 075b:3fd4
-db dummyf_b585; // 075b:3fd5
-db dummyf_b586;
-db dummyf_b587;
-db dummyf_b588;
-db dummyf_b589;
-db dummyf_b58a; // 075b:3fda
-db dummyf_b58b; // 075b:3fdb
-db dummyf_b58c; // 075b:3fdc
-db dummyf_b58d; // 075b:3fdd
-db dummyf_b58e; // 075b:3fde
-db dummyf_b58f;
-db dummyf_b590;
-db dummyf_b591;
-db dummyf_b592[25]; // 075b:3fe2
-db dummyf_b5ab[32]; // 075b:3ffb
-db dummyf_b5cb;
-db dummyf_b5cc;
-db dummyf_b5cd;
-db dummyf_b5ce;
-db dummyf_b5cf;
-db dummyf_b5d0;
-db dummyf_b5d1;
-db dummyf_b5d2;
-db dummyf_b5d3;
-db dummyf_b5d4;
-db dummyf_b5d5;
-db dummyf_b5d6;
-db dummyf_b5d7;
-db dummyf_b5d8;
-db dummyf_b5d9;
-db dummyf_b5da;
-db dummyf_b5db;
-db dummyf_b5dc;
-db dummyf_b5dd;
-db dummyf_b5de;
-db dummyf_b5df;
-db dummyf_b5e0;
-db dummyf_b5e1[107]; // 075b:4031
-db dummyf_b64c[5]; // 075b:4031
-db dummyf_b651[32]; // 075b:40a1
-db dummyf_b671[32]; // 075b:40c1
-db dummyf_b691[32]; // 075b:40e1
-db dummyf_b6b1[32]; // 075b:4101
-db dummyf_b6d1;
-db dummyf_b6d2[25]; // 075b:4122
-db dummyf_b6eb[32]; // 075b:413b
-db dummyf_b70b;
-db dummyf_b70c;
-db dummyf_b70d;
-db dummyf_b70e;
-db dummyf_b70f;
-db dummyf_b710;
-db dummyf_b711;
-db dummyf_b712;
-db dummyf_b713;
-db dummyf_b714;
-db dummyf_b715;
-db dummyf_b716;
-db dummyf_b717;
-db dummyf_b718;
-db dummyf_b719;
-db dummyf_b71a;
-db dummyf_b71b;
-db dummyf_b71c;
-db dummyf_b71d;
-db dummyf_b71e;
-db dummyf_b71f;
-db dummyf_b720;
-db dummyf_b721[108]; // 075b:4171
-db dummyf_b78d[4]; // 075b:4171
-db dummyf_b791[32]; // 075b:41e1
-db dummyf_b7b1[32]; // 075b:4201
-db dummyf_b7d1[32]; // 075b:4221
-db dummyf_b7f1[32]; // 075b:4241
-db dummyf_b811;
-db dummyf_b812[3]; // 075b:4262
-db _unk_19df5[22]; // 075b:4265
-db dummyf_b82b[32]; // 075b:427b
-db dummyf_b84b;
-db dummyf_b84c;
-db dummyf_b84d;
-db dummyf_b84e;
-db dummyf_b84f;
-db dummyf_b850;
-db dummyf_b851;
-db dummyf_b852;
-db dummyf_b853;
-db dummyf_b854;
-db dummyf_b855;
-db dummyf_b856;
-db dummyf_b857;
-db dummyf_b858;
-db dummyf_b859;
-db dummyf_b85a;
-db dummyf_b85b;
-db dummyf_b85c;
-db dummyf_b85d;
-db dummyf_b85e;
-db dummyf_b85f;
-db dummyf_b860;
-db dummyf_b861[108]; // 075b:42b1
-db dummyf_b8cd[4]; // 075b:42b1
-db dummyf_b8d1[32]; // 075b:4321
-db dummyf_b8f1[32]; // 075b:4341
-db dummyf_b911[32]; // 075b:4361
-db dummyf_b931[32]; // 075b:4381
-db dummyf_b951;
-db dummyf_b952[25]; // 075b:43a2
-db dummyf_b96b[32]; // 075b:43bb
-db dummyf_b98b;
-db dummyf_b98c;
-db dummyf_b98d;
-db dummyf_b98e;
-db dummyf_b98f;
-db dummyf_b990;
-db dummyf_b991;
-db dummyf_b992;
-db dummyf_b993;
-db dummyf_b994;
-db dummyf_b995;
-db dummyf_b996;
-db dummyf_b997;
-db dummyf_b998;
-db dummyf_b999;
-db dummyf_b99a;
-db dummyf_b99b;
-db dummyf_b99c;
-db dummyf_b99d;
-db dummyf_b99e;
-db dummyf_b99f;
-db dummyf_b9a0;
-db dummyf_b9a1[108]; // 075b:43f1
-db dummyf_ba0d[4]; // 075b:43f1
-db dummyf_ba11[32]; // 075b:4461
-db dummyf_ba31[32]; // 075b:4481
-db dummyf_ba51[32]; // 075b:44a1
-db dummyf_ba71[32]; // 075b:44c1
-db dummyf_ba91;
-db dummyf_ba92[2];
-db dummyf_ba94[23]; // 075b:44e4
-db dummyf_baab[32]; // 075b:44fb
-db dummyf_bacb;
-db dummyf_bacc;
-db dummyf_bacd;
-db dummyf_bace;
-db dummyf_bacf;
-db dummyf_bad0;
-db dummyf_bad1;
-db dummyf_bad2;
-db dummyf_bad3;
-db dummyf_bad4;
-db dummyf_bad5;
-db dummyf_bad6;
-db dummyf_bad7;
-db dummyf_bad8;
-db dummyf_bad9;
-db dummyf_bada;
-db dummyf_badb;
-db dummyf_badc;
-db dummyf_badd;
-db dummyf_bade;
-db dummyf_badf;
-db dummyf_bae0;
-db dummyf_bae1[88]; // 075b:4531
-db dummyf_bb39[27]; // 075b:4531
-db dummyf_bb54[4]; // 075b:4531
-db dummyf_bb58[32]; // 075b:45a8
-db dummyf_bb78;
-db dummyf_bb79;
-db dummyf_bb7a;
-db dummyf_bb7b;
-db dummyf_bb7c; // 075b:45cc
-db dummyf_bb7d;
-db dummyf_bb7e;
-db dummyf_bb7f;
-db dummyf_bb80;
-db dummyf_bb81;
-db dummyf_bb82;
-db dummyf_bb83;
-db dummyf_bb84;
-db dummyf_bb85;
-db dummyf_bb86;
-db dummyf_bb87;
-db dummyf_bb88;
-db dummyf_bb89;
-db dummyf_bb8a;
-db dummyf_bb8b;
-db dummyf_bb8c;
-db dummyf_bb8d;
-db dummyf_bb8e;
-db dummyf_bb8f;
-db dummyf_bb90;
-db dummyf_bb91[7];
-db dummyf_bb98[32]; // 075b:45e8
-db dummyf_bbb8;
-db dummyf_bbb9;
-db dummyf_bbba;
-db dummyf_bbbb;
-db dummyf_bbbc;
-db dummyf_bbbd;
-db dummyf_bbbe; // 075b:460e
-db dummyf_bbbf;
-db dummyf_bbc0;
-db dummyf_bbc1; // 075b:4611
-db dummyf_bbc2; // 075b:4612
-db dummyf_bbc3;
-db dummyf_bbc4;
-db dummyf_bbc5;
-db dummyf_bbc6;
-db dummyf_bbc7;
-db dummyf_bbc8;
-db dummyf_bbc9;
-db dummyf_bbca; // 075b:461a
-db dummyf_bbcb;
-db dummyf_bbcc;
-db dummyf_bbcd;
-db dummyf_bbce;
-db dummyf_bbcf;
-db dummyf_bbd0;
-db dummyf_bbd1;
-db dummyf_bbd2[25]; // 075b:4622
-db dummyf_bbeb[32]; // 075b:463b
-db dummyf_bc0b[32]; // 075b:465b
-db dummyf_bc2b[32]; // 075b:467b
-db dummyf_bc4b[32]; // 075b:469b
-db dummyf_bc6b[32]; // 075b:46bb
-db dummyf_bc8b;
-db dummyf_bc8c;
-db dummyf_bc8d;
-db dummyf_bc8e;
-db dummyf_bc8f;
-db dummyf_bc90;
-db dummyf_bc91[3];
-db dummyf_bc94[4]; // 075b:46e4
-db dummyf_bc98[32]; // 075b:46e8
-db dummyf_bcb8;
-db dummyf_bcb9;
-db dummyf_bcba;
-db dummyf_bcbb; // 075b:470b
-db dummyf_bcbc; // 075b:470c
-db dummyf_bcbd;
-db dummyf_bcbe;
-db dummyf_bcbf;
-db dummyf_bcc0;
-db dummyf_bcc1;
-db dummyf_bcc2;
-db dummyf_bcc3;
-db dummyf_bcc4;
-db dummyf_bcc5;
-db dummyf_bcc6; // 075b:4716
-db dummyf_bcc7;
-db dummyf_bcc8;
-db dummyf_bcc9;
-db dummyf_bcca;
-db dummyf_bccb;
-db dummyf_bccc; // 075b:471c
-db dummyf_bccd; // 075b:471d
-db dummyf_bcce; // 075b:471e
-db dummyf_bccf;
-db dummyf_bcd0;
-db dummyf_bcd1[7]; // 075b:4721
-db dummyf_bcd8[32]; // 075b:4728
-db dummyf_bcf8;
-db dummyf_bcf9; // 075b:4749
-db dummyf_bcfa;
-db dummyf_bcfb;
-db dummyf_bcfc; // 075b:474c
-db dummyf_bcfd; // 075b:474d
-db dummyf_bcfe; // 075b:474e
-db dummyf_bcff;
-db dummyf_bd00;
-db dummyf_bd01; // 075b:4751
-db dummyf_bd02; // 075b:4752
-db dummyf_bd03; // 075b:4753
-db dummyf_bd04; // 075b:4754
-db dummyf_bd05; // 075b:4755
-db dummyf_bd06; // 075b:4756
-db dummyf_bd07;
-db dummyf_bd08;
-db dummyf_bd09;
-db dummyf_bd0a; // 075b:475a
-db dummyf_bd0b; // 075b:475b
-db dummyf_bd0c; // 075b:475c
-db dummyf_bd0d;
-db dummyf_bd0e;
-db dummyf_bd0f;
-db dummyf_bd10;
-db dummyf_bd11;
-db dummyf_bd12[25]; // 075b:4762
-db dummyf_bd2b[32]; // 075b:477b
-db dummyf_bd4b[32]; // 075b:479b
-db dummyf_bd6b[32]; // 075b:47bb
-db dummyf_bd8b[32]; // 075b:47db
-db dummyf_bdab[32]; // 075b:47fb
-db dummyf_bdcb;
-db dummyf_bdcc;
-db dummyf_bdcd;
-db dummyf_bdce;
-db dummyf_bdcf;
-db dummyf_bdd0;
-db dummyf_bdd1[7]; // 075b:4821
-db dummyf_bdd8[32]; // 075b:4828
-db dummyf_bdf8;
-db dummyf_bdf9;
-db dummyf_bdfa;
-db dummyf_bdfb; // 075b:484b
-db dummyf_bdfc; // 075b:484c
-db dummyf_bdfd; // 075b:484d
-db dummyf_bdfe;
-db dummyf_bdff;
-db dummyf_be00;
-db dummyf_be01;
-db dummyf_be02;
-db dummyf_be03; // 075b:4853
-db dummyf_be04; // 075b:4854
-db dummyf_be05; // 075b:4855
-db dummyf_be06; // 075b:4856
-db dummyf_be07;
-db dummyf_be08;
-db dummyf_be09;
-db dummyf_be0a;
-db dummyf_be0b; // 075b:485b
-db dummyf_be0c; // 075b:485c
-db dummyf_be0d; // 075b:485d
-db dummyf_be0e; // 075b:485e
-db dummyf_be0f;
-db dummyf_be10;
-db dummyf_be11[7]; // 075b:4861
-db dummyf_be18[32]; // 075b:4868
-db dummyf_be38;
-db dummyf_be39; // 075b:4889
-db dummyf_be3a; // 075b:488a
-db dummyf_be3b; // 075b:488b
-db dummyf_be3c; // 075b:488c
-db dummyf_be3d; // 075b:488d
-db dummyf_be3e;
-db dummyf_be3f;
-db dummyf_be40;
-db dummyf_be41;
-db dummyf_be42; // 075b:4892
-db dummyf_be43; // 075b:4893
-db dummyf_be44; // 075b:4894
-db dummyf_be45; // 075b:4895
-db dummyf_be46;
-db dummyf_be47;
-db dummyf_be48;
-db dummyf_be49;
-db dummyf_be4a; // 075b:489a
-db dummyf_be4b; // 075b:489b
-db dummyf_be4c; // 075b:489c
-db dummyf_be4d; // 075b:489d
-db dummyf_be4e; // 075b:489e
-db dummyf_be4f;
-db dummyf_be50;
-db dummyf_be51;
-db dummyf_be52[25]; // 075b:48a2
-db dummyf_be6b[32]; // 075b:48bb
-db dummyf_be8b[32]; // 075b:48db
-db dummyf_beab[32]; // 075b:48fb
-db dummyf_becb[32]; // 075b:491b
-db dummyf_beeb;
-db dummyf_beec;
-db dummyf_beed;
-db dummyf_beee;
-db dummyf_beef;
-db dummyf_bef0;
-db dummyf_bef1;
-db dummyf_bef2;
-db dummyf_bef3;
+db unk_166e1; // 0809:0071
+db dummyf_8102[32]; // 0809:0072
+db dummyf_8122[32]; // 0809:0092
+db dummyf_8142[32]; // 0809:00b2
+db dummyf_8162[32]; // 0809:00d2
+db dummyf_8182[32]; // 0809:00f2
+db dummyf_81a2[32]; // 0809:0112
+db dummyf_81c2[32]; // 0809:0132
+db dummyf_81e2[32]; // 0809:0152
+db dummyf_8202[32]; // 0809:0172
+db dummyf_8222[32]; // 0809:0192
+db dummyf_8242[32]; // 0809:01b2
+db dummyf_8262[32]; // 0809:01d2
+db dummyf_8282[32]; // 0809:01f2
+db dummyf_82a2[32]; // 0809:0212
+db dummyf_82c2[32]; // 0809:0232
+db dummyf_82e2[32]; // 0809:0252
+db dummyf_8302[32]; // 0809:0272
+db dummyf_8322[32]; // 0809:0292
+db dummyf_8342[32]; // 0809:02b2
+db dummyf_8362[32]; // 0809:02d2
+db dummyf_8382[32]; // 0809:02f2
+db dummyf_83a2[32]; // 0809:0312
+db dummyf_83c2[32]; // 0809:0332
+db dummyf_83e2[32]; // 0809:0352
+db dummyf_8402[32]; // 0809:0372
+db dummyf_8422[32]; // 0809:0392
+db dummyf_8442[32]; // 0809:03b2
+db dummyf_8462[32]; // 0809:03d2
+db dummyf_8482[32]; // 0809:03f2
+db dummyf_84a2[32]; // 0809:0412
+db dummyf_84c2[32]; // 0809:0432
+db dummyf_84e2[32]; // 0809:0452
+db dummyf_8502[32]; // 0809:0472
+db dummyf_8522[32]; // 0809:0492
+db dummyf_8542[32]; // 0809:04b2
+db dummyf_8562[32]; // 0809:04d2
+db dummyf_8582[32]; // 0809:04f2
+db dummyf_85a2[32]; // 0809:0512
+db dummyf_85c2[32]; // 0809:0532
+db dummyf_85e2[32]; // 0809:0552
+db dummyf_8602[32]; // 0809:0572
+db dummyf_8622[32]; // 0809:0592
+db dummyf_8642[32]; // 0809:05b2
+db dummyf_8662[32]; // 0809:05d2
+db dummyf_8682[32]; // 0809:05f2
+db dummyf_86a2[32]; // 0809:0612
+db dummyf_86c2[32]; // 0809:0632
+db dummyf_86e2[32]; // 0809:0652
+db dummyf_8702[32]; // 0809:0672
+db dummyf_8722[32]; // 0809:0692
+db dummyf_8742[32]; // 0809:06b2
+db dummyf_8762[32]; // 0809:06d2
+db dummyf_8782[32]; // 0809:06f2
+db dummyf_87a2[32]; // 0809:0712
+db dummyf_87c2[32]; // 0809:0732
+db dummyf_87e2[32]; // 0809:0752
+db dummyf_8802[32]; // 0809:0772
+db dummyf_8822[32]; // 0809:0792
+db dummyf_8842[32]; // 0809:07b2
+db dummyf_8862[32]; // 0809:07d2
+db dummyf_8882[32]; // 0809:07f2
+db dummyf_88a2[32]; // 0809:0812
+db dummyf_88c2[32]; // 0809:0832
+db dummyf_88e2[32]; // 0809:0852
+db dummyf_8902[32]; // 0809:0872
+db dummyf_8922[32]; // 0809:0892
+db dummyf_8942[32]; // 0809:08b2
+db dummyf_8962[32]; // 0809:08d2
+db dummyf_8982[32]; // 0809:08f2
+db dummyf_89a2[32]; // 0809:0912
+db dummyf_89c2[32]; // 0809:0932
+db dummyf_89e2[32]; // 0809:0952
+db dummyf_8a02[32]; // 0809:0972
+db dummyf_8a22[32]; // 0809:0992
+db dummyf_8a42[32]; // 0809:09b2
+db dummyf_8a62[32]; // 0809:09d2
+db dummyf_8a82[32]; // 0809:09f2
+db dummyf_8aa2[32]; // 0809:0a12
+db dummyf_8ac2[32]; // 0809:0a32
+db dummyf_8ae2[32]; // 0809:0a52
+db dummyf_8b02[32]; // 0809:0a72
+db dummyf_8b22[32]; // 0809:0a92
+db dummyf_8b42[32]; // 0809:0ab2
+db dummyf_8b62[32]; // 0809:0ad2
+db dummyf_8b82[32]; // 0809:0af2
+db dummyf_8ba2[32]; // 0809:0b12
+db dummyf_8bc2[32]; // 0809:0b32
+db dummyf_8be2[32]; // 0809:0b52
+db dummyf_8c02[32]; // 0809:0b72
+db dummyf_8c22[32]; // 0809:0b92
+db dummyf_8c42[32]; // 0809:0bb2
+db dummyf_8c62[32]; // 0809:0bd2
+db dummyf_8c82[32]; // 0809:0bf2
+db dummyf_8ca2[32]; // 0809:0c12
+db dummyf_8cc2[32]; // 0809:0c32
+db dummyf_8ce2[32]; // 0809:0c52
+db dummyf_8d02[32]; // 0809:0c72
+db dummyf_8d22[32]; // 0809:0c92
+db dummyf_8d42[32]; // 0809:0cb2
+db dummyf_8d62[32]; // 0809:0cd2
+db dummyf_8d82[32]; // 0809:0cf2
+db dummyf_8da2[32]; // 0809:0d12
+db dummyf_8dc2[32]; // 0809:0d32
+db dummyf_8de2[32]; // 0809:0d52
+db dummyf_8e02[32]; // 0809:0d72
+db dummyf_8e22[32]; // 0809:0d92
+db dummyf_8e42[32]; // 0809:0db2
+db dummyf_8e62[32]; // 0809:0dd2
+db dummyf_8e82[32]; // 0809:0df2
+db dummyf_8ea2[32]; // 0809:0e12
+db dummyf_8ec2[32]; // 0809:0e32
+db dummyf_8ee2[32]; // 0809:0e52
+db dummyf_8f02[32]; // 0809:0e72
+db dummyf_8f22[32]; // 0809:0e92
+db dummyf_8f42[32]; // 0809:0eb2
+db dummyf_8f62[32]; // 0809:0ed2
+db dummyf_8f82[32]; // 0809:0ef2
+db dummyf_8fa2[32]; // 0809:0f12
+db dummyf_8fc2[32]; // 0809:0f32
+db dummyf_8fe2[32]; // 0809:0f52
+db dummyf_9002[32]; // 0809:0f72
+db dummyf_9022[32]; // 0809:0f92
+db dummyf_9042[32]; // 0809:0fb2
+db dummyf_9062[32]; // 0809:0fd2
+db dummyf_9082[32]; // 0809:0ff2
+db dummyf_90a2[32]; // 0809:1012
+db dummyf_90c2[32]; // 0809:1032
+db dummyf_90e2[32]; // 0809:1052
+db dummyf_9102[32]; // 0809:1072
+db dummyf_9122[32]; // 0809:1092
+db dummyf_9142[32]; // 0809:10b2
+db dummyf_9162[32]; // 0809:10d2
+db dummyf_9182[32]; // 0809:10f2
+db dummyf_91a2[32]; // 0809:1112
+db dummyf_91c2[32]; // 0809:1132
+db dummyf_91e2[32]; // 0809:1152
+db dummyf_9202[32]; // 0809:1172
+db dummyf_9222[32]; // 0809:1192
+db dummyf_9242[32]; // 0809:11b2
+db dummyf_9262[32]; // 0809:11d2
+db dummyf_9282[32]; // 0809:11f2
+db dummyf_92a2[32]; // 0809:1212
+db dummyf_92c2[32]; // 0809:1232
+db dummyf_92e2[32]; // 0809:1252
+db dummyf_9302[32]; // 0809:1272
+db dummyf_9322[32]; // 0809:1292
+db dummyf_9342[32]; // 0809:12b2
+db dummyf_9362[32]; // 0809:12d2
+db dummyf_9382[32]; // 0809:12f2
+db dummyf_93a2[32]; // 0809:1312
+db dummyf_93c2[32]; // 0809:1332
+db dummyf_93e2[32]; // 0809:1352
+db dummyf_9402[32]; // 0809:1372
+db dummyf_9422[32]; // 0809:1392
+db dummyf_9442[32]; // 0809:13b2
+db dummyf_9462[32]; // 0809:13d2
+db dummyf_9482[32]; // 0809:13f2
+db dummyf_94a2[32]; // 0809:1412
+db dummyf_94c2[32]; // 0809:1432
+db dummyf_94e2[32]; // 0809:1452
+db dummyf_9502[32]; // 0809:1472
+db dummyf_9522[32]; // 0809:1492
+db dummyf_9542[32]; // 0809:14b2
+db dummyf_9562[32]; // 0809:14d2
+db dummyf_9582[32]; // 0809:14f2
+db dummyf_95a2[32]; // 0809:1512
+db dummyf_95c2[32]; // 0809:1532
+db dummyf_95e2[32]; // 0809:1552
+db dummyf_9602[32]; // 0809:1572
+db dummyf_9622[32]; // 0809:1592
+db dummyf_9642[32]; // 0809:15b2
+db dummyf_9662[32]; // 0809:15d2
+db dummyf_9682[32]; // 0809:15f2
+db dummyf_96a2[32]; // 0809:1612
+db dummyf_96c2[32]; // 0809:1632
+db dummyf_96e2[32]; // 0809:1652
+db dummyf_9702[32]; // 0809:1672
+db dummyf_9722[32]; // 0809:1692
+db dummyf_9742[32]; // 0809:16b2
+db dummyf_9762[32]; // 0809:16d2
+db dummyf_9782[32]; // 0809:16f2
+db dummyf_97a2[32]; // 0809:1712
+db dummyf_97c2[32]; // 0809:1732
+db dummyf_97e2[32]; // 0809:1752
+db dummyf_9802[32]; // 0809:1772
+db dummyf_9822[32]; // 0809:1792
+db dummyf_9842[32]; // 0809:17b2
+db dummyf_9862[32]; // 0809:17d2
+db dummyf_9882[32]; // 0809:17f2
+db dummyf_98a2[32]; // 0809:1812
+db dummyf_98c2[32]; // 0809:1832
+db dummyf_98e2[32]; // 0809:1852
+db dummyf_9902[32]; // 0809:1872
+db dummyf_9922[32]; // 0809:1892
+db dummyf_9942[32]; // 0809:18b2
+db dummyf_9962[32]; // 0809:18d2
+db dummyf_9982[32]; // 0809:18f2
+db dummyf_99a2[32]; // 0809:1912
+db dummyf_99c2[32]; // 0809:1932
+db dummyf_99e2[32]; // 0809:1952
+db dummyf_9a02[32]; // 0809:1972
+db dummyf_9a22[32]; // 0809:1992
+db dummyf_9a42[32]; // 0809:19b2
+db dummyf_9a62[32]; // 0809:19d2
+db dummyf_9a82[32]; // 0809:19f2
+db dummyf_9aa2[32]; // 0809:1a12
+db dummyf_9ac2[32]; // 0809:1a32
+db dummyf_9ae2[32]; // 0809:1a52
+db dummyf_9b02[32]; // 0809:1a72
+db dummyf_9b22[32]; // 0809:1a92
+db dummyf_9b42[32]; // 0809:1ab2
+db dummyf_9b62[32]; // 0809:1ad2
+db dummyf_9b82[32]; // 0809:1af2
+db dummyf_9ba2[32]; // 0809:1b12
+db dummyf_9bc2[32]; // 0809:1b32
+db dummyf_9be2[32]; // 0809:1b52
+db dummyf_9c02[32]; // 0809:1b72
+db dummyf_9c22[32]; // 0809:1b92
+db dummyf_9c42[32]; // 0809:1bb2
+db dummyf_9c62[32]; // 0809:1bd2
+db dummyf_9c82[32]; // 0809:1bf2
+db dummyf_9ca2[32]; // 0809:1c12
+db dummyf_9cc2[32]; // 0809:1c32
+db dummyf_9ce2[32]; // 0809:1c52
+db dummyf_9d02[32]; // 0809:1c72
+db dummyf_9d22[32]; // 0809:1c92
+db dummyf_9d42[32]; // 0809:1cb2
+db dummyf_9d62[32]; // 0809:1cd2
+db dummyf_9d82[32]; // 0809:1cf2
+db dummyf_9da2[32]; // 0809:1d12
+db dummyf_9dc2[32]; // 0809:1d32
+db dummyf_9de2[32]; // 0809:1d52
+db dummyf_9e02[32]; // 0809:1d72
+db dummyf_9e22[32]; // 0809:1d92
+db dummyf_9e42[32]; // 0809:1db2
+db dummyf_9e62[32]; // 0809:1dd2
+db dummyf_9e82[32]; // 0809:1df2
+db dummyf_9ea2[32]; // 0809:1e12
+db dummyf_9ec2[32]; // 0809:1e32
+db dummyf_9ee2[32]; // 0809:1e52
+db dummyf_9f02[32]; // 0809:1e72
+db dummyf_9f22[32]; // 0809:1e92
+db dummyf_9f42[32]; // 0809:1eb2
+db dummyf_9f62[32]; // 0809:1ed2
+db dummyf_9f82[32]; // 0809:1ef2
+db dummyf_9fa2[32]; // 0809:1f12
+db dummyf_9fc2[32]; // 0809:1f32
+db dummyf_9fe2[32]; // 0809:1f52
+db dummyf_a002[32]; // 0809:1f72
+db dummyf_a022[32]; // 0809:1f92
+db dummyf_a042[32]; // 0809:1fb2
+db dummyf_a062[32]; // 0809:1fd2
+db dummyf_a082[32]; // 0809:1ff2
+db dummyf_a0a2[32]; // 0809:2012
+db dummyf_a0c2[32]; // 0809:2032
+db dummyf_a0e2[32]; // 0809:2052
+db dummyf_a102[32]; // 0809:2072
+db dummyf_a122[32]; // 0809:2092
+db dummyf_a142[32]; // 0809:20b2
+db dummyf_a162[32]; // 0809:20d2
+db dummyf_a182[32]; // 0809:20f2
+db dummyf_a1a2[32]; // 0809:2112
+db dummyf_a1c2[32]; // 0809:2132
+db dummyf_a1e2[32]; // 0809:2152
+db dummyf_a202[32]; // 0809:2172
+db dummyf_a222[32]; // 0809:2192
+db dummyf_a242[32]; // 0809:21b2
+db dummyf_a262[32]; // 0809:21d2
+db dummyf_a282[32]; // 0809:21f2
+db dummyf_a2a2[32]; // 0809:2212
+db dummyf_a2c2[32]; // 0809:2232
+db dummyf_a2e2[32]; // 0809:2252
+db dummyf_a302[32]; // 0809:2272
+db dummyf_a322[32]; // 0809:2292
+db dummyf_a342[32]; // 0809:22b2
+db dummyf_a362; // 0809:22d2
+db dummyf_a363; // 0809:22d3
+db dummyf_a364; // 0809:22d4
+db dummyf_a365; // 0809:22d5
+db unk_18946; // 0809:22d6
+db dummyf_a367[32]; // 0809:22d7
+db dummyf_a387[32]; // 0809:22f7
+db dummyf_a3a7[32]; // 0809:2317
+db dummyf_a3c7[32]; // 0809:2337
+db dummyf_a3e7[32]; // 0809:2357
+db dummyf_a407[32]; // 0809:2377
+db dummyf_a427[32]; // 0809:2397
+db dummyf_a447[32]; // 0809:23b7
+db dummyf_a467[32]; // 0809:23d7
+db dummyf_a487[32]; // 0809:23f7
+db dummyf_a4a7[32]; // 0809:2417
+db dummyf_a4c7[32]; // 0809:2437
+db dummyf_a4e7[32]; // 0809:2457
+db dummyf_a507[32]; // 0809:2477
+db dummyf_a527[32]; // 0809:2497
+db dummyf_a547[32]; // 0809:24b7
+db dummyf_a567[32]; // 0809:24d7
+db dummyf_a587[32]; // 0809:24f7
+db dummyf_a5a7[32]; // 0809:2517
+db dummyf_a5c7[32]; // 0809:2537
+db dummyf_a5e7[32]; // 0809:2557
+db dummyf_a607[32]; // 0809:2577
+db dummyf_a627[32]; // 0809:2597
+db dummyf_a647[32]; // 0809:25b7
+db dummyf_a667[32]; // 0809:25d7
+db dummyf_a687[32]; // 0809:25f7
+db dummyf_a6a7[32]; // 0809:2617
+db dummyf_a6c7[32]; // 0809:2637
+db dummyf_a6e7[32]; // 0809:2657
+db dummyf_a707[32]; // 0809:2677
+db dummyf_a727[32]; // 0809:2697
+db dummyf_a747[32]; // 0809:26b7
+db dummyf_a767[32]; // 0809:26d7
+db dummyf_a787[32]; // 0809:26f7
+db dummyf_a7a7[32]; // 0809:2717
+db dummyf_a7c7[32]; // 0809:2737
+db dummyf_a7e7[32]; // 0809:2757
+db dummyf_a807[32]; // 0809:2777
+db dummyf_a827[32]; // 0809:2797
+db dummyf_a847[32]; // 0809:27b7
+db dummyf_a867[32]; // 0809:27d7
+db dummyf_a887[32]; // 0809:27f7
+db dummyf_a8a7[32]; // 0809:2817
+db dummyf_a8c7[32]; // 0809:2837
+db dummyf_a8e7[32]; // 0809:2857
+db dummyf_a907[32]; // 0809:2877
+db dummyf_a927[32]; // 0809:2897
+db dummyf_a947[32]; // 0809:28b7
+db dummyf_a967[32]; // 0809:28d7
+db dummyf_a987[32]; // 0809:28f7
+db dummyf_a9a7[32]; // 0809:2917
+db dummyf_a9c7[32]; // 0809:2937
+db dummyf_a9e7;
+db dummyf_a9e8;
+db dummyf_a9e9;
+db dummyf_a9ea;
+db dummyf_a9eb; // 0809:295b
+db dummyf_a9ec; // 0809:295c
+db dummyf_a9ed; // 0809:295d
+db dummyf_a9ee; // 0809:295e
+db dummyf_a9ef; // 0809:295f
+db dummyf_a9f0;
+db dummyf_a9f1;
+db dummyf_a9f2; // 0809:2962
+db dummyf_a9f3; // 0809:2963
+db dummyf_a9f4; // 0809:2964
+db dummyf_a9f5; // 0809:2965
+db dummyf_a9f6;
+db dummyf_a9f7;
+db unk_18fd8; // 0809:2968
+db dummyf_a9f9[32]; // 0809:2969
+db dummyf_aa19[32]; // 0809:2989
+db dummyf_aa39[32]; // 0809:29a9
+db dummyf_aa59[32]; // 0809:29c9
+db dummyf_aa79;
+db dummyf_aa7a;
+db dummyf_aa7b;
+db dummyf_aa7c;
+db dummyf_aa7d;
+db dummyf_aa7e;
+db dummyf_aa7f;
+db dummyf_aa80;
+db dummyf_aa81;
+db dummyf_aa82;
+db dummyf_aa83;
+db dummyf_aa84;
+db dummyf_aa85;
+db dummyf_aa86;
+db dummyf_aa87;
+db dummyf_aa88;
+db dummyf_aa89;
+db dummyf_aa8a;
+db dummyf_aa8b;
+db dummyf_aa8c;
+db dummyf_aa8d;
+dw dummyf_aa8e;
+dw dummyf_aa90;
+db dummyf_aa92;
+db dummyf_aa93;
+dw dummyf_aa94;
+dw dummyf_aa96;
+db dummyf_aa98[32]; // 0809:2a08
+db dummyf_aab8[32]; // 0809:2a28
+db dummyf_aad8[32]; // 0809:2a48
+db dummyf_aaf8[32]; // 0809:2a68
+db dummyf_ab18[32]; // 0809:2a88
+db dummyf_ab38[32]; // 0809:2aa8
+db dummyf_ab58[32]; // 0809:2ac8
+db dummyf_ab78[32]; // 0809:2ae8
+db dummyf_ab98[32]; // 0809:2b08
+db dummyf_abb8[32]; // 0809:2b28
+dw dummyf_abd8;
+dw dummyf_abda;
+dw dummyf_abdc;
+db dummyf_abde;
+db dummyf_abdf;
+dw dummyf_abe0;
+dw dummyf_abe2; // 0809:2b52
+dw dummyf_abe4; // 0809:2b54
+db dummyf_abe6[32]; // 0809:2b56
+db dummyf_ac06[32]; // 0809:2b76
+db dummyf_ac26; // 0809:2b96
+db dummyf_ac27; // 0809:2b97
+db dummyf_ac28; // 0809:2b98
+db dummyf_ac29; // 0809:2b99
+db dummyf_ac2a; // 0809:2b9a
+db dummyf_ac2b; // 0809:2b9b
+db dummyf_ac2c; // 0809:2b9c
+db dummyf_ac2d; // 0809:2b9d
+db dummyf_ac2e; // 0809:2b9e
+db dummyf_ac2f; // 0809:2b9f
+db dummyf_ac30; // 0809:2ba0
+db dummyf_ac31; // 0809:2ba1
+db dummyf_ac32; // 0809:2ba2
+db dummyf_ac33; // 0809:2ba3
+db dummyf_ac34; // 0809:2ba4
+db dummyf_ac35; // 0809:2ba5
+db dummyf_ac36; // 0809:2ba6
+db dummyf_ac37; // 0809:2ba7
+db dummyf_ac38; // 0809:2ba8
+db dummyf_ac39; // 0809:2ba9
+dw dummyf_ac3a; // 0809:2baa
+db dummyf_ac3c; // 0809:2bac
+db dummyf_ac3d; // 0809:2bad
+db dummyf_ac3e; // 0809:2bae
+db dummyf_ac3f; // 0809:2baf
+db dummyf_ac40; // 0809:2bb0
+db dummyf_ac41; // 0809:2bb1
+db dummyf_ac42; // 0809:2bb2
+db dummyf_ac43; // 0809:2bb3
+db dummyf_ac44; // 0809:2bb4
+db dummyf_ac45; // 0809:2bb5
+db dummyf_ac46; // 0809:2bb6
+db dummyf_ac47; // 0809:2bb7
+db dummyf_ac48; // 0809:2bb8
+db dummyf_ac49; // 0809:2bb9
+db dummyf_ac4a; // 0809:2bba
+db dummyf_ac4b; // 0809:2bbb
+db dummyf_ac4c; // 0809:2bbc
+db dummyf_ac4d; // 0809:2bbd
+db dummyf_ac4e;
+db dummyf_ac4f;
+db dummyf_ac50;
+db dummyf_ac51; // 0809:2bc1
+db dummyf_ac52; // 0809:2bc2
+db dummyf_ac53; // 0809:2bc3
+db dummyf_ac54; // 0809:2bc4
+dw dummyf_ac55; // 0809:2bc5
+dw dummyf_ac57; // 0809:2bc7
+db dummyf_ac59;
+db dummyf_ac5a;
+dw dummyf_ac5b; // 0809:2bcb
+db dummyf_ac5d; // 0809:2bcd
+db dummyf_ac5e; // 0809:2bce
+db dummyf_ac5f;
+db dummyf_ac60;
+db dummyf_ac61;
+dw dummyf_ac62; // 0809:2bd2
+db dummyf_ac64; // 0809:2bd4
+db dummyf_ac65; // 0809:2bd5
+db dummyf_ac66; // 0809:2bd6
+db dummyf_ac67;
+db dummyf_ac68;
+db dummyf_ac69;
+db dummyf_ac6a;
+db dummyf_ac6b; // 0809:2bdb
+db dummyf_ac6c; // 0809:2bdc
+db dummyf_ac6d; // 0809:2bdd
+db dummyf_ac6e;
+db dummyf_ac6f;
+db dummyf_ac70;
+db dummyf_ac71;
+db dummyf_ac72; // 0809:2be2
+db dummyf_ac73; // 0809:2be3
+db dummyf_ac74; // 0809:2be4
+db dummyf_ac75; // 0809:2be5
+db dummyf_ac76;
+db dummyf_ac77;
+dw dummyf_ac78;
+dw dummyf_ac7a; // 0809:2bea
+dw dummyf_ac7c; // 0809:2bec
+db dummyf_ac7e; // 0809:2bee
+db dummyf_ac7f; // 0809:2bef
+db dummyf_ac80;
+db dummyf_ac81;
+db dummyf_ac82;
+db dummyf_ac83; // 0809:2bf3
+db dummyf_ac84; // 0809:2bf4
+db dummyf_ac85; // 0809:2bf5
+db dummyf_ac86; // 0809:2bf6
+db dummyf_ac87;
+dd dummyf_ac88; // 0809:2bf8
+dw dummyf_ac8c; // 0809:2bfc
+db dummyf_ac8e; // 0809:2bfe
+db dummyf_ac8f;
+db dummyf_ac90;
+db dummyf_ac91;
+dw dummyf_ac92; // 0809:2c02
+dw dummyf_ac94; // 0809:2c04
+dw dummyf_ac96;
+dw dummyf_ac98;
+db dummyf_ac9a[32]; // 0809:2c0a
+db dummyf_acba[32]; // 0809:2c2a
+db dummyf_acda[32]; // 0809:2c4a
+db dummyf_acfa[32]; // 0809:2c6a
+db dummyf_ad1a[32]; // 0809:2c8a
+db dummyf_ad3a; // 0809:2caa
+db dummyf_ad3b; // 0809:2cab
+db dummyf_ad3c; // 0809:2cac
+db dummyf_ad3d; // 0809:2cad
+db dummyf_ad3e; // 0809:2cae
+db dummyf_ad3f; // 0809:2caf
+db dummyf_ad40; // 0809:2cb0
+db dummyf_ad41; // 0809:2cb1
+db dummyf_ad42; // 0809:2cb2
+db dummyf_ad43; // 0809:2cb3
+db dummyf_ad44; // 0809:2cb4
+db dummyf_ad45; // 0809:2cb5
+db dummyf_ad46; // 0809:2cb6
+db dummyf_ad47; // 0809:2cb7
+db dummyf_ad48; // 0809:2cb8
+db dummyf_ad49; // 0809:2cb9
+db unk_1932a; // 0809:2cba
+db dummyf_ad4b[32]; // 0809:2cbb
+db dummyf_ad6b[32]; // 0809:2cdb
+db dummyf_ad8b[32]; // 0809:2cfb
+db dummyf_adab; // 0809:2d1b
+db dummyf_adac; // 0809:2d1c
+db unk_1938d; // 0809:2d1d
+db dummyf_adae;
+db dummyf_adaf;
+db dummyf_adb0;
+db dummyf_adb1;
+db dummyf_adb2;
+db dummyf_adb3; // 0809:2d23
+db dummyf_adb4; // 0809:2d24
+db dummyf_adb5;
+db dummyf_adb6;
+db dummyf_adb7;
+db dummyf_adb8;
+db dummyf_adb9;
+db dummyf_adba; // 0809:2d2a
+db dummyf_adbb; // 0809:2d2b
+db dummyf_adbc; // 0809:2d2c
+db dummyf_adbd;
+db dummyf_adbe;
+db dummyf_adbf; // 0809:2d2f
+db dummyf_adc0;
+db dummyf_adc1;
+db dummyf_adc2; // 0809:2d32
+db dummyf_adc3; // 0809:2d33
+db dummyf_adc4; // 0809:2d34
+db dummyf_adc5; // 0809:2d35
+dw dummyf_adc6; // 0809:2d36
+dw dummyf_adc8;
+dw dummyf_adca;
+dw dummyf_adcc; // 0809:2d3c
+db dummyf_adce; // 0809:2d3e
+db dummyf_adcf;
+dw dummyf_add0;
+db dummyf_add2;
+db dummyf_add3;
+db dummyf_add4; // 0809:2d44
+db dummyf_add5;
+dw dummyf_add6;
+db dummyf_add8;
+db dummyf_add9;
+dw dummyf_adda; // 0809:2d4a
+dw dummyf_addc; // 0809:2d4c
+db dummyf_adde[32]; // 0809:2d4e
+db dummyf_adfe[32]; // 0809:2d6e
+db dummyf_ae1e[32]; // 0809:2d8e
+db dummyf_ae3e[32]; // 0809:2dae
+db dummyf_ae5e[32]; // 0809:2dce
+db dummyf_ae7e[32]; // 0809:2dee
+db dummyf_ae9e[32]; // 0809:2e0e
+db dummyf_aebe[32]; // 0809:2e2e
+db dummyf_aede;
+db dummyf_aedf;
+db dummyf_aee0;
+db dummyf_aee1;
+db dummyf_aee2;
+db dummyf_aee3;
+db dummyf_aee4;
+db dummyf_aee5;
+db dummyf_aee6;
+db dummyf_aee7;
+db dummyf_aee8;
+db dummyf_aee9;
+db dummyf_aeea;
+db dummyf_aeeb;
+db dummyf_aeec; // 0809:2e5c
+db dummyf_aeed;
+db dummyf_aeee;
+db unk_194cf; // 0809:2e5f
+db dummyf_aef0[32]; // 0809:2e60
+db dummyf_af10[32]; // 0809:2e80
+db dummyf_af30[32]; // 0809:2ea0
+db dummyf_af50;
+db dummyf_af51;
+db dummyf_af52;
+db dummyf_af53;
+db dummyf_af54;
+db dummyf_af55;
+db dummyf_af56;
+db dummyf_af57;
+db dummyf_af58;
+db dummyf_af59;
+dw dummyf_af5a;
+dw dummyf_af5c;
+dw dummyf_af5e;
+db dummyf_af60;
+db dummyf_af61;
+db dummyf_af62;
+db dummyf_af63;
+dw dummyf_af64;
+dw dummyf_af66;
+dw dummyf_af68;
+db dummyf_af6a;
+db dummyf_af6b;
+dw dummyf_af6c;
+db dummyf_af6e[32]; // 0809:2ede
+db dummyf_af8e[32]; // 0809:2efe
+db dummyf_afae[32]; // 0809:2f1e
+db dummyf_afce[32]; // 0809:2f3e
+db dummyf_afee[32]; // 0809:2f5e
+db dummyf_b00e[32]; // 0809:2f7e
+db dummyf_b02e[32]; // 0809:2f9e
+db dummyf_b04e[32]; // 0809:2fbe
+db dummyf_b06e[32]; // 0809:2fde
+db dummyf_b08e[32]; // 0809:2ffe
+db dummyf_b0ae[32]; // 0809:301e
+db dummyf_b0ce[32]; // 0809:303e
+db dummyf_b0ee[32]; // 0809:305e
+db dummyf_b10e[32]; // 0809:307e
+db dummyf_b12e[32]; // 0809:309e
+db dummyf_b14e[32]; // 0809:30be
+db dummyf_b16e[32]; // 0809:30de
+db dummyf_b18e[32]; // 0809:30fe
+db dummyf_b1ae;
+db dummyf_b1af;
+db dummyf_b1b0;
+db dummyf_b1b1;
+db dummyf_b1b2;
+db dummyf_b1b3;
+db dummyf_b1b4;
+db dummyf_b1b5; // 0809:3125
+db dummyf_b1b6;
+db dummyf_b1b7;
+db dummyf_b1b8;
+db dummyf_b1b9;
+db dummyf_b1ba;
+db dummyf_b1bb;
+db dummyf_b1bc;
+db dummyf_b1bd;
+db dummyf_b1be; // 0809:312e
+db dummyf_b1bf;
+db dummyf_b1c0;
+db dummyf_b1c1; // 0809:3131
+db dummyf_b1c2; // 0809:3132
+db dummyf_b1c3;
+db dummyf_b1c4;
+db dummyf_b1c5;
+dw dummyf_b1c6;
+db dummyf_b1c8[32]; // 0809:3138
+db dummyf_b1e8;
+db dummyf_b1e9;
+db dummyf_b1ea;
+db dummyf_b1eb;
+db dummyf_b1ec;
+db dummyf_b1ed;
+db dummyf_b1ee;
+db dummyf_b1ef;
+dd dummyf_b1f0;
+db dummyf_b1f4[32]; // 0809:3164
+db dummyf_b214[32]; // 0809:3184
+db dummyf_b234[32]; // 0809:31a4
+db dummyf_b254[32]; // 0809:31c4
+db dummyf_b274[32]; // 0809:31e4
+db dummyf_b294[32]; // 0809:3204
+db dummyf_b2b4[32]; // 0809:3224
+db dummyf_b2d4[32]; // 0809:3244
+db dummyf_b2f4[32]; // 0809:3264
+db dummyf_b314[32]; // 0809:3284
+db dummyf_b334[32]; // 0809:32a4
+db dummyf_b354[32]; // 0809:32c4
+db dummyf_b374[32]; // 0809:32e4
+db dummyf_b394[32]; // 0809:3304
+db dummyf_b3b4[32]; // 0809:3324
+db dummyf_b3d4[32]; // 0809:3344
+db dummyf_b3f4[32]; // 0809:3364
+db dummyf_b414[32]; // 0809:3384
+db dummyf_b434[32]; // 0809:33a4
+db dummyf_b454[32]; // 0809:33c4
+db dummyf_b474[32]; // 0809:33e4
+db dummyf_b494[32]; // 0809:3404
+db dummyf_b4b4[32]; // 0809:3424
+db dummyf_b4d4[32]; // 0809:3444
+db dummyf_b4f4[32]; // 0809:3464
+db dummyf_b514[32]; // 0809:3484
+db dummyf_b534[32]; // 0809:34a4
+db dummyf_b554[32]; // 0809:34c4
+db dummyf_b574[32]; // 0809:34e4
+db dummyf_b594[32]; // 0809:3504
+db dummyf_b5b4[32]; // 0809:3524
+db dummyf_b5d4[32]; // 0809:3544
+db dummyf_b5f4[32]; // 0809:3564
+db dummyf_b614[32]; // 0809:3584
+db dummyf_b634[32]; // 0809:35a4
+db dummyf_b654[32]; // 0809:35c4
+db dummyf_b674[32]; // 0809:35e4
+db dummyf_b694[32]; // 0809:3604
+db dummyf_b6b4[32]; // 0809:3624
+db dummyf_b6d4[32]; // 0809:3644
+db dummyf_b6f4[32]; // 0809:3664
+db dummyf_b714[32]; // 0809:3684
+db dummyf_b734[32]; // 0809:36a4
+db dummyf_b754[32]; // 0809:36c4
+db dummyf_b774[32]; // 0809:36e4
+db dummyf_b794[32]; // 0809:3704
+db dummyf_b7b4[32]; // 0809:3724
+db dummyf_b7d4[32]; // 0809:3744
+db dummyf_b7f4[32]; // 0809:3764
+db dummyf_b814[32]; // 0809:3784
+db dummyf_b834[32]; // 0809:37a4
+db dummyf_b854[32]; // 0809:37c4
+db dummyf_b874[32]; // 0809:37e4
+db dummyf_b894[32]; // 0809:3804
+db dummyf_b8b4[32]; // 0809:3824
+db dummyf_b8d4[32]; // 0809:3844
+db dummyf_b8f4[32]; // 0809:3864
+db dummyf_b914[32]; // 0809:3884
+db dummyf_b934[32]; // 0809:38a4
+db dummyf_b954[32]; // 0809:38c4
+db dummyf_b974[32]; // 0809:38e4
+db dummyf_b994[32]; // 0809:3904
+db dummyf_b9b4[32]; // 0809:3924
+db dummyf_b9d4[32]; // 0809:3944
+db dummyf_b9f4[32]; // 0809:3964
+db dummyf_ba14[32]; // 0809:3984
+db dummyf_ba34[32]; // 0809:39a4
+db dummyf_ba54[32]; // 0809:39c4
+db dummyf_ba74[32]; // 0809:39e4
+db dummyf_ba94[32]; // 0809:3a04
+db dummyf_bab4[32]; // 0809:3a24
+db dummyf_bad4[32]; // 0809:3a44
+db dummyf_baf4[32]; // 0809:3a64
+db dummyf_bb14[32]; // 0809:3a84
+db dummyf_bb34[32]; // 0809:3aa4
+db dummyf_bb54[32]; // 0809:3ac4
+db dummyf_bb74[32]; // 0809:3ae4
+db dummyf_bb94[32]; // 0809:3b04
+db dummyf_bbb4[32]; // 0809:3b24
+db dummyf_bbd4[32]; // 0809:3b44
+db dummyf_bbf4[32]; // 0809:3b64
+db dummyf_bc14[32]; // 0809:3b84
+db dummyf_bc34[32]; // 0809:3ba4
+db dummyf_bc54[32]; // 0809:3bc4
+db dummyf_bc74[32]; // 0809:3be4
+db dummyf_bc94[32]; // 0809:3c04
+db dummyf_bcb4[32]; // 0809:3c24
+db dummyf_bcd4[32]; // 0809:3c44
+db dummyf_bcf4[32]; // 0809:3c64
+db dummyf_bd14[32]; // 0809:3c84
+db dummyf_bd34[32]; // 0809:3ca4
+db dummyf_bd54[32]; // 0809:3cc4
+db dummyf_bd74[32]; // 0809:3ce4
+db dummyf_bd94[32]; // 0809:3d04
+db dummyf_bdb4[32]; // 0809:3d24
+db dummyf_bdd4[32]; // 0809:3d44
+db dummyf_bdf4[32]; // 0809:3d64
+db dummyf_be14[32]; // 0809:3d84
+db dummyf_be34[32]; // 0809:3da4
+db dummyf_be54[32]; // 0809:3dc4
+db dummyf_be74[32]; // 0809:3de4
+db dummyf_be94[32]; // 0809:3e04
+db dummyf_beb4[32]; // 0809:3e24
+db dummyf_bed4[32]; // 0809:3e44
 db dummyf_bef4;
 db dummyf_bef5;
 db dummyf_bef6;
@@ -3188,209 +3143,35 @@ db dummyf_bf03;
 db dummyf_bf04;
 db dummyf_bf05;
 db dummyf_bf06;
-db byte_1a4e7; // 075b:4957
-db dummyf_bf08;
-db dummyf_bf09;
-db dummyf_bf0a;
-db dummyf_bf0b;
-db dummyf_bf0c;
-db dummyf_bf0d;
-db dummyf_bf0e;
-db dummyf_bf0f;
-db dummyf_bf10;
-db dummyf_bf11[1];
-db dummyf_bf12[6]; // 075b:4962
-db dummyf_bf18[32]; // 075b:4968
-db dummyf_bf38;
-db dummyf_bf39;
-db dummyf_bf3a; // 075b:498a
-db dummyf_bf3b; // 075b:498b
-db dummyf_bf3c; // 075b:498c
-db dummyf_bf3d; // 075b:498d
-db dummyf_bf3e;
-db dummyf_bf3f;
-db dummyf_bf40;
-db dummyf_bf41;
-db dummyf_bf42;
-db dummyf_bf43; // 075b:4993
-db dummyf_bf44; // 075b:4994
-db dummyf_bf45; // 075b:4995
-db dummyf_bf46; // 075b:4996
-db dummyf_bf47;
-db dummyf_bf48;
-db dummyf_bf49;
-db dummyf_bf4a; // 075b:499a
-db dummyf_bf4b; // 075b:499b
-db dummyf_bf4c; // 075b:499c
-db dummyf_bf4d; // 075b:499d
-db dummyf_bf4e; // 075b:499e
-db dummyf_bf4f;
-db dummyf_bf50;
-db dummyf_bf51[1];
-db dummyf_bf52[6]; // 075b:49a2
-db dummyf_bf58[32]; // 075b:49a8
-db dummyf_bf78;
-db dummyf_bf79;
-db dummyf_bf7a;
-db dummyf_bf7b; // 075b:49cb
-db dummyf_bf7c; // 075b:49cc
-db dummyf_bf7d; // 075b:49cd
-db dummyf_bf7e; // 075b:49ce
-db dummyf_bf7f;
-db dummyf_bf80;
-db dummyf_bf81;
-db dummyf_bf82; // 075b:49d2
-db dummyf_bf83; // 075b:49d3
-db dummyf_bf84; // 075b:49d4
-db dummyf_bf85; // 075b:49d5
-db dummyf_bf86;
-db dummyf_bf87;
-db dummyf_bf88;
-db dummyf_bf89;
-db dummyf_bf8a; // 075b:49da
-db dummyf_bf8b; // 075b:49db
-db dummyf_bf8c; // 075b:49dc
-db dummyf_bf8d; // 075b:49dd
-db dummyf_bf8e; // 075b:49de
-db dummyf_bf8f;
-db dummyf_bf90;
-db dummyf_bf91;
-db dummyf_bf92[25]; // 075b:49e2
-db dummyf_bfab[32]; // 075b:49fb
-db dummyf_bfcb[32]; // 075b:4a1b
-db dummyf_bfeb[32]; // 075b:4a3b
-db dummyf_c00b[32]; // 075b:4a5b
-db dummyf_c02b[32]; // 075b:4a7b
-db dummyf_c04b;
-db dummyf_c04c;
-db dummyf_c04d;
-db dummyf_c04e;
-db dummyf_c04f;
-db dummyf_c050;
-db dummyf_c051[7]; // 075b:4aa1
-db dummyf_c058[32]; // 075b:4aa8
-db dummyf_c078;
-db dummyf_c079;
-db dummyf_c07a;
-db dummyf_c07b; // 075b:4acb
-db dummyf_c07c; // 075b:4acc
-db dummyf_c07d; // 075b:4acd
-db dummyf_c07e; // 075b:4ace
-db dummyf_c07f; // 075b:4acf
-db dummyf_c080;
-db dummyf_c081;
-db dummyf_c082;
-db dummyf_c083; // 075b:4ad3
-db dummyf_c084; // 075b:4ad4
-db dummyf_c085; // 075b:4ad5
-db dummyf_c086; // 075b:4ad6
-db dummyf_c087;
-db dummyf_c088;
-db dummyf_c089;
-db dummyf_c08a; // 075b:4ada
-db dummyf_c08b; // 075b:4adb
-db dummyf_c08c; // 075b:4adc
-db dummyf_c08d; // 075b:4add
-db dummyf_c08e; // 075b:4ade
-db dummyf_c08f;
-db dummyf_c090;
-db dummyf_c091[7]; // 075b:4ae1
-db dummyf_c098[32]; // 075b:4ae8
-db dummyf_c0b8;
-db dummyf_c0b9;
-db dummyf_c0ba;
-db dummyf_c0bb; // 075b:4b0b
-db dummyf_c0bc; // 075b:4b0c
-db dummyf_c0bd; // 075b:4b0d
-db dummyf_c0be;
-db dummyf_c0bf;
-db dummyf_c0c0;
-db dummyf_c0c1;
-db dummyf_c0c2; // 075b:4b12
-db dummyf_c0c3; // 075b:4b13
-db dummyf_c0c4; // 075b:4b14
-db dummyf_c0c5; // 075b:4b15
-db dummyf_c0c6;
-db dummyf_c0c7;
-db dummyf_c0c8;
-db dummyf_c0c9;
-db dummyf_c0ca; // 075b:4b1a
-db dummyf_c0cb; // 075b:4b1b
-db dummyf_c0cc; // 075b:4b1c
-db dummyf_c0cd; // 075b:4b1d
-db dummyf_c0ce;
-db dummyf_c0cf;
-db dummyf_c0d0;
-db dummyf_c0d1;
-db dummyf_c0d2[25]; // 075b:4b22
-db dummyf_c0eb[32]; // 075b:4b3b
-db dummyf_c10b[32]; // 075b:4b5b
-db dummyf_c12b[32]; // 075b:4b7b
-db dummyf_c14b[32]; // 075b:4b9b
-db dummyf_c16b[32]; // 075b:4bbb
-db dummyf_c18b;
-db dummyf_c18c;
-db dummyf_c18d;
-db dummyf_c18e;
-db dummyf_c18f;
-db dummyf_c190;
-db dummyf_c191[7]; // 075b:4be1
-db dummyf_c198[32]; // 075b:4be8
-db dummyf_c1b8;
-db dummyf_c1b9;
-db dummyf_c1ba; // 075b:4c0a
-db dummyf_c1bb; // 075b:4c0b
-db dummyf_c1bc; // 075b:4c0c
-db dummyf_c1bd;
-db dummyf_c1be;
-db dummyf_c1bf; // 075b:4c0f
-db dummyf_c1c0;
-db dummyf_c1c1;
-db dummyf_c1c2; // 075b:4c12
-db dummyf_c1c3; // 075b:4c13
-db dummyf_c1c4; // 075b:4c14
-db dummyf_c1c5; // 075b:4c15
-db dummyf_c1c6; // 075b:4c16
-db dummyf_c1c7; // 075b:4c17
-db dummyf_c1c8;
-db dummyf_c1c9;
-db dummyf_c1ca;
-db dummyf_c1cb;
-db dummyf_c1cc; // 075b:4c1c
-db dummyf_c1cd; // 075b:4c1d
-db dummyf_c1ce; // 075b:4c1e
-db dummyf_c1cf;
-db dummyf_c1d0;
-db dummyf_c1d1[3];
-db dummyf_c1d4[4]; // 075b:4c24
-db dummyf_c1d8[32]; // 075b:4c28
-db dummyf_c1f8;
-db dummyf_c1f9;
-db dummyf_c1fa;
-db dummyf_c1fb;
-db dummyf_c1fc; // 075b:4c4c
-db dummyf_c1fd; // 075b:4c4d
-db dummyf_c1fe;
-db dummyf_c1ff;
-db dummyf_c200;
-db dummyf_c201;
-db dummyf_c202; // 075b:4c52
-db dummyf_c203;
-db dummyf_c204;
-db dummyf_c205;
-db dummyf_c206;
-db dummyf_c207;
-db dummyf_c208;
-db dummyf_c209;
-db dummyf_c20a; // 075b:4c5a
-db dummyf_c20b; // 075b:4c5b
-db dummyf_c20c; // 075b:4c5c
-db dummyf_c20d;
-db dummyf_c20e;
-db dummyf_c20f;
-db dummyf_c210;
-db dummyf_c211;
-db dummyf_c212[25]; // 075b:4c62
+db unk_1a4e7; // 0809:3e77
+db dummyf_bf08[32]; // 0809:3e78
+db dummyf_bf28[32]; // 0809:3e98
+db dummyf_bf48[32]; // 0809:3eb8
+db dummyf_bf68[32]; // 0809:3ed8
+db dummyf_bf88[32]; // 0809:3ef8
+db dummyf_bfa8[32]; // 0809:3f18
+db dummyf_bfc8[32]; // 0809:3f38
+db dummyf_bfe8[32]; // 0809:3f58
+db dummyf_c008[32]; // 0809:3f78
+db dummyf_c028[32]; // 0809:3f98
+db dummyf_c048[32]; // 0809:3fb8
+db dummyf_c068[32]; // 0809:3fd8
+db dummyf_c088[32]; // 0809:3ff8
+db dummyf_c0a8[32]; // 0809:4018
+db dummyf_c0c8[32]; // 0809:4038
+db dummyf_c0e8[32]; // 0809:4058
+db dummyf_c108[32]; // 0809:4078
+db dummyf_c128[32]; // 0809:4098
+db dummyf_c148[32]; // 0809:40b8
+db dummyf_c168[32]; // 0809:40d8
+db dummyf_c188[32]; // 0809:40f8
+db dummyf_c1a8[32]; // 0809:4118
+db dummyf_c1c8[32]; // 0809:4138
+db dummyf_c1e8[32]; // 0809:4158
+db dummyf_c208[32]; // 0809:4178
+db dummyf_c228;
+db dummyf_c229;
+db dummyf_c22a;
 db dummyf_c22b;
 db dummyf_c22c;
 db dummyf_c22d;
@@ -3407,183 +3188,83 @@ db dummyf_c237;
 db dummyf_c238;
 db dummyf_c239;
 db dummyf_c23a;
-db byte_1a81b; // 075b:4c8b
-db dummyf_c23c[32]; // 075b:4c8c
-db dummyf_c25c[32]; // 075b:4cac
-db dummyf_c27c[32]; // 075b:4ccc
-db dummyf_c29c[32]; // 075b:4cec
-db dummyf_c2bc;
-db dummyf_c2bd;
-db dummyf_c2be;
-db dummyf_c2bf;
-db dummyf_c2c0;
-db dummyf_c2c1;
-db dummyf_c2c2;
-db dummyf_c2c3;
-db dummyf_c2c4;
-db dummyf_c2c5;
-db dummyf_c2c6;
-db dummyf_c2c7;
-db dummyf_c2c8;
-db dummyf_c2c9;
-db dummyf_c2ca;
-db dummyf_c2cb;
-db dummyf_c2cc;
-db dummyf_c2cd;
-db dummyf_c2ce;
-db dummyf_c2cf;
-db dummyf_c2d0;
-db dummyf_c2d1[7];
-db dummyf_c2d8[32]; // 075b:4d28
-db dummyf_c2f8;
-db dummyf_c2f9;
-db dummyf_c2fa; // 075b:4d4a
-db dummyf_c2fb;
-db dummyf_c2fc;
-db dummyf_c2fd;
-db dummyf_c2fe;
-db dummyf_c2ff;
-db dummyf_c300;
-db dummyf_c301;
-db dummyf_c302;
-db dummyf_c303;
-db dummyf_c304;
-db dummyf_c305;
-db dummyf_c306; // 075b:4d56
-db dummyf_c307; // 075b:4d57
-db dummyf_c308;
-db dummyf_c309;
-db dummyf_c30a;
-db dummyf_c30b;
-db dummyf_c30c;
-db dummyf_c30d;
-db dummyf_c30e; // 075b:4d5e
-db dummyf_c30f;
-db dummyf_c310;
-db dummyf_c311[3];
-db dummyf_c314[4]; // 075b:4d64
-db dummyf_c318[32]; // 075b:4d68
-db dummyf_c338[32]; // 075b:4d88
-db dummyf_c358[32]; // 075b:4da8
-db dummyf_c378[32]; // 075b:4dc8
-db dummyf_c398[32]; // 075b:4de8
-db dummyf_c3b8[32]; // 075b:4e08
-db dummyf_c3d8[32]; // 075b:4e28
-db dummyf_c3f8[32]; // 075b:4e48
-db dummyf_c418[32]; // 075b:4e68
-db dummyf_c438[32]; // 075b:4e88
-db dummyf_c458[32]; // 075b:4ea8
-db dummyf_c478; // 075b:4ec8
-db dummyf_c479;
-db dummyf_c47a;
-db dummyf_c47b;
-db dummyf_c47c;
-db dummyf_c47d;
-db dummyf_c47e;
-db dummyf_c47f;
-db dummyf_c480; // 075b:4ed0
-db dummyf_c481;
-db dummyf_c482;
-db dummyf_c483;
-db dummyf_c484;
-db dummyf_c485;
-db dummyf_c486;
-db dummyf_c487;
-db dummyf_c488; // 075b:4ed8
-db dummyf_c489;
-db dummyf_c48a;
-db dummyf_c48b;
-db dummyf_c48c;
-db dummyf_c48d[3];
-db dummyf_c490[45]; // 075b:4ee0
-db dummyf_c4bd[83]; // 075b:4ee0
-db dummyf_c510[45]; // 075b:4ee0
-db dummyf_c53d[19]; // 075b:4ee0
-db dummyf_c550;
-db dummyf_c551[3];
-db dummyf_c554[4]; // 075b:4fa4
-db dummyf_c558;
-db dummyf_c559[7]; // 075b:4fa9
-db dummyf_c560[32]; // 075b:4fb0
-db dummyf_c580;
-db dummyf_c581[3];
-db dummyf_c584[4]; // 075b:4fd4
-db dummyf_c588[32]; // 075b:4fd8
-db dummyf_c5a8[32]; // 075b:4ff8
-db dummyf_c5c8;
-db dummyf_c5c9; // 075b:5019
-db dummyf_c5ca;
-db dummyf_c5cb;
-db dummyf_c5cc;
-db dummyf_c5cd[45]; // 075b:501d
-db dummyf_c5fa[86]; // 075b:501d
-db dummyf_c650[47]; // 075b:501d
-db dummyf_c67f[17]; // 075b:501d
-db dummyf_c690;
-db dummyf_c691[3];
-db dummyf_c694[4]; // 075b:50e4
-db dummyf_c698;
-db dummyf_c699[7]; // 075b:50e9
-db dummyf_c6a0[32]; // 075b:50f0
-db dummyf_c6c0;
-db dummyf_c6c1[3];
-db dummyf_c6c4[4]; // 075b:5114
-db dummyf_c6c8[32]; // 075b:5118
-db dummyf_c6e8[32]; // 075b:5138
-db dummyf_c708[32]; // 075b:5158
-db dummyf_c728[32]; // 075b:5178
-db dummyf_c748[32]; // 075b:5198
-db dummyf_c768[32]; // 075b:51b8
-db dummyf_c788[32]; // 075b:51d8
-db dummyf_c7a8[32]; // 075b:51f8
-db dummyf_c7c8;
-db dummyf_c7c9;
-db dummyf_c7ca;
-db dummyf_c7cb;
-db dummyf_c7cc;
-db dummyf_c7cd;
-db dummyf_c7ce;
-db dummyf_c7cf;
-db dummyf_c7d0;
-db dummyf_c7d1[7]; // 075b:5221
-db dummyf_c7d8;
-db dummyf_c7d9[3];
-db dummyf_c7dc[4]; // 075b:522c
-db dummyf_c7e0[32]; // 075b:5230
-db dummyf_c800;
-db dummyf_c801[7]; // 075b:5251
-db dummyf_c808[32]; // 075b:5258
-db dummyf_c828[32]; // 075b:5278
-db dummyf_c848[32]; // 075b:5298
-db dummyf_c868[32]; // 075b:52b8
-db dummyf_c888[32]; // 075b:52d8
-db dummyf_c8a8[32]; // 075b:52f8
-db dummyf_c8c8[32]; // 075b:5318
+db unk_1a81b; // 0809:41ab
+db dummyf_c23c[32]; // 0809:41ac
+db dummyf_c25c[32]; // 0809:41cc
+db dummyf_c27c[32]; // 0809:41ec
+db dummyf_c29c[32]; // 0809:420c
+db dummyf_c2bc[32]; // 0809:422c
+db dummyf_c2dc[32]; // 0809:424c
+db dummyf_c2fc[32]; // 0809:426c
+db dummyf_c31c[32]; // 0809:428c
+db dummyf_c33c[32]; // 0809:42ac
+db dummyf_c35c[32]; // 0809:42cc
+db dummyf_c37c[32]; // 0809:42ec
+db dummyf_c39c[32]; // 0809:430c
+db dummyf_c3bc[32]; // 0809:432c
+db dummyf_c3dc[32]; // 0809:434c
+db dummyf_c3fc[32]; // 0809:436c
+db dummyf_c41c[32]; // 0809:438c
+db dummyf_c43c[32]; // 0809:43ac
+db dummyf_c45c[32]; // 0809:43cc
+db dummyf_c47c[32]; // 0809:43ec
+db dummyf_c49c[32]; // 0809:440c
+db dummyf_c4bc[32]; // 0809:442c
+db dummyf_c4dc[32]; // 0809:444c
+db dummyf_c4fc[32]; // 0809:446c
+db dummyf_c51c[32]; // 0809:448c
+db dummyf_c53c[32]; // 0809:44ac
+db dummyf_c55c[32]; // 0809:44cc
+db dummyf_c57c[32]; // 0809:44ec
+db dummyf_c59c[32]; // 0809:450c
+db dummyf_c5bc[32]; // 0809:452c
+db dummyf_c5dc[32]; // 0809:454c
+db dummyf_c5fc[32]; // 0809:456c
+db dummyf_c61c[32]; // 0809:458c
+db dummyf_c63c[32]; // 0809:45ac
+db dummyf_c65c[32]; // 0809:45cc
+db dummyf_c67c[32]; // 0809:45ec
+db dummyf_c69c[32]; // 0809:460c
+db dummyf_c6bc[32]; // 0809:462c
+db dummyf_c6dc[32]; // 0809:464c
+db dummyf_c6fc[32]; // 0809:466c
+db dummyf_c71c[32]; // 0809:468c
+db dummyf_c73c[32]; // 0809:46ac
+db dummyf_c75c[32]; // 0809:46cc
+db dummyf_c77c[32]; // 0809:46ec
+db dummyf_c79c[32]; // 0809:470c
+db dummyf_c7bc[32]; // 0809:472c
+db dummyf_c7dc[32]; // 0809:474c
+db dummyf_c7fc[32]; // 0809:476c
+db dummyf_c81c[32]; // 0809:478c
+db dummyf_c83c[32]; // 0809:47ac
+db dummyf_c85c[32]; // 0809:47cc
+db dummyf_c87c[32]; // 0809:47ec
+db dummyf_c89c[32]; // 0809:480c
+db dummyf_c8bc[32]; // 0809:482c
+db dummyf_c8dc;
+db dummyf_c8dd;
+db dummyf_c8de;
+db dummyf_c8df;
+db dummyf_c8e0;
+db dummyf_c8e1;
+db dummyf_c8e2;
+db dummyf_c8e3;
+db dummyf_c8e4;
+db dummyf_c8e5;
+db dummyf_c8e6;
+db dummyf_c8e7;
 db dummyf_c8e8;
 db dummyf_c8e9;
 db dummyf_c8ea;
 db dummyf_c8eb;
-db byte_1aecc; // 075b:533c
-db dummyf_c8ed[32]; // 075b:533d
-db dummyf_c90d;
-db dummyf_c90e;
-db dummyf_c90f;
-db dummyf_c910;
-db dummyf_c911[1];
-db dummyf_c912[6]; // 075b:5362
-db dummyf_c918;
-db dummyf_c919[3];
-db dummyf_c91c[4]; // 075b:536c
-db dummyf_c920[32]; // 075b:5370
-db dummyf_c940;
-db dummyf_c941[8]; // 075b:5391
-db dummyf_c949[1];
-db dummyf_c94a[32]; // 075b:539a
-db dummyf_c96a; // 075b:53ba
-db dummyf_c96b; // 075b:53bb
-db dummyf_c96c; // 075b:53bc
-db dummyf_c96d; // 075b:53bd
-db dummyf_c96e; // 075b:53be
+db unk_1aecc; // 0809:485c
+db dummyf_c8ed[32]; // 0809:485d
+db dummyf_c90d[32]; // 0809:487d
+db dummyf_c92d[32]; // 0809:489d
+db dummyf_c94d[32]; // 0809:48bd
+db dummyf_c96d; // 0809:48dd
+db dummyf_c96e; // 0809:48de
 db dummyf_c96f;
 db dummyf_c970;
 db dummyf_c971;
@@ -3591,177 +3272,133 @@ db dummyf_c972;
 db dummyf_c973;
 db dummyf_c974;
 db dummyf_c975;
-db byte_1af56; // 075b:53c6
-db dummyf_c977[32]; // 075b:53c7
-db dummyf_c997[32]; // 075b:53e7
-db dummyf_c9b7[32]; // 075b:5407
-db dummyf_c9d7[32]; // 075b:5427
-db dummyf_c9f7[32]; // 075b:5447
-db dummyf_ca17[32]; // 075b:5467
-db dummyf_ca37;
-db dummyf_ca38;
-db dummyf_ca39;
-db dummyf_ca3a;
-db dummyf_ca3b;
-db dummyf_ca3c;
-db dummyf_ca3d;
-db dummyf_ca3e;
-db dummyf_ca3f;
-db dummyf_ca40;
-db dummyf_ca41;
-db dummyf_ca42;
-db dummyf_ca43;
-db dummyf_ca44;
-db dummyf_ca45;
-db dummyf_ca46;
-db dummyf_ca47;
-db dummyf_ca48;
-db dummyf_ca49;
-db dummyf_ca4a;
-db dummyf_ca4b;
-db dummyf_ca4c;
-db dummyf_ca4d;
-db dummyf_ca4e;
-db dummyf_ca4f;
-db dummyf_ca50;
-db dummyf_ca51[7]; // 075b:54a1
+db unk_1af56; // 0809:48e6
+db dummyf_c977[32]; // 0809:48e7
+db dummyf_c997[32]; // 0809:4907
+db dummyf_c9b7[32]; // 0809:4927
+db dummyf_c9d7[32]; // 0809:4947
+db dummyf_c9f7[32]; // 0809:4967
+db dummyf_ca17[32]; // 0809:4987
+db dummyf_ca37[32]; // 0809:49a7
+db dummyf_ca57; // 0809:49c7
 db dummyf_ca58;
-db dummyf_ca59[3];
-db dummyf_ca5c[4]; // 075b:54ac
+db dummyf_ca59;
+db dummyf_ca5a;
+db dummyf_ca5b;
+db dummyf_ca5c; // 0809:49cc
+db dummyf_ca5d; // 0809:49cd
+db dummyf_ca5e; // 0809:49ce
+db dummyf_ca5f; // 0809:49cf
 db dummyf_ca60;
 db dummyf_ca61;
 db dummyf_ca62;
-db dummyf_ca63; // 075b:54b3
-db dummyf_ca64; // 075b:54b4
+db dummyf_ca63; // 0809:49d3
+db dummyf_ca64; // 0809:49d4
 db dummyf_ca65;
 db dummyf_ca66;
 db dummyf_ca67;
 db dummyf_ca68;
 db dummyf_ca69;
-db dummyf_ca6a; // 075b:54ba
+db dummyf_ca6a; // 0809:49da
 db dummyf_ca6b;
 db dummyf_ca6c;
 db dummyf_ca6d;
 db dummyf_ca6e;
 db dummyf_ca6f;
-db byte_1b050; // 075b:54c0
-db dummyf_ca71;
-db dummyf_ca72;
-db dummyf_ca73; // 075b:54c3
-db dummyf_ca74; // 075b:54c4
-db dummyf_ca75; // 075b:54c5
-db dummyf_ca76;
-db dummyf_ca77;
-db dummyf_ca78;
-db dummyf_ca79; // 075b:54c9
-db dummyf_ca7a;
-db dummyf_ca7b;
-db dummyf_ca7c; // 075b:54cc
-db dummyf_ca7d;
-db dummyf_ca7e;
-db dummyf_ca7f; // 075b:54cf
-db dummyf_ca80;
-db dummyf_ca81[7]; // 075b:54d1
-db dummyf_ca88[32]; // 075b:54d8
-db dummyf_caa8[32]; // 075b:54f8
-db byte_1b0a8; // 075b:5518
-db dummyf_cac9[32]; // 075b:5519
-db dummyf_cae9[32]; // 075b:5539
-db dummyf_cb09[32]; // 075b:5559
-db dummyf_cb29[32]; // 075b:5579
-db dummyf_cb49[32]; // 075b:5599
-db dummyf_cb69[32]; // 075b:55b9
-db dummyf_cb89;
-db dummyf_cb8a;
-db dummyf_cb8b;
-db dummyf_cb8c;
-db dummyf_cb8d;
-db dummyf_cb8e;
-db dummyf_cb8f;
-db dummyf_cb90;
-db dummyf_cb91[7]; // 075b:55e1
-db dummyf_cb98;
-db dummyf_cb99[7]; // 075b:55e9
-db dummyf_cba0[32]; // 075b:55f0
-db dummyf_cbc0;
-db dummyf_cbc1[3];
-db dummyf_cbc4[4]; // 075b:5614
-db dummyf_cbc8[32]; // 075b:5618
-db dummyf_cbe8[32]; // 075b:5638
-db dummyf_cc08[32]; // 075b:5658
-db dummyf_cc28[32]; // 075b:5678
-db dummyf_cc48[32]; // 075b:5698
-db dummyf_cc68[32]; // 075b:56b8
-db dummyf_cc88[32]; // 075b:56d8
-db dummyf_cca8[32]; // 075b:56f8
-db dummyf_ccc8;
-db dummyf_ccc9;
-db dummyf_ccca;
-db dummyf_cccb;
-db dummyf_cccc;
-db dummyf_cccd;
-db dummyf_ccce;
-db dummyf_cccf;
-db dummyf_ccd0;
-db dummyf_ccd1[1];
-db dummyf_ccd2[6]; // 075b:5722
-db dummyf_ccd8;
-db dummyf_ccd9[1];
-db dummyf_ccda[6]; // 075b:572a
-db dummyf_cce0[32]; // 075b:5730
-db dummyf_cd00;
-db dummyf_cd01[3];
-db dummyf_cd04[4]; // 075b:5754
-db dummyf_cd08[32]; // 075b:5758
-db dummyf_cd28[32]; // 075b:5778
-db dummyf_cd48[32]; // 075b:5798
-db dummyf_cd68[32]; // 075b:57b8
-db dummyf_cd88[32]; // 075b:57d8
-db dummyf_cda8[32]; // 075b:57f8
-db dummyf_cdc8[32]; // 075b:5818
-db dummyf_cde8[32]; // 075b:5838
-db dummyf_ce08[32]; // 075b:5858
-db dummyf_ce28[32]; // 075b:5878
-db dummyf_ce48[32]; // 075b:5898
-db dummyf_ce68[32]; // 075b:58b8
-db dummyf_ce88[32]; // 075b:58d8
-db dummyf_cea8[32]; // 075b:58f8
-db dummyf_cec8[32]; // 075b:5918
-db dummyf_cee8[32]; // 075b:5938
-db dummyf_cf08[32]; // 075b:5958
-db dummyf_cf28[32]; // 075b:5978
-db dummyf_cf48[32]; // 075b:5998
-db dummyf_cf68[32]; // 075b:59b8
-db dummyf_cf88[32]; // 075b:59d8
-db dummyf_cfa8[32]; // 075b:59f8
-db dummyf_cfc8[32]; // 075b:5a18
-db dummyf_cfe8[32]; // 075b:5a38
-db dummyf_d008[32]; // 075b:5a58
-db dummyf_d028[32]; // 075b:5a78
-db dummyf_d048[32]; // 075b:5a98
-db dummyf_d068[32]; // 075b:5ab8
-db dummyf_d088[32]; // 075b:5ad8
-db dummyf_d0a8[32]; // 075b:5af8
-db dummyf_d0c8[32]; // 075b:5b18
-db dummyf_d0e8[32]; // 075b:5b38
-db dummyf_d108[32]; // 075b:5b58
-db dummyf_d128[32]; // 075b:5b78
-db dummyf_d148[32]; // 075b:5b98
-db dummyf_d168[32]; // 075b:5bb8
-db dummyf_d188[32]; // 075b:5bd8
-db dummyf_d1a8[32]; // 075b:5bf8
-db dummyf_d1c8[32]; // 075b:5c18
-db dummyf_d1e8[32]; // 075b:5c38
-db dummyf_d208[32]; // 075b:5c58
-db dummyf_d228[32]; // 075b:5c78
-db dummyf_d248[32]; // 075b:5c98
-db dummyf_d268[32]; // 075b:5cb8
-db dummyf_d288[32]; // 075b:5cd8
-db dummyf_d2a8[32]; // 075b:5cf8
-db dummyf_d2c8[32]; // 075b:5d18
-db dummyf_d2e8[32]; // 075b:5d38
-db dummyf_d308[32]; // 075b:5d58
-db dummyf_d328;
+db unk_1b050; // 0809:49e0
+db dummyf_ca71[32]; // 0809:49e1
+db dummyf_ca91[32]; // 0809:4a01
+db dummyf_cab1;
+db dummyf_cab2;
+db dummyf_cab3;
+db dummyf_cab4;
+db dummyf_cab5;
+db dummyf_cab6;
+db dummyf_cab7;
+db dummyf_cab8;
+db dummyf_cab9;
+db dummyf_caba;
+db dummyf_cabb;
+db dummyf_cabc;
+db dummyf_cabd;
+db dummyf_cabe;
+db dummyf_cabf;
+db dummyf_cac0;
+db dummyf_cac1; // 0809:4a31
+db dummyf_cac2;
+db dummyf_cac3;
+db dummyf_cac4; // 0809:4a34
+db dummyf_cac5;
+db dummyf_cac6; // 0809:4a36
+db dummyf_cac7;
+db unk_1b0a8; // 0809:4a38
+db dummyf_cac9[32]; // 0809:4a39
+db dummyf_cae9[32]; // 0809:4a59
+db dummyf_cb09[32]; // 0809:4a79
+db dummyf_cb29[32]; // 0809:4a99
+db dummyf_cb49[32]; // 0809:4ab9
+db dummyf_cb69[32]; // 0809:4ad9
+db dummyf_cb89[32]; // 0809:4af9
+db dummyf_cba9[32]; // 0809:4b19
+db dummyf_cbc9[32]; // 0809:4b39
+db dummyf_cbe9[32]; // 0809:4b59
+db dummyf_cc09[32]; // 0809:4b79
+db dummyf_cc29[32]; // 0809:4b99
+db dummyf_cc49[32]; // 0809:4bb9
+db dummyf_cc69[32]; // 0809:4bd9
+db dummyf_cc89[32]; // 0809:4bf9
+db dummyf_cca9[32]; // 0809:4c19
+db dummyf_ccc9[32]; // 0809:4c39
+db dummyf_cce9[32]; // 0809:4c59
+db dummyf_cd09[32]; // 0809:4c79
+db dummyf_cd29[32]; // 0809:4c99
+db dummyf_cd49[32]; // 0809:4cb9
+db dummyf_cd69[32]; // 0809:4cd9
+db dummyf_cd89[32]; // 0809:4cf9
+db dummyf_cda9[32]; // 0809:4d19
+db dummyf_cdc9[32]; // 0809:4d39
+db dummyf_cde9[32]; // 0809:4d59
+db dummyf_ce09[32]; // 0809:4d79
+db dummyf_ce29[32]; // 0809:4d99
+db dummyf_ce49[32]; // 0809:4db9
+db dummyf_ce69[32]; // 0809:4dd9
+db dummyf_ce89[32]; // 0809:4df9
+db dummyf_cea9[32]; // 0809:4e19
+db dummyf_cec9[32]; // 0809:4e39
+db dummyf_cee9[32]; // 0809:4e59
+db dummyf_cf09[32]; // 0809:4e79
+db dummyf_cf29[32]; // 0809:4e99
+db dummyf_cf49[32]; // 0809:4eb9
+db dummyf_cf69[32]; // 0809:4ed9
+db dummyf_cf89[32]; // 0809:4ef9
+db dummyf_cfa9[32]; // 0809:4f19
+db dummyf_cfc9[32]; // 0809:4f39
+db dummyf_cfe9[32]; // 0809:4f59
+db dummyf_d009[32]; // 0809:4f79
+db dummyf_d029[32]; // 0809:4f99
+db dummyf_d049[32]; // 0809:4fb9
+db dummyf_d069[32]; // 0809:4fd9
+db dummyf_d089[32]; // 0809:4ff9
+db dummyf_d0a9[32]; // 0809:5019
+db dummyf_d0c9[32]; // 0809:5039
+db dummyf_d0e9[32]; // 0809:5059
+db dummyf_d109[32]; // 0809:5079
+db dummyf_d129[32]; // 0809:5099
+db dummyf_d149[32]; // 0809:50b9
+db dummyf_d169[32]; // 0809:50d9
+db dummyf_d189[32]; // 0809:50f9
+db dummyf_d1a9[32]; // 0809:5119
+db dummyf_d1c9[32]; // 0809:5139
+db dummyf_d1e9[32]; // 0809:5159
+db dummyf_d209[32]; // 0809:5179
+db dummyf_d229[32]; // 0809:5199
+db dummyf_d249[32]; // 0809:51b9
+db dummyf_d269[32]; // 0809:51d9
+db dummyf_d289[32]; // 0809:51f9
+db dummyf_d2a9[32]; // 0809:5219
+db dummyf_d2c9[32]; // 0809:5239
+db dummyf_d2e9[32]; // 0809:5259
+db dummyf_d309[32]; // 0809:5279
 db dummyf_d329;
 db dummyf_d32a;
 db dummyf_d32b;
@@ -3786,9 +3423,9 @@ db dummyf_d33d;
 db dummyf_d33e;
 db dummyf_d33f;
 db dummyf_d340;
-db byte_1b921; // 075b:5d91
-db dummyf_d342[32]; // 075b:5d92
-db dummyf_d362[32]; // 075b:5db2
+db unk_1b921; // 0809:52b1
+db dummyf_d342[32]; // 0809:52b2
+db dummyf_d362[32]; // 0809:52d2
 db dummyf_d382;
 db dummyf_d383;
 db dummyf_d384;
@@ -3796,296 +3433,1566 @@ db dummyf_d385;
 db dummyf_d386;
 db dummyf_d387;
 db dummyf_d388;
-db byte_1b969; // 075b:5dd9
-db dummyf_d38a[32]; // 075b:5dda
-db dummyf_d3aa[32]; // 075b:5dfa
-db dummyf_d3ca[32]; // 075b:5e1a
-db dummyf_d3ea[32]; // 075b:5e3a
-db dummyf_d40a[32]; // 075b:5e5a
-db dummyf_d42a[32]; // 075b:5e7a
-db dummyf_d44a[32]; // 075b:5e9a
-db dummyf_d46a[32]; // 075b:5eba
-db dummyf_d48a[32]; // 075b:5eda
-db dummyf_d4aa[32]; // 075b:5efa
-db dummyf_d4ca[32]; // 075b:5f1a
-db dummyf_d4ea[32]; // 075b:5f3a
-db dummyf_d50a[32]; // 075b:5f5a
-db dummyf_d52a[32]; // 075b:5f7a
-db dummyf_d54a[32]; // 075b:5f9a
-db dummyf_d56a[32]; // 075b:5fba
-db dummyf_d58a[32]; // 075b:5fda
-db dummyf_d5aa[32]; // 075b:5ffa
-db dummyf_d5ca[32]; // 075b:601a
-db dummyf_d5ea[32]; // 075b:603a
-db dummyf_d60a[32]; // 075b:605a
-db dummyf_d62a[32]; // 075b:607a
-db dummyf_d64a[32]; // 075b:609a
-db dummyf_d66a[32]; // 075b:60ba
-db dummyf_d68a[32]; // 075b:60da
-db dummyf_d6aa[32]; // 075b:60fa
-db dummyf_d6ca[32]; // 075b:611a
-db dummyf_d6ea[32]; // 075b:613a
-db dummyf_d70a[32]; // 075b:615a
-db dummyf_d72a[32]; // 075b:617a
-db dummyf_d74a[32]; // 075b:619a
-db dummyf_d76a[32]; // 075b:61ba
-db dummyf_d78a[32]; // 075b:61da
-db dummyf_d7aa[32]; // 075b:61fa
-db dummyf_d7ca[32]; // 075b:621a
-db dummyf_d7ea[32]; // 075b:623a
-db dummyf_d80a[32]; // 075b:625a
-db dummyf_d82a[32]; // 075b:627a
-db dummyf_d84a[32]; // 075b:629a
-db dummyf_d86a[32]; // 075b:62ba
-db dummyf_d88a[32]; // 075b:62da
-db dummyf_d8aa[32]; // 075b:62fa
-db dummyf_d8ca[32]; // 075b:631a
-db dummyf_d8ea[32]; // 075b:633a
-db dummyf_d90a[32]; // 075b:635a
-db dummyf_d92a[32]; // 075b:637a
-db dummyf_d94a[32]; // 075b:639a
-db dummyf_d96a[32]; // 075b:63ba
-db dummyf_d98a[32]; // 075b:63da
-db dummyf_d9aa[32]; // 075b:63fa
-db dummyf_d9ca[32]; // 075b:641a
-db dummyf_d9ea[32]; // 075b:643a
-db dummyf_da0a[32]; // 075b:645a
-db dummyf_da2a[32]; // 075b:647a
-db dummyf_da4a[32]; // 075b:649a
-db dummyf_da6a[32]; // 075b:64ba
-db dummyf_da8a[32]; // 075b:64da
-db dummyf_daaa[32]; // 075b:64fa
-db dummyf_daca[32]; // 075b:651a
-db dummyf_daea[32]; // 075b:653a
-db dummyf_db0a[32]; // 075b:655a
-db dummyf_db2a[32]; // 075b:657a
-db dummyf_db4a[32]; // 075b:659a
-db dummyf_db6a[32]; // 075b:65ba
-db dummyf_db8a[32]; // 075b:65da
-db dummyf_dbaa[32]; // 075b:65fa
-db dummyf_dbca[32]; // 075b:661a
-db dummyf_dbea[32]; // 075b:663a
-db dummyf_dc0a[32]; // 075b:665a
-db dummyf_dc2a[32]; // 075b:667a
-db dummyf_dc4a[32]; // 075b:669a
-db dummyf_dc6a[32]; // 075b:66ba
-db dummyf_dc8a[32]; // 075b:66da
-db dummyf_dcaa[32]; // 075b:66fa
-db dummyf_dcca[32]; // 075b:671a
-db dummyf_dcea[32]; // 075b:673a
-db dummyf_dd0a[32]; // 075b:675a
-db dummyf_dd2a[32]; // 075b:677a
-db dummyf_dd4a[32]; // 075b:679a
-db dummyf_dd6a[32]; // 075b:67ba
-db dummyf_dd8a[32]; // 075b:67da
-db dummyf_ddaa[32]; // 075b:67fa
-db dummyf_ddca[32]; // 075b:681a
-db dummyf_ddea[32]; // 075b:683a
-db dummyf_de0a[32]; // 075b:685a
-db dummyf_de2a[32]; // 075b:687a
-db dummyf_de4a[32]; // 075b:689a
-db dummyf_de6a[32]; // 075b:68ba
-db dummyf_de8a[32]; // 075b:68da
-db dummyf_deaa[32]; // 075b:68fa
-db dummyf_deca[32]; // 075b:691a
-db dummyf_deea[32]; // 075b:693a
-db dummyf_df0a[32]; // 075b:695a
-db dummyf_df2a[32]; // 075b:697a
-db dummyf_df4a[32]; // 075b:699a
-db dummyf_df6a[32]; // 075b:69ba
-db dummyf_df8a[32]; // 075b:69da
-db dummyf_dfaa[32]; // 075b:69fa
-db dummyf_dfca[32]; // 075b:6a1a
-db dummyf_dfea[32]; // 075b:6a3a
-db dummyf_e00a[32]; // 075b:6a5a
-db dummyf_e02a[32]; // 075b:6a7a
-db dummyf_e04a[32]; // 075b:6a9a
-db dummyf_e06a[32]; // 075b:6aba
-db dummyf_e08a[32]; // 075b:6ada
-db dummyf_e0aa[32]; // 075b:6afa
-db dummyf_e0ca[32]; // 075b:6b1a
-db dummyf_e0ea[32]; // 075b:6b3a
-db dummyf_e10a[32]; // 075b:6b5a
-db dummyf_e12a[32]; // 075b:6b7a
-db dummyf_e14a[32]; // 075b:6b9a
-db dummyf_e16a[32]; // 075b:6bba
-db dummyf_e18a[32]; // 075b:6bda
-db dummyf_e1aa[32]; // 075b:6bfa
-db dummyf_e1ca[32]; // 075b:6c1a
-db dummyf_e1ea[32]; // 075b:6c3a
-db dummyf_e20a[32]; // 075b:6c5a
-db dummyf_e22a[32]; // 075b:6c7a
-db dummyf_e24a[32]; // 075b:6c9a
-db dummyf_e26a[32]; // 075b:6cba
-db dummyf_e28a[32]; // 075b:6cda
-db dummyf_e2aa[32]; // 075b:6cfa
-db dummyf_e2ca[32]; // 075b:6d1a
-db dummyf_e2ea[32]; // 075b:6d3a
-db dummyf_e30a[32]; // 075b:6d5a
-db dummyf_e32a[32]; // 075b:6d7a
-db dummyf_e34a[32]; // 075b:6d9a
-db dummyf_e36a[32]; // 075b:6dba
-db dummyf_e38a[32]; // 075b:6dda
-db dummyf_e3aa[32]; // 075b:6dfa
-db dummyf_e3ca[32]; // 075b:6e1a
-db dummyf_e3ea[32]; // 075b:6e3a
-db dummyf_e40a[32]; // 075b:6e5a
-db dummyf_e42a[32]; // 075b:6e7a
-db dummyf_e44a[32]; // 075b:6e9a
-db dummyf_e46a[32]; // 075b:6eba
-db dummyf_e48a[32]; // 075b:6eda
-db dummyf_e4aa[32]; // 075b:6efa
-db dummyf_e4ca[32]; // 075b:6f1a
-db dummyf_e4ea[32]; // 075b:6f3a
-db dummyf_e50a[32]; // 075b:6f5a
-db dummyf_e52a[32]; // 075b:6f7a
-db dummyf_e54a[32]; // 075b:6f9a
-db dummyf_e56a[32]; // 075b:6fba
-db dummyf_e58a[32]; // 075b:6fda
-db dummyf_e5aa[32]; // 075b:6ffa
-db dummyf_e5ca[32]; // 075b:701a
-db dummyf_e5ea[32]; // 075b:703a
-db dummyf_e60a[32]; // 075b:705a
-db dummyf_e62a[32]; // 075b:707a
-db dummyf_e64a[32]; // 075b:709a
-db dummyf_e66a[32]; // 075b:70ba
-db dummyf_e68a[32]; // 075b:70da
-db dummyf_e6aa[32]; // 075b:70fa
-db dummyf_e6ca[32]; // 075b:711a
-db dummyf_e6ea[32]; // 075b:713a
-db dummyf_e70a[32]; // 075b:715a
-db dummyf_e72a[32]; // 075b:717a
-db dummyf_e74a[32]; // 075b:719a
-db dummyf_e76a[32]; // 075b:71ba
-db dummyf_e78a[32]; // 075b:71da
-db dummyf_e7aa[32]; // 075b:71fa
-db dummyf_e7ca[32]; // 075b:721a
-db dummyf_e7ea[32]; // 075b:723a
-db dummyf_e80a[32]; // 075b:725a
-db dummyf_e82a[32]; // 075b:727a
-db dummyf_e84a[32]; // 075b:729a
-db dummyf_e86a[32]; // 075b:72ba
-db dummyf_e88a[32]; // 075b:72da
-db dummyf_e8aa[32]; // 075b:72fa
-db dummyf_e8ca[32]; // 075b:731a
-db dummyf_e8ea[32]; // 075b:733a
-db dummyf_e90a[32]; // 075b:735a
-db dummyf_e92a[32]; // 075b:737a
-db dummyf_e94a[32]; // 075b:739a
-db dummyf_e96a[32]; // 075b:73ba
-db dummyf_e98a[32]; // 075b:73da
-db dummyf_e9aa[32]; // 075b:73fa
-db dummyf_e9ca[32]; // 075b:741a
-db dummyf_e9ea[32]; // 075b:743a
-db dummyf_ea0a[32]; // 075b:745a
-db dummyf_ea2a[32]; // 075b:747a
-db dummyf_ea4a[32]; // 075b:749a
-db dummyf_ea6a[32]; // 075b:74ba
-db dummyf_ea8a[32]; // 075b:74da
-db dummyf_eaaa[32]; // 075b:74fa
-db dummyf_eaca[32]; // 075b:751a
-db dummyf_eaea[32]; // 075b:753a
-db dummyf_eb0a[32]; // 075b:755a
-db dummyf_eb2a[32]; // 075b:757a
-db dummyf_eb4a[32]; // 075b:759a
-db dummyf_eb6a[32]; // 075b:75ba
-db dummyf_eb8a[32]; // 075b:75da
-db dummyf_ebaa[32]; // 075b:75fa
-db dummyf_ebca[32]; // 075b:761a
-db dummyf_ebea[32]; // 075b:763a
-db dummyf_ec0a[32]; // 075b:765a
-db dummyf_ec2a[32]; // 075b:767a
-db dummyf_ec4a[32]; // 075b:769a
-db dummyf_ec6a[32]; // 075b:76ba
-db dummyf_ec8a[32]; // 075b:76da
-db dummyf_ecaa[32]; // 075b:76fa
-db dummyf_ecca[32]; // 075b:771a
-db dummyf_ecea[32]; // 075b:773a
-db dummyf_ed0a[32]; // 075b:775a
-db dummyf_ed2a[32]; // 075b:777a
-db dummyf_ed4a[32]; // 075b:779a
-db dummyf_ed6a[32]; // 075b:77ba
-db dummyf_ed8a[32]; // 075b:77da
-db dummyf_edaa[32]; // 075b:77fa
-db dummyf_edca[32]; // 075b:781a
-db dummyf_edea[32]; // 075b:783a
-db dummyf_ee0a[32]; // 075b:785a
-db dummyf_ee2a[32]; // 075b:787a
-db dummyf_ee4a[32]; // 075b:789a
-db dummyf_ee6a[32]; // 075b:78ba
-db dummyf_ee8a[32]; // 075b:78da
-db dummyf_eeaa[32]; // 075b:78fa
-db dummyf_eeca[32]; // 075b:791a
-db dummyf_eeea[32]; // 075b:793a
-db dummyf_ef0a[32]; // 075b:795a
-db dummyf_ef2a[32]; // 075b:797a
-db dummyf_ef4a[32]; // 075b:799a
-db dummyf_ef6a[32]; // 075b:79ba
-db dummyf_ef8a[32]; // 075b:79da
-db dummyf_efaa[32]; // 075b:79fa
-db dummyf_efca[32]; // 075b:7a1a
-db dummyf_efea[32]; // 075b:7a3a
-db dummyf_f00a[32]; // 075b:7a5a
-db dummyf_f02a[32]; // 075b:7a7a
-db dummyf_f04a[32]; // 075b:7a9a
-db dummyf_f06a[32]; // 075b:7aba
-db dummyf_f08a[32]; // 075b:7ada
-db dummyf_f0aa[32]; // 075b:7afa
-db dummyf_f0ca[32]; // 075b:7b1a
-db dummyf_f0ea[32]; // 075b:7b3a
-db dummyf_f10a[32]; // 075b:7b5a
-db dummyf_f12a[32]; // 075b:7b7a
-db dummyf_f14a[32]; // 075b:7b9a
-db dummyf_f16a[32]; // 075b:7bba
-db dummyf_f18a[32]; // 075b:7bda
-db dummyf_f1aa[32]; // 075b:7bfa
-db dummyf_f1ca[32]; // 075b:7c1a
-db dummyf_f1ea[32]; // 075b:7c3a
-db dummyf_f20a[32]; // 075b:7c5a
-db dummyf_f22a[32]; // 075b:7c7a
-db dummyf_f24a[32]; // 075b:7c9a
-db dummyf_f26a[32]; // 075b:7cba
-db dummyf_f28a[32]; // 075b:7cda
-db dummyf_f2aa[32]; // 075b:7cfa
-db dummyf_f2ca[32]; // 075b:7d1a
-db dummyf_f2ea[32]; // 075b:7d3a
-db dummyf_f30a[32]; // 075b:7d5a
-db dummyf_f32a;
-db dummyf_f32b;
-db dummyf_f32c;
-db dummyf_f32d;
-db dummyf_f32e;
-db dummyf_f32f;
-db dummyf_f330;
-db dummyf_f331;
-db dummyf_f332;
-db dummyf_f333;
-db dummyf_f334;
-db dummyf_f335;
-db dummyf_f336;
-db dummyf_f337;
-db dummyf_f338;
-db dummyf_f339; // 075b:7d89
-db dummyf_f33a;
-db dummyf_f33b;
-db dummyf_f33c; // 075b:7d8c
-db dummyf_f33d; // 075b:7d8d
-db dummyf_f33e; // 075b:7d8e
-db dummyf_f33f; // 075b:7d8f
-db dummyf_f340;
-db dummyf_f341;
-db dummyf_f342[1358]; // 075b:7d92
-db dummyf_f890[2261]; // 075b:82e0
-db _unk_1e745; // 075b:8bb5
-db dummyf_10166[3097]; // 075b:8bb6
-db _unk_1f35f; // 075b:97cf
-db byte_1f360[26450]; // 075b:97d0
-db dummyf_174d2[1480]; // 075b:ff22
-db dummyf_17a9a[438];
+db unk_1b969; // 0809:52f9
+db dummyf_d38a[32]; // 0809:52fa
+db dummyf_d3aa[32]; // 0809:531a
+db dummyf_d3ca[32]; // 0809:533a
+db dummyf_d3ea[32]; // 0809:535a
+db dummyf_d40a[32]; // 0809:537a
+db dummyf_d42a[32]; // 0809:539a
+db dummyf_d44a[32]; // 0809:53ba
+db dummyf_d46a[32]; // 0809:53da
+db dummyf_d48a[32]; // 0809:53fa
+db dummyf_d4aa[32]; // 0809:541a
+db dummyf_d4ca[32]; // 0809:543a
+db dummyf_d4ea[32]; // 0809:545a
+db dummyf_d50a[32]; // 0809:547a
+db dummyf_d52a[32]; // 0809:549a
+db dummyf_d54a[32]; // 0809:54ba
+db dummyf_d56a[32]; // 0809:54da
+db dummyf_d58a[32]; // 0809:54fa
+db dummyf_d5aa[32]; // 0809:551a
+db dummyf_d5ca[32]; // 0809:553a
+db dummyf_d5ea[32]; // 0809:555a
+db dummyf_d60a[32]; // 0809:557a
+db dummyf_d62a[32]; // 0809:559a
+db dummyf_d64a[32]; // 0809:55ba
+db dummyf_d66a[32]; // 0809:55da
+db dummyf_d68a[32]; // 0809:55fa
+db dummyf_d6aa[32]; // 0809:561a
+db dummyf_d6ca[32]; // 0809:563a
+db dummyf_d6ea[32]; // 0809:565a
+db dummyf_d70a[32]; // 0809:567a
+db dummyf_d72a[32]; // 0809:569a
+db dummyf_d74a[32]; // 0809:56ba
+db dummyf_d76a[32]; // 0809:56da
+db dummyf_d78a[32]; // 0809:56fa
+db dummyf_d7aa[32]; // 0809:571a
+db dummyf_d7ca[32]; // 0809:573a
+db dummyf_d7ea[32]; // 0809:575a
+db dummyf_d80a[32]; // 0809:577a
+db dummyf_d82a[32]; // 0809:579a
+db dummyf_d84a[32]; // 0809:57ba
+db dummyf_d86a[32]; // 0809:57da
+db dummyf_d88a[32]; // 0809:57fa
+db dummyf_d8aa[32]; // 0809:581a
+db dummyf_d8ca[32]; // 0809:583a
+db dummyf_d8ea[32]; // 0809:585a
+db dummyf_d90a[32]; // 0809:587a
+db dummyf_d92a[32]; // 0809:589a
+db dummyf_d94a[32]; // 0809:58ba
+db dummyf_d96a[32]; // 0809:58da
+db dummyf_d98a[32]; // 0809:58fa
+db dummyf_d9aa[32]; // 0809:591a
+db dummyf_d9ca[32]; // 0809:593a
+db dummyf_d9ea[32]; // 0809:595a
+db dummyf_da0a[32]; // 0809:597a
+db dummyf_da2a[32]; // 0809:599a
+db dummyf_da4a[32]; // 0809:59ba
+db dummyf_da6a[32]; // 0809:59da
+db dummyf_da8a[32]; // 0809:59fa
+db dummyf_daaa[32]; // 0809:5a1a
+db dummyf_daca[32]; // 0809:5a3a
+db dummyf_daea[32]; // 0809:5a5a
+db dummyf_db0a[32]; // 0809:5a7a
+db dummyf_db2a[32]; // 0809:5a9a
+db dummyf_db4a[32]; // 0809:5aba
+db dummyf_db6a[32]; // 0809:5ada
+db dummyf_db8a[32]; // 0809:5afa
+db dummyf_dbaa[32]; // 0809:5b1a
+db dummyf_dbca[32]; // 0809:5b3a
+db dummyf_dbea[32]; // 0809:5b5a
+db dummyf_dc0a[32]; // 0809:5b7a
+db dummyf_dc2a[32]; // 0809:5b9a
+db dummyf_dc4a[32]; // 0809:5bba
+db dummyf_dc6a[32]; // 0809:5bda
+db dummyf_dc8a[32]; // 0809:5bfa
+db dummyf_dcaa[32]; // 0809:5c1a
+db dummyf_dcca[32]; // 0809:5c3a
+db dummyf_dcea[32]; // 0809:5c5a
+db dummyf_dd0a[32]; // 0809:5c7a
+db dummyf_dd2a[32]; // 0809:5c9a
+db dummyf_dd4a[32]; // 0809:5cba
+db dummyf_dd6a[32]; // 0809:5cda
+db dummyf_dd8a[32]; // 0809:5cfa
+db dummyf_ddaa[32]; // 0809:5d1a
+db dummyf_ddca[32]; // 0809:5d3a
+db dummyf_ddea[32]; // 0809:5d5a
+db dummyf_de0a[32]; // 0809:5d7a
+db dummyf_de2a[32]; // 0809:5d9a
+db dummyf_de4a[32]; // 0809:5dba
+db dummyf_de6a[32]; // 0809:5dda
+db dummyf_de8a[32]; // 0809:5dfa
+db dummyf_deaa[32]; // 0809:5e1a
+db dummyf_deca[32]; // 0809:5e3a
+db dummyf_deea[32]; // 0809:5e5a
+db dummyf_df0a[32]; // 0809:5e7a
+db dummyf_df2a[32]; // 0809:5e9a
+db dummyf_df4a[32]; // 0809:5eba
+db dummyf_df6a[32]; // 0809:5eda
+db dummyf_df8a[32]; // 0809:5efa
+db dummyf_dfaa[32]; // 0809:5f1a
+db dummyf_dfca[32]; // 0809:5f3a
+db dummyf_dfea[32]; // 0809:5f5a
+db dummyf_e00a[32]; // 0809:5f7a
+db dummyf_e02a[32]; // 0809:5f9a
+db dummyf_e04a[32]; // 0809:5fba
+db dummyf_e06a[32]; // 0809:5fda
+db dummyf_e08a; // 0809:5ffa
+db dummyf_e08b;
+db dummyf_e08c;
+db dummyf_e08d;
+db dummyf_e08e;
+db dummyf_e08f;
+db dummyf_e090;
+db dummyf_e091;
+db dummyf_e092;
+db dummyf_e093;
+db dummyf_e094;
+db dummyf_e095;
+db dummyf_e096;
+db dummyf_e097;
+db dummyf_e098;
+db dummyf_e099;
+db dummyf_e09a;
+db dummyf_e09b;
+dw dummyf_e09c;
+db dummyf_e09e[32]; // 0809:600e
+db dummyf_e0be[32]; // 0809:602e
+db dummyf_e0de[32]; // 0809:604e
+db dummyf_e0fe[32]; // 0809:606e
+db dummyf_e11e[32]; // 0809:608e
+db dummyf_e13e[32]; // 0809:60ae
+db dummyf_e15e[32]; // 0809:60ce
+db dummyf_e17e[32]; // 0809:60ee
+db dummyf_e19e[32]; // 0809:610e
+db dummyf_e1be[32]; // 0809:612e
+db dummyf_e1de[32]; // 0809:614e
+db dummyf_e1fe[32]; // 0809:616e
+db dummyf_e21e[32]; // 0809:618e
+db dummyf_e23e[32]; // 0809:61ae
+db dummyf_e25e[32]; // 0809:61ce
+db dummyf_e27e[32]; // 0809:61ee
+db dummyf_e29e[32]; // 0809:620e
+db dummyf_e2be[32]; // 0809:622e
+db dummyf_e2de[32]; // 0809:624e
+db dummyf_e2fe[32]; // 0809:626e
+db dummyf_e31e[32]; // 0809:628e
+db dummyf_e33e[32]; // 0809:62ae
+db dummyf_e35e[32]; // 0809:62ce
+db dummyf_e37e[32]; // 0809:62ee
+db dummyf_e39e[32]; // 0809:630e
+db dummyf_e3be[32]; // 0809:632e
+db dummyf_e3de[32]; // 0809:634e
+db dummyf_e3fe[32]; // 0809:636e
+db dummyf_e41e[32]; // 0809:638e
+db dummyf_e43e[32]; // 0809:63ae
+db dummyf_e45e[32]; // 0809:63ce
+db dummyf_e47e[32]; // 0809:63ee
+db dummyf_e49e[32]; // 0809:640e
+db dummyf_e4be[32]; // 0809:642e
+db dummyf_e4de[32]; // 0809:644e
+db dummyf_e4fe[32]; // 0809:646e
+db dummyf_e51e[32]; // 0809:648e
+db dummyf_e53e[32]; // 0809:64ae
+db dummyf_e55e[32]; // 0809:64ce
+db dummyf_e57e[32]; // 0809:64ee
+db dummyf_e59e[32]; // 0809:650e
+db dummyf_e5be[32]; // 0809:652e
+db dummyf_e5de[32]; // 0809:654e
+db dummyf_e5fe[32]; // 0809:656e
+db dummyf_e61e[32]; // 0809:658e
+db dummyf_e63e[32]; // 0809:65ae
+db dummyf_e65e[32]; // 0809:65ce
+db dummyf_e67e[32]; // 0809:65ee
+db dummyf_e69e[32]; // 0809:660e
+db dummyf_e6be[32]; // 0809:662e
+db dummyf_e6de[32]; // 0809:664e
+db dummyf_e6fe[32]; // 0809:666e
+db dummyf_e71e[32]; // 0809:668e
+db dummyf_e73e[32]; // 0809:66ae
+db dummyf_e75e[32]; // 0809:66ce
+db dummyf_e77e[32]; // 0809:66ee
+db dummyf_e79e[32]; // 0809:670e
+db dummyf_e7be[32]; // 0809:672e
+db dummyf_e7de[32]; // 0809:674e
+db dummyf_e7fe[32]; // 0809:676e
+db dummyf_e81e[32]; // 0809:678e
+db dummyf_e83e[32]; // 0809:67ae
+db dummyf_e85e[32]; // 0809:67ce
+db dummyf_e87e[32]; // 0809:67ee
+db dummyf_e89e; // 0809:680e
+db dummyf_e89f; // 0809:680f
+db dummyf_e8a0; // 0809:6810
+db dummyf_e8a1;
+db dummyf_e8a2;
+db dummyf_e8a3;
+db dummyf_e8a4;
+db dummyf_e8a5;
+dd dummyf_e8a6;
+db dummyf_e8aa[32]; // 0809:681a
+db dummyf_e8ca[32]; // 0809:683a
+db dummyf_e8ea[32]; // 0809:685a
+db dummyf_e90a[32]; // 0809:687a
+db dummyf_e92a[32]; // 0809:689a
+db dummyf_e94a[32]; // 0809:68ba
+db dummyf_e96a[32]; // 0809:68da
+db dummyf_e98a[32]; // 0809:68fa
+db dummyf_e9aa[32]; // 0809:691a
+db dummyf_e9ca[32]; // 0809:693a
+db dummyf_e9ea[32]; // 0809:695a
+db dummyf_ea0a[32]; // 0809:697a
+db dummyf_ea2a[32]; // 0809:699a
+db dummyf_ea4a[32]; // 0809:69ba
+db dummyf_ea6a[32]; // 0809:69da
+db dummyf_ea8a[32]; // 0809:69fa
+db dummyf_eaaa;
+db dummyf_eaab;
+db dummyf_eaac;
+db dummyf_eaad;
+db dummyf_eaae;
+db dummyf_eaaf;
+db dummyf_eab0;
+db dummyf_eab1;
+db dummyf_eab2;
+db dummyf_eab3;
+dw dummyf_eab4;
+db dummyf_eab6[32]; // 0809:6a26
+db dummyf_ead6[32]; // 0809:6a46
+db dummyf_eaf6[32]; // 0809:6a66
+db dummyf_eb16[32]; // 0809:6a86
+db dummyf_eb36[32]; // 0809:6aa6
+db dummyf_eb56[32]; // 0809:6ac6
+db dummyf_eb76[32]; // 0809:6ae6
+db dummyf_eb96[32]; // 0809:6b06
+db dummyf_ebb6[32]; // 0809:6b26
+db dummyf_ebd6[32]; // 0809:6b46
+db dummyf_ebf6[32]; // 0809:6b66
+db dummyf_ec16[32]; // 0809:6b86
+db dummyf_ec36[32]; // 0809:6ba6
+db dummyf_ec56[32]; // 0809:6bc6
+db dummyf_ec76[32]; // 0809:6be6
+db dummyf_ec96[32]; // 0809:6c06
+db dummyf_ecb6[32]; // 0809:6c26
+db dummyf_ecd6[32]; // 0809:6c46
+db dummyf_ecf6[32]; // 0809:6c66
+db dummyf_ed16[32]; // 0809:6c86
+db dummyf_ed36[32]; // 0809:6ca6
+db dummyf_ed56[32]; // 0809:6cc6
+db dummyf_ed76[32]; // 0809:6ce6
+db dummyf_ed96[32]; // 0809:6d06
+db dummyf_edb6[32]; // 0809:6d26
+db dummyf_edd6[32]; // 0809:6d46
+db dummyf_edf6[32]; // 0809:6d66
+db dummyf_ee16[32]; // 0809:6d86
+db dummyf_ee36[32]; // 0809:6da6
+db dummyf_ee56[32]; // 0809:6dc6
+db dummyf_ee76[32]; // 0809:6de6
+db dummyf_ee96[32]; // 0809:6e06
+db dummyf_eeb6[32]; // 0809:6e26
+db dummyf_eed6[32]; // 0809:6e46
+db dummyf_eef6[32]; // 0809:6e66
+db dummyf_ef16[32]; // 0809:6e86
+db dummyf_ef36[32]; // 0809:6ea6
+db dummyf_ef56[32]; // 0809:6ec6
+db dummyf_ef76[32]; // 0809:6ee6
+db dummyf_ef96[32]; // 0809:6f06
+db dummyf_efb6[32]; // 0809:6f26
+db dummyf_efd6[32]; // 0809:6f46
+db dummyf_eff6[32]; // 0809:6f66
+db dummyf_f016[32]; // 0809:6f86
+db dummyf_f036[32]; // 0809:6fa6
+db dummyf_f056[32]; // 0809:6fc6
+db dummyf_f076[32]; // 0809:6fe6
+db dummyf_f096[32]; // 0809:7006
+db dummyf_f0b6[32]; // 0809:7026
+db dummyf_f0d6[32]; // 0809:7046
+db dummyf_f0f6[32]; // 0809:7066
+db dummyf_f116[32]; // 0809:7086
+db dummyf_f136[32]; // 0809:70a6
+db dummyf_f156[32]; // 0809:70c6
+db dummyf_f176[32]; // 0809:70e6
+db dummyf_f196[32]; // 0809:7106
+db dummyf_f1b6[32]; // 0809:7126
+db dummyf_f1d6[32]; // 0809:7146
+db dummyf_f1f6[32]; // 0809:7166
+db dummyf_f216[32]; // 0809:7186
+db dummyf_f236[32]; // 0809:71a6
+db dummyf_f256[32]; // 0809:71c6
+db dummyf_f276[32]; // 0809:71e6
+db dummyf_f296[32]; // 0809:7206
+db dummyf_f2b6[32]; // 0809:7226
+db dummyf_f2d6[32]; // 0809:7246
+db dummyf_f2f6[32]; // 0809:7266
+db dummyf_f316[32]; // 0809:7286
+db dummyf_f336[32]; // 0809:72a6
+db dummyf_f356[32]; // 0809:72c6
+db dummyf_f376[32]; // 0809:72e6
+db dummyf_f396[32]; // 0809:7306
+db dummyf_f3b6[32]; // 0809:7326
+db dummyf_f3d6[32]; // 0809:7346
+db dummyf_f3f6[32]; // 0809:7366
+db dummyf_f416[32]; // 0809:7386
+db dummyf_f436[32]; // 0809:73a6
+db dummyf_f456[32]; // 0809:73c6
+db dummyf_f476[32]; // 0809:73e6
+db dummyf_f496[32]; // 0809:7406
+db dummyf_f4b6[32]; // 0809:7426
+db dummyf_f4d6[32]; // 0809:7446
+db dummyf_f4f6[32]; // 0809:7466
+db dummyf_f516[32]; // 0809:7486
+db dummyf_f536[32]; // 0809:74a6
+db dummyf_f556[32]; // 0809:74c6
+db dummyf_f576[32]; // 0809:74e6
+db dummyf_f596[32]; // 0809:7506
+db dummyf_f5b6[32]; // 0809:7526
+db dummyf_f5d6[32]; // 0809:7546
+db dummyf_f5f6[32]; // 0809:7566
+db dummyf_f616[32]; // 0809:7586
+db dummyf_f636[32]; // 0809:75a6
+db dummyf_f656[32]; // 0809:75c6
+db dummyf_f676[32]; // 0809:75e6
+db dummyf_f696[32]; // 0809:7606
+db dummyf_f6b6[32]; // 0809:7626
+db dummyf_f6d6[32]; // 0809:7646
+db dummyf_f6f6[32]; // 0809:7666
+db dummyf_f716[32]; // 0809:7686
+db dummyf_f736[32]; // 0809:76a6
+db dummyf_f756[32]; // 0809:76c6
+db dummyf_f776[32]; // 0809:76e6
+db dummyf_f796[32]; // 0809:7706
+db dummyf_f7b6[32]; // 0809:7726
+db dummyf_f7d6[32]; // 0809:7746
+db dummyf_f7f6[32]; // 0809:7766
+db dummyf_f816[32]; // 0809:7786
+db dummyf_f836[32]; // 0809:77a6
+db dummyf_f856[32]; // 0809:77c6
+db dummyf_f876[32]; // 0809:77e6
+db dummyf_f896[32]; // 0809:7806
+db dummyf_f8b6[32]; // 0809:7826
+db dummyf_f8d6[32]; // 0809:7846
+db dummyf_f8f6[32]; // 0809:7866
+db dummyf_f916[32]; // 0809:7886
+db dummyf_f936[32]; // 0809:78a6
+db dummyf_f956[32]; // 0809:78c6
+db dummyf_f976[32]; // 0809:78e6
+db dummyf_f996[32]; // 0809:7906
+db dummyf_f9b6[32]; // 0809:7926
+db dummyf_f9d6[32]; // 0809:7946
+db dummyf_f9f6[32]; // 0809:7966
+db dummyf_fa16[32]; // 0809:7986
+db dummyf_fa36[32]; // 0809:79a6
+db dummyf_fa56[32]; // 0809:79c6
+db dummyf_fa76[32]; // 0809:79e6
+db dummyf_fa96[32]; // 0809:7a06
+db dummyf_fab6[32]; // 0809:7a26
+db dummyf_fad6[32]; // 0809:7a46
+db dummyf_faf6[32]; // 0809:7a66
+db dummyf_fb16[32]; // 0809:7a86
+db dummyf_fb36[32]; // 0809:7aa6
+db dummyf_fb56[32]; // 0809:7ac6
+db dummyf_fb76[32]; // 0809:7ae6
+db dummyf_fb96[32]; // 0809:7b06
+db dummyf_fbb6[32]; // 0809:7b26
+db dummyf_fbd6[32]; // 0809:7b46
+db dummyf_fbf6[32]; // 0809:7b66
+db dummyf_fc16[32]; // 0809:7b86
+db dummyf_fc36[32]; // 0809:7ba6
+db dummyf_fc56[32]; // 0809:7bc6
+db dummyf_fc76[32]; // 0809:7be6
+db dummyf_fc96[32]; // 0809:7c06
+db dummyf_fcb6[32]; // 0809:7c26
+db dummyf_fcd6[32]; // 0809:7c46
+db dummyf_fcf6[32]; // 0809:7c66
+db dummyf_fd16[32]; // 0809:7c86
+db dummyf_fd36[32]; // 0809:7ca6
+db dummyf_fd56[32]; // 0809:7cc6
+db dummyf_fd76[32]; // 0809:7ce6
+db dummyf_fd96[32]; // 0809:7d06
+db dummyf_fdb6[32]; // 0809:7d26
+db dummyf_fdd6[32]; // 0809:7d46
+db dummyf_fdf6[32]; // 0809:7d66
+db dummyf_fe16[32]; // 0809:7d86
+db dummyf_fe36[32]; // 0809:7da6
+db dummyf_fe56[32]; // 0809:7dc6
+db dummyf_fe76[32]; // 0809:7de6
+db dummyf_fe96[32]; // 0809:7e06
+db dummyf_feb6[32]; // 0809:7e26
+db dummyf_fed6[32]; // 0809:7e46
+db dummyf_fef6[32]; // 0809:7e66
+db dummyf_ff16[32]; // 0809:7e86
+db dummyf_ff36[32]; // 0809:7ea6
+db dummyf_ff56[32]; // 0809:7ec6
+db dummyf_ff76[32]; // 0809:7ee6
+db dummyf_ff96[32]; // 0809:7f06
+db dummyf_ffb6[32]; // 0809:7f26
+db dummyf_ffd6[32]; // 0809:7f46
+db dummyf_fff6[32]; // 0809:7f66
+db dummyf_10016[32]; // 0809:7f86
+db dummyf_10036[32]; // 0809:7fa6
+db dummyf_10056[32]; // 0809:7fc6
+db dummyf_10076[32]; // 0809:7fe6
+db dummyf_10096[32]; // 0809:8006
+db dummyf_100b6[32]; // 0809:8026
+db dummyf_100d6[32]; // 0809:8046
+db dummyf_100f6[32]; // 0809:8066
+db dummyf_10116[32]; // 0809:8086
+db dummyf_10136[32]; // 0809:80a6
+db dummyf_10156;
+db dummyf_10157;
+db dummyf_10158;
+db dummyf_10159;
+db dummyf_1015a;
+db dummyf_1015b;
+db dummyf_1015c;
+db dummyf_1015d;
+db dummyf_1015e;
+db dummyf_1015f;
+db dummyf_10160;
+db dummyf_10161;
+db dummyf_10162;
+db dummyf_10163;
+db dummyf_10164;
+db unk_1e745; // 0809:80d5
+db dummyf_10166[32]; // 0809:80d6
+db dummyf_10186[32]; // 0809:80f6
+db dummyf_101a6[32]; // 0809:8116
+db dummyf_101c6[32]; // 0809:8136
+db dummyf_101e6[32]; // 0809:8156
+db dummyf_10206[32]; // 0809:8176
+db dummyf_10226[32]; // 0809:8196
+db dummyf_10246[32]; // 0809:81b6
+db dummyf_10266[32]; // 0809:81d6
+db dummyf_10286[32]; // 0809:81f6
+db dummyf_102a6[32]; // 0809:8216
+db dummyf_102c6[32]; // 0809:8236
+db dummyf_102e6[32]; // 0809:8256
+db dummyf_10306[32]; // 0809:8276
+db dummyf_10326[32]; // 0809:8296
+db dummyf_10346[32]; // 0809:82b6
+db dummyf_10366[32]; // 0809:82d6
+db dummyf_10386[32]; // 0809:82f6
+db dummyf_103a6[32]; // 0809:8316
+db dummyf_103c6[32]; // 0809:8336
+db dummyf_103e6[32]; // 0809:8356
+db dummyf_10406[32]; // 0809:8376
+db dummyf_10426[32]; // 0809:8396
+db dummyf_10446[32]; // 0809:83b6
+db dummyf_10466[32]; // 0809:83d6
+db dummyf_10486[32]; // 0809:83f6
+db dummyf_104a6[32]; // 0809:8416
+db dummyf_104c6[32]; // 0809:8436
+db dummyf_104e6[32]; // 0809:8456
+db dummyf_10506[32]; // 0809:8476
+db dummyf_10526[32]; // 0809:8496
+db dummyf_10546[32]; // 0809:84b6
+db dummyf_10566[32]; // 0809:84d6
+db dummyf_10586[32]; // 0809:84f6
+db dummyf_105a6[32]; // 0809:8516
+db dummyf_105c6[32]; // 0809:8536
+db dummyf_105e6[32]; // 0809:8556
+db dummyf_10606[32]; // 0809:8576
+db dummyf_10626[32]; // 0809:8596
+db dummyf_10646[32]; // 0809:85b6
+db dummyf_10666[32]; // 0809:85d6
+db dummyf_10686[32]; // 0809:85f6
+db dummyf_106a6[32]; // 0809:8616
+db dummyf_106c6[32]; // 0809:8636
+db dummyf_106e6[32]; // 0809:8656
+db dummyf_10706[32]; // 0809:8676
+db dummyf_10726[32]; // 0809:8696
+db dummyf_10746[32]; // 0809:86b6
+db dummyf_10766[32]; // 0809:86d6
+db dummyf_10786[32]; // 0809:86f6
+db dummyf_107a6[32]; // 0809:8716
+db dummyf_107c6[32]; // 0809:8736
+db dummyf_107e6[32]; // 0809:8756
+db dummyf_10806[32]; // 0809:8776
+db dummyf_10826[32]; // 0809:8796
+db dummyf_10846[32]; // 0809:87b6
+db dummyf_10866[32]; // 0809:87d6
+db dummyf_10886[32]; // 0809:87f6
+db dummyf_108a6[32]; // 0809:8816
+db dummyf_108c6[32]; // 0809:8836
+db dummyf_108e6[32]; // 0809:8856
+db dummyf_10906[32]; // 0809:8876
+db dummyf_10926[32]; // 0809:8896
+db dummyf_10946[32]; // 0809:88b6
+db dummyf_10966[32]; // 0809:88d6
+db dummyf_10986[32]; // 0809:88f6
+db dummyf_109a6[32]; // 0809:8916
+db dummyf_109c6[32]; // 0809:8936
+db dummyf_109e6[32]; // 0809:8956
+db dummyf_10a06[32]; // 0809:8976
+db dummyf_10a26[32]; // 0809:8996
+db dummyf_10a46[32]; // 0809:89b6
+db dummyf_10a66[32]; // 0809:89d6
+db dummyf_10a86[32]; // 0809:89f6
+db dummyf_10aa6[32]; // 0809:8a16
+db dummyf_10ac6[32]; // 0809:8a36
+db dummyf_10ae6[32]; // 0809:8a56
+db dummyf_10b06[32]; // 0809:8a76
+db dummyf_10b26[32]; // 0809:8a96
+db dummyf_10b46[32]; // 0809:8ab6
+db dummyf_10b66[32]; // 0809:8ad6
+db dummyf_10b86[32]; // 0809:8af6
+db dummyf_10ba6[32]; // 0809:8b16
+db dummyf_10bc6[32]; // 0809:8b36
+db dummyf_10be6[32]; // 0809:8b56
+db dummyf_10c06[32]; // 0809:8b76
+db dummyf_10c26[32]; // 0809:8b96
+db dummyf_10c46[32]; // 0809:8bb6
+db dummyf_10c66[32]; // 0809:8bd6
+db dummyf_10c86[32]; // 0809:8bf6
+db dummyf_10ca6[32]; // 0809:8c16
+db dummyf_10cc6[32]; // 0809:8c36
+db dummyf_10ce6[32]; // 0809:8c56
+db dummyf_10d06[32]; // 0809:8c76
+db dummyf_10d26[32]; // 0809:8c96
+db dummyf_10d46[32]; // 0809:8cb6
+db dummyf_10d66;
+db dummyf_10d67;
+db dummyf_10d68;
+db dummyf_10d69;
+db dummyf_10d6a;
+db dummyf_10d6b;
+db dummyf_10d6c;
+db dummyf_10d6d;
+db dummyf_10d6e;
+db dummyf_10d6f;
+db dummyf_10d70;
+db dummyf_10d71;
+db dummyf_10d72;
+db dummyf_10d73;
+db dummyf_10d74;
+db dummyf_10d75;
+db dummyf_10d76;
+db dummyf_10d77;
+db dummyf_10d78;
+db dummyf_10d79;
+db dummyf_10d7a;
+db dummyf_10d7b;
+db dummyf_10d7c;
+db dummyf_10d7d;
+db dummyf_10d7e;
+db unk_1f35f; // 0809:8cef
+db dummyf_10d80[32]; // 0809:8cf0
+db dummyf_10da0[32]; // 0809:8d10
+db dummyf_10dc0[32]; // 0809:8d30
+db dummyf_10de0[32]; // 0809:8d50
+db dummyf_10e00[32]; // 0809:8d70
+db dummyf_10e20[32]; // 0809:8d90
+db dummyf_10e40[32]; // 0809:8db0
+db dummyf_10e60[32]; // 0809:8dd0
+db dummyf_10e80[32]; // 0809:8df0
+db dummyf_10ea0[32]; // 0809:8e10
+db dummyf_10ec0[32]; // 0809:8e30
+db dummyf_10ee0[32]; // 0809:8e50
+db dummyf_10f00[32]; // 0809:8e70
+db dummyf_10f20[32]; // 0809:8e90
+db dummyf_10f40[32]; // 0809:8eb0
+db dummyf_10f60[32]; // 0809:8ed0
+db dummyf_10f80[32]; // 0809:8ef0
+db dummyf_10fa0[32]; // 0809:8f10
+db dummyf_10fc0[32]; // 0809:8f30
+db dummyf_10fe0[32]; // 0809:8f50
+db dummyf_11000[32]; // 0809:8f70
+db dummyf_11020[32]; // 0809:8f90
+db dummyf_11040[32]; // 0809:8fb0
+db dummyf_11060[32]; // 0809:8fd0
+db dummyf_11080[32]; // 0809:8ff0
+db dummyf_110a0[32]; // 0809:9010
+db dummyf_110c0[32]; // 0809:9030
+db dummyf_110e0[32]; // 0809:9050
+db dummyf_11100[32]; // 0809:9070
+db dummyf_11120[32]; // 0809:9090
+db dummyf_11140[32]; // 0809:90b0
+db dummyf_11160[32]; // 0809:90d0
+db dummyf_11180[32]; // 0809:90f0
+db dummyf_111a0[32]; // 0809:9110
+db dummyf_111c0[32]; // 0809:9130
+db dummyf_111e0[32]; // 0809:9150
+db dummyf_11200[32]; // 0809:9170
+db dummyf_11220[32]; // 0809:9190
+db dummyf_11240[32]; // 0809:91b0
+db dummyf_11260[32]; // 0809:91d0
+db dummyf_11280[32]; // 0809:91f0
+db dummyf_112a0[32]; // 0809:9210
+db dummyf_112c0[32]; // 0809:9230
+db dummyf_112e0[32]; // 0809:9250
+db dummyf_11300[32]; // 0809:9270
+db dummyf_11320[32]; // 0809:9290
+db dummyf_11340[32]; // 0809:92b0
+db dummyf_11360[32]; // 0809:92d0
+db dummyf_11380[32]; // 0809:92f0
+db dummyf_113a0[32]; // 0809:9310
+db dummyf_113c0[32]; // 0809:9330
+db dummyf_113e0[32]; // 0809:9350
+db dummyf_11400[32]; // 0809:9370
+db dummyf_11420[32]; // 0809:9390
+db dummyf_11440[32]; // 0809:93b0
+db dummyf_11460[32]; // 0809:93d0
+db dummyf_11480[32]; // 0809:93f0
+db dummyf_114a0[32]; // 0809:9410
+db dummyf_114c0[32]; // 0809:9430
+db dummyf_114e0[32]; // 0809:9450
+db dummyf_11500[32]; // 0809:9470
+db dummyf_11520[32]; // 0809:9490
+db dummyf_11540[32]; // 0809:94b0
+db dummyf_11560[32]; // 0809:94d0
+db dummyf_11580[32]; // 0809:94f0
+db dummyf_115a0[32]; // 0809:9510
+db dummyf_115c0[32]; // 0809:9530
+db dummyf_115e0[32]; // 0809:9550
+db dummyf_11600[32]; // 0809:9570
+db dummyf_11620[32]; // 0809:9590
+db dummyf_11640[32]; // 0809:95b0
+db dummyf_11660[32]; // 0809:95d0
+db dummyf_11680[32]; // 0809:95f0
+db dummyf_116a0[32]; // 0809:9610
+db dummyf_116c0[32]; // 0809:9630
+db dummyf_116e0[32]; // 0809:9650
+db dummyf_11700[32]; // 0809:9670
+db dummyf_11720[32]; // 0809:9690
+db dummyf_11740[32]; // 0809:96b0
+db dummyf_11760[32]; // 0809:96d0
+db dummyf_11780[32]; // 0809:96f0
+db dummyf_117a0[32]; // 0809:9710
+db dummyf_117c0[32]; // 0809:9730
+db dummyf_117e0[32]; // 0809:9750
+db dummyf_11800[32]; // 0809:9770
+db dummyf_11820[32]; // 0809:9790
+db dummyf_11840[32]; // 0809:97b0
+db dummyf_11860[32]; // 0809:97d0
+db dummyf_11880[32]; // 0809:97f0
+db dummyf_118a0[32]; // 0809:9810
+db dummyf_118c0[32]; // 0809:9830
+db dummyf_118e0[32]; // 0809:9850
+db dummyf_11900[32]; // 0809:9870
+db dummyf_11920[32]; // 0809:9890
+db dummyf_11940[32]; // 0809:98b0
+db dummyf_11960[32]; // 0809:98d0
+db dummyf_11980[32]; // 0809:98f0
+db dummyf_119a0[32]; // 0809:9910
+db dummyf_119c0[32]; // 0809:9930
+db dummyf_119e0[32]; // 0809:9950
+db dummyf_11a00[32]; // 0809:9970
+db dummyf_11a20[32]; // 0809:9990
+db dummyf_11a40[32]; // 0809:99b0
+db dummyf_11a60[32]; // 0809:99d0
+db dummyf_11a80[32]; // 0809:99f0
+db dummyf_11aa0[32]; // 0809:9a10
+db dummyf_11ac0[32]; // 0809:9a30
+db dummyf_11ae0[32]; // 0809:9a50
+db dummyf_11b00[32]; // 0809:9a70
+db dummyf_11b20[32]; // 0809:9a90
+db dummyf_11b40[32]; // 0809:9ab0
+db dummyf_11b60[32]; // 0809:9ad0
+db dummyf_11b80[32]; // 0809:9af0
+db dummyf_11ba0[32]; // 0809:9b10
+db dummyf_11bc0[32]; // 0809:9b30
+db dummyf_11be0[32]; // 0809:9b50
+db dummyf_11c00[32]; // 0809:9b70
+db dummyf_11c20[32]; // 0809:9b90
+db dummyf_11c40[32]; // 0809:9bb0
+db dummyf_11c60[32]; // 0809:9bd0
+db dummyf_11c80[32]; // 0809:9bf0
+db dummyf_11ca0[32]; // 0809:9c10
+db dummyf_11cc0[32]; // 0809:9c30
+db dummyf_11ce0[32]; // 0809:9c50
+db dummyf_11d00[32]; // 0809:9c70
+db dummyf_11d20[32]; // 0809:9c90
+db dummyf_11d40[32]; // 0809:9cb0
+db dummyf_11d60[32]; // 0809:9cd0
+db dummyf_11d80[32]; // 0809:9cf0
+db dummyf_11da0[32]; // 0809:9d10
+db dummyf_11dc0[32]; // 0809:9d30
+db dummyf_11de0[32]; // 0809:9d50
+db dummyf_11e00[32]; // 0809:9d70
+db dummyf_11e20[32]; // 0809:9d90
+db dummyf_11e40[32]; // 0809:9db0
+db dummyf_11e60[32]; // 0809:9dd0
+db dummyf_11e80[32]; // 0809:9df0
+db dummyf_11ea0[32]; // 0809:9e10
+db dummyf_11ec0[32]; // 0809:9e30
+db dummyf_11ee0[32]; // 0809:9e50
+db dummyf_11f00[32]; // 0809:9e70
+db dummyf_11f20[32]; // 0809:9e90
+db dummyf_11f40[32]; // 0809:9eb0
+db dummyf_11f60[32]; // 0809:9ed0
+db dummyf_11f80[32]; // 0809:9ef0
+db dummyf_11fa0[32]; // 0809:9f10
+db dummyf_11fc0[32]; // 0809:9f30
+db dummyf_11fe0[32]; // 0809:9f50
+db dummyf_12000[32]; // 0809:9f70
+db dummyf_12020[32]; // 0809:9f90
+db dummyf_12040[32]; // 0809:9fb0
+db dummyf_12060[32]; // 0809:9fd0
+db dummyf_12080[32]; // 0809:9ff0
+db dummyf_120a0[32]; // 0809:a010
+db dummyf_120c0[32]; // 0809:a030
+db dummyf_120e0[32]; // 0809:a050
+db dummyf_12100[32]; // 0809:a070
+db dummyf_12120[32]; // 0809:a090
+db dummyf_12140[32]; // 0809:a0b0
+db dummyf_12160[32]; // 0809:a0d0
+db dummyf_12180[32]; // 0809:a0f0
+db dummyf_121a0[32]; // 0809:a110
+db dummyf_121c0[32]; // 0809:a130
+db dummyf_121e0[32]; // 0809:a150
+db dummyf_12200[32]; // 0809:a170
+db dummyf_12220[32]; // 0809:a190
+db dummyf_12240[32]; // 0809:a1b0
+db dummyf_12260[32]; // 0809:a1d0
+db dummyf_12280[32]; // 0809:a1f0
+db dummyf_122a0[32]; // 0809:a210
+db dummyf_122c0[32]; // 0809:a230
+db dummyf_122e0[32]; // 0809:a250
+db dummyf_12300[32]; // 0809:a270
+db dummyf_12320[32]; // 0809:a290
+db dummyf_12340[32]; // 0809:a2b0
+db dummyf_12360[32]; // 0809:a2d0
+db dummyf_12380[32]; // 0809:a2f0
+db dummyf_123a0[32]; // 0809:a310
+db dummyf_123c0[32]; // 0809:a330
+db dummyf_123e0[32]; // 0809:a350
+db dummyf_12400[32]; // 0809:a370
+db dummyf_12420[32]; // 0809:a390
+db dummyf_12440[32]; // 0809:a3b0
+db dummyf_12460[32]; // 0809:a3d0
+db dummyf_12480[32]; // 0809:a3f0
+db dummyf_124a0[32]; // 0809:a410
+db dummyf_124c0[32]; // 0809:a430
+db dummyf_124e0[32]; // 0809:a450
+db dummyf_12500[32]; // 0809:a470
+db dummyf_12520[32]; // 0809:a490
+db dummyf_12540[32]; // 0809:a4b0
+db dummyf_12560[32]; // 0809:a4d0
+db dummyf_12580[32]; // 0809:a4f0
+db dummyf_125a0[32]; // 0809:a510
+db dummyf_125c0[32]; // 0809:a530
+db dummyf_125e0[32]; // 0809:a550
+db dummyf_12600[32]; // 0809:a570
+db dummyf_12620[32]; // 0809:a590
+db dummyf_12640[32]; // 0809:a5b0
+db dummyf_12660[32]; // 0809:a5d0
+db dummyf_12680[32]; // 0809:a5f0
+db dummyf_126a0[32]; // 0809:a610
+db dummyf_126c0[32]; // 0809:a630
+db dummyf_126e0[32]; // 0809:a650
+db dummyf_12700[32]; // 0809:a670
+db dummyf_12720[32]; // 0809:a690
+db dummyf_12740[32]; // 0809:a6b0
+db dummyf_12760[32]; // 0809:a6d0
+db dummyf_12780[32]; // 0809:a6f0
+db dummyf_127a0[32]; // 0809:a710
+db dummyf_127c0[32]; // 0809:a730
+db dummyf_127e0[32]; // 0809:a750
+db dummyf_12800[32]; // 0809:a770
+db dummyf_12820[32]; // 0809:a790
+db dummyf_12840[32]; // 0809:a7b0
+db dummyf_12860[32]; // 0809:a7d0
+db dummyf_12880[32]; // 0809:a7f0
+db dummyf_128a0[32]; // 0809:a810
+db dummyf_128c0[32]; // 0809:a830
+db dummyf_128e0[32]; // 0809:a850
+db dummyf_12900[32]; // 0809:a870
+db dummyf_12920[32]; // 0809:a890
+db dummyf_12940[32]; // 0809:a8b0
+db dummyf_12960[32]; // 0809:a8d0
+db dummyf_12980[32]; // 0809:a8f0
+db dummyf_129a0[32]; // 0809:a910
+db dummyf_129c0[32]; // 0809:a930
+db dummyf_129e0[32]; // 0809:a950
+db dummyf_12a00[32]; // 0809:a970
+db dummyf_12a20[32]; // 0809:a990
+db dummyf_12a40[32]; // 0809:a9b0
+db dummyf_12a60[32]; // 0809:a9d0
+db dummyf_12a80[32]; // 0809:a9f0
+db dummyf_12aa0[32]; // 0809:aa10
+db dummyf_12ac0[32]; // 0809:aa30
+db dummyf_12ae0[32]; // 0809:aa50
+db dummyf_12b00[32]; // 0809:aa70
+db dummyf_12b20[32]; // 0809:aa90
+db dummyf_12b40[32]; // 0809:aab0
+db dummyf_12b60[32]; // 0809:aad0
+db dummyf_12b80[32]; // 0809:aaf0
+db dummyf_12ba0[32]; // 0809:ab10
+db dummyf_12bc0[32]; // 0809:ab30
+db dummyf_12be0[32]; // 0809:ab50
+db dummyf_12c00[32]; // 0809:ab70
+db dummyf_12c20[32]; // 0809:ab90
+db dummyf_12c40[32]; // 0809:abb0
+db dummyf_12c60[32]; // 0809:abd0
+db dummyf_12c80[32]; // 0809:abf0
+db dummyf_12ca0[32]; // 0809:ac10
+db dummyf_12cc0[32]; // 0809:ac30
+db dummyf_12ce0[32]; // 0809:ac50
+db dummyf_12d00[32]; // 0809:ac70
+db dummyf_12d20[32]; // 0809:ac90
+db dummyf_12d40[32]; // 0809:acb0
+db dummyf_12d60[32]; // 0809:acd0
+db dummyf_12d80[32]; // 0809:acf0
+db dummyf_12da0[32]; // 0809:ad10
+db dummyf_12dc0[32]; // 0809:ad30
+db dummyf_12de0[32]; // 0809:ad50
+db dummyf_12e00[32]; // 0809:ad70
+db dummyf_12e20[32]; // 0809:ad90
+db dummyf_12e40[32]; // 0809:adb0
+db dummyf_12e60[32]; // 0809:add0
+db dummyf_12e80[32]; // 0809:adf0
+db dummyf_12ea0[32]; // 0809:ae10
+db dummyf_12ec0[32]; // 0809:ae30
+db dummyf_12ee0[32]; // 0809:ae50
+db dummyf_12f00[32]; // 0809:ae70
+db dummyf_12f20[32]; // 0809:ae90
+db dummyf_12f40[32]; // 0809:aeb0
+db dummyf_12f60[32]; // 0809:aed0
+db dummyf_12f80[32]; // 0809:aef0
+db dummyf_12fa0[32]; // 0809:af10
+db dummyf_12fc0[32]; // 0809:af30
+db dummyf_12fe0[32]; // 0809:af50
+db dummyf_13000[32]; // 0809:af70
+db dummyf_13020[32]; // 0809:af90
+db dummyf_13040[32]; // 0809:afb0
+db dummyf_13060[32]; // 0809:afd0
+db dummyf_13080[32]; // 0809:aff0
+db dummyf_130a0[32]; // 0809:b010
+db dummyf_130c0[32]; // 0809:b030
+db dummyf_130e0[32]; // 0809:b050
+db dummyf_13100[32]; // 0809:b070
+db dummyf_13120[32]; // 0809:b090
+db dummyf_13140[32]; // 0809:b0b0
+db dummyf_13160[32]; // 0809:b0d0
+db dummyf_13180[32]; // 0809:b0f0
+db dummyf_131a0[32]; // 0809:b110
+db dummyf_131c0[32]; // 0809:b130
+db dummyf_131e0[32]; // 0809:b150
+db dummyf_13200[32]; // 0809:b170
+db dummyf_13220[32]; // 0809:b190
+db dummyf_13240[32]; // 0809:b1b0
+db dummyf_13260[32]; // 0809:b1d0
+db dummyf_13280[32]; // 0809:b1f0
+db dummyf_132a0[32]; // 0809:b210
+db dummyf_132c0[32]; // 0809:b230
+db dummyf_132e0[32]; // 0809:b250
+db dummyf_13300[32]; // 0809:b270
+db dummyf_13320[32]; // 0809:b290
+db dummyf_13340[32]; // 0809:b2b0
+db dummyf_13360[32]; // 0809:b2d0
+db dummyf_13380[32]; // 0809:b2f0
+db dummyf_133a0[32]; // 0809:b310
+db dummyf_133c0[32]; // 0809:b330
+db dummyf_133e0[32]; // 0809:b350
+db dummyf_13400[32]; // 0809:b370
+db dummyf_13420[32]; // 0809:b390
+db dummyf_13440[32]; // 0809:b3b0
+db dummyf_13460[32]; // 0809:b3d0
+db dummyf_13480[32]; // 0809:b3f0
+db dummyf_134a0[32]; // 0809:b410
+db dummyf_134c0[32]; // 0809:b430
+db dummyf_134e0[32]; // 0809:b450
+db dummyf_13500[32]; // 0809:b470
+db dummyf_13520[32]; // 0809:b490
+db dummyf_13540[32]; // 0809:b4b0
+db dummyf_13560[32]; // 0809:b4d0
+db dummyf_13580[32]; // 0809:b4f0
+db dummyf_135a0[32]; // 0809:b510
+db dummyf_135c0[32]; // 0809:b530
+db dummyf_135e0[32]; // 0809:b550
+db dummyf_13600[32]; // 0809:b570
+db dummyf_13620[32]; // 0809:b590
+db dummyf_13640[32]; // 0809:b5b0
+db dummyf_13660[32]; // 0809:b5d0
+db dummyf_13680[32]; // 0809:b5f0
+db dummyf_136a0[32]; // 0809:b610
+db dummyf_136c0[32]; // 0809:b630
+db dummyf_136e0[32]; // 0809:b650
+db dummyf_13700[32]; // 0809:b670
+db dummyf_13720[32]; // 0809:b690
+db dummyf_13740[32]; // 0809:b6b0
+db dummyf_13760[32]; // 0809:b6d0
+db dummyf_13780[32]; // 0809:b6f0
+db dummyf_137a0[32]; // 0809:b710
+db dummyf_137c0[32]; // 0809:b730
+db dummyf_137e0[32]; // 0809:b750
+db dummyf_13800[32]; // 0809:b770
+db dummyf_13820[32]; // 0809:b790
+db dummyf_13840[32]; // 0809:b7b0
+db dummyf_13860[32]; // 0809:b7d0
+db dummyf_13880[32]; // 0809:b7f0
+db dummyf_138a0[32]; // 0809:b810
+db dummyf_138c0[32]; // 0809:b830
+db dummyf_138e0[32]; // 0809:b850
+db dummyf_13900[32]; // 0809:b870
+db dummyf_13920[32]; // 0809:b890
+db dummyf_13940[32]; // 0809:b8b0
+db dummyf_13960[32]; // 0809:b8d0
+db dummyf_13980[32]; // 0809:b8f0
+db dummyf_139a0[32]; // 0809:b910
+db dummyf_139c0[32]; // 0809:b930
+db dummyf_139e0[32]; // 0809:b950
+db dummyf_13a00[32]; // 0809:b970
+db dummyf_13a20[32]; // 0809:b990
+db dummyf_13a40[32]; // 0809:b9b0
+db dummyf_13a60[32]; // 0809:b9d0
+db dummyf_13a80[32]; // 0809:b9f0
+db dummyf_13aa0[32]; // 0809:ba10
+db dummyf_13ac0[32]; // 0809:ba30
+db dummyf_13ae0[32]; // 0809:ba50
+db dummyf_13b00[32]; // 0809:ba70
+db dummyf_13b20[32]; // 0809:ba90
+db dummyf_13b40[32]; // 0809:bab0
+db dummyf_13b60[32]; // 0809:bad0
+db dummyf_13b80[32]; // 0809:baf0
+db dummyf_13ba0[32]; // 0809:bb10
+db dummyf_13bc0[32]; // 0809:bb30
+db dummyf_13be0[32]; // 0809:bb50
+db dummyf_13c00[32]; // 0809:bb70
+db dummyf_13c20[32]; // 0809:bb90
+db dummyf_13c40[32]; // 0809:bbb0
+db dummyf_13c60[32]; // 0809:bbd0
+db dummyf_13c80[32]; // 0809:bbf0
+db dummyf_13ca0[32]; // 0809:bc10
+db dummyf_13cc0[32]; // 0809:bc30
+db dummyf_13ce0[32]; // 0809:bc50
+db dummyf_13d00[32]; // 0809:bc70
+db dummyf_13d20[32]; // 0809:bc90
+db dummyf_13d40[32]; // 0809:bcb0
+db dummyf_13d60[32]; // 0809:bcd0
+db dummyf_13d80[32]; // 0809:bcf0
+db dummyf_13da0[32]; // 0809:bd10
+db dummyf_13dc0[32]; // 0809:bd30
+db dummyf_13de0[32]; // 0809:bd50
+db dummyf_13e00[32]; // 0809:bd70
+db dummyf_13e20[32]; // 0809:bd90
+db dummyf_13e40[32]; // 0809:bdb0
+db dummyf_13e60[32]; // 0809:bdd0
+db dummyf_13e80[32]; // 0809:bdf0
+db dummyf_13ea0[32]; // 0809:be10
+db dummyf_13ec0[32]; // 0809:be30
+db dummyf_13ee0[32]; // 0809:be50
+db dummyf_13f00[32]; // 0809:be70
+db dummyf_13f20[32]; // 0809:be90
+db dummyf_13f40[32]; // 0809:beb0
+db dummyf_13f60[32]; // 0809:bed0
+db dummyf_13f80[32]; // 0809:bef0
+db dummyf_13fa0[32]; // 0809:bf10
+db dummyf_13fc0[32]; // 0809:bf30
+db dummyf_13fe0[32]; // 0809:bf50
+db dummyf_14000[32]; // 0809:bf70
+db dummyf_14020[32]; // 0809:bf90
+db dummyf_14040[32]; // 0809:bfb0
+db dummyf_14060[32]; // 0809:bfd0
+db dummyf_14080[32]; // 0809:bff0
+db dummyf_140a0[32]; // 0809:c010
+db dummyf_140c0[32]; // 0809:c030
+db dummyf_140e0[32]; // 0809:c050
+db dummyf_14100[32]; // 0809:c070
+db dummyf_14120[32]; // 0809:c090
+db dummyf_14140[32]; // 0809:c0b0
+db dummyf_14160[32]; // 0809:c0d0
+db dummyf_14180[32]; // 0809:c0f0
+db dummyf_141a0[32]; // 0809:c110
+db dummyf_141c0[32]; // 0809:c130
+db dummyf_141e0[32]; // 0809:c150
+db dummyf_14200[32]; // 0809:c170
+db dummyf_14220[32]; // 0809:c190
+db dummyf_14240[32]; // 0809:c1b0
+db dummyf_14260[32]; // 0809:c1d0
+db dummyf_14280[32]; // 0809:c1f0
+db dummyf_142a0[32]; // 0809:c210
+db dummyf_142c0[32]; // 0809:c230
+db dummyf_142e0[32]; // 0809:c250
+db dummyf_14300[32]; // 0809:c270
+db dummyf_14320[32]; // 0809:c290
+db dummyf_14340[32]; // 0809:c2b0
+db dummyf_14360[32]; // 0809:c2d0
+db dummyf_14380[32]; // 0809:c2f0
+db dummyf_143a0[32]; // 0809:c310
+db dummyf_143c0[32]; // 0809:c330
+db dummyf_143e0[32]; // 0809:c350
+db dummyf_14400[32]; // 0809:c370
+db dummyf_14420[32]; // 0809:c390
+db dummyf_14440;
+db dummyf_14441;
+db dummyf_14442;
+db dummyf_14443;
+db dummyf_14444;
+db dummyf_14445;
+db dummyf_14446;
+db dummyf_14447;
+db dummyf_14448;
+db dummyf_14449;
+db dummyf_1444a;
+db dummyf_1444b;
+db dummyf_1444c;
+db dummyf_1444d;
+db dummyf_1444e;
+db dummyf_1444f;
+db dummyf_14450;
+db unk_22a31; // 0809:c3c1
+db dummyf_14452[32]; // 0809:c3c2
+db dummyf_14472[32]; // 0809:c3e2
+db dummyf_14492[32]; // 0809:c402
+db dummyf_144b2[32]; // 0809:c422
+db dummyf_144d2[32]; // 0809:c442
+db dummyf_144f2[32]; // 0809:c462
+db dummyf_14512[32]; // 0809:c482
+db dummyf_14532[32]; // 0809:c4a2
+db dummyf_14552;
+db dummyf_14553;
+db dummyf_14554;
+db dummyf_14555;
+db dummyf_14556;
+db dummyf_14557;
+db dummyf_14558;
+db dummyf_14559;
+db dummyf_1455a;
+db dummyf_1455b;
+db dummyf_1455c;
+db dummyf_1455d;
+db dummyf_1455e;
+db dummyf_1455f;
+db dummyf_14560;
+db dummyf_14561;
+db dummyf_14562;
+db dummyf_14563;
+db dummyf_14564;
+db dummyf_14565;
+db dummyf_14566;
+db dummyf_14567;
+db dummyf_14568;
+db dummyf_14569;
+db dummyf_1456a;
+db unk_22b4b; // 0809:c4db
+db dummyf_1456c[32]; // 0809:c4dc
+db dummyf_1458c[32]; // 0809:c4fc
+db dummyf_145ac[32]; // 0809:c51c
+db dummyf_145cc[32]; // 0809:c53c
+db dummyf_145ec[32]; // 0809:c55c
+db dummyf_1460c[32]; // 0809:c57c
+db dummyf_1462c[32]; // 0809:c59c
+db dummyf_1464c[32]; // 0809:c5bc
+db dummyf_1466c[32]; // 0809:c5dc
+db dummyf_1468c[32]; // 0809:c5fc
+db dummyf_146ac[32]; // 0809:c61c
+db dummyf_146cc[32]; // 0809:c63c
+db dummyf_146ec[32]; // 0809:c65c
+db dummyf_1470c[32]; // 0809:c67c
+db dummyf_1472c[32]; // 0809:c69c
+db dummyf_1474c[32]; // 0809:c6bc
+db dummyf_1476c[32]; // 0809:c6dc
+db dummyf_1478c[32]; // 0809:c6fc
+db dummyf_147ac[32]; // 0809:c71c
+db dummyf_147cc[32]; // 0809:c73c
+db dummyf_147ec[32]; // 0809:c75c
+db dummyf_1480c[32]; // 0809:c77c
+db dummyf_1482c[32]; // 0809:c79c
+db dummyf_1484c[32]; // 0809:c7bc
+db dummyf_1486c[32]; // 0809:c7dc
+db dummyf_1488c[32]; // 0809:c7fc
+db dummyf_148ac[32]; // 0809:c81c
+db dummyf_148cc[32]; // 0809:c83c
+db dummyf_148ec[32]; // 0809:c85c
+db dummyf_1490c[32]; // 0809:c87c
+db dummyf_1492c[32]; // 0809:c89c
+db dummyf_1494c[32]; // 0809:c8bc
+db dummyf_1496c[32]; // 0809:c8dc
+db dummyf_1498c[32]; // 0809:c8fc
+db dummyf_149ac[32]; // 0809:c91c
+db dummyf_149cc[32]; // 0809:c93c
+db dummyf_149ec[32]; // 0809:c95c
+db dummyf_14a0c[32]; // 0809:c97c
+db dummyf_14a2c[32]; // 0809:c99c
+db dummyf_14a4c[32]; // 0809:c9bc
+db dummyf_14a6c;
+db dummyf_14a6d;
+db dummyf_14a6e;
+db dummyf_14a6f;
+db dummyf_14a70;
+db dummyf_14a71;
+db unk_23052; // 0809:c9e2
+db dummyf_14a73[32]; // 0809:c9e3
+db dummyf_14a93;
+db dummyf_14a94;
+db dummyf_14a95;
+db dummyf_14a96;
+db dummyf_14a97;
+db dummyf_14a98;
+db dummyf_14a99;
+db dummyf_14a9a;
+db dummyf_14a9b;
+db dummyf_14a9c;
+db dummyf_14a9d;
+db unk_2307e; // 0809:ca0e
+db dummyf_14a9f[32]; // 0809:ca0f
+db dummyf_14abf[32]; // 0809:ca2f
+db dummyf_14adf[32]; // 0809:ca4f
+db dummyf_14aff[32]; // 0809:ca6f
+db dummyf_14b1f[32]; // 0809:ca8f
+db dummyf_14b3f[32]; // 0809:caaf
+db dummyf_14b5f[32]; // 0809:cacf
+db dummyf_14b7f[32]; // 0809:caef
+db dummyf_14b9f[32]; // 0809:cb0f
+db dummyf_14bbf[32]; // 0809:cb2f
+db dummyf_14bdf[32]; // 0809:cb4f
+db dummyf_14bff[32]; // 0809:cb6f
+db dummyf_14c1f[32]; // 0809:cb8f
+db dummyf_14c3f[32]; // 0809:cbaf
+db dummyf_14c5f[32]; // 0809:cbcf
+db dummyf_14c7f[32]; // 0809:cbef
+db dummyf_14c9f[32]; // 0809:cc0f
+db dummyf_14cbf[32]; // 0809:cc2f
+db dummyf_14cdf[32]; // 0809:cc4f
+db dummyf_14cff[32]; // 0809:cc6f
+db dummyf_14d1f[32]; // 0809:cc8f
+db dummyf_14d3f[32]; // 0809:ccaf
+db dummyf_14d5f[32]; // 0809:cccf
+db dummyf_14d7f[32]; // 0809:ccef
+db dummyf_14d9f[32]; // 0809:cd0f
+db dummyf_14dbf[32]; // 0809:cd2f
+db dummyf_14ddf[32]; // 0809:cd4f
+db dummyf_14dff[32]; // 0809:cd6f
+db dummyf_14e1f[32]; // 0809:cd8f
+db dummyf_14e3f[32]; // 0809:cdaf
+db dummyf_14e5f[32]; // 0809:cdcf
+db dummyf_14e7f[32]; // 0809:cdef
+db dummyf_14e9f[32]; // 0809:ce0f
+db dummyf_14ebf[32]; // 0809:ce2f
+db dummyf_14edf[32]; // 0809:ce4f
+db dummyf_14eff[32]; // 0809:ce6f
+db dummyf_14f1f[32]; // 0809:ce8f
+db dummyf_14f3f[32]; // 0809:ceaf
+db dummyf_14f5f[32]; // 0809:cecf
+db dummyf_14f7f[32]; // 0809:ceef
+db dummyf_14f9f[32]; // 0809:cf0f
+db dummyf_14fbf[32]; // 0809:cf2f
+db dummyf_14fdf[32]; // 0809:cf4f
+db dummyf_14fff[32]; // 0809:cf6f
+db dummyf_1501f[32]; // 0809:cf8f
+db dummyf_1503f[32]; // 0809:cfaf
+db dummyf_1505f[32]; // 0809:cfcf
+db dummyf_1507f[32]; // 0809:cfef
+db dummyf_1509f[32]; // 0809:d00f
+db dummyf_150bf[32]; // 0809:d02f
+db dummyf_150df[32]; // 0809:d04f
+db dummyf_150ff[32]; // 0809:d06f
+db dummyf_1511f[32]; // 0809:d08f
+db dummyf_1513f[32]; // 0809:d0af
+db dummyf_1515f[32]; // 0809:d0cf
+db dummyf_1517f[32]; // 0809:d0ef
+db dummyf_1519f[32]; // 0809:d10f
+db dummyf_151bf[32]; // 0809:d12f
+db dummyf_151df[32]; // 0809:d14f
+db dummyf_151ff[32]; // 0809:d16f
+db dummyf_1521f[32]; // 0809:d18f
+db dummyf_1523f[32]; // 0809:d1af
+db dummyf_1525f[32]; // 0809:d1cf
+db dummyf_1527f[32]; // 0809:d1ef
+db dummyf_1529f[32]; // 0809:d20f
+db dummyf_152bf[32]; // 0809:d22f
+db dummyf_152df[32]; // 0809:d24f
+db dummyf_152ff[32]; // 0809:d26f
+db dummyf_1531f[32]; // 0809:d28f
+db dummyf_1533f[32]; // 0809:d2af
+db dummyf_1535f[32]; // 0809:d2cf
+db dummyf_1537f[32]; // 0809:d2ef
+db dummyf_1539f[32]; // 0809:d30f
+db dummyf_153bf[32]; // 0809:d32f
+db dummyf_153df[32]; // 0809:d34f
+db dummyf_153ff[32]; // 0809:d36f
+db dummyf_1541f[32]; // 0809:d38f
+db dummyf_1543f[32]; // 0809:d3af
+db dummyf_1545f[32]; // 0809:d3cf
+db dummyf_1547f[32]; // 0809:d3ef
+db dummyf_1549f[32]; // 0809:d40f
+db dummyf_154bf[32]; // 0809:d42f
+db dummyf_154df[32]; // 0809:d44f
+db dummyf_154ff[32]; // 0809:d46f
+db dummyf_1551f[32]; // 0809:d48f
+db dummyf_1553f[32]; // 0809:d4af
+db dummyf_1555f[32]; // 0809:d4cf
+db dummyf_1557f[32]; // 0809:d4ef
+db dummyf_1559f[32]; // 0809:d50f
+db dummyf_155bf[32]; // 0809:d52f
+db dummyf_155df[32]; // 0809:d54f
+db dummyf_155ff[32]; // 0809:d56f
+db dummyf_1561f[32]; // 0809:d58f
+db dummyf_1563f[32]; // 0809:d5af
+db dummyf_1565f[32]; // 0809:d5cf
+db dummyf_1567f[32]; // 0809:d5ef
+db dummyf_1569f[32]; // 0809:d60f
+db dummyf_156bf[32]; // 0809:d62f
+db dummyf_156df[32]; // 0809:d64f
+db dummyf_156ff[32]; // 0809:d66f
+db dummyf_1571f[32]; // 0809:d68f
+db dummyf_1573f[32]; // 0809:d6af
+db dummyf_1575f[32]; // 0809:d6cf
+db dummyf_1577f[32]; // 0809:d6ef
+db dummyf_1579f[32]; // 0809:d70f
+db dummyf_157bf[32]; // 0809:d72f
+db dummyf_157df[32]; // 0809:d74f
+db dummyf_157ff[32]; // 0809:d76f
+db dummyf_1581f[32]; // 0809:d78f
+db dummyf_1583f[32]; // 0809:d7af
+db dummyf_1585f[32]; // 0809:d7cf
+db dummyf_1587f[32]; // 0809:d7ef
+db dummyf_1589f[32]; // 0809:d80f
+db dummyf_158bf[32]; // 0809:d82f
+db dummyf_158df[32]; // 0809:d84f
+db dummyf_158ff[32]; // 0809:d86f
+db dummyf_1591f[32]; // 0809:d88f
+db dummyf_1593f[32]; // 0809:d8af
+db dummyf_1595f[32]; // 0809:d8cf
+db dummyf_1597f[32]; // 0809:d8ef
+db dummyf_1599f[32]; // 0809:d90f
+db dummyf_159bf[32]; // 0809:d92f
+db dummyf_159df[32]; // 0809:d94f
+db dummyf_159ff[32]; // 0809:d96f
+db dummyf_15a1f[32]; // 0809:d98f
+db dummyf_15a3f[32]; // 0809:d9af
+db dummyf_15a5f[32]; // 0809:d9cf
+db dummyf_15a7f[32]; // 0809:d9ef
+db dummyf_15a9f[32]; // 0809:da0f
+db dummyf_15abf[32]; // 0809:da2f
+db dummyf_15adf[32]; // 0809:da4f
+db dummyf_15aff[32]; // 0809:da6f
+db dummyf_15b1f[32]; // 0809:da8f
+db dummyf_15b3f[32]; // 0809:daaf
+db dummyf_15b5f[32]; // 0809:dacf
+db dummyf_15b7f[32]; // 0809:daef
+db dummyf_15b9f[32]; // 0809:db0f
+db dummyf_15bbf[32]; // 0809:db2f
+db dummyf_15bdf[32]; // 0809:db4f
+db dummyf_15bff[32]; // 0809:db6f
+db dummyf_15c1f[32]; // 0809:db8f
+db dummyf_15c3f[32]; // 0809:dbaf
+db dummyf_15c5f[32]; // 0809:dbcf
+db dummyf_15c7f[32]; // 0809:dbef
+db dummyf_15c9f[32]; // 0809:dc0f
+db dummyf_15cbf[32]; // 0809:dc2f
+db dummyf_15cdf[32]; // 0809:dc4f
+db dummyf_15cff[32]; // 0809:dc6f
+db dummyf_15d1f[32]; // 0809:dc8f
+db dummyf_15d3f[32]; // 0809:dcaf
+db dummyf_15d5f[32]; // 0809:dccf
+db dummyf_15d7f[32]; // 0809:dcef
+db dummyf_15d9f[32]; // 0809:dd0f
+db dummyf_15dbf[32]; // 0809:dd2f
+db dummyf_15ddf[32]; // 0809:dd4f
+db dummyf_15dff[32]; // 0809:dd6f
+db dummyf_15e1f[32]; // 0809:dd8f
+db dummyf_15e3f[32]; // 0809:ddaf
+db dummyf_15e5f[32]; // 0809:ddcf
+db dummyf_15e7f[32]; // 0809:ddef
+db dummyf_15e9f[32]; // 0809:de0f
+db dummyf_15ebf[32]; // 0809:de2f
+db dummyf_15edf[32]; // 0809:de4f
+db dummyf_15eff[32]; // 0809:de6f
+db dummyf_15f1f[32]; // 0809:de8f
+db dummyf_15f3f[32]; // 0809:deaf
+db dummyf_15f5f[32]; // 0809:decf
+db dummyf_15f7f[32]; // 0809:deef
+db dummyf_15f9f[32]; // 0809:df0f
+db dummyf_15fbf[32]; // 0809:df2f
+db dummyf_15fdf[32]; // 0809:df4f
+db dummyf_15fff[32]; // 0809:df6f
+db dummyf_1601f[32]; // 0809:df8f
+db dummyf_1603f[32]; // 0809:dfaf
+db dummyf_1605f[32]; // 0809:dfcf
+db dummyf_1607f[32]; // 0809:dfef
+db dummyf_1609f[32]; // 0809:e00f
+db dummyf_160bf[32]; // 0809:e02f
+db dummyf_160df[32]; // 0809:e04f
+db dummyf_160ff[32]; // 0809:e06f
+db dummyf_1611f[32]; // 0809:e08f
+db dummyf_1613f[32]; // 0809:e0af
+db dummyf_1615f[32]; // 0809:e0cf
+db dummyf_1617f[32]; // 0809:e0ef
+db dummyf_1619f[32]; // 0809:e10f
+db dummyf_161bf[32]; // 0809:e12f
+db dummyf_161df[32]; // 0809:e14f
+db dummyf_161ff[32]; // 0809:e16f
+db dummyf_1621f[32]; // 0809:e18f
+db dummyf_1623f[32]; // 0809:e1af
+db dummyf_1625f[32]; // 0809:e1cf
+db dummyf_1627f[32]; // 0809:e1ef
+db dummyf_1629f[32]; // 0809:e20f
+db dummyf_162bf[32]; // 0809:e22f
+db dummyf_162df[32]; // 0809:e24f
+db dummyf_162ff[32]; // 0809:e26f
+db dummyf_1631f[32]; // 0809:e28f
+db dummyf_1633f[32]; // 0809:e2af
+db dummyf_1635f[32]; // 0809:e2cf
+db dummyf_1637f[32]; // 0809:e2ef
+db dummyf_1639f[32]; // 0809:e30f
+db dummyf_163bf[32]; // 0809:e32f
+db dummyf_163df[32]; // 0809:e34f
+db dummyf_163ff[32]; // 0809:e36f
+db dummyf_1641f[32]; // 0809:e38f
+db dummyf_1643f[32]; // 0809:e3af
+db dummyf_1645f[32]; // 0809:e3cf
+db dummyf_1647f[32]; // 0809:e3ef
+db dummyf_1649f[32]; // 0809:e40f
+db dummyf_164bf[32]; // 0809:e42f
+db dummyf_164df[32]; // 0809:e44f
+db dummyf_164ff[32]; // 0809:e46f
+db dummyf_1651f[32]; // 0809:e48f
+db dummyf_1653f[32]; // 0809:e4af
+db dummyf_1655f[32]; // 0809:e4cf
+db dummyf_1657f[32]; // 0809:e4ef
+db dummyf_1659f[32]; // 0809:e50f
+db dummyf_165bf[32]; // 0809:e52f
+db dummyf_165df[32]; // 0809:e54f
+db dummyf_165ff[32]; // 0809:e56f
+db dummyf_1661f[32]; // 0809:e58f
+db dummyf_1663f[32]; // 0809:e5af
+db dummyf_1665f[32]; // 0809:e5cf
+db dummyf_1667f[32]; // 0809:e5ef
+db dummyf_1669f[32]; // 0809:e60f
+db dummyf_166bf[32]; // 0809:e62f
+db dummyf_166df[32]; // 0809:e64f
+db dummyf_166ff[32]; // 0809:e66f
+db dummyf_1671f[32]; // 0809:e68f
+db dummyf_1673f[32]; // 0809:e6af
+db dummyf_1675f[32]; // 0809:e6cf
+db dummyf_1677f[32]; // 0809:e6ef
+db dummyf_1679f[32]; // 0809:e70f
+db dummyf_167bf[32]; // 0809:e72f
+db dummyf_167df[32]; // 0809:e74f
+db dummyf_167ff[32]; // 0809:e76f
+db dummyf_1681f[32]; // 0809:e78f
+db dummyf_1683f[32]; // 0809:e7af
+db dummyf_1685f[32]; // 0809:e7cf
+db dummyf_1687f[32]; // 0809:e7ef
+db dummyf_1689f[32]; // 0809:e80f
+db dummyf_168bf[32]; // 0809:e82f
+db dummyf_168df[32]; // 0809:e84f
+db dummyf_168ff[32]; // 0809:e86f
+db dummyf_1691f[32]; // 0809:e88f
+db dummyf_1693f[32]; // 0809:e8af
+db dummyf_1695f[32]; // 0809:e8cf
+db dummyf_1697f[32]; // 0809:e8ef
+db dummyf_1699f[32]; // 0809:e90f
+db dummyf_169bf[32]; // 0809:e92f
+db dummyf_169df[32]; // 0809:e94f
+db dummyf_169ff[32]; // 0809:e96f
+db dummyf_16a1f[32]; // 0809:e98f
+db dummyf_16a3f[32]; // 0809:e9af
+db dummyf_16a5f[32]; // 0809:e9cf
+db dummyf_16a7f[32]; // 0809:e9ef
+db dummyf_16a9f[32]; // 0809:ea0f
+db dummyf_16abf[32]; // 0809:ea2f
+db dummyf_16adf[32]; // 0809:ea4f
+db dummyf_16aff[32]; // 0809:ea6f
+db dummyf_16b1f[32]; // 0809:ea8f
+db dummyf_16b3f[32]; // 0809:eaaf
+db dummyf_16b5f[32]; // 0809:eacf
+db dummyf_16b7f[32]; // 0809:eaef
+db dummyf_16b9f[32]; // 0809:eb0f
+db dummyf_16bbf[32]; // 0809:eb2f
+db dummyf_16bdf[32]; // 0809:eb4f
+db dummyf_16bff[32]; // 0809:eb6f
+db dummyf_16c1f[32]; // 0809:eb8f
+db dummyf_16c3f[32]; // 0809:ebaf
+db dummyf_16c5f[32]; // 0809:ebcf
+db dummyf_16c7f[32]; // 0809:ebef
+db dummyf_16c9f[32]; // 0809:ec0f
+db dummyf_16cbf[32]; // 0809:ec2f
+db dummyf_16cdf[32]; // 0809:ec4f
+db dummyf_16cff[32]; // 0809:ec6f
+db dummyf_16d1f[32]; // 0809:ec8f
+db dummyf_16d3f[32]; // 0809:ecaf
+db dummyf_16d5f[32]; // 0809:eccf
+db dummyf_16d7f[32]; // 0809:ecef
+db dummyf_16d9f[32]; // 0809:ed0f
+db dummyf_16dbf[32]; // 0809:ed2f
+db dummyf_16ddf[32]; // 0809:ed4f
+db dummyf_16dff[32]; // 0809:ed6f
+db dummyf_16e1f[32]; // 0809:ed8f
+db dummyf_16e3f[32]; // 0809:edaf
+db dummyf_16e5f[32]; // 0809:edcf
+db dummyf_16e7f[32]; // 0809:edef
+db dummyf_16e9f[32]; // 0809:ee0f
+db dummyf_16ebf[32]; // 0809:ee2f
+db dummyf_16edf[32]; // 0809:ee4f
+db dummyf_16eff[32]; // 0809:ee6f
+db dummyf_16f1f[32]; // 0809:ee8f
+db dummyf_16f3f[32]; // 0809:eeaf
+db dummyf_16f5f[32]; // 0809:eecf
+db dummyf_16f7f;
+db dummyf_16f80;
+db dummyf_16f81;
+db dummyf_16f82;
+db unk_25563; // 0809:eef3
+db dummyf_16f84[32]; // 0809:eef4
+db dummyf_16fa4[32]; // 0809:ef14
+db dummyf_16fc4[32]; // 0809:ef34
+db dummyf_16fe4[32]; // 0809:ef54
+db dummyf_17004[32]; // 0809:ef74
+db dummyf_17024[32]; // 0809:ef94
+db dummyf_17044[32]; // 0809:efb4
+db dummyf_17064[32]; // 0809:efd4
+db dummyf_17084[32]; // 0809:eff4
+db dummyf_170a4[32]; // 0809:f014
+db dummyf_170c4[32]; // 0809:f034
+db dummyf_170e4[32]; // 0809:f054
+db dummyf_17104[32]; // 0809:f074
+db dummyf_17124[32]; // 0809:f094
+db dummyf_17144[32]; // 0809:f0b4
+db dummyf_17164[32]; // 0809:f0d4
+db dummyf_17184[32]; // 0809:f0f4
+db dummyf_171a4[32]; // 0809:f114
+db dummyf_171c4[32]; // 0809:f134
+db dummyf_171e4[32]; // 0809:f154
+db dummyf_17204[32]; // 0809:f174
+db dummyf_17224[32]; // 0809:f194
+db dummyf_17244[32]; // 0809:f1b4
+db dummyf_17264[32]; // 0809:f1d4
+db dummyf_17284[32]; // 0809:f1f4
+db dummyf_172a4[32]; // 0809:f214
+db dummyf_172c4[32]; // 0809:f234
+db dummyf_172e4[32]; // 0809:f254
+db dummyf_17304[32]; // 0809:f274
+db dummyf_17324[32]; // 0809:f294
+db dummyf_17344[32]; // 0809:f2b4
+db dummyf_17364[32]; // 0809:f2d4
+db dummyf_17384[32]; // 0809:f2f4
+db dummyf_173a4[32]; // 0809:f314
+db dummyf_173c4[32]; // 0809:f334
+db dummyf_173e4[32]; // 0809:f354
+db dummyf_17404[32]; // 0809:f374
+db dummyf_17424[32]; // 0809:f394
+db dummyf_17444[32]; // 0809:f3b4
+db dummyf_17464[32]; // 0809:f3d4
+db dummyf_17484[32]; // 0809:f3f4
+db dummyf_174a4[32]; // 0809:f414
+db dummyf_174c4[32]; // 0809:f434
+db dummyf_174e4[32]; // 0809:f454
+db dummyf_17504[32]; // 0809:f474
+db dummyf_17524[32]; // 0809:f494
+db dummyf_17544[32]; // 0809:f4b4
+db dummyf_17564[32]; // 0809:f4d4
+db dummyf_17584[32]; // 0809:f4f4
+db dummyf_175a4[32]; // 0809:f514
+db dummyf_175c4[32]; // 0809:f534
+db dummyf_175e4[32]; // 0809:f554
+db dummyf_17604[32]; // 0809:f574
+db dummyf_17624[32]; // 0809:f594
+db dummyf_17644[32]; // 0809:f5b4
+db dummyf_17664[32]; // 0809:f5d4
+db dummyf_17684[32]; // 0809:f5f4
+db dummyf_176a4[32]; // 0809:f614
+db dummyf_176c4[32]; // 0809:f634
+db dummyf_176e4[32]; // 0809:f654
+db dummyf_17704[32]; // 0809:f674
+db dummyf_17724[32]; // 0809:f694
+db dummyf_17744[32]; // 0809:f6b4
+db dummyf_17764[32]; // 0809:f6d4
+db dummyf_17784[32]; // 0809:f6f4
+db dummyf_177a4[32]; // 0809:f714
+db dummyf_177c4[32]; // 0809:f734
+db dummyf_177e4[32]; // 0809:f754
+db dummyf_17804[32]; // 0809:f774
+db dummyf_17824[32]; // 0809:f794
+db dummyf_17844[32]; // 0809:f7b4
+db dummyf_17864[32]; // 0809:f7d4
+db dummyf_17884[32]; // 0809:f7f4
+db dummyf_178a4[32]; // 0809:f814
+db dummyf_178c4[32]; // 0809:f834
+db dummyf_178e4[32]; // 0809:f854
+db dummyf_17904[32]; // 0809:f874
+db dummyf_17924[32]; // 0809:f894
+db dummyf_17944[32]; // 0809:f8b4
+db dummyf_17964[32]; // 0809:f8d4
+db dummyf_17984[32]; // 0809:f8f4
+db dummyf_179a4[32]; // 0809:f914
+db dummyf_179c4[32]; // 0809:f934
+db dummyf_179e4[32]; // 0809:f954
+db dummyf_17a04[32]; // 0809:f974
+db dummyf_17a24[32]; // 0809:f994
+db dummyf_17a44[32]; // 0809:f9b4
+db dummyf_17a64[32]; // 0809:f9d4
+db dummyf_17a84;
+db dummyf_17a85;
+db dummyf_17a86;
+db dummyf_17a87;
+db dummyf_17a88;
+db dummyf_17a89;
+db dummyf_17a8a;
+db dummyf_17a8b;
+db dummyf_17a8c;
+db dummyf_17a8d;
+db dummyf_17a8e;
+dd dummyf_17a8f; // 0809:f9ff
+db dummyf_17a93[32]; // 0809:fa03
+db dummyf_17ab3[32]; // 0809:fa23
+db dummyf_17ad3[32]; // 0809:fa43
+db dummyf_17af3[32]; // 0809:fa63
+db dummyf_17b13[32]; // 0809:fa83
+db dummyf_17b33;
+db dummyf_17b34;
+db dummyf_17b35;
+db dummyf_17b36;
+db dummyf_17b37;
+db dummyf_17b38;
+db dummyf_17b39;
+db dummyf_17b3a;
+db dummyf_17b3b;
+db dummyf_17b3c;
+db dummyf_17b3d;
+db dummyf_17b3e;
+dd dummyf_17b3f; // 0809:faaf
+db dummyf_17b43[32]; // 0809:fab3
+db dummyf_17b63; // 0809:fad3
+db dummyf_17b64; // 0809:fad4
+db dummyf_17b65; // 0809:fad5
+db dummyf_17b66; // 0809:fad6
+db dummyf_17b67; // 0809:fad7
+db unk_26148; // 0809:fad8
+db dummyf_17b69; // 0809:fad9
+db dummyf_17b6a; // 0809:fada
+db dummyf_17b6b;
+db dummyf_17b6c; // 0809:fadc
+db dummyf_17b6d; // 0809:fadd
+db dummyf_17b6e; // 0809:fade
+db dummyf_17b6f; // 0809:fadf
+db dummyf_17b70; // 0809:fae0
+db dummyf_17b71; // 0809:fae1
+db dummyf_17b72; // 0809:fae2
+db dummyf_17b73; // 0809:fae3
+db dummyf_17b74; // 0809:fae4
+db dummyf_17b75; // 0809:fae5
+db dummyf_17b76; // 0809:fae6
+db dummyf_17b77; // 0809:fae7
+db dummyf_17b78; // 0809:fae8
+db dummyf_17b79; // 0809:fae9
+dd dummyf_17b7a; // 0809:faea
+db dummyf_17b7e; // 0809:faee
+db dummyf_17b7f; // 0809:faef
+db dummyf_17b80; // 0809:faf0
+db dummyf_17b81; // 0809:faf1
+db dummyf_17b82; // 0809:faf2
+db dummyf_17b83;
+dd dummyf_17b84; // 0809:faf4
+db dummyf_17b88[32]; // 0809:faf8
+db dummyf_17ba8[32]; // 0809:fb18
+db dummyf_17bc8[32]; // 0809:fb38
+db dummyf_17be8[32]; // 0809:fb58
+db dummyf_17c08[32]; // 0809:fb78
+db dummyf_17c28[32]; // 0809:fb98
+db dummyf_17c48;
+db dummyf_17c49;
+db dummyf_17c4a;
+db dummyf_17c4b;
+db dummyf_17c4c;
+db dummyf_17c4d;
+db dummyf_17c4e; // 0809:fbbe
+db dummyf_17c4f; // 0809:fbbf
 db dummyf_17c50;
 db dummyf_17c51;
-db dummyf_17c52;
-db dummyf_17c53;
+dw dummyf_17c52;
 db dummyf_17c54;
 db dummyf_17c55;
 db dummyf_17c56;
@@ -4093,7 +5000,7 @@ db dummyf_17c57;
 db dummyf_17c58;
 db dummyf_17c59;
 db dummyf_17c5a;
-dw word_2623b; // 17c5:000b
+dw dummyf_17c5b;
 db dummyf_17c5d;
 db dummyf_17c5e;
 db dummyf_17c5f;
@@ -4119,9 +5026,7 @@ db dummyf_19e16[177];
 db dummyf_19ec7; // 17c5:2277
 db dummyf_19ec8[1531];
 db dummyf_1a4c3; // 17c5:2873
-db dummyf_1a4c4[50];
-dw word_28ad6; // 17c5:28a6
-db dummyf_1a4f8[2165];
+db dummyf_1a4c4[2217];
 db dummyf_1ad6d; // 17c5:311d
 db dummyf_1ad6e[217];
 db dummyf_1ae47; // 17c5:31f7
@@ -4201,234 +5106,23 @@ db dummyf_1e3a5; // 17c5:6755
 db dummyf_1e3a6[332];
 db dummyf_1e4f2; // 17c5:68a2
 db dummyf_1e4f3; // 17c5:68a3
-db dummyf_1e4f4[170];
-dw dummyf_1e59e; // 17c5:694e
-db dummyf_1e5a0[173];
+db dummyf_1e4f4[345];
 db dummyf_1e64d; // 17c5:69fd
 db dummyf_1e64e[87];
 db dummyf_1e6a5; // 17c5:6a55
-db dummyf_1e6a6[1275];
-db dummyf_1eba1; // 17c5:6f51
-db dummyf_1eba2[745];
-db dummyf_1ee8b; // 17c5:723b
-db dummyf_1ee8c[77];
-db dummyf_1eed9; // 17c5:7289
-db dummyf_1eeda[770];
-db dummyf_1f1dc; // 17c5:758c
-db dummyf_1f1dd; // 17c5:758d
-db dummyf_1f1de[683];
-db dummyf_1f489; // 17c5:7839
-db dummyf_1f48a[435];
-db dummyf_1f63d; // 17c5:79ed
-db dummyf_1f63e[53];
-db dummyf_1f673; // 17c5:7a23
-db dummyf_1f674[895];
-db dummyf_1f9f3; // 17c5:7da3
-db dummyf_1f9f4[39];
-db dummyf_1fa1b; // 17c5:7dcb
-db dummyf_1fa1c[123];
-db dummyf_1fa97; // 17c5:7e47
-db dummyf_1fa98[323];
-db dummyf_1fbdb; // 17c5:7f8b
-db dummyf_1fbdc[485];
-db dummyf_1fdc1; // 17c5:8171
-db dummyf_1fdc2[403];
-db dummyf_1ff55; // 17c5:8305
-db dummyf_1ff56[69];
-db dummyf_1ff9b; // 17c5:834b
-db dummyf_1ff9c[619];
-db dummyf_20207; // 17c5:85b7
-db dummyf_20208[113];
-db dummyf_20279; // 17c5:8629
-db dummyf_2027a[333];
-db dummyf_203c7; // 17c5:8777
-db dummyf_203c8[113];
-db dummyf_20439; // 17c5:87e9
-db dummyf_2043a[167];
-db dummyf_204e1; // 17c5:8891
-db dummyf_204e2[75];
-db dummyf_2052d; // 17c5:88dd
-db dummyf_2052e[203];
-db dummyf_205f9; // 17c5:89a9
-db dummyf_205fa[23];
-db dummyf_20611; // 17c5:89c1
-db dummyf_20612[35];
-db dummyf_20635; // 17c5:89e5
-db dummyf_20636[191];
-db dummyf_206f5; // 17c5:8aa5
-db dummyf_206f6[123];
-db dummyf_20771; // 17c5:8b21
-db dummyf_20772[675];
-db dummyf_20a15; // 17c5:8dc5
-db dummyf_20a16[113];
-db dummyf_20a87; // 17c5:8e37
-db dummyf_20a88[5155];
-db dummyf_21eab; // 17c5:a25b
-db dummyf_21eac[143];
-db dummyf_21f3b; // 17c5:a2eb
-db dummyf_21f3c[123];
-db dummyf_21fb7; // 17c5:a367
-db dummyf_21fb8[121];
-db dummyf_22031; // 17c5:a3e1
-db dummyf_22032[855];
-db dummyf_22389; // 17c5:a739
-db dummyf_2238a[5];
-db dummyf_2238f; // 17c5:a73f
-db dummyf_22390[305];
-db dummyf_224c1; // 17c5:a871
-db dummyf_224c2[173];
-db dummyf_2256f; // 17c5:a91f
-db dummyf_22570[19];
-db dummyf_22583; // 17c5:a933
-db dummyf_22584[45];
-db dummyf_225b1; // 17c5:a961
-db dummyf_225b2[89];
-db dummyf_2260b; // 17c5:a9bb
-db dummyf_2260c[29];
-db dummyf_22629; // 17c5:a9d9
-db dummyf_2262a[8183];
-db dummyf_24621; // 17c5:c9d1
-db dummyf_24622[167];
-db dummyf_246c9; // 17c5:ca79
-db dummyf_246ca[455];
-db dummyf_24891; // 17c5:cc41
-db dummyf_24892[261];
-db dummyf_24997; // 17c5:cd47
-db dummyf_24998[489];
-db dummyf_24b81; // 17c5:cf31
-db dummyf_24b82[79];
-db dummyf_24bd1; // 17c5:cf81
-db dummyf_24bd2[265];
-db dummyf_24cdb; // 17c5:d08b
-db dummyf_24cdc[161];
-db dummyf_24d7d; // 17c5:d12d
-db dummyf_24d7e[19];
-db dummyf_24d91; // 17c5:d141
-db dummyf_24d92[27];
-db dummyf_24dad; // 17c5:d15d
-db dummyf_24dae[11];
-db dummyf_24db9; // 17c5:d169
-db dummyf_24dba[59];
-db dummyf_24df5; // 17c5:d1a5
-db dummyf_24df6[19];
-db dummyf_24e09; // 17c5:d1b9
-db dummyf_24e0a[13];
-db dummyf_24e17; // 17c5:d1c7
-db dummyf_24e18[13];
-db dummyf_24e25; // 17c5:d1d5
-db dummyf_24e26[11];
-db dummyf_24e31; // 17c5:d1e1
-db dummyf_24e32[5];
-db dummyf_24e37; // 17c5:d1e7
-db dummyf_24e38[119];
-db dummyf_24eaf; // 17c5:d25f
-db dummyf_24eb0[2683];
-db dummyf_2592b; // 17c5:dcdb
-db dummyf_2592c[129];
-db dummyf_259ad; // 17c5:dd5d
-db dummyf_259ae[17];
-db dummyf_259bf; // 17c5:dd6f
-db dummyf_259c0[57];
-db dummyf_259f9; // 17c5:dda9
-db dummyf_259fa[394];
+db dummyf_1e6a6[2870];
+db dummyf_1f1dc[2]; // 17c5:758c
+db dummyf_1f1de[27046];
 db dummyf_25b84; // 17c5:df34
-db dummyf_25b85[66];
-db dummyf_25bc7; // 17c5:df77
-db dummyf_25bc8[745];
-db dummyf_25eb1;
-db dummyf_25eb2[210];
+db dummyf_25b85[1023];
 db dummyf_25f84; // 17c5:e334
-db dummyf_25f85[14];
-db dummyf_25f93; // 17c5:e343
-db dummyf_25f94[40];
+db dummyf_25f85[55];
 db dummyf_25fbc; // 17c5:e36c
-db dummyf_25fbd[196];
-db dummyf_26081;
-db dummyf_26082[545];
-db dummyf_262a3;
-db dummyf_262a4[239];
-db dummyf_26393; // 17c5:e743
-db dummyf_26394[7];
-db dummyf_2639b; // 17c5:e74b
-db dummyf_2639c[41];
-db dummyf_263c5; // 17c5:e775
-db dummyf_263c6[119];
-db dummyf_2643d; // 17c5:e7ed
-db dummyf_2643e[15];
-db dummyf_2644d; // 17c5:e7fd
-db dummyf_2644e[17];
-db dummyf_2645f; // 17c5:e80f
-db dummyf_26460[213];
-db dummyf_26535; // 17c5:e8e5
-db dummyf_26536[69];
-db dummyf_2657b; // 17c5:e92b
-db dummyf_2657c[191];
-db dummyf_2663b;
-db dummyf_2663c[77];
-db dummyf_26689;
-db dummyf_2668a[27];
-db dummyf_266a5;
-db dummyf_266a6[43];
-db dummyf_266d1;
-db dummyf_266d2[177];
-db dummyf_26783;
-db dummyf_26784[113];
-db dummyf_267f5; // 17c5:eba5
-db dummyf_267f6[17];
-db dummyf_26807; // 17c5:ebb7
-db dummyf_26808[15];
-db dummyf_26817; // 17c5:ebc7
-db dummyf_26818[17];
-db dummyf_26829; // 17c5:ebd9
-db dummyf_2682a[297];
-db dummyf_26953;
-db dummyf_26954[31];
-db dummyf_26973;
-db dummyf_26974[97];
-db dummyf_269d5;
-db dummyf_269d6[220];
+db dummyf_25fbd[2805];
 db dummyf_26ab2; // 17c5:ee62
-db dummyf_26ab3[70];
-db dummyf_26af9; // 17c5:eea9
-db dummyf_26afa[109];
-db dummyf_26b67; // 17c5:ef17
-db dummyf_26b68[13];
-db dummyf_26b75; // 17c5:ef25
-db dummyf_26b76[61];
-db dummyf_26bb3; // 17c5:ef63
-db dummyf_26bb4[37];
-db dummyf_26bd9; // 17c5:ef89
-db dummyf_26bda[23];
-db dummyf_26bf1; // 17c5:efa1
-db dummyf_26bf2[5];
-db dummyf_26bf7; // 17c5:efa7
-db dummyf_26bf8[61];
-db dummyf_26c35; // 17c5:efe5
-db dummyf_26c36[11];
-db dummyf_26c41; // 17c5:eff1
-db dummyf_26c42[257];
-db dummyf_26d43; // 17c5:f0f3
-db dummyf_26d44[269];
-db dummyf_26e51;
-db dummyf_26e52[95];
-db dummyf_26eb1;
-db dummyf_26eb2[13];
-db dummyf_26ebf;
-db dummyf_26ec0[11];
-db dummyf_26ecb;
-db dummyf_26ecc[11];
-db dummyf_26ed7;
-db dummyf_26ed8[65];
-db dummyf_26f19; // 17c5:f2c9
-db dummyf_26f1a[197];
-db dummyf_26fdf; // 17c5:f38f
-db dummyf_26fe0[72];
+db dummyf_26ab3[1397];
 db dummyf_27028; // 17c5:f3d8
-db dummyf_27029[590];
-db dummyf_27277; // 17c5:f627
-db dummyf_27278[405];
-db dummyf_2740d;
-db dummyf_2740e[194];
+db dummyf_27029[1191];
 db dummyf_274d0[101];
 db dummyf_27535;
 db dummyf_27536[1371];
@@ -4527,86 +5221,2091 @@ db dummyf_2a51c;
 db dummyf_2a51d;
 db dummyf_2a51e;
 db dummyf_2a51f;
-db byte_38b00[47]; // 2a39:0190
-db byte_38b2f[3695]; // 2a39:01bf
-db __unk_3999e[5]; // 2a39:102e
-db _unk_399a3[20]; // 2a39:1033
-db __unk_399b7[5]; // 2a39:1047
-db dummyf_2b3dc[25]; // 2a39:104c
-db _unk_399d5[5]; // 2a39:1065
-db _unk_399da[5]; // 2a39:106a
-db __unk_399df[5]; // 2a39:106f
-db __unk_399e4[5]; // 2a39:1074
-db __unk_399e9[5]; // 2a39:1079
-db __unk_399ee[10]; // 2a39:107e
-db _unk_399f8[30]; // 2a39:1088
-db __unk_39a16[5]; // 2a39:10a6
-db _unk_39a1b[5]; // 2a39:10ab
-db __unk_39a20[5]; // 2a39:10b0
-db dummyf_2b445[5]; // 2a39:10b5
-db dummyf_2b44a[5]; // 2a39:10ba
-db _unk_39a2f[10]; // 2a39:10bf
-db __unk_39a39[5]; // 2a39:10c9
-db __unk_39a3e[5]; // 2a39:10ce
-db __unk_39a43[5]; // 2a39:10d3
-db __unk_39a48[5]; // 2a39:10d8
-db __unk_39a4d[5]; // 2a39:10dd
-db __unk_39a52[5]; // 2a39:10e2
-db __unk_39a57[15]; // 2a39:10e7
-db __unk_39a66[5]; // 2a39:10f6
-db __unk_39a6b[5]; // 2a39:10fb
-db __unk_39a70[10]; // 2a39:1100
-db _unk_39a7a[5]; // 2a39:110a
-db __unk_39a7f[5]; // 2a39:110f
-db _unk_39a84[20]; // 2a39:1114
-db __unk_39a98[5]; // 2a39:1128
-db __unk_39a9d[5]; // 2a39:112d
-db __unk_39aa2[5]; // 2a39:1132
-db __unk_39aa7[5]; // 2a39:1137
-db __unk_39aac[5]; // 2a39:113c
-db __unk_39ab1[5]; // 2a39:1141
-db __unk_39ab6[10]; // 2a39:1146
-db __unk_39ac0[5]; // 2a39:1150
-db __unk_39ac5[10]; // 2a39:1155
-db _unk_39acf[5]; // 2a39:115f
-db __unk_39ad4[5]; // 2a39:1164
-db __unk_39ad9[10]; // 2a39:1169
-db __unk_39ae3[15]; // 2a39:1173
-db __unk_39af2[5]; // 2a39:1182
-db __unk_39af7[5]; // 2a39:1187
-db __unk_39afc[5]; // 2a39:118c
-db __unk_39b01[10]; // 2a39:1191
-db __unk_39b0b[10]; // 2a39:119b
-db __unk_39b15[5]; // 2a39:11a5
-db __unk_39b1a[15]; // 2a39:11aa
-db __unk_39b29[15]; // 2a39:11b9
-db _unk_39b38[45]; // 2a39:11c8
-db __unk_39b65[10]; // 2a39:11f5
-db __unk_39b6f[35]; // 2a39:11ff
-db __unk_39b92[5]; // 2a39:1222
-db __unk_39b97[5]; // 2a39:1227
-db __unk_39b9c[10]; // 2a39:122c
-db __unk_39ba6[5]; // 2a39:1236
-db __unk_39bab[5]; // 2a39:123b
-db _unk_39bb0[5]; // 2a39:1240
-db _unk_39bb5[5]; // 2a39:1245
-db _unk_39bba[5]; // 2a39:124a
-db __unk_39bbf[17929]; // 2a39:124f
-db dummyf_2fbe8;
-db dummyf_2fbe9;
-db dummyf_2fbea;
-dw dummyf_2fbeb;
-db dummyf_2fbed;
-db dummyf_2fbee;
-db dummyf_2fbef;
-db byte_3e1d0[43280]; // 2a39:5860
-db dummyf_3a500;
+db unk_38b00; // 2a52:0000
+db dummyf_2a521[32]; // 2a52:0001
+db dummyf_2a541;
+db dummyf_2a542;
+db dummyf_2a543;
+db dummyf_2a544;
+db dummyf_2a545;
+db dummyf_2a546;
+db dummyf_2a547;
+db dummyf_2a548;
+db dummyf_2a549;
+db dummyf_2a54a;
+db dummyf_2a54b;
+db dummyf_2a54c;
+db dummyf_2a54d;
+db dummyf_2a54e;
+db byte_38b2f; // 2a52:002f
+db dummyf_2a550[32]; // 2a52:0030
+db dummyf_2a570[32]; // 2a52:0050
+db dummyf_2a590[32]; // 2a52:0070
+db dummyf_2a5b0[32]; // 2a52:0090
+db dummyf_2a5d0[32]; // 2a52:00b0
+db dummyf_2a5f0[32]; // 2a52:00d0
+db dummyf_2a610[32]; // 2a52:00f0
+db dummyf_2a630[32]; // 2a52:0110
+db dummyf_2a650[32]; // 2a52:0130
+db dummyf_2a670[32]; // 2a52:0150
+db dummyf_2a690[32]; // 2a52:0170
+db dummyf_2a6b0[32]; // 2a52:0190
+db dummyf_2a6d0[32]; // 2a52:01b0
+db dummyf_2a6f0[32]; // 2a52:01d0
+db dummyf_2a710[32]; // 2a52:01f0
+db dummyf_2a730[32]; // 2a52:0210
+db dummyf_2a750[32]; // 2a52:0230
+db dummyf_2a770[32]; // 2a52:0250
+db dummyf_2a790[32]; // 2a52:0270
+db dummyf_2a7b0[32]; // 2a52:0290
+db dummyf_2a7d0[32]; // 2a52:02b0
+db dummyf_2a7f0[32]; // 2a52:02d0
+db dummyf_2a810[32]; // 2a52:02f0
+db dummyf_2a830[32]; // 2a52:0310
+db dummyf_2a850[32]; // 2a52:0330
+db dummyf_2a870[32]; // 2a52:0350
+db dummyf_2a890[32]; // 2a52:0370
+db dummyf_2a8b0[32]; // 2a52:0390
+db dummyf_2a8d0[32]; // 2a52:03b0
+db dummyf_2a8f0[32]; // 2a52:03d0
+db dummyf_2a910[32]; // 2a52:03f0
+db dummyf_2a930[32]; // 2a52:0410
+db dummyf_2a950[32]; // 2a52:0430
+db dummyf_2a970[32]; // 2a52:0450
+db dummyf_2a990[32]; // 2a52:0470
+db dummyf_2a9b0[32]; // 2a52:0490
+db dummyf_2a9d0[32]; // 2a52:04b0
+db dummyf_2a9f0[32]; // 2a52:04d0
+db dummyf_2aa10[32]; // 2a52:04f0
+db dummyf_2aa30[32]; // 2a52:0510
+db dummyf_2aa50[32]; // 2a52:0530
+db dummyf_2aa70[32]; // 2a52:0550
+db dummyf_2aa90[32]; // 2a52:0570
+db dummyf_2aab0[32]; // 2a52:0590
+db dummyf_2aad0[32]; // 2a52:05b0
+db dummyf_2aaf0[32]; // 2a52:05d0
+db dummyf_2ab10[32]; // 2a52:05f0
+db dummyf_2ab30[32]; // 2a52:0610
+db dummyf_2ab50[32]; // 2a52:0630
+db dummyf_2ab70[32]; // 2a52:0650
+db dummyf_2ab90[32]; // 2a52:0670
+db dummyf_2abb0[32]; // 2a52:0690
+db dummyf_2abd0[32]; // 2a52:06b0
+db dummyf_2abf0[32]; // 2a52:06d0
+db dummyf_2ac10[32]; // 2a52:06f0
+db dummyf_2ac30[32]; // 2a52:0710
+db dummyf_2ac50[32]; // 2a52:0730
+db dummyf_2ac70[32]; // 2a52:0750
+db dummyf_2ac90[32]; // 2a52:0770
+db dummyf_2acb0[32]; // 2a52:0790
+db dummyf_2acd0[32]; // 2a52:07b0
+db dummyf_2acf0[32]; // 2a52:07d0
+db dummyf_2ad10[32]; // 2a52:07f0
+db dummyf_2ad30[32]; // 2a52:0810
+db dummyf_2ad50[32]; // 2a52:0830
+db dummyf_2ad70[32]; // 2a52:0850
+db dummyf_2ad90[32]; // 2a52:0870
+db dummyf_2adb0[32]; // 2a52:0890
+db dummyf_2add0[32]; // 2a52:08b0
+db dummyf_2adf0[32]; // 2a52:08d0
+db dummyf_2ae10[32]; // 2a52:08f0
+db dummyf_2ae30[32]; // 2a52:0910
+db dummyf_2ae50[32]; // 2a52:0930
+db dummyf_2ae70[32]; // 2a52:0950
+db dummyf_2ae90[32]; // 2a52:0970
+db dummyf_2aeb0[32]; // 2a52:0990
+db dummyf_2aed0[32]; // 2a52:09b0
+db dummyf_2aef0[32]; // 2a52:09d0
+db dummyf_2af10[32]; // 2a52:09f0
+db dummyf_2af30[32]; // 2a52:0a10
+db dummyf_2af50[32]; // 2a52:0a30
+db dummyf_2af70[32]; // 2a52:0a50
+db dummyf_2af90[32]; // 2a52:0a70
+db dummyf_2afb0[32]; // 2a52:0a90
+db dummyf_2afd0[32]; // 2a52:0ab0
+db dummyf_2aff0[32]; // 2a52:0ad0
+db dummyf_2b010[32]; // 2a52:0af0
+db dummyf_2b030[32]; // 2a52:0b10
+db dummyf_2b050[32]; // 2a52:0b30
+db dummyf_2b070[32]; // 2a52:0b50
+db dummyf_2b090[32]; // 2a52:0b70
+db dummyf_2b0b0[32]; // 2a52:0b90
+db dummyf_2b0d0[32]; // 2a52:0bb0
+db dummyf_2b0f0[32]; // 2a52:0bd0
+db dummyf_2b110[32]; // 2a52:0bf0
+db dummyf_2b130[32]; // 2a52:0c10
+db dummyf_2b150[32]; // 2a52:0c30
+db dummyf_2b170[32]; // 2a52:0c50
+db dummyf_2b190[32]; // 2a52:0c70
+db dummyf_2b1b0[32]; // 2a52:0c90
+db dummyf_2b1d0[32]; // 2a52:0cb0
+db dummyf_2b1f0[32]; // 2a52:0cd0
+db dummyf_2b210[32]; // 2a52:0cf0
+db dummyf_2b230[32]; // 2a52:0d10
+db dummyf_2b250[32]; // 2a52:0d30
+db dummyf_2b270[32]; // 2a52:0d50
+db dummyf_2b290[32]; // 2a52:0d70
+db dummyf_2b2b0[32]; // 2a52:0d90
+db dummyf_2b2d0[32]; // 2a52:0db0
+db dummyf_2b2f0[32]; // 2a52:0dd0
+db dummyf_2b310[32]; // 2a52:0df0
+db dummyf_2b330[32]; // 2a52:0e10
+db dummyf_2b350[32]; // 2a52:0e30
+db dummyf_2b370[32]; // 2a52:0e50
+db dummyf_2b390[32]; // 2a52:0e70
+db dummyf_2b3b0[32]; // 2a52:0e90
+db dummyf_2b3d0[32]; // 2a52:0eb0
+db dummyf_2b3f0[32]; // 2a52:0ed0
+db dummyf_2b410[32]; // 2a52:0ef0
+db dummyf_2b430[32]; // 2a52:0f10
+db dummyf_2b450[32]; // 2a52:0f30
+db dummyf_2b470[32]; // 2a52:0f50
+db dummyf_2b490[32]; // 2a52:0f70
+db dummyf_2b4b0[32]; // 2a52:0f90
+db dummyf_2b4d0[32]; // 2a52:0fb0
+db dummyf_2b4f0[32]; // 2a52:0fd0
+db dummyf_2b510[32]; // 2a52:0ff0
+db dummyf_2b530[32]; // 2a52:1010
+db dummyf_2b550[32]; // 2a52:1030
+db dummyf_2b570[32]; // 2a52:1050
+db dummyf_2b590[32]; // 2a52:1070
+db dummyf_2b5b0[32]; // 2a52:1090
+db dummyf_2b5d0[32]; // 2a52:10b0
+db dummyf_2b5f0[32]; // 2a52:10d0
+db dummyf_2b610[32]; // 2a52:10f0
+db dummyf_2b630[32]; // 2a52:1110
+db dummyf_2b650[32]; // 2a52:1130
+db dummyf_2b670[32]; // 2a52:1150
+db dummyf_2b690[32]; // 2a52:1170
+db dummyf_2b6b0[32]; // 2a52:1190
+db dummyf_2b6d0[32]; // 2a52:11b0
+db dummyf_2b6f0[32]; // 2a52:11d0
+db dummyf_2b710[32]; // 2a52:11f0
+db dummyf_2b730[32]; // 2a52:1210
+db dummyf_2b750[32]; // 2a52:1230
+db dummyf_2b770[32]; // 2a52:1250
+db dummyf_2b790[32]; // 2a52:1270
+db dummyf_2b7b0[32]; // 2a52:1290
+db dummyf_2b7d0[32]; // 2a52:12b0
+db dummyf_2b7f0[32]; // 2a52:12d0
+db dummyf_2b810[32]; // 2a52:12f0
+db dummyf_2b830[32]; // 2a52:1310
+db dummyf_2b850[32]; // 2a52:1330
+db dummyf_2b870[32]; // 2a52:1350
+db dummyf_2b890[32]; // 2a52:1370
+db dummyf_2b8b0[32]; // 2a52:1390
+db dummyf_2b8d0[32]; // 2a52:13b0
+db dummyf_2b8f0[32]; // 2a52:13d0
+db dummyf_2b910[32]; // 2a52:13f0
+db dummyf_2b930[32]; // 2a52:1410
+db dummyf_2b950[32]; // 2a52:1430
+db dummyf_2b970[32]; // 2a52:1450
+db dummyf_2b990[32]; // 2a52:1470
+db dummyf_2b9b0[32]; // 2a52:1490
+db dummyf_2b9d0[32]; // 2a52:14b0
+db dummyf_2b9f0[32]; // 2a52:14d0
+db dummyf_2ba10[32]; // 2a52:14f0
+db dummyf_2ba30[32]; // 2a52:1510
+db dummyf_2ba50[32]; // 2a52:1530
+db dummyf_2ba70[32]; // 2a52:1550
+db dummyf_2ba90[32]; // 2a52:1570
+db dummyf_2bab0[32]; // 2a52:1590
+db dummyf_2bad0[32]; // 2a52:15b0
+db dummyf_2baf0[32]; // 2a52:15d0
+db dummyf_2bb10[32]; // 2a52:15f0
+db dummyf_2bb30[32]; // 2a52:1610
+db dummyf_2bb50[32]; // 2a52:1630
+db dummyf_2bb70[32]; // 2a52:1650
+db dummyf_2bb90[32]; // 2a52:1670
+db dummyf_2bbb0[32]; // 2a52:1690
+db dummyf_2bbd0[32]; // 2a52:16b0
+db dummyf_2bbf0[32]; // 2a52:16d0
+db dummyf_2bc10[32]; // 2a52:16f0
+db dummyf_2bc30[32]; // 2a52:1710
+db dummyf_2bc50[32]; // 2a52:1730
+db dummyf_2bc70[32]; // 2a52:1750
+db dummyf_2bc90[32]; // 2a52:1770
+db dummyf_2bcb0[32]; // 2a52:1790
+db dummyf_2bcd0[32]; // 2a52:17b0
+db dummyf_2bcf0[32]; // 2a52:17d0
+db dummyf_2bd10[32]; // 2a52:17f0
+db dummyf_2bd30[32]; // 2a52:1810
+db dummyf_2bd50[32]; // 2a52:1830
+db dummyf_2bd70[32]; // 2a52:1850
+db dummyf_2bd90[32]; // 2a52:1870
+db dummyf_2bdb0[32]; // 2a52:1890
+db dummyf_2bdd0[32]; // 2a52:18b0
+db dummyf_2bdf0[32]; // 2a52:18d0
+db dummyf_2be10[32]; // 2a52:18f0
+db dummyf_2be30[32]; // 2a52:1910
+db dummyf_2be50[32]; // 2a52:1930
+db dummyf_2be70[32]; // 2a52:1950
+db dummyf_2be90[32]; // 2a52:1970
+db dummyf_2beb0[32]; // 2a52:1990
+db dummyf_2bed0[32]; // 2a52:19b0
+db dummyf_2bef0[32]; // 2a52:19d0
+db dummyf_2bf10[32]; // 2a52:19f0
+db dummyf_2bf30[32]; // 2a52:1a10
+db dummyf_2bf50[32]; // 2a52:1a30
+db dummyf_2bf70[32]; // 2a52:1a50
+db dummyf_2bf90[32]; // 2a52:1a70
+db dummyf_2bfb0[32]; // 2a52:1a90
+db dummyf_2bfd0[32]; // 2a52:1ab0
+db dummyf_2bff0[32]; // 2a52:1ad0
+db dummyf_2c010[32]; // 2a52:1af0
+db dummyf_2c030[32]; // 2a52:1b10
+db dummyf_2c050[32]; // 2a52:1b30
+db dummyf_2c070[32]; // 2a52:1b50
+db dummyf_2c090[32]; // 2a52:1b70
+db dummyf_2c0b0[32]; // 2a52:1b90
+db dummyf_2c0d0[32]; // 2a52:1bb0
+db dummyf_2c0f0[32]; // 2a52:1bd0
+db dummyf_2c110[32]; // 2a52:1bf0
+db dummyf_2c130[32]; // 2a52:1c10
+db dummyf_2c150[32]; // 2a52:1c30
+db dummyf_2c170[32]; // 2a52:1c50
+db dummyf_2c190[32]; // 2a52:1c70
+db dummyf_2c1b0[32]; // 2a52:1c90
+db dummyf_2c1d0[32]; // 2a52:1cb0
+db dummyf_2c1f0[32]; // 2a52:1cd0
+db dummyf_2c210[32]; // 2a52:1cf0
+db dummyf_2c230[32]; // 2a52:1d10
+db dummyf_2c250[32]; // 2a52:1d30
+db dummyf_2c270[32]; // 2a52:1d50
+db dummyf_2c290[32]; // 2a52:1d70
+db dummyf_2c2b0[32]; // 2a52:1d90
+db dummyf_2c2d0[32]; // 2a52:1db0
+db dummyf_2c2f0[32]; // 2a52:1dd0
+db dummyf_2c310[32]; // 2a52:1df0
+db dummyf_2c330[32]; // 2a52:1e10
+db dummyf_2c350[32]; // 2a52:1e30
+db dummyf_2c370[32]; // 2a52:1e50
+db dummyf_2c390[32]; // 2a52:1e70
+db dummyf_2c3b0[32]; // 2a52:1e90
+db dummyf_2c3d0[32]; // 2a52:1eb0
+db dummyf_2c3f0[32]; // 2a52:1ed0
+db dummyf_2c410[32]; // 2a52:1ef0
+db dummyf_2c430[32]; // 2a52:1f10
+db dummyf_2c450[32]; // 2a52:1f30
+db dummyf_2c470[32]; // 2a52:1f50
+db dummyf_2c490[32]; // 2a52:1f70
+db dummyf_2c4b0[32]; // 2a52:1f90
+db dummyf_2c4d0[32]; // 2a52:1fb0
+db dummyf_2c4f0[32]; // 2a52:1fd0
+db dummyf_2c510[32]; // 2a52:1ff0
+db dummyf_2c530[32]; // 2a52:2010
+db dummyf_2c550[32]; // 2a52:2030
+db dummyf_2c570[32]; // 2a52:2050
+db dummyf_2c590[32]; // 2a52:2070
+db dummyf_2c5b0[32]; // 2a52:2090
+db dummyf_2c5d0[32]; // 2a52:20b0
+db dummyf_2c5f0[32]; // 2a52:20d0
+db dummyf_2c610[32]; // 2a52:20f0
+db dummyf_2c630[32]; // 2a52:2110
+db dummyf_2c650[32]; // 2a52:2130
+db dummyf_2c670[32]; // 2a52:2150
+db dummyf_2c690[32]; // 2a52:2170
+db dummyf_2c6b0[32]; // 2a52:2190
+db dummyf_2c6d0[32]; // 2a52:21b0
+db dummyf_2c6f0[32]; // 2a52:21d0
+db dummyf_2c710[32]; // 2a52:21f0
+db dummyf_2c730[32]; // 2a52:2210
+db dummyf_2c750[32]; // 2a52:2230
+db dummyf_2c770[32]; // 2a52:2250
+db dummyf_2c790[32]; // 2a52:2270
+db dummyf_2c7b0[32]; // 2a52:2290
+db dummyf_2c7d0[32]; // 2a52:22b0
+db dummyf_2c7f0[32]; // 2a52:22d0
+db dummyf_2c810[32]; // 2a52:22f0
+db dummyf_2c830[32]; // 2a52:2310
+db dummyf_2c850[32]; // 2a52:2330
+db dummyf_2c870[32]; // 2a52:2350
+db dummyf_2c890[32]; // 2a52:2370
+db dummyf_2c8b0[32]; // 2a52:2390
+db dummyf_2c8d0[32]; // 2a52:23b0
+db dummyf_2c8f0[32]; // 2a52:23d0
+db dummyf_2c910[32]; // 2a52:23f0
+db dummyf_2c930[32]; // 2a52:2410
+db dummyf_2c950[32]; // 2a52:2430
+db dummyf_2c970[32]; // 2a52:2450
+db dummyf_2c990[32]; // 2a52:2470
+db dummyf_2c9b0[32]; // 2a52:2490
+db dummyf_2c9d0[32]; // 2a52:24b0
+db dummyf_2c9f0[32]; // 2a52:24d0
+db dummyf_2ca10[32]; // 2a52:24f0
+db dummyf_2ca30[32]; // 2a52:2510
+db dummyf_2ca50[32]; // 2a52:2530
+db dummyf_2ca70[32]; // 2a52:2550
+db dummyf_2ca90[32]; // 2a52:2570
+db dummyf_2cab0[32]; // 2a52:2590
+db dummyf_2cad0[32]; // 2a52:25b0
+db dummyf_2caf0[32]; // 2a52:25d0
+db dummyf_2cb10[32]; // 2a52:25f0
+db dummyf_2cb30[32]; // 2a52:2610
+db dummyf_2cb50[32]; // 2a52:2630
+db dummyf_2cb70[32]; // 2a52:2650
+db dummyf_2cb90[32]; // 2a52:2670
+db dummyf_2cbb0[32]; // 2a52:2690
+db dummyf_2cbd0[32]; // 2a52:26b0
+db dummyf_2cbf0[32]; // 2a52:26d0
+db dummyf_2cc10[32]; // 2a52:26f0
+db dummyf_2cc30[32]; // 2a52:2710
+db dummyf_2cc50[32]; // 2a52:2730
+db dummyf_2cc70[32]; // 2a52:2750
+db dummyf_2cc90[32]; // 2a52:2770
+db dummyf_2ccb0[32]; // 2a52:2790
+db dummyf_2ccd0[32]; // 2a52:27b0
+db dummyf_2ccf0[32]; // 2a52:27d0
+db dummyf_2cd10[32]; // 2a52:27f0
+db dummyf_2cd30[32]; // 2a52:2810
+db dummyf_2cd50[32]; // 2a52:2830
+db dummyf_2cd70[32]; // 2a52:2850
+db dummyf_2cd90[32]; // 2a52:2870
+db dummyf_2cdb0[32]; // 2a52:2890
+db dummyf_2cdd0[32]; // 2a52:28b0
+db dummyf_2cdf0[32]; // 2a52:28d0
+db dummyf_2ce10[32]; // 2a52:28f0
+db dummyf_2ce30[32]; // 2a52:2910
+db dummyf_2ce50[32]; // 2a52:2930
+db dummyf_2ce70[32]; // 2a52:2950
+db dummyf_2ce90[32]; // 2a52:2970
+db dummyf_2ceb0[32]; // 2a52:2990
+db dummyf_2ced0[32]; // 2a52:29b0
+db dummyf_2cef0[32]; // 2a52:29d0
+db dummyf_2cf10[32]; // 2a52:29f0
+db dummyf_2cf30[32]; // 2a52:2a10
+db dummyf_2cf50[32]; // 2a52:2a30
+db dummyf_2cf70[32]; // 2a52:2a50
+db dummyf_2cf90[32]; // 2a52:2a70
+db dummyf_2cfb0[32]; // 2a52:2a90
+db dummyf_2cfd0[32]; // 2a52:2ab0
+db dummyf_2cff0[32]; // 2a52:2ad0
+db dummyf_2d010[32]; // 2a52:2af0
+db dummyf_2d030[32]; // 2a52:2b10
+db dummyf_2d050[32]; // 2a52:2b30
+db dummyf_2d070[32]; // 2a52:2b50
+db dummyf_2d090[32]; // 2a52:2b70
+db dummyf_2d0b0[32]; // 2a52:2b90
+db dummyf_2d0d0[32]; // 2a52:2bb0
+db dummyf_2d0f0[32]; // 2a52:2bd0
+db dummyf_2d110[32]; // 2a52:2bf0
+db dummyf_2d130[32]; // 2a52:2c10
+db dummyf_2d150[32]; // 2a52:2c30
+db dummyf_2d170[32]; // 2a52:2c50
+db dummyf_2d190[32]; // 2a52:2c70
+db dummyf_2d1b0[32]; // 2a52:2c90
+db dummyf_2d1d0[32]; // 2a52:2cb0
+db dummyf_2d1f0[32]; // 2a52:2cd0
+db dummyf_2d210[32]; // 2a52:2cf0
+db dummyf_2d230[32]; // 2a52:2d10
+db dummyf_2d250[32]; // 2a52:2d30
+db dummyf_2d270[32]; // 2a52:2d50
+db dummyf_2d290[32]; // 2a52:2d70
+db dummyf_2d2b0[32]; // 2a52:2d90
+db dummyf_2d2d0[32]; // 2a52:2db0
+db dummyf_2d2f0[32]; // 2a52:2dd0
+db dummyf_2d310[32]; // 2a52:2df0
+db dummyf_2d330[32]; // 2a52:2e10
+db dummyf_2d350[32]; // 2a52:2e30
+db dummyf_2d370[32]; // 2a52:2e50
+db dummyf_2d390[32]; // 2a52:2e70
+db dummyf_2d3b0[32]; // 2a52:2e90
+db dummyf_2d3d0[32]; // 2a52:2eb0
+db dummyf_2d3f0[32]; // 2a52:2ed0
+db dummyf_2d410[32]; // 2a52:2ef0
+db dummyf_2d430[32]; // 2a52:2f10
+db dummyf_2d450[32]; // 2a52:2f30
+db dummyf_2d470[32]; // 2a52:2f50
+db dummyf_2d490[32]; // 2a52:2f70
+db dummyf_2d4b0[32]; // 2a52:2f90
+db dummyf_2d4d0[32]; // 2a52:2fb0
+db dummyf_2d4f0[32]; // 2a52:2fd0
+db dummyf_2d510[32]; // 2a52:2ff0
+db dummyf_2d530[32]; // 2a52:3010
+db dummyf_2d550[32]; // 2a52:3030
+db dummyf_2d570[32]; // 2a52:3050
+db dummyf_2d590[32]; // 2a52:3070
+db dummyf_2d5b0[32]; // 2a52:3090
+db dummyf_2d5d0[32]; // 2a52:30b0
+db dummyf_2d5f0[32]; // 2a52:30d0
+db dummyf_2d610[32]; // 2a52:30f0
+db dummyf_2d630[32]; // 2a52:3110
+db dummyf_2d650[32]; // 2a52:3130
+db dummyf_2d670[32]; // 2a52:3150
+db dummyf_2d690[32]; // 2a52:3170
+db dummyf_2d6b0[32]; // 2a52:3190
+db dummyf_2d6d0[32]; // 2a52:31b0
+db dummyf_2d6f0[32]; // 2a52:31d0
+db dummyf_2d710[32]; // 2a52:31f0
+db dummyf_2d730[32]; // 2a52:3210
+db dummyf_2d750[32]; // 2a52:3230
+db dummyf_2d770[32]; // 2a52:3250
+db dummyf_2d790[32]; // 2a52:3270
+db dummyf_2d7b0[32]; // 2a52:3290
+db dummyf_2d7d0[32]; // 2a52:32b0
+db dummyf_2d7f0[32]; // 2a52:32d0
+db dummyf_2d810[32]; // 2a52:32f0
+db dummyf_2d830[32]; // 2a52:3310
+db dummyf_2d850[32]; // 2a52:3330
+db dummyf_2d870[32]; // 2a52:3350
+db dummyf_2d890[32]; // 2a52:3370
+db dummyf_2d8b0[32]; // 2a52:3390
+db dummyf_2d8d0[32]; // 2a52:33b0
+db dummyf_2d8f0[32]; // 2a52:33d0
+db dummyf_2d910[32]; // 2a52:33f0
+db dummyf_2d930[32]; // 2a52:3410
+db dummyf_2d950[32]; // 2a52:3430
+db dummyf_2d970[32]; // 2a52:3450
+db dummyf_2d990[32]; // 2a52:3470
+db dummyf_2d9b0[32]; // 2a52:3490
+db dummyf_2d9d0[32]; // 2a52:34b0
+db dummyf_2d9f0[32]; // 2a52:34d0
+db dummyf_2da10[32]; // 2a52:34f0
+db dummyf_2da30[32]; // 2a52:3510
+db dummyf_2da50[32]; // 2a52:3530
+db dummyf_2da70[32]; // 2a52:3550
+db dummyf_2da90[32]; // 2a52:3570
+db dummyf_2dab0[32]; // 2a52:3590
+db dummyf_2dad0[32]; // 2a52:35b0
+db dummyf_2daf0[32]; // 2a52:35d0
+db dummyf_2db10[32]; // 2a52:35f0
+db dummyf_2db30[32]; // 2a52:3610
+db dummyf_2db50[32]; // 2a52:3630
+db dummyf_2db70[32]; // 2a52:3650
+db dummyf_2db90[32]; // 2a52:3670
+db dummyf_2dbb0[32]; // 2a52:3690
+db dummyf_2dbd0[32]; // 2a52:36b0
+db dummyf_2dbf0[32]; // 2a52:36d0
+db dummyf_2dc10[32]; // 2a52:36f0
+db dummyf_2dc30[32]; // 2a52:3710
+db dummyf_2dc50[32]; // 2a52:3730
+db dummyf_2dc70[32]; // 2a52:3750
+db dummyf_2dc90[32]; // 2a52:3770
+db dummyf_2dcb0[32]; // 2a52:3790
+db dummyf_2dcd0[32]; // 2a52:37b0
+db dummyf_2dcf0[32]; // 2a52:37d0
+db dummyf_2dd10[32]; // 2a52:37f0
+db dummyf_2dd30[32]; // 2a52:3810
+db dummyf_2dd50[32]; // 2a52:3830
+db dummyf_2dd70[32]; // 2a52:3850
+db dummyf_2dd90[32]; // 2a52:3870
+db dummyf_2ddb0[32]; // 2a52:3890
+db dummyf_2ddd0[32]; // 2a52:38b0
+db dummyf_2ddf0[32]; // 2a52:38d0
+db dummyf_2de10[32]; // 2a52:38f0
+db dummyf_2de30[32]; // 2a52:3910
+db dummyf_2de50[32]; // 2a52:3930
+db dummyf_2de70[32]; // 2a52:3950
+db dummyf_2de90[32]; // 2a52:3970
+db dummyf_2deb0[32]; // 2a52:3990
+db dummyf_2ded0[32]; // 2a52:39b0
+db dummyf_2def0[32]; // 2a52:39d0
+db dummyf_2df10[32]; // 2a52:39f0
+db dummyf_2df30[32]; // 2a52:3a10
+db dummyf_2df50[32]; // 2a52:3a30
+db dummyf_2df70[32]; // 2a52:3a50
+db dummyf_2df90[32]; // 2a52:3a70
+db dummyf_2dfb0[32]; // 2a52:3a90
+db dummyf_2dfd0[32]; // 2a52:3ab0
+db dummyf_2dff0[32]; // 2a52:3ad0
+db dummyf_2e010[32]; // 2a52:3af0
+db dummyf_2e030[32]; // 2a52:3b10
+db dummyf_2e050[32]; // 2a52:3b30
+db dummyf_2e070[32]; // 2a52:3b50
+db dummyf_2e090[32]; // 2a52:3b70
+db dummyf_2e0b0[32]; // 2a52:3b90
+db dummyf_2e0d0[32]; // 2a52:3bb0
+db dummyf_2e0f0[32]; // 2a52:3bd0
+db dummyf_2e110[32]; // 2a52:3bf0
+db dummyf_2e130[32]; // 2a52:3c10
+db dummyf_2e150[32]; // 2a52:3c30
+db dummyf_2e170[32]; // 2a52:3c50
+db dummyf_2e190[32]; // 2a52:3c70
+db dummyf_2e1b0[32]; // 2a52:3c90
+db dummyf_2e1d0[32]; // 2a52:3cb0
+db dummyf_2e1f0[32]; // 2a52:3cd0
+db dummyf_2e210[32]; // 2a52:3cf0
+db dummyf_2e230[32]; // 2a52:3d10
+db dummyf_2e250[32]; // 2a52:3d30
+db dummyf_2e270[32]; // 2a52:3d50
+db dummyf_2e290[32]; // 2a52:3d70
+db dummyf_2e2b0[32]; // 2a52:3d90
+db dummyf_2e2d0[32]; // 2a52:3db0
+db dummyf_2e2f0[32]; // 2a52:3dd0
+db dummyf_2e310[32]; // 2a52:3df0
+db dummyf_2e330[32]; // 2a52:3e10
+db dummyf_2e350[32]; // 2a52:3e30
+db dummyf_2e370[32]; // 2a52:3e50
+db dummyf_2e390[32]; // 2a52:3e70
+db dummyf_2e3b0[32]; // 2a52:3e90
+db dummyf_2e3d0[32]; // 2a52:3eb0
+db dummyf_2e3f0[32]; // 2a52:3ed0
+db dummyf_2e410[32]; // 2a52:3ef0
+db dummyf_2e430[32]; // 2a52:3f10
+db dummyf_2e450[32]; // 2a52:3f30
+db dummyf_2e470[32]; // 2a52:3f50
+db dummyf_2e490[32]; // 2a52:3f70
+db dummyf_2e4b0[32]; // 2a52:3f90
+db dummyf_2e4d0[32]; // 2a52:3fb0
+db dummyf_2e4f0[32]; // 2a52:3fd0
+db dummyf_2e510[32]; // 2a52:3ff0
+db dummyf_2e530[32]; // 2a52:4010
+db dummyf_2e550[32]; // 2a52:4030
+db dummyf_2e570[32]; // 2a52:4050
+db dummyf_2e590[32]; // 2a52:4070
+db dummyf_2e5b0[32]; // 2a52:4090
+db dummyf_2e5d0[32]; // 2a52:40b0
+db dummyf_2e5f0[32]; // 2a52:40d0
+db dummyf_2e610[32]; // 2a52:40f0
+db dummyf_2e630[32]; // 2a52:4110
+db dummyf_2e650[32]; // 2a52:4130
+db dummyf_2e670[32]; // 2a52:4150
+db dummyf_2e690[32]; // 2a52:4170
+db dummyf_2e6b0[32]; // 2a52:4190
+db dummyf_2e6d0[32]; // 2a52:41b0
+db dummyf_2e6f0[32]; // 2a52:41d0
+db dummyf_2e710[32]; // 2a52:41f0
+db dummyf_2e730[32]; // 2a52:4210
+db dummyf_2e750[32]; // 2a52:4230
+db dummyf_2e770[32]; // 2a52:4250
+db dummyf_2e790[32]; // 2a52:4270
+db unk_3cd90; // 2e7b:0000
+db dummyf_2e7b1[32]; // 2e7b:0001
+db dummyf_2e7d1[32]; // 2e7b:0021
+db dummyf_2e7f1[32]; // 2e7b:0041
+db dummyf_2e811[32]; // 2e7b:0061
+db dummyf_2e831[32]; // 2e7b:0081
+db dummyf_2e851[32]; // 2e7b:00a1
+db dummyf_2e871[32]; // 2e7b:00c1
+db dummyf_2e891[32]; // 2e7b:00e1
+db dummyf_2e8b1[32]; // 2e7b:0101
+db dummyf_2e8d1[32]; // 2e7b:0121
+db dummyf_2e8f1[32]; // 2e7b:0141
+db dummyf_2e911[32]; // 2e7b:0161
+db dummyf_2e931[32]; // 2e7b:0181
+db dummyf_2e951[32]; // 2e7b:01a1
+db dummyf_2e971[32]; // 2e7b:01c1
+db dummyf_2e991[32]; // 2e7b:01e1
+db dummyf_2e9b1[32]; // 2e7b:0201
+db dummyf_2e9d1[32]; // 2e7b:0221
+db dummyf_2e9f1[32]; // 2e7b:0241
+db dummyf_2ea11[32]; // 2e7b:0261
+db dummyf_2ea31[32]; // 2e7b:0281
+db dummyf_2ea51[32]; // 2e7b:02a1
+db dummyf_2ea71[32]; // 2e7b:02c1
+db dummyf_2ea91[32]; // 2e7b:02e1
+db dummyf_2eab1[32]; // 2e7b:0301
+db dummyf_2ead1[32]; // 2e7b:0321
+db dummyf_2eaf1[32]; // 2e7b:0341
+db dummyf_2eb11[32]; // 2e7b:0361
+db dummyf_2eb31[32]; // 2e7b:0381
+db dummyf_2eb51[32]; // 2e7b:03a1
+db dummyf_2eb71[32]; // 2e7b:03c1
+db dummyf_2eb91[32]; // 2e7b:03e1
+db dummyf_2ebb1[32]; // 2e7b:0401
+db dummyf_2ebd1[32]; // 2e7b:0421
+db dummyf_2ebf1[32]; // 2e7b:0441
+db dummyf_2ec11[32]; // 2e7b:0461
+db dummyf_2ec31[32]; // 2e7b:0481
+db dummyf_2ec51[32]; // 2e7b:04a1
+db dummyf_2ec71[32]; // 2e7b:04c1
+db dummyf_2ec91[32]; // 2e7b:04e1
+db dummyf_2ecb1[32]; // 2e7b:0501
+db dummyf_2ecd1[32]; // 2e7b:0521
+db dummyf_2ecf1[32]; // 2e7b:0541
+db dummyf_2ed11[32]; // 2e7b:0561
+db dummyf_2ed31[32]; // 2e7b:0581
+db dummyf_2ed51[32]; // 2e7b:05a1
+db dummyf_2ed71[32]; // 2e7b:05c1
+db dummyf_2ed91[32]; // 2e7b:05e1
+db dummyf_2edb1[32]; // 2e7b:0601
+db dummyf_2edd1[32]; // 2e7b:0621
+db dummyf_2edf1[32]; // 2e7b:0641
+db dummyf_2ee11[32]; // 2e7b:0661
+db dummyf_2ee31[32]; // 2e7b:0681
+db dummyf_2ee51[32]; // 2e7b:06a1
+db dummyf_2ee71[32]; // 2e7b:06c1
+db dummyf_2ee91[32]; // 2e7b:06e1
+db dummyf_2eeb1[32]; // 2e7b:0701
+db dummyf_2eed1[32]; // 2e7b:0721
+db dummyf_2eef1[32]; // 2e7b:0741
+db dummyf_2ef11[32]; // 2e7b:0761
+db dummyf_2ef31[32]; // 2e7b:0781
+db dummyf_2ef51[32]; // 2e7b:07a1
+db dummyf_2ef71[32]; // 2e7b:07c1
+db dummyf_2ef91[32]; // 2e7b:07e1
+db dummyf_2efb1[32]; // 2e7b:0801
+db dummyf_2efd1[32]; // 2e7b:0821
+db dummyf_2eff1[32]; // 2e7b:0841
+db dummyf_2f011[32]; // 2e7b:0861
+db dummyf_2f031[32]; // 2e7b:0881
+db dummyf_2f051[32]; // 2e7b:08a1
+db dummyf_2f071[32]; // 2e7b:08c1
+db dummyf_2f091[32]; // 2e7b:08e1
+db dummyf_2f0b1[32]; // 2e7b:0901
+db dummyf_2f0d1[32]; // 2e7b:0921
+db dummyf_2f0f1[32]; // 2e7b:0941
+db dummyf_2f111[32]; // 2e7b:0961
+db dummyf_2f131[32]; // 2e7b:0981
+db dummyf_2f151[32]; // 2e7b:09a1
+db dummyf_2f171[32]; // 2e7b:09c1
+db dummyf_2f191[32]; // 2e7b:09e1
+db dummyf_2f1b1[32]; // 2e7b:0a01
+db dummyf_2f1d1[32]; // 2e7b:0a21
+db dummyf_2f1f1[32]; // 2e7b:0a41
+db dummyf_2f211[32]; // 2e7b:0a61
+db dummyf_2f231[32]; // 2e7b:0a81
+db dummyf_2f251[32]; // 2e7b:0aa1
+db dummyf_2f271[32]; // 2e7b:0ac1
+db dummyf_2f291[32]; // 2e7b:0ae1
+db dummyf_2f2b1[32]; // 2e7b:0b01
+db dummyf_2f2d1[32]; // 2e7b:0b21
+db dummyf_2f2f1[32]; // 2e7b:0b41
+db dummyf_2f311[32]; // 2e7b:0b61
+db dummyf_2f331[32]; // 2e7b:0b81
+db dummyf_2f351[32]; // 2e7b:0ba1
+db dummyf_2f371[32]; // 2e7b:0bc1
+db dummyf_2f391[32]; // 2e7b:0be1
+db dummyf_2f3b1[32]; // 2e7b:0c01
+db dummyf_2f3d1[32]; // 2e7b:0c21
+db dummyf_2f3f1[32]; // 2e7b:0c41
+db dummyf_2f411[32]; // 2e7b:0c61
+db dummyf_2f431[32]; // 2e7b:0c81
+db dummyf_2f451[32]; // 2e7b:0ca1
+db dummyf_2f471[32]; // 2e7b:0cc1
+db dummyf_2f491[32]; // 2e7b:0ce1
+db dummyf_2f4b1[32]; // 2e7b:0d01
+db dummyf_2f4d1[32]; // 2e7b:0d21
+db dummyf_2f4f1[32]; // 2e7b:0d41
+db dummyf_2f511[32]; // 2e7b:0d61
+db dummyf_2f531[32]; // 2e7b:0d81
+db dummyf_2f551[32]; // 2e7b:0da1
+db dummyf_2f571[32]; // 2e7b:0dc1
+db dummyf_2f591[32]; // 2e7b:0de1
+db dummyf_2f5b1[32]; // 2e7b:0e01
+db dummyf_2f5d1[32]; // 2e7b:0e21
+db dummyf_2f5f1[32]; // 2e7b:0e41
+db dummyf_2f611[32]; // 2e7b:0e61
+db dummyf_2f631[32]; // 2e7b:0e81
+db dummyf_2f651[32]; // 2e7b:0ea1
+db dummyf_2f671[32]; // 2e7b:0ec1
+db dummyf_2f691[32]; // 2e7b:0ee1
+db dummyf_2f6b1[32]; // 2e7b:0f01
+db dummyf_2f6d1[32]; // 2e7b:0f21
+db dummyf_2f6f1[32]; // 2e7b:0f41
+db dummyf_2f711[32]; // 2e7b:0f61
+db dummyf_2f731[32]; // 2e7b:0f81
+db dummyf_2f751[32]; // 2e7b:0fa1
+db dummyf_2f771[32]; // 2e7b:0fc1
+db dummyf_2f791[32]; // 2e7b:0fe1
+db dummyf_2f7b1[32]; // 2e7b:1001
+db dummyf_2f7d1[32]; // 2e7b:1021
+db dummyf_2f7f1[32]; // 2e7b:1041
+db dummyf_2f811[32]; // 2e7b:1061
+db dummyf_2f831[32]; // 2e7b:1081
+db dummyf_2f851[32]; // 2e7b:10a1
+db dummyf_2f871[32]; // 2e7b:10c1
+db dummyf_2f891[32]; // 2e7b:10e1
+db dummyf_2f8b1[32]; // 2e7b:1101
+db dummyf_2f8d1[32]; // 2e7b:1121
+db dummyf_2f8f1[32]; // 2e7b:1141
+db dummyf_2f911[32]; // 2e7b:1161
+db dummyf_2f931[32]; // 2e7b:1181
+db dummyf_2f951[32]; // 2e7b:11a1
+db dummyf_2f971[32]; // 2e7b:11c1
+db dummyf_2f991[32]; // 2e7b:11e1
+db dummyf_2f9b1[32]; // 2e7b:1201
+db dummyf_2f9d1[32]; // 2e7b:1221
+db dummyf_2f9f1[32]; // 2e7b:1241
+db dummyf_2fa11[32]; // 2e7b:1261
+db dummyf_2fa31[32]; // 2e7b:1281
+db dummyf_2fa51[32]; // 2e7b:12a1
+db dummyf_2fa71[32]; // 2e7b:12c1
+db dummyf_2fa91[32]; // 2e7b:12e1
+db dummyf_2fab1[32]; // 2e7b:1301
+db dummyf_2fad1[32]; // 2e7b:1321
+db dummyf_2faf1[32]; // 2e7b:1341
+db dummyf_2fb11[32]; // 2e7b:1361
+db dummyf_2fb31[32]; // 2e7b:1381
+db dummyf_2fb51[32]; // 2e7b:13a1
+db dummyf_2fb71[32]; // 2e7b:13c1
+db dummyf_2fb91[32]; // 2e7b:13e1
+db dummyf_2fbb1[32]; // 2e7b:1401
+db dummyf_2fbd1[32]; // 2e7b:1421
+db dummyf_2fbf1[32]; // 2e7b:1441
+db dummyf_2fc11[32]; // 2e7b:1461
+db dummyf_2fc31[32]; // 2e7b:1481
+db dummyf_2fc51[32]; // 2e7b:14a1
+db dummyf_2fc71[32]; // 2e7b:14c1
+db dummyf_2fc91[32]; // 2e7b:14e1
+db dummyf_2fcb1[32]; // 2e7b:1501
+db dummyf_2fcd1[32]; // 2e7b:1521
+db dummyf_2fcf1[32]; // 2e7b:1541
+db dummyf_2fd11[32]; // 2e7b:1561
+db dummyf_2fd31[32]; // 2e7b:1581
+db dummyf_2fd51[32]; // 2e7b:15a1
+db dummyf_2fd71[32]; // 2e7b:15c1
+db dummyf_2fd91[32]; // 2e7b:15e1
+db dummyf_2fdb1[32]; // 2e7b:1601
+db dummyf_2fdd1[32]; // 2e7b:1621
+db dummyf_2fdf1[32]; // 2e7b:1641
+db dummyf_2fe11[32]; // 2e7b:1661
+db dummyf_2fe31[32]; // 2e7b:1681
+db dummyf_2fe51[32]; // 2e7b:16a1
+db dummyf_2fe71[32]; // 2e7b:16c1
+db dummyf_2fe91[32]; // 2e7b:16e1
+db dummyf_2feb1[32]; // 2e7b:1701
+db dummyf_2fed1[32]; // 2e7b:1721
+db dummyf_2fef1[32]; // 2e7b:1741
+db dummyf_2ff11[32]; // 2e7b:1761
+db dummyf_2ff31[32]; // 2e7b:1781
+db dummyf_2ff51[32]; // 2e7b:17a1
+db dummyf_2ff71[32]; // 2e7b:17c1
+db dummyf_2ff91[32]; // 2e7b:17e1
+db dummyf_2ffb1[32]; // 2e7b:1801
+db dummyf_2ffd1[32]; // 2e7b:1821
+db dummyf_2fff1[32]; // 2e7b:1841
+db dummyf_30011[32]; // 2e7b:1861
+db dummyf_30031[32]; // 2e7b:1881
+db dummyf_30051[32]; // 2e7b:18a1
+db dummyf_30071[32]; // 2e7b:18c1
+db dummyf_30091[32]; // 2e7b:18e1
+db dummyf_300b1[32]; // 2e7b:1901
+db dummyf_300d1[32]; // 2e7b:1921
+db dummyf_300f1[32]; // 2e7b:1941
+db dummyf_30111[32]; // 2e7b:1961
+db dummyf_30131[32]; // 2e7b:1981
+db dummyf_30151[32]; // 2e7b:19a1
+db dummyf_30171[32]; // 2e7b:19c1
+db dummyf_30191[32]; // 2e7b:19e1
+db dummyf_301b1[32]; // 2e7b:1a01
+db dummyf_301d1[32]; // 2e7b:1a21
+db dummyf_301f1[32]; // 2e7b:1a41
+db dummyf_30211[32]; // 2e7b:1a61
+db dummyf_30231[32]; // 2e7b:1a81
+db dummyf_30251[32]; // 2e7b:1aa1
+db dummyf_30271[32]; // 2e7b:1ac1
+db dummyf_30291[32]; // 2e7b:1ae1
+db dummyf_302b1[32]; // 2e7b:1b01
+db dummyf_302d1[32]; // 2e7b:1b21
+db dummyf_302f1[32]; // 2e7b:1b41
+db dummyf_30311[32]; // 2e7b:1b61
+db dummyf_30331[32]; // 2e7b:1b81
+db dummyf_30351[32]; // 2e7b:1ba1
+db dummyf_30371[32]; // 2e7b:1bc1
+db dummyf_30391[32]; // 2e7b:1be1
+db dummyf_303b1[32]; // 2e7b:1c01
+db dummyf_303d1[32]; // 2e7b:1c21
+db dummyf_303f1[32]; // 2e7b:1c41
+db dummyf_30411[32]; // 2e7b:1c61
+db dummyf_30431[32]; // 2e7b:1c81
+db dummyf_30451[32]; // 2e7b:1ca1
+db dummyf_30471[32]; // 2e7b:1cc1
+db dummyf_30491[32]; // 2e7b:1ce1
+db dummyf_304b1[32]; // 2e7b:1d01
+db dummyf_304d1[32]; // 2e7b:1d21
+db dummyf_304f1[32]; // 2e7b:1d41
+db dummyf_30511[32]; // 2e7b:1d61
+db dummyf_30531[32]; // 2e7b:1d81
+db dummyf_30551[32]; // 2e7b:1da1
+db dummyf_30571[32]; // 2e7b:1dc1
+db dummyf_30591[32]; // 2e7b:1de1
+db dummyf_305b1[32]; // 2e7b:1e01
+db dummyf_305d1[32]; // 2e7b:1e21
+db dummyf_305f1[32]; // 2e7b:1e41
+db dummyf_30611[32]; // 2e7b:1e61
+db dummyf_30631[32]; // 2e7b:1e81
+db dummyf_30651[32]; // 2e7b:1ea1
+db dummyf_30671[32]; // 2e7b:1ec1
+db dummyf_30691[32]; // 2e7b:1ee1
+db dummyf_306b1[32]; // 2e7b:1f01
+db dummyf_306d1[32]; // 2e7b:1f21
+db dummyf_306f1[32]; // 2e7b:1f41
+db dummyf_30711[32]; // 2e7b:1f61
+db dummyf_30731[32]; // 2e7b:1f81
+db dummyf_30751[32]; // 2e7b:1fa1
+db dummyf_30771[32]; // 2e7b:1fc1
+db dummyf_30791[32]; // 2e7b:1fe1
+db dummyf_307b1[32]; // 2e7b:2001
+db dummyf_307d1[32]; // 2e7b:2021
+db dummyf_307f1[32]; // 2e7b:2041
+db dummyf_30811[32]; // 2e7b:2061
+db dummyf_30831[32]; // 2e7b:2081
+db dummyf_30851[32]; // 2e7b:20a1
+db dummyf_30871[32]; // 2e7b:20c1
+db dummyf_30891[32]; // 2e7b:20e1
+db dummyf_308b1[32]; // 2e7b:2101
+db dummyf_308d1[32]; // 2e7b:2121
+db dummyf_308f1[32]; // 2e7b:2141
+db dummyf_30911[32]; // 2e7b:2161
+db dummyf_30931[32]; // 2e7b:2181
+db dummyf_30951[32]; // 2e7b:21a1
+db dummyf_30971[32]; // 2e7b:21c1
+db dummyf_30991[32]; // 2e7b:21e1
+db dummyf_309b1[32]; // 2e7b:2201
+db dummyf_309d1[32]; // 2e7b:2221
+db dummyf_309f1[32]; // 2e7b:2241
+db dummyf_30a11[32]; // 2e7b:2261
+db dummyf_30a31[32]; // 2e7b:2281
+db dummyf_30a51[32]; // 2e7b:22a1
+db dummyf_30a71[32]; // 2e7b:22c1
+db dummyf_30a91[32]; // 2e7b:22e1
+db dummyf_30ab1[32]; // 2e7b:2301
+db dummyf_30ad1[32]; // 2e7b:2321
+db dummyf_30af1[32]; // 2e7b:2341
+db dummyf_30b11[32]; // 2e7b:2361
+db dummyf_30b31[32]; // 2e7b:2381
+db dummyf_30b51[32]; // 2e7b:23a1
+db dummyf_30b71[32]; // 2e7b:23c1
+db dummyf_30b91[32]; // 2e7b:23e1
+db dummyf_30bb1[32]; // 2e7b:2401
+db dummyf_30bd1[32]; // 2e7b:2421
+db dummyf_30bf1[32]; // 2e7b:2441
+db dummyf_30c11[32]; // 2e7b:2461
+db dummyf_30c31[32]; // 2e7b:2481
+db dummyf_30c51[32]; // 2e7b:24a1
+db dummyf_30c71[32]; // 2e7b:24c1
+db dummyf_30c91[32]; // 2e7b:24e1
+db dummyf_30cb1[32]; // 2e7b:2501
+db dummyf_30cd1[32]; // 2e7b:2521
+db dummyf_30cf1[32]; // 2e7b:2541
+db dummyf_30d11[32]; // 2e7b:2561
+db dummyf_30d31[32]; // 2e7b:2581
+db dummyf_30d51[32]; // 2e7b:25a1
+db dummyf_30d71[32]; // 2e7b:25c1
+db dummyf_30d91[32]; // 2e7b:25e1
+db dummyf_30db1[32]; // 2e7b:2601
+db dummyf_30dd1[32]; // 2e7b:2621
+db dummyf_30df1[32]; // 2e7b:2641
+db dummyf_30e11[32]; // 2e7b:2661
+db dummyf_30e31[32]; // 2e7b:2681
+db dummyf_30e51[32]; // 2e7b:26a1
+db dummyf_30e71[32]; // 2e7b:26c1
+db dummyf_30e91[32]; // 2e7b:26e1
+db dummyf_30eb1[32]; // 2e7b:2701
+db dummyf_30ed1[32]; // 2e7b:2721
+db dummyf_30ef1[32]; // 2e7b:2741
+db dummyf_30f11[32]; // 2e7b:2761
+db dummyf_30f31[32]; // 2e7b:2781
+db dummyf_30f51[32]; // 2e7b:27a1
+db dummyf_30f71[32]; // 2e7b:27c1
+db dummyf_30f91[32]; // 2e7b:27e1
+db dummyf_30fb1[32]; // 2e7b:2801
+db dummyf_30fd1[32]; // 2e7b:2821
+db dummyf_30ff1[32]; // 2e7b:2841
+db dummyf_31011[32]; // 2e7b:2861
+db dummyf_31031[32]; // 2e7b:2881
+db dummyf_31051[32]; // 2e7b:28a1
+db dummyf_31071[32]; // 2e7b:28c1
+db dummyf_31091[32]; // 2e7b:28e1
+db dummyf_310b1[32]; // 2e7b:2901
+db dummyf_310d1[32]; // 2e7b:2921
+db dummyf_310f1[32]; // 2e7b:2941
+db dummyf_31111[32]; // 2e7b:2961
+db dummyf_31131[32]; // 2e7b:2981
+db dummyf_31151[32]; // 2e7b:29a1
+db dummyf_31171[32]; // 2e7b:29c1
+db dummyf_31191[32]; // 2e7b:29e1
+db dummyf_311b1[32]; // 2e7b:2a01
+db dummyf_311d1[32]; // 2e7b:2a21
+db dummyf_311f1[32]; // 2e7b:2a41
+db dummyf_31211[32]; // 2e7b:2a61
+db dummyf_31231[32]; // 2e7b:2a81
+db dummyf_31251[32]; // 2e7b:2aa1
+db dummyf_31271[32]; // 2e7b:2ac1
+db dummyf_31291[32]; // 2e7b:2ae1
+db dummyf_312b1[32]; // 2e7b:2b01
+db dummyf_312d1[32]; // 2e7b:2b21
+db dummyf_312f1[32]; // 2e7b:2b41
+db dummyf_31311[32]; // 2e7b:2b61
+db dummyf_31331[32]; // 2e7b:2b81
+db dummyf_31351[32]; // 2e7b:2ba1
+db dummyf_31371[32]; // 2e7b:2bc1
+db dummyf_31391[32]; // 2e7b:2be1
+db dummyf_313b1[32]; // 2e7b:2c01
+db dummyf_313d1[32]; // 2e7b:2c21
+db dummyf_313f1[32]; // 2e7b:2c41
+db dummyf_31411[32]; // 2e7b:2c61
+db dummyf_31431[32]; // 2e7b:2c81
+db dummyf_31451[32]; // 2e7b:2ca1
+db dummyf_31471[32]; // 2e7b:2cc1
+db dummyf_31491[32]; // 2e7b:2ce1
+db dummyf_314b1[32]; // 2e7b:2d01
+db dummyf_314d1[32]; // 2e7b:2d21
+db dummyf_314f1[32]; // 2e7b:2d41
+db dummyf_31511[32]; // 2e7b:2d61
+db dummyf_31531[32]; // 2e7b:2d81
+db dummyf_31551[32]; // 2e7b:2da1
+db dummyf_31571[32]; // 2e7b:2dc1
+db dummyf_31591[32]; // 2e7b:2de1
+db dummyf_315b1[32]; // 2e7b:2e01
+db dummyf_315d1[32]; // 2e7b:2e21
+db dummyf_315f1[32]; // 2e7b:2e41
+db dummyf_31611[32]; // 2e7b:2e61
+db dummyf_31631[32]; // 2e7b:2e81
+db dummyf_31651[32]; // 2e7b:2ea1
+db dummyf_31671[32]; // 2e7b:2ec1
+db dummyf_31691[32]; // 2e7b:2ee1
+db dummyf_316b1[32]; // 2e7b:2f01
+db dummyf_316d1[32]; // 2e7b:2f21
+db dummyf_316f1[32]; // 2e7b:2f41
+db dummyf_31711[32]; // 2e7b:2f61
+db dummyf_31731[32]; // 2e7b:2f81
+db dummyf_31751[32]; // 2e7b:2fa1
+db dummyf_31771[32]; // 2e7b:2fc1
+db dummyf_31791[32]; // 2e7b:2fe1
+db dummyf_317b1[32]; // 2e7b:3001
+db dummyf_317d1[32]; // 2e7b:3021
+db dummyf_317f1[32]; // 2e7b:3041
+db dummyf_31811[32]; // 2e7b:3061
+db dummyf_31831[32]; // 2e7b:3081
+db dummyf_31851[32]; // 2e7b:30a1
+db dummyf_31871[32]; // 2e7b:30c1
+db dummyf_31891[32]; // 2e7b:30e1
+db dummyf_318b1[32]; // 2e7b:3101
+db dummyf_318d1[32]; // 2e7b:3121
+db dummyf_318f1[32]; // 2e7b:3141
+db dummyf_31911[32]; // 2e7b:3161
+db dummyf_31931[32]; // 2e7b:3181
+db dummyf_31951[32]; // 2e7b:31a1
+db dummyf_31971[32]; // 2e7b:31c1
+db dummyf_31991[32]; // 2e7b:31e1
+db dummyf_319b1[32]; // 2e7b:3201
+db dummyf_319d1[32]; // 2e7b:3221
+db dummyf_319f1[32]; // 2e7b:3241
+db dummyf_31a11[32]; // 2e7b:3261
+db dummyf_31a31[32]; // 2e7b:3281
+db dummyf_31a51[32]; // 2e7b:32a1
+db dummyf_31a71[32]; // 2e7b:32c1
+db dummyf_31a91[32]; // 2e7b:32e1
+db dummyf_31ab1[32]; // 2e7b:3301
+db dummyf_31ad1[32]; // 2e7b:3321
+db dummyf_31af1[32]; // 2e7b:3341
+db dummyf_31b11[32]; // 2e7b:3361
+db dummyf_31b31[32]; // 2e7b:3381
+db dummyf_31b51[32]; // 2e7b:33a1
+db dummyf_31b71[32]; // 2e7b:33c1
+db dummyf_31b91[32]; // 2e7b:33e1
+db dummyf_31bb1[32]; // 2e7b:3401
+db dummyf_31bd1[32]; // 2e7b:3421
+db dummyf_31bf1[32]; // 2e7b:3441
+db dummyf_31c11[32]; // 2e7b:3461
+db dummyf_31c31[32]; // 2e7b:3481
+db dummyf_31c51[32]; // 2e7b:34a1
+db dummyf_31c71[32]; // 2e7b:34c1
+db dummyf_31c91[32]; // 2e7b:34e1
+db dummyf_31cb1[32]; // 2e7b:3501
+db dummyf_31cd1[32]; // 2e7b:3521
+db dummyf_31cf1[32]; // 2e7b:3541
+db dummyf_31d11[32]; // 2e7b:3561
+db dummyf_31d31[32]; // 2e7b:3581
+db dummyf_31d51[32]; // 2e7b:35a1
+db dummyf_31d71[32]; // 2e7b:35c1
+db dummyf_31d91[32]; // 2e7b:35e1
+db dummyf_31db1[32]; // 2e7b:3601
+db dummyf_31dd1[32]; // 2e7b:3621
+db dummyf_31df1[32]; // 2e7b:3641
+db dummyf_31e11[32]; // 2e7b:3661
+db dummyf_31e31[32]; // 2e7b:3681
+db dummyf_31e51[32]; // 2e7b:36a1
+db dummyf_31e71[32]; // 2e7b:36c1
+db dummyf_31e91[32]; // 2e7b:36e1
+db dummyf_31eb1[32]; // 2e7b:3701
+db dummyf_31ed1[32]; // 2e7b:3721
+db dummyf_31ef1[32]; // 2e7b:3741
+db dummyf_31f11[32]; // 2e7b:3761
+db dummyf_31f31[32]; // 2e7b:3781
+db dummyf_31f51[32]; // 2e7b:37a1
+db dummyf_31f71[32]; // 2e7b:37c1
+db dummyf_31f91[32]; // 2e7b:37e1
+db dummyf_31fb1[32]; // 2e7b:3801
+db dummyf_31fd1[32]; // 2e7b:3821
+db dummyf_31ff1[32]; // 2e7b:3841
+db dummyf_32011[32]; // 2e7b:3861
+db dummyf_32031[32]; // 2e7b:3881
+db dummyf_32051[32]; // 2e7b:38a1
+db dummyf_32071[32]; // 2e7b:38c1
+db dummyf_32091[32]; // 2e7b:38e1
+db dummyf_320b1[32]; // 2e7b:3901
+db dummyf_320d1[32]; // 2e7b:3921
+db dummyf_320f1[32]; // 2e7b:3941
+db dummyf_32111[32]; // 2e7b:3961
+db dummyf_32131[32]; // 2e7b:3981
+db dummyf_32151[32]; // 2e7b:39a1
+db dummyf_32171[32]; // 2e7b:39c1
+db dummyf_32191[32]; // 2e7b:39e1
+db dummyf_321b1[32]; // 2e7b:3a01
+db dummyf_321d1[32]; // 2e7b:3a21
+db dummyf_321f1[32]; // 2e7b:3a41
+db dummyf_32211[32]; // 2e7b:3a61
+db dummyf_32231[32]; // 2e7b:3a81
+db dummyf_32251[32]; // 2e7b:3aa1
+db dummyf_32271[32]; // 2e7b:3ac1
+db dummyf_32291[32]; // 2e7b:3ae1
+db dummyf_322b1[32]; // 2e7b:3b01
+db dummyf_322d1[32]; // 2e7b:3b21
+db dummyf_322f1[32]; // 2e7b:3b41
+db dummyf_32311[32]; // 2e7b:3b61
+db dummyf_32331[32]; // 2e7b:3b81
+db dummyf_32351[32]; // 2e7b:3ba1
+db dummyf_32371[32]; // 2e7b:3bc1
+db dummyf_32391[32]; // 2e7b:3be1
+db dummyf_323b1[32]; // 2e7b:3c01
+db dummyf_323d1[32]; // 2e7b:3c21
+db dummyf_323f1[32]; // 2e7b:3c41
+db dummyf_32411[32]; // 2e7b:3c61
+db dummyf_32431[32]; // 2e7b:3c81
+db dummyf_32451[32]; // 2e7b:3ca1
+db dummyf_32471[32]; // 2e7b:3cc1
+db dummyf_32491[32]; // 2e7b:3ce1
+db dummyf_324b1[32]; // 2e7b:3d01
+db dummyf_324d1[32]; // 2e7b:3d21
+db dummyf_324f1[32]; // 2e7b:3d41
+db dummyf_32511[32]; // 2e7b:3d61
+db dummyf_32531[32]; // 2e7b:3d81
+db dummyf_32551[32]; // 2e7b:3da1
+db dummyf_32571[32]; // 2e7b:3dc1
+db dummyf_32591[32]; // 2e7b:3de1
+db dummyf_325b1[32]; // 2e7b:3e01
+db dummyf_325d1[32]; // 2e7b:3e21
+db dummyf_325f1[32]; // 2e7b:3e41
+db dummyf_32611[32]; // 2e7b:3e61
+db dummyf_32631[32]; // 2e7b:3e81
+db dummyf_32651[32]; // 2e7b:3ea1
+db dummyf_32671[32]; // 2e7b:3ec1
+db dummyf_32691[32]; // 2e7b:3ee1
+db dummyf_326b1[32]; // 2e7b:3f01
+db dummyf_326d1[32]; // 2e7b:3f21
+db dummyf_326f1[32]; // 2e7b:3f41
+db dummyf_32711[32]; // 2e7b:3f61
+db dummyf_32731[32]; // 2e7b:3f81
+db dummyf_32751[32]; // 2e7b:3fa1
+db dummyf_32771[32]; // 2e7b:3fc1
+db dummyf_32791[32]; // 2e7b:3fe1
+db dummyf_327b1[32]; // 2e7b:4001
+db dummyf_327d1[32]; // 2e7b:4021
+db dummyf_327f1[32]; // 2e7b:4041
+db dummyf_32811[32]; // 2e7b:4061
+db dummyf_32831[32]; // 2e7b:4081
+db dummyf_32851[32]; // 2e7b:40a1
+db dummyf_32871[32]; // 2e7b:40c1
+db dummyf_32891[32]; // 2e7b:40e1
+db dummyf_328b1[32]; // 2e7b:4101
+db dummyf_328d1[32]; // 2e7b:4121
+db dummyf_328f1[32]; // 2e7b:4141
+db dummyf_32911[32]; // 2e7b:4161
+db dummyf_32931[32]; // 2e7b:4181
+db dummyf_32951[32]; // 2e7b:41a1
+db dummyf_32971[32]; // 2e7b:41c1
+db dummyf_32991[32]; // 2e7b:41e1
+db dummyf_329b1[32]; // 2e7b:4201
+db dummyf_329d1[32]; // 2e7b:4221
+db dummyf_329f1[32]; // 2e7b:4241
+db dummyf_32a11[32]; // 2e7b:4261
+db dummyf_32a31[32]; // 2e7b:4281
+db dummyf_32a51[32]; // 2e7b:42a1
+db dummyf_32a71[32]; // 2e7b:42c1
+db dummyf_32a91[32]; // 2e7b:42e1
+db dummyf_32ab1[32]; // 2e7b:4301
+db dummyf_32ad1[32]; // 2e7b:4321
+db dummyf_32af1[32]; // 2e7b:4341
+db dummyf_32b11[32]; // 2e7b:4361
+db dummyf_32b31[32]; // 2e7b:4381
+db dummyf_32b51[32]; // 2e7b:43a1
+db dummyf_32b71[32]; // 2e7b:43c1
+db dummyf_32b91[32]; // 2e7b:43e1
+db dummyf_32bb1[32]; // 2e7b:4401
+db dummyf_32bd1[32]; // 2e7b:4421
+db dummyf_32bf1[32]; // 2e7b:4441
+db dummyf_32c11[32]; // 2e7b:4461
+db dummyf_32c31[32]; // 2e7b:4481
+db dummyf_32c51[32]; // 2e7b:44a1
+db dummyf_32c71[32]; // 2e7b:44c1
+db dummyf_32c91[32]; // 2e7b:44e1
+db dummyf_32cb1[32]; // 2e7b:4501
+db dummyf_32cd1[32]; // 2e7b:4521
+db dummyf_32cf1[32]; // 2e7b:4541
+db dummyf_32d11[32]; // 2e7b:4561
+db dummyf_32d31[32]; // 2e7b:4581
+db dummyf_32d51[32]; // 2e7b:45a1
+db dummyf_32d71[32]; // 2e7b:45c1
+db dummyf_32d91[32]; // 2e7b:45e1
+db dummyf_32db1[32]; // 2e7b:4601
+db dummyf_32dd1[32]; // 2e7b:4621
+db dummyf_32df1[32]; // 2e7b:4641
+db dummyf_32e11[32]; // 2e7b:4661
+db dummyf_32e31[32]; // 2e7b:4681
+db dummyf_32e51[32]; // 2e7b:46a1
+db dummyf_32e71[32]; // 2e7b:46c1
+db dummyf_32e91[32]; // 2e7b:46e1
+db dummyf_32eb1[32]; // 2e7b:4701
+db dummyf_32ed1[32]; // 2e7b:4721
+db dummyf_32ef1[32]; // 2e7b:4741
+db dummyf_32f11[32]; // 2e7b:4761
+db dummyf_32f31[32]; // 2e7b:4781
+db dummyf_32f51[32]; // 2e7b:47a1
+db dummyf_32f71[32]; // 2e7b:47c1
+db dummyf_32f91[32]; // 2e7b:47e1
+db dummyf_32fb1[32]; // 2e7b:4801
+db dummyf_32fd1[32]; // 2e7b:4821
+db dummyf_32ff1[32]; // 2e7b:4841
+db dummyf_33011[32]; // 2e7b:4861
+db dummyf_33031[32]; // 2e7b:4881
+db dummyf_33051[32]; // 2e7b:48a1
+db dummyf_33071[32]; // 2e7b:48c1
+db dummyf_33091[32]; // 2e7b:48e1
+db dummyf_330b1[32]; // 2e7b:4901
+db dummyf_330d1[32]; // 2e7b:4921
+db dummyf_330f1[32]; // 2e7b:4941
+db dummyf_33111[32]; // 2e7b:4961
+db dummyf_33131[32]; // 2e7b:4981
+db dummyf_33151[32]; // 2e7b:49a1
+db dummyf_33171[32]; // 2e7b:49c1
+db dummyf_33191[32]; // 2e7b:49e1
+db dummyf_331b1[32]; // 2e7b:4a01
+db dummyf_331d1[32]; // 2e7b:4a21
+db dummyf_331f1[32]; // 2e7b:4a41
+db dummyf_33211[32]; // 2e7b:4a61
+db dummyf_33231[32]; // 2e7b:4a81
+db dummyf_33251[32]; // 2e7b:4aa1
+db dummyf_33271[32]; // 2e7b:4ac1
+db dummyf_33291[32]; // 2e7b:4ae1
+db dummyf_332b1[32]; // 2e7b:4b01
+db dummyf_332d1[32]; // 2e7b:4b21
+db dummyf_332f1[32]; // 2e7b:4b41
+db dummyf_33311[32]; // 2e7b:4b61
+db dummyf_33331[32]; // 2e7b:4b81
+db dummyf_33351[32]; // 2e7b:4ba1
+db dummyf_33371[32]; // 2e7b:4bc1
+db dummyf_33391[32]; // 2e7b:4be1
+db dummyf_333b1[32]; // 2e7b:4c01
+db dummyf_333d1[32]; // 2e7b:4c21
+db dummyf_333f1[32]; // 2e7b:4c41
+db dummyf_33411[32]; // 2e7b:4c61
+db dummyf_33431[32]; // 2e7b:4c81
+db dummyf_33451[32]; // 2e7b:4ca1
+db dummyf_33471[32]; // 2e7b:4cc1
+db dummyf_33491[32]; // 2e7b:4ce1
+db dummyf_334b1[32]; // 2e7b:4d01
+db dummyf_334d1[32]; // 2e7b:4d21
+db dummyf_334f1[32]; // 2e7b:4d41
+db dummyf_33511[32]; // 2e7b:4d61
+db dummyf_33531[32]; // 2e7b:4d81
+db dummyf_33551[32]; // 2e7b:4da1
+db dummyf_33571[32]; // 2e7b:4dc1
+db dummyf_33591[32]; // 2e7b:4de1
+db dummyf_335b1[32]; // 2e7b:4e01
+db dummyf_335d1[32]; // 2e7b:4e21
+db dummyf_335f1[32]; // 2e7b:4e41
+db dummyf_33611[32]; // 2e7b:4e61
+db dummyf_33631[32]; // 2e7b:4e81
+db dummyf_33651[32]; // 2e7b:4ea1
+db dummyf_33671[32]; // 2e7b:4ec1
+db dummyf_33691[32]; // 2e7b:4ee1
+db dummyf_336b1[32]; // 2e7b:4f01
+db dummyf_336d1[32]; // 2e7b:4f21
+db dummyf_336f1[32]; // 2e7b:4f41
+db dummyf_33711[32]; // 2e7b:4f61
+db dummyf_33731[32]; // 2e7b:4f81
+db dummyf_33751[32]; // 2e7b:4fa1
+db dummyf_33771[32]; // 2e7b:4fc1
+db dummyf_33791[32]; // 2e7b:4fe1
+db dummyf_337b1[32]; // 2e7b:5001
+db dummyf_337d1[32]; // 2e7b:5021
+db dummyf_337f1[32]; // 2e7b:5041
+db dummyf_33811[32]; // 2e7b:5061
+db dummyf_33831[32]; // 2e7b:5081
+db dummyf_33851[32]; // 2e7b:50a1
+db dummyf_33871[32]; // 2e7b:50c1
+db dummyf_33891[32]; // 2e7b:50e1
+db dummyf_338b1[32]; // 2e7b:5101
+db dummyf_338d1[32]; // 2e7b:5121
+db dummyf_338f1[32]; // 2e7b:5141
+db dummyf_33911[32]; // 2e7b:5161
+db dummyf_33931[32]; // 2e7b:5181
+db dummyf_33951[32]; // 2e7b:51a1
+db dummyf_33971[32]; // 2e7b:51c1
+db dummyf_33991[32]; // 2e7b:51e1
+db dummyf_339b1[32]; // 2e7b:5201
+db dummyf_339d1[32]; // 2e7b:5221
+db dummyf_339f1[32]; // 2e7b:5241
+db dummyf_33a11[32]; // 2e7b:5261
+db dummyf_33a31[32]; // 2e7b:5281
+db dummyf_33a51[32]; // 2e7b:52a1
+db dummyf_33a71[32]; // 2e7b:52c1
+db dummyf_33a91[32]; // 2e7b:52e1
+db dummyf_33ab1[32]; // 2e7b:5301
+db dummyf_33ad1[32]; // 2e7b:5321
+db dummyf_33af1[32]; // 2e7b:5341
+db dummyf_33b11[32]; // 2e7b:5361
+db dummyf_33b31[32]; // 2e7b:5381
+db dummyf_33b51[32]; // 2e7b:53a1
+db dummyf_33b71[32]; // 2e7b:53c1
+db dummyf_33b91[32]; // 2e7b:53e1
+db dummyf_33bb1[32]; // 2e7b:5401
+db dummyf_33bd1[32]; // 2e7b:5421
+db dummyf_33bf1[32]; // 2e7b:5441
+db dummyf_33c11[32]; // 2e7b:5461
+db dummyf_33c31[32]; // 2e7b:5481
+db dummyf_33c51[32]; // 2e7b:54a1
+db dummyf_33c71[32]; // 2e7b:54c1
+db dummyf_33c91[32]; // 2e7b:54e1
+db dummyf_33cb1[32]; // 2e7b:5501
+db dummyf_33cd1[32]; // 2e7b:5521
+db dummyf_33cf1[32]; // 2e7b:5541
+db dummyf_33d11[32]; // 2e7b:5561
+db dummyf_33d31[32]; // 2e7b:5581
+db dummyf_33d51[32]; // 2e7b:55a1
+db dummyf_33d71[32]; // 2e7b:55c1
+db dummyf_33d91[32]; // 2e7b:55e1
+db dummyf_33db1[32]; // 2e7b:5601
+db dummyf_33dd1[32]; // 2e7b:5621
+db dummyf_33df1[32]; // 2e7b:5641
+db dummyf_33e11[32]; // 2e7b:5661
+db dummyf_33e31[32]; // 2e7b:5681
+db dummyf_33e51[32]; // 2e7b:56a1
+db dummyf_33e71[32]; // 2e7b:56c1
+db dummyf_33e91[32]; // 2e7b:56e1
+db dummyf_33eb1[32]; // 2e7b:5701
+db dummyf_33ed1[32]; // 2e7b:5721
+db dummyf_33ef1[32]; // 2e7b:5741
+db dummyf_33f11[32]; // 2e7b:5761
+db dummyf_33f31[32]; // 2e7b:5781
+db dummyf_33f51[32]; // 2e7b:57a1
+db dummyf_33f71[32]; // 2e7b:57c1
+db dummyf_33f91[32]; // 2e7b:57e1
+db dummyf_33fb1[32]; // 2e7b:5801
+db dummyf_33fd1[32]; // 2e7b:5821
+db dummyf_33ff1[32]; // 2e7b:5841
+db dummyf_34011[32]; // 2e7b:5861
+db dummyf_34031[32]; // 2e7b:5881
+db dummyf_34051[32]; // 2e7b:58a1
+db dummyf_34071[32]; // 2e7b:58c1
+db dummyf_34091[32]; // 2e7b:58e1
+db dummyf_340b1[32]; // 2e7b:5901
+db dummyf_340d1[32]; // 2e7b:5921
+db dummyf_340f1[32]; // 2e7b:5941
+db dummyf_34111[32]; // 2e7b:5961
+db dummyf_34131[32]; // 2e7b:5981
+db dummyf_34151[32]; // 2e7b:59a1
+db dummyf_34171[32]; // 2e7b:59c1
+db dummyf_34191[32]; // 2e7b:59e1
+db dummyf_341b1[32]; // 2e7b:5a01
+db dummyf_341d1[32]; // 2e7b:5a21
+db dummyf_341f1[32]; // 2e7b:5a41
+db dummyf_34211[32]; // 2e7b:5a61
+db dummyf_34231[32]; // 2e7b:5a81
+db dummyf_34251[32]; // 2e7b:5aa1
+db dummyf_34271[32]; // 2e7b:5ac1
+db dummyf_34291[32]; // 2e7b:5ae1
+db dummyf_342b1[32]; // 2e7b:5b01
+db dummyf_342d1[32]; // 2e7b:5b21
+db dummyf_342f1[32]; // 2e7b:5b41
+db dummyf_34311[32]; // 2e7b:5b61
+db dummyf_34331[32]; // 2e7b:5b81
+db dummyf_34351[32]; // 2e7b:5ba1
+db dummyf_34371[32]; // 2e7b:5bc1
+db dummyf_34391[32]; // 2e7b:5be1
+db dummyf_343b1[32]; // 2e7b:5c01
+db dummyf_343d1[32]; // 2e7b:5c21
+db dummyf_343f1[32]; // 2e7b:5c41
+db dummyf_34411[32]; // 2e7b:5c61
+db dummyf_34431[32]; // 2e7b:5c81
+db dummyf_34451[32]; // 2e7b:5ca1
+db dummyf_34471[32]; // 2e7b:5cc1
+db dummyf_34491[32]; // 2e7b:5ce1
+db dummyf_344b1[32]; // 2e7b:5d01
+db dummyf_344d1[32]; // 2e7b:5d21
+db dummyf_344f1[32]; // 2e7b:5d41
+db dummyf_34511[32]; // 2e7b:5d61
+db dummyf_34531[32]; // 2e7b:5d81
+db dummyf_34551[32]; // 2e7b:5da1
+db dummyf_34571[32]; // 2e7b:5dc1
+db dummyf_34591[32]; // 2e7b:5de1
+db dummyf_345b1[32]; // 2e7b:5e01
+db dummyf_345d1[32]; // 2e7b:5e21
+db dummyf_345f1[32]; // 2e7b:5e41
+db dummyf_34611[32]; // 2e7b:5e61
+db dummyf_34631[32]; // 2e7b:5e81
+db dummyf_34651[32]; // 2e7b:5ea1
+db dummyf_34671[32]; // 2e7b:5ec1
+db dummyf_34691[32]; // 2e7b:5ee1
+db dummyf_346b1[32]; // 2e7b:5f01
+db dummyf_346d1[32]; // 2e7b:5f21
+db dummyf_346f1[32]; // 2e7b:5f41
+db dummyf_34711[32]; // 2e7b:5f61
+db dummyf_34731[32]; // 2e7b:5f81
+db dummyf_34751[32]; // 2e7b:5fa1
+db dummyf_34771[32]; // 2e7b:5fc1
+db dummyf_34791[32]; // 2e7b:5fe1
+db dummyf_347b1[32]; // 2e7b:6001
+db dummyf_347d1[32]; // 2e7b:6021
+db dummyf_347f1[32]; // 2e7b:6041
+db dummyf_34811[32]; // 2e7b:6061
+db dummyf_34831[32]; // 2e7b:6081
+db dummyf_34851[32]; // 2e7b:60a1
+db dummyf_34871[32]; // 2e7b:60c1
+db dummyf_34891[32]; // 2e7b:60e1
+db dummyf_348b1[32]; // 2e7b:6101
+db dummyf_348d1[32]; // 2e7b:6121
+db dummyf_348f1[32]; // 2e7b:6141
+db dummyf_34911[32]; // 2e7b:6161
+db dummyf_34931[32]; // 2e7b:6181
+db dummyf_34951[32]; // 2e7b:61a1
+db dummyf_34971[32]; // 2e7b:61c1
+db dummyf_34991[32]; // 2e7b:61e1
+db dummyf_349b1[32]; // 2e7b:6201
+db dummyf_349d1[32]; // 2e7b:6221
+db dummyf_349f1[32]; // 2e7b:6241
+db dummyf_34a11[32]; // 2e7b:6261
+db dummyf_34a31[32]; // 2e7b:6281
+db dummyf_34a51[32]; // 2e7b:62a1
+db dummyf_34a71[32]; // 2e7b:62c1
+db dummyf_34a91[32]; // 2e7b:62e1
+db dummyf_34ab1[32]; // 2e7b:6301
+db dummyf_34ad1[32]; // 2e7b:6321
+db dummyf_34af1[32]; // 2e7b:6341
+db dummyf_34b11[32]; // 2e7b:6361
+db dummyf_34b31[32]; // 2e7b:6381
+db dummyf_34b51[32]; // 2e7b:63a1
+db dummyf_34b71[32]; // 2e7b:63c1
+db dummyf_34b91[32]; // 2e7b:63e1
+db dummyf_34bb1[32]; // 2e7b:6401
+db dummyf_34bd1[32]; // 2e7b:6421
+db dummyf_34bf1[32]; // 2e7b:6441
+db dummyf_34c11[32]; // 2e7b:6461
+db dummyf_34c31[32]; // 2e7b:6481
+db dummyf_34c51[32]; // 2e7b:64a1
+db dummyf_34c71[32]; // 2e7b:64c1
+db dummyf_34c91[32]; // 2e7b:64e1
+db dummyf_34cb1[32]; // 2e7b:6501
+db dummyf_34cd1[32]; // 2e7b:6521
+db dummyf_34cf1[32]; // 2e7b:6541
+db dummyf_34d11[32]; // 2e7b:6561
+db dummyf_34d31[32]; // 2e7b:6581
+db dummyf_34d51[32]; // 2e7b:65a1
+db dummyf_34d71[32]; // 2e7b:65c1
+db dummyf_34d91[32]; // 2e7b:65e1
+db dummyf_34db1[32]; // 2e7b:6601
+db dummyf_34dd1[32]; // 2e7b:6621
+db dummyf_34df1[32]; // 2e7b:6641
+db dummyf_34e11[32]; // 2e7b:6661
+db dummyf_34e31[32]; // 2e7b:6681
+db dummyf_34e51[32]; // 2e7b:66a1
+db dummyf_34e71[32]; // 2e7b:66c1
+db dummyf_34e91[32]; // 2e7b:66e1
+db dummyf_34eb1[32]; // 2e7b:6701
+db dummyf_34ed1[32]; // 2e7b:6721
+db dummyf_34ef1[32]; // 2e7b:6741
+db dummyf_34f11[32]; // 2e7b:6761
+db dummyf_34f31[32]; // 2e7b:6781
+db dummyf_34f51[32]; // 2e7b:67a1
+db dummyf_34f71[32]; // 2e7b:67c1
+db dummyf_34f91[32]; // 2e7b:67e1
+db dummyf_34fb1[32]; // 2e7b:6801
+db dummyf_34fd1[32]; // 2e7b:6821
+db dummyf_34ff1[32]; // 2e7b:6841
+db dummyf_35011[32]; // 2e7b:6861
+db dummyf_35031[32]; // 2e7b:6881
+db dummyf_35051[32]; // 2e7b:68a1
+db dummyf_35071[32]; // 2e7b:68c1
+db dummyf_35091[32]; // 2e7b:68e1
+db dummyf_350b1[32]; // 2e7b:6901
+db dummyf_350d1[32]; // 2e7b:6921
+db dummyf_350f1[32]; // 2e7b:6941
+db dummyf_35111[32]; // 2e7b:6961
+db dummyf_35131[32]; // 2e7b:6981
+db dummyf_35151[32]; // 2e7b:69a1
+db dummyf_35171[32]; // 2e7b:69c1
+db dummyf_35191[32]; // 2e7b:69e1
+db dummyf_351b1[32]; // 2e7b:6a01
+db dummyf_351d1[32]; // 2e7b:6a21
+db dummyf_351f1[32]; // 2e7b:6a41
+db dummyf_35211[32]; // 2e7b:6a61
+db dummyf_35231[32]; // 2e7b:6a81
+db dummyf_35251[32]; // 2e7b:6aa1
+db dummyf_35271[32]; // 2e7b:6ac1
+db dummyf_35291[32]; // 2e7b:6ae1
+db dummyf_352b1[32]; // 2e7b:6b01
+db dummyf_352d1[32]; // 2e7b:6b21
+db dummyf_352f1;
+db dummyf_352f2;
+db dummyf_352f3;
+db unk_438d4; // 2e7b:6b44
+db dummyf_352f5[32]; // 2e7b:6b45
+db dummyf_35315[32]; // 2e7b:6b65
+db dummyf_35335[32]; // 2e7b:6b85
+db dummyf_35355[32]; // 2e7b:6ba5
+db dummyf_35375[32]; // 2e7b:6bc5
+db dummyf_35395[32]; // 2e7b:6be5
+db dummyf_353b5[32]; // 2e7b:6c05
+db dummyf_353d5[32]; // 2e7b:6c25
+db dummyf_353f5[32]; // 2e7b:6c45
+db dummyf_35415[32]; // 2e7b:6c65
+db dummyf_35435[32]; // 2e7b:6c85
+db dummyf_35455[32]; // 2e7b:6ca5
+db dummyf_35475[32]; // 2e7b:6cc5
+db dummyf_35495[32]; // 2e7b:6ce5
+db dummyf_354b5[32]; // 2e7b:6d05
+db dummyf_354d5[32]; // 2e7b:6d25
+db dummyf_354f5[32]; // 2e7b:6d45
+db dummyf_35515[32]; // 2e7b:6d65
+db dummyf_35535[32]; // 2e7b:6d85
+db dummyf_35555[32]; // 2e7b:6da5
+db dummyf_35575[32]; // 2e7b:6dc5
+db dummyf_35595[32]; // 2e7b:6de5
+db dummyf_355b5[32]; // 2e7b:6e05
+db dummyf_355d5[32]; // 2e7b:6e25
+db dummyf_355f5[32]; // 2e7b:6e45
+db dummyf_35615[32]; // 2e7b:6e65
+db dummyf_35635[32]; // 2e7b:6e85
+db dummyf_35655[32]; // 2e7b:6ea5
+db dummyf_35675[32]; // 2e7b:6ec5
+db dummyf_35695[32]; // 2e7b:6ee5
+db dummyf_356b5[32]; // 2e7b:6f05
+db dummyf_356d5[32]; // 2e7b:6f25
+db dummyf_356f5[32]; // 2e7b:6f45
+db dummyf_35715[32]; // 2e7b:6f65
+db dummyf_35735[32]; // 2e7b:6f85
+db dummyf_35755[32]; // 2e7b:6fa5
+db dummyf_35775[32]; // 2e7b:6fc5
+db dummyf_35795[32]; // 2e7b:6fe5
+db dummyf_357b5[32]; // 2e7b:7005
+db dummyf_357d5[32]; // 2e7b:7025
+db dummyf_357f5[32]; // 2e7b:7045
+db dummyf_35815[32]; // 2e7b:7065
+db dummyf_35835[32]; // 2e7b:7085
+db dummyf_35855[32]; // 2e7b:70a5
+db dummyf_35875[32]; // 2e7b:70c5
+db dummyf_35895[32]; // 2e7b:70e5
+db dummyf_358b5[32]; // 2e7b:7105
+db dummyf_358d5[32]; // 2e7b:7125
+db dummyf_358f5[32]; // 2e7b:7145
+db dummyf_35915[32]; // 2e7b:7165
+db dummyf_35935[32]; // 2e7b:7185
+db dummyf_35955[32]; // 2e7b:71a5
+db dummyf_35975[32]; // 2e7b:71c5
+db dummyf_35995[32]; // 2e7b:71e5
+db dummyf_359b5[32]; // 2e7b:7205
+db dummyf_359d5[32]; // 2e7b:7225
+db dummyf_359f5[32]; // 2e7b:7245
+db dummyf_35a15[32]; // 2e7b:7265
+db dummyf_35a35[32]; // 2e7b:7285
+db dummyf_35a55[32]; // 2e7b:72a5
+db dummyf_35a75[32]; // 2e7b:72c5
+db dummyf_35a95[32]; // 2e7b:72e5
+db dummyf_35ab5[32]; // 2e7b:7305
+db dummyf_35ad5[32]; // 2e7b:7325
+db dummyf_35af5[32]; // 2e7b:7345
+db dummyf_35b15[32]; // 2e7b:7365
+db dummyf_35b35[32]; // 2e7b:7385
+db dummyf_35b55[32]; // 2e7b:73a5
+db dummyf_35b75[32]; // 2e7b:73c5
+db dummyf_35b95[32]; // 2e7b:73e5
+db dummyf_35bb5[32]; // 2e7b:7405
+db dummyf_35bd5[32]; // 2e7b:7425
+db dummyf_35bf5[32]; // 2e7b:7445
+db dummyf_35c15[32]; // 2e7b:7465
+db dummyf_35c35[32]; // 2e7b:7485
+db dummyf_35c55[32]; // 2e7b:74a5
+db dummyf_35c75[32]; // 2e7b:74c5
+db dummyf_35c95[32]; // 2e7b:74e5
+db dummyf_35cb5[32]; // 2e7b:7505
+db dummyf_35cd5[32]; // 2e7b:7525
+db dummyf_35cf5[32]; // 2e7b:7545
+db dummyf_35d15[32]; // 2e7b:7565
+db dummyf_35d35[32]; // 2e7b:7585
+db dummyf_35d55[32]; // 2e7b:75a5
+db dummyf_35d75[32]; // 2e7b:75c5
+db dummyf_35d95[32]; // 2e7b:75e5
+db dummyf_35db5[32]; // 2e7b:7605
+db dummyf_35dd5[32]; // 2e7b:7625
+db dummyf_35df5[32]; // 2e7b:7645
+db dummyf_35e15[32]; // 2e7b:7665
+db dummyf_35e35[32]; // 2e7b:7685
+db dummyf_35e55[32]; // 2e7b:76a5
+db dummyf_35e75[32]; // 2e7b:76c5
+db dummyf_35e95[32]; // 2e7b:76e5
+db dummyf_35eb5[32]; // 2e7b:7705
+db dummyf_35ed5[32]; // 2e7b:7725
+db dummyf_35ef5[32]; // 2e7b:7745
+db dummyf_35f15[32]; // 2e7b:7765
+db dummyf_35f35[32]; // 2e7b:7785
+db dummyf_35f55[32]; // 2e7b:77a5
+db dummyf_35f75[32]; // 2e7b:77c5
+db dummyf_35f95[32]; // 2e7b:77e5
+db dummyf_35fb5[32]; // 2e7b:7805
+db dummyf_35fd5[32]; // 2e7b:7825
+db dummyf_35ff5[32]; // 2e7b:7845
+db dummyf_36015[32]; // 2e7b:7865
+db dummyf_36035[32]; // 2e7b:7885
+db dummyf_36055[32]; // 2e7b:78a5
+db dummyf_36075[32]; // 2e7b:78c5
+db dummyf_36095[32]; // 2e7b:78e5
+db dummyf_360b5[32]; // 2e7b:7905
+db dummyf_360d5[32]; // 2e7b:7925
+db dummyf_360f5[32]; // 2e7b:7945
+db dummyf_36115[32]; // 2e7b:7965
+db dummyf_36135[32]; // 2e7b:7985
+db dummyf_36155[32]; // 2e7b:79a5
+db dummyf_36175[32]; // 2e7b:79c5
+db dummyf_36195[32]; // 2e7b:79e5
+db dummyf_361b5[32]; // 2e7b:7a05
+db dummyf_361d5[32]; // 2e7b:7a25
+db dummyf_361f5[32]; // 2e7b:7a45
+db dummyf_36215[32]; // 2e7b:7a65
+db dummyf_36235[32]; // 2e7b:7a85
+db dummyf_36255[32]; // 2e7b:7aa5
+db dummyf_36275[32]; // 2e7b:7ac5
+db dummyf_36295[32]; // 2e7b:7ae5
+db dummyf_362b5[32]; // 2e7b:7b05
+db dummyf_362d5[32]; // 2e7b:7b25
+db dummyf_362f5[32]; // 2e7b:7b45
+db dummyf_36315[32]; // 2e7b:7b65
+db dummyf_36335[32]; // 2e7b:7b85
+db dummyf_36355[32]; // 2e7b:7ba5
+db dummyf_36375[32]; // 2e7b:7bc5
+db dummyf_36395[32]; // 2e7b:7be5
+db dummyf_363b5[32]; // 2e7b:7c05
+db dummyf_363d5[32]; // 2e7b:7c25
+db dummyf_363f5[32]; // 2e7b:7c45
+db dummyf_36415[32]; // 2e7b:7c65
+db dummyf_36435[32]; // 2e7b:7c85
+db dummyf_36455[32]; // 2e7b:7ca5
+db dummyf_36475[32]; // 2e7b:7cc5
+db dummyf_36495[32]; // 2e7b:7ce5
+db dummyf_364b5[32]; // 2e7b:7d05
+db dummyf_364d5[32]; // 2e7b:7d25
+db dummyf_364f5[32]; // 2e7b:7d45
+db dummyf_36515[32]; // 2e7b:7d65
+db dummyf_36535[32]; // 2e7b:7d85
+db dummyf_36555[32]; // 2e7b:7da5
+db dummyf_36575[32]; // 2e7b:7dc5
+db dummyf_36595[32]; // 2e7b:7de5
+db dummyf_365b5[32]; // 2e7b:7e05
+db dummyf_365d5[32]; // 2e7b:7e25
+db dummyf_365f5[32]; // 2e7b:7e45
+db dummyf_36615[32]; // 2e7b:7e65
+db dummyf_36635[32]; // 2e7b:7e85
+db dummyf_36655[32]; // 2e7b:7ea5
+db dummyf_36675[32]; // 2e7b:7ec5
+db dummyf_36695[32]; // 2e7b:7ee5
+db dummyf_366b5[32]; // 2e7b:7f05
+db dummyf_366d5[32]; // 2e7b:7f25
+db dummyf_366f5[32]; // 2e7b:7f45
+db dummyf_36715[32]; // 2e7b:7f65
+db dummyf_36735[32]; // 2e7b:7f85
+db dummyf_36755[32]; // 2e7b:7fa5
+db dummyf_36775[32]; // 2e7b:7fc5
+db dummyf_36795[32]; // 2e7b:7fe5
+db dummyf_367b5[32]; // 2e7b:8005
+db dummyf_367d5[32]; // 2e7b:8025
+db dummyf_367f5[32]; // 2e7b:8045
+db dummyf_36815[32]; // 2e7b:8065
+db dummyf_36835[32]; // 2e7b:8085
+db dummyf_36855[32]; // 2e7b:80a5
+db dummyf_36875[32]; // 2e7b:80c5
+db dummyf_36895[32]; // 2e7b:80e5
+db dummyf_368b5[32]; // 2e7b:8105
+db dummyf_368d5[32]; // 2e7b:8125
+db dummyf_368f5[32]; // 2e7b:8145
+db dummyf_36915[32]; // 2e7b:8165
+db dummyf_36935[32]; // 2e7b:8185
+db dummyf_36955[32]; // 2e7b:81a5
+db dummyf_36975[32]; // 2e7b:81c5
+db dummyf_36995[32]; // 2e7b:81e5
+db dummyf_369b5[32]; // 2e7b:8205
+db dummyf_369d5[32]; // 2e7b:8225
+db dummyf_369f5[32]; // 2e7b:8245
+db dummyf_36a15[32]; // 2e7b:8265
+db dummyf_36a35[32]; // 2e7b:8285
+db dummyf_36a55[32]; // 2e7b:82a5
+db dummyf_36a75[32]; // 2e7b:82c5
+db dummyf_36a95[32]; // 2e7b:82e5
+db dummyf_36ab5[32]; // 2e7b:8305
+db dummyf_36ad5[32]; // 2e7b:8325
+db dummyf_36af5[32]; // 2e7b:8345
+db dummyf_36b15[32]; // 2e7b:8365
+db dummyf_36b35[32]; // 2e7b:8385
+db dummyf_36b55[32]; // 2e7b:83a5
+db dummyf_36b75[32]; // 2e7b:83c5
+db dummyf_36b95[32]; // 2e7b:83e5
+db dummyf_36bb5[32]; // 2e7b:8405
+db dummyf_36bd5[32]; // 2e7b:8425
+db dummyf_36bf5[32]; // 2e7b:8445
+db dummyf_36c15[32]; // 2e7b:8465
+db dummyf_36c35[32]; // 2e7b:8485
+db dummyf_36c55[32]; // 2e7b:84a5
+db dummyf_36c75[32]; // 2e7b:84c5
+db dummyf_36c95[32]; // 2e7b:84e5
+db dummyf_36cb5[32]; // 2e7b:8505
+db dummyf_36cd5[32]; // 2e7b:8525
+db dummyf_36cf5[32]; // 2e7b:8545
+db dummyf_36d15[32]; // 2e7b:8565
+db dummyf_36d35[32]; // 2e7b:8585
+db dummyf_36d55[32]; // 2e7b:85a5
+db dummyf_36d75[32]; // 2e7b:85c5
+db dummyf_36d95[32]; // 2e7b:85e5
+db dummyf_36db5[32]; // 2e7b:8605
+db dummyf_36dd5[32]; // 2e7b:8625
+db dummyf_36df5[32]; // 2e7b:8645
+db dummyf_36e15[32]; // 2e7b:8665
+db dummyf_36e35[32]; // 2e7b:8685
+db dummyf_36e55[32]; // 2e7b:86a5
+db dummyf_36e75[32]; // 2e7b:86c5
+db dummyf_36e95[32]; // 2e7b:86e5
+db dummyf_36eb5[32]; // 2e7b:8705
+db dummyf_36ed5[32]; // 2e7b:8725
+db dummyf_36ef5[32]; // 2e7b:8745
+db dummyf_36f15[32]; // 2e7b:8765
+db dummyf_36f35[32]; // 2e7b:8785
+db dummyf_36f55[32]; // 2e7b:87a5
+db dummyf_36f75[32]; // 2e7b:87c5
+db dummyf_36f95[32]; // 2e7b:87e5
+db dummyf_36fb5[32]; // 2e7b:8805
+db dummyf_36fd5[32]; // 2e7b:8825
+db dummyf_36ff5[32]; // 2e7b:8845
+db dummyf_37015[32]; // 2e7b:8865
+db dummyf_37035[32]; // 2e7b:8885
+db dummyf_37055[32]; // 2e7b:88a5
+db dummyf_37075[32]; // 2e7b:88c5
+db dummyf_37095[32]; // 2e7b:88e5
+db dummyf_370b5[32]; // 2e7b:8905
+db dummyf_370d5[32]; // 2e7b:8925
+db dummyf_370f5[32]; // 2e7b:8945
+db dummyf_37115[32]; // 2e7b:8965
+db dummyf_37135[32]; // 2e7b:8985
+db dummyf_37155[32]; // 2e7b:89a5
+db dummyf_37175[32]; // 2e7b:89c5
+db dummyf_37195[32]; // 2e7b:89e5
+db dummyf_371b5[32]; // 2e7b:8a05
+db dummyf_371d5[32]; // 2e7b:8a25
+db dummyf_371f5[32]; // 2e7b:8a45
+db dummyf_37215[32]; // 2e7b:8a65
+db dummyf_37235[32]; // 2e7b:8a85
+db dummyf_37255[32]; // 2e7b:8aa5
+db dummyf_37275[32]; // 2e7b:8ac5
+db dummyf_37295[32]; // 2e7b:8ae5
+db dummyf_372b5[32]; // 2e7b:8b05
+db dummyf_372d5[32]; // 2e7b:8b25
+db dummyf_372f5[32]; // 2e7b:8b45
+db dummyf_37315[32]; // 2e7b:8b65
+db dummyf_37335[32]; // 2e7b:8b85
+db dummyf_37355[32]; // 2e7b:8ba5
+db dummyf_37375[32]; // 2e7b:8bc5
+db dummyf_37395[32]; // 2e7b:8be5
+db dummyf_373b5[32]; // 2e7b:8c05
+db dummyf_373d5[32]; // 2e7b:8c25
+db dummyf_373f5[32]; // 2e7b:8c45
+db dummyf_37415[32]; // 2e7b:8c65
+db dummyf_37435[32]; // 2e7b:8c85
+db dummyf_37455[32]; // 2e7b:8ca5
+db dummyf_37475[32]; // 2e7b:8cc5
+db dummyf_37495[32]; // 2e7b:8ce5
+db dummyf_374b5[32]; // 2e7b:8d05
+db dummyf_374d5[32]; // 2e7b:8d25
+db dummyf_374f5[32]; // 2e7b:8d45
+db dummyf_37515[32]; // 2e7b:8d65
+db dummyf_37535[32]; // 2e7b:8d85
+db dummyf_37555[32]; // 2e7b:8da5
+db dummyf_37575[32]; // 2e7b:8dc5
+db dummyf_37595[32]; // 2e7b:8de5
+db dummyf_375b5[32]; // 2e7b:8e05
+db dummyf_375d5[32]; // 2e7b:8e25
+db dummyf_375f5[32]; // 2e7b:8e45
+db dummyf_37615[32]; // 2e7b:8e65
+db dummyf_37635[32]; // 2e7b:8e85
+db dummyf_37655[32]; // 2e7b:8ea5
+db dummyf_37675[32]; // 2e7b:8ec5
+db dummyf_37695[32]; // 2e7b:8ee5
+db dummyf_376b5[32]; // 2e7b:8f05
+db dummyf_376d5[32]; // 2e7b:8f25
+db dummyf_376f5[32]; // 2e7b:8f45
+db dummyf_37715[32]; // 2e7b:8f65
+db dummyf_37735[32]; // 2e7b:8f85
+db dummyf_37755[32]; // 2e7b:8fa5
+db dummyf_37775[32]; // 2e7b:8fc5
+db dummyf_37795[32]; // 2e7b:8fe5
+db dummyf_377b5[32]; // 2e7b:9005
+db dummyf_377d5[32]; // 2e7b:9025
+db dummyf_377f5[32]; // 2e7b:9045
+db dummyf_37815[32]; // 2e7b:9065
+db dummyf_37835[32]; // 2e7b:9085
+db dummyf_37855[32]; // 2e7b:90a5
+db dummyf_37875[32]; // 2e7b:90c5
+db dummyf_37895[32]; // 2e7b:90e5
+db dummyf_378b5[32]; // 2e7b:9105
+db dummyf_378d5[32]; // 2e7b:9125
+db dummyf_378f5[32]; // 2e7b:9145
+db dummyf_37915[32]; // 2e7b:9165
+db dummyf_37935[32]; // 2e7b:9185
+db dummyf_37955[32]; // 2e7b:91a5
+db dummyf_37975[32]; // 2e7b:91c5
+db dummyf_37995[32]; // 2e7b:91e5
+db dummyf_379b5[32]; // 2e7b:9205
+db dummyf_379d5[32]; // 2e7b:9225
+db dummyf_379f5[32]; // 2e7b:9245
+db dummyf_37a15[32]; // 2e7b:9265
+db dummyf_37a35[32]; // 2e7b:9285
+db dummyf_37a55[32]; // 2e7b:92a5
+db dummyf_37a75[32]; // 2e7b:92c5
+db dummyf_37a95[32]; // 2e7b:92e5
+db dummyf_37ab5[32]; // 2e7b:9305
+db dummyf_37ad5[32]; // 2e7b:9325
+db dummyf_37af5[32]; // 2e7b:9345
+db dummyf_37b15[32]; // 2e7b:9365
+db dummyf_37b35[32]; // 2e7b:9385
+db dummyf_37b55[32]; // 2e7b:93a5
+db dummyf_37b75[32]; // 2e7b:93c5
+db dummyf_37b95[32]; // 2e7b:93e5
+db dummyf_37bb5[32]; // 2e7b:9405
+db dummyf_37bd5[32]; // 2e7b:9425
+db dummyf_37bf5[32]; // 2e7b:9445
+db dummyf_37c15[32]; // 2e7b:9465
+db dummyf_37c35[32]; // 2e7b:9485
+db dummyf_37c55[32]; // 2e7b:94a5
+db dummyf_37c75[32]; // 2e7b:94c5
+db dummyf_37c95[32]; // 2e7b:94e5
+db dummyf_37cb5[32]; // 2e7b:9505
+db dummyf_37cd5[32]; // 2e7b:9525
+db dummyf_37cf5[32]; // 2e7b:9545
+db dummyf_37d15[32]; // 2e7b:9565
+db dummyf_37d35[32]; // 2e7b:9585
+db dummyf_37d55[32]; // 2e7b:95a5
+db dummyf_37d75[32]; // 2e7b:95c5
+db dummyf_37d95[32]; // 2e7b:95e5
+db dummyf_37db5[32]; // 2e7b:9605
+db dummyf_37dd5[32]; // 2e7b:9625
+db dummyf_37df5[32]; // 2e7b:9645
+db dummyf_37e15[32]; // 2e7b:9665
+db dummyf_37e35[32]; // 2e7b:9685
+db dummyf_37e55[32]; // 2e7b:96a5
+db dummyf_37e75[32]; // 2e7b:96c5
+db dummyf_37e95[32]; // 2e7b:96e5
+db dummyf_37eb5[32]; // 2e7b:9705
+db dummyf_37ed5[32]; // 2e7b:9725
+db dummyf_37ef5[32]; // 2e7b:9745
+db dummyf_37f15[32]; // 2e7b:9765
+db dummyf_37f35[32]; // 2e7b:9785
+db dummyf_37f55[32]; // 2e7b:97a5
+db dummyf_37f75[32]; // 2e7b:97c5
+db dummyf_37f95[32]; // 2e7b:97e5
+db dummyf_37fb5[32]; // 2e7b:9805
+db dummyf_37fd5[32]; // 2e7b:9825
+db dummyf_37ff5[32]; // 2e7b:9845
+db dummyf_38015[32]; // 2e7b:9865
+db dummyf_38035[32]; // 2e7b:9885
+db dummyf_38055[32]; // 2e7b:98a5
+db dummyf_38075[32]; // 2e7b:98c5
+db dummyf_38095[32]; // 2e7b:98e5
+db dummyf_380b5[32]; // 2e7b:9905
+db dummyf_380d5[32]; // 2e7b:9925
+db dummyf_380f5[32]; // 2e7b:9945
+db dummyf_38115[32]; // 2e7b:9965
+db dummyf_38135[32]; // 2e7b:9985
+db dummyf_38155[32]; // 2e7b:99a5
+db dummyf_38175[32]; // 2e7b:99c5
+db dummyf_38195[32]; // 2e7b:99e5
+db dummyf_381b5[32]; // 2e7b:9a05
+db dummyf_381d5[32]; // 2e7b:9a25
+db dummyf_381f5[32]; // 2e7b:9a45
+db dummyf_38215[32]; // 2e7b:9a65
+db dummyf_38235[32]; // 2e7b:9a85
+db dummyf_38255[32]; // 2e7b:9aa5
+db dummyf_38275[32]; // 2e7b:9ac5
+db dummyf_38295[32]; // 2e7b:9ae5
+db dummyf_382b5[32]; // 2e7b:9b05
+db dummyf_382d5[32]; // 2e7b:9b25
+db dummyf_382f5[32]; // 2e7b:9b45
+db dummyf_38315[32]; // 2e7b:9b65
+db dummyf_38335[32]; // 2e7b:9b85
+db dummyf_38355[32]; // 2e7b:9ba5
+db dummyf_38375[32]; // 2e7b:9bc5
+db dummyf_38395[32]; // 2e7b:9be5
+db dummyf_383b5[32]; // 2e7b:9c05
+db dummyf_383d5[32]; // 2e7b:9c25
+db dummyf_383f5[32]; // 2e7b:9c45
+db dummyf_38415[32]; // 2e7b:9c65
+db dummyf_38435[32]; // 2e7b:9c85
+db dummyf_38455[32]; // 2e7b:9ca5
+db dummyf_38475[32]; // 2e7b:9cc5
+db dummyf_38495[32]; // 2e7b:9ce5
+db dummyf_384b5[32]; // 2e7b:9d05
+db dummyf_384d5[32]; // 2e7b:9d25
+db dummyf_384f5[32]; // 2e7b:9d45
+db dummyf_38515[32]; // 2e7b:9d65
+db dummyf_38535[32]; // 2e7b:9d85
+db dummyf_38555[32]; // 2e7b:9da5
+db dummyf_38575[32]; // 2e7b:9dc5
+db dummyf_38595[32]; // 2e7b:9de5
+db dummyf_385b5[32]; // 2e7b:9e05
+db dummyf_385d5[32]; // 2e7b:9e25
+db dummyf_385f5[32]; // 2e7b:9e45
+db dummyf_38615[32]; // 2e7b:9e65
+db dummyf_38635[32]; // 2e7b:9e85
+db dummyf_38655[32]; // 2e7b:9ea5
+db dummyf_38675[32]; // 2e7b:9ec5
+db dummyf_38695[32]; // 2e7b:9ee5
+db dummyf_386b5[32]; // 2e7b:9f05
+db dummyf_386d5[32]; // 2e7b:9f25
+db dummyf_386f5[32]; // 2e7b:9f45
+db dummyf_38715[32]; // 2e7b:9f65
+db dummyf_38735[32]; // 2e7b:9f85
+db dummyf_38755[32]; // 2e7b:9fa5
+db dummyf_38775[32]; // 2e7b:9fc5
+db dummyf_38795[32]; // 2e7b:9fe5
+db dummyf_387b5[32]; // 2e7b:a005
+db dummyf_387d5[32]; // 2e7b:a025
+db dummyf_387f5[32]; // 2e7b:a045
+db dummyf_38815[32]; // 2e7b:a065
+db dummyf_38835[32]; // 2e7b:a085
+db dummyf_38855[32]; // 2e7b:a0a5
+db dummyf_38875[32]; // 2e7b:a0c5
+db dummyf_38895[32]; // 2e7b:a0e5
+db dummyf_388b5[32]; // 2e7b:a105
+db dummyf_388d5[32]; // 2e7b:a125
+db dummyf_388f5[32]; // 2e7b:a145
+db dummyf_38915[32]; // 2e7b:a165
+db dummyf_38935[32]; // 2e7b:a185
+db dummyf_38955[32]; // 2e7b:a1a5
+db dummyf_38975[32]; // 2e7b:a1c5
+db dummyf_38995[32]; // 2e7b:a1e5
+db dummyf_389b5[32]; // 2e7b:a205
+db dummyf_389d5[32]; // 2e7b:a225
+db dummyf_389f5[32]; // 2e7b:a245
+db dummyf_38a15[32]; // 2e7b:a265
+db dummyf_38a35[32]; // 2e7b:a285
+db dummyf_38a55[32]; // 2e7b:a2a5
+db dummyf_38a75[32]; // 2e7b:a2c5
+db dummyf_38a95[32]; // 2e7b:a2e5
+db dummyf_38ab5[32]; // 2e7b:a305
+db dummyf_38ad5[32]; // 2e7b:a325
+db dummyf_38af5[32]; // 2e7b:a345
+db dummyf_38b15[32]; // 2e7b:a365
+db dummyf_38b35[32]; // 2e7b:a385
+db dummyf_38b55[32]; // 2e7b:a3a5
+db dummyf_38b75[32]; // 2e7b:a3c5
+db dummyf_38b95[32]; // 2e7b:a3e5
+db dummyf_38bb5[32]; // 2e7b:a405
+db dummyf_38bd5[32]; // 2e7b:a425
+db dummyf_38bf5[32]; // 2e7b:a445
+db dummyf_38c15[32]; // 2e7b:a465
+db dummyf_38c35[32]; // 2e7b:a485
+db dummyf_38c55[32]; // 2e7b:a4a5
+db dummyf_38c75[32]; // 2e7b:a4c5
+db dummyf_38c95[32]; // 2e7b:a4e5
+db dummyf_38cb5[32]; // 2e7b:a505
+db dummyf_38cd5[32]; // 2e7b:a525
+db dummyf_38cf5[32]; // 2e7b:a545
+db dummyf_38d15[32]; // 2e7b:a565
+db dummyf_38d35[32]; // 2e7b:a585
+db dummyf_38d55[32]; // 2e7b:a5a5
+db dummyf_38d75[32]; // 2e7b:a5c5
+db dummyf_38d95[32]; // 2e7b:a5e5
+db dummyf_38db5[32]; // 2e7b:a605
+db dummyf_38dd5[32]; // 2e7b:a625
+db dummyf_38df5[32]; // 2e7b:a645
+db dummyf_38e15[32]; // 2e7b:a665
+db dummyf_38e35[32]; // 2e7b:a685
+db dummyf_38e55[32]; // 2e7b:a6a5
+db dummyf_38e75[32]; // 2e7b:a6c5
+db dummyf_38e95[32]; // 2e7b:a6e5
+db dummyf_38eb5[32]; // 2e7b:a705
+db dummyf_38ed5[32]; // 2e7b:a725
+db dummyf_38ef5[32]; // 2e7b:a745
+db dummyf_38f15[32]; // 2e7b:a765
+db dummyf_38f35[32]; // 2e7b:a785
+db dummyf_38f55[32]; // 2e7b:a7a5
+db dummyf_38f75[32]; // 2e7b:a7c5
+db dummyf_38f95[32]; // 2e7b:a7e5
+db dummyf_38fb5[32]; // 2e7b:a805
+db dummyf_38fd5[32]; // 2e7b:a825
+db dummyf_38ff5[32]; // 2e7b:a845
+db dummyf_39015[32]; // 2e7b:a865
+db dummyf_39035[32]; // 2e7b:a885
+db dummyf_39055[32]; // 2e7b:a8a5
+db dummyf_39075[32]; // 2e7b:a8c5
+db dummyf_39095[32]; // 2e7b:a8e5
+db dummyf_390b5[32]; // 2e7b:a905
+db dummyf_390d5[32]; // 2e7b:a925
+db dummyf_390f5[32]; // 2e7b:a945
+db dummyf_39115[32]; // 2e7b:a965
+db dummyf_39135[32]; // 2e7b:a985
+db dummyf_39155[32]; // 2e7b:a9a5
+db dummyf_39175[32]; // 2e7b:a9c5
+db dummyf_39195[32]; // 2e7b:a9e5
+db dummyf_391b5[32]; // 2e7b:aa05
+db dummyf_391d5[32]; // 2e7b:aa25
+db dummyf_391f5[32]; // 2e7b:aa45
+db dummyf_39215[32]; // 2e7b:aa65
+db dummyf_39235[32]; // 2e7b:aa85
+db dummyf_39255[32]; // 2e7b:aaa5
+db dummyf_39275[32]; // 2e7b:aac5
+db dummyf_39295[32]; // 2e7b:aae5
+db dummyf_392b5[32]; // 2e7b:ab05
+db dummyf_392d5[32]; // 2e7b:ab25
+db dummyf_392f5[32]; // 2e7b:ab45
+db dummyf_39315[32]; // 2e7b:ab65
+db dummyf_39335[32]; // 2e7b:ab85
+db dummyf_39355[32]; // 2e7b:aba5
+db dummyf_39375[32]; // 2e7b:abc5
+db dummyf_39395[32]; // 2e7b:abe5
+db dummyf_393b5[32]; // 2e7b:ac05
+db dummyf_393d5[32]; // 2e7b:ac25
+db dummyf_393f5[32]; // 2e7b:ac45
+db dummyf_39415[32]; // 2e7b:ac65
+db dummyf_39435[32]; // 2e7b:ac85
+db dummyf_39455[32]; // 2e7b:aca5
+db dummyf_39475[32]; // 2e7b:acc5
+db dummyf_39495[32]; // 2e7b:ace5
+db dummyf_394b5[32]; // 2e7b:ad05
+db dummyf_394d5[32]; // 2e7b:ad25
+db dummyf_394f5[32]; // 2e7b:ad45
+db dummyf_39515[32]; // 2e7b:ad65
+db dummyf_39535[32]; // 2e7b:ad85
+db dummyf_39555[32]; // 2e7b:ada5
+db dummyf_39575[32]; // 2e7b:adc5
+db dummyf_39595[32]; // 2e7b:ade5
+db dummyf_395b5[32]; // 2e7b:ae05
+db dummyf_395d5[32]; // 2e7b:ae25
+db dummyf_395f5[32]; // 2e7b:ae45
+db dummyf_39615[32]; // 2e7b:ae65
+db dummyf_39635[32]; // 2e7b:ae85
+db dummyf_39655[32]; // 2e7b:aea5
+db dummyf_39675[32]; // 2e7b:aec5
+db dummyf_39695[32]; // 2e7b:aee5
+db dummyf_396b5[32]; // 2e7b:af05
+db dummyf_396d5[32]; // 2e7b:af25
+db dummyf_396f5[32]; // 2e7b:af45
+db dummyf_39715[32]; // 2e7b:af65
+db dummyf_39735[32]; // 2e7b:af85
+db dummyf_39755[32]; // 2e7b:afa5
+db dummyf_39775[32]; // 2e7b:afc5
+db dummyf_39795[32]; // 2e7b:afe5
+db dummyf_397b5[32]; // 2e7b:b005
+db dummyf_397d5[32]; // 2e7b:b025
+db dummyf_397f5[32]; // 2e7b:b045
+db dummyf_39815[32]; // 2e7b:b065
+db dummyf_39835[32]; // 2e7b:b085
+db dummyf_39855[32]; // 2e7b:b0a5
+db dummyf_39875[32]; // 2e7b:b0c5
+db dummyf_39895[32]; // 2e7b:b0e5
+db dummyf_398b5[32]; // 2e7b:b105
+db dummyf_398d5[32]; // 2e7b:b125
+db dummyf_398f5[32]; // 2e7b:b145
+db dummyf_39915[32]; // 2e7b:b165
+db dummyf_39935[32]; // 2e7b:b185
+db dummyf_39955[32]; // 2e7b:b1a5
+db dummyf_39975[32]; // 2e7b:b1c5
+db dummyf_39995[32]; // 2e7b:b1e5
+db dummyf_399b5[32]; // 2e7b:b205
+db dummyf_399d5[32]; // 2e7b:b225
+db dummyf_399f5[32]; // 2e7b:b245
+db dummyf_39a15[32]; // 2e7b:b265
+db dummyf_39a35[32]; // 2e7b:b285
+db dummyf_39a55[32]; // 2e7b:b2a5
+db dummyf_39a75[32]; // 2e7b:b2c5
+db dummyf_39a95[32]; // 2e7b:b2e5
+db dummyf_39ab5[32]; // 2e7b:b305
+db dummyf_39ad5[32]; // 2e7b:b325
+db dummyf_39af5[32]; // 2e7b:b345
+db dummyf_39b15[32]; // 2e7b:b365
+db dummyf_39b35;
+db dummyf_39b36;
+db dummyf_39b37;
+db unk_48118; // 2e7b:b388
+db dummyf_39b39[32]; // 2e7b:b389
+db dummyf_39b59[32]; // 2e7b:b3a9
+db dummyf_39b79[32]; // 2e7b:b3c9
+db dummyf_39b99[32]; // 2e7b:b3e9
+db dummyf_39bb9[32]; // 2e7b:b409
+db dummyf_39bd9[32]; // 2e7b:b429
+db dummyf_39bf9[32]; // 2e7b:b449
+db dummyf_39c19[32]; // 2e7b:b469
+db dummyf_39c39[32]; // 2e7b:b489
+db dummyf_39c59[32]; // 2e7b:b4a9
+db dummyf_39c79[32]; // 2e7b:b4c9
+db dummyf_39c99[32]; // 2e7b:b4e9
+db dummyf_39cb9[32]; // 2e7b:b509
+db dummyf_39cd9[32]; // 2e7b:b529
+db dummyf_39cf9[32]; // 2e7b:b549
+db dummyf_39d19[32]; // 2e7b:b569
+db dummyf_39d39[32]; // 2e7b:b589
+db dummyf_39d59[32]; // 2e7b:b5a9
+db dummyf_39d79[32]; // 2e7b:b5c9
+db dummyf_39d99[32]; // 2e7b:b5e9
+db dummyf_39db9[32]; // 2e7b:b609
+db dummyf_39dd9[32]; // 2e7b:b629
+db dummyf_39df9[32]; // 2e7b:b649
+db dummyf_39e19[32]; // 2e7b:b669
+db dummyf_39e39[32]; // 2e7b:b689
+db dummyf_39e59[32]; // 2e7b:b6a9
+db dummyf_39e79[32]; // 2e7b:b6c9
+db dummyf_39e99[32]; // 2e7b:b6e9
+db dummyf_39eb9[32]; // 2e7b:b709
+db dummyf_39ed9[32]; // 2e7b:b729
+db dummyf_39ef9[32]; // 2e7b:b749
+db dummyf_39f19[32]; // 2e7b:b769
+db dummyf_39f39[32]; // 2e7b:b789
+db dummyf_39f59[32]; // 2e7b:b7a9
+db dummyf_39f79[32]; // 2e7b:b7c9
+db dummyf_39f99[32]; // 2e7b:b7e9
+db dummyf_39fb9[32]; // 2e7b:b809
+db dummyf_39fd9[32]; // 2e7b:b829
+db dummyf_39ff9[32]; // 2e7b:b849
+db dummyf_3a019[32]; // 2e7b:b869
+db dummyf_3a039[32]; // 2e7b:b889
+db dummyf_3a059[32]; // 2e7b:b8a9
+db dummyf_3a079[32]; // 2e7b:b8c9
+db dummyf_3a099[32]; // 2e7b:b8e9
+db dummyf_3a0b9[32]; // 2e7b:b909
+db dummyf_3a0d9[32]; // 2e7b:b929
+db dummyf_3a0f9[32]; // 2e7b:b949
+db dummyf_3a119[32]; // 2e7b:b969
+db dummyf_3a139[32]; // 2e7b:b989
+db dummyf_3a159[32]; // 2e7b:b9a9
+db dummyf_3a179[32]; // 2e7b:b9c9
+db dummyf_3a199[32]; // 2e7b:b9e9
+db dummyf_3a1b9[32]; // 2e7b:ba09
+db dummyf_3a1d9[32]; // 2e7b:ba29
+db dummyf_3a1f9[32]; // 2e7b:ba49
+db dummyf_3a219[32]; // 2e7b:ba69
+db dummyf_3a239[32]; // 2e7b:ba89
+db dummyf_3a259[32]; // 2e7b:baa9
+db dummyf_3a279[32]; // 2e7b:bac9
+db dummyf_3a299[32]; // 2e7b:bae9
+db dummyf_3a2b9[32]; // 2e7b:bb09
+db dummyf_3a2d9[32]; // 2e7b:bb29
+db dummyf_3a2f9[32]; // 2e7b:bb49
+db dummyf_3a319[32]; // 2e7b:bb69
+db dummyf_3a339[32]; // 2e7b:bb89
+db dummyf_3a359[32]; // 2e7b:bba9
+db dummyf_3a379[32]; // 2e7b:bbc9
+db dummyf_3a399[32]; // 2e7b:bbe9
+db dummyf_3a3b9[32]; // 2e7b:bc09
+db dummyf_3a3d9[32]; // 2e7b:bc29
+db dummyf_3a3f9[32]; // 2e7b:bc49
+db dummyf_3a419[32]; // 2e7b:bc69
+db dummyf_3a439[32]; // 2e7b:bc89
+db dummyf_3a459[32]; // 2e7b:bca9
+db dummyf_3a479[32]; // 2e7b:bcc9
+db dummyf_3a499[32]; // 2e7b:bce9
+db dummyf_3a4b9[32]; // 2e7b:bd09
+db dummyf_3a4d9[32]; // 2e7b:bd29
+db dummyf_3a4f9;
+db dummyf_3a4fa;
+db dummyf_3a4fb;
+db dummyf_3a4fc;
+db dummyf_3a4fd;
+db dummyf_3a4fe;
+db dummyf_3a4ff;
+db byte_48ae0; // 3a50:0000
 db dummyf_3a501;
 db dummyf_3a502;
 db dummyf_3a503;
 db dummyf_3a504;
 db dummyf_3a505;
-dw word_48ae6; // 3a50:0006
+dw dummyf_3a506;
 char amsruntimelibra[56]; // 3a50:0008
 db dummyf_3a540; // 3a50:0040
 db dummyf_3a541;
@@ -4999,27 +7698,82 @@ db dummyf_3a96d[32]; // 3a50:046d
 db dummyf_3a98d[32]; // 3a50:048d
 db dummyf_3a9ad[32]; // 3a50:04ad
 db dummyf_3a9cd[32]; // 3a50:04cd
-db dummyf_3a9ed[32]; // 3a50:04ed
-db dummyf_3aa0d[32]; // 3a50:050d
-db dummyf_3aa2d[32]; // 3a50:052d
-db dummyf_3aa4d[32]; // 3a50:054d
-db dummyf_3aa6d[32]; // 3a50:056d
-db dummyf_3aa8d[32]; // 3a50:058d
-db dummyf_3aaad[32]; // 3a50:05ad
-db dummyf_3aacd[32]; // 3a50:05cd
-db dummyf_3aaed[32]; // 3a50:05ed
-db dummyf_3ab0d[32]; // 3a50:060d
-db dummyf_3ab2d[32]; // 3a50:062d
-db dummyf_3ab4d[32]; // 3a50:064d
-db dummyf_3ab6d[32]; // 3a50:066d
-db dummyf_3ab8d[32]; // 3a50:068d
-db dummyf_3abad; // 3a50:06ad
-db dummyf_3abae; // 3a50:06ae
-db dummyf_3abaf;
-db dummyf_3abb0; // 3a50:06b0
-db dummyf_3abb1;
-db dummyf_3abb2; // 3a50:06b2
-db dummyf_3abb3;
+db dummyf_3a9ed;
+db dummyf_3a9ee;
+db dummyf_3a9ef; // 3a50:04ef
+db dummyf_3a9f0; // 3a50:04f0
+db dummyf_3a9f1; // 3a50:04f1
+db dummyf_3a9f2; // 3a50:04f2
+db dummyf_3a9f3; // 3a50:04f3
+db dummyf_3a9f4; // 3a50:04f4
+db dummyf_3a9f5;
+db dummyf_3a9f6;
+db dummyf_3a9f7;
+db dummyf_3a9f8;
+db dummyf_3a9f9;
+db dummyf_3a9fa; // 3a50:04fa
+db dummyf_3a9fb; // 3a50:04fb
+db dummyf_3a9fc; // 3a50:04fc
+db dummyf_3a9fd;
+db dummyf_3a9fe; // 3a50:04fe
+db dummyf_3a9ff;
+db dummyf_3aa00; // 3a50:0500
+db dummyf_3aa01;
+db dummyf_3aa02; // 3a50:0502
+db dummyf_3aa03;
+db dummyf_3aa04; // 3a50:0504
+db dummyf_3aa05;
+db dummyf_3aa06;
+db dummyf_3aa07;
+db dummyf_3aa08; // 3a50:0508
+db dummyf_3aa09; // 3a50:0509
+db dummyf_3aa0a; // 3a50:050a
+dw word_48feb; // 3a50:050b
+dw word_48fed; // 3a50:050d
+db dummyf_3aa0f[32]; // 3a50:050f
+db dummyf_3aa2f[32]; // 3a50:052f
+db dummyf_3aa4f[32]; // 3a50:054f
+db dummyf_3aa6f;
+db dummyf_3aa70; // 3a50:0570
+db dummyf_3aa71; // 3a50:0571
+db dummyf_3aa72; // 3a50:0572
+db dummyf_3aa73; // 3a50:0573
+db dummyf_3aa74; // 3a50:0574
+db dummyf_3aa75;
+db dummyf_3aa76;
+db dummyf_3aa77;
+db dummyf_3aa78; // 3a50:0578
+db dummyf_3aa79;
+db dummyf_3aa7a; // 3a50:057a
+db dummyf_3aa7b; // 3a50:057b
+db dummyf_3aa7c; // 3a50:057c
+db dummyf_3aa7d;
+db dummyf_3aa7e; // 3a50:057e
+db dummyf_3aa7f;
+dw word_49060; // 3a50:0580
+dw word_49062; // 3a50:0582
+db dummyf_3aa84; // 3a50:0584
+db dummyf_3aa85; // 3a50:0585
+db dummyf_3aa86; // 3a50:0586
+db dummyf_3aa87;
+dw word_49068; // 3a50:0588
+db dummyf_3aa8a; // 3a50:058a
+db dummyf_3aa8b;
+dw word_4906c; // 3a50:058c
+db dummyf_3aa8e; // 3a50:058e
+db dummyf_3aa8f;
+dw word_49070; // 3a50:0590
+db dummyf_3aa92; // 3a50:0592
+db byte_49073; // 3a50:0593
+db dummyf_3aa94[32]; // 3a50:0594
+db dummyf_3aab4[32]; // 3a50:05b4
+db dummyf_3aad4[32]; // 3a50:05d4
+db dummyf_3aaf4[32]; // 3a50:05f4
+db dummyf_3ab14[32]; // 3a50:0614
+db dummyf_3ab34[32]; // 3a50:0634
+db dummyf_3ab54[32]; // 3a50:0654
+db dummyf_3ab74[32]; // 3a50:0674
+db dummyf_3ab94[32]; // 3a50:0694
 db dummyf_3abb4; // 3a50:06b4
 db dummyf_3abb5; // 3a50:06b5
 db dummyf_3abb6; // 3a50:06b6
@@ -5261,84 +8015,38 @@ char aonpatrol[11]; // 3a50:0e9c
 char af15strikeeagle[17]; // 3a50:0ea7
 char aat[5]; // 3a50:0eb8
 db dummyf_3b3bd;
-db dummyf_3b3be[320];
-db dummyf_3b4fe; // 3a50:0ffe
-db dummyf_3b4ff[1];
-db dummyf_3b500;
-db dummyf_3b501[1];
-db dummyf_3b502;
-db dummyf_3b503[5];
-db dummyf_3b508; // 3a50:1008
-db dummyf_3b509[1];
-db dummyf_3b50a;
-db dummyf_3b50b[1];
-db dummyf_3b50c;
-db dummyf_3b50d; // 3a50:100d
-db dummyf_3b50e;
-db dummyf_3b50f;
-db dummyf_3b510;
-db dummyf_3b511;
-db dummyf_3b512[20];
-db dummyf_3b526; // 3a50:1026
-db dummyf_3b527[1];
-db dummyf_3b528;
-db dummyf_3b529[1];
-db dummyf_3b52a;
-db dummyf_3b52b[5];
-db dummyf_3b530; // 3a50:1030
-db dummyf_3b531[1];
-db dummyf_3b532;
-db dummyf_3b533[1];
-db dummyf_3b534;
-db dummyf_3b535[10];
-db dummyf_3b53f; // 3a50:103f
-db dummyf_3b540;
-db dummyf_3b541;
-db dummyf_3b542;
-db dummyf_3b543;
-db dummyf_3b544; // 3a50:1044
-db dummyf_3b545[1];
-db dummyf_3b546;
-db dummyf_3b547[1];
-db dummyf_3b548;
-db dummyf_3b549[5];
-db dummyf_3b54e; // 3a50:104e
-db dummyf_3b54f[1];
-db dummyf_3b550;
-db dummyf_3b551[1];
-db dummyf_3b552;
-db dummyf_3b553; // 3a50:1053
-db dummyf_3b554;
-db dummyf_3b555;
-db dummyf_3b556;
-db dummyf_3b557;
-db dummyf_3b558[5];
-db dummyf_3b55d[32]; // 3a50:105d
+db dummyf_3b3be[420];
+db dummyf_3b562;
+db dummyf_3b563;
+db dummyf_3b564;
+db dummyf_3b565;
+db dummyf_3b566;
+db dummyf_3b567;
+db dummyf_3b568;
+db dummyf_3b569;
+db dummyf_3b56a;
+db dummyf_3b56b;
+db dummyf_3b56c;
+db dummyf_3b56d;
+db dummyf_3b56e;
+db dummyf_3b56f;
+db dummyf_3b570;
+db dummyf_3b571;
+db dummyf_3b572;
+db dummyf_3b573;
+db dummyf_3b574;
+db dummyf_3b575;
+db dummyf_3b576;
+db dummyf_3b577;
+db dummyf_3b578;
+db dummyf_3b579;
+db dummyf_3b57a;
+db dummyf_3b57b;
+db dummyf_3b57c;
 db dummyf_3b57d;
 db dummyf_3b57e;
 db dummyf_3b57f;
-db dummyf_3b580; // 3a50:1080
-db dummyf_3b581[1];
-db dummyf_3b582;
-db dummyf_3b583[1];
-db dummyf_3b584;
-db dummyf_3b585[5];
-db dummyf_3b58a; // 3a50:108a
-db dummyf_3b58b[1];
-db dummyf_3b58c;
-db dummyf_3b58d[1];
-db dummyf_3b58e;
-db dummyf_3b58f[5];
-db dummyf_3b594; // 3a50:1094
-db dummyf_3b595[1];
-db dummyf_3b596;
-db dummyf_3b597[1];
-db dummyf_3b598;
-db dummyf_3b599; // 3a50:1099
-db dummyf_3b59a;
-db dummyf_3b59b;
-db dummyf_3b59c;
-db dummyf_3b59d;
+db dummyf_3b580[30];
 db dummyf_3b59e;
 db dummyf_3b59f;
 db dummyf_3b5a0;
@@ -5359,13 +8067,7 @@ db dummyf_3b5ae;
 db dummyf_3b5af;
 db dummyf_3b5b0;
 db dummyf_3b5b1;
-db dummyf_3b5b2[15];
-db dummyf_3b5c1; // 3a50:10c1
-db dummyf_3b5c2;
-db dummyf_3b5c3;
-db dummyf_3b5c4;
-db dummyf_3b5c5;
-db dummyf_3b5c6[30];
+db dummyf_3b5b2[50];
 db dummyf_3b5e4;
 db dummyf_3b5e5;
 db dummyf_3b5e6;
@@ -5433,7 +8135,13 @@ db dummyf_3b7f4[8]; // 3a50:1102
 dw word_49ddc; // 3a50:12fc
 db dummyf_3b7fe;
 db dummyf_3b7ff; // 3a50:12ff
-db dummyf_3b800[7];
+db dummyf_3b800;
+db dummyf_3b801; // 3a50:1301
+db dummyf_3b802; // 3a50:1302
+db dummyf_3b803;
+db dummyf_3b804; // 3a50:1304
+db dummyf_3b805;
+db dummyf_3b806; // 3a50:1306
 db dummyf_3b807;
 dw word_49de8[101]; // 3a50:1308
 dw word_49eb2; // 3a50:13d2
@@ -5625,32 +8333,98 @@ dw word_4aa98[240]; // 3a50:1fb8
 dw word_4ac78[2]; // 3a50:2198
 dw word_4ac7c[240]; // 3a50:219c
 dw word_4ae5c[1894]; // 3a50:237c
-dw _unk_4bd28[2115]; // 3a50:3248
-dw word_4cdae; // 3a50:42ce
-dw word_4cdb0; // 3a50:42d0
-dw word_4cdb2; // 3a50:42d2
-dw word_4cdb4; // 3a50:42d4
-db byte_4cdb6[2]; // 3a50:42d6
-db byte_4cdb8; // 3a50:42d8
-dw word_4cdb9; // 3a50:42d9
-dw word_4cdbb; // 3a50:42db
-db dummyf_3e7dd[32]; // 3a50:42dd
-db dummyf_3e7fd; // 3a50:42fd
-db byte_4cdde[98]; // 3a50:42fe
-dw word_4ce40; // 3a50:4360
-dw word_4ce42; // 3a50:4362
-dw word_4ce44; // 3a50:4364
-db byte_4ce46; // 3a50:4366
-db byte_4ce47; // 3a50:4367
-db byte_4ce48; // 3a50:4368
-dw word_4ce49; // 3a50:4369
-dw word_4ce4b; // 3a50:436b
-dw word_4ce4d; // 3a50:436d
-dw word_4ce4f; // 3a50:436f
-dw word_4ce51; // 3a50:4371
-dw word_4ce53; // 3a50:4373
-dw word_4ce55; // 3a50:4375
-dw word_4ce57; // 3a50:4377
+dw _unk_4bd28[1340]; // 3a50:3248
+db unk_4c7a0; // 3e1c:0000
+db dummyf_3e1c1[32]; // 3e1c:0001
+db dummyf_3e1e1[32]; // 3e1c:0021
+db dummyf_3e201[32]; // 3e1c:0041
+db dummyf_3e221[32]; // 3e1c:0061
+db dummyf_3e241[32]; // 3e1c:0081
+db dummyf_3e261[32]; // 3e1c:00a1
+db dummyf_3e281[32]; // 3e1c:00c1
+db dummyf_3e2a1[32]; // 3e1c:00e1
+db dummyf_3e2c1[32]; // 3e1c:0101
+db dummyf_3e2e1[32]; // 3e1c:0121
+db dummyf_3e301[32]; // 3e1c:0141
+db dummyf_3e321[32]; // 3e1c:0161
+db dummyf_3e341[32]; // 3e1c:0181
+db dummyf_3e361[32]; // 3e1c:01a1
+db dummyf_3e381[32]; // 3e1c:01c1
+db dummyf_3e3a1[32]; // 3e1c:01e1
+db dummyf_3e3c1[32]; // 3e1c:0201
+db dummyf_3e3e1[32]; // 3e1c:0221
+db dummyf_3e401[32]; // 3e1c:0241
+db dummyf_3e421[32]; // 3e1c:0261
+db dummyf_3e441[32]; // 3e1c:0281
+db dummyf_3e461[32]; // 3e1c:02a1
+db dummyf_3e481[32]; // 3e1c:02c1
+db dummyf_3e4a1[32]; // 3e1c:02e1
+db dummyf_3e4c1[32]; // 3e1c:0301
+db dummyf_3e4e1[32]; // 3e1c:0321
+db dummyf_3e501[32]; // 3e1c:0341
+db dummyf_3e521[32]; // 3e1c:0361
+db dummyf_3e541[32]; // 3e1c:0381
+db dummyf_3e561[32]; // 3e1c:03a1
+db dummyf_3e581[32]; // 3e1c:03c1
+db dummyf_3e5a1[32]; // 3e1c:03e1
+db dummyf_3e5c1[32]; // 3e1c:0401
+db dummyf_3e5e1[32]; // 3e1c:0421
+db dummyf_3e601[32]; // 3e1c:0441
+db dummyf_3e621[32]; // 3e1c:0461
+db dummyf_3e641[32]; // 3e1c:0481
+db dummyf_3e661[32]; // 3e1c:04a1
+db dummyf_3e681[32]; // 3e1c:04c1
+db dummyf_3e6a1[32]; // 3e1c:04e1
+db dummyf_3e6c1[32]; // 3e1c:0501
+db dummyf_3e6e1[32]; // 3e1c:0521
+db dummyf_3e701[32]; // 3e1c:0541
+db dummyf_3e721[32]; // 3e1c:0561
+db dummyf_3e741[32]; // 3e1c:0581
+db dummyf_3e761[32]; // 3e1c:05a1
+db dummyf_3e781[32]; // 3e1c:05c1
+db dummyf_3e7a1[32]; // 3e1c:05e1
+db dummyf_3e7c1;
+db dummyf_3e7c2;
+db dummyf_3e7c3;
+db dummyf_3e7c4;
+db dummyf_3e7c5;
+db dummyf_3e7c6;
+db dummyf_3e7c7;
+db dummyf_3e7c8;
+db dummyf_3e7c9;
+db dummyf_3e7ca;
+db dummyf_3e7cb;
+db dummyf_3e7cc;
+db dummyf_3e7cd;
+dw word_4cdae; // 3e1c:060e
+dw word_4cdb0; // 3e1c:0610
+dw word_4cdb2; // 3e1c:0612
+dw word_4cdb4; // 3e1c:0614
+dw word_4cdb6; // 3e1c:0616
+db byte_4cdb8; // 3e1c:0618
+dw word_4cdb9; // 3e1c:0619
+dw word_4cdbb; // 3e1c:061b
+db dummyf_3e7dd[32]; // 3e1c:061d
+db dummyf_3e7fd; // 3e1c:063d
+db byte_4cdde; // 3e1c:063e
+db dummyf_3e7ff[32]; // 3e1c:063f
+db dummyf_3e81f[32]; // 3e1c:065f
+db dummyf_3e83f[32]; // 3e1c:067f
+db dummyf_3e85f;
+dw word_4ce40; // 3e1c:06a0
+dw word_4ce42; // 3e1c:06a2
+dw word_4ce44; // 3e1c:06a4
+db byte_4ce46; // 3e1c:06a6
+db byte_4ce47; // 3e1c:06a7
+db byte_4ce48; // 3e1c:06a8
+dw word_4ce49; // 3e1c:06a9
+dw word_4ce4b; // 3e1c:06ab
+dw word_4ce4d; // 3e1c:06ad
+dw word_4ce4f; // 3e1c:06af
+dw word_4ce51; // 3e1c:06b1
+dw word_4ce53; // 3e1c:06b3
+dw word_4ce55; // 3e1c:06b5
+dw word_4ce57; // 3e1c:06b7
 db dummyf_3e879;
 db dummyf_3e87a;
 db dummyf_3e87b;
@@ -5659,684 +8433,184 @@ db dummyf_3e87d;
 db dummyf_3e87e;
 db dummyf_3e87f;
 db dummyf_3e880;
-db byte_4ce61; // 3a50:4381
-db byte_4ce62; // 3a50:4382
-dw word_4ce63; // 3a50:4383
-db dummyf_3e885[32]; // 3a50:4385
-db dummyf_3e8a5[32]; // 3a50:43a5
-db dummyf_3e8c5; // 3a50:43c5
-db dummyf_3e8c6; // 3a50:43c6
-db dummyf_3e8c7; // 3a50:43c7
-db dummyf_3e8c8; // 3a50:43c8
-db dummyf_3e8c9; // 3a50:43c9
-db dummyf_3e8ca; // 3a50:43ca
-db dummyf_3e8cb; // 3a50:43cb
-db dummyf_3e8cc; // 3a50:43cc
-db dummyf_3e8cd; // 3a50:43cd
-db a000444888; // 3a50:43ce
-db dummyf_3e8cf; // 3a50:43cf
-db dummyf_3e8d0; // 3a50:43d0
-db dummyf_3e8d1; // 3a50:43d1
-db dummyf_3e8d2; // 3a50:43d2
-db dummyf_3e8d3; // 3a50:43d3
-db dummyf_3e8d4; // 3a50:43d4
-db dummyf_3e8d5; // 3a50:43d5
-db dummyf_3e8d6; // 3a50:43d6
-db dummyf_3e8d7; // 3a50:43d7
-db dummyf_3e8d8; // 3a50:43d8
-db dummyf_3e8d9; // 3a50:43d9
-db dummyf_3e8da; // 3a50:43da
-db dummyf_3e8db; // 3a50:43db
-db dummyf_3e8dc; // 3a50:43dc
-db dummyf_3e8dd; // 3a50:43dd
-db dummyf_3e8de; // 3a50:43de
-db dummyf_3e8df; // 3a50:43df
-db dummyf_3e8e0; // 3a50:43e0
-db dummyf_3e8e1; // 3a50:43e1
-db dummyf_3e8e2; // 3a50:43e2
-db dummyf_3e8e3; // 3a50:43e3
-db dummyf_3e8e4; // 3a50:43e4
-db dummyf_3e8e5; // 3a50:43e5
-db dummyf_3e8e6;
-db dummyf_3e8e7; // 3a50:43e7
-db dummyf_3e8e8;
-db dummyf_3e8e9;
-db a8; // 3a50:43ea
-db dummyf_3e8eb[32]; // 3a50:43eb
-db dummyf_3e90b; // 3a50:440b
-db dummyf_3e90c;
-db dummyf_3e90d; // 3a50:440d
-db dummyf_3e90e; // 3a50:440e
-db dummyf_3e90f;
-db dummyf_3e910; // 3a50:4410
-db dummyf_3e911; // 3a50:4411
-db dummyf_3e912;
-db dummyf_3e913; // 3a50:4413
-db dummyf_3e914; // 3a50:4414
-db dummyf_3e915;
-db a75847351302807; // 3a50:4416
-db dummyf_3e917[32]; // 3a50:4417
-db dummyf_3e937[32]; // 3a50:4437
-db dummyf_3e957[32]; // 3a50:4457
-db dummyf_3e977[32]; // 3a50:4477
-db dummyf_3e997[32]; // 3a50:4497
-db dummyf_3e9b7; // 3a50:44b7
-db dummyf_3e9b8; // 3a50:44b8
-db dummyf_3e9b9; // 3a50:44b9
-db dummyf_3e9ba; // 3a50:44ba
-db dummyf_3e9bb; // 3a50:44bb
-db dummyf_3e9bc; // 3a50:44bc
-db dummyf_3e9bd; // 3a50:44bd
-db dummyf_3e9be; // 3a50:44be
-db dummyf_3e9bf; // 3a50:44bf
-db dummyf_3e9c0; // 3a50:44c0
-db dummyf_3e9c1; // 3a50:44c1
-db dummyf_3e9c2; // 3a50:44c2
-db dummyf_3e9c3; // 3a50:44c3
-db dummyf_3e9c4; // 3a50:44c4
-db dummyf_3e9c5; // 3a50:44c5
-db dummyf_3e9c6; // 3a50:44c6
-db dummyf_3e9c7; // 3a50:44c7
-db dummyf_3e9c8; // 3a50:44c8
-db dummyf_3e9c9; // 3a50:44c9
-db dummyf_3e9ca; // 3a50:44ca
-db dummyf_3e9cb; // 3a50:44cb
-db dummyf_3e9cc; // 3a50:44cc
-db dummyf_3e9cd; // 3a50:44cd
-db dummyf_3e9ce; // 3a50:44ce
-db dummyf_3e9cf; // 3a50:44cf
-db dummyf_3e9d0; // 3a50:44d0
-db dummyf_3e9d1; // 3a50:44d1
-db dummyf_3e9d2; // 3a50:44d2
-db dummyf_3e9d3;
-db dummyf_3e9d4; // 3a50:44d4
-db dummyf_3e9d5; // 3a50:44d5
-db dummyf_3e9d6[11]; // 3a50:44d6
-db dummyf_3e9e1[11]; // 3a50:44d6
-db dummyf_3e9ec[11]; // 3a50:44d6
-db dummyf_3e9f7[14]; // 3a50:44d6
-db dummyf_3ea05;
-db dummyf_3ea06[32]; // 3a50:4506
-db dummyf_3ea26[32]; // 3a50:4526
-db dummyf_3ea46[32]; // 3a50:4546
-db dummyf_3ea66[32]; // 3a50:4566
-db dummyf_3ea86[32]; // 3a50:4586
-db dummyf_3eaa6[32]; // 3a50:45a6
-db dummyf_3eac6[32]; // 3a50:45c6
-db dummyf_3eae6[32]; // 3a50:45e6
-db dummyf_3eb06[32]; // 3a50:4606
-db dummyf_3eb26[32]; // 3a50:4626
-db dummyf_3eb46[32]; // 3a50:4646
-db dummyf_3eb66[32]; // 3a50:4666
-db dummyf_3eb86[32]; // 3a50:4686
-db dummyf_3eba6[32]; // 3a50:46a6
-db dummyf_3ebc6[32]; // 3a50:46c6
-db dummyf_3ebe6[32]; // 3a50:46e6
-db dummyf_3ec06[32]; // 3a50:4706
-db dummyf_3ec26[32]; // 3a50:4726
-db dummyf_3ec46[32]; // 3a50:4746
-db dummyf_3ec66[32]; // 3a50:4766
-db dummyf_3ec86[32]; // 3a50:4786
-db dummyf_3eca6[32]; // 3a50:47a6
-db dummyf_3ecc6[32]; // 3a50:47c6
-db dummyf_3ece6[32]; // 3a50:47e6
-db dummyf_3ed06[32]; // 3a50:4806
-db dummyf_3ed26[32]; // 3a50:4826
-db dummyf_3ed46[32]; // 3a50:4846
-db dummyf_3ed66[11]; // 3a50:4866
-db dummyf_3ed71[11]; // 3a50:4866
-db dummyf_3ed7c[11]; // 3a50:4866
-db dummyf_3ed87[12]; // 3a50:4866
-db dummyf_3ed93[4]; // 3a50:4866
-db dummyf_3ed97[32]; // 3a50:4897
-db dummyf_3edb7[32]; // 3a50:48b7
-db dummyf_3edd7[32]; // 3a50:48d7
-db dummyf_3edf7[32]; // 3a50:48f7
-db dummyf_3ee17; // 3a50:4917
-db dummyf_3ee18; // 3a50:4918
-db dummyf_3ee19; // 3a50:4919
-db dummyf_3ee1a; // 3a50:491a
-db dummyf_3ee1b; // 3a50:491b
-db dummyf_3ee1c; // 3a50:491c
-db dummyf_3ee1d; // 3a50:491d
-db dummyf_3ee1e; // 3a50:491e
-db dummyf_3ee1f; // 3a50:491f
-db dummyf_3ee20; // 3a50:4920
-db dummyf_3ee21; // 3a50:4921
-db dummyf_3ee22; // 3a50:4922
-db dummyf_3ee23; // 3a50:4923
-db dummyf_3ee24; // 3a50:4924
-db dummyf_3ee25; // 3a50:4925
-db dummyf_3ee26; // 3a50:4926
-db dummyf_3ee27; // 3a50:4927
-db dummyf_3ee28; // 3a50:4928
-db dummyf_3ee29; // 3a50:4929
-db dummyf_3ee2a[11]; // 3a50:492a
-db dummyf_3ee35[11]; // 3a50:492a
-db dummyf_3ee40[10]; // 3a50:492a
-db dummyf_3ee4a[10]; // 3a50:492a
-db dummyf_3ee54[10]; // 3a50:492a
-db dummyf_3ee5e[10]; // 3a50:492a
-db dummyf_3ee68[11]; // 3a50:492a
-db dummyf_3ee73[10]; // 3a50:492a
-db dummyf_3ee7d[10]; // 3a50:492a
-db dummyf_3ee87[10]; // 3a50:492a
-db dummyf_3ee91[11]; // 3a50:492a
-db dummyf_3ee9c[10]; // 3a50:492a
-db dummyf_3eea6[10]; // 3a50:492a
-db dummyf_3eeb0[10]; // 3a50:492a
-db dummyf_3eeba[10]; // 3a50:492a
-db dummyf_3eec4[10]; // 3a50:492a
-db dummyf_3eece[10]; // 3a50:492a
-db dummyf_3eed8[10]; // 3a50:492a
-db dummyf_3eee2[11]; // 3a50:492a
-db dummyf_3eeed[10]; // 3a50:492a
-db dummyf_3eef7[11]; // 3a50:492a
-db dummyf_3ef02[10]; // 3a50:492a
-db dummyf_3ef0c[11]; // 3a50:492a
-db dummyf_3ef17[11]; // 3a50:492a
-db dummyf_3ef22[10]; // 3a50:492a
-db dummyf_3ef2c[11]; // 3a50:492a
-db dummyf_3ef37[10]; // 3a50:492a
-db dummyf_3ef41[11]; // 3a50:492a
-db dummyf_3ef4c[10]; // 3a50:492a
-db dummyf_3ef56[10]; // 3a50:492a
-db dummyf_3ef60[10]; // 3a50:492a
-db dummyf_3ef6a[10]; // 3a50:492a
-db dummyf_3ef74[10]; // 3a50:492a
-db dummyf_3ef7e[10]; // 3a50:492a
-db dummyf_3ef88[10]; // 3a50:492a
-db dummyf_3ef92[13]; // 3a50:492a
-db dummyf_3ef9f[10]; // 3a50:492a
-db dummyf_3efa9[11]; // 3a50:492a
-db dummyf_3efb4[10]; // 3a50:492a
-db dummyf_3efbe[11]; // 3a50:492a
-db dummyf_3efc9[10]; // 3a50:492a
-db dummyf_3efd3[10]; // 3a50:492a
-db dummyf_3efdd[10]; // 3a50:492a
-db dummyf_3efe7[10]; // 3a50:492a
-db dummyf_3eff1[11]; // 3a50:492a
-db dummyf_3effc[11]; // 3a50:492a
-db dummyf_3f007[11]; // 3a50:492a
-db dummyf_3f012[10]; // 3a50:492a
-db dummyf_3f01c[10]; // 3a50:492a
-db dummyf_3f026[9]; // 3a50:492a
-db dummyf_3f02f[32]; // 3a50:4b2f
-db dummyf_3f04f[32]; // 3a50:4b4f
-db dummyf_3f06f[32]; // 3a50:4b6f
-db dummyf_3f08f[32]; // 3a50:4b8f
-db dummyf_3f0af[32]; // 3a50:4baf
-db dummyf_3f0cf[32]; // 3a50:4bcf
-db dummyf_3f0ef[32]; // 3a50:4bef
-db dummyf_3f10f[32]; // 3a50:4c0f
-db dummyf_3f12f[32]; // 3a50:4c2f
-db dummyf_3f14f[32]; // 3a50:4c4f
-db dummyf_3f16f[32]; // 3a50:4c6f
-db dummyf_3f18f; // 3a50:4c8f
-db dummyf_3f190; // 3a50:4c90
-db dummyf_3f191; // 3a50:4c91
-db dummyf_3f192; // 3a50:4c92
-db dummyf_3f193; // 3a50:4c93
-db dummyf_3f194; // 3a50:4c94
-db dummyf_3f195; // 3a50:4c95
-db dummyf_3f196; // 3a50:4c96
-db dummyf_3f197; // 3a50:4c97
+db byte_4ce61; // 3e1c:06c1
+db byte_4ce62; // 3e1c:06c2
+dw word_4ce63; // 3e1c:06c3
+db dummyf_3e885[32]; // 3e1c:06c5
+db dummyf_3e8a5[32]; // 3e1c:06e5
+db dummyf_3e8c5[32]; // 3e1c:0705
+db dummyf_3e8e5[32]; // 3e1c:0725
+db dummyf_3e905[32]; // 3e1c:0745
+db dummyf_3e925[32]; // 3e1c:0765
+db dummyf_3e945[32]; // 3e1c:0785
+db dummyf_3e965[32]; // 3e1c:07a5
+db dummyf_3e985[32]; // 3e1c:07c5
+db dummyf_3e9a5[32]; // 3e1c:07e5
+db dummyf_3e9c5[32]; // 3e1c:0805
+db dummyf_3e9e5[32]; // 3e1c:0825
+db dummyf_3ea05[32]; // 3e1c:0845
+db dummyf_3ea25[32]; // 3e1c:0865
+db dummyf_3ea45[32]; // 3e1c:0885
+db dummyf_3ea65[32]; // 3e1c:08a5
+db dummyf_3ea85[32]; // 3e1c:08c5
+db dummyf_3eaa5[32]; // 3e1c:08e5
+db dummyf_3eac5[32]; // 3e1c:0905
+db dummyf_3eae5[32]; // 3e1c:0925
+db dummyf_3eb05[32]; // 3e1c:0945
+db dummyf_3eb25[32]; // 3e1c:0965
+db dummyf_3eb45[32]; // 3e1c:0985
+db dummyf_3eb65[32]; // 3e1c:09a5
+db dummyf_3eb85[32]; // 3e1c:09c5
+db dummyf_3eba5[32]; // 3e1c:09e5
+db dummyf_3ebc5[32]; // 3e1c:0a05
+db dummyf_3ebe5[32]; // 3e1c:0a25
+db dummyf_3ec05[32]; // 3e1c:0a45
+db dummyf_3ec25[32]; // 3e1c:0a65
+db dummyf_3ec45[32]; // 3e1c:0a85
+db dummyf_3ec65[32]; // 3e1c:0aa5
+db dummyf_3ec85[32]; // 3e1c:0ac5
+db dummyf_3eca5[32]; // 3e1c:0ae5
+db dummyf_3ecc5[32]; // 3e1c:0b05
+db dummyf_3ece5[32]; // 3e1c:0b25
+db dummyf_3ed05[32]; // 3e1c:0b45
+db dummyf_3ed25[32]; // 3e1c:0b65
+db dummyf_3ed45[32]; // 3e1c:0b85
+db dummyf_3ed65[32]; // 3e1c:0ba5
+db dummyf_3ed85[32]; // 3e1c:0bc5
+db dummyf_3eda5[32]; // 3e1c:0be5
+db dummyf_3edc5[32]; // 3e1c:0c05
+db dummyf_3ede5[32]; // 3e1c:0c25
+db dummyf_3ee05[32]; // 3e1c:0c45
+db dummyf_3ee25[32]; // 3e1c:0c65
+db dummyf_3ee45[32]; // 3e1c:0c85
+db dummyf_3ee65[32]; // 3e1c:0ca5
+db dummyf_3ee85[32]; // 3e1c:0cc5
+db dummyf_3eea5[32]; // 3e1c:0ce5
+db dummyf_3eec5[32]; // 3e1c:0d05
+db dummyf_3eee5[32]; // 3e1c:0d25
+db dummyf_3ef05[32]; // 3e1c:0d45
+db dummyf_3ef25[32]; // 3e1c:0d65
+db dummyf_3ef45[32]; // 3e1c:0d85
+db dummyf_3ef65[32]; // 3e1c:0da5
+db dummyf_3ef85[32]; // 3e1c:0dc5
+db dummyf_3efa5[32]; // 3e1c:0de5
+db dummyf_3efc5[32]; // 3e1c:0e05
+db dummyf_3efe5[32]; // 3e1c:0e25
+db dummyf_3f005[32]; // 3e1c:0e45
+db dummyf_3f025[32]; // 3e1c:0e65
+db dummyf_3f045[32]; // 3e1c:0e85
+db dummyf_3f065[32]; // 3e1c:0ea5
+db dummyf_3f085[32]; // 3e1c:0ec5
+db dummyf_3f0a5[32]; // 3e1c:0ee5
+db dummyf_3f0c5[32]; // 3e1c:0f05
+db dummyf_3f0e5[32]; // 3e1c:0f25
+db dummyf_3f105[32]; // 3e1c:0f45
+db dummyf_3f125[32]; // 3e1c:0f65
+db dummyf_3f145[32]; // 3e1c:0f85
+db dummyf_3f165[32]; // 3e1c:0fa5
+db dummyf_3f185; // 3e1c:0fc5
+db dummyf_3f186; // 3e1c:0fc6
+db dummyf_3f187; // 3e1c:0fc7
+db dummyf_3f188; // 3e1c:0fc8
+db dummyf_3f189; // 3e1c:0fc9
+db dummyf_3f18a; // 3e1c:0fca
+db dummyf_3f18b; // 3e1c:0fcb
+db dummyf_3f18c; // 3e1c:0fcc
+db dummyf_3f18d; // 3e1c:0fcd
+db dummyf_3f18e; // 3e1c:0fce
+db dummyf_3f18f; // 3e1c:0fcf
+db dummyf_3f190; // 3e1c:0fd0
+db dummyf_3f191; // 3e1c:0fd1
+db dummyf_3f192; // 3e1c:0fd2
+db dummyf_3f193; // 3e1c:0fd3
+db dummyf_3f194; // 3e1c:0fd4
+db dummyf_3f195; // 3e1c:0fd5
+db dummyf_3f196; // 3e1c:0fd6
+db dummyf_3f197; // 3e1c:0fd7
 db dummyf_3f198;
 db dummyf_3f199;
 db dummyf_3f19a;
 db dummyf_3f19b;
 db dummyf_3f19c;
 db dummyf_3f19d;
-db byte_4d77e; // 3a50:4c9e
-dw word_4d77f; // 3a50:4c9f
-dw word_4d781; // 3a50:4ca1
-dw word_4d783; // 3a50:4ca3
-dw word_4d785; // 3a50:4ca5
-dw word_4d787; // 3a50:4ca7
-dw word_4d789; // 3a50:4ca9
+db byte_4d77e; // 3e1c:0fde
+dw word_4d77f; // 3e1c:0fdf
+dw word_4d781; // 3e1c:0fe1
+dw word_4d783; // 3e1c:0fe3
+dw word_4d785; // 3e1c:0fe5
+dw word_4d787; // 3e1c:0fe7
+dw word_4d789; // 3e1c:0fe9
 db dummyf_3f1ab;
 db dummyf_3f1ac;
-dw word_4d78d; // 3a50:4cad
-dw word_4d78f; // 3a50:4caf
-dw word_4d791; // 3a50:4cb1
-dw word_4d793; // 3a50:4cb3
-db byte_4d795; // 3a50:4cb5
-db dummyf_3f1b6[32]; // 3a50:4cb6
-db dummyf_3f1d6[32]; // 3a50:4cd6
-db dummyf_3f1f6[32]; // 3a50:4cf6
-db dummyf_3f216[32]; // 3a50:4d16
-db dummyf_3f236[32]; // 3a50:4d36
-db dummyf_3f256[32]; // 3a50:4d56
-db dummyf_3f276[32]; // 3a50:4d76
-db dummyf_3f296[32]; // 3a50:4d96
-db dummyf_3f2b6[32]; // 3a50:4db6
-db dummyf_3f2d6[32]; // 3a50:4dd6
-db dummyf_3f2f6[32]; // 3a50:4df6
-db dummyf_3f316[32]; // 3a50:4e16
-db dummyf_3f336[32]; // 3a50:4e36
-db dummyf_3f356; // 3a50:4e56
-db dummyf_3f357; // 3a50:4e57
-db dummyf_3f358; // 3a50:4e58
-db dummyf_3f359; // 3a50:4e59
-db dummyf_3f35a; // 3a50:4e5a
-db dummyf_3f35b; // 3a50:4e5b
-db dummyf_3f35c; // 3a50:4e5c
-db dummyf_3f35d; // 3a50:4e5d
-db dummyf_3f35e; // 3a50:4e5e
-db dummyf_3f35f; // 3a50:4e5f
-db dummyf_3f360; // 3a50:4e60
-db dummyf_3f361; // 3a50:4e61
-db dummyf_3f362; // 3a50:4e62
-db dummyf_3f363; // 3a50:4e63
-db dummyf_3f364; // 3a50:4e64
-db dummyf_3f365; // 3a50:4e65
-db dummyf_3f366; // 3a50:4e66
-db dummyf_3f367; // 3a50:4e67
-db dummyf_3f368; // 3a50:4e68
-db dummyf_3f369; // 3a50:4e69
-db dummyf_3f36a; // 3a50:4e6a
-db dummyf_3f36b; // 3a50:4e6b
-db dummyf_3f36c; // 3a50:4e6c
-db byte_4d94d; // 3a50:4e6d
-db dummyf_3f36e;
-db dummyf_3f36f[1];
-db dummyf_3f370;
-db dummyf_3f371[1];
-db dummyf_3f372;
-db dummyf_3f373[1];
-db dummyf_3f374;
-db dummyf_3f375[1];
-db dummyf_3f376;
-db dummyf_3f377[1];
-db dummyf_3f378;
-db dummyf_3f379[1];
-db dummyf_3f37a;
-db dummyf_3f37b[1];
-db dummyf_3f37c;
-db dummyf_3f37d[1];
-db dummyf_3f37e;
-db dummyf_3f37f[1];
-db dummyf_3f380;
-db dummyf_3f381[1];
-db dummyf_3f382;
-db dummyf_3f383[1];
-db dummyf_3f384;
-db dummyf_3f385[1];
-db dummyf_3f386;
-db dummyf_3f387[1];
-db dummyf_3f388;
-db dummyf_3f389[1];
-db dummyf_3f38a;
-db dummyf_3f38b[1];
-db dummyf_3f38c;
-db dummyf_3f38d[1];
-db dummyf_3f38e;
-db dummyf_3f38f[1];
-db dummyf_3f390;
-db dummyf_3f391[1];
-db dummyf_3f392;
-db dummyf_3f393[1];
-db dummyf_3f394;
-db dummyf_3f395[1];
-db dummyf_3f396;
-db dummyf_3f397[1];
-db dummyf_3f398;
-db dummyf_3f399[1];
-db dummyf_3f39a;
-db dummyf_3f39b[1];
-db dummyf_3f39c;
-db dummyf_3f39d[1];
-db dummyf_3f39e;
-db dummyf_3f39f[1];
-db dummyf_3f3a0;
-db dummyf_3f3a1[1];
-db dummyf_3f3a2;
-db dummyf_3f3a3[1];
-db dummyf_3f3a4;
-db dummyf_3f3a5[1];
-db dummyf_3f3a6;
-db dummyf_3f3a7[1];
-db dummyf_3f3a8;
-db dummyf_3f3a9[1];
-db dummyf_3f3aa;
-db dummyf_3f3ab[1];
-db dummyf_3f3ac;
-db dummyf_3f3ad[1];
-db dummyf_3f3ae;
-db dummyf_3f3af[1];
-db dummyf_3f3b0;
-db dummyf_3f3b1[1];
-db dummyf_3f3b2;
-db dummyf_3f3b3[1];
-db dummyf_3f3b4;
-db dummyf_3f3b5[1];
-db dummyf_3f3b6;
-db dummyf_3f3b7[1];
-db dummyf_3f3b8;
-db dummyf_3f3b9[1];
-db dummyf_3f3ba;
-db dummyf_3f3bb[1];
-db dummyf_3f3bc;
-db dummyf_3f3bd[1];
-db dummyf_3f3be;
-db dummyf_3f3bf[1];
-db dummyf_3f3c0;
-db dummyf_3f3c1[1];
-db dummyf_3f3c2;
-db dummyf_3f3c3[1];
-db dummyf_3f3c4;
-db dummyf_3f3c5[1];
-db dummyf_3f3c6;
-db dummyf_3f3c7[1];
-db dummyf_3f3c8;
-db dummyf_3f3c9[1];
-db dummyf_3f3ca;
-db dummyf_3f3cb[1];
-db dummyf_3f3cc;
-db dummyf_3f3cd[1];
-db dummyf_3f3ce;
-db dummyf_3f3cf[1];
-db dummyf_3f3d0;
-db dummyf_3f3d1[1];
-db dummyf_3f3d2;
-db dummyf_3f3d3[1];
-db dummyf_3f3d4;
-db dummyf_3f3d5[1];
-db dummyf_3f3d6;
-db dummyf_3f3d7[1];
-db dummyf_3f3d8;
-db dummyf_3f3d9[1];
-db dummyf_3f3da;
-db dummyf_3f3db[1];
-db dummyf_3f3dc;
-db dummyf_3f3dd[1];
-db dummyf_3f3de;
-db dummyf_3f3df[1];
-db dummyf_3f3e0;
-db dummyf_3f3e1[1];
-db dummyf_3f3e2;
-db dummyf_3f3e3[1];
-db dummyf_3f3e4;
-db dummyf_3f3e5[1];
-db dummyf_3f3e6;
-db dummyf_3f3e7[1];
-db dummyf_3f3e8;
-db dummyf_3f3e9[1];
-db dummyf_3f3ea;
-db dummyf_3f3eb[1];
-db dummyf_3f3ec;
-db dummyf_3f3ed[1];
-db dummyf_3f3ee;
-db dummyf_3f3ef[1];
-db dummyf_3f3f0;
-db dummyf_3f3f1[1];
-db dummyf_3f3f2;
-db dummyf_3f3f3[1];
-db dummyf_3f3f4;
-db dummyf_3f3f5[1];
-db dummyf_3f3f6;
-db dummyf_3f3f7[1];
-db dummyf_3f3f8;
-db dummyf_3f3f9[1];
-db dummyf_3f3fa;
-db dummyf_3f3fb[1];
-db dummyf_3f3fc;
-db dummyf_3f3fd[1];
-db dummyf_3f3fe;
-db dummyf_3f3ff[1];
-db dummyf_3f400;
-db dummyf_3f401[1];
-db dummyf_3f402;
-db dummyf_3f403[1];
-db dummyf_3f404;
-db dummyf_3f405[1];
-db dummyf_3f406;
-db dummyf_3f407[1];
-db dummyf_3f408;
-db dummyf_3f409[1];
-db dummyf_3f40a;
-db dummyf_3f40b[1];
-db dummyf_3f40c;
-db dummyf_3f40d[1];
-db dummyf_3f40e;
-db dummyf_3f40f[1];
-db dummyf_3f410;
-db dummyf_3f411[1];
-db dummyf_3f412;
-db dummyf_3f413[1];
-db dummyf_3f414;
-db dummyf_3f415[1];
-db dummyf_3f416;
-db dummyf_3f417[1];
-db dummyf_3f418;
-db dummyf_3f419[1];
-db dummyf_3f41a;
-db dummyf_3f41b[1];
-db dummyf_3f41c;
-db dummyf_3f41d[1];
-db dummyf_3f41e;
-db dummyf_3f41f[1];
-db dummyf_3f420;
-db dummyf_3f421[1];
-db dummyf_3f422;
-db dummyf_3f423[1];
-db dummyf_3f424;
-db dummyf_3f425[1];
-db dummyf_3f426;
-db dummyf_3f427[1];
-db dummyf_3f428;
-db dummyf_3f429[1];
-db dummyf_3f42a;
-db dummyf_3f42b[1];
-db dummyf_3f42c;
-db dummyf_3f42d[1];
-db dummyf_3f42e;
-db dummyf_3f42f[1];
-db dummyf_3f430;
-db dummyf_3f431[1];
-db dummyf_3f432;
-db dummyf_3f433[1];
-db dummyf_3f434;
-db dummyf_3f435[1];
-db dummyf_3f436;
-db dummyf_3f437[1];
-db dummyf_3f438;
-db dummyf_3f439[1];
-db dummyf_3f43a;
-db dummyf_3f43b[1];
-db dummyf_3f43c;
-db dummyf_3f43d[1];
-db dummyf_3f43e;
-db dummyf_3f43f[1];
-db dummyf_3f440;
-db dummyf_3f441[1];
-db dummyf_3f442;
-db dummyf_3f443[1];
-db dummyf_3f444;
-db dummyf_3f445[1];
-db dummyf_3f446;
-db dummyf_3f447[1];
-db dummyf_3f448;
-db dummyf_3f449[1];
-db dummyf_3f44a;
-db dummyf_3f44b[1];
-db dummyf_3f44c;
-db dummyf_3f44d[1];
-db dummyf_3f44e;
-db dummyf_3f44f[1];
-db dummyf_3f450;
-db dummyf_3f451[1];
-db dummyf_3f452;
-db dummyf_3f453[1];
-db dummyf_3f454;
-db dummyf_3f455[1];
-db dummyf_3f456;
-db dummyf_3f457[1];
-db dummyf_3f458;
-db dummyf_3f459[1];
-db dummyf_3f45a;
-db dummyf_3f45b[1];
-db dummyf_3f45c;
-db dummyf_3f45d[1];
-db dummyf_3f45e;
-db dummyf_3f45f[1];
-db dummyf_3f460;
-db dummyf_3f461[1];
-db dummyf_3f462;
-db dummyf_3f463[1];
-db dummyf_3f464;
-db dummyf_3f465[1];
-db dummyf_3f466;
-db dummyf_3f467[1];
-db dummyf_3f468;
-db dummyf_3f469[1];
-db dummyf_3f46a;
-db dummyf_3f46b[1];
-db dummyf_3f46c;
-db dummyf_3f46d[1];
-db dummyf_3f46e;
-db dummyf_3f46f[1];
-db dummyf_3f470;
-db dummyf_3f471[1];
-db dummyf_3f472;
-db dummyf_3f473[1];
-db dummyf_3f474;
-db dummyf_3f475[1];
-db dummyf_3f476;
-db dummyf_3f477[1];
-db dummyf_3f478;
-db dummyf_3f479[1];
-db dummyf_3f47a;
-db dummyf_3f47b[1];
-db dummyf_3f47c;
-db dummyf_3f47d[1];
-db dummyf_3f47e;
-db dummyf_3f47f[1];
-db dummyf_3f480;
-db dummyf_3f481[1];
-db dummyf_3f482;
-db dummyf_3f483[1];
-db dummyf_3f484;
-db dummyf_3f485[1];
-db dummyf_3f486;
-db dummyf_3f487[1];
-db dummyf_3f488;
-db dummyf_3f489[1];
-db dummyf_3f48a;
-db dummyf_3f48b[1];
-db dummyf_3f48c;
-db dummyf_3f48d[1];
-db dummyf_3f48e;
-db dummyf_3f48f[1];
-db dummyf_3f490;
-db dummyf_3f491[1];
-db dummyf_3f492;
-db dummyf_3f493[1];
-db dummyf_3f494;
-db dummyf_3f495[1];
-db dummyf_3f496;
-db dummyf_3f497[1];
-db dummyf_3f498;
-db dummyf_3f499[1];
-db dummyf_3f49a;
-db dummyf_3f49b[1];
-db dummyf_3f49c;
-db dummyf_3f49d[1];
-db dummyf_3f49e;
-db dummyf_3f49f[1];
-db dummyf_3f4a0;
-db dummyf_3f4a1[1];
-db dummyf_3f4a2;
-db dummyf_3f4a3[1];
-db dummyf_3f4a4;
-db dummyf_3f4a5[1];
-db dummyf_3f4a6;
-db dummyf_3f4a7[1];
-db dummyf_3f4a8;
-db dummyf_3f4a9[1];
-db dummyf_3f4aa;
-db dummyf_3f4ab[1];
-db dummyf_3f4ac;
-db dummyf_3f4ad[1];
-db dummyf_3f4ae;
-db dummyf_3f4af[1];
-db dummyf_3f4b0;
-db dummyf_3f4b1[1];
-db dummyf_3f4b2;
-db dummyf_3f4b3[1];
-db dummyf_3f4b4;
-db dummyf_3f4b5[1];
-db dummyf_3f4b6;
-db dummyf_3f4b7[1];
-db dummyf_3f4b8;
-db dummyf_3f4b9[1];
-db dummyf_3f4ba;
-db dummyf_3f4bb[1];
-db dummyf_3f4bc;
-db dummyf_3f4bd[1];
-db dummyf_3f4be;
-db dummyf_3f4bf[1];
-db dummyf_3f4c0;
-db dummyf_3f4c1[1];
-db dummyf_3f4c2;
-db dummyf_3f4c3[1];
-db dummyf_3f4c4;
-db dummyf_3f4c5[1];
-db dummyf_3f4c6;
-db dummyf_3f4c7[1];
-db dummyf_3f4c8;
-db dummyf_3f4c9[1];
-db dummyf_3f4ca;
-db dummyf_3f4cb[1];
-db dummyf_3f4cc;
-db dummyf_3f4cd[1];
-db dummyf_3f4ce;
-db dummyf_3f4cf[1];
-db dummyf_3f4d0;
-db dummyf_3f4d1[1];
-db dummyf_3f4d2;
-db dummyf_3f4d3[1];
-db dummyf_3f4d4;
-db dummyf_3f4d5[1];
-db dummyf_3f4d6;
-db dummyf_3f4d7[1];
-db dummyf_3f4d8;
-db dummyf_3f4d9[1];
-db dummyf_3f4da;
-db dummyf_3f4db[1];
-db dummyf_3f4dc;
-db dummyf_3f4dd[1];
-db dummyf_3f4de;
-db dummyf_3f4df[1];
-db dummyf_3f4e0;
-db dummyf_3f4e1[1];
-db dummyf_3f4e2;
-db dummyf_3f4e3[1];
-db dummyf_3f4e4;
-db dummyf_3f4e5[1];
-db dummyf_3f4e6;
-db dummyf_3f4e7[1];
-db dummyf_3f4e8;
-db dummyf_3f4e9[1];
-db dummyf_3f4ea;
-db dummyf_3f4eb[1];
-db dummyf_3f4ec;
-db dummyf_3f4ed[1];
-db dummyf_3f4ee;
-db dummyf_3f4ef[1];
-db dummyf_3f4f0;
-db dummyf_3f4f1[1];
-db dummyf_3f4f2;
-db dummyf_3f4f3[1];
-db dummyf_3f4f4;
-db dummyf_3f4f5[1];
-db dummyf_3f4f6;
-db dummyf_3f4f7[1];
-db dummyf_3f4f8;
-db dummyf_3f4f9[1];
-db dummyf_3f4fa;
-db dummyf_3f4fb[1];
-db dummyf_3f4fc[32]; // 3a50:4ffc
+dw word_4d78d; // 3e1c:0fed
+dw word_4d78f; // 3e1c:0fef
+dw word_4d791; // 3e1c:0ff1
+dw word_4d793; // 3e1c:0ff3
+db unk_4d795; // 3e1c:0ff5
+db dummyf_3f1b6[32]; // 3e1c:0ff6
+db dummyf_3f1d6[32]; // 3e1c:1016
+db dummyf_3f1f6[32]; // 3e1c:1036
+db dummyf_3f216[32]; // 3e1c:1056
+db dummyf_3f236[32]; // 3e1c:1076
+db dummyf_3f256[32]; // 3e1c:1096
+db dummyf_3f276[32]; // 3e1c:10b6
+db dummyf_3f296[32]; // 3e1c:10d6
+db dummyf_3f2b6[32]; // 3e1c:10f6
+db dummyf_3f2d6[32]; // 3e1c:1116
+db dummyf_3f2f6[32]; // 3e1c:1136
+db dummyf_3f316[32]; // 3e1c:1156
+db dummyf_3f336[32]; // 3e1c:1176
+db dummyf_3f356; // 3e1c:1196
+db dummyf_3f357; // 3e1c:1197
+db dummyf_3f358; // 3e1c:1198
+db dummyf_3f359; // 3e1c:1199
+db dummyf_3f35a; // 3e1c:119a
+db dummyf_3f35b; // 3e1c:119b
+db dummyf_3f35c; // 3e1c:119c
+db dummyf_3f35d; // 3e1c:119d
+db dummyf_3f35e; // 3e1c:119e
+db dummyf_3f35f; // 3e1c:119f
+db dummyf_3f360; // 3e1c:11a0
+db dummyf_3f361; // 3e1c:11a1
+db dummyf_3f362; // 3e1c:11a2
+db dummyf_3f363; // 3e1c:11a3
+db dummyf_3f364; // 3e1c:11a4
+db dummyf_3f365; // 3e1c:11a5
+db dummyf_3f366; // 3e1c:11a6
+db dummyf_3f367; // 3e1c:11a7
+db dummyf_3f368; // 3e1c:11a8
+db dummyf_3f369; // 3e1c:11a9
+db dummyf_3f36a; // 3e1c:11aa
+db dummyf_3f36b; // 3e1c:11ab
+db dummyf_3f36c; // 3e1c:11ac
+db unk_4d94d; // 3e1c:11ad
+db dummyf_3f36e[32]; // 3e1c:11ae
+db dummyf_3f38e[32]; // 3e1c:11ce
+db dummyf_3f3ae[32]; // 3e1c:11ee
+db dummyf_3f3ce[32]; // 3e1c:120e
+db dummyf_3f3ee[32]; // 3e1c:122e
+db dummyf_3f40e[32]; // 3e1c:124e
+db dummyf_3f42e[32]; // 3e1c:126e
+db dummyf_3f44e[32]; // 3e1c:128e
+db dummyf_3f46e[32]; // 3e1c:12ae
+db dummyf_3f48e[32]; // 3e1c:12ce
+db dummyf_3f4ae[32]; // 3e1c:12ee
+db dummyf_3f4ce[32]; // 3e1c:130e
+db dummyf_3f4ee[32]; // 3e1c:132e
+db dummyf_3f50e;
+db dummyf_3f50f;
+db dummyf_3f510;
+db dummyf_3f511;
+db dummyf_3f512;
+db dummyf_3f513;
+db dummyf_3f514;
+db dummyf_3f515;
+db dummyf_3f516;
+db dummyf_3f517;
+db dummyf_3f518;
+db dummyf_3f519;
+db dummyf_3f51a;
+db dummyf_3f51b;
 db dummyf_3f51c;
 db dummyf_3f51d;
 db dummyf_3f51e;
@@ -6346,351 +8620,373 @@ db dummyf_3f521;
 db dummyf_3f522;
 db dummyf_3f523;
 db dummyf_3f524;
-dw word_4db05; // 3a50:5025
-dw word_4db07; // 3a50:5027
-dw word_4db09; // 3a50:5029
-dw word_4db0b; // 3a50:502b
+dw word_4db05; // 3e1c:1365
+dw word_4db07; // 3e1c:1367
+dw word_4db09; // 3e1c:1369
+dw word_4db0b; // 3e1c:136b
 db dummyf_3f52d;
-db byte_4db0e; // 3a50:502e
-dw word_4db0f; // 3a50:502f
-dw word_4db11; // 3a50:5031
-dw word_4db13; // 3a50:5033
-dw word_4db15; // 3a50:5035
+db byte_4db0e; // 3e1c:136e
+dw word_4db0f; // 3e1c:136f
+dw word_4db11; // 3e1c:1371
+dw word_4db13; // 3e1c:1373
+dw word_4db15; // 3e1c:1375
 db dummyf_3f537;
-db byte_4db18; // 3a50:5038
-dw word_4db19; // 3a50:5039
-dw word_4db1b; // 3a50:503b
+db byte_4db18; // 3e1c:1378
+dw word_4db19; // 3e1c:1379
+dw word_4db1b; // 3e1c:137b
 db dummyf_3f53d;
-db byte_4db1e; // 3a50:503e
-db byte_4db1f; // 3a50:503f
-dw word_4db20; // 3a50:5040
-dw word_4db22; // 3a50:5042
-dw word_4db24; // 3a50:5044
-dw word_4db26; // 3a50:5046
-dw word_4db28; // 3a50:5048
-dw word_4db2a; // 3a50:504a
-db byte_4db2c; // 3a50:504c
-dw word_4db2d; // 3a50:504d
-dw word_4db2f; // 3a50:504f
-dw word_4db31; // 3a50:5051
-db byte_4db33; // 3a50:5053
-dw word_4db34; // 3a50:5054
-dw word_4db36[2]; // 3a50:5056
-dw word_4db3a; // 3a50:505a
-db byte_4db3c[26]; // 3a50:505c
-db dummyf_3f576[24]; // 3a50:505c
-db dummyf_3f58e[11]; // 3a50:505c
-db dummyf_3f599[9]; // 3a50:505c
-db dummyf_3f5a2[9]; // 3a50:505c
-db dummyf_3f5ab[9]; // 3a50:505c
-db dummyf_3f5b4[9]; // 3a50:505c
-db dummyf_3f5bd[9]; // 3a50:505c
-db dummyf_3f5c6[9]; // 3a50:505c
-db dummyf_3f5cf[9]; // 3a50:505c
-db dummyf_3f5d8[20]; // 3a50:505c
-db dummyf_3f5ec[14]; // 3a50:505c
-db dummyf_3f5fa[9]; // 3a50:505c
-db dummyf_3f603[9]; // 3a50:505c
-db dummyf_3f60c[9]; // 3a50:505c
-db dummyf_3f615[9]; // 3a50:505c
-db dummyf_3f61e[9]; // 3a50:505c
-db dummyf_3f627[9]; // 3a50:505c
-db dummyf_3f630[16]; // 3a50:505c
-db dummyf_3f640[18]; // 3a50:505c
-db dummyf_3f652[18]; // 3a50:505c
-db dummyf_3f664[38]; // 3a50:505c
-db dummyf_3f68a[9]; // 3a50:505c
-db dummyf_3f693[9]; // 3a50:505c
-db dummyf_3f69c[9]; // 3a50:505c
-db dummyf_3f6a5[9]; // 3a50:505c
-db dummyf_3f6ae[9]; // 3a50:505c
-db dummyf_3f6b7[9]; // 3a50:505c
-db dummyf_3f6c0[9]; // 3a50:505c
-db dummyf_3f6c9[9]; // 3a50:505c
-db dummyf_3f6d2[9]; // 3a50:505c
-db dummyf_3f6db[13]; // 3a50:505c
-db dummyf_3f6e8[21]; // 3a50:505c
-db dummyf_3f6fd[9]; // 3a50:505c
-db dummyf_3f706[9]; // 3a50:505c
-db dummyf_3f70f[9]; // 3a50:505c
-db dummyf_3f718[9]; // 3a50:505c
-db dummyf_3f721[9]; // 3a50:505c
-db dummyf_3f72a[9]; // 3a50:505c
-db dummyf_3f733[19]; // 3a50:505c
-db dummyf_3f746[18]; // 3a50:505c
-db dummyf_3f758[18]; // 3a50:505c
-db dummyf_3f76a[12]; // 3a50:505c
-dw word_4dd56; // 3a50:5276
-db dummyf_3f778[6]; // 3a50:5278
-dw word_4dd5e; // 3a50:527e
-db byte_4dd60[2]; // 3a50:5280
-dw word_4dd62; // 3a50:5282
-dw word_4dd64; // 3a50:5284
-dw word_4dd66[2]; // 3a50:5286
-db dummyf_3f78a; // 3a50:528a
-db dummyf_3f78b; // 3a50:528b
-dw word_4dd6c; // 3a50:528c
-db dummyf_3f78e[6]; // 3a50:528e
-dw word_4dd74; // 3a50:5294
-dw word_4dd76; // 3a50:5296
-dw word_4dd78[2]; // 3a50:5298
-db dummyf_3f79c; // 3a50:529c
+db byte_4db1e; // 3e1c:137e
+db byte_4db1f; // 3e1c:137f
+dw word_4db20; // 3e1c:1380
+dw word_4db22; // 3e1c:1382
+dw word_4db24; // 3e1c:1384
+dw word_4db26; // 3e1c:1386
+dw word_4db28; // 3e1c:1388
+dw word_4db2a; // 3e1c:138a
+db byte_4db2c; // 3e1c:138c
+dw word_4db2d; // 3e1c:138d
+dw word_4db2f; // 3e1c:138f
+dw word_4db31; // 3e1c:1391
+db byte_4db33; // 3e1c:1393
+dw word_4db34; // 3e1c:1394
+dw word_4db36; // 3e1c:1396
+db dummyf_3f558;
+db dummyf_3f559;
+dw word_4db3a; // 3e1c:139a
+db byte_4db3c; // 3e1c:139c
+db dummyf_3f55d[32]; // 3e1c:139d
+db dummyf_3f57d[32]; // 3e1c:13bd
+db dummyf_3f59d[32]; // 3e1c:13dd
+db dummyf_3f5bd[32]; // 3e1c:13fd
+db dummyf_3f5dd[32]; // 3e1c:141d
+db dummyf_3f5fd[32]; // 3e1c:143d
+db dummyf_3f61d[32]; // 3e1c:145d
+db dummyf_3f63d[32]; // 3e1c:147d
+db dummyf_3f65d[32]; // 3e1c:149d
+db dummyf_3f67d[32]; // 3e1c:14bd
+db dummyf_3f69d[32]; // 3e1c:14dd
+db dummyf_3f6bd[32]; // 3e1c:14fd
+db dummyf_3f6dd[32]; // 3e1c:151d
+db dummyf_3f6fd[32]; // 3e1c:153d
+db dummyf_3f71d[32]; // 3e1c:155d
+db dummyf_3f73d[32]; // 3e1c:157d
+db dummyf_3f75d;
+db dummyf_3f75e; // 3e1c:159e
+db dummyf_3f75f;
+db dummyf_3f760; // 3e1c:15a0
+db dummyf_3f761;
+db dummyf_3f762; // 3e1c:15a2
+db dummyf_3f763;
+db dummyf_3f764; // 3e1c:15a4
+db dummyf_3f765;
+db dummyf_3f766; // 3e1c:15a6
+db dummyf_3f767;
+db dummyf_3f768; // 3e1c:15a8
+db dummyf_3f769;
+db dummyf_3f76a; // 3e1c:15aa
+db dummyf_3f76b;
+db dummyf_3f76c; // 3e1c:15ac
+db dummyf_3f76d;
+db dummyf_3f76e;
+db dummyf_3f76f;
+db dummyf_3f770;
+db dummyf_3f771;
+db dummyf_3f772;
+db dummyf_3f773;
+db dummyf_3f774;
+db dummyf_3f775;
+dw word_4dd56; // 3e1c:15b6
+db dummyf_3f778; // 3e1c:15b8
+db dummyf_3f779;
+db dummyf_3f77a; // 3e1c:15ba
+db dummyf_3f77b;
+db dummyf_3f77c;
+db dummyf_3f77d;
+dw word_4dd5e; // 3e1c:15be
+dw word_4dd60; // 3e1c:15c0
+dw word_4dd62; // 3e1c:15c2
+dw word_4dd64; // 3e1c:15c4
+dw word_4dd66; // 3e1c:15c6
+db dummyf_3f788;
+db dummyf_3f789;
+db dummyf_3f78a; // 3e1c:15ca
+db dummyf_3f78b; // 3e1c:15cb
+dw word_4dd6c; // 3e1c:15cc
+db dummyf_3f78e; // 3e1c:15ce
+db dummyf_3f78f;
+db dummyf_3f790; // 3e1c:15d0
+db dummyf_3f791;
+db dummyf_3f792;
+db dummyf_3f793;
+dw word_4dd74; // 3e1c:15d4
+dw word_4dd76; // 3e1c:15d6
+dw word_4dd78; // 3e1c:15d8
+db dummyf_3f79a;
+db dummyf_3f79b;
+db dummyf_3f79c; // 3e1c:15dc
 db dummyf_3f79d;
-dw word_4dd7e; // 3a50:529e
-dw word_4dd80; // 3a50:52a0
-dw word_4dd82; // 3a50:52a2
-db dummyf_3f7a4; // 3a50:52a4
+dw word_4dd7e; // 3e1c:15de
+dw word_4dd80; // 3e1c:15e0
+dw word_4dd82; // 3e1c:15e2
+db dummyf_3f7a4; // 3e1c:15e4
 db dummyf_3f7a5;
-db dummyf_3f7a6; // 3a50:52a6
+db dummyf_3f7a6; // 3e1c:15e6
 db dummyf_3f7a7;
 db dummyf_3f7a8;
 db dummyf_3f7a9;
-dw word_4dd8a; // 3a50:52aa
-dw word_4dd8c; // 3a50:52ac
-dw word_4dd8e; // 3a50:52ae
-dw word_4dd90[2]; // 3a50:52b0
-dw word_4dd94; // 3a50:52b4
-dw word_4dd96; // 3a50:52b6
-dw word_4dd98; // 3a50:52b8
-db dummyf_3f7ba[6]; // 3a50:52ba
-dw word_4dda0; // 3a50:52c0
-dw word_4dda2; // 3a50:52c2
-dw word_4dda4; // 3a50:52c4
-db dummyf_3f7c6; // 3a50:52c6
+dw word_4dd8a; // 3e1c:15ea
+dw word_4dd8c; // 3e1c:15ec
+dw word_4dd8e; // 3e1c:15ee
+dw word_4dd90; // 3e1c:15f0
+db dummyf_3f7b2; // 3e1c:15f2
+db dummyf_3f7b3;
+dw word_4dd94; // 3e1c:15f4
+dw word_4dd96; // 3e1c:15f6
+dw word_4dd98; // 3e1c:15f8
+db dummyf_3f7ba; // 3e1c:15fa
+db dummyf_3f7bb;
+db dummyf_3f7bc; // 3e1c:15fc
+db dummyf_3f7bd;
+db dummyf_3f7be;
+db dummyf_3f7bf;
+dw word_4dda0; // 3e1c:1600
+dw word_4dda2; // 3e1c:1602
+dw word_4dda4; // 3e1c:1604
+db dummyf_3f7c6; // 3e1c:1606
 db dummyf_3f7c7;
-db dummyf_3f7c8; // 3a50:52c8
+db dummyf_3f7c8; // 3e1c:1608
 db dummyf_3f7c9;
-db dummyf_3f7ca; // 3a50:52ca
+db dummyf_3f7ca; // 3e1c:160a
 db dummyf_3f7cb;
-db dummyf_3f7cc; // 3a50:52cc
-db dummyf_3f7cd; // 3a50:52cd
-dw word_4ddae[2]; // 3a50:52ce
-dw word_4ddb2; // 3a50:52d2
-dw word_4ddb4; // 3a50:52d4
-dw word_4ddb6; // 3a50:52d6
-dw word_4ddb8; // 3a50:52d8
-db byte_4ddba[2]; // 3a50:52da
-dw word_4ddbc[2]; // 3a50:52dc
-db dummyf_3f7e0; // 3a50:52e0
+db dummyf_3f7cc; // 3e1c:160c
+db dummyf_3f7cd; // 3e1c:160d
+dw word_4ddae; // 3e1c:160e
+db dummyf_3f7d0;
+db dummyf_3f7d1;
+dw word_4ddb2; // 3e1c:1612
+dw word_4ddb4; // 3e1c:1614
+dw word_4ddb6; // 3e1c:1616
+dw word_4ddb8; // 3e1c:1618
+dw word_4ddba; // 3e1c:161a
+dw word_4ddbc; // 3e1c:161c
+db dummyf_3f7de;
+db dummyf_3f7df;
+db dummyf_3f7e0; // 3e1c:1620
 db dummyf_3f7e1;
 db dummyf_3f7e2;
 db dummyf_3f7e3;
-db dummyf_3f7e4; // 3a50:52e4
-db dummyf_3f7e5; // 3a50:52e5
-db dummyf_3f7e6; // 3a50:52e6
-db dummyf_3f7e7; // 3a50:52e7
-db dummyf_3f7e8; // 3a50:52e8
+db dummyf_3f7e4; // 3e1c:1624
+db dummyf_3f7e5; // 3e1c:1625
+db dummyf_3f7e6; // 3e1c:1626
+db dummyf_3f7e7; // 3e1c:1627
+db dummyf_3f7e8; // 3e1c:1628
 db dummyf_3f7e9;
-db dummyf_3f7ea; // 3a50:52ea
+db dummyf_3f7ea; // 3e1c:162a
 db dummyf_3f7eb;
-dw word_4ddcc; // 3a50:52ec
-dw word_4ddce; // 3a50:52ee
-dw word_4ddd0; // 3a50:52f0
-dw word_4ddd2; // 3a50:52f2
-dw word_4ddd4; // 3a50:52f4
-dw word_4ddd6; // 3a50:52f6
-dw word_4ddd8; // 3a50:52f8
-dw word_4ddda[2]; // 3a50:52fa
-db dummyf_3f7fe; // 3a50:52fe
+dw word_4ddcc; // 3e1c:162c
+dw word_4ddce; // 3e1c:162e
+dw word_4ddd0; // 3e1c:1630
+dw word_4ddd2; // 3e1c:1632
+dw word_4ddd4; // 3e1c:1634
+dw word_4ddd6; // 3e1c:1636
+dw word_4ddd8; // 3e1c:1638
+dw word_4ddda; // 3e1c:163a
+db dummyf_3f7fc;
+db dummyf_3f7fd;
+db dummyf_3f7fe; // 3e1c:163e
 db dummyf_3f7ff;
 db dummyf_3f800;
 db dummyf_3f801;
-db dummyf_3f802; // 3a50:5302
-db dummyf_3f803; // 3a50:5303
-db dummyf_3f804; // 3a50:5304
-db dummyf_3f805; // 3a50:5305
-db dummyf_3f806; // 3a50:5306
+db dummyf_3f802; // 3e1c:1642
+db dummyf_3f803; // 3e1c:1643
+db dummyf_3f804; // 3e1c:1644
+db dummyf_3f805; // 3e1c:1645
+db dummyf_3f806; // 3e1c:1646
 db dummyf_3f807;
-db dummyf_3f808; // 3a50:5308
+db dummyf_3f808; // 3e1c:1648
 db dummyf_3f809;
-dw word_4ddea; // 3a50:530a
-db dummyf_3f80c; // 3a50:530c
+dw word_4ddea; // 3e1c:164a
+db dummyf_3f80c; // 3e1c:164c
 db dummyf_3f80d;
-db dummyf_3f80e; // 3a50:530e
+db dummyf_3f80e; // 3e1c:164e
 db dummyf_3f80f;
-dw word_4ddf0; // 3a50:5310
-db dummyf_3f812; // 3a50:5312
+dw word_4ddf0; // 3e1c:1650
+db dummyf_3f812; // 3e1c:1652
 db dummyf_3f813;
-db dummyf_3f814; // 3a50:5314
+db dummyf_3f814; // 3e1c:1654
 db dummyf_3f815;
-db dummyf_3f816; // 3a50:5316
+db dummyf_3f816; // 3e1c:1656
 db dummyf_3f817;
-db dummyf_3f818; // 3a50:5318
+db dummyf_3f818; // 3e1c:1658
 db dummyf_3f819;
 db dummyf_3f81a;
 db dummyf_3f81b;
-db dummyf_3f81c; // 3a50:531c
+db dummyf_3f81c; // 3e1c:165c
 db dummyf_3f81d;
 db dummyf_3f81e;
 db dummyf_3f81f;
-db dummyf_3f820; // 3a50:5320
-db dummyf_3f821; // 3a50:5321
-db dummyf_3f822; // 3a50:5322
-db dummyf_3f823; // 3a50:5323
-db dummyf_3f824; // 3a50:5324
+db dummyf_3f820; // 3e1c:1660
+db dummyf_3f821; // 3e1c:1661
+db dummyf_3f822; // 3e1c:1662
+db dummyf_3f823; // 3e1c:1663
+db dummyf_3f824; // 3e1c:1664
 db dummyf_3f825;
-db dummyf_3f826; // 3a50:5326
+db dummyf_3f826; // 3e1c:1666
 db dummyf_3f827;
-dw word_4de08; // 3a50:5328
-db dummyf_3f82a; // 3a50:532a
+dw word_4de08; // 3e1c:1668
+db dummyf_3f82a; // 3e1c:166a
 db dummyf_3f82b;
-db dummyf_3f82c; // 3a50:532c
+db dummyf_3f82c; // 3e1c:166c
 db dummyf_3f82d;
-dw word_4de0e; // 3a50:532e
-db dummyf_3f830; // 3a50:5330
+dw word_4de0e; // 3e1c:166e
+db dummyf_3f830; // 3e1c:1670
 db dummyf_3f831;
-db dummyf_3f832; // 3a50:5332
+db dummyf_3f832; // 3e1c:1672
 db dummyf_3f833;
-db dummyf_3f834; // 3a50:5334
+db dummyf_3f834; // 3e1c:1674
 db dummyf_3f835;
-db dummyf_3f836; // 3a50:5336
+db dummyf_3f836; // 3e1c:1676
 db dummyf_3f837;
 db dummyf_3f838;
 db dummyf_3f839;
-db dummyf_3f83a; // 3a50:533a
+db dummyf_3f83a; // 3e1c:167a
 db dummyf_3f83b;
 db dummyf_3f83c;
 db dummyf_3f83d;
-db dummyf_3f83e; // 3a50:533e
-db dummyf_3f83f; // 3a50:533f
-db dummyf_3f840; // 3a50:5340
-db dummyf_3f841; // 3a50:5341
-db dummyf_3f842; // 3a50:5342
+db dummyf_3f83e; // 3e1c:167e
+db dummyf_3f83f; // 3e1c:167f
+db dummyf_3f840; // 3e1c:1680
+db dummyf_3f841; // 3e1c:1681
+db dummyf_3f842; // 3e1c:1682
 db dummyf_3f843;
-db dummyf_3f844; // 3a50:5344
+db dummyf_3f844; // 3e1c:1684
 db dummyf_3f845;
-db byte_4de26; // 3a50:5346
-db byte_4de27[2]; // 3a50:5347
-db byte_4de29; // 3a50:5349
-db byte_4de2a[2]; // 3a50:534a
-db byte_4de2c; // 3a50:534c
-dw word_4de2d; // 3a50:534d
-dw word_4de2f; // 3a50:534f
-db byte_4de31[2]; // 3a50:5351
-dw word_4de33; // 3a50:5353
-db byte_4de35[2]; // 3a50:5355
-dw word_4de37; // 3a50:5357
-dw word_4de39; // 3a50:5359
-dw word_4de3b; // 3a50:535b
-dw word_4de3d; // 3a50:535d
-dw word_4de3f; // 3a50:535f
-db byte_4de41[2]; // 3a50:5361
-db byte_4de43; // 3a50:5363
-dw word_4de44; // 3a50:5364
-dw word_4de46; // 3a50:5366
-dw word_4de48; // 3a50:5368
-dw word_4de4a; // 3a50:536a
-dw word_4de4c; // 3a50:536c
-dw word_4de4e; // 3a50:536e
-dw word_4de50; // 3a50:5370
-dw word_4de52; // 3a50:5372
-db byte_4de54; // 3a50:5374
-dw word_4de55; // 3a50:5375
-dw word_4de57; // 3a50:5377
-dw word_4de59; // 3a50:5379
-db byte_4de5b[2]; // 3a50:537b
-db byte_4de5d; // 3a50:537d
-db byte_4de5e; // 3a50:537e
-db byte_4de5f; // 3a50:537f
-dw word_4de60; // 3a50:5380
-dw word_4de62; // 3a50:5382
+db byte_4de26; // 3e1c:1686
+dw word_4de27; // 3e1c:1687
+db byte_4de29; // 3e1c:1689
+dw word_4de2a; // 3e1c:168a
+db byte_4de2c; // 3e1c:168c
+dw word_4de2d; // 3e1c:168d
+dw word_4de2f; // 3e1c:168f
+dw word_4de31; // 3e1c:1691
+dw word_4de33; // 3e1c:1693
+dw word_4de35; // 3e1c:1695
+dw word_4de37; // 3e1c:1697
+dw word_4de39; // 3e1c:1699
+dw word_4de3b; // 3e1c:169b
+dw word_4de3d; // 3e1c:169d
+dw word_4de3f; // 3e1c:169f
+dw word_4de41; // 3e1c:16a1
+db byte_4de43; // 3e1c:16a3
+dw word_4de44; // 3e1c:16a4
+dw word_4de46; // 3e1c:16a6
+dw word_4de48; // 3e1c:16a8
+dw word_4de4a; // 3e1c:16aa
+dw word_4de4c; // 3e1c:16ac
+dw word_4de4e; // 3e1c:16ae
+dw word_4de50; // 3e1c:16b0
+dw word_4de52; // 3e1c:16b2
+db byte_4de54; // 3e1c:16b4
+dw word_4de55; // 3e1c:16b5
+dw word_4de57; // 3e1c:16b7
+dw word_4de59; // 3e1c:16b9
+dw word_4de5b; // 3e1c:16bb
+db byte_4de5d; // 3e1c:16bd
+db byte_4de5e; // 3e1c:16be
+db byte_4de5f; // 3e1c:16bf
+dw word_4de60; // 3e1c:16c0
+dw word_4de62; // 3e1c:16c2
 db dummyf_3f884;
-db byte_4de65; // 3a50:5385
-dw word_4de66; // 3a50:5386
-db dummyf_3f888[2]; // 3a50:5388
-db byte_4de6a[8]; // 3a50:538a
-char a00112233445566[65]; // 3a50:5392
-char dummyf_3f8d3[65]; // 3a50:5392
-char dummyf_3f914[65]; // 3a50:5392
-char dummyf_3f955[65]; // 3a50:5392
-char dummyf_3f996[44]; // 3a50:5392
-db dummyf_3f9c2; // 3a50:54c2
-db dummyf_3f9c3; // 3a50:54c3
-db dummyf_3f9c4; // 3a50:54c4
-db dummyf_3f9c5;
-char a045[4]; // 3a50:54c6
-db dummyf_3f9ca; // 3a50:54ca
-db dummyf_3f9cb; // 3a50:54cb
-db dummyf_3f9cc; // 3a50:54cc
-db dummyf_3f9cd;
-char a090[4]; // 3a50:54ce
-char dummyf_3f9d2[4]; // 3a50:54d2
-char a135[4]; // 3a50:54d6
-db dummyf_3f9da; // 3a50:54da
-db dummyf_3f9db; // 3a50:54db
-db dummyf_3f9dc; // 3a50:54dc
-db dummyf_3f9dd;
-char a180[4]; // 3a50:54de
-db dummyf_3f9e2; // 3a50:54e2
-db dummyf_3f9e3; // 3a50:54e3
-db dummyf_3f9e4; // 3a50:54e4
-db dummyf_3f9e5;
-char a225[4]; // 3a50:54e6
-db dummyf_3f9ea; // 3a50:54ea
-db dummyf_3f9eb; // 3a50:54eb
-db dummyf_3f9ec; // 3a50:54ec
-db dummyf_3f9ed;
-char a270[4]; // 3a50:54ee
-char dummyf_3f9f2[4]; // 3a50:54f2
-char a315[4]; // 3a50:54f6
-db dummyf_3f9fa; // 3a50:54fa
-db dummyf_3f9fb; // 3a50:54fb
-db dummyf_3f9fc; // 3a50:54fc
-db dummyf_3f9fd;
-db dummyf_3f9fe[2]; // 3a50:54fe
-db dummyf_3fa00[14]; // 3a50:5500
-db dummyf_3fa0e[14]; // 3a50:5500
-db dummyf_3fa1c[290]; // 3a50:5500
-db byte_4e11e; // 3a50:563e
-db byte_4e11f; // 3a50:563f
-dw word_4e120; // 3a50:5640
-dw word_4e122; // 3a50:5642
-char a70[4]; // 3a50:5644
-char a80[4]; // 3a50:5648
-char a90[4]; // 3a50:564c
-char a80_0[4]; // 3a50:5650
-char a70_0[4]; // 3a50:5654
-char a60[4]; // 3a50:5658
-char a50[4]; // 3a50:565c
-char a40[4]; // 3a50:5660
-char a30[4]; // 3a50:5664
-char a20[4]; // 3a50:5668
-char a10[4]; // 3a50:566c
-char a00[3]; // 3a50:5670
-db dummyf_3fb73;
-char a10_0[3]; // 3a50:5674
-db dummyf_3fb77;
-char a20_0[3]; // 3a50:5678
-db dummyf_3fb7b;
-char a30_0[3]; // 3a50:567c
-db dummyf_3fb7f;
-char a40_0[3]; // 3a50:5680
-db dummyf_3fb83;
-char a50_0[3]; // 3a50:5684
+db byte_4de65; // 3e1c:16c5
+dw word_4de66; // 3e1c:16c6
+db dummyf_3f888; // 3e1c:16c8
+db dummyf_3f889;
+db byte_4de6a; // 3e1c:16ca
+db dummyf_3f88b[32]; // 3e1c:16cb
+db dummyf_3f8ab[32]; // 3e1c:16eb
+db dummyf_3f8cb[32]; // 3e1c:170b
+db dummyf_3f8eb[32]; // 3e1c:172b
+db dummyf_3f90b[32]; // 3e1c:174b
+db dummyf_3f92b[32]; // 3e1c:176b
+db dummyf_3f94b[32]; // 3e1c:178b
+db dummyf_3f96b[32]; // 3e1c:17ab
+db dummyf_3f98b[32]; // 3e1c:17cb
+db dummyf_3f9ab[32]; // 3e1c:17eb
+db dummyf_3f9cb[32]; // 3e1c:180b
+db dummyf_3f9eb[32]; // 3e1c:182b
+db dummyf_3fa0b[32]; // 3e1c:184b
+db dummyf_3fa2b[32]; // 3e1c:186b
+db dummyf_3fa4b[32]; // 3e1c:188b
+db dummyf_3fa6b[32]; // 3e1c:18ab
+db dummyf_3fa8b[32]; // 3e1c:18cb
+db dummyf_3faab[32]; // 3e1c:18eb
+db dummyf_3facb[32]; // 3e1c:190b
+db dummyf_3faeb[32]; // 3e1c:192b
+db dummyf_3fb0b[32]; // 3e1c:194b
+db dummyf_3fb2b;
+db dummyf_3fb2c;
+db dummyf_3fb2d;
+db dummyf_3fb2e;
+db dummyf_3fb2f;
+db dummyf_3fb30;
+db dummyf_3fb31;
+db dummyf_3fb32;
+db dummyf_3fb33;
+db dummyf_3fb34;
+db dummyf_3fb35;
+db dummyf_3fb36;
+db dummyf_3fb37;
+db dummyf_3fb38;
+db dummyf_3fb39;
+db dummyf_3fb3a;
+db dummyf_3fb3b;
+db dummyf_3fb3c;
+db dummyf_3fb3d;
+db byte_4e11e; // 3e1c:197e
+db byte_4e11f; // 3e1c:197f
+dw word_4e120; // 3e1c:1980
+dw word_4e122; // 3e1c:1982
+db dummyf_3fb44[32]; // 3e1c:1984
+db dummyf_3fb64[32]; // 3e1c:19a4
+db dummyf_3fb84; // 3e1c:19c4
+db dummyf_3fb85; // 3e1c:19c5
+db dummyf_3fb86;
 db dummyf_3fb87;
-char a60_0[3]; // 3a50:5688
+db dummyf_3fb88; // 3e1c:19c8
+db dummyf_3fb89; // 3e1c:19c9
+db dummyf_3fb8a;
 db dummyf_3fb8b;
-char a70_1[3]; // 3a50:568c
+db dummyf_3fb8c; // 3e1c:19cc
+db dummyf_3fb8d; // 3e1c:19cd
+db dummyf_3fb8e;
 db dummyf_3fb8f;
-char a80_1[3]; // 3a50:5690
+db dummyf_3fb90; // 3e1c:19d0
+db dummyf_3fb91; // 3e1c:19d1
+db dummyf_3fb92;
 db dummyf_3fb93;
-char a90_0[3]; // 3a50:5694
+db dummyf_3fb94; // 3e1c:19d4
+db dummyf_3fb95; // 3e1c:19d5
+db dummyf_3fb96;
 db dummyf_3fb97;
-char a80_2[3]; // 3a50:5698
+db dummyf_3fb98; // 3e1c:19d8
+db dummyf_3fb99; // 3e1c:19d9
+db dummyf_3fb9a;
 db dummyf_3fb9b;
-char a70_2[3]; // 3a50:569c
+db dummyf_3fb9c; // 3e1c:19dc
+db dummyf_3fb9d; // 3e1c:19dd
+db dummyf_3fb9e;
 db dummyf_3fb9f;
-dw word_4e180; // 3a50:56a0
-dw word_4e182; // 3a50:56a2
-dw word_4e184; // 3a50:56a4
-dw word_4e186; // 3a50:56a6
-dw word_4e188; // 3a50:56a8
-dw word_4e18a; // 3a50:56aa
-dw word_4e18c; // 3a50:56ac
-dw word_4e18e; // 3a50:56ae
-dw word_4e190; // 3a50:56b0
-dw word_4e192; // 3a50:56b2
-db dummyf_3fbb4[32]; // 3a50:56b4
+dw word_4e180; // 3e1c:19e0
+dw word_4e182; // 3e1c:19e2
+dw word_4e184; // 3e1c:19e4
+dw word_4e186; // 3e1c:19e6
+dw word_4e188; // 3e1c:19e8
+dw word_4e18a; // 3e1c:19ea
+dw word_4e18c; // 3e1c:19ec
+dw word_4e18e; // 3e1c:19ee
+dw word_4e190; // 3e1c:19f0
+dw word_4e192; // 3e1c:19f2
+db dummyf_3fbb4[32]; // 3e1c:19f4
 db dummyf_3fbd4;
 db dummyf_3fbd5;
 db dummyf_3fbd6;
@@ -6699,154 +8995,248 @@ db dummyf_3fbd8;
 db dummyf_3fbd9;
 db dummyf_3fbda;
 db dummyf_3fbdb;
-dw word_4e1bc; // 3a50:56dc
-dw word_4e1be; // 3a50:56de
+dw word_4e1bc; // 3e1c:1a1c
+dw word_4e1be; // 3e1c:1a1e
 db dummyf_3fbe0;
 db dummyf_3fbe1;
 db dummyf_3fbe2;
 db dummyf_3fbe3;
-dw word_4e1c4; // 3a50:56e4
+dw word_4e1c4; // 3e1c:1a24
 db dummyf_3fbe6;
 db dummyf_3fbe7;
-db byte_4e1c8; // 3a50:56e8
-db byte_4e1c9; // 3a50:56e9
-db byte_4e1ca; // 3a50:56ea
-dw word_4e1cb; // 3a50:56eb
-db byte_4e1cd; // 3a50:56ed
-db byte_4e1ce; // 3a50:56ee
-db byte_4e1cf[39]; // 3a50:56ef
-db dummyf_3fc16[4]; // 3a50:56ef
-char alandinggearrai[20]; // 3a50:571a
-char abrakeson[10]; // 3a50:572e
-char dummyf_3fc38[2]; // 3a50:5738
-char ag[2]; // 3a50:573a
-db dummyf_3fc3c[25]; // 3a50:573c
-db dummyf_3fc55[10]; // 3a50:573c
-db dummyf_3fc5f[10]; // 3a50:573c
-db dummyf_3fc69[11]; // 3a50:573c
-db dummyf_3fc74[10]; // 3a50:573c
-db dummyf_3fc7e[10]; // 3a50:573c
-db dummyf_3fc88[11]; // 3a50:573c
-db dummyf_3fc93[10]; // 3a50:573c
-db dummyf_3fc9d[11]; // 3a50:573c
-db dummyf_3fca8[24]; // 3a50:573c
-dw _unk_4e2a0; // 3a50:57c0
-dw word_4e2a2; // 3a50:57c2
-dw word_4e2a4; // 3a50:57c4
-dw word_4e2a6; // 3a50:57c6
-dw word_4e2a8[3]; // 3a50:57c8
-dw word_4e2ae; // 3a50:57ce
-dw word_4e2b0[2]; // 3a50:57d0
-dw word_4e2b4[2]; // 3a50:57d4
-db dummyf_3fcd8[4]; // 3a50:57d8
-dw word_4e2bc[2]; // 3a50:57dc
-dw word_4e2c0; // 3a50:57e0
-db dummyf_3fce2[8]; // 3a50:57e2
-dw word_4e2ca; // 3a50:57ea
-dw word_4e2cc[2]; // 3a50:57ec
-dw word_4e2d0; // 3a50:57f0
-dw word_4e2d2; // 3a50:57f2
-dw word_4e2d4; // 3a50:57f4
-dw word_4e2d6[2]; // 3a50:57f6
-dw word_4e2da; // 3a50:57fa
-dw word_4e2dc[4]; // 3a50:57fc
-db dummyf_3fd04[20]; // 3a50:5804
-dw word_4e2f8; // 3a50:5818
-dw word_4e2fa; // 3a50:581a
-dw word_4e2fc; // 3a50:581c
-dw word_4e2fe; // 3a50:581e
-dw word_4e300; // 3a50:5820
-db dummyf_3fd22; // 3a50:5822
+db byte_4e1c8; // 3e1c:1a28
+db byte_4e1c9; // 3e1c:1a29
+db byte_4e1ca; // 3e1c:1a2a
+dw word_4e1cb; // 3e1c:1a2b
+db byte_4e1cd; // 3e1c:1a2d
+db byte_4e1ce; // 3e1c:1a2e
+db byte_4e1cf; // 3e1c:1a2f
+db dummyf_3fbf0[32]; // 3e1c:1a30
+db dummyf_3fc10[32]; // 3e1c:1a50
+db dummyf_3fc30[32]; // 3e1c:1a70
+db dummyf_3fc50[32]; // 3e1c:1a90
+db dummyf_3fc70[32]; // 3e1c:1ab0
+db dummyf_3fc90[32]; // 3e1c:1ad0
+db dummyf_3fcb0; // 3e1c:1af0
+db dummyf_3fcb1; // 3e1c:1af1
+db dummyf_3fcb2; // 3e1c:1af2
+db dummyf_3fcb3; // 3e1c:1af3
+db dummyf_3fcb4; // 3e1c:1af4
+db dummyf_3fcb5; // 3e1c:1af5
+db dummyf_3fcb6; // 3e1c:1af6
+db dummyf_3fcb7; // 3e1c:1af7
+db dummyf_3fcb8; // 3e1c:1af8
+db dummyf_3fcb9; // 3e1c:1af9
+db dummyf_3fcba; // 3e1c:1afa
+db dummyf_3fcbb; // 3e1c:1afb
+db dummyf_3fcbc; // 3e1c:1afc
+db dummyf_3fcbd;
+db dummyf_3fcbe; // 3e1c:1afe
+db dummyf_3fcbf; // 3e1c:1aff
+dw word_4e2a0; // 3e1c:1b00
+dw word_4e2a2; // 3e1c:1b02
+dw word_4e2a4; // 3e1c:1b04
+dw word_4e2a6; // 3e1c:1b06
+dw word_4e2a8; // 3e1c:1b08
+db dummyf_3fcca;
+db dummyf_3fccb;
+db dummyf_3fccc;
+db dummyf_3fccd;
+dw word_4e2ae; // 3e1c:1b0e
+dw word_4e2b0; // 3e1c:1b10
+db dummyf_3fcd2;
+db dummyf_3fcd3;
+dw word_4e2b4; // 3e1c:1b14
+db dummyf_3fcd6;
+db dummyf_3fcd7;
+db dummyf_3fcd8; // 3e1c:1b18
+db dummyf_3fcd9; // 3e1c:1b19
+db dummyf_3fcda;
+db dummyf_3fcdb;
+dw word_4e2bc; // 3e1c:1b1c
+db dummyf_3fcde;
+db dummyf_3fcdf;
+dw word_4e2c0; // 3e1c:1b20
+db dummyf_3fce2; // 3e1c:1b22
+db dummyf_3fce3; // 3e1c:1b23
+db dummyf_3fce4;
+db dummyf_3fce5;
+db dummyf_3fce6;
+db dummyf_3fce7;
+db dummyf_3fce8;
+db dummyf_3fce9;
+dw word_4e2ca; // 3e1c:1b2a
+dw word_4e2cc; // 3e1c:1b2c
+db dummyf_3fcee;
+db dummyf_3fcef;
+dw word_4e2d0; // 3e1c:1b30
+dw word_4e2d2; // 3e1c:1b32
+dw word_4e2d4; // 3e1c:1b34
+dw word_4e2d6; // 3e1c:1b36
+db dummyf_3fcf8;
+db dummyf_3fcf9;
+dw word_4e2da; // 3e1c:1b3a
+dw word_4e2dc; // 3e1c:1b3c
+db dummyf_3fcfe;
+db dummyf_3fcff;
+db dummyf_3fd00;
+db dummyf_3fd01;
+db dummyf_3fd02;
+db dummyf_3fd03;
+db dummyf_3fd04; // 3e1c:1b44
+db dummyf_3fd05; // 3e1c:1b45
+db dummyf_3fd06;
+db dummyf_3fd07;
+db dummyf_3fd08;
+db dummyf_3fd09;
+db dummyf_3fd0a;
+db dummyf_3fd0b;
+db dummyf_3fd0c;
+db dummyf_3fd0d;
+db dummyf_3fd0e;
+db dummyf_3fd0f;
+db dummyf_3fd10;
+db dummyf_3fd11;
+db dummyf_3fd12;
+db dummyf_3fd13;
+db dummyf_3fd14;
+db dummyf_3fd15;
+db dummyf_3fd16;
+db dummyf_3fd17;
+dw word_4e2f8; // 3e1c:1b58
+dw word_4e2fa; // 3e1c:1b5a
+dw word_4e2fc; // 3e1c:1b5c
+dw word_4e2fe; // 3e1c:1b5e
+dw word_4e300; // 3e1c:1b60
+db dummyf_3fd22; // 3e1c:1b62
 db dummyf_3fd23;
 db dummyf_3fd24;
 db dummyf_3fd25;
 db dummyf_3fd26;
 db dummyf_3fd27;
-dw word_4e308; // 3a50:5828
-db byte_4e30a[3]; // 3a50:582a
-db byte_4e30d[3]; // 3a50:582d
-dw word_4e310; // 3a50:5830
-dw word_4e312; // 3a50:5832
-char a256leftpic[12]; // 3a50:5834
-char a256rightpic[13]; // 3a50:5840
-char a256rearpic[12]; // 3a50:584d
-char aleftpic[9]; // 3a50:5859
-char arightpic[10]; // 3a50:5862
-char arearpic[9]; // 3a50:586c
+dw word_4e308; // 3e1c:1b68
+db byte_4e30a; // 3e1c:1b6a
+db dummyf_3fd2b;
+db dummyf_3fd2c; // 3e1c:1b6c
+db byte_4e30d; // 3e1c:1b6d
+db dummyf_3fd2e;
+db dummyf_3fd2f;
+dw word_4e310; // 3e1c:1b70
+dw word_4e312; // 3e1c:1b72
+db dummyf_3fd34[32]; // 3e1c:1b74
+db dummyf_3fd54[32]; // 3e1c:1b94
+db dummyf_3fd74;
 db dummyf_3fd75;
-char asc_4e356[2]; // 3a50:5876
-db dummyf_3fd78[2]; // 3a50:5878
-char as_0[2]; // 3a50:587a
-db dummyf_3fd7c[13]; // 3a50:587c
-db dummyf_3fd89[12]; // 3a50:587c
-db dummyf_3fd95[13]; // 3a50:587c
-dw word_4e382; // 3a50:58a2
-char afiring[9]; // 3a50:58a4
+dw word_4e356; // 3e1c:1bb6
+db dummyf_3fd78[32]; // 3e1c:1bb8
+db dummyf_3fd98; // 3e1c:1bd8
+db dummyf_3fd99;
+db dummyf_3fd9a; // 3e1c:1bda
+db dummyf_3fd9b;
+db dummyf_3fd9c; // 3e1c:1bdc
+db dummyf_3fd9d;
+db dummyf_3fd9e; // 3e1c:1bde
+db dummyf_3fd9f; // 3e1c:1bdf
+db dummyf_3fda0; // 3e1c:1be0
+db dummyf_3fda1; // 3e1c:1be1
+dw word_4e382; // 3e1c:1be2
+db dummyf_3fda4; // 3e1c:1be4
+db dummyf_3fda5; // 3e1c:1be5
+db dummyf_3fda6; // 3e1c:1be6
+db dummyf_3fda7; // 3e1c:1be7
+db dummyf_3fda8; // 3e1c:1be8
+db dummyf_3fda9; // 3e1c:1be9
+db dummyf_3fdaa; // 3e1c:1bea
+db dummyf_3fdab; // 3e1c:1beb
+db dummyf_3fdac;
 db dummyf_3fdad;
-dw word_4e38e; // 3a50:58ae
-char afiredby[11]; // 3a50:58b0
-char dummyf_3fdbb[4]; // 3a50:58bb
-char atakingoff[12]; // 3a50:58bf
-db dummyf_3fdcb;
-char amisses[9]; // 3a50:58cc
-char adestroyedby[15]; // 3a50:58d5
-char adestroyedby_0[15]; // 3a50:58e4
-char agroundimpact[15]; // 3a50:58f3
-char ahitby[8]; // 3a50:5902
-char aineffective[12]; // 3a50:590a
-char ahitby_0[9]; // 3a50:5916
-db dummyf_3fe1f;
-char aa[2]; // 3a50:5920
-db dummyf_3fe22; // 3a50:5922
-db dummyf_3fe23;
-char ae[2]; // 3a50:5924
-char asecondtarget[15]; // 3a50:5926
-char aprimarytarget[15]; // 3a50:5935
-char a0[3]; // 3a50:5944
-char dummyf_3fe47[2]; // 3a50:5947
-char afired[7]; // 3a50:5949
-db dummyf_3fe50[32]; // 3a50:5950
-db dummyf_3fe70; // 3a50:5970
-db dummyf_3fe71;
-db dummyf_3fe72; // 3a50:5972
-db dummyf_3fe73;
-db dummyf_3fe74; // 3a50:5974
-db dummyf_3fe75;
-db dummyf_3fe76; // 3a50:5976
-db dummyf_3fe77;
-db dummyf_3fe78; // 3a50:5978
-db dummyf_3fe79;
-db dummyf_3fe7a[1];
-db dummyf_3fe7b[32]; // 3a50:597b
-db dummyf_3fe9b[32]; // 3a50:599b
-db dummyf_3febb[32]; // 3a50:59bb
-db dummyf_3fedb[32]; // 3a50:59db
-db dummyf_3fefb[32]; // 3a50:59fb
-db dummyf_3ff1b[32]; // 3a50:5a1b
-db dummyf_3ff3b[32]; // 3a50:5a3b
-db dummyf_3ff5b[32]; // 3a50:5a5b
+dw word_4e38e; // 3e1c:1bee
+db dummyf_3fdb0[32]; // 3e1c:1bf0
+db dummyf_3fdd0[32]; // 3e1c:1c10
+db dummyf_3fdf0[32]; // 3e1c:1c30
+db dummyf_3fe10[32]; // 3e1c:1c50
+db dummyf_3fe30[32]; // 3e1c:1c70
+db dummyf_3fe50[32]; // 3e1c:1c90
+db dummyf_3fe70[32]; // 3e1c:1cb0
+db dummyf_3fe90[32]; // 3e1c:1cd0
+db dummyf_3feb0[32]; // 3e1c:1cf0
+db dummyf_3fed0[32]; // 3e1c:1d10
+db dummyf_3fef0[32]; // 3e1c:1d30
+db dummyf_3ff10[32]; // 3e1c:1d50
+db dummyf_3ff30[32]; // 3e1c:1d70
+db dummyf_3ff50[32]; // 3e1c:1d90
+db dummyf_3ff70; // 3e1c:1db0
+db dummyf_3ff71;
+db dummyf_3ff72; // 3e1c:1db2
+db dummyf_3ff73;
+db dummyf_3ff74;
+db dummyf_3ff75;
+db dummyf_3ff76;
+db dummyf_3ff77;
+db dummyf_3ff78;
+db dummyf_3ff79;
+db dummyf_3ff7a; // 3e1c:1dba
 db dummyf_3ff7b;
 db dummyf_3ff7c;
 db dummyf_3ff7d;
-db dummyf_3ff7e; // 3a50:5a7e
+db dummyf_3ff7e; // 3e1c:1dbe
 db dummyf_3ff7f;
 db dummyf_3ff80;
 db dummyf_3ff81;
-db dummyf_3ff82; // 3a50:5a82
-db dummyf_3ff83; // 3a50:5a83
-dw word_4e564[7]; // 3a50:5a84
-db dummyf_3ff92[10]; // 3a50:5a92
-dw word_4e57c[9]; // 3a50:5a9c
-db dummyf_3ffae; // 3a50:5aae
+db dummyf_3ff82; // 3e1c:1dc2
+db dummyf_3ff83; // 3e1c:1dc3
+dw word_4e564; // 3e1c:1dc4
+db dummyf_3ff86; // 3e1c:1dc6
+db dummyf_3ff87;
+db dummyf_3ff88; // 3e1c:1dc8
+db dummyf_3ff89;
+db dummyf_3ff8a; // 3e1c:1dca
+db dummyf_3ff8b;
+db dummyf_3ff8c;
+db dummyf_3ff8d;
+db dummyf_3ff8e;
+db dummyf_3ff8f;
+db dummyf_3ff90;
+db dummyf_3ff91;
+db dummyf_3ff92; // 3e1c:1dd2
+db dummyf_3ff93;
+db dummyf_3ff94;
+db dummyf_3ff95;
+db dummyf_3ff96; // 3e1c:1dd6
+db dummyf_3ff97;
+db dummyf_3ff98;
+db dummyf_3ff99;
+db dummyf_3ff9a; // 3e1c:1dda
+db dummyf_3ff9b; // 3e1c:1ddb
+dw word_4e57c; // 3e1c:1ddc
+db dummyf_3ff9e; // 3e1c:1dde
+db dummyf_3ff9f;
+db dummyf_3ffa0; // 3e1c:1de0
+db dummyf_3ffa1;
+db dummyf_3ffa2; // 3e1c:1de2
+db dummyf_3ffa3;
+db dummyf_3ffa4;
+db dummyf_3ffa5;
+db dummyf_3ffa6;
+db dummyf_3ffa7;
+db dummyf_3ffa8;
+db dummyf_3ffa9;
+db dummyf_3ffaa;
+db dummyf_3ffab;
+db dummyf_3ffac;
+db dummyf_3ffad;
+db dummyf_3ffae; // 3e1c:1dee
 db dummyf_3ffaf;
 db dummyf_3ffb0;
 db dummyf_3ffb1;
-db dummyf_3ffb2; // 3a50:5ab2
-db dummyf_3ffb3; // 3a50:5ab3
-dw word_4e594[2]; // 3a50:5ab4
-db dummyf_3ffb8; // 3a50:5ab8
+db dummyf_3ffb2; // 3e1c:1df2
+db dummyf_3ffb3; // 3e1c:1df3
+dw word_4e594; // 3e1c:1df4
+db dummyf_3ffb6;
+db dummyf_3ffb7;
+db dummyf_3ffb8; // 3e1c:1df8
 db dummyf_3ffb9;
-db dummyf_3ffba; // 3a50:5aba
+db dummyf_3ffba; // 3e1c:1dfa
 db dummyf_3ffbb;
 db dummyf_3ffbc;
 db dummyf_3ffbd;
@@ -6854,162 +9244,253 @@ db dummyf_3ffbe;
 db dummyf_3ffbf;
 db dummyf_3ffc0;
 db dummyf_3ffc1;
-db dummyf_3ffc2; // 3a50:5ac2
+db dummyf_3ffc2; // 3e1c:1e02
 db dummyf_3ffc3;
-db dummyf_3ffc4; // 3a50:5ac4
+db dummyf_3ffc4; // 3e1c:1e04
 db dummyf_3ffc5;
-db dummyf_3ffc6; // 3a50:5ac6
+db dummyf_3ffc6; // 3e1c:1e06
 db dummyf_3ffc7;
-db dummyf_3ffc8; // 3a50:5ac8
+db dummyf_3ffc8; // 3e1c:1e08
 db dummyf_3ffc9;
-db dummyf_3ffca; // 3a50:5aca
+db dummyf_3ffca; // 3e1c:1e0a
 db dummyf_3ffcb;
-dw word_4e5ac[2]; // 3a50:5acc
-db dummyf_3ffd0[32]; // 3a50:5ad0
+dw word_4e5ac; // 3e1c:1e0c
+db dummyf_3ffce[32]; // 3e1c:1e0e
+db dummyf_3ffee;
+db dummyf_3ffef;
 db dummyf_3fff0;
 db dummyf_3fff1;
-db dummyf_3fff2; // 3a50:5af2
+db dummyf_3fff2; // 3e1c:1e32
 db dummyf_3fff3;
-db dummyf_3fff4; // 3a50:5af4
+db dummyf_3fff4; // 3e1c:1e34
 db dummyf_3fff5;
-db dummyf_3fff6; // 3a50:5af6
+db dummyf_3fff6; // 3e1c:1e36
 db dummyf_3fff7;
-db dummyf_3fff8; // 3a50:5af8
+db dummyf_3fff8; // 3e1c:1e38
 db dummyf_3fff9;
-db dummyf_3fffa; // 3a50:5afa
-db dummyf_3fffb; // 3a50:5afb
-dw word_4e5dc; // 3a50:5afc
-dw word_4e5de; // 3a50:5afe
-dw word_4e5e0; // 3a50:5b00
-dw word_4e5e2; // 3a50:5b02
-dw word_4e5e4; // 3a50:5b04
-dw word_4e5e6; // 3a50:5b06
-dw word_4e5e8; // 3a50:5b08
-dw word_4e5ea; // 3a50:5b0a
-dw word_4e5ec[8]; // 3a50:5b0c
-dw word_4e5fc; // 3a50:5b1c
-dw word_4e5fe; // 3a50:5b1e
-dw word_4e600; // 3a50:5b20
-dw word_4e602; // 3a50:5b22
-dw word_4e604; // 3a50:5b24
-dw word_4e606; // 3a50:5b26
-dw word_4e608; // 3a50:5b28
-dw word_4e60a[2]; // 3a50:5b2a
-db dummyf_4002e[6]; // 3a50:5b2e
-db byte_4e614; // 3a50:5b34
-db byte_4e615[5]; // 3a50:5b35
-dw word_4e61a; // 3a50:5b3a
-dw word_4e61c; // 3a50:5b3c
-dw word_4e61e; // 3a50:5b3e
-dw word_4e620; // 3a50:5b40
-dw word_4e622; // 3a50:5b42
-dw word_4e624; // 3a50:5b44
-char astallwarning[14]; // 3a50:5b46
-char aaccel[6]; // 3a50:5b54
-char atraining[9]; // 3a50:5b5a
-char aautopilot[10]; // 3a50:5b63
-char apressanykeytop[22]; // 3a50:5b6d
-char atac[4]; // 3a50:5b83
-char atrackcam[10]; // 3a50:5b87
-char aahead[6]; // 3a50:5b91
-char arear[5]; // 3a50:5b97
-char aright[6]; // 3a50:5b9c
-char aleft[5]; // 3a50:5ba2
-char amap[4]; // 3a50:5ba7
+db dummyf_3fffa; // 3e1c:1e3a
+db dummyf_3fffb; // 3e1c:1e3b
+dw word_4e5dc; // 3e1c:1e3c
+dw word_4e5de; // 3e1c:1e3e
+dw word_4e5e0; // 3e1c:1e40
+dw word_4e5e2; // 3e1c:1e42
+dw word_4e5e4; // 3e1c:1e44
+dw word_4e5e6; // 3e1c:1e46
+dw word_4e5e8; // 3e1c:1e48
+dw word_4e5ea; // 3e1c:1e4a
+dw word_4e5ec; // 3e1c:1e4c
+db dummyf_4000e; // 3e1c:1e4e
+db dummyf_4000f;
+db dummyf_40010; // 3e1c:1e50
+db dummyf_40011;
+db dummyf_40012; // 3e1c:1e52
+db dummyf_40013;
+db dummyf_40014; // 3e1c:1e54
+db dummyf_40015;
+db dummyf_40016; // 3e1c:1e56
+db dummyf_40017; // 3e1c:1e57
+db dummyf_40018; // 3e1c:1e58
+db dummyf_40019;
+db dummyf_4001a; // 3e1c:1e5a
+db dummyf_4001b;
+dw word_4e5fc; // 3e1c:1e5c
+dw word_4e5fe; // 3e1c:1e5e
+dw word_4e600; // 3e1c:1e60
+dw word_4e602; // 3e1c:1e62
+dw word_4e604; // 3e1c:1e64
+dw word_4e606; // 3e1c:1e66
+dw word_4e608; // 3e1c:1e68
+dw word_4e60a; // 3e1c:1e6a
+db dummyf_4002c;
+db dummyf_4002d;
+db dummyf_4002e; // 3e1c:1e6e
+db dummyf_4002f;
+db dummyf_40030;
+db dummyf_40031;
+db dummyf_40032; // 3e1c:1e72
+db dummyf_40033; // 3e1c:1e73
+db byte_4e614; // 3e1c:1e74
+db byte_4e615; // 3e1c:1e75
+db dummyf_40036; // 3e1c:1e76
+db dummyf_40037;
+db dummyf_40038; // 3e1c:1e78
+db dummyf_40039;
+dw word_4e61a; // 3e1c:1e7a
+dw word_4e61c; // 3e1c:1e7c
+dw word_4e61e; // 3e1c:1e7e
+dw word_4e620; // 3e1c:1e80
+dw word_4e622; // 3e1c:1e82
+dw word_4e624; // 3e1c:1e84
+db dummyf_40046[32]; // 3e1c:1e86
+db dummyf_40066[32]; // 3e1c:1ea6
+db dummyf_40086[32]; // 3e1c:1ec6
+db dummyf_400a6;
+db dummyf_400a7; // 3e1c:1ee7
+db dummyf_400a8; // 3e1c:1ee8
+db dummyf_400a9; // 3e1c:1ee9
+db dummyf_400aa;
 db dummyf_400ab;
 db dummyf_400ac;
 db dummyf_400ad;
 db dummyf_400ae;
 db dummyf_400af;
-dw word_4e690; // 3a50:5bb0
-char adestroyedbygun[22]; // 3a50:5bb2
-char ahitbygunfire[15]; // 3a50:5bc8
-char adestroyedbygun_0[22]; // 3a50:5bd7
-char aat_0[5]; // 3a50:5bed
-db dummyf_400f2;
-char aprimarytarget_0[15]; // 3a50:5bf3
-char asecondarytarge[17]; // 3a50:5c02
-char anotarget[10]; // 3a50:5c13
-char anotarget_0[10]; // 3a50:5c1d
-char amissilelock[13]; // 3a50:5c27
-char arange[7]; // 3a50:5c34
-char dummyf_4013b[2]; // 3a50:5c3b
-char akm[4]; // 3a50:5c3d
+dw word_4e690; // 3e1c:1ef0
+db dummyf_400b2[32]; // 3e1c:1ef2
+db dummyf_400d2[32]; // 3e1c:1f12
+db dummyf_400f2[32]; // 3e1c:1f32
+db dummyf_40112[32]; // 3e1c:1f52
+db dummyf_40132; // 3e1c:1f72
+db dummyf_40133;
+db dummyf_40134; // 3e1c:1f74
+db dummyf_40135; // 3e1c:1f75
+db dummyf_40136; // 3e1c:1f76
+db dummyf_40137; // 3e1c:1f77
+db dummyf_40138; // 3e1c:1f78
+db dummyf_40139; // 3e1c:1f79
+db dummyf_4013a;
+db dummyf_4013b; // 3e1c:1f7b
+db dummyf_4013c;
+db dummyf_4013d; // 3e1c:1f7d
+db dummyf_4013e; // 3e1c:1f7e
+db dummyf_4013f; // 3e1c:1f7f
+db dummyf_40140;
 db dummyf_40141;
-char a3d3_0[5]; // 3a50:5c42
-char arb_4[3]; // 3a50:5c47
-char aopenerroron3d3_0[20]; // 3a50:5c4a
-dw word_4e73e; // 3a50:5c5e
-char a15fltxxx[10]; // 3a50:5c60
-char abrg[5]; // 3a50:5c6a
-db dummyf_4016f[1];
-char along[5]; // 3a50:5c70
-char amedium[7]; // 3a50:5c75
-char ashort[6]; // 3a50:5c7c
-char arangeradar[13]; // 3a50:5c82
-char adetaillevel[14]; // 3a50:5c8f
-char akybdsensitivit[17]; // 3a50:5c9d
-char amemoryavailabl[18]; // 3a50:5cae
-char ajiffiesframe[15]; // 3a50:5cc0
-char asounds[8]; // 3a50:5ccf
-char adirector[10]; // 3a50:5cd7
-char aoff[4]; // 3a50:5ce1
-char awaypointprimar[25]; // 3a50:5ce5
-char awaypointsecond[27]; // 3a50:5cfe
-char awaypointfriend[27]; // 3a50:5d19
-char aautopilotoff[14]; // 3a50:5d34
-char aautopiloton[13]; // 3a50:5d42
+db dummyf_40142; // 3e1c:1f82
+db dummyf_40143; // 3e1c:1f83
+db dummyf_40144; // 3e1c:1f84
+db dummyf_40145; // 3e1c:1f85
+db dummyf_40146;
+db dummyf_40147; // 3e1c:1f87
+db dummyf_40148; // 3e1c:1f88
+db dummyf_40149;
+char aopenerroron3d3_0[20]; // 3e1c:1f8a
+db byte_4e73e; // 3e1c:1f9e
+db dummyf_4015f[32]; // 3e1c:1f9f
+db dummyf_4017f[32]; // 3e1c:1fbf
+db dummyf_4019f[32]; // 3e1c:1fdf
+db dummyf_401bf[32]; // 3e1c:1fff
+db dummyf_401df[32]; // 3e1c:201f
+db dummyf_401ff[32]; // 3e1c:203f
+db dummyf_4021f[32]; // 3e1c:205f
+db dummyf_4023f; // 3e1c:207f
+db dummyf_40240; // 3e1c:2080
+db dummyf_40241;
+db dummyf_40242; // 3e1c:2082
+db dummyf_40243; // 3e1c:2083
+db dummyf_40244; // 3e1c:2084
+db dummyf_40245; // 3e1c:2085
+db dummyf_40246; // 3e1c:2086
+db dummyf_40247; // 3e1c:2087
+db dummyf_40248; // 3e1c:2088
+db dummyf_40249; // 3e1c:2089
+db dummyf_4024a; // 3e1c:208a
+db dummyf_4024b; // 3e1c:208b
+db dummyf_4024c; // 3e1c:208c
+db dummyf_4024d; // 3e1c:208d
+db dummyf_4024e;
 db dummyf_4024f;
-dw word_4e830; // 3a50:5d50
-dw word_4e832; // 3a50:5d52
-dw word_4e834; // 3a50:5d54
-dw word_4e836; // 3a50:5d56
-dw word_4e838; // 3a50:5d58
-dw word_4e83a[2]; // 3a50:5d5a
-char anotavailable[15]; // 3a50:5d5e
-char aarmed[7]; // 3a50:5d6d
-db dummyf_40274[522]; // 3a50:5d74
-db dummyf_4047e[11]; // 3a50:5d74
-db dummyf_40489[11]; // 3a50:5d74
-db dummyf_40494[10]; // 3a50:5d74
-db dummyf_4049e[11]; // 3a50:5d74
-db dummyf_404a9[10]; // 3a50:5d74
-db dummyf_404b3[11]; // 3a50:5d74
-db dummyf_404be[10]; // 3a50:5d74
-db dummyf_404c8[10]; // 3a50:5d74
-db dummyf_404d2[10]; // 3a50:5d74
-db dummyf_404dc[2]; // 3a50:5d74
-dw word_4eabe; // 3a50:5fde
-dw word_4eac0; // 3a50:5fe0
+dw word_4e830; // 3e1c:2090
+dw word_4e832; // 3e1c:2092
+dw word_4e834; // 3e1c:2094
+dw word_4e836; // 3e1c:2096
+dw word_4e838; // 3e1c:2098
+dw word_4e83a; // 3e1c:209a
+db dummyf_4025c;
+db dummyf_4025d;
+db dummyf_4025e; // 3e1c:209e
+db dummyf_4025f; // 3e1c:209f
+db dummyf_40260; // 3e1c:20a0
+db dummyf_40261; // 3e1c:20a1
+db dummyf_40262; // 3e1c:20a2
+db dummyf_40263; // 3e1c:20a3
+db dummyf_40264; // 3e1c:20a4
+db dummyf_40265; // 3e1c:20a5
+db dummyf_40266; // 3e1c:20a6
+db dummyf_40267; // 3e1c:20a7
+db dummyf_40268; // 3e1c:20a8
+db dummyf_40269; // 3e1c:20a9
+db dummyf_4026a; // 3e1c:20aa
+db dummyf_4026b; // 3e1c:20ab
+db dummyf_4026c;
+db dummyf_4026d; // 3e1c:20ad
+db dummyf_4026e; // 3e1c:20ae
+db dummyf_4026f; // 3e1c:20af
+db dummyf_40270; // 3e1c:20b0
+db dummyf_40271; // 3e1c:20b1
+db dummyf_40272; // 3e1c:20b2
+db dummyf_40273;
+db dummyf_40274; // 3e1c:20b4
+db dummyf_40275; // 3e1c:20b5
+db dummyf_40276; // 3e1c:20b6
+db dummyf_40277; // 3e1c:20b7
+db dummyf_40278; // 3e1c:20b8
+db dummyf_40279; // 3e1c:20b9
+db byte_4e85a; // 3e1c:20ba
+db byte_4e85b; // 3e1c:20bb
+db dummyf_4027c[32]; // 3e1c:20bc
+db dummyf_4029c[32]; // 3e1c:20dc
+db dummyf_402bc[32]; // 3e1c:20fc
+db dummyf_402dc[32]; // 3e1c:211c
+db dummyf_402fc[32]; // 3e1c:213c
+db dummyf_4031c[32]; // 3e1c:215c
+db dummyf_4033c[32]; // 3e1c:217c
+db dummyf_4035c[32]; // 3e1c:219c
+db dummyf_4037c[32]; // 3e1c:21bc
+db dummyf_4039c[32]; // 3e1c:21dc
+db dummyf_403bc[32]; // 3e1c:21fc
+db dummyf_403dc[32]; // 3e1c:221c
+db dummyf_403fc[32]; // 3e1c:223c
+db dummyf_4041c[32]; // 3e1c:225c
+db dummyf_4043c[32]; // 3e1c:227c
+db dummyf_4045c[32]; // 3e1c:229c
+db dummyf_4047c[32]; // 3e1c:22bc
+db dummyf_4049c[32]; // 3e1c:22dc
+db dummyf_404bc[32]; // 3e1c:22fc
+db dummyf_404dc; // 3e1c:231c
+db dummyf_404dd; // 3e1c:231d
+dw word_4eabe; // 3e1c:231e
+dw word_4eac0; // 3e1c:2320
 db dummyf_404e2;
 db dummyf_404e3;
-dw word_4eac4; // 3a50:5fe4
-dw word_4eac6[161]; // 3a50:5fe6
-dw word_4ec08; // 3a50:6128
-dw word_4ec0a; // 3a50:612a
-dw word_4ec0c[2]; // 3a50:612c
-dw word_4ec10; // 3a50:6130
-dw word_4ec12; // 3a50:6132
-dw word_4ec14; // 3a50:6134
-dw word_4ec16; // 3a50:6136
-dw _off_4ec18; // 3a50:6138
-dw word_4ec1a; // 3a50:613a
-db dummyf_4063c[78]; // 3a50:613c
-dw aacfileinfo; // 3a50:618a
-db dummyf_4068c; // 3a50:618c
-db dummyf_4068d; // 3a50:618d
-db dummyf_4068e; // 3a50:618e
-db dummyf_4068f; // 3a50:618f
-db dummyf_40690; // 3a50:6190
-db dummyf_40691; // 3a50:6191
-db dummyf_40692; // 3a50:6192
-db dummyf_40693; // 3a50:6193
-db dummyf_40694; // 3a50:6194
-db dummyf_40695; // 3a50:6195
-db dummyf_40696; // 3a50:6196
-db dummyf_40697; // 3a50:6197
-db dummyf_40698;
-dd dword_4ec79; // 3a50:6199
+dw word_4eac4; // 3e1c:2324
+dw word_4eac6; // 3e1c:2326
+db dummyf_404e8[32]; // 3e1c:2328
+db dummyf_40508[32]; // 3e1c:2348
+db dummyf_40528[32]; // 3e1c:2368
+db dummyf_40548[32]; // 3e1c:2388
+db dummyf_40568[32]; // 3e1c:23a8
+db dummyf_40588[32]; // 3e1c:23c8
+db dummyf_405a8[32]; // 3e1c:23e8
+db dummyf_405c8[32]; // 3e1c:2408
+db dummyf_405e8[32]; // 3e1c:2428
+db dummyf_40608[32]; // 3e1c:2448
+dw word_4ec08; // 3e1c:2468
+dw word_4ec0a; // 3e1c:246a
+dw word_4ec0c; // 3e1c:246c
+db dummyf_4062e;
+db dummyf_4062f;
+dw word_4ec10; // 3e1c:2470
+dw word_4ec12; // 3e1c:2472
+dw word_4ec14; // 3e1c:2474
+dw word_4ec16; // 3e1c:2476
+dw off_4ec18; // 3e1c:2478
+dd off_4ec1a; // 3e1c:247a
+db dummyf_4063e[32]; // 3e1c:247e
+db dummyf_4065e[32]; // 3e1c:249e
+db dummyf_4067e;
+db dummyf_4067f;
+db dummyf_40680;
+db dummyf_40681;
+db dummyf_40682;
+db dummyf_40683;
+db dummyf_40684;
+db dummyf_40685;
+db dummyf_40686;
+db dummyf_40687;
+db dummyf_40688;
+db dummyf_40689;
+char aacfileinfo[15]; // 3e1c:24ca
+dd dummyf_40699;
 db dummyf_4069d;
 db dummyf_4069e;
 db dummyf_4069f;
@@ -7018,533 +9499,1858 @@ db dummyf_406a1;
 db dummyf_406a2;
 db dummyf_406a3;
 db dummyf_406a4;
-dw word_4ec85; // 3a50:61a5
-dw word_4ec87; // 3a50:61a7
+dw dummyf_406a5;
+dw dummyf_406a7;
 db dummyf_406a9;
 db dummyf_406aa;
-dw word_4ec8b; // 3a50:61ab
-dw word_4ec8d; // 3a50:61ad
+dw word_4ec8b; // 3e1c:24eb
+dw dummyf_406ad;
 db dummyf_406af;
-db byte_4ec90[2]; // 3a50:61b0
-dw word_4ec92[11]; // 3a50:61b2
-dw word_4eca8; // 3a50:61c8
-dw word_4ecaa; // 3a50:61ca
-dw word_4ecac; // 3a50:61cc
-db dummyf_406ce; // 3a50:61ce
-db dummyf_406cf; // 3a50:61cf
-db dummyf_406d0; // 3a50:61d0
-db dummyf_406d1; // 3a50:61d1
-db dummyf_406d2; // 3a50:61d2
+db dummyf_406b0;
+db dummyf_406b1;
+dw dummyf_406b2; // 3e1c:24f2
+db dummyf_406b4; // 3e1c:24f4
+db dummyf_406b5; // 3e1c:24f5
+db dummyf_406b6; // 3e1c:24f6
+db dummyf_406b7; // 3e1c:24f7
+db dummyf_406b8; // 3e1c:24f8
+db dummyf_406b9;
+db dummyf_406ba;
+db dummyf_406bb;
+db dummyf_406bc;
+db dummyf_406bd;
+db dummyf_406be;
+db dummyf_406bf;
+db dummyf_406c0;
+db dummyf_406c1;
+db dummyf_406c2;
+db dummyf_406c3;
+db dummyf_406c4;
+db dummyf_406c5;
+db dummyf_406c6;
+db dummyf_406c7;
+dw word_4eca8; // 3e1c:2508
+dw word_4ecaa; // 3e1c:250a
+dw word_4ecac; // 3e1c:250c
+dd dummyf_406ce; // 3e1c:250e
+db unk_4ecb2; // 3e1c:2512
 db dummyf_406d3;
 db dummyf_406d4;
 db dummyf_406d5;
 db dummyf_406d6;
 db dummyf_406d7;
-db dummyf_406d8;
-db dummyf_406d9;
-db dummyf_406da;
-db dummyf_406db;
-dw word_4ecbc[3]; // 3a50:61dc
-dw word_4ecc2; // 3a50:61e2
-dw word_4ecc4; // 3a50:61e4
-dw word_4ecc6; // 3a50:61e6
-dw word_4ecc8; // 3a50:61e8
-db dummyf_406ea[32]; // 3a50:61ea
-db dummyf_4070a[32]; // 3a50:620a
-db dummyf_4072a;
-db dummyf_4072b;
-db dummyf_4072c[3]; // 3a50:622c
-db dummyf_4072f;
-db dummyf_40730;
-db dummyf_40731;
-db dummyf_40732;
-db dummyf_40733;
-db dummyf_40734[2]; // 3a50:6234
-db dummyf_40736[32]; // 3a50:6236
-db dummyf_40756[32]; // 3a50:6256
-db dummyf_40776[32]; // 3a50:6276
-db dummyf_40796[32]; // 3a50:6296
-db dummyf_407b6[32]; // 3a50:62b6
-db dummyf_407d6[32]; // 3a50:62d6
-db dummyf_407f6[32]; // 3a50:62f6
-dw word_4edf6; // 3a50:6316
-dw word_4edf8; // 3a50:6318
-dw word_4edfa; // 3a50:631a
-dw word_4edfc[2]; // 3a50:631c
-dw word_4ee00[2]; // 3a50:6320
+dd dummyf_406d8;
+dw dummyf_406dc; // 3e1c:251c
+db dummyf_406de; // 3e1c:251e
+db dummyf_406df;
+db dummyf_406e0; // 3e1c:2520
+db dummyf_406e1;
+dw dummyf_406e2; // 3e1c:2522
+dw dummyf_406e4; // 3e1c:2524
+dw dummyf_406e6;
+dw dummyf_406e8;
+db dummyf_406ea[32]; // 3e1c:252a
+db dummyf_4070a[32]; // 3e1c:254a
+db dummyf_4072a[32]; // 3e1c:256a
+db dummyf_4074a[32]; // 3e1c:258a
+db dummyf_4076a[32]; // 3e1c:25aa
+db dummyf_4078a[32]; // 3e1c:25ca
+db dummyf_407aa[32]; // 3e1c:25ea
+db dummyf_407ca[32]; // 3e1c:260a
+db dummyf_407ea[32]; // 3e1c:262a
+db dummyf_4080a;
+db dummyf_4080b;
+db dummyf_4080c;
+db dummyf_4080d;
+db dummyf_4080e;
+db dummyf_4080f;
+db dummyf_40810;
+db dummyf_40811;
+db dummyf_40812;
+db dummyf_40813;
+db dummyf_40814;
+db dummyf_40815;
+dw dummyf_40816; // 3e1c:2656
+dw dummyf_40818;
+dw dummyf_4081a;
+dw dummyf_4081c;
+db dummyf_4081e;
+db dummyf_4081f;
+dw dummyf_40820;
+db dummyf_40822;
+db dummyf_40823;
 db dummyf_40824;
-db byte_4ee05; // 3a50:6325
-dw word_4ee06; // 3a50:6326
+db dummyf_40825;
+dw word_4ee06; // 3e1c:2666
 db dummyf_40828;
 db dummyf_40829;
-dw word_4ee0a; // 3a50:632a
-dw word_4ee0c[2]; // 3a50:632c
-db byte_4ee10[4]; // 3a50:6330
-dd dword_4ee14; // 3a50:6334
-dd dword_4ee18; // 3a50:6338
-dd dword_4ee1c; // 3a50:633c
-db dummyf_40840; // 3a50:6340
-db dummyf_40841; // 3a50:6341
-dw seg_4ee22; // 3a50:6342
-dw seg_4ee24; // 3a50:6344
-db seg_4ee26; // 3a50:6346
-char anmsg[10]; // 3a50:6347
+dw word_4ee0a; // 3e1c:266a
+dw word_4ee0c; // 3e1c:266c
+db dummyf_4082e;
+db dummyf_4082f;
+db byte_4ee10; // 3e1c:2670
+db dummyf_40831;
+db dummyf_40832;
+db dummyf_40833;
+db unk_4ee14; // 3e1c:2674
+db dummyf_40835;
+dw dummyf_40836;
+dd dummyf_40838;
+dd dword_4ee1c; // 3e1c:267c
+dd off_4ee20; // 3e1c:2680
+dw seg_4ee24; // 3e1c:2684
+dw seg_4ee26; // 3e1c:2686
+char anmsg[9]; // 3e1c:2688
 db dummyf_40851[1];
-char ar6000stackover[7]; // 3a50:6352
-char dummyf_40859[19]; // 3a50:6352
-db dummyf_4086c; // 3a50:636c
-db dummyf_4086d;
-char ar6003integerdi[7]; // 3a50:636e
-char dummyf_40875[24]; // 3a50:636e
-db dummyf_4088d; // 3a50:638d
-db dummyf_4088e;
-char ar6009notenough[7]; // 3a50:638f
-char dummyf_40896[37]; // 3a50:638f
-db dummyf_408bb; // 3a50:63bb
-db dummyf_408bc;
-db dummyf_408bd; // 3a50:63bd
-db dummyf_408be; // 3a50:63be
-db dummyf_408bf;
-db dummyf_408c0; // 3a50:63c0
-db dummyf_408c1;
-char aruntimeerror[16]; // 3a50:63c2
-db dummyf_408d2; // 3a50:63d2
-db dummyf_408d3;
-char ar6002floatingp[7]; // 3a50:63d4
-char dummyf_408db[30]; // 3a50:63d4
-db dummyf_408f9; // 3a50:63f9
-db dummyf_408fa;
-char ar6001nullpoint[7]; // 3a50:63fb
-char dummyf_40902[28]; // 3a50:63fb
-db dummyf_4091e; // 3a50:641e
-db dummyf_4091f; // 3a50:641f
-db dummyf_40920; // 3a50:6420
+char ar6000stackover[7]; // 3e1c:2692
+char dummyf_40859[19]; // 3e1c:2692
+db dummyf_4086c[32]; // 3e1c:26ac
+db dummyf_4088c[32]; // 3e1c:26cc
+db dummyf_408ac[32]; // 3e1c:26ec
+db dummyf_408cc[32]; // 3e1c:270c
+db dummyf_408ec[32]; // 3e1c:272c
+db dummyf_4090c; // 3e1c:274c
+db dummyf_4090d; // 3e1c:274d
+db dummyf_4090e; // 3e1c:274e
+db dummyf_4090f; // 3e1c:274f
+db dummyf_40910; // 3e1c:2750
+db dummyf_40911; // 3e1c:2751
+db dummyf_40912; // 3e1c:2752
+db dummyf_40913; // 3e1c:2753
+db dummyf_40914; // 3e1c:2754
+db dummyf_40915; // 3e1c:2755
+db dummyf_40916; // 3e1c:2756
+db dummyf_40917; // 3e1c:2757
+db dummyf_40918; // 3e1c:2758
+db dummyf_40919; // 3e1c:2759
+db dummyf_4091a; // 3e1c:275a
+db dummyf_4091b; // 3e1c:275b
+db dummyf_4091c; // 3e1c:275c
+db dummyf_4091d;
+db dummyf_4091e; // 3e1c:275e
+db dummyf_4091f; // 3e1c:275f
+db dummyf_40920; // 3e1c:2760
 db dummyf_40921;
-dw word_4ef02; // 3a50:6422
-dw word_4ef04; // 3a50:6424
-dw word_4ef06; // 3a50:6426
-dw word_4ef08; // 3a50:6428
-dw word_4ef0a; // 3a50:642a
-dw word_4ef0c; // 3a50:642c
-dw word_4ef0e; // 3a50:642e
-dw word_4ef10; // 3a50:6430
-dw word_4ef12; // 3a50:6432
-dw word_4ef14; // 3a50:6434
-dw word_4ef16; // 3a50:6436
-dw word_4ef18; // 3a50:6438
-dw word_4ef1a; // 3a50:643a
-dw word_4ef1c; // 3a50:643c
-dw word_4ef1e; // 3a50:643e
-dw word_4ef20; // 3a50:6440
-dw word_4ef22[4]; // 3a50:6442
-dw word_4ef2a; // 3a50:644a
-dw word_4ef2c; // 3a50:644c
-dw word_4ef2e; // 3a50:644e
-dw word_4ef30; // 3a50:6450
-dw word_4ef32; // 3a50:6452
-dw word_4ef34; // 3a50:6454
-dw word_4ef36[34]; // 3a50:6456
-dw word_4ef7a; // 3a50:649a
-dw word_4ef7c; // 3a50:649c
-dw word_4ef7e; // 3a50:649e
-dw word_4ef80; // 3a50:64a0
-dw word_4ef82; // 3a50:64a2
-dw word_4ef84; // 3a50:64a4
-dw word_4ef86; // 3a50:64a6
-dw word_4ef88; // 3a50:64a8
-dw word_4ef8a; // 3a50:64aa
-dw word_4ef8c; // 3a50:64ac
-dw word_4ef8e; // 3a50:64ae
-db byte_4ef90; // 3a50:64b0
-db byte_4ef91; // 3a50:64b1
-db byte_4ef92; // 3a50:64b2
-db byte_4ef93; // 3a50:64b3
-dw word_4ef94; // 3a50:64b4
-dw word_4ef96; // 3a50:64b6
-dw word_4ef98; // 3a50:64b8
-db byte_4ef9a; // 3a50:64ba
-db byte_4ef9b; // 3a50:64bb
-dw word_4ef9c; // 3a50:64bc
-db byte_4ef9e[514]; // 3a50:64be
-dw word_4f1a0; // 3a50:66c0
-dw word_4f1a2[8]; // 3a50:66c2
-dw dummyf_40bd2[5]; // 3a50:66c2
-db byte_4f1bc; // 3a50:66dc
-db byte_4f1bd[12]; // 3a50:66dd
-db dummyf_40be9[11]; // 3a50:66dd
-db dummyf_40bf4[12]; // 3a50:66dd
-db dummyf_40c00[11]; // 3a50:66dd
-db dummyf_40c0b[9]; // 3a50:66dd
-dw word_4f1f4; // 3a50:6714
-dw word_4f1f6; // 3a50:6716
-dw word_4f1f8[2]; // 3a50:6718
-dw word_4f1fc; // 3a50:671c
-dw seg_4f1fe[6]; // 3a50:671e
-dw word_4f20a; // 3a50:672a
-db byte_4f20c[2]; // 3a50:672c
-dw word_4f20e; // 3a50:672e
-dw word_4f210; // 3a50:6730
-dd dword_4f212; // 3a50:6732
-dw word_4f216; // 3a50:6736
-dw word_4f218; // 3a50:6738
-dw word_4f21a[2]; // 3a50:673a
-dw word_4f21e; // 3a50:673e
-dd dword_4f220; // 3a50:6740
-db dummyf_40c44[2]; // 3a50:6744
-dw word_4f226; // 3a50:6746
-dw word_4f228; // 3a50:6748
-dw word_4f22a; // 3a50:674a
-dw word_4f22c; // 3a50:674c
-db dummyf_40c4e[308];
-db dummyf_40d82[12]; // 3a50:6882
-db dummyf_40d8e[10]; // 3a50:6882
-db dummyf_40d98[11]; // 3a50:6882
-db dummyf_40da3[11]; // 3a50:6882
-db dummyf_40dae[11]; // 3a50:6882
-db dummyf_40db9[10]; // 3a50:6882
-db dummyf_40dc3[10]; // 3a50:6882
-db dummyf_40dcd[10]; // 3a50:6882
-db dummyf_40dd7[12]; // 3a50:6882
-db dummyf_40de3[13]; // 3a50:6882
-db dummyf_40df0[11]; // 3a50:6882
-db dummyf_40dfb[10]; // 3a50:6882
-db dummyf_40e05[6]; // 3a50:6882
-dw dummyf_40e0b; // 3a50:690b
-db dummyf_40e0d[27];
-dd dummyf_40e28; // 3a50:6928
-db dummyf_40e2c[32];
-db dummyf_40e4c[2]; // 3a50:694c
-dw word_4f42e; // 3a50:694e
-dw word_4f430; // 3a50:6950
-db dummyf_40e52[23];
-db dummyf_40e69[11]; // 3a50:6969
-db dummyf_40e74; // 3a50:6969
-dw dummyf_40e75; // 3a50:6975
-db dummyf_40e77[59];
-db dummyf_40eb2; // 3a50:69b2
-db dummyf_40eb3[13];
-db dummyf_40ec0; // 3a50:69c0
-db dummyf_40ec1[19];
-db dummyf_40ed4; // 3a50:69d4
-db dummyf_40ed5[27];
-db dummyf_40ef0; // 3a50:69f0
-db dummyf_40ef1[13];
-db dummyf_40efe; // 3a50:69fe
-db dummyf_40eff[19];
-db dummyf_40f12; // 3a50:6a12
-db dummyf_40f13[436];
-db dummyf_410c7; // 3a50:6bc7
-db dummyf_410c8[191];
-db dummyf_41187; // 3a50:6c87
-db dummyf_41188[322];
-db dummyf_412ca; // 3a50:6dca
-db dummyf_412cb[211];
-db dummyf_4139e; // 3a50:6e9e
-db dummyf_4139f; // 3a50:6e9f
-db dummyf_413a0; // 3a50:6ea0
-db dummyf_413a1; // 3a50:6ea1
-db dummyf_413a2[29];
-db dummyf_413bf; // 3a50:6ebf
-db dummyf_413c0[54];
-db dummyf_413f6; // 3a50:6ef6
-db dummyf_413f7[61];
-db dummyf_41434; // 3a50:6f34
-db dummyf_41435[19];
-db dummyf_41448; // 3a50:6f48
-db dummyf_41449[60];
-db dummyf_41485; // 3a50:6f85
-db dummyf_41486[263];
-db dummyf_4158d; // 3a50:708d
-db dummyf_4158e[342];
-db dummyf_416e4; // 3a50:71e4
-db dummyf_416e5[516];
-db dummyf_418e9; // 3a50:73e9
-db dummyf_418ea; // 3a50:73ea
-db dummyf_418eb; // 3a50:73eb
-db dummyf_418ec; // 3a50:73ec
-db dummyf_418ed[210];
-db dummyf_419bf; // 3a50:74bf
-db dummyf_419c0[172];
-db dummyf_41a6c; // 3a50:756c
-db dummyf_41a6d[200];
-db dummyf_41b35; // 3a50:7635
-db dummyf_41b36[112];
-db dummyf_41ba6; // 3a50:76a6
-db dummyf_41ba7[546];
-db dummyf_41dc9[128]; // 3a50:78c9
-db dummyf_41e49[549]; // 3a50:78c9
-db dummyf_4206e[317]; // 3a50:78c9
-db dummyf_421ab[274]; // 3a50:78c9
-db dummyf_422bd[224]; // 3a50:78c9
-db dummyf_4239d[320]; // 3a50:78c9
-db dummyf_424dd[113]; // 3a50:78c9
-dw word_50b2e[14]; // 3a50:804e
-db dummyf_4256a[38]; // 3a50:806a
-dw word_50b70[2]; // 3a50:8090
-dw word_50b74; // 3a50:8094
-dw word_50b76[67]; // 3a50:8096
-db dummyf_4261c[94]; // 3a50:811c
-db dummyf_4267a[48]; // 3a50:811c
-dw word_50c8a[2]; // 3a50:81aa
-dw word_50c8e; // 3a50:81ae
-dw word_50c90[5]; // 3a50:81b0
-dw word_50c9a[81]; // 3a50:81ba
-db dummyf_4275c[95]; // 3a50:825c
-db dummyf_427bb[233]; // 3a50:825c
-db dummyf_428a4[87]; // 3a50:825c
-db dummyf_428fb[224]; // 3a50:825c
-db dummyf_429db[28]; // 3a50:825c
-db dummyf_429f7[124]; // 3a50:825c
-db dummyf_42a73[170]; // 3a50:825c
-db dummyf_42b1d[63]; // 3a50:825c
-dw word_5113c[9]; // 3a50:865c
-db dummyf_42b6e[134]; // 3a50:866e
-dw word_511d4; // 3a50:86f4
-dw word_511d6; // 3a50:86f6
-dw word_511d8; // 3a50:86f8
-dw word_511da[7]; // 3a50:86fa
-db dummyf_42c08[114]; // 3a50:8708
-db dummyf_42c7a[66]; // 3a50:8708
-db dummyf_42cbc[64]; // 3a50:8708
-dw word_512dc[38]; // 3a50:87fc
-db dummyf_42d48[76]; // 3a50:8848
-dw word_51374; // 3a50:8894
-dw word_51376; // 3a50:8896
-dw word_51378; // 3a50:8898
-db dummyf_42d9a[2]; // 3a50:889a
-dw word_5137c[6]; // 3a50:889c
-dw word_51388; // 3a50:88a8
-dw word_5138a[2]; // 3a50:88aa
-dw word_5138e[30]; // 3a50:88ae
-db dummyf_42dea[15]; // 3a50:88ea
-db dummyf_42df9[85]; // 3a50:88ea
-dw word_5142e; // 3a50:894e
-dw word_51430[20]; // 3a50:8950
-dw word_51458; // 3a50:8978
-dw word_5145a; // 3a50:897a
-dw word_5145c; // 3a50:897c
-dw word_5145e; // 3a50:897e
-dw word_51460; // 3a50:8980
-dw word_51462; // 3a50:8982
-dw word_51464; // 3a50:8984
-dw word_51466[4]; // 3a50:8986
-db byte_5146e[2]; // 3a50:898e
-dw word_51470[37]; // 3a50:8990
-db dummyf_42eda[34]; // 3a50:89da
-db dummyf_42efc[58]; // 3a50:89da
-db dummyf_42f36[83]; // 3a50:89da
-db dummyf_42f89[143]; // 3a50:89da
-db dummyf_43018[24]; // 3a50:89da
-db dummyf_43030[71]; // 3a50:89da
-db dummyf_43077[127]; // 3a50:89da
-db dummyf_430f6[44]; // 3a50:89da
-dw word_51702; // 3a50:8c22
-dw word_51704; // 3a50:8c24
-dw word_51706; // 3a50:8c26
-dw word_51708; // 3a50:8c28
-dw word_5170a; // 3a50:8c2a
-dw word_5170c; // 3a50:8c2c
-dw word_5170e; // 3a50:8c2e
-dw word_51710; // 3a50:8c30
-db byte_51712[2]; // 3a50:8c32
-dw word_51714[16]; // 3a50:8c34
-db dummyf_43154[13]; // 3a50:8c54
-db dummyf_43161[82]; // 3a50:8c54
-db dummyf_431b3[115]; // 3a50:8c54
-dw word_51806[7]; // 3a50:8d26
-db dummyf_43234[95]; // 3a50:8d34
-db dummyf_43293[33]; // 3a50:8d34
-db dummyf_432b4[64]; // 3a50:8d34
-db dummyf_432f4[90]; // 3a50:8d34
-db dummyf_4334e[51]; // 3a50:8d34
-db dummyf_43381[89]; // 3a50:8d34
-db dummyf_433da[76]; // 3a50:8d34
-db dummyf_43426[4]; // 3a50:8d34
-dw word_51a0a; // 3a50:8f2a
-dw word_51a0c; // 3a50:8f2c
-dw word_51a0e; // 3a50:8f2e
-dw word_51a10; // 3a50:8f30
-dw word_51a12; // 3a50:8f32
-dw word_51a14; // 3a50:8f34
-dw word_51a16; // 3a50:8f36
-dw word_51a18; // 3a50:8f38
-dw word_51a1a; // 3a50:8f3a
-dw word_51a1c; // 3a50:8f3c
-db byte_51a1e; // 3a50:8f3e
-db byte_51a1f; // 3a50:8f3f
-db byte_51a20; // 3a50:8f40
-db byte_51a21[7]; // 3a50:8f41
-dw word_51a28; // 3a50:8f48
-dw word_51a2a[23]; // 3a50:8f4a
-db dummyf_43478[74]; // 3a50:8f78
-db dummyf_434c2[84]; // 3a50:8f78
-db dummyf_43516[13]; // 3a50:8f78
-db dummyf_43523[66]; // 3a50:8f78
-db dummyf_43565[23]; // 3a50:8f78
-db dummyf_4357c[127]; // 3a50:8f78
-db dummyf_435fb[13]; // 3a50:8f78
-db dummyf_43608[86]; // 3a50:8f78
-db dummyf_4365e[25]; // 3a50:8f78
-db dummyf_43677[58]; // 3a50:8f78
-db dummyf_436b1[96]; // 3a50:8f78
-db dummyf_43711[52]; // 3a50:8f78
-db dummyf_43745[85]; // 3a50:8f78
-db dummyf_4379a[29]; // 3a50:8f78
-db dummyf_437b7[56]; // 3a50:8f78
-db dummyf_437ef[81]; // 3a50:8f78
-db dummyf_43840[60]; // 3a50:8f78
-db dummyf_4387c[82]; // 3a50:8f78
-db dummyf_438ce[21]; // 3a50:8f78
-db dummyf_438e3[31]; // 3a50:8f78
-db dummyf_43902[47]; // 3a50:8f78
-db dummyf_43931[94]; // 3a50:8f78
-db dummyf_4398f[48]; // 3a50:8f78
-db dummyf_439bf[88]; // 3a50:8f78
-db dummyf_43a17[32]; // 3a50:8f78
-db dummyf_43a37[50]; // 3a50:8f78
-db dummyf_43a69[15]; // 3a50:8f78
-db dummyf_43a78[20]; // 3a50:8f78
-dw word_5206c[23]; // 3a50:958c
-db dummyf_43aba[20]; // 3a50:95ba
-dw word_520ae[9]; // 3a50:95ce
-dw word_520c0; // 3a50:95e0
-dw word_520c2; // 3a50:95e2
-dw word_520c4; // 3a50:95e4
-dw word_520c6; // 3a50:95e6
-dw word_520c8[2]; // 3a50:95e8
-dw word_520cc[13]; // 3a50:95ec
-dw dummyf_43b06[3]; // 3a50:95ec
-dw word_520ec; // 3a50:960c
-dw word_520ee; // 3a50:960e
-dw word_520f0; // 3a50:9610
-dw word_520f2; // 3a50:9612
-db byte_520f4[4]; // 3a50:9614
-dw word_520f8; // 3a50:9618
-dw word_520fa; // 3a50:961a
-dw word_520fc; // 3a50:961c
-dw word_520fe; // 3a50:961e
-dw word_52100; // 3a50:9620
-dw word_52102; // 3a50:9622
-dw word_52104; // 3a50:9624
-dw word_52106[20]; // 3a50:9626
-db dummyf_43b4e[21]; // 3a50:964e
-db dummyf_43b63[31]; // 3a50:964e
-db dummyf_43b82[10]; // 3a50:964e
-dw word_5216c; // 3a50:968c
-dw word_5216e[6]; // 3a50:968e
-db dummyf_43b9a[70]; // 3a50:969a
-dw word_521c0; // 3a50:96e0
-db byte_521c2; // 3a50:96e2
-db byte_521c3[2]; // 3a50:96e3
-db byte_521c5; // 3a50:96e5
-dw word_521c6; // 3a50:96e6
-dw word_521c8[4]; // 3a50:96e8
-dw word_521d0; // 3a50:96f0
-dw word_521d2[4]; // 3a50:96f2
-db dummyf_43bfa[63]; // 3a50:96fa
-db dummyf_43c39[31]; // 3a50:96fa
-dw word_52238; // 3a50:9758
-dw word_5223a[2]; // 3a50:975a
-dw word_5223e; // 3a50:975e
-dw word_52240; // 3a50:9760
-dw word_52242; // 3a50:9762
-dw word_52244; // 3a50:9764
-dw word_52246; // 3a50:9766
-dw word_52248; // 3a50:9768
-dw word_5224a; // 3a50:976a
-dw word_5224c; // 3a50:976c
-dw word_5224e; // 3a50:976e
-dw word_52250[2]; // 3a50:9770
-dw word_52254; // 3a50:9774
-dw word_52256; // 3a50:9776
-dw word_52258; // 3a50:9778
-db byte_5225a[2]; // 3a50:977a
-dw word_5225c; // 3a50:977c
-dw word_5225e[6]; // 3a50:977e
-dw word_5226a[2]; // 3a50:978a
-dw word_5226e; // 3a50:978e
-dw word_52270; // 3a50:9790
-dw word_52272; // 3a50:9792
-dw word_52274; // 3a50:9794
-dw word_52276; // 3a50:9796
-dw word_52278[14]; // 3a50:9798
-db dummyf_43cb4[36]; // 3a50:97b4
-db dummyf_43cd8[18]; // 3a50:97b4
-dw word_522ca; // 3a50:97ea
-dw word_522cc; // 3a50:97ec
-dw word_522ce; // 3a50:97ee
-dw word_522d0; // 3a50:97f0
-dw word_522d2[36]; // 3a50:97f2
-db dummyf_43d3a[62]; // 3a50:983a
-db dummyf_43d78[31]; // 3a50:983a
-db dummyf_43d97[35]; // 3a50:983a
-dw word_5239a; // 3a50:98ba
-dw word_5239c[9]; // 3a50:98bc
-db dummyf_43dce[38]; // 3a50:98ce
-db dummyf_43df4[18]; // 3a50:98ce
-db dummyf_43e06[122]; // 3a50:98ce
-db dummyf_43e80[49]; // 3a50:98ce
-db dummyf_43eb1[20]; // 3a50:98ce
-db dummyf_43ec5[82]; // 3a50:98ce
-db dummyf_43f17[29]; // 3a50:98ce
-db dummyf_43f34[15]; // 3a50:98ce
-db dummyf_43f43[124]; // 3a50:98ce
-db dummyf_43fbf[47]; // 3a50:98ce
-db dummyf_43fee[42]; // 3a50:98ce
-db dummyf_44018[65]; // 3a50:98ce
-db dummyf_44059[31]; // 3a50:98ce
-db dummyf_44078[16]; // 3a50:98ce
-db dummyf_44088[36]; // 3a50:98ce
-dw word_5268c; // 3a50:9bac
-dw word_5268e[40]; // 3a50:9bae
-db dummyf_440fe[46]; // 3a50:9bfe
-db dummyf_4412c[23]; // 3a50:9bfe
-db dummyf_44143[76]; // 3a50:9bfe
-db dummyf_4418f[37]; // 3a50:9bfe
-db dummyf_441b4[18]; // 3a50:9bfe
-db dummyf_441c6[42]; // 3a50:9bfe
-db byte_527d0[2]; // 3a50:9cf0
-dw word_527d2; // 3a50:9cf2
-dw word_527d4; // 3a50:9cf4
-dw word_527d6; // 3a50:9cf6
-dw word_527d8; // 3a50:9cf8
-dw word_527da; // 3a50:9cfa
-db dummyf_441fc[77]; // 3a50:9cfc
-db dummyf_44249[54]; // 3a50:9cfc
-db dummyf_4427f[88]; // 3a50:9cfc
-db dummyf_442d7[21]; // 3a50:9cfc
-dw word_528cc; // 3a50:9dec
-dw word_528ce; // 3a50:9dee
-db byte_528d0[2]; // 3a50:9df0
-dw word_528d2; // 3a50:9df2
-dw word_528d4; // 3a50:9df4
-dd dword_528d6; // 3a50:9df6
-dw word_528da; // 3a50:9dfa
-dw word_528dc; // 3a50:9dfc
-dw word_528de[19]; // 3a50:9dfe
-dw dummyf_44324[45]; // 3a50:9dfe
-db dummyf_4437e[41]; // 3a50:9e7e
-db dummyf_443a7[111]; // 3a50:9e7e
-db dummyf_44416[39]; // 3a50:9e7e
-db dummyf_4443d[39]; // 3a50:9e7e
-db dummyf_44464[103]; // 3a50:9e7e
-db dummyf_444cb[53]; // 3a50:9e7e
-db byte_52ae0[2]; // 3a50:a000
-dw word_52ae2; // 3a50:a002
-dw word_52ae4; // 3a50:a004
-dw word_52ae6; // 3a50:a006
-dw word_52ae8; // 3a50:a008
-dw word_52aea; // 3a50:a00a
-dw word_52aec; // 3a50:a00c
-dw word_52aee; // 3a50:a00e
-dw word_52af0; // 3a50:a010
-dw word_52af2; // 3a50:a012
-dw word_52af4[4]; // 3a50:a014
-db dummyf_4451c; // 3a50:a01c
-db dummyf_4451d; // 3a50:a01d
-db dummyf_4451e; // 3a50:a01e
-db dummyf_4451f; // 3a50:a01f
-db dummyf_44520[2048]; // 4452:0000
+dw word_4ef02; // 3e1c:2762
+dw word_4ef04; // 3e1c:2764
+dw word_4ef06; // 3e1c:2766
+dw word_4ef08; // 3e1c:2768
+dw word_4ef0a; // 3e1c:276a
+dw word_4ef0c; // 3e1c:276c
+dw word_4ef0e; // 3e1c:276e
+dw word_4ef10; // 3e1c:2770
+dw word_4ef12; // 3e1c:2772
+dw word_4ef14; // 3e1c:2774
+dw word_4ef16; // 3e1c:2776
+dw word_4ef18; // 3e1c:2778
+dw word_4ef1a; // 3e1c:277a
+dw word_4ef1c; // 3e1c:277c
+dw word_4ef1e; // 3e1c:277e
+dw word_4ef20; // 3e1c:2780
+dw word_4ef22; // 3e1c:2782
+db dummyf_40944;
+db dummyf_40945;
+db dummyf_40946;
+db dummyf_40947;
+db dummyf_40948;
+db dummyf_40949;
+dw word_4ef2a; // 3e1c:278a
+dw word_4ef2c; // 3e1c:278c
+dw word_4ef2e; // 3e1c:278e
+dw word_4ef30; // 3e1c:2790
+dw word_4ef32; // 3e1c:2792
+dw word_4ef34; // 3e1c:2794
+dw word_4ef36; // 3e1c:2796
+db dummyf_40958[32]; // 3e1c:2798
+db dummyf_40978[32]; // 3e1c:27b8
+db dummyf_40998;
+db dummyf_40999;
+dw word_4ef7a; // 3e1c:27da
+dw word_4ef7c; // 3e1c:27dc
+dw word_4ef7e; // 3e1c:27de
+dw word_4ef80; // 3e1c:27e0
+dw word_4ef82; // 3e1c:27e2
+dw word_4ef84; // 3e1c:27e4
+dw word_4ef86; // 3e1c:27e6
+dw word_4ef88; // 3e1c:27e8
+dw word_4ef8a; // 3e1c:27ea
+dw word_4ef8c; // 3e1c:27ec
+dw word_4ef8e; // 3e1c:27ee
+db byte_4ef90; // 3e1c:27f0
+db byte_4ef91; // 3e1c:27f1
+db byte_4ef92; // 3e1c:27f2
+db byte_4ef93; // 3e1c:27f3
+dw word_4ef94; // 3e1c:27f4
+dw word_4ef96; // 3e1c:27f6
+dw word_4ef98; // 3e1c:27f8
+db byte_4ef9a; // 3e1c:27fa
+db byte_4ef9b; // 3e1c:27fb
+dw word_4ef9c; // 3e1c:27fc
+db byte_4ef9e; // 3e1c:27fe
+db dummyf_409bf[32]; // 3e1c:27ff
+db dummyf_409df[32]; // 3e1c:281f
+db dummyf_409ff[32]; // 3e1c:283f
+db dummyf_40a1f[32]; // 3e1c:285f
+db dummyf_40a3f[32]; // 3e1c:287f
+db dummyf_40a5f[32]; // 3e1c:289f
+db dummyf_40a7f[32]; // 3e1c:28bf
+db dummyf_40a9f[32]; // 3e1c:28df
+db dummyf_40abf[32]; // 3e1c:28ff
+db dummyf_40adf[32]; // 3e1c:291f
+db dummyf_40aff[32]; // 3e1c:293f
+db dummyf_40b1f[32]; // 3e1c:295f
+db dummyf_40b3f[32]; // 3e1c:297f
+db dummyf_40b5f[32]; // 3e1c:299f
+db dummyf_40b7f[32]; // 3e1c:29bf
+db dummyf_40b9f[32]; // 3e1c:29df
+db dummyf_40bbf;
+dw word_4f1a0; // 3e1c:2a00
+dw word_4f1a2; // 3e1c:2a02
+db dummyf_40bc4; // 3e1c:2a04
+db dummyf_40bc5; // 3e1c:2a05
+db dummyf_40bc6; // 3e1c:2a06
+db dummyf_40bc7; // 3e1c:2a07
+db dummyf_40bc8; // 3e1c:2a08
+db dummyf_40bc9; // 3e1c:2a09
+db dummyf_40bca; // 3e1c:2a0a
+db dummyf_40bcb; // 3e1c:2a0b
+db dummyf_40bcc; // 3e1c:2a0c
+db dummyf_40bcd; // 3e1c:2a0d
+db dummyf_40bce; // 3e1c:2a0e
+db dummyf_40bcf; // 3e1c:2a0f
+db dummyf_40bd0; // 3e1c:2a10
+db dummyf_40bd1; // 3e1c:2a11
+db dummyf_40bd2; // 3e1c:2a12
+db dummyf_40bd3; // 3e1c:2a13
+db dummyf_40bd4; // 3e1c:2a14
+db dummyf_40bd5; // 3e1c:2a15
+db dummyf_40bd6; // 3e1c:2a16
+db dummyf_40bd7; // 3e1c:2a17
+db dummyf_40bd8; // 3e1c:2a18
+db dummyf_40bd9; // 3e1c:2a19
+db dummyf_40bda; // 3e1c:2a1a
+db dummyf_40bdb; // 3e1c:2a1b
+db byte_4f1bc; // 3e1c:2a1c
+db byte_4f1bd; // 3e1c:2a1d
+db dummyf_40bde[32]; // 3e1c:2a1e
+db dummyf_40bfe; // 3e1c:2a3e
+db dummyf_40bff; // 3e1c:2a3f
+db dummyf_40c00; // 3e1c:2a40
+db dummyf_40c01; // 3e1c:2a41
+db dummyf_40c02; // 3e1c:2a42
+db dummyf_40c03; // 3e1c:2a43
+db dummyf_40c04; // 3e1c:2a44
+db dummyf_40c05; // 3e1c:2a45
+db dummyf_40c06;
+db dummyf_40c07; // 3e1c:2a47
+db dummyf_40c08; // 3e1c:2a48
+db dummyf_40c09; // 3e1c:2a49
+db dummyf_40c0a; // 3e1c:2a4a
+db dummyf_40c0b; // 3e1c:2a4b
+db dummyf_40c0c;
+db dummyf_40c0d; // 3e1c:2a4d
+db dummyf_40c0e; // 3e1c:2a4e
+db dummyf_40c0f; // 3e1c:2a4f
+db dummyf_40c10; // 3e1c:2a50
+db dummyf_40c11; // 3e1c:2a51
+db dummyf_40c12; // 3e1c:2a52
+db dummyf_40c13; // 3e1c:2a53
+dw word_4f1f4; // 3e1c:2a54
+dw word_4f1f6; // 3e1c:2a56
+dw word_4f1f8; // 3e1c:2a58
+db dummyf_40c1a; // 3e1c:2a5a
+db dummyf_40c1b; // 3e1c:2a5b
+dw word_4f1fc; // 3e1c:2a5c
+dw seg_4f1fe; // 3e1c:2a5e
+db dummyf_40c20; // 3e1c:2a60
+db dummyf_40c21; // 3e1c:2a61
+db dummyf_40c22; // 3e1c:2a62
+db dummyf_40c23; // 3e1c:2a63
+db dummyf_40c24; // 3e1c:2a64
+db dummyf_40c25;
+db dummyf_40c26; // 3e1c:2a66
+db dummyf_40c27; // 3e1c:2a67
+db dummyf_40c28; // 3e1c:2a68
+db dummyf_40c29; // 3e1c:2a69
+dw word_4f20a; // 3e1c:2a6a
+dw word_4f20c; // 3e1c:2a6c
+dw word_4f20e; // 3e1c:2a6e
+dw word_4f210; // 3e1c:2a70
+dd dword_4f212; // 3e1c:2a72
+dw word_4f216; // 3e1c:2a76
+dw word_4f218; // 3e1c:2a78
+dw word_4f21a; // 3e1c:2a7a
+dw word_4f21c; // 3e1c:2a7c
+dw word_4f21e; // 3e1c:2a7e
+dd dword_4f220; // 3e1c:2a80
+db dummyf_40c44; // 3e1c:2a84
+db dummyf_40c45; // 3e1c:2a85
+dw word_4f226; // 3e1c:2a86
+dw word_4f228; // 3e1c:2a88
+dw word_4f22a; // 3e1c:2a8a
+dw word_4f22c; // 3e1c:2a8c
+db dummyf_40c4e[32]; // 3e1c:2a8e
+db dummyf_40c6e[32]; // 3e1c:2aae
+db dummyf_40c8e[32]; // 3e1c:2ace
+db dummyf_40cae[32]; // 3e1c:2aee
+db dummyf_40cce[32]; // 3e1c:2b0e
+db dummyf_40cee[32]; // 3e1c:2b2e
+db dummyf_40d0e[32]; // 3e1c:2b4e
+db dummyf_40d2e[32]; // 3e1c:2b6e
+db dummyf_40d4e[32]; // 3e1c:2b8e
+db dummyf_40d6e[32]; // 3e1c:2bae
+db dummyf_40d8e[32]; // 3e1c:2bce
+db dummyf_40dae[32]; // 3e1c:2bee
+db dummyf_40dce[32]; // 3e1c:2c0e
+db dummyf_40dee; // 3e1c:2c2e
+db dummyf_40def; // 3e1c:2c2f
+db dummyf_40df0; // 3e1c:2c30
+db dummyf_40df1; // 3e1c:2c31
+db dummyf_40df2; // 3e1c:2c32
+db dummyf_40df3; // 3e1c:2c33
+db dummyf_40df4; // 3e1c:2c34
+db dummyf_40df5; // 3e1c:2c35
+db dummyf_40df6; // 3e1c:2c36
+db dummyf_40df7;
+db dummyf_40df8; // 3e1c:2c38
+db dummyf_40df9; // 3e1c:2c39
+db dummyf_40dfa; // 3e1c:2c3a
+db dummyf_40dfb; // 3e1c:2c3b
+db dummyf_40dfc; // 3e1c:2c3c
+db dummyf_40dfd; // 3e1c:2c3d
+db dummyf_40dfe; // 3e1c:2c3e
+db dummyf_40dff; // 3e1c:2c3f
+db dummyf_40e00; // 3e1c:2c40
+db dummyf_40e01; // 3e1c:2c41
+db dummyf_40e02; // 3e1c:2c42
+db dummyf_40e03; // 3e1c:2c43
+db dummyf_40e04; // 3e1c:2c44
+db dummyf_40e05; // 3e1c:2c45
+db dummyf_40e06; // 3e1c:2c46
+db dummyf_40e07;
+db dummyf_40e08; // 3e1c:2c48
+dw dummyf_40e09; // 3e1c:2c49
+dw dummyf_40e0b; // 3e1c:2c4b
+db dummyf_40e0d; // 3e1c:2c4d
+db dummyf_40e0e; // 3e1c:2c4e
+db dummyf_40e0f; // 3e1c:2c4f
+db dummyf_40e10; // 3e1c:2c50
+db dummyf_40e11; // 3e1c:2c51
+db dummyf_40e12; // 3e1c:2c52
+db dummyf_40e13; // 3e1c:2c53
+db dummyf_40e14; // 3e1c:2c54
+db dummyf_40e15; // 3e1c:2c55
+db dummyf_40e16; // 3e1c:2c56
+db dummyf_40e17; // 3e1c:2c57
+db dummyf_40e18; // 3e1c:2c58
+dw dummyf_40e19; // 3e1c:2c59
+db dummyf_40e1b; // 3e1c:2c5b
+db dummyf_40e1c; // 3e1c:2c5c
+db dummyf_40e1d; // 3e1c:2c5d
+db dummyf_40e1e; // 3e1c:2c5e
+db dummyf_40e1f; // 3e1c:2c5f
+db dummyf_40e20; // 3e1c:2c60
+db dummyf_40e21; // 3e1c:2c61
+db dummyf_40e22; // 3e1c:2c62
+db dummyf_40e23; // 3e1c:2c63
+db dummyf_40e24; // 3e1c:2c64
+db dummyf_40e25; // 3e1c:2c65
+db dummyf_40e26; // 3e1c:2c66
+db dummyf_40e27; // 3e1c:2c67
+db dummyf_40e28; // 3e1c:2c68
+db dummyf_40e29; // 3e1c:2c69
+dw dummyf_40e2a; // 3e1c:2c6a
+db dummyf_40e2c; // 3e1c:2c6c
+db dummyf_40e2d; // 3e1c:2c6d
+db dummyf_40e2e; // 3e1c:2c6e
+db dummyf_40e2f; // 3e1c:2c6f
+db dummyf_40e30; // 3e1c:2c70
+db dummyf_40e31; // 3e1c:2c71
+db dummyf_40e32; // 3e1c:2c72
+db dummyf_40e33; // 3e1c:2c73
+db dummyf_40e34; // 3e1c:2c74
+db dummyf_40e35; // 3e1c:2c75
+db dummyf_40e36; // 3e1c:2c76
+db dummyf_40e37; // 3e1c:2c77
+dw dummyf_40e38; // 3e1c:2c78
+db dummyf_40e3a; // 3e1c:2c7a
+db dummyf_40e3b; // 3e1c:2c7b
+db dummyf_40e3c; // 3e1c:2c7c
+db dummyf_40e3d; // 3e1c:2c7d
+db dummyf_40e3e; // 3e1c:2c7e
+db dummyf_40e3f; // 3e1c:2c7f
+db dummyf_40e40; // 3e1c:2c80
+db dummyf_40e41; // 3e1c:2c81
+db dummyf_40e42; // 3e1c:2c82
+db dummyf_40e43; // 3e1c:2c83
+db dummyf_40e44; // 3e1c:2c84
+db dummyf_40e45; // 3e1c:2c85
+db dummyf_40e46; // 3e1c:2c86
+db dummyf_40e47; // 3e1c:2c87
+db dummyf_40e48; // 3e1c:2c88
+db dummyf_40e49; // 3e1c:2c89
+db dummyf_40e4a;
+db dummyf_40e4b; // 3e1c:2c8b
+db dummyf_40e4c; // 3e1c:2c8c
+db dummyf_40e4d; // 3e1c:2c8d
+dw word_4f42e; // 3e1c:2c8e
+dw word_4f430; // 3e1c:2c90
+db dummyf_40e52[32]; // 3e1c:2c92
+db dummyf_40e72; // 3e1c:2cb2
+db dummyf_40e73; // 3e1c:2cb3
+db dummyf_40e74; // 3e1c:2cb4
+dw dummyf_40e75; // 3e1c:2cb5
+db dummyf_40e77; // 3e1c:2cb7
+db dummyf_40e78; // 3e1c:2cb8
+db dummyf_40e79; // 3e1c:2cb9
+db dummyf_40e7a; // 3e1c:2cba
+db dummyf_40e7b; // 3e1c:2cbb
+db dummyf_40e7c; // 3e1c:2cbc
+db dummyf_40e7d;
+db dummyf_40e7e; // 3e1c:2cbe
+db dummyf_40e7f; // 3e1c:2cbf
+db dummyf_40e80; // 3e1c:2cc0
+db dummyf_40e81; // 3e1c:2cc1
+db dummyf_40e82; // 3e1c:2cc2
+db dummyf_40e83; // 3e1c:2cc3
+db dummyf_40e84; // 3e1c:2cc4
+db dummyf_40e85; // 3e1c:2cc5
+db dummyf_40e86; // 3e1c:2cc6
+db dummyf_40e87; // 3e1c:2cc7
+db dummyf_40e88; // 3e1c:2cc8
+db dummyf_40e89; // 3e1c:2cc9
+db dummyf_40e8a; // 3e1c:2cca
+db dummyf_40e8b; // 3e1c:2ccb
+db dummyf_40e8c; // 3e1c:2ccc
+dw dummyf_40e8d; // 3e1c:2ccd
+db dummyf_40e8f[32]; // 3e1c:2ccf
+db dummyf_40eaf[32]; // 3e1c:2cef
+db dummyf_40ecf[32]; // 3e1c:2d0f
+db dummyf_40eef[32]; // 3e1c:2d2f
+db dummyf_40f0f; // 3e1c:2d4f
+db dummyf_40f10; // 3e1c:2d50
+db dummyf_40f11; // 3e1c:2d51
+db dummyf_40f12; // 3e1c:2d52
+db dummyf_40f13; // 3e1c:2d53
+db dummyf_40f14; // 3e1c:2d54
+db dummyf_40f15; // 3e1c:2d55
+db dummyf_40f16; // 3e1c:2d56
+db dummyf_40f17; // 3e1c:2d57
+db dummyf_40f18; // 3e1c:2d58
+db dummyf_40f19; // 3e1c:2d59
+dd dummyf_40f1a; // 3e1c:2d5a
+db dummyf_40f1e[32]; // 3e1c:2d5e
+db dummyf_40f3e; // 3e1c:2d7e
+db dummyf_40f3f; // 3e1c:2d7f
+db dummyf_40f40; // 3e1c:2d80
+dw dummyf_40f41; // 3e1c:2d81
+db dummyf_40f43; // 3e1c:2d83
+db dummyf_40f44; // 3e1c:2d84
+db dummyf_40f45; // 3e1c:2d85
+db dummyf_40f46; // 3e1c:2d86
+db dummyf_40f47; // 3e1c:2d87
+db dummyf_40f48; // 3e1c:2d88
+db dummyf_40f49;
+db dummyf_40f4a; // 3e1c:2d8a
+db dummyf_40f4b; // 3e1c:2d8b
+db dummyf_40f4c; // 3e1c:2d8c
+db dummyf_40f4d; // 3e1c:2d8d
+db dummyf_40f4e; // 3e1c:2d8e
+db dummyf_40f4f; // 3e1c:2d8f
+db unk_4f530; // 3e1c:2d90
+db dummyf_40f51; // 3e1c:2d91
+db dummyf_40f52; // 3e1c:2d92
+dw dummyf_40f53; // 3e1c:2d93
+db dummyf_40f55[32]; // 3e1c:2d95
+db dummyf_40f75[32]; // 3e1c:2db5
+db dummyf_40f95[32]; // 3e1c:2dd5
+db dummyf_40fb5[32]; // 3e1c:2df5
+db dummyf_40fd5[32]; // 3e1c:2e15
+db dummyf_40ff5[32]; // 3e1c:2e35
+db dummyf_41015[32]; // 3e1c:2e55
+db dummyf_41035; // 3e1c:2e75
+db dummyf_41036; // 3e1c:2e76
+db dummyf_41037; // 3e1c:2e77
+db dummyf_41038; // 3e1c:2e78
+db dummyf_41039; // 3e1c:2e79
+db dummyf_4103a; // 3e1c:2e7a
+db dummyf_4103b; // 3e1c:2e7b
+db dummyf_4103c; // 3e1c:2e7c
+db dummyf_4103d; // 3e1c:2e7d
+db dummyf_4103e; // 3e1c:2e7e
+db dummyf_4103f; // 3e1c:2e7f
+db dummyf_41040; // 3e1c:2e80
+db dummyf_41041; // 3e1c:2e81
+db dummyf_41042; // 3e1c:2e82
+db dummyf_41043; // 3e1c:2e83
+db dummyf_41044; // 3e1c:2e84
+db dummyf_41045; // 3e1c:2e85
+db dummyf_41046; // 3e1c:2e86
+db dummyf_41047; // 3e1c:2e87
+db dummyf_41048; // 3e1c:2e88
+db dummyf_41049; // 3e1c:2e89
+db dummyf_4104a; // 3e1c:2e8a
+db dummyf_4104b; // 3e1c:2e8b
+db dummyf_4104c; // 3e1c:2e8c
+db dummyf_4104d; // 3e1c:2e8d
+db dummyf_4104e; // 3e1c:2e8e
+db dummyf_4104f; // 3e1c:2e8f
+db dummyf_41050; // 3e1c:2e90
+db dummyf_41051; // 3e1c:2e91
+dw word_4f632; // 3e1c:2e92
+db dummyf_41054; // 3e1c:2e94
+db dummyf_41055; // 3e1c:2e95
+db dummyf_41056; // 3e1c:2e96
+db dummyf_41057; // 3e1c:2e97
+db dummyf_41058; // 3e1c:2e98
+db dummyf_41059; // 3e1c:2e99
+db dummyf_4105a; // 3e1c:2e9a
+db dummyf_4105b; // 3e1c:2e9b
+db dummyf_4105c; // 3e1c:2e9c
+db dummyf_4105d; // 3e1c:2e9d
+db dummyf_4105e; // 3e1c:2e9e
+db dummyf_4105f; // 3e1c:2e9f
+db dummyf_41060; // 3e1c:2ea0
+db dummyf_41061; // 3e1c:2ea1
+db dummyf_41062; // 3e1c:2ea2
+dw dummyf_41063; // 3e1c:2ea3
+db dummyf_41065[32]; // 3e1c:2ea5
+db dummyf_41085[32]; // 3e1c:2ec5
+db dummyf_410a5[32]; // 3e1c:2ee5
+db dummyf_410c5[32]; // 3e1c:2f05
+db dummyf_410e5[32]; // 3e1c:2f25
+db dummyf_41105[32]; // 3e1c:2f45
+db dummyf_41125[32]; // 3e1c:2f65
+db dummyf_41145[32]; // 3e1c:2f85
+db dummyf_41165[32]; // 3e1c:2fa5
+db dummyf_41185[32]; // 3e1c:2fc5
+db dummyf_411a5[32]; // 3e1c:2fe5
+db dummyf_411c5[32]; // 3e1c:3005
+db dummyf_411e5[32]; // 3e1c:3025
+db dummyf_41205[32]; // 3e1c:3045
+db dummyf_41225[32]; // 3e1c:3065
+db dummyf_41245; // 3e1c:3085
+db dummyf_41246; // 3e1c:3086
+db dummyf_41247; // 3e1c:3087
+db dummyf_41248; // 3e1c:3088
+db dummyf_41249; // 3e1c:3089
+db dummyf_4124a; // 3e1c:308a
+db dummyf_4124b; // 3e1c:308b
+db dummyf_4124c; // 3e1c:308c
+db dummyf_4124d; // 3e1c:308d
+db dummyf_4124e; // 3e1c:308e
+db dummyf_4124f; // 3e1c:308f
+db dummyf_41250; // 3e1c:3090
+db dummyf_41251; // 3e1c:3091
+db dummyf_41252; // 3e1c:3092
+db dummyf_41253; // 3e1c:3093
+dw word_4f834; // 3e1c:3094
+dw word_4f836; // 3e1c:3096
+db dummyf_41258[32]; // 3e1c:3098
+db dummyf_41278[32]; // 3e1c:30b8
+db dummyf_41298[32]; // 3e1c:30d8
+db dummyf_412b8[32]; // 3e1c:30f8
+db dummyf_412d8[32]; // 3e1c:3118
+db dummyf_412f8[32]; // 3e1c:3138
+db dummyf_41318[32]; // 3e1c:3158
+db dummyf_41338[32]; // 3e1c:3178
+db dummyf_41358[32]; // 3e1c:3198
+db dummyf_41378[32]; // 3e1c:31b8
+db dummyf_41398; // 3e1c:31d8
+db dummyf_41399; // 3e1c:31d9
+db dummyf_4139a; // 3e1c:31da
+db dummyf_4139b; // 3e1c:31db
+db dummyf_4139c; // 3e1c:31dc
+db dummyf_4139d; // 3e1c:31dd
+db dummyf_4139e; // 3e1c:31de
+db dummyf_4139f; // 3e1c:31df
+db dummyf_413a0; // 3e1c:31e0
+db dummyf_413a1; // 3e1c:31e1
+db dummyf_413a2; // 3e1c:31e2
+db dummyf_413a3; // 3e1c:31e3
+db dummyf_413a4; // 3e1c:31e4
+db dummyf_413a5; // 3e1c:31e5
+db dummyf_413a6; // 3e1c:31e6
+db dummyf_413a7; // 3e1c:31e7
+db dummyf_413a8; // 3e1c:31e8
+db dummyf_413a9; // 3e1c:31e9
+db dummyf_413aa; // 3e1c:31ea
+dw dummyf_413ab; // 3e1c:31eb
+db dummyf_413ad; // 3e1c:31ed
+db dummyf_413ae; // 3e1c:31ee
+db dummyf_413af; // 3e1c:31ef
+db dummyf_413b0; // 3e1c:31f0
+db dummyf_413b1; // 3e1c:31f1
+db dummyf_413b2; // 3e1c:31f2
+db dummyf_413b3;
+db dummyf_413b4; // 3e1c:31f4
+db dummyf_413b5; // 3e1c:31f5
+db dummyf_413b6; // 3e1c:31f6
+db dummyf_413b7; // 3e1c:31f7
+db dummyf_413b8; // 3e1c:31f8
+db dummyf_413b9; // 3e1c:31f9
+db dummyf_413ba; // 3e1c:31fa
+db dummyf_413bb; // 3e1c:31fb
+db dummyf_413bc; // 3e1c:31fc
+db dummyf_413bd; // 3e1c:31fd
+db dummyf_413be; // 3e1c:31fe
+db dummyf_413bf; // 3e1c:31ff
+db dummyf_413c0; // 3e1c:3200
+db dummyf_413c1; // 3e1c:3201
+db dummyf_413c2; // 3e1c:3202
+dw dummyf_413c3; // 3e1c:3203
+db dummyf_413c5[32]; // 3e1c:3205
+db dummyf_413e5[32]; // 3e1c:3225
+db dummyf_41405[32]; // 3e1c:3245
+db dummyf_41425[32]; // 3e1c:3265
+db dummyf_41445; // 3e1c:3285
+db dummyf_41446; // 3e1c:3286
+db dummyf_41447; // 3e1c:3287
+db dummyf_41448; // 3e1c:3288
+db dummyf_41449; // 3e1c:3289
+db dummyf_4144a; // 3e1c:328a
+db dummyf_4144b; // 3e1c:328b
+db dummyf_4144c; // 3e1c:328c
+db dummyf_4144d; // 3e1c:328d
+db dummyf_4144e; // 3e1c:328e
+db dummyf_4144f; // 3e1c:328f
+dd dummyf_41450; // 3e1c:3290
+db dummyf_41454; // 3e1c:3294
+db dummyf_41455; // 3e1c:3295
+db dummyf_41456; // 3e1c:3296
+db dummyf_41457; // 3e1c:3297
+dw word_4fa38; // 3e1c:3298
+db dummyf_4145a; // 3e1c:329a
+db dummyf_4145b; // 3e1c:329b
+db dummyf_4145c; // 3e1c:329c
+db dummyf_4145d; // 3e1c:329d
+db dummyf_4145e; // 3e1c:329e
+db dummyf_4145f;
+db dummyf_41460; // 3e1c:32a0
+db dummyf_41461; // 3e1c:32a1
+db dummyf_41462; // 3e1c:32a2
+db dummyf_41463; // 3e1c:32a3
+db dummyf_41464; // 3e1c:32a4
+db dummyf_41465; // 3e1c:32a5
+db dummyf_41466; // 3e1c:32a6
+db dummyf_41467; // 3e1c:32a7
+db dummyf_41468; // 3e1c:32a8
+db dummyf_41469; // 3e1c:32a9
+db dummyf_4146a; // 3e1c:32aa
+db dummyf_4146b; // 3e1c:32ab
+db dummyf_4146c; // 3e1c:32ac
+db dummyf_4146d; // 3e1c:32ad
+db dummyf_4146e; // 3e1c:32ae
+db dummyf_4146f; // 3e1c:32af
+db dummyf_41470; // 3e1c:32b0
+db dummyf_41471; // 3e1c:32b1
+db dummyf_41472; // 3e1c:32b2
+db dummyf_41473; // 3e1c:32b3
+db dummyf_41474; // 3e1c:32b4
+db dummyf_41475; // 3e1c:32b5
+db dummyf_41476; // 3e1c:32b6
+dw dummyf_41477; // 3e1c:32b7
+db dummyf_41479; // 3e1c:32b9
+db dummyf_4147a; // 3e1c:32ba
+db dummyf_4147b; // 3e1c:32bb
+db dummyf_4147c; // 3e1c:32bc
+db dummyf_4147d; // 3e1c:32bd
+db dummyf_4147e; // 3e1c:32be
+db dummyf_4147f;
+db dummyf_41480; // 3e1c:32c0
+db dummyf_41481; // 3e1c:32c1
+db dummyf_41482; // 3e1c:32c2
+db dummyf_41483; // 3e1c:32c3
+db dummyf_41484; // 3e1c:32c4
+db dummyf_41485; // 3e1c:32c5
+db unk_4fa66; // 3e1c:32c6
+db dummyf_41487; // 3e1c:32c7
+db dummyf_41488; // 3e1c:32c8
+dw dummyf_41489; // 3e1c:32c9
+db dummyf_4148b[32]; // 3e1c:32cb
+db dummyf_414ab[32]; // 3e1c:32eb
+db dummyf_414cb[32]; // 3e1c:330b
+db dummyf_414eb[32]; // 3e1c:332b
+db dummyf_4150b[32]; // 3e1c:334b
+db dummyf_4152b[32]; // 3e1c:336b
+db dummyf_4154b[32]; // 3e1c:338b
+db dummyf_4156b[32]; // 3e1c:33ab
+db dummyf_4158b; // 3e1c:33cb
+db dummyf_4158c; // 3e1c:33cc
+db dummyf_4158d; // 3e1c:33cd
+db dummyf_4158e; // 3e1c:33ce
+db dummyf_4158f; // 3e1c:33cf
+db dummyf_41590; // 3e1c:33d0
+db dummyf_41591; // 3e1c:33d1
+db dummyf_41592; // 3e1c:33d2
+db dummyf_41593; // 3e1c:33d3
+db dummyf_41594; // 3e1c:33d4
+db dummyf_41595; // 3e1c:33d5
+db dummyf_41596; // 3e1c:33d6
+db dummyf_41597; // 3e1c:33d7
+db dummyf_41598;
+db dummyf_41599; // 3e1c:33d9
+db dummyf_4159a; // 3e1c:33da
+db dummyf_4159b; // 3e1c:33db
+db dummyf_4159c; // 3e1c:33dc
+db dummyf_4159d; // 3e1c:33dd
+db dummyf_4159e; // 3e1c:33de
+db dummyf_4159f; // 3e1c:33df
+db dummyf_415a0; // 3e1c:33e0
+db dummyf_415a1; // 3e1c:33e1
+db dummyf_415a2; // 3e1c:33e2
+db dummyf_415a3; // 3e1c:33e3
+db dummyf_415a4; // 3e1c:33e4
+db dummyf_415a5; // 3e1c:33e5
+db dummyf_415a6; // 3e1c:33e6
+db dummyf_415a7; // 3e1c:33e7
+db dummyf_415a8; // 3e1c:33e8
+db dummyf_415a9;
+db byte_4fb8a; // 3e1c:33ea
+db dummyf_415ab; // 3e1c:33eb
+dw word_4fb8c; // 3e1c:33ec
+db dummyf_415ae[32]; // 3e1c:33ee
+db dummyf_415ce[32]; // 3e1c:340e
+db dummyf_415ee[32]; // 3e1c:342e
+db dummyf_4160e; // 3e1c:344e
+db dummyf_4160f; // 3e1c:344f
+db dummyf_41610; // 3e1c:3450
+db dummyf_41611; // 3e1c:3451
+db dummyf_41612; // 3e1c:3452
+db dummyf_41613; // 3e1c:3453
+db dummyf_41614; // 3e1c:3454
+db dummyf_41615; // 3e1c:3455
+db dummyf_41616; // 3e1c:3456
+db dummyf_41617; // 3e1c:3457
+db dummyf_41618; // 3e1c:3458
+db dummyf_41619; // 3e1c:3459
+db dummyf_4161a; // 3e1c:345a
+db dummyf_4161b; // 3e1c:345b
+db dummyf_4161c; // 3e1c:345c
+db dummyf_4161d; // 3e1c:345d
+db dummyf_4161e; // 3e1c:345e
+db dummyf_4161f; // 3e1c:345f
+db dummyf_41620; // 3e1c:3460
+db dummyf_41621; // 3e1c:3461
+db dummyf_41622; // 3e1c:3462
+db dummyf_41623; // 3e1c:3463
+db dummyf_41624; // 3e1c:3464
+dw dummyf_41625; // 3e1c:3465
+db dummyf_41627[32]; // 3e1c:3467
+db dummyf_41647[32]; // 3e1c:3487
+db dummyf_41667[32]; // 3e1c:34a7
+db dummyf_41687[32]; // 3e1c:34c7
+db dummyf_416a7[32]; // 3e1c:34e7
+db dummyf_416c7[32]; // 3e1c:3507
+db dummyf_416e7[32]; // 3e1c:3527
+db dummyf_41707[32]; // 3e1c:3547
+db dummyf_41727[32]; // 3e1c:3567
+db dummyf_41747[32]; // 3e1c:3587
+db dummyf_41767; // 3e1c:35a7
+db dummyf_41768; // 3e1c:35a8
+db dummyf_41769; // 3e1c:35a9
+db dummyf_4176a; // 3e1c:35aa
+db dummyf_4176b; // 3e1c:35ab
+db dummyf_4176c; // 3e1c:35ac
+db dummyf_4176d; // 3e1c:35ad
+db dummyf_4176e; // 3e1c:35ae
+db dummyf_4176f; // 3e1c:35af
+db dummyf_41770; // 3e1c:35b0
+db dummyf_41771; // 3e1c:35b1
+db dummyf_41772; // 3e1c:35b2
+db dummyf_41773; // 3e1c:35b3
+db dummyf_41774; // 3e1c:35b4
+db dummyf_41775; // 3e1c:35b5
+db dummyf_41776; // 3e1c:35b6
+db dummyf_41777; // 3e1c:35b7
+db dummyf_41778; // 3e1c:35b8
+db dummyf_41779; // 3e1c:35b9
+db dummyf_4177a; // 3e1c:35ba
+db dummyf_4177b; // 3e1c:35bb
+db dummyf_4177c; // 3e1c:35bc
+db dummyf_4177d; // 3e1c:35bd
+db dummyf_4177e; // 3e1c:35be
+db dummyf_4177f; // 3e1c:35bf
+db dummyf_41780; // 3e1c:35c0
+db dummyf_41781; // 3e1c:35c1
+db dummyf_41782; // 3e1c:35c2
+dw dummyf_41783; // 3e1c:35c3
+db dummyf_41785[32]; // 3e1c:35c5
+db dummyf_417a5[32]; // 3e1c:35e5
+db dummyf_417c5[32]; // 3e1c:3605
+db dummyf_417e5[32]; // 3e1c:3625
+db dummyf_41805[32]; // 3e1c:3645
+db dummyf_41825; // 3e1c:3665
+db dummyf_41826; // 3e1c:3666
+db dummyf_41827; // 3e1c:3667
+db dummyf_41828; // 3e1c:3668
+db dummyf_41829; // 3e1c:3669
+db dummyf_4182a; // 3e1c:366a
+db dummyf_4182b; // 3e1c:366b
+db dummyf_4182c; // 3e1c:366c
+db dummyf_4182d; // 3e1c:366d
+db dummyf_4182e; // 3e1c:366e
+db dummyf_4182f; // 3e1c:366f
+db dummyf_41830; // 3e1c:3670
+db dummyf_41831; // 3e1c:3671
+db dummyf_41832; // 3e1c:3672
+db dummyf_41833; // 3e1c:3673
+db dummyf_41834; // 3e1c:3674
+db dummyf_41835; // 3e1c:3675
+db dummyf_41836; // 3e1c:3676
+db dummyf_41837; // 3e1c:3677
+db dummyf_41838; // 3e1c:3678
+db dummyf_41839; // 3e1c:3679
+db dummyf_4183a; // 3e1c:367a
+db dummyf_4183b; // 3e1c:367b
+db dummyf_4183c; // 3e1c:367c
+db dummyf_4183d; // 3e1c:367d
+db dummyf_4183e; // 3e1c:367e
+db dummyf_4183f; // 3e1c:367f
+db dummyf_41840; // 3e1c:3680
+db dummyf_41841; // 3e1c:3681
+dw dummyf_41842; // 3e1c:3682
+db dummyf_41844[32]; // 3e1c:3684
+db dummyf_41864[32]; // 3e1c:36a4
+db dummyf_41884[32]; // 3e1c:36c4
+db dummyf_418a4[32]; // 3e1c:36e4
+db dummyf_418c4[32]; // 3e1c:3704
+db dummyf_418e4; // 3e1c:3724
+db dummyf_418e5; // 3e1c:3725
+db dummyf_418e6; // 3e1c:3726
+db dummyf_418e7; // 3e1c:3727
+db dummyf_418e8; // 3e1c:3728
+db dummyf_418e9; // 3e1c:3729
+db dummyf_418ea; // 3e1c:372a
+db dummyf_418eb; // 3e1c:372b
+db dummyf_418ec; // 3e1c:372c
+db dummyf_418ed; // 3e1c:372d
+db dummyf_418ee; // 3e1c:372e
+db dummyf_418ef; // 3e1c:372f
+db dummyf_418f0; // 3e1c:3730
+db dummyf_418f1; // 3e1c:3731
+db dummyf_418f2; // 3e1c:3732
+db dummyf_418f3; // 3e1c:3733
+db dummyf_418f4; // 3e1c:3734
+dw dummyf_418f5; // 3e1c:3735
+db dummyf_418f7[32]; // 3e1c:3737
+db dummyf_41917[32]; // 3e1c:3757
+db dummyf_41937[32]; // 3e1c:3777
+db dummyf_41957[32]; // 3e1c:3797
+db dummyf_41977[32]; // 3e1c:37b7
+db dummyf_41997[32]; // 3e1c:37d7
+db dummyf_419b7[32]; // 3e1c:37f7
+db dummyf_419d7[32]; // 3e1c:3817
+db dummyf_419f7[32]; // 3e1c:3837
+db dummyf_41a17[32]; // 3e1c:3857
+db dummyf_41a37[32]; // 3e1c:3877
+db dummyf_41a57[32]; // 3e1c:3897
+db dummyf_41a77[32]; // 3e1c:38b7
+db dummyf_41a97; // 3e1c:38d7
+db dummyf_41a98; // 3e1c:38d8
+db dummyf_41a99; // 3e1c:38d9
+db dummyf_41a9a; // 3e1c:38da
+db dummyf_41a9b; // 3e1c:38db
+db dummyf_41a9c; // 3e1c:38dc
+db dummyf_41a9d; // 3e1c:38dd
+db dummyf_41a9e; // 3e1c:38de
+db dummyf_41a9f; // 3e1c:38df
+db dummyf_41aa0; // 3e1c:38e0
+db dummyf_41aa1; // 3e1c:38e1
+db dummyf_41aa2; // 3e1c:38e2
+db dummyf_41aa3; // 3e1c:38e3
+db dummyf_41aa4; // 3e1c:38e4
+db dummyf_41aa5; // 3e1c:38e5
+db dummyf_41aa6; // 3e1c:38e6
+db dummyf_41aa7; // 3e1c:38e7
+db dummyf_41aa8; // 3e1c:38e8
+db dummyf_41aa9; // 3e1c:38e9
+db dummyf_41aaa; // 3e1c:38ea
+db dummyf_41aab; // 3e1c:38eb
+db dummyf_41aac; // 3e1c:38ec
+db dummyf_41aad; // 3e1c:38ed
+db dummyf_41aae; // 3e1c:38ee
+dw dummyf_41aaf; // 3e1c:38ef
+db dummyf_41ab1[32]; // 3e1c:38f1
+db dummyf_41ad1[32]; // 3e1c:3911
+db dummyf_41af1[32]; // 3e1c:3931
+db dummyf_41b11[32]; // 3e1c:3951
+db dummyf_41b31[32]; // 3e1c:3971
+db dummyf_41b51[32]; // 3e1c:3991
+db dummyf_41b71[32]; // 3e1c:39b1
+db dummyf_41b91; // 3e1c:39d1
+db dummyf_41b92; // 3e1c:39d2
+db dummyf_41b93; // 3e1c:39d3
+db dummyf_41b94; // 3e1c:39d4
+db dummyf_41b95; // 3e1c:39d5
+db dummyf_41b96; // 3e1c:39d6
+db dummyf_41b97; // 3e1c:39d7
+db dummyf_41b98; // 3e1c:39d8
+db dummyf_41b99; // 3e1c:39d9
+db dummyf_41b9a; // 3e1c:39da
+db dummyf_41b9b;
+db dummyf_41b9c;
+db dummyf_41b9d; // 3e1c:39dd
+db dummyf_41b9e; // 3e1c:39de
+db dummyf_41b9f; // 3e1c:39df
+db dummyf_41ba0; // 3e1c:39e0
+db dummyf_41ba1; // 3e1c:39e1
+db dummyf_41ba2;
+db dummyf_41ba3; // 3e1c:39e3
+db dummyf_41ba4; // 3e1c:39e4
+db dummyf_41ba5; // 3e1c:39e5
+db dummyf_41ba6; // 3e1c:39e6
+db dummyf_41ba7; // 3e1c:39e7
+db dummyf_41ba8; // 3e1c:39e8
+db dummyf_41ba9; // 3e1c:39e9
+dw dummyf_41baa; // 3e1c:39ea
+db dummyf_41bac[32]; // 3e1c:39ec
+db dummyf_41bcc[32]; // 3e1c:3a0c
+db dummyf_41bec; // 3e1c:3a2c
+db dummyf_41bed; // 3e1c:3a2d
+db dummyf_41bee; // 3e1c:3a2e
+db dummyf_41bef; // 3e1c:3a2f
+db dummyf_41bf0; // 3e1c:3a30
+db dummyf_41bf1; // 3e1c:3a31
+db dummyf_41bf2; // 3e1c:3a32
+db dummyf_41bf3; // 3e1c:3a33
+db dummyf_41bf4; // 3e1c:3a34
+db dummyf_41bf5;
+db dummyf_41bf6; // 3e1c:3a36
+db dummyf_41bf7; // 3e1c:3a37
+db dummyf_41bf8; // 3e1c:3a38
+db dummyf_41bf9; // 3e1c:3a39
+db dummyf_41bfa; // 3e1c:3a3a
+db dummyf_41bfb; // 3e1c:3a3b
+db dummyf_41bfc; // 3e1c:3a3c
+db dummyf_41bfd; // 3e1c:3a3d
+db dummyf_41bfe; // 3e1c:3a3e
+db dummyf_41bff; // 3e1c:3a3f
+db dummyf_41c00; // 3e1c:3a40
+db dummyf_41c01; // 3e1c:3a41
+db dummyf_41c02; // 3e1c:3a42
+dw dummyf_41c03; // 3e1c:3a43
+db dummyf_41c05[32]; // 3e1c:3a45
+db dummyf_41c25[32]; // 3e1c:3a65
+db dummyf_41c45; // 3e1c:3a85
+db dummyf_41c46; // 3e1c:3a86
+db dummyf_41c47; // 3e1c:3a87
+db dummyf_41c48; // 3e1c:3a88
+db dummyf_41c49; // 3e1c:3a89
+db dummyf_41c4a; // 3e1c:3a8a
+db dummyf_41c4b; // 3e1c:3a8b
+db dummyf_41c4c;
+db dummyf_41c4d;
+db dummyf_41c4e; // 3e1c:3a8e
+db dummyf_41c4f; // 3e1c:3a8f
+db dummyf_41c50; // 3e1c:3a90
+db dummyf_41c51; // 3e1c:3a91
+db dummyf_41c52; // 3e1c:3a92
+db dummyf_41c53; // 3e1c:3a93
+db dummyf_41c54; // 3e1c:3a94
+db dummyf_41c55; // 3e1c:3a95
+db dummyf_41c56; // 3e1c:3a96
+db dummyf_41c57; // 3e1c:3a97
+db dummyf_41c58; // 3e1c:3a98
+db dummyf_41c59; // 3e1c:3a99
+db dummyf_41c5a; // 3e1c:3a9a
+db dummyf_41c5b; // 3e1c:3a9b
+db dummyf_41c5c; // 3e1c:3a9c
+db dummyf_41c5d; // 3e1c:3a9d
+db dummyf_41c5e; // 3e1c:3a9e
+dw dummyf_41c5f; // 3e1c:3a9f
+db dummyf_41c61; // 3e1c:3aa1
+db dummyf_41c62; // 3e1c:3aa2
+db dummyf_41c63; // 3e1c:3aa3
+db dummyf_41c64; // 3e1c:3aa4
+db dummyf_41c65; // 3e1c:3aa5
+db dummyf_41c66; // 3e1c:3aa6
+db dummyf_41c67; // 3e1c:3aa7
+db dummyf_41c68; // 3e1c:3aa8
+db dummyf_41c69; // 3e1c:3aa9
+db dummyf_41c6a; // 3e1c:3aaa
+db dummyf_41c6b; // 3e1c:3aab
+db dummyf_41c6c; // 3e1c:3aac
+db dummyf_41c6d; // 3e1c:3aad
+db dummyf_41c6e; // 3e1c:3aae
+db dummyf_41c6f; // 3e1c:3aaf
+db dummyf_41c70; // 3e1c:3ab0
+db dummyf_41c71; // 3e1c:3ab1
+db dummyf_41c72; // 3e1c:3ab2
+db dummyf_41c73; // 3e1c:3ab3
+db dummyf_41c74; // 3e1c:3ab4
+db dummyf_41c75; // 3e1c:3ab5
+db dummyf_41c76; // 3e1c:3ab6
+db dummyf_41c77; // 3e1c:3ab7
+db dummyf_41c78; // 3e1c:3ab8
+db dummyf_41c79; // 3e1c:3ab9
+dw dummyf_41c7a; // 3e1c:3aba
+db dummyf_41c7c[32]; // 3e1c:3abc
+db dummyf_41c9c[32]; // 3e1c:3adc
+db dummyf_41cbc; // 3e1c:3afc
+db dummyf_41cbd; // 3e1c:3afd
+db dummyf_41cbe; // 3e1c:3afe
+db dummyf_41cbf; // 3e1c:3aff
+dw dummyf_41cc0; // 3e1c:3b00
+db dummyf_41cc2[32]; // 3e1c:3b02
+db dummyf_41ce2[32]; // 3e1c:3b22
+db dummyf_41d02; // 3e1c:3b42
+db dummyf_41d03; // 3e1c:3b43
+db dummyf_41d04; // 3e1c:3b44
+db dummyf_41d05; // 3e1c:3b45
+db dummyf_41d06; // 3e1c:3b46
+db dummyf_41d07; // 3e1c:3b47
+db dummyf_41d08; // 3e1c:3b48
+db dummyf_41d09; // 3e1c:3b49
+db dummyf_41d0a; // 3e1c:3b4a
+db dummyf_41d0b; // 3e1c:3b4b
+db dummyf_41d0c; // 3e1c:3b4c
+db dummyf_41d0d; // 3e1c:3b4d
+db dummyf_41d0e; // 3e1c:3b4e
+db dummyf_41d0f;
+db dummyf_41d10; // 3e1c:3b50
+db dummyf_41d11; // 3e1c:3b51
+db dummyf_41d12; // 3e1c:3b52
+db dummyf_41d13; // 3e1c:3b53
+db dummyf_41d14; // 3e1c:3b54
+db dummyf_41d15; // 3e1c:3b55
+db dummyf_41d16; // 3e1c:3b56
+dw dummyf_41d17; // 3e1c:3b57
+db dummyf_41d19[32]; // 3e1c:3b59
+db dummyf_41d39; // 3e1c:3b79
+db dummyf_41d3a; // 3e1c:3b7a
+db dummyf_41d3b; // 3e1c:3b7b
+db dummyf_41d3c; // 3e1c:3b7c
+db dummyf_41d3d; // 3e1c:3b7d
+db dummyf_41d3e; // 3e1c:3b7e
+db dummyf_41d3f;
+db dummyf_41d40; // 3e1c:3b80
+db dummyf_41d41; // 3e1c:3b81
+db dummyf_41d42; // 3e1c:3b82
+db dummyf_41d43; // 3e1c:3b83
+db dummyf_41d44; // 3e1c:3b84
+db dummyf_41d45; // 3e1c:3b85
+db dummyf_41d46; // 3e1c:3b86
+db dummyf_41d47; // 3e1c:3b87
+db dummyf_41d48; // 3e1c:3b88
+db dummyf_41d49;
+db dummyf_41d4a; // 3e1c:3b8a
+db dummyf_41d4b; // 3e1c:3b8b
+db dummyf_41d4c; // 3e1c:3b8c
+db dummyf_41d4d; // 3e1c:3b8d
+db dummyf_41d4e; // 3e1c:3b8e
+db dummyf_41d4f; // 3e1c:3b8f
+db dummyf_41d50; // 3e1c:3b90
+db dummyf_41d51; // 3e1c:3b91
+db dummyf_41d52; // 3e1c:3b92
+db dummyf_41d53; // 3e1c:3b93
+db dummyf_41d54; // 3e1c:3b94
+db dummyf_41d55; // 3e1c:3b95
+db dummyf_41d56; // 3e1c:3b96
+dw dummyf_41d57; // 3e1c:3b97
+db dummyf_41d59[32]; // 3e1c:3b99
+db dummyf_41d79[32]; // 3e1c:3bb9
+db dummyf_41d99[32]; // 3e1c:3bd9
+db dummyf_41db9[32]; // 3e1c:3bf9
+db dummyf_41dd9[32]; // 3e1c:3c19
+db dummyf_41df9[32]; // 3e1c:3c39
+db dummyf_41e19[32]; // 3e1c:3c59
+db dummyf_41e39[32]; // 3e1c:3c79
+db dummyf_41e59[32]; // 3e1c:3c99
+db dummyf_41e79[32]; // 3e1c:3cb9
+db dummyf_41e99[32]; // 3e1c:3cd9
+db dummyf_41eb9[32]; // 3e1c:3cf9
+db dummyf_41ed9[32]; // 3e1c:3d19
+db dummyf_41ef9[32]; // 3e1c:3d39
+db dummyf_41f19[32]; // 3e1c:3d59
+db dummyf_41f39[32]; // 3e1c:3d79
+db dummyf_41f59[32]; // 3e1c:3d99
+db dummyf_41f79[32]; // 3e1c:3db9
+db dummyf_41f99[32]; // 3e1c:3dd9
+db dummyf_41fb9[32]; // 3e1c:3df9
+db dummyf_41fd9[32]; // 3e1c:3e19
+db dummyf_41ff9[32]; // 3e1c:3e39
+db dummyf_42019[32]; // 3e1c:3e59
+db dummyf_42039[32]; // 3e1c:3e79
+db dummyf_42059[32]; // 3e1c:3e99
+db dummyf_42079[32]; // 3e1c:3eb9
+db dummyf_42099[32]; // 3e1c:3ed9
+db dummyf_420b9[32]; // 3e1c:3ef9
+db dummyf_420d9[32]; // 3e1c:3f19
+db dummyf_420f9[32]; // 3e1c:3f39
+db dummyf_42119[32]; // 3e1c:3f59
+db dummyf_42139[32]; // 3e1c:3f79
+db dummyf_42159[32]; // 3e1c:3f99
+db dummyf_42179[32]; // 3e1c:3fb9
+db dummyf_42199[32]; // 3e1c:3fd9
+db dummyf_421b9[32]; // 3e1c:3ff9
+db dummyf_421d9[32]; // 3e1c:4019
+db dummyf_421f9[32]; // 3e1c:4039
+db dummyf_42219[32]; // 3e1c:4059
+db dummyf_42239[32]; // 3e1c:4079
+db dummyf_42259[32]; // 3e1c:4099
+db dummyf_42279[32]; // 3e1c:40b9
+db dummyf_42299[32]; // 3e1c:40d9
+db dummyf_422b9[32]; // 3e1c:40f9
+db dummyf_422d9[32]; // 3e1c:4119
+db dummyf_422f9[32]; // 3e1c:4139
+db dummyf_42319[32]; // 3e1c:4159
+db dummyf_42339[32]; // 3e1c:4179
+db dummyf_42359[32]; // 3e1c:4199
+db dummyf_42379[32]; // 3e1c:41b9
+db dummyf_42399[32]; // 3e1c:41d9
+db dummyf_423b9[32]; // 3e1c:41f9
+db dummyf_423d9[32]; // 3e1c:4219
+db dummyf_423f9[32]; // 3e1c:4239
+db dummyf_42419[32]; // 3e1c:4259
+db dummyf_42439[32]; // 3e1c:4279
+db dummyf_42459[32]; // 3e1c:4299
+db dummyf_42479[32]; // 3e1c:42b9
+db dummyf_42499[32]; // 3e1c:42d9
+db dummyf_424b9[32]; // 3e1c:42f9
+db dummyf_424d9[32]; // 3e1c:4319
+db dummyf_424f9[32]; // 3e1c:4339
+db dummyf_42519[32]; // 3e1c:4359
+db dummyf_42539;
+db dummyf_4253a;
+db dummyf_4253b; // 3e1c:437b
+db dummyf_4253c; // 3e1c:437c
+db dummyf_4253d;
+db dummyf_4253e;
+db dummyf_4253f;
+db dummyf_42540;
+db dummyf_42541;
+db dummyf_42542;
+db dummyf_42543;
+db dummyf_42544;
+db dummyf_42545;
+db dummyf_42546;
+db dummyf_42547;
+db dummyf_42548;
+db dummyf_42549;
+db dummyf_4254a;
+db dummyf_4254b;
+db dummyf_4254c;
+db dummyf_4254d;
+dw word_50b2e; // 3e1c:438e
+db dummyf_42550[32]; // 3e1c:4390
+db dummyf_42570[32]; // 3e1c:43b0
+dw word_50b70; // 3e1c:43d0
+db dummyf_42592;
+db dummyf_42593;
+dw word_50b74; // 3e1c:43d4
+dw word_50b76; // 3e1c:43d6
+db dummyf_42598[32]; // 3e1c:43d8
+db dummyf_425b8[32]; // 3e1c:43f8
+db dummyf_425d8[32]; // 3e1c:4418
+db dummyf_425f8[32]; // 3e1c:4438
+db dummyf_42618[32]; // 3e1c:4458
+db dummyf_42638[32]; // 3e1c:4478
+db dummyf_42658[32]; // 3e1c:4498
+db dummyf_42678[32]; // 3e1c:44b8
+db dummyf_42698;
+db dummyf_42699;
+db dummyf_4269a;
+db dummyf_4269b;
+db dummyf_4269c;
+db dummyf_4269d;
+db dummyf_4269e;
+db dummyf_4269f;
+db dummyf_426a0;
+db dummyf_426a1;
+db dummyf_426a2;
+db dummyf_426a3;
+db dummyf_426a4;
+db dummyf_426a5;
+db dummyf_426a6;
+db dummyf_426a7;
+db dummyf_426a8;
+db dummyf_426a9;
+dw word_50c8a; // 3e1c:44ea
+db dummyf_426ac;
+db dummyf_426ad;
+dw word_50c8e; // 3e1c:44ee
+db asc_50c90[17]; // 3e1c:44f0
+db dummyf_426c1[32]; // 3e1c:4501
+db dummyf_426e1[32]; // 3e1c:4521
+db dummyf_42701[32]; // 3e1c:4541
+db dummyf_42721[32]; // 3e1c:4561
+db dummyf_42741[32]; // 3e1c:4581
+db dummyf_42761[32]; // 3e1c:45a1
+db dummyf_42781[32]; // 3e1c:45c1
+db dummyf_427a1[32]; // 3e1c:45e1
+db dummyf_427c1[32]; // 3e1c:4601
+db dummyf_427e1[32]; // 3e1c:4621
+db dummyf_42801[32]; // 3e1c:4641
+db dummyf_42821[32]; // 3e1c:4661
+db dummyf_42841[32]; // 3e1c:4681
+db dummyf_42861[32]; // 3e1c:46a1
+db dummyf_42881[32]; // 3e1c:46c1
+db dummyf_428a1[32]; // 3e1c:46e1
+db dummyf_428c1[32]; // 3e1c:4701
+db dummyf_428e1[32]; // 3e1c:4721
+db dummyf_42901[32]; // 3e1c:4741
+db dummyf_42921[32]; // 3e1c:4761
+db dummyf_42941[32]; // 3e1c:4781
+db dummyf_42961[32]; // 3e1c:47a1
+db dummyf_42981[32]; // 3e1c:47c1
+db dummyf_429a1[32]; // 3e1c:47e1
+db dummyf_429c1[32]; // 3e1c:4801
+db dummyf_429e1[32]; // 3e1c:4821
+db dummyf_42a01[32]; // 3e1c:4841
+db dummyf_42a21[32]; // 3e1c:4861
+db dummyf_42a41[32]; // 3e1c:4881
+db dummyf_42a61[32]; // 3e1c:48a1
+db dummyf_42a81[32]; // 3e1c:48c1
+db dummyf_42aa1[32]; // 3e1c:48e1
+db dummyf_42ac1[32]; // 3e1c:4901
+db dummyf_42ae1[32]; // 3e1c:4921
+db dummyf_42b01[32]; // 3e1c:4941
+db dummyf_42b21[32]; // 3e1c:4961
+db dummyf_42b41;
+db dummyf_42b42;
+db dummyf_42b43;
+db dummyf_42b44;
+db dummyf_42b45;
+db dummyf_42b46;
+db dummyf_42b47;
+db dummyf_42b48;
+db dummyf_42b49;
+db dummyf_42b4a;
+db dummyf_42b4b;
+db dummyf_42b4c;
+db dummyf_42b4d;
+db dummyf_42b4e;
+db dummyf_42b4f;
+db dummyf_42b50;
+db dummyf_42b51;
+db dummyf_42b52;
+db dummyf_42b53;
+db dummyf_42b54;
+db dummyf_42b55;
+db dummyf_42b56;
+db dummyf_42b57;
+db dummyf_42b58;
+db dummyf_42b59;
+db dummyf_42b5a;
+db dummyf_42b5b;
+dw word_5113c; // 3e1c:499c
+db dummyf_42b5e[32]; // 3e1c:499e
+db dummyf_42b7e[32]; // 3e1c:49be
+db dummyf_42b9e[32]; // 3e1c:49de
+db dummyf_42bbe[32]; // 3e1c:49fe
+db dummyf_42bde;
+db dummyf_42bdf;
+db dummyf_42be0;
+db dummyf_42be1;
+db dummyf_42be2;
+db dummyf_42be3;
+db dummyf_42be4;
+db dummyf_42be5;
+db dummyf_42be6;
+db dummyf_42be7;
+db dummyf_42be8;
+db dummyf_42be9;
+db dummyf_42bea;
+db dummyf_42beb;
+db dummyf_42bec;
+db dummyf_42bed;
+db dummyf_42bee;
+db dummyf_42bef;
+db dummyf_42bf0;
+db dummyf_42bf1;
+db dummyf_42bf2;
+db dummyf_42bf3;
+dw word_511d4; // 3e1c:4a34
+dw word_511d6; // 3e1c:4a36
+dw word_511d8; // 3e1c:4a38
+dw word_511da; // 3e1c:4a3a
+db dummyf_42bfc[32]; // 3e1c:4a3c
+db dummyf_42c1c[32]; // 3e1c:4a5c
+db dummyf_42c3c[32]; // 3e1c:4a7c
+db dummyf_42c5c[32]; // 3e1c:4a9c
+db dummyf_42c7c[32]; // 3e1c:4abc
+db dummyf_42c9c[32]; // 3e1c:4adc
+db dummyf_42cbc[32]; // 3e1c:4afc
+db dummyf_42cdc[32]; // 3e1c:4b1c
+db asc_512dc[11]; // 3e1c:4b3c
+db dummyf_42d07[32]; // 3e1c:4b47
+db dummyf_42d27[32]; // 3e1c:4b67
+db dummyf_42d47[32]; // 3e1c:4b87
+db dummyf_42d67[32]; // 3e1c:4ba7
+db dummyf_42d87;
+db dummyf_42d88;
+db dummyf_42d89;
+db dummyf_42d8a;
+db dummyf_42d8b;
+db dummyf_42d8c;
+db dummyf_42d8d;
+db dummyf_42d8e;
+db dummyf_42d8f;
+db dummyf_42d90;
+db dummyf_42d91;
+db dummyf_42d92;
+db dummyf_42d93;
+dw word_51374; // 3e1c:4bd4
+dw word_51376; // 3e1c:4bd6
+dw word_51378; // 3e1c:4bd8
+db dummyf_42d9a;
+db dummyf_42d9b; // 3e1c:4bdb
+dw word_5137c; // 3e1c:4bdc
+db dummyf_42d9e;
+db dummyf_42d9f;
+db dummyf_42da0;
+db dummyf_42da1;
+db dummyf_42da2;
+db dummyf_42da3;
+db dummyf_42da4;
+db dummyf_42da5;
+db dummyf_42da6;
+db dummyf_42da7;
+dw word_51388; // 3e1c:4be8
+dw word_5138a; // 3e1c:4bea
+db dummyf_42dac;
+db dummyf_42dad;
+db asc_5138e[14]; // 3e1c:4bee
+db dummyf_42dbc[32]; // 3e1c:4bfc
+db dummyf_42ddc[32]; // 3e1c:4c1c
+db dummyf_42dfc[32]; // 3e1c:4c3c
+db dummyf_42e1c[32]; // 3e1c:4c5c
+db dummyf_42e3c; // 3e1c:4c7c
+db dummyf_42e3d; // 3e1c:4c7d
+db dummyf_42e3e; // 3e1c:4c7e
+db dummyf_42e3f; // 3e1c:4c7f
+db dummyf_42e40; // 3e1c:4c80
+db dummyf_42e41; // 3e1c:4c81
+db dummyf_42e42; // 3e1c:4c82
+db dummyf_42e43; // 3e1c:4c83
+db dummyf_42e44; // 3e1c:4c84
+db dummyf_42e45; // 3e1c:4c85
+db dummyf_42e46; // 3e1c:4c86
+db dummyf_42e47; // 3e1c:4c87
+db dummyf_42e48;
+db dummyf_42e49;
+db dummyf_42e4a;
+db dummyf_42e4b;
+db dummyf_42e4c;
+db dummyf_42e4d;
+dw word_5142e; // 3e1c:4c8e
+dw word_51430; // 3e1c:4c90
+db dummyf_42e52[32]; // 3e1c:4c92
+db dummyf_42e72;
+db dummyf_42e73;
+db dummyf_42e74;
+db dummyf_42e75;
+db dummyf_42e76;
+db dummyf_42e77;
+dw word_51458; // 3e1c:4cb8
+dw word_5145a; // 3e1c:4cba
+dw word_5145c; // 3e1c:4cbc
+dw word_5145e; // 3e1c:4cbe
+dw word_51460; // 3e1c:4cc0
+dw word_51462; // 3e1c:4cc2
+dw word_51464; // 3e1c:4cc4
+dw word_51466; // 3e1c:4cc6
+db dummyf_42e88; // 3e1c:4cc8
+db dummyf_42e89;
+db dummyf_42e8a;
+db dummyf_42e8b;
+db dummyf_42e8c;
+db dummyf_42e8d;
+db byte_5146e; // 3e1c:4cce
+db dummyf_42e8f;
+dw word_51470; // 3e1c:4cd0
+db dummyf_42e92[32]; // 3e1c:4cd2
+db dummyf_42eb2[32]; // 3e1c:4cf2
+db dummyf_42ed2[32]; // 3e1c:4d12
+db dummyf_42ef2[32]; // 3e1c:4d32
+db dummyf_42f12[32]; // 3e1c:4d52
+db dummyf_42f32[32]; // 3e1c:4d72
+db dummyf_42f52[32]; // 3e1c:4d92
+db dummyf_42f72[32]; // 3e1c:4db2
+db dummyf_42f92[32]; // 3e1c:4dd2
+db dummyf_42fb2[32]; // 3e1c:4df2
+db dummyf_42fd2[32]; // 3e1c:4e12
+db dummyf_42ff2[32]; // 3e1c:4e32
+db dummyf_43012[32]; // 3e1c:4e52
+db dummyf_43032[32]; // 3e1c:4e72
+db dummyf_43052[32]; // 3e1c:4e92
+db dummyf_43072[32]; // 3e1c:4eb2
+db dummyf_43092[32]; // 3e1c:4ed2
+db dummyf_430b2[32]; // 3e1c:4ef2
+db dummyf_430d2[32]; // 3e1c:4f12
+db dummyf_430f2[32]; // 3e1c:4f32
+db dummyf_43112;
+db dummyf_43113;
+db dummyf_43114;
+db dummyf_43115;
+db dummyf_43116;
+db dummyf_43117;
+db dummyf_43118;
+db dummyf_43119;
+db dummyf_4311a;
+db dummyf_4311b;
+db dummyf_4311c;
+db dummyf_4311d;
+db dummyf_4311e;
+db dummyf_4311f;
+db dummyf_43120;
+db dummyf_43121;
+dw word_51702; // 3e1c:4f62
+dw word_51704; // 3e1c:4f64
+dw word_51706; // 3e1c:4f66
+dw word_51708; // 3e1c:4f68
+dw word_5170a; // 3e1c:4f6a
+dw word_5170c; // 3e1c:4f6c
+dw word_5170e; // 3e1c:4f6e
+dw word_51710; // 3e1c:4f70
+db byte_51712; // 3e1c:4f72
+db dummyf_43133;
+dw word_51714; // 3e1c:4f74
+db dummyf_43136[32]; // 3e1c:4f76
+db dummyf_43156[32]; // 3e1c:4f96
+db dummyf_43176[32]; // 3e1c:4fb6
+db dummyf_43196[32]; // 3e1c:4fd6
+db dummyf_431b6[32]; // 3e1c:4ff6
+db dummyf_431d6[32]; // 3e1c:5016
+db dummyf_431f6[32]; // 3e1c:5036
+db dummyf_43216;
+db dummyf_43217;
+db dummyf_43218;
+db dummyf_43219;
+db dummyf_4321a;
+db dummyf_4321b;
+db dummyf_4321c;
+db dummyf_4321d;
+db dummyf_4321e;
+db dummyf_4321f;
+db dummyf_43220;
+db dummyf_43221;
+db dummyf_43222;
+db dummyf_43223;
+db dummyf_43224;
+db dummyf_43225;
+dw word_51806; // 3e1c:5066
+db dummyf_43228[32]; // 3e1c:5068
+db dummyf_43248[32]; // 3e1c:5088
+db dummyf_43268[32]; // 3e1c:50a8
+db dummyf_43288[32]; // 3e1c:50c8
+db dummyf_432a8[32]; // 3e1c:50e8
+db dummyf_432c8[32]; // 3e1c:5108
+db dummyf_432e8[32]; // 3e1c:5128
+db dummyf_43308[32]; // 3e1c:5148
+db dummyf_43328[32]; // 3e1c:5168
+db dummyf_43348[32]; // 3e1c:5188
+db dummyf_43368[32]; // 3e1c:51a8
+db dummyf_43388[32]; // 3e1c:51c8
+db dummyf_433a8[32]; // 3e1c:51e8
+db dummyf_433c8[32]; // 3e1c:5208
+db dummyf_433e8[32]; // 3e1c:5228
+db dummyf_43408[32]; // 3e1c:5248
+db dummyf_43428; // 3e1c:5268
+db dummyf_43429; // 3e1c:5269
+dw word_51a0a; // 3e1c:526a
+dw word_51a0c; // 3e1c:526c
+dw word_51a0e; // 3e1c:526e
+dw word_51a10; // 3e1c:5270
+dw word_51a12; // 3e1c:5272
+dw word_51a14; // 3e1c:5274
+dw word_51a16; // 3e1c:5276
+dw word_51a18; // 3e1c:5278
+dw word_51a1a; // 3e1c:527a
+dw word_51a1c; // 3e1c:527c
+db byte_51a1e; // 3e1c:527e
+db byte_51a1f; // 3e1c:527f
+db byte_51a20; // 3e1c:5280
+db byte_51a21; // 3e1c:5281
+db dummyf_43442;
+db dummyf_43443;
+db dummyf_43444;
+db dummyf_43445;
+db dummyf_43446;
+db dummyf_43447;
+dw word_51a28; // 3e1c:5288
+dw word_51a2a; // 3e1c:528a
+db dummyf_4344c[32]; // 3e1c:528c
+db dummyf_4346c[32]; // 3e1c:52ac
+db dummyf_4348c[32]; // 3e1c:52cc
+db dummyf_434ac[32]; // 3e1c:52ec
+db dummyf_434cc[32]; // 3e1c:530c
+db dummyf_434ec[32]; // 3e1c:532c
+db dummyf_4350c[32]; // 3e1c:534c
+db dummyf_4352c[32]; // 3e1c:536c
+db dummyf_4354c[32]; // 3e1c:538c
+db dummyf_4356c[32]; // 3e1c:53ac
+db dummyf_4358c[32]; // 3e1c:53cc
+db dummyf_435ac[32]; // 3e1c:53ec
+db dummyf_435cc[32]; // 3e1c:540c
+db dummyf_435ec[32]; // 3e1c:542c
+db dummyf_4360c[32]; // 3e1c:544c
+db dummyf_4362c[32]; // 3e1c:546c
+db dummyf_4364c[32]; // 3e1c:548c
+db dummyf_4366c[32]; // 3e1c:54ac
+db dummyf_4368c[32]; // 3e1c:54cc
+db dummyf_436ac[32]; // 3e1c:54ec
+db dummyf_436cc[32]; // 3e1c:550c
+db dummyf_436ec[32]; // 3e1c:552c
+db dummyf_4370c[32]; // 3e1c:554c
+db dummyf_4372c[32]; // 3e1c:556c
+db dummyf_4374c[32]; // 3e1c:558c
+db dummyf_4376c[32]; // 3e1c:55ac
+db dummyf_4378c[32]; // 3e1c:55cc
+db dummyf_437ac[32]; // 3e1c:55ec
+db dummyf_437cc[32]; // 3e1c:560c
+db dummyf_437ec[32]; // 3e1c:562c
+db dummyf_4380c[32]; // 3e1c:564c
+db dummyf_4382c[32]; // 3e1c:566c
+db dummyf_4384c[32]; // 3e1c:568c
+db dummyf_4386c[32]; // 3e1c:56ac
+db dummyf_4388c[32]; // 3e1c:56cc
+db dummyf_438ac[32]; // 3e1c:56ec
+db dummyf_438cc[32]; // 3e1c:570c
+db dummyf_438ec[32]; // 3e1c:572c
+db dummyf_4390c[32]; // 3e1c:574c
+db dummyf_4392c[32]; // 3e1c:576c
+db dummyf_4394c[32]; // 3e1c:578c
+db dummyf_4396c[32]; // 3e1c:57ac
+db dummyf_4398c[32]; // 3e1c:57cc
+db dummyf_439ac[32]; // 3e1c:57ec
+db dummyf_439cc[32]; // 3e1c:580c
+db dummyf_439ec[32]; // 3e1c:582c
+db dummyf_43a0c[32]; // 3e1c:584c
+db dummyf_43a2c[32]; // 3e1c:586c
+db dummyf_43a4c[32]; // 3e1c:588c
+db dummyf_43a6c[32]; // 3e1c:58ac
+dw word_5206c; // 3e1c:58cc
+db dummyf_43a8e[32]; // 3e1c:58ce
+db dummyf_43aae[32]; // 3e1c:58ee
+dw word_520ae; // 3e1c:590e
+db dummyf_43ad0; // 3e1c:5910
+db dummyf_43ad1; // 3e1c:5911
+db dummyf_43ad2; // 3e1c:5912
+db dummyf_43ad3; // 3e1c:5913
+db dummyf_43ad4; // 3e1c:5914
+db dummyf_43ad5; // 3e1c:5915
+db dummyf_43ad6; // 3e1c:5916
+db dummyf_43ad7; // 3e1c:5917
+db dummyf_43ad8; // 3e1c:5918
+db dummyf_43ad9; // 3e1c:5919
+db dummyf_43ada; // 3e1c:591a
+db dummyf_43adb; // 3e1c:591b
+db dummyf_43adc; // 3e1c:591c
+db dummyf_43add; // 3e1c:591d
+db dummyf_43ade; // 3e1c:591e
+db dummyf_43adf; // 3e1c:591f
+dw word_520c0; // 3e1c:5920
+dw word_520c2; // 3e1c:5922
+dw word_520c4; // 3e1c:5924
+dw word_520c6; // 3e1c:5926
+dw word_520c8; // 3e1c:5928
+db dummyf_43aea; // 3e1c:592a
+db dummyf_43aeb; // 3e1c:592b
+dw word_520cc; // 3e1c:592c
+db dummyf_43aee; // 3e1c:592e
+db dummyf_43aef; // 3e1c:592f
+db dummyf_43af0; // 3e1c:5930
+db dummyf_43af1; // 3e1c:5931
+db dummyf_43af2; // 3e1c:5932
+db dummyf_43af3; // 3e1c:5933
+db dummyf_43af4; // 3e1c:5934
+db dummyf_43af5; // 3e1c:5935
+db dummyf_43af6; // 3e1c:5936
+db dummyf_43af7; // 3e1c:5937
+db dummyf_43af8; // 3e1c:5938
+db dummyf_43af9; // 3e1c:5939
+db dummyf_43afa; // 3e1c:593a
+db dummyf_43afb; // 3e1c:593b
+db dummyf_43afc; // 3e1c:593c
+db dummyf_43afd; // 3e1c:593d
+db dummyf_43afe; // 3e1c:593e
+db dummyf_43aff; // 3e1c:593f
+db dummyf_43b00; // 3e1c:5940
+db dummyf_43b01; // 3e1c:5941
+db dummyf_43b02; // 3e1c:5942
+db dummyf_43b03; // 3e1c:5943
+db dummyf_43b04; // 3e1c:5944
+db dummyf_43b05; // 3e1c:5945
+db dummyf_43b06;
+db dummyf_43b07;
+db dummyf_43b08;
+db dummyf_43b09;
+db dummyf_43b0a;
+db dummyf_43b0b;
+dw word_520ec; // 3e1c:594c
+dw word_520ee; // 3e1c:594e
+dw word_520f0; // 3e1c:5950
+dw word_520f2; // 3e1c:5952
+db byte_520f4; // 3e1c:5954
+db dummyf_43b15;
+db dummyf_43b16;
+db dummyf_43b17;
+dw word_520f8; // 3e1c:5958
+dw word_520fa; // 3e1c:595a
+dw word_520fc; // 3e1c:595c
+dw word_520fe; // 3e1c:595e
+dw word_52100; // 3e1c:5960
+dw word_52102; // 3e1c:5962
+dw word_52104; // 3e1c:5964
+dw word_52106; // 3e1c:5966
+db dummyf_43b28[32]; // 3e1c:5968
+db dummyf_43b48[32]; // 3e1c:5988
+db dummyf_43b68[32]; // 3e1c:59a8
+db dummyf_43b88;
+db dummyf_43b89;
+db dummyf_43b8a;
+db dummyf_43b8b;
+dw word_5216c; // 3e1c:59cc
+dw word_5216e; // 3e1c:59ce
+db dummyf_43b90[32]; // 3e1c:59d0
+db dummyf_43bb0[32]; // 3e1c:59f0
+db dummyf_43bd0;
+db dummyf_43bd1;
+db dummyf_43bd2;
+db dummyf_43bd3;
+db dummyf_43bd4;
+db dummyf_43bd5;
+db dummyf_43bd6;
+db dummyf_43bd7;
+db dummyf_43bd8;
+db dummyf_43bd9;
+db dummyf_43bda;
+db dummyf_43bdb;
+db dummyf_43bdc;
+db dummyf_43bdd;
+db dummyf_43bde;
+db dummyf_43bdf;
+dw word_521c0; // 3e1c:5a20
+db byte_521c2; // 3e1c:5a22
+db byte_521c3; // 3e1c:5a23
+db dummyf_43be4;
+db byte_521c5; // 3e1c:5a25
+dw word_521c6; // 3e1c:5a26
+dw word_521c8; // 3e1c:5a28
+db dummyf_43bea;
+db dummyf_43beb;
+db dummyf_43bec;
+db dummyf_43bed;
+db dummyf_43bee;
+db dummyf_43bef;
+dw word_521d0; // 3e1c:5a30
+dw word_521d2; // 3e1c:5a32
+db dummyf_43bf4[32]; // 3e1c:5a34
+db dummyf_43c14[32]; // 3e1c:5a54
+db dummyf_43c34[32]; // 3e1c:5a74
+db dummyf_43c54;
+db dummyf_43c55;
+db dummyf_43c56;
+db dummyf_43c57;
+dw word_52238; // 3e1c:5a98
+dw word_5223a; // 3e1c:5a9a
+db dummyf_43c5c;
+db dummyf_43c5d;
+dw word_5223e; // 3e1c:5a9e
+dw word_52240; // 3e1c:5aa0
+dw word_52242; // 3e1c:5aa2
+dw word_52244; // 3e1c:5aa4
+dw word_52246; // 3e1c:5aa6
+dw word_52248; // 3e1c:5aa8
+dw word_5224a; // 3e1c:5aaa
+dw word_5224c; // 3e1c:5aac
+dw word_5224e; // 3e1c:5aae
+dw word_52250; // 3e1c:5ab0
+db dummyf_43c72;
+db dummyf_43c73;
+dw word_52254; // 3e1c:5ab4
+dw word_52256; // 3e1c:5ab6
+dw word_52258; // 3e1c:5ab8
+db byte_5225a; // 3e1c:5aba
+db dummyf_43c7b;
+dw word_5225c; // 3e1c:5abc
+dw word_5225e; // 3e1c:5abe
+db dummyf_43c80;
+db dummyf_43c81;
+db dummyf_43c82;
+db dummyf_43c83;
+db dummyf_43c84;
+db dummyf_43c85;
+db dummyf_43c86;
+db dummyf_43c87;
+db dummyf_43c88;
+db dummyf_43c89;
+dw word_5226a; // 3e1c:5aca
+db dummyf_43c8c;
+db dummyf_43c8d;
+dw word_5226e; // 3e1c:5ace
+dw word_52270; // 3e1c:5ad0
+dw word_52272; // 3e1c:5ad2
+dw word_52274; // 3e1c:5ad4
+dw word_52276; // 3e1c:5ad6
+dw word_52278; // 3e1c:5ad8
+db dummyf_43c9a[32]; // 3e1c:5ada
+db dummyf_43cba[32]; // 3e1c:5afa
+db dummyf_43cda; // 3e1c:5b1a
+db dummyf_43cdb; // 3e1c:5b1b
+db dummyf_43cdc; // 3e1c:5b1c
+db dummyf_43cdd; // 3e1c:5b1d
+db dummyf_43cde; // 3e1c:5b1e
+db dummyf_43cdf; // 3e1c:5b1f
+db dummyf_43ce0; // 3e1c:5b20
+db dummyf_43ce1; // 3e1c:5b21
+db dummyf_43ce2; // 3e1c:5b22
+db dummyf_43ce3; // 3e1c:5b23
+db dummyf_43ce4; // 3e1c:5b24
+db dummyf_43ce5; // 3e1c:5b25
+db dummyf_43ce6; // 3e1c:5b26
+db dummyf_43ce7; // 3e1c:5b27
+db dummyf_43ce8; // 3e1c:5b28
+db dummyf_43ce9; // 3e1c:5b29
+dw word_522ca; // 3e1c:5b2a
+dw word_522cc; // 3e1c:5b2c
+dw word_522ce; // 3e1c:5b2e
+dw word_522d0; // 3e1c:5b30
+dw word_522d2; // 3e1c:5b32
+db dummyf_43cf4[32]; // 3e1c:5b34
+db dummyf_43d14[32]; // 3e1c:5b54
+db dummyf_43d34[32]; // 3e1c:5b74
+db dummyf_43d54[32]; // 3e1c:5b94
+db dummyf_43d74[32]; // 3e1c:5bb4
+db dummyf_43d94[32]; // 3e1c:5bd4
+db dummyf_43db4;
+db dummyf_43db5;
+db dummyf_43db6;
+db dummyf_43db7;
+db dummyf_43db8;
+db dummyf_43db9;
+dw word_5239a; // 3e1c:5bfa
+dw word_5239c; // 3e1c:5bfc
+db dummyf_43dbe[32]; // 3e1c:5bfe
+db dummyf_43dde[32]; // 3e1c:5c1e
+db dummyf_43dfe[32]; // 3e1c:5c3e
+db dummyf_43e1e[32]; // 3e1c:5c5e
+db dummyf_43e3e[32]; // 3e1c:5c7e
+db dummyf_43e5e[32]; // 3e1c:5c9e
+db dummyf_43e7e[32]; // 3e1c:5cbe
+db dummyf_43e9e[32]; // 3e1c:5cde
+db dummyf_43ebe[32]; // 3e1c:5cfe
+db dummyf_43ede[32]; // 3e1c:5d1e
+db dummyf_43efe[32]; // 3e1c:5d3e
+db dummyf_43f1e[32]; // 3e1c:5d5e
+db dummyf_43f3e[32]; // 3e1c:5d7e
+db dummyf_43f5e[32]; // 3e1c:5d9e
+db dummyf_43f7e[32]; // 3e1c:5dbe
+db dummyf_43f9e[32]; // 3e1c:5dde
+db dummyf_43fbe[32]; // 3e1c:5dfe
+db dummyf_43fde[32]; // 3e1c:5e1e
+db dummyf_43ffe[32]; // 3e1c:5e3e
+db dummyf_4401e[32]; // 3e1c:5e5e
+db dummyf_4403e[32]; // 3e1c:5e7e
+db dummyf_4405e[32]; // 3e1c:5e9e
+db dummyf_4407e[32]; // 3e1c:5ebe
+db dummyf_4409e; // 3e1c:5ede
+db dummyf_4409f; // 3e1c:5edf
+db dummyf_440a0; // 3e1c:5ee0
+db dummyf_440a1; // 3e1c:5ee1
+db dummyf_440a2; // 3e1c:5ee2
+db dummyf_440a3; // 3e1c:5ee3
+db dummyf_440a4; // 3e1c:5ee4
+db dummyf_440a5; // 3e1c:5ee5
+db dummyf_440a6; // 3e1c:5ee6
+db dummyf_440a7; // 3e1c:5ee7
+db dummyf_440a8; // 3e1c:5ee8
+db dummyf_440a9;
+db dummyf_440aa;
+db dummyf_440ab;
+dw word_5268c; // 3e1c:5eec
+dw word_5268e; // 3e1c:5eee
+db dummyf_440b0[32]; // 3e1c:5ef0
+db dummyf_440d0[32]; // 3e1c:5f10
+db dummyf_440f0[32]; // 3e1c:5f30
+db dummyf_44110[32]; // 3e1c:5f50
+db dummyf_44130[32]; // 3e1c:5f70
+db dummyf_44150[32]; // 3e1c:5f90
+db dummyf_44170[32]; // 3e1c:5fb0
+db dummyf_44190[32]; // 3e1c:5fd0
+db dummyf_441b0[32]; // 3e1c:5ff0
+db dummyf_441d0[32]; // 3e1c:6010
+db byte_527d0; // 3e1c:6030
+db dummyf_441f1;
+dw word_527d2; // 3e1c:6032
+dw word_527d4; // 3e1c:6034
+dw word_527d6; // 3e1c:6036
+dw word_527d8; // 3e1c:6038
+dw word_527da; // 3e1c:603a
+db dummyf_441fc[32]; // 3e1c:603c
+db dummyf_4421c[32]; // 3e1c:605c
+db dummyf_4423c[32]; // 3e1c:607c
+db dummyf_4425c[32]; // 3e1c:609c
+db dummyf_4427c[32]; // 3e1c:60bc
+db dummyf_4429c[32]; // 3e1c:60dc
+db dummyf_442bc[32]; // 3e1c:60fc
+db dummyf_442dc;
+db dummyf_442dd;
+db dummyf_442de;
+db dummyf_442df;
+db dummyf_442e0;
+db dummyf_442e1;
+db dummyf_442e2;
+db dummyf_442e3;
+db dummyf_442e4;
+db dummyf_442e5;
+db dummyf_442e6;
+db dummyf_442e7;
+db dummyf_442e8;
+db dummyf_442e9;
+db dummyf_442ea;
+db dummyf_442eb;
+dw word_528cc; // 3e1c:612c
+dw word_528ce; // 3e1c:612e
+db byte_528d0; // 3e1c:6130
+db dummyf_442f1;
+dw word_528d2; // 3e1c:6132
+dw word_528d4; // 3e1c:6134
+dd dword_528d6; // 3e1c:6136
+dw word_528da; // 3e1c:613a
+dw word_528dc; // 3e1c:613c
+dw word_528de; // 3e1c:613e
+db dummyf_44300[32]; // 3e1c:6140
+db dummyf_44320[32]; // 3e1c:6160
+db dummyf_44340[32]; // 3e1c:6180
+db dummyf_44360[32]; // 3e1c:61a0
+db dummyf_44380[32]; // 3e1c:61c0
+db dummyf_443a0[32]; // 3e1c:61e0
+db dummyf_443c0[32]; // 3e1c:6200
+db dummyf_443e0[32]; // 3e1c:6220
+db dummyf_44400[32]; // 3e1c:6240
+db dummyf_44420[32]; // 3e1c:6260
+db dummyf_44440[32]; // 3e1c:6280
+db dummyf_44460[32]; // 3e1c:62a0
+db dummyf_44480[32]; // 3e1c:62c0
+db dummyf_444a0[32]; // 3e1c:62e0
+db dummyf_444c0[32]; // 3e1c:6300
+db dummyf_444e0[32]; // 3e1c:6320
+db byte_52ae0; // 3e1c:6340
+db dummyf_44501;
+dw word_52ae2; // 3e1c:6342
+dw word_52ae4; // 3e1c:6344
+dw word_52ae6; // 3e1c:6346
+dw word_52ae8; // 3e1c:6348
+dw word_52aea; // 3e1c:634a
+dw word_52aec; // 3e1c:634c
+dw word_52aee; // 3e1c:634e
+dw word_52af0; // 3e1c:6350
+dw word_52af2; // 3e1c:6352
+dw word_52af4; // 3e1c:6354
+db dummyf_44516;
+db dummyf_44517;
+db dummyf_44518;
+db dummyf_44519;
+db dummyf_4451a;
+db dummyf_4451b;
+db dummyf_4451c; // 3e1c:635c
+db dummyf_4451d; // 3e1c:635d
+db dummyf_4451e; // 3e1c:635e
+db dummyf_4451f; // 3e1c:635f
+db byte_52b00[2048]; // 4452:0000
 
 #ifdef DOSBOX_CUSTOM
     db filll[1024*1024*16];
