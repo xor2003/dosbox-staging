@@ -35361,7 +35361,7 @@ cs=0x17c5;eip=0x00e65b; 	T(CMP(bx, *(dw*)(raddr(ds,0x61DC))));	// 113610        
 cs=0x17c5;eip=0x00e65f; 	J(JC(loc_34895));	// 113611                  jb      short loc_34895 ;~ 17C5:E65F
 cs=0x17c5;eip=0x00e661; 	T(sp = bx;);	// 113612                  mov     sp, bx ;~ 17C5:E661
 cs=0x17c5;eip=0x00e663; __disp=cx;
-	J(return __dispatch_call(__disp, _state););	// 113613                  jmp     cx ;~ 17C5:E663
+	J(return true;);	// 113613                  jmp     cx ;~ 17C5:E663
 loc_34895:
 	// 6717 
 cs=0x17c5;eip=0x00e665; 	T(XOR(ax, ax));	// 113618                  xor     ax, ax ;~ 17C5:E665
