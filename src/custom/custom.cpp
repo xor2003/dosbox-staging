@@ -33,9 +33,11 @@ bool collect_rt_info_vars = false;
 
 static const size_t COMPARE_SIZE = 0xf0000;
 
+Bit32u last_ip = 0xffff; // to control last ip for interpreter and detect we changed it
+
 extern Bitu Normal_Loop(void);
 
-static int custom_runs = 0;
+int custom_runs = 0;
 
 Bitu old_cycles; // to stop interpretation but remmember the cycles remain
 std::stack<Bit32u> return_point;
@@ -224,6 +226,7 @@ void custom_init_entrypoint(char *name, Bit16u relocate)
 {
 	if (!custom_runs)
 		return;
+last_ip=0xffff;
 
 	if (init_runs) {
 		init_entrypoint(relocate);
@@ -607,7 +610,7 @@ struct CPU_State { /*
 	Segments segs;
 };
 
-CircularBuffer<CPU_State> trace_store(100000);
+CircularBuffer<CPU_State> trace_store(50000);
 
 static void print_traces()
 {

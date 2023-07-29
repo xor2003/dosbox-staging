@@ -969,6 +969,7 @@
 		if (cpu.pmode && cpu.cpl) EXCEPTION(EXCEPTION_GP);
 		FillFlags();
 		CPU_HLT(GETIP);
+	last_ip = cpu_regs.ip.dword[0];
 		return CBRET_NONE;		//Needs to return for hlt cpu core
 	CASE_B(0xf5)												/* CMC */
 		FillFlags();
@@ -1101,6 +1102,7 @@
 				{
 					Bitu cb=Fetchw();
 					FillFlags();SAVEIP;
+	last_ip = cpu_regs.ip.dword[0];
 					return cb;
 				}
 			default:

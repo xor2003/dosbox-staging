@@ -143,6 +143,8 @@ extern Bitu DasmI386(char* buffer, PhysPt pc, Bitu cur_ip, bool bit32);
 
 namespace m2c {
 extern void log_regs_dbx(const char * file,int line, const char * instr, const CPU_Regs& r, const Segments& s);
+    extern int log_debug(const char *format, ...);
+
 }
 
 void print_instruction(Bit16u newcs, Bit32u newip)
@@ -163,7 +165,14 @@ void print_instruction_direct(Bit16u newcs, Bit32u newip)
   puts(dline);puts("\n");
 }
 
+extern int custom_runs;
+
 Bits CPU_Core_Normal_Run(void) {
+	if (last_ip != 0xffff and last_ip != cpu_regs.ip.dword[0] and custom_runs) {
+		m2c::log_debug("IP changed dbx: %x now: %x\n", last_ip, cpu_regs.ip.dword[0]);
+//		exit(1);
+	}
+
 	while (CPU_Cycles-->0) {
 		LOADIP;
 
@@ -171,14 +180,13 @@ Bits CPU_Core_Normal_Run(void) {
 		{
                   SAVEIP;
 		  FillFlags();
+		last_ip = cpu_regs.ip.dword[0];
 		  return CBRET_NONE;
                 } // stop interpretation
 
-//if (SegBase(cs)!=0xf0000 && trace_instructions)
 if (trace_instructions)
 {
   print_instruction(SegBase(cs)>>4,cpu_regs.ip.dword[0]);
-//printf("i%x:%x %s\n",SegBase(cs)>>4,cpu_regs.ip.dword[0], dline);
 }
 //    compare_jump = false;
                 if (collect_rt_info) m2c::shadow_memory.collect_segs();
@@ -225,10 +233,12 @@ restart_opcode:
 		SAVEIP;
 	}
 	FillFlags();
+	last_ip = cpu_regs.ip.dword[0];
 	return CBRET_NONE;
 decode_end:
 	SAVEIP;
 	FillFlags();
+	last_ip = cpu_regs.ip.dword[0];
 	return CBRET_NONE;
 }
 
@@ -241,7 +251,6 @@ Bits CPU_Core_Normal_Trap_Run(void) {
 	if (!cpu.trap_skip) CPU_DebugException(DBINT_STEP,reg_eip);
 	CPU_Cycles = oldCycles-1;
 	cpudecoder = &CPU_Core_Normal_Run;
-
 	return ret;
 }
 

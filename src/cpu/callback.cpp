@@ -57,6 +57,7 @@ void CALLBACK_DeAllocate(Bitu in) {
 	CallBack_Handlers[in]=&illegal_handler;
 }
 
+extern Bit32u last_ip;
 
 void CALLBACK_Idle(void) {
 /* this makes the cpu execute instructions to handle irq's and then come back */
@@ -66,12 +67,14 @@ void CALLBACK_Idle(void) {
 	Bit32u oldeip=reg_eip;
 	SegSet16(cs,CB_SEG);
 	reg_eip=CB_SOFFSET+call_idle*CB_SIZE;
+	last_ip = cpu_regs.ip.dword[0];
 	DOSBOX_RunMachine();
 	reg_eip=oldeip;
 	SegSet16(cs,oldcs);
 	SETFLAGBIT(IF,oldIF);
 	if (!CPU_CycleAutoAdjust && CPU_Cycles>0)
 		CPU_Cycles=0;
+	last_ip = cpu_regs.ip.dword[0];
 }
 
 static Bitu default_handler(void) {
@@ -83,8 +86,6 @@ static Bitu stop_handler(void) {
 	return CBRET_STOP;
 }
 
-
-
 void CALLBACK_RunRealFar(Bit16u seg,Bit16u off) {
 	reg_sp-=4;
 	mem_writew(SegPhys(ss)+reg_sp,RealOff(CALLBACK_RealPointer(call_stop)));
@@ -93,19 +94,24 @@ void CALLBACK_RunRealFar(Bit16u seg,Bit16u off) {
 	Bit16u oldcs=SegValue(cs);
 	reg_eip=off;
 	SegSet16(cs,seg);
+	last_ip = cpu_regs.ip.dword[0];
 	DOSBOX_RunMachine();
 	reg_eip=oldeip;
 	SegSet16(cs,oldcs);
+	last_ip = cpu_regs.ip.dword[0];
 }
+
 
 void CALLBACK_RunRealInt(Bit8u intnum) {
 	Bit32u oldeip=reg_eip;
 	Bit16u oldcs=SegValue(cs);
 	reg_eip=CB_SOFFSET+(CB_MAX*CB_SIZE)+(intnum*6);
 	SegSet16(cs,CB_SEG);
+	last_ip = cpu_regs.ip.dword[0];
 	DOSBOX_RunMachine();
 	reg_eip=oldeip;
 	SegSet16(cs,oldcs);
+	last_ip = cpu_regs.ip.dword[0];
 }
 
 void CALLBACK_SZF(bool val) {

@@ -597,7 +597,7 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 #endif
 	if (!cpu.pmode) {
 		/* Save everything on a 16-bit stack */
-		m2c::log_debug("CPU_Interrupt %x cs:ip=%x:%x\n",num,Segs.val[cs],reg_eip);
+		m2c::log_debug("Called CPU_Interrupt %x\n",num);
 
 		CPU_Push16(reg_flags & 0xffff);
 		CPU_Push16(SegValue(cs));
@@ -611,7 +611,8 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 		Segs.phys[cs]=Segs.val[cs]<<4;
 		cpu.code.big=false;
 
-		m2c::log_debug("Want to execute interrupt %x cs:IP=%x:%x\n",num,Segs.val[cs],reg_eip);
+	last_ip = cpu_regs.ip.dword[0];
+		m2c::log_debug("Saved cs:ip. Will execute interrupt %x now\n",num);
 		defered_custom_call=true;
 		CPU_CycleLeft=CPU_Cycles;
 		CPU_Cycles=0;
@@ -812,12 +813,14 @@ void CPU_IRET(bool use32,Bitu oldeip) {
 		} else {
 //				m2c::log_debug("Exited interrupt SS:SP %x:%x\n",Segs.val[ss], reg_esp);
 			reg_eip=CPU_Pop16();
+last_ip = cpu_regs.ip.dword[0];
 			SegSet16(cs,CPU_Pop16());
 			CPU_SetFlags(CPU_Pop16(),FMASK_ALL & 0xffff);
 //				m2c::log_debug("Exited interrupt. new CS:IP %x:%x\n",Segs.val[cs], reg_eip);
 		}
 		cpu.code.big=false;
 		DestroyConditionFlags();
+		last_ip = cpu_regs.ip.dword[0];
 		return;
 	} else {	/* Protected mode IRET */
 		if (reg_flags & FLAG_VM) {
@@ -847,6 +850,7 @@ void CPU_IRET(bool use32,Bitu oldeip) {
 					reg_esp=(tempesp&cpu.stack.notmask)|((tempesp+2)&cpu.stack.mask);
 
 					reg_eip=(Bit32u)new_eip;
+last_ip = cpu_regs.ip.dword[0];
 					SegSet16(cs,new_cs);
 					/* IOPL can not be modified in v86 mode by IRET */
 					CPU_SetFlags(new_flags,FMASK_NORMAL|FLAG_NT);

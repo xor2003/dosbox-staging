@@ -1619,6 +1619,7 @@ throw StackPop(skip);
         {
 #ifdef SHADOW_STACK
 shadow_stack.decreasedeep();
+#endif
              if (ex.deep > 0)
              {
  #if M2CDEBUG > 0
@@ -1631,10 +1632,9 @@ shadow_stack.decreasedeep();
  #if M2CDEBUG > 0
   log_debug("~~Finished with skipping calls\n");
  #endif
-		
+		last_ip = cpu_regs.ip.dword[0];
              }
 
-#endif
         }
        return true;
     }

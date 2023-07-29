@@ -10,6 +10,7 @@ typedef Bit32u dd;
 
 extern bool collect_rt_info;
 extern bool collect_rt_info_vars;
+extern Bit32u last_ip;
 
 #include <unordered_set>
 #include <unordered_map>

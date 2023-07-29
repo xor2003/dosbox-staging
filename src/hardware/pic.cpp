@@ -517,6 +517,7 @@ void PIC_RemoveEvents(PIC_EventHandler handler) {
 }
 
 
+extern Bit32u last_ip;
 bool PIC_RunQueue(void) {
 	/* Check to see if a new millisecond needs to be started */
 	CPU_CycleLeft+=CPU_Cycles;
@@ -558,6 +559,7 @@ bool PIC_RunQueue(void) {
 	} else CPU_Cycles=CPU_CycleLeft;
 	CPU_CycleLeft-=CPU_Cycles;
 	if (PIC_IRQCheck) PIC_runIRQs();
+	last_ip = cpu_regs.ip.dword[0];
 	return true;
 }
 
