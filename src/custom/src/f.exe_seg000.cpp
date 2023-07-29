@@ -430,7 +430,8 @@ cs=0x1a2;eip=0x00034e; 	J(RETN(0));	// 509                  retn ;~ 01A2:034E
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_10027: 	goto loc_10027;
+                case m2c::kloc_1001b: 	goto loc_1001b;
+        case m2c::kloc_10027: 	goto loc_10027;
         case m2c::kloc_10059: 	goto loc_10059;
         case m2c::kloc_10080: 	goto loc_10080;
         case m2c::kloc_100b9: 	goto loc_100b9;
@@ -457,7 +458,6 @@ cs=0x1a2;eip=0x00034e; 	J(RETN(0));	// 509                  retn ;~ 01A2:034E
         case m2c::kret_1a2_1e: 	goto ret_1a2_1e;
         case m2c::kret_1a2_1f: 	goto ret_1a2_1f;
         case m2c::kret_1a2_20: 	goto ret_1a2_20;
-        case m2c::kseg000_1b_proc: 	goto seg000_1b_proc;
         case m2c::ksub_10273: 	goto sub_10273;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };

@@ -4,411 +4,405 @@
         #include "f.exe.h"
 
 
+ bool print_line(m2c::_offsets, struct m2c::_STATE* _state){return _group27(m2c::kprint_line, _state);}
+
  bool seg000_1b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::kseg000_1b_proc, _state);}
 
- bool seg001_8d4_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::kseg001_8d4_proc, _state);}
+ bool seg004_296_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::kseg004_296_proc, _state);}
 
- bool seg004_296_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::kseg004_296_proc, _state);}
+ bool seg004_2cd_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::kseg004_2cd_proc, _state);}
 
- bool seg004_2cd_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::kseg004_2cd_proc, _state);}
+ bool seg004_2f9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::kseg004_2f9_proc, _state);}
 
- bool seg004_2f9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::kseg004_2f9_proc, _state);}
+ bool seg2623_128d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::kseg2623_128d_proc, _state);}
 
- bool seg2623_128d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::kseg2623_128d_proc, _state);}
+ bool seg2623_1538_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::kseg2623_1538_proc, _state);}
 
- bool seg2623_1538_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group19(m2c::kseg2623_1538_proc, _state);}
+ bool seg2623_16b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::kseg2623_16b_proc, _state);}
 
- bool seg2623_16b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::kseg2623_16b_proc, _state);}
+ bool seg2623_1705_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::kseg2623_1705_proc, _state);}
 
- bool seg2623_1705_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::kseg2623_1705_proc, _state);}
+ bool seg2623_189d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group19(m2c::kseg2623_189d_proc, _state);}
 
- bool seg2623_189d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group21(m2c::kseg2623_189d_proc, _state);}
+ bool seg2623_194_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::kseg2623_194_proc, _state);}
 
- bool seg2623_194_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::kseg2623_194_proc, _state);}
+ bool seg2623_1e8c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::kseg2623_1e8c_proc, _state);}
 
- bool seg2623_1e8c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group22(m2c::kseg2623_1e8c_proc, _state);}
+ bool seg2623_21c9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group21(m2c::kseg2623_21c9_proc, _state);}
 
- bool seg2623_21c9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::kseg2623_21c9_proc, _state);}
+ bool seg2623_2203_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group22(m2c::kseg2623_2203_proc, _state);}
 
- bool seg2623_2203_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group24(m2c::kseg2623_2203_proc, _state);}
+ bool seg2623_233_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::kseg2623_233_proc, _state);}
 
- bool seg2623_233_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::kseg2623_233_proc, _state);}
+ bool seg2623_265e_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::kseg2623_265e_proc, _state);}
 
- bool seg2623_265e_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::kseg2623_265e_proc, _state);}
+ bool seg2623_2692_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::kseg2623_2692_proc, _state);}
 
- bool seg2623_2692_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::kseg2623_2692_proc, _state);}
+ bool seg2623_2746_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group24(m2c::kseg2623_2746_proc, _state);}
 
- bool seg2623_2746_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group26(m2c::kseg2623_2746_proc, _state);}
+ bool seg2623_287a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::kseg2623_287a_proc, _state);}
 
- bool seg2623_287a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group27(m2c::kseg2623_287a_proc, _state);}
+ bool seg2623_2a8_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::kseg2623_2a8_proc, _state);}
 
- bool seg2623_2a8_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::kseg2623_2a8_proc, _state);}
+ bool seg2623_2e7_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::kseg2623_2e7_proc, _state);}
 
- bool seg2623_2e7_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::kseg2623_2e7_proc, _state);}
+ bool seg2623_2eba_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group26(m2c::kseg2623_2eba_proc, _state);}
 
- bool seg2623_2eba_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group28(m2c::kseg2623_2eba_proc, _state);}
+ bool seg2623_2fa5_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group27(m2c::kseg2623_2fa5_proc, _state);}
 
- bool seg2623_3478_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::kseg2623_3478_proc, _state);}
+ bool seg2623_3478_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group28(m2c::kseg2623_3478_proc, _state);}
 
- bool seg2623_3784_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::kseg2623_3784_proc, _state);}
+ bool seg2623_3784_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::kseg2623_3784_proc, _state);}
 
- bool seg2623_39b4_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::kseg2623_39b4_proc, _state);}
+ bool seg2623_39b4_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::kseg2623_39b4_proc, _state);}
 
- bool seg2623_3a14_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::kseg2623_3a14_proc, _state);}
+ bool seg2623_3a14_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::kseg2623_3a14_proc, _state);}
 
- bool seg2623_3bc_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_3bc_proc, _state);}
+ bool seg2623_3bc_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::kseg2623_3bc_proc, _state);}
 
- bool seg2623_3c42_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::kseg2623_3c42_proc, _state);}
+ bool seg2623_3c42_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::kseg2623_3c42_proc, _state);}
 
- bool seg2623_3c4d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::kseg2623_3c4d_proc, _state);}
+ bool seg2623_3c4d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::kseg2623_3c4d_proc, _state);}
 
- bool seg2623_3cd7_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::kseg2623_3cd7_proc, _state);}
+ bool seg2623_3cd7_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::kseg2623_3cd7_proc, _state);}
 
- bool seg2623_3ef0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::kseg2623_3ef0_proc, _state);}
+ bool seg2623_3ef0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::kseg2623_3ef0_proc, _state);}
 
- bool seg2623_469_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_469_proc, _state);}
+ bool seg2623_469_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::kseg2623_469_proc, _state);}
 
- bool seg2623_4d16_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::kseg2623_4d16_proc, _state);}
+ bool seg2623_4d16_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::kseg2623_4d16_proc, _state);}
 
- bool seg2623_5bde_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::kseg2623_5bde_proc, _state);}
+ bool seg2623_5bde_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::kseg2623_5bde_proc, _state);}
 
- bool seg2623_5eee_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::kseg2623_5eee_proc, _state);}
+ bool seg2623_5eee_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::kseg2623_5eee_proc, _state);}
 
- bool seg2623_6168_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::kseg2623_6168_proc, _state);}
+ bool seg2623_65a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::kseg2623_65a_proc, _state);}
 
- bool seg2623_65a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_65a_proc, _state);}
+ bool seg2623_6e1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::kseg2623_6e1_proc, _state);}
 
- bool seg2623_6e1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::kseg2623_6e1_proc, _state);}
+ bool seg2623_87cc_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::kseg2623_87cc_proc, _state);}
 
- bool seg2623_87cc_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::kseg2623_87cc_proc, _state);}
+ bool seg2623_896d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::kseg2623_896d_proc, _state);}
 
- bool seg2623_896d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::kseg2623_896d_proc, _state);}
+ bool seg2623_9bda_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::kseg2623_9bda_proc, _state);}
 
- bool seg2623_8e5c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group43(m2c::kseg2623_8e5c_proc, _state);}
+ bool seg2623_9c05_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group43(m2c::kseg2623_9c05_proc, _state);}
 
- bool seg2623_9bda_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group44(m2c::kseg2623_9bda_proc, _state);}
+ bool seg2623_9c35_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group44(m2c::kseg2623_9c35_proc, _state);}
 
- bool seg2623_9c05_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group45(m2c::kseg2623_9c05_proc, _state);}
+ bool seg2623_9ca9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group45(m2c::kseg2623_9ca9_proc, _state);}
 
- bool seg2623_9c35_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group46(m2c::kseg2623_9c35_proc, _state);}
+ bool seg2623_9da9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group46(m2c::kseg2623_9da9_proc, _state);}
 
- bool seg2623_9ca9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group47(m2c::kseg2623_9ca9_proc, _state);}
+ bool seg2623_9e3d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group47(m2c::kseg2623_9e3d_proc, _state);}
 
- bool seg2623_9da9_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group48(m2c::kseg2623_9da9_proc, _state);}
+ bool seg2623_9e75_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group48(m2c::kseg2623_9e75_proc, _state);}
 
- bool seg2623_9e3d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group49(m2c::kseg2623_9e3d_proc, _state);}
+ bool seg2623_9eaf_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group49(m2c::kseg2623_9eaf_proc, _state);}
 
- bool seg2623_9e75_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group50(m2c::kseg2623_9e75_proc, _state);}
+ bool seg2623_a0e1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group50(m2c::kseg2623_a0e1_proc, _state);}
 
- bool seg2623_9eaf_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group51(m2c::kseg2623_9eaf_proc, _state);}
+ bool seg2623_a133_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group51(m2c::kseg2623_a133_proc, _state);}
 
- bool seg2623_a0e1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group52(m2c::kseg2623_a0e1_proc, _state);}
+ bool seg2623_a17c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group52(m2c::kseg2623_a17c_proc, _state);}
 
- bool seg2623_a133_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group53(m2c::kseg2623_a133_proc, _state);}
+ bool seg2623_a1aa_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group53(m2c::kseg2623_a1aa_proc, _state);}
 
- bool seg2623_a17c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group54(m2c::kseg2623_a17c_proc, _state);}
+ bool seg2623_a297_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group54(m2c::kseg2623_a297_proc, _state);}
 
- bool seg2623_a1aa_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group55(m2c::kseg2623_a1aa_proc, _state);}
+ bool seg2623_a767_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group55(m2c::kseg2623_a767_proc, _state);}
 
- bool seg2623_a297_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group56(m2c::kseg2623_a297_proc, _state);}
+ bool seg2623_a8_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::kseg2623_a8_proc, _state);}
 
- bool seg2623_a767_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group57(m2c::kseg2623_a767_proc, _state);}
+ bool seg2623_a8c3_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group56(m2c::kseg2623_a8c3_proc, _state);}
 
- bool seg2623_a8_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::kseg2623_a8_proc, _state);}
+ bool seg2623_a92e_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group57(m2c::kseg2623_a92e_proc, _state);}
 
- bool seg2623_a8c3_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group58(m2c::kseg2623_a8c3_proc, _state);}
+ bool seg2623_a95d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group58(m2c::kseg2623_a95d_proc, _state);}
 
- bool seg2623_a92e_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group59(m2c::kseg2623_a92e_proc, _state);}
+ bool seg2623_a98b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group59(m2c::kseg2623_a98b_proc, _state);}
 
- bool seg2623_a95d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group60(m2c::kseg2623_a95d_proc, _state);}
+ bool seg2623_b04_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_b04_proc, _state);}
 
- bool seg2623_a98b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group61(m2c::kseg2623_a98b_proc, _state);}
+ bool seg2623_be0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_be0_proc, _state);}
 
- bool seg2623_a9f4_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group62(m2c::kseg2623_a9f4_proc, _state);}
+ bool seg2623_da5b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group60(m2c::kseg2623_da5b_proc, _state);}
 
- bool seg2623_b04_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::kseg2623_b04_proc, _state);}
+ bool seg2623_dfe3_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group61(m2c::kseg2623_dfe3_proc, _state);}
 
- bool seg2623_be0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::kseg2623_be0_proc, _state);}
+ bool seg2623_e0cf_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group62(m2c::kseg2623_e0cf_proc, _state);}
 
- bool seg2623_da5b_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group63(m2c::kseg2623_da5b_proc, _state);}
+ bool seg2623_e139_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group63(m2c::kseg2623_e139_proc, _state);}
 
- bool seg2623_dfe3_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group64(m2c::kseg2623_dfe3_proc, _state);}
+ bool seg2623_e215_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group64(m2c::kseg2623_e215_proc, _state);}
 
- bool seg2623_e0cf_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group65(m2c::kseg2623_e0cf_proc, _state);}
+ bool seg2623_e4c2_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::kseg2623_e4c2_proc, _state);}
 
- bool seg2623_e139_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::kseg2623_e139_proc, _state);}
+ bool seg2623_e4f_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::kseg2623_e4f_proc, _state);}
 
- bool seg2623_e215_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group67(m2c::kseg2623_e215_proc, _state);}
+ bool seg2623_f58c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group68(m2c::kseg2623_f58c_proc, _state);}
 
- bool seg2623_e4c2_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group69(m2c::kseg2623_e4c2_proc, _state);}
+ bool seg2623_f65c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group69(m2c::kseg2623_f65c_proc, _state);}
 
- bool seg2623_e4f_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::kseg2623_e4f_proc, _state);}
+ bool seg35ab_1938_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group75(m2c::kseg35ab_1938_proc, _state);}
 
- bool seg2623_f58c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group71(m2c::kseg2623_f58c_proc, _state);}
+ bool seg35ab_1bd1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group76(m2c::kseg35ab_1bd1_proc, _state);}
 
- bool seg2623_f65c_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group72(m2c::kseg2623_f65c_proc, _state);}
+ bool seg35ab_1e96_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group77(m2c::kseg35ab_1e96_proc, _state);}
 
- bool seg35ab_1938_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group78(m2c::kseg35ab_1938_proc, _state);}
+ bool seg35ab_1f25_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group78(m2c::kseg35ab_1f25_proc, _state);}
 
- bool seg35ab_1bd1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group79(m2c::kseg35ab_1bd1_proc, _state);}
+ bool seg35ab_5a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group70(m2c::kseg35ab_5a_proc, _state);}
 
- bool seg35ab_1e96_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group80(m2c::kseg35ab_1e96_proc, _state);}
+ bool seg35ab_67a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group71(m2c::kseg35ab_67a_proc, _state);}
 
- bool seg35ab_1f25_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group81(m2c::kseg35ab_1f25_proc, _state);}
+ bool seg35ab_776_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group72(m2c::kseg35ab_776_proc, _state);}
 
- bool seg35ab_5a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group73(m2c::kseg35ab_5a_proc, _state);}
+ bool seg35ab_a32_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group73(m2c::kseg35ab_a32_proc, _state);}
 
- bool seg35ab_67a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group74(m2c::kseg35ab_67a_proc, _state);}
+ bool seg35ab_f78_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group74(m2c::kseg35ab_f78_proc, _state);}
 
- bool seg35ab_776_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group75(m2c::kseg35ab_776_proc, _state);}
+ bool seg37ca_11_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group80(m2c::kseg37ca_11_proc, _state);}
 
- bool seg35ab_a32_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group76(m2c::kseg35ab_a32_proc, _state);}
+ bool seg37ca_9a0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group81(m2c::kseg37ca_9a0_proc, _state);}
 
- bool seg35ab_f78_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group77(m2c::kseg35ab_f78_proc, _state);}
+ bool seg37ca_b54_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group82(m2c::kseg37ca_b54_proc, _state);}
 
- bool seg37ca_11_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group83(m2c::kseg37ca_11_proc, _state);}
+ bool seg37ca_cd1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group83(m2c::kseg37ca_cd1_proc, _state);}
 
- bool seg37ca_9a0_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group84(m2c::kseg37ca_9a0_proc, _state);}
+ bool seg37ca_d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group79(m2c::kseg37ca_d_proc, _state);}
 
- bool seg37ca_b54_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group85(m2c::kseg37ca_b54_proc, _state);}
+ bool seg3897_70_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group84(m2c::kseg3897_70_proc, _state);}
 
- bool seg37ca_cd1_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group86(m2c::kseg37ca_cd1_proc, _state);}
-
- bool seg37ca_d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group82(m2c::kseg37ca_d_proc, _state);}
-
- bool seg3897_70_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group87(m2c::kseg3897_70_proc, _state);}
-
- bool start(m2c::_offsets, struct m2c::_STATE* _state){return _group69(m2c::kstart, _state);}
+ bool start(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::kstart, _state);}
 
  bool sub_10273(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_10273, _state);}
 
- bool sub_10f7a(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_10f7a, _state);}
+ bool sub_128e5(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_128e5, _state);}
 
- bool sub_128e5(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_128e5, _state);}
+ bool sub_1298e(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_1298e, _state);}
 
- bool sub_1298e(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_1298e, _state);}
+ bool sub_12a31(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_12a31, _state);}
 
- bool sub_12a31(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_12a31, _state);}
+ bool sub_12a3b(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_12a3b, _state);}
 
- bool sub_12a3b(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_12a3b, _state);}
+ bool sub_12a45(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_12a45, _state);}
 
- bool sub_12a45(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_12a45, _state);}
+ bool sub_12e25(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_12e25, _state);}
 
- bool sub_12e25(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_12e25, _state);}
+ bool sub_12f09(m2c::_offsets, struct m2c::_STATE* _state){return _group2(m2c::ksub_12f09, _state);}
 
- bool sub_12f09(m2c::_offsets, struct m2c::_STATE* _state){return _group3(m2c::ksub_12f09, _state);}
+ bool sub_15dee(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_15dee, _state);}
 
- bool sub_15dee(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::ksub_15dee, _state);}
+ bool sub_15e51(m2c::_offsets, struct m2c::_STATE* _state){return _group4(m2c::ksub_15e51, _state);}
 
- bool sub_15e51(m2c::_offsets, struct m2c::_STATE* _state){return _group5(m2c::ksub_15e51, _state);}
+ bool sub_15fa8(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::ksub_15fa8, _state);}
 
- bool sub_15fa8(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_15fa8, _state);}
+ bool sub_15fab(m2c::_offsets, struct m2c::_STATE* _state){return _group6(m2c::ksub_15fab, _state);}
 
- bool sub_15fab(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_15fab, _state);}
+ bool sub_15ff1(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_15ff1, _state);}
 
- bool sub_15ff1(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_15ff1, _state);}
+ bool sub_15ff4(m2c::_offsets, struct m2c::_STATE* _state){return _group7(m2c::ksub_15ff4, _state);}
 
- bool sub_15ff4(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_15ff4, _state);}
+ bool sub_15ffa(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_15ffa, _state);}
 
- bool sub_15ffa(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_15ffa, _state);}
+ bool sub_1614b(m2c::_offsets, struct m2c::_STATE* _state){return _group8(m2c::ksub_1614b, _state);}
 
- bool sub_1614b(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_1614b, _state);}
+ bool sub_26240(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_26240, _state);}
 
- bool sub_26240(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::ksub_26240, _state);}
+ bool sub_26377(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_26377, _state);}
 
- bool sub_26377(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_26377, _state);}
+ bool sub_263b8(m2c::_offsets, struct m2c::_STATE* _state){return _group9(m2c::ksub_263b8, _state);}
 
- bool sub_263b8(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_263b8, _state);}
+ bool sub_26441(m2c::_offsets, struct m2c::_STATE* _state){return _group10(m2c::ksub_26441, _state);}
 
- bool sub_26441(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::ksub_26441, _state);}
+ bool sub_264ca(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_264ca, _state);}
 
- bool sub_264ca(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_264ca, _state);}
+ bool sub_2650a(m2c::_offsets, struct m2c::_STATE* _state){return _group11(m2c::ksub_2650a, _state);}
 
- bool sub_2650a(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_2650a, _state);}
+ bool sub_26512(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::ksub_26512, _state);}
 
- bool sub_26512(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::ksub_26512, _state);}
+ bool sub_26530(m2c::_offsets, struct m2c::_STATE* _state){return _group12(m2c::ksub_26530, _state);}
 
- bool sub_26530(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::ksub_26530, _state);}
+ bool sub_26610(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_26610, _state);}
 
- bool sub_26610(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26610, _state);}
+ bool sub_26764(m2c::_offsets, struct m2c::_STATE* _state){return _group13(m2c::ksub_26764, _state);}
 
- bool sub_26764(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26764, _state);}
+ bool sub_26950(m2c::_offsets, struct m2c::_STATE* _state){return _group14(m2c::ksub_26950, _state);}
 
- bool sub_26950(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::ksub_26950, _state);}
+ bool sub_26ba0(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26ba0, _state);}
 
- bool sub_26ba0(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_26ba0, _state);}
+ bool sub_26c88(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26c88, _state);}
 
- bool sub_26c88(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_26c88, _state);}
+ bool sub_26d32(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26d32, _state);}
 
- bool sub_26d32(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_26d32, _state);}
+ bool sub_26dde(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_26dde, _state);}
 
- bool sub_26dde(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_26dde, _state);}
+ bool sub_27068(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_27068, _state);}
 
- bool sub_27068(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_27068, _state);}
+ bool sub_2707d(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_2707d, _state);}
 
- bool sub_2707d(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_2707d, _state);}
+ bool sub_273ea(m2c::_offsets, struct m2c::_STATE* _state){return _group15(m2c::ksub_273ea, _state);}
 
- bool sub_273ea(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_273ea, _state);}
+ bool sub_27674(m2c::_offsets, struct m2c::_STATE* _state){return _group16(m2c::ksub_27674, _state);}
 
- bool sub_27674(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::ksub_27674, _state);}
+ bool sub_2772c(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_2772c, _state);}
 
- bool sub_2772c(m2c::_offsets, struct m2c::_STATE* _state){return _group19(m2c::ksub_2772c, _state);}
+ bool sub_2775a(m2c::_offsets, struct m2c::_STATE* _state){return _group17(m2c::ksub_2775a, _state);}
 
- bool sub_2775a(m2c::_offsets, struct m2c::_STATE* _state){return _group19(m2c::ksub_2775a, _state);}
+ bool sub_278a6(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::ksub_278a6, _state);}
 
- bool sub_278a6(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::ksub_278a6, _state);}
+ bool sub_2794a(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::ksub_2794a, _state);}
 
- bool sub_2794a(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::ksub_2794a, _state);}
+ bool sub_27950(m2c::_offsets, struct m2c::_STATE* _state){return _group18(m2c::ksub_27950, _state);}
 
- bool sub_27950(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::ksub_27950, _state);}
+ bool sub_27a71(m2c::_offsets, struct m2c::_STATE* _state){return _group19(m2c::ksub_27a71, _state);}
 
- bool sub_27a71(m2c::_offsets, struct m2c::_STATE* _state){return _group21(m2c::ksub_27a71, _state);}
+ bool sub_2803e(m2c::_offsets, struct m2c::_STATE* _state){return _group20(m2c::ksub_2803e, _state);}
 
- bool sub_2803e(m2c::_offsets, struct m2c::_STATE* _state){return _group22(m2c::ksub_2803e, _state);}
+ bool sub_283f6(m2c::_offsets, struct m2c::_STATE* _state){return _group21(m2c::ksub_283f6, _state);}
 
- bool sub_283f6(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::ksub_283f6, _state);}
+ bool sub_283fa(m2c::_offsets, struct m2c::_STATE* _state){return _group22(m2c::ksub_283fa, _state);}
 
- bool sub_283fa(m2c::_offsets, struct m2c::_STATE* _state){return _group24(m2c::ksub_283fa, _state);}
+ bool sub_284e8(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::ksub_284e8, _state);}
 
- bool sub_284e8(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::ksub_284e8, _state);}
+ bool sub_2889b(m2c::_offsets, struct m2c::_STATE* _state){return _group23(m2c::ksub_2889b, _state);}
 
- bool sub_2889b(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::ksub_2889b, _state);}
+ bool sub_2896e(m2c::_offsets, struct m2c::_STATE* _state){return _group24(m2c::ksub_2896e, _state);}
 
- bool sub_2896e(m2c::_offsets, struct m2c::_STATE* _state){return _group26(m2c::ksub_2896e, _state);}
+ bool sub_28aa4(m2c::_offsets, struct m2c::_STATE* _state){return _group25(m2c::ksub_28aa4, _state);}
 
- bool sub_28aa4(m2c::_offsets, struct m2c::_STATE* _state){return _group27(m2c::ksub_28aa4, _state);}
+ bool sub_29084(m2c::_offsets, struct m2c::_STATE* _state){return _group26(m2c::ksub_29084, _state);}
 
- bool sub_29084(m2c::_offsets, struct m2c::_STATE* _state){return _group28(m2c::ksub_29084, _state);}
+ bool sub_2968e(m2c::_offsets, struct m2c::_STATE* _state){return _group28(m2c::ksub_2968e, _state);}
 
- bool sub_2968e(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::ksub_2968e, _state);}
+ bool sub_2997a(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::ksub_2997a, _state);}
 
- bool sub_2997a(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::ksub_2997a, _state);}
+ bool sub_29bda(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::ksub_29bda, _state);}
 
- bool sub_29bda(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::ksub_29bda, _state);}
+ bool sub_29bf0(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::ksub_29bf0, _state);}
 
- bool sub_29bf0(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_29bf0, _state);}
+ bool sub_29df9(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_29df9, _state);}
 
- bool sub_29df9(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_29df9, _state);}
+ bool sub_29dfd(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_29dfd, _state);}
 
- bool sub_29dfd(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_29dfd, _state);}
+ bool sub_29e6b(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_29e6b, _state);}
 
- bool sub_29e6b(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::ksub_29e6b, _state);}
+ bool sub_29e77(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::ksub_29e77, _state);}
 
- bool sub_29e77(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::ksub_29e77, _state);}
+ bool sub_29ea8(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::ksub_29ea8, _state);}
 
- bool sub_29ea8(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::ksub_29ea8, _state);}
+ bool sub_29ee6(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::ksub_29ee6, _state);}
 
- bool sub_29ee6(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::ksub_29ee6, _state);}
+ bool sub_2a113(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::ksub_2a113, _state);}
 
- bool sub_2a113(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::ksub_2a113, _state);}
+ bool sub_2a1a2(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::ksub_2a1a2, _state);}
 
- bool sub_2a1a2(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::ksub_2a1a2, _state);}
+ bool sub_2c015(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::ksub_2c015, _state);}
 
- bool sub_2c015(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2c015, _state);}
+ bool sub_2c36b(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2c36b, _state);}
 
- bool sub_2c36b(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2c36b, _state);}
+ bool sub_2c3a2(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2c3a2, _state);}
 
- bool sub_2e928(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::ksub_2e928, _state);}
+ bool sub_2e928(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2e928, _state);}
 
- bool sub_2ea1a(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::ksub_2ea1a, _state);}
+ bool sub_2ea1a(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::ksub_2ea1a, _state);}
 
- bool sub_2f080(m2c::_offsets, struct m2c::_STATE* _state){return _group43(m2c::ksub_2f080, _state);}
+ bool sub_2fdc8(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::ksub_2fdc8, _state);}
 
- bool sub_2fdc8(m2c::_offsets, struct m2c::_STATE* _state){return _group44(m2c::ksub_2fdc8, _state);}
+ bool sub_2fe11(m2c::_offsets, struct m2c::_STATE* _state){return _group43(m2c::ksub_2fe11, _state);}
 
- bool sub_2fe11(m2c::_offsets, struct m2c::_STATE* _state){return _group45(m2c::ksub_2fe11, _state);}
+ bool sub_2fe3c(m2c::_offsets, struct m2c::_STATE* _state){return _group44(m2c::ksub_2fe3c, _state);}
 
- bool sub_2fe3c(m2c::_offsets, struct m2c::_STATE* _state){return _group46(m2c::ksub_2fe3c, _state);}
+ bool sub_2feb4(m2c::_offsets, struct m2c::_STATE* _state){return _group45(m2c::ksub_2feb4, _state);}
 
- bool sub_2feb4(m2c::_offsets, struct m2c::_STATE* _state){return _group47(m2c::ksub_2feb4, _state);}
+ bool sub_2ffb6(m2c::_offsets, struct m2c::_STATE* _state){return _group46(m2c::ksub_2ffb6, _state);}
 
- bool sub_2ffb6(m2c::_offsets, struct m2c::_STATE* _state){return _group48(m2c::ksub_2ffb6, _state);}
+ bool sub_2ffe0(m2c::_offsets, struct m2c::_STATE* _state){return _group47(m2c::ksub_2ffe0, _state);}
 
- bool sub_2ffe0(m2c::_offsets, struct m2c::_STATE* _state){return _group49(m2c::ksub_2ffe0, _state);}
+ bool sub_3008d(m2c::_offsets, struct m2c::_STATE* _state){return _group48(m2c::ksub_3008d, _state);}
 
- bool sub_3008d(m2c::_offsets, struct m2c::_STATE* _state){return _group50(m2c::ksub_3008d, _state);}
+ bool sub_300c4(m2c::_offsets, struct m2c::_STATE* _state){return _group49(m2c::ksub_300c4, _state);}
 
- bool sub_300c4(m2c::_offsets, struct m2c::_STATE* _state){return _group51(m2c::ksub_300c4, _state);}
+ bool sub_302fb(m2c::_offsets, struct m2c::_STATE* _state){return _group50(m2c::ksub_302fb, _state);}
 
- bool sub_302fb(m2c::_offsets, struct m2c::_STATE* _state){return _group52(m2c::ksub_302fb, _state);}
+ bool sub_3032e(m2c::_offsets, struct m2c::_STATE* _state){return _group51(m2c::ksub_3032e, _state);}
 
- bool sub_3032e(m2c::_offsets, struct m2c::_STATE* _state){return _group53(m2c::ksub_3032e, _state);}
+ bool sub_3036a(m2c::_offsets, struct m2c::_STATE* _state){return _group52(m2c::ksub_3036a, _state);}
 
- bool sub_3036a(m2c::_offsets, struct m2c::_STATE* _state){return _group54(m2c::ksub_3036a, _state);}
+ bool sub_303b3(m2c::_offsets, struct m2c::_STATE* _state){return _group53(m2c::ksub_303b3, _state);}
 
- bool sub_303b3(m2c::_offsets, struct m2c::_STATE* _state){return _group55(m2c::ksub_303b3, _state);}
+ bool sub_3048c(m2c::_offsets, struct m2c::_STATE* _state){return _group54(m2c::ksub_3048c, _state);}
 
- bool sub_3048c(m2c::_offsets, struct m2c::_STATE* _state){return _group56(m2c::ksub_3048c, _state);}
+ bool sub_30970(m2c::_offsets, struct m2c::_STATE* _state){return _group55(m2c::ksub_30970, _state);}
 
- bool sub_30970(m2c::_offsets, struct m2c::_STATE* _state){return _group57(m2c::ksub_30970, _state);}
+ bool sub_30aa2(m2c::_offsets, struct m2c::_STATE* _state){return _group56(m2c::ksub_30aa2, _state);}
 
- bool sub_30aa2(m2c::_offsets, struct m2c::_STATE* _state){return _group58(m2c::ksub_30aa2, _state);}
+ bool sub_30af8(m2c::_offsets, struct m2c::_STATE* _state){return _group57(m2c::ksub_30af8, _state);}
 
- bool sub_30af8(m2c::_offsets, struct m2c::_STATE* _state){return _group59(m2c::ksub_30af8, _state);}
+ bool sub_30b64(m2c::_offsets, struct m2c::_STATE* _state){return _group58(m2c::ksub_30b64, _state);}
 
- bool sub_30b64(m2c::_offsets, struct m2c::_STATE* _state){return _group60(m2c::ksub_30b64, _state);}
+ bool sub_30b92(m2c::_offsets, struct m2c::_STATE* _state){return _group59(m2c::ksub_30b92, _state);}
 
- bool sub_30b92(m2c::_offsets, struct m2c::_STATE* _state){return _group61(m2c::ksub_30b92, _state);}
+ bool sub_33c65(m2c::_offsets, struct m2c::_STATE* _state){return _group60(m2c::ksub_33c65, _state);}
 
- bool sub_30bec(m2c::_offsets, struct m2c::_STATE* _state){return _group62(m2c::ksub_30bec, _state);}
+ bool sub_340c4(m2c::_offsets, struct m2c::_STATE* _state){return _group61(m2c::ksub_340c4, _state);}
 
- bool sub_33c65(m2c::_offsets, struct m2c::_STATE* _state){return _group63(m2c::ksub_33c65, _state);}
+ bool sub_341ec(m2c::_offsets, struct m2c::_STATE* _state){return _group61(m2c::ksub_341ec, _state);}
 
- bool sub_340c4(m2c::_offsets, struct m2c::_STATE* _state){return _group64(m2c::ksub_340c4, _state);}
+ bool sub_342da(m2c::_offsets, struct m2c::_STATE* _state){return _group62(m2c::ksub_342da, _state);}
 
- bool sub_341ec(m2c::_offsets, struct m2c::_STATE* _state){return _group64(m2c::ksub_341ec, _state);}
+ bool sub_3434c(m2c::_offsets, struct m2c::_STATE* _state){return _group63(m2c::ksub_3434c, _state);}
 
- bool sub_342da(m2c::_offsets, struct m2c::_STATE* _state){return _group65(m2c::ksub_342da, _state);}
+ bool sub_34428(m2c::_offsets, struct m2c::_STATE* _state){return _group64(m2c::ksub_34428, _state);}
 
- bool sub_3434c(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::ksub_3434c, _state);}
+ bool sub_344bc(m2c::_offsets, struct m2c::_STATE* _state){return _group65(m2c::ksub_344bc, _state);}
 
- bool sub_34428(m2c::_offsets, struct m2c::_STATE* _state){return _group67(m2c::ksub_34428, _state);}
+ bool sub_34503(m2c::_offsets, struct m2c::_STATE* _state){return _group65(m2c::ksub_34503, _state);}
 
- bool sub_344bc(m2c::_offsets, struct m2c::_STATE* _state){return _group68(m2c::ksub_344bc, _state);}
+ bool sub_34714(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::ksub_34714, _state);}
 
- bool sub_34503(m2c::_offsets, struct m2c::_STATE* _state){return _group68(m2c::ksub_34503, _state);}
+ bool sub_347d8(m2c::_offsets, struct m2c::_STATE* _state){return _group66(m2c::ksub_347d8, _state);}
 
- bool sub_34714(m2c::_offsets, struct m2c::_STATE* _state){return _group69(m2c::ksub_34714, _state);}
+ bool sub_347ef(m2c::_offsets, struct m2c::_STATE* _state){return _group67(m2c::ksub_347ef, _state);}
 
- bool sub_347ef(m2c::_offsets, struct m2c::_STATE* _state){return _group70(m2c::ksub_347ef, _state);}
+ bool sub_34834(m2c::_offsets, struct m2c::_STATE* _state){return _group67(m2c::ksub_34834, _state);}
 
- bool sub_34834(m2c::_offsets, struct m2c::_STATE* _state){return _group70(m2c::ksub_34834, _state);}
+ bool sub_3576e(m2c::_offsets, struct m2c::_STATE* _state){return _group68(m2c::ksub_3576e, _state);}
 
- bool sub_3576e(m2c::_offsets, struct m2c::_STATE* _state){return _group71(m2c::ksub_3576e, _state);}
+ bool sub_3588f(m2c::_offsets, struct m2c::_STATE* _state){return _group69(m2c::ksub_3588f, _state);}
 
- bool sub_3588f(m2c::_offsets, struct m2c::_STATE* _state){return _group72(m2c::ksub_3588f, _state);}
+ bool sub_35ab2(m2c::_offsets, struct m2c::_STATE* _state){return _group70(m2c::ksub_35ab2, _state);}
 
- bool sub_35ab2(m2c::_offsets, struct m2c::_STATE* _state){return _group73(m2c::ksub_35ab2, _state);}
+ bool sub_3611c(m2c::_offsets, struct m2c::_STATE* _state){return _group71(m2c::ksub_3611c, _state);}
 
- bool sub_3611c(m2c::_offsets, struct m2c::_STATE* _state){return _group74(m2c::ksub_3611c, _state);}
+ bool sub_3612e(m2c::_offsets, struct m2c::_STATE* _state){return _group72(m2c::ksub_3612e, _state);}
 
- bool sub_3612e(m2c::_offsets, struct m2c::_STATE* _state){return _group75(m2c::ksub_3612e, _state);}
+ bool sub_364e6(m2c::_offsets, struct m2c::_STATE* _state){return _group73(m2c::ksub_364e6, _state);}
 
- bool sub_364e6(m2c::_offsets, struct m2c::_STATE* _state){return _group76(m2c::ksub_364e6, _state);}
+ bool sub_36ba0(m2c::_offsets, struct m2c::_STATE* _state){return _group74(m2c::ksub_36ba0, _state);}
 
- bool sub_36ba0(m2c::_offsets, struct m2c::_STATE* _state){return _group77(m2c::ksub_36ba0, _state);}
+ bool sub_372a5(m2c::_offsets, struct m2c::_STATE* _state){return _group75(m2c::ksub_372a5, _state);}
 
- bool sub_372a5(m2c::_offsets, struct m2c::_STATE* _state){return _group78(m2c::ksub_372a5, _state);}
+ bool sub_37674(m2c::_offsets, struct m2c::_STATE* _state){return _group76(m2c::ksub_37674, _state);}
 
- bool sub_37674(m2c::_offsets, struct m2c::_STATE* _state){return _group79(m2c::ksub_37674, _state);}
+ bool sub_37934(m2c::_offsets, struct m2c::_STATE* _state){return _group77(m2c::ksub_37934, _state);}
 
- bool sub_37934(m2c::_offsets, struct m2c::_STATE* _state){return _group80(m2c::ksub_37934, _state);}
+ bool sub_37986(m2c::_offsets, struct m2c::_STATE* _state){return _group78(m2c::ksub_37986, _state);}
 
- bool sub_37986(m2c::_offsets, struct m2c::_STATE* _state){return _group81(m2c::ksub_37986, _state);}
+ bool sub_37caa(m2c::_offsets, struct m2c::_STATE* _state){return _group79(m2c::ksub_37caa, _state);}
 
- bool sub_37caa(m2c::_offsets, struct m2c::_STATE* _state){return _group82(m2c::ksub_37caa, _state);}
+ bool sub_37cae(m2c::_offsets, struct m2c::_STATE* _state){return _group80(m2c::ksub_37cae, _state);}
 
- bool sub_37cae(m2c::_offsets, struct m2c::_STATE* _state){return _group83(m2c::ksub_37cae, _state);}
+ bool sub_37cb6(m2c::_offsets, struct m2c::_STATE* _state){return _group81(m2c::ksub_37cb6, _state);}
 
- bool sub_37cb6(m2c::_offsets, struct m2c::_STATE* _state){return _group84(m2c::ksub_37cb6, _state);}
+ bool sub_38641(m2c::_offsets, struct m2c::_STATE* _state){return _group82(m2c::ksub_38641, _state);}
 
- bool sub_38641(m2c::_offsets, struct m2c::_STATE* _state){return _group85(m2c::ksub_38641, _state);}
+ bool sub_3895e(m2c::_offsets, struct m2c::_STATE* _state){return _group83(m2c::ksub_3895e, _state);}
 
- bool sub_3895e(m2c::_offsets, struct m2c::_STATE* _state){return _group86(m2c::ksub_3895e, _state);}
+ bool sub_38976(m2c::_offsets, struct m2c::_STATE* _state){return _group84(m2c::ksub_38976, _state);}
 
- bool sub_38976(m2c::_offsets, struct m2c::_STATE* _state){return _group87(m2c::ksub_38976, _state);}
-
- bool sub_389c6(m2c::_offsets, struct m2c::_STATE* _state){return _group87(m2c::ksub_389c6, _state);}
+ bool sub_389c6(m2c::_offsets, struct m2c::_STATE* _state){return _group84(m2c::ksub_389c6, _state);}
 
 namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         
@@ -417,16 +411,23 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state){
     X86_REGREF
     if ((__i>>16) == 0) {__i |= ((dd)cs) << 16;}
+
     __disp=__i;
+    if ((__disp >> 16) == 0xf000)
+	{m2c::log_debug("Calling BIOS %x\n",__disp);
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+m2c::log_debug("doing return1\n");
+m2c::shadow_stack.noneedreturn();return true;}
     switch (__i) {
-        case m2c::k__def_2be4e: 	_group39(__disp, _state); break;
-        case m2c::k__unk_2648c: 	_group12(__disp, _state); break;
-        case m2c::k__unk_264b8: 	_group12(__disp, _state); break;
-        case m2c::k__unk_26abc: 	_group16(__disp, _state); break;
-        case m2c::k__unk_26e56: 	_group17(__disp, _state); break;
-        case m2c::k__unk_2b09d: 	_group38(__disp, _state); break;
+        case m2c::k__def_2be4e: 	_group38(__disp, _state); break;
+        case m2c::k__unk_2648c: 	_group10(__disp, _state); break;
+        case m2c::k__unk_264b8: 	_group10(__disp, _state); break;
+        case m2c::k__unk_26abc: 	_group14(__disp, _state); break;
+        case m2c::k__unk_26e56: 	_group15(__disp, _state); break;
+        case m2c::k__unk_2b09d: 	_group37(__disp, _state); break;
         case m2c::k_nullsub_2: 	_nullsub_2(0, _state); break;
-        case m2c::k_unk_27065: 	_group17(__disp, _state); break;
+        case m2c::k_unk_27065: 	_group15(__disp, _state); break;
         case m2c::k_unk_27be7: 	sub_27bd3(__disp, _state); break;
         case m2c::kdef_13a6f: 	sub_1389e(__disp, _state); break;
         case m2c::kloc_10000: 	mainproc(__disp, _state); break;
@@ -454,9 +455,9 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_102dd: 	_group1(__disp, _state); break;
         case m2c::kloc_1032c: 	_group1(__disp, _state); break;
         case m2c::kloc_10345: 	_group1(__disp, _state); break;
-        case m2c::kloc_10fbc: 	_group2(__disp, _state); break;
-        case m2c::kloc_10fbf: 	_group2(__disp, _state); break;
-        case m2c::kloc_10fc5: 	_group2(__disp, _state); break;
+        case m2c::kloc_10fbc: 	sub_10f7a(__disp, _state); break;
+        case m2c::kloc_10fbf: 	sub_10f7a(__disp, _state); break;
+        case m2c::kloc_10fc5: 	sub_10f7a(__disp, _state); break;
         case m2c::kloc_11041: 	sub_10fca(__disp, _state); break;
         case m2c::kloc_11044: 	sub_10fca(__disp, _state); break;
         case m2c::kloc_1104b: 	sub_10fca(__disp, _state); break;
@@ -561,15 +562,15 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_1289c: 	sub_12881(__disp, _state); break;
         case m2c::kloc_128a5: 	sub_12881(__disp, _state); break;
         case m2c::kloc_128c3: 	sub_12881(__disp, _state); break;
-        case m2c::kloc_12912: 	_group3(__disp, _state); break;
-        case m2c::kloc_12918: 	_group3(__disp, _state); break;
-        case m2c::kloc_1291d: 	_group3(__disp, _state); break;
-        case m2c::kloc_1292e: 	_group3(__disp, _state); break;
-        case m2c::kloc_12956: 	_group3(__disp, _state); break;
-        case m2c::kloc_1297d: 	_group3(__disp, _state); break;
+        case m2c::kloc_12912: 	_group2(__disp, _state); break;
+        case m2c::kloc_12918: 	_group2(__disp, _state); break;
+        case m2c::kloc_1291d: 	_group2(__disp, _state); break;
+        case m2c::kloc_1292e: 	_group2(__disp, _state); break;
+        case m2c::kloc_12956: 	_group2(__disp, _state); break;
+        case m2c::kloc_1297d: 	_group2(__disp, _state); break;
         case m2c::kloc_12a1c: 	sub_12a16(__disp, _state); break;
-        case m2c::kloc_12a4d: 	_group4(__disp, _state); break;
-        case m2c::kloc_12a5a: 	_group4(__disp, _state); break;
+        case m2c::kloc_12a4d: 	_group3(__disp, _state); break;
+        case m2c::kloc_12a5a: 	_group3(__disp, _state); break;
         case m2c::kloc_12a7b: 	sub_12a70(__disp, _state); break;
         case m2c::kloc_12a98: 	sub_12a70(__disp, _state); break;
         case m2c::kloc_12ad2: 	sub_12a70(__disp, _state); break;
@@ -597,14 +598,14 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_12e0b: 	sub_12dce(__disp, _state); break;
         case m2c::kloc_12e0e: 	sub_12dce(__disp, _state); break;
         case m2c::kloc_12e11: 	sub_12dce(__disp, _state); break;
-        case m2c::kloc_12e31: 	_group3(__disp, _state); break;
-        case m2c::kloc_12e33: 	_group3(__disp, _state); break;
-        case m2c::kloc_12e37: 	_group3(__disp, _state); break;
+        case m2c::kloc_12e31: 	_group2(__disp, _state); break;
+        case m2c::kloc_12e33: 	_group2(__disp, _state); break;
+        case m2c::kloc_12e37: 	_group2(__disp, _state); break;
         case m2c::kloc_12ee3: 	sub_12e67(__disp, _state); break;
-        case m2c::kloc_12f0f: 	_group3(__disp, _state); break;
-        case m2c::kloc_12f11: 	_group3(__disp, _state); break;
-        case m2c::kloc_12f13: 	_group3(__disp, _state); break;
-        case m2c::kloc_12f17: 	_group3(__disp, _state); break;
+        case m2c::kloc_12f0f: 	_group2(__disp, _state); break;
+        case m2c::kloc_12f11: 	_group2(__disp, _state); break;
+        case m2c::kloc_12f13: 	_group2(__disp, _state); break;
+        case m2c::kloc_12f17: 	_group2(__disp, _state); break;
         case m2c::kloc_12f87: 	sub_12f75(__disp, _state); break;
         case m2c::kloc_12fb1: 	seg127c_7cc_proc(__disp, _state); break;
         case m2c::kloc_12fe4: 	seg127c_7cc_proc(__disp, _state); break;
@@ -699,42 +700,42 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_15db4: 	seg004_1a3_proc(__disp, _state); break;
         case m2c::kloc_15dbd: 	seg004_1a3_proc(__disp, _state); break;
         case m2c::kloc_15dd7: 	sub_15dd4(__disp, _state); break;
-        case m2c::kloc_15dfc: 	_group5(__disp, _state); break;
-        case m2c::kloc_15e10: 	_group5(__disp, _state); break;
-        case m2c::kloc_15e13: 	_group5(__disp, _state); break;
-        case m2c::kloc_15e6a: 	_group6(__disp, _state); break;
-        case m2c::kloc_15e9c: 	_group6(__disp, _state); break;
-        case m2c::kloc_15eb1: 	_group6(__disp, _state); break;
-        case m2c::kloc_15ec1: 	_group6(__disp, _state); break;
-        case m2c::kloc_15ec9: 	_group6(__disp, _state); break;
-        case m2c::kloc_15ee4: 	_group6(__disp, _state); break;
-        case m2c::kloc_15ef6: 	_group6(__disp, _state); break;
+        case m2c::kloc_15dfc: 	_group4(__disp, _state); break;
+        case m2c::kloc_15e10: 	_group4(__disp, _state); break;
+        case m2c::kloc_15e13: 	_group4(__disp, _state); break;
+        case m2c::kloc_15e6a: 	_group5(__disp, _state); break;
+        case m2c::kloc_15e9c: 	_group5(__disp, _state); break;
+        case m2c::kloc_15eb1: 	_group5(__disp, _state); break;
+        case m2c::kloc_15ec1: 	_group5(__disp, _state); break;
+        case m2c::kloc_15ec9: 	_group5(__disp, _state); break;
+        case m2c::kloc_15ee4: 	_group5(__disp, _state); break;
+        case m2c::kloc_15ef6: 	_group5(__disp, _state); break;
         case m2c::kloc_15f6f: 	sub_15f6c(__disp, _state); break;
         case m2c::kloc_15f99: 	sub_15f75(__disp, _state); break;
         case m2c::kloc_15fc5: 	sub_15fb1(__disp, _state); break;
         case m2c::kloc_15fee: 	sub_15fb1(__disp, _state); break;
-        case m2c::kloc_1602b: 	_group9(__disp, _state); break;
-        case m2c::kloc_16038: 	_group9(__disp, _state); break;
-        case m2c::kloc_1603b: 	_group9(__disp, _state); break;
-        case m2c::kloc_1603e: 	_group9(__disp, _state); break;
-        case m2c::kloc_1605d: 	_group9(__disp, _state); break;
-        case m2c::kloc_1606a: 	_group9(__disp, _state); break;
-        case m2c::kloc_16075: 	_group9(__disp, _state); break;
-        case m2c::kloc_1608d: 	_group9(__disp, _state); break;
-        case m2c::kloc_160a9: 	_group9(__disp, _state); break;
-        case m2c::kloc_160b3: 	_group9(__disp, _state); break;
-        case m2c::kloc_160d2: 	_group9(__disp, _state); break;
-        case m2c::kloc_160d9: 	_group9(__disp, _state); break;
-        case m2c::kloc_160de: 	_group9(__disp, _state); break;
-        case m2c::kloc_160ed: 	_group9(__disp, _state); break;
-        case m2c::kloc_160f1: 	_group9(__disp, _state); break;
-        case m2c::kloc_16110: 	_group9(__disp, _state); break;
-        case m2c::kloc_16118: 	_group9(__disp, _state); break;
-        case m2c::kloc_1611d: 	_group9(__disp, _state); break;
-        case m2c::kloc_16129: 	_group9(__disp, _state); break;
-        case m2c::kloc_1612b: 	_group9(__disp, _state); break;
-        case m2c::kloc_16147: 	_group9(__disp, _state); break;
-        case m2c::kloc_16148: 	_group9(__disp, _state); break;
+        case m2c::kloc_1602b: 	_group8(__disp, _state); break;
+        case m2c::kloc_16038: 	_group8(__disp, _state); break;
+        case m2c::kloc_1603b: 	_group8(__disp, _state); break;
+        case m2c::kloc_1603e: 	_group8(__disp, _state); break;
+        case m2c::kloc_1605d: 	_group8(__disp, _state); break;
+        case m2c::kloc_1606a: 	_group8(__disp, _state); break;
+        case m2c::kloc_16075: 	_group8(__disp, _state); break;
+        case m2c::kloc_1608d: 	_group8(__disp, _state); break;
+        case m2c::kloc_160a9: 	_group8(__disp, _state); break;
+        case m2c::kloc_160b3: 	_group8(__disp, _state); break;
+        case m2c::kloc_160d2: 	_group8(__disp, _state); break;
+        case m2c::kloc_160d9: 	_group8(__disp, _state); break;
+        case m2c::kloc_160de: 	_group8(__disp, _state); break;
+        case m2c::kloc_160ed: 	_group8(__disp, _state); break;
+        case m2c::kloc_160f1: 	_group8(__disp, _state); break;
+        case m2c::kloc_16110: 	_group8(__disp, _state); break;
+        case m2c::kloc_16118: 	_group8(__disp, _state); break;
+        case m2c::kloc_1611d: 	_group8(__disp, _state); break;
+        case m2c::kloc_16129: 	_group8(__disp, _state); break;
+        case m2c::kloc_1612b: 	_group8(__disp, _state); break;
+        case m2c::kloc_16147: 	_group8(__disp, _state); break;
+        case m2c::kloc_16148: 	_group8(__disp, _state); break;
         case m2c::kloc_161b7: 	seg004_615_proc(__disp, _state); break;
         case m2c::kloc_161c0: 	seg004_615_proc(__disp, _state); break;
         case m2c::kloc_161c8: 	seg004_615_proc(__disp, _state); break;
@@ -775,207 +776,206 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_165b3: 	seg004_899_proc(__disp, _state); break;
         case m2c::kloc_16631: 	seg004_899_proc(__disp, _state); break;
         case m2c::kloc_16658: 	seg004_899_proc(__disp, _state); break;
-        case m2c::kloc_262af: 	_group10(__disp, _state); break;
-        case m2c::kloc_262cd: 	_group10(__disp, _state); break;
-        case m2c::kloc_262d5: 	_group10(__disp, _state); break;
-        case m2c::kloc_26306: 	_group10(__disp, _state); break;
-        case m2c::kloc_26312: 	_group10(__disp, _state); break;
-        case m2c::kloc_26344: 	_group10(__disp, _state); break;
-        case m2c::kloc_2634e: 	_group10(__disp, _state); break;
-        case m2c::kloc_26367: 	_group10(__disp, _state); break;
-        case m2c::kloc_263bb: 	_group11(__disp, _state); break;
-        case m2c::kloc_263e6: 	_group11(__disp, _state); break;
-        case m2c::kloc_263f4: 	_group11(__disp, _state); break;
-        case m2c::kloc_2645e: 	_group12(__disp, _state); break;
-        case m2c::kloc_264a2: 	_group12(__disp, _state); break;
-        case m2c::kloc_26525: 	_group14(__disp, _state); break;
+        case m2c::kloc_26130: 	seg1667_fac0_proc(__disp, _state); break;
+        case m2c::kloc_262af: 	_group9(__disp, _state); break;
+        case m2c::kloc_262cd: 	_group9(__disp, _state); break;
+        case m2c::kloc_262d5: 	_group9(__disp, _state); break;
+        case m2c::kloc_26306: 	_group9(__disp, _state); break;
+        case m2c::kloc_26312: 	_group9(__disp, _state); break;
+        case m2c::kloc_26344: 	_group9(__disp, _state); break;
+        case m2c::kloc_2634e: 	_group9(__disp, _state); break;
+        case m2c::kloc_26367: 	_group9(__disp, _state); break;
+        case m2c::kloc_263bb: 	_group9(__disp, _state); break;
+        case m2c::kloc_263e6: 	_group9(__disp, _state); break;
+        case m2c::kloc_263f4: 	_group9(__disp, _state); break;
+        case m2c::kloc_2645e: 	_group10(__disp, _state); break;
+        case m2c::kloc_264a2: 	_group10(__disp, _state); break;
+        case m2c::kloc_26525: 	_group12(__disp, _state); break;
         case m2c::kloc_26586: 	sub_26564(__disp, _state); break;
         case m2c::kloc_2658b: 	sub_26564(__disp, _state); break;
         case m2c::kloc_265b4: 	sub_26564(__disp, _state); break;
         case m2c::kloc_265d9: 	sub_26564(__disp, _state); break;
         case m2c::kloc_265e3: 	sub_26564(__disp, _state); break;
-        case m2c::kloc_265ec: 	_group15(__disp, _state); break;
-        case m2c::kloc_265f2: 	_group15(__disp, _state); break;
-        case m2c::kloc_266a8: 	_group15(__disp, _state); break;
-        case m2c::kloc_266bc: 	_group15(__disp, _state); break;
-        case m2c::kloc_266c1: 	_group15(__disp, _state); break;
-        case m2c::kloc_26740: 	_group15(__disp, _state); break;
-        case m2c::kloc_26774: 	_group15(__disp, _state); break;
-        case m2c::kloc_2677a: 	_group15(__disp, _state); break;
-        case m2c::kloc_26821: 	_group15(__disp, _state); break;
-        case m2c::kloc_26830: 	_group15(__disp, _state); break;
-        case m2c::kloc_26844: 	_group15(__disp, _state); break;
-        case m2c::kloc_26849: 	_group15(__disp, _state); break;
+        case m2c::kloc_265ec: 	_group13(__disp, _state); break;
+        case m2c::kloc_265f2: 	_group13(__disp, _state); break;
+        case m2c::kloc_266a8: 	_group13(__disp, _state); break;
+        case m2c::kloc_266bc: 	_group13(__disp, _state); break;
+        case m2c::kloc_266c1: 	_group13(__disp, _state); break;
+        case m2c::kloc_26740: 	_group13(__disp, _state); break;
+        case m2c::kloc_26774: 	_group13(__disp, _state); break;
+        case m2c::kloc_2677a: 	_group13(__disp, _state); break;
+        case m2c::kloc_26821: 	_group13(__disp, _state); break;
+        case m2c::kloc_26830: 	_group13(__disp, _state); break;
+        case m2c::kloc_26844: 	_group13(__disp, _state); break;
+        case m2c::kloc_26849: 	_group13(__disp, _state); break;
         case m2c::kloc_268d0: 	sub_268b8(__disp, _state); break;
         case m2c::kloc_268f0: 	sub_268b8(__disp, _state); break;
-        case m2c::kloc_26929: 	_group16(__disp, _state); break;
-        case m2c::kloc_2693b: 	_group16(__disp, _state); break;
-        case m2c::kloc_2694b: 	_group16(__disp, _state); break;
-        case m2c::kloc_26967: 	_group16(__disp, _state); break;
-        case m2c::kloc_26971: 	_group16(__disp, _state); break;
-        case m2c::kloc_26983: 	_group16(__disp, _state); break;
-        case m2c::kloc_2698d: 	_group16(__disp, _state); break;
-        case m2c::kloc_2699f: 	_group16(__disp, _state); break;
-        case m2c::kloc_269ca: 	_group16(__disp, _state); break;
-        case m2c::kloc_269e1: 	_group16(__disp, _state); break;
-        case m2c::kloc_269e7: 	_group16(__disp, _state); break;
-        case m2c::kloc_26a85: 	_group16(__disp, _state); break;
-        case m2c::kloc_26a91: 	_group16(__disp, _state); break;
-        case m2c::kloc_26a94: 	_group16(__disp, _state); break;
-        case m2c::kloc_26abe: 	_group16(__disp, _state); break;
-        case m2c::kloc_26ace: 	_group16(__disp, _state); break;
-        case m2c::kloc_26b48: 	_group16(__disp, _state); break;
-        case m2c::kloc_26b59: 	_group16(__disp, _state); break;
-        case m2c::kloc_26b5c: 	_group16(__disp, _state); break;
-        case m2c::kloc_26b8f: 	_group16(__disp, _state); break;
-        case m2c::kloc_26b99: 	_group16(__disp, _state); break;
-        case m2c::kloc_26ba3: 	_group17(__disp, _state); break;
-        case m2c::kloc_26bb1: 	_group17(__disp, _state); break;
-        case m2c::kloc_26bba: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c0b: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c15: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c25: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c2f: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c41: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c44: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c7b: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c85: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c93: 	_group17(__disp, _state); break;
-        case m2c::kloc_26c9d: 	_group17(__disp, _state); break;
-        case m2c::kloc_26caa: 	_group17(__disp, _state); break;
-        case m2c::kloc_26cc4: 	_group17(__disp, _state); break;
-        case m2c::kloc_26ceb: 	_group17(__disp, _state); break;
-        case m2c::kloc_26cf5: 	_group17(__disp, _state); break;
-        case m2c::kloc_26cfc: 	_group17(__disp, _state); break;
-        case m2c::kloc_26d2a: 	_group17(__disp, _state); break;
-        case m2c::kloc_26d34: 	_group17(__disp, _state); break;
-        case m2c::kloc_26d3b: 	_group17(__disp, _state); break;
-        case m2c::kloc_26d78: 	_group17(__disp, _state); break;
-        case m2c::kloc_26dfa: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e13: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e15: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e23: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e45: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e4b: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e76: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e80: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e93: 	_group17(__disp, _state); break;
-        case m2c::kloc_26e96: 	_group17(__disp, _state); break;
-        case m2c::kloc_26eea: 	_group17(__disp, _state); break;
-        case m2c::kloc_26eec: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f0c: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f41: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f50: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f5c: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f6d: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f74: 	_group17(__disp, _state); break;
-        case m2c::kloc_26f77: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fa6: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fa8: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fb8: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fce: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fd5: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fd8: 	_group17(__disp, _state); break;
-        case m2c::kloc_26fe1: 	_group17(__disp, _state); break;
-        case m2c::kloc_27040: 	_group17(__disp, _state); break;
-        case m2c::kloc_27075: 	_group17(__disp, _state); break;
-        case m2c::kloc_2707f: 	_group17(__disp, _state); break;
-        case m2c::kloc_2708f: 	_group17(__disp, _state); break;
-        case m2c::kloc_27099: 	_group17(__disp, _state); break;
-        case m2c::kloc_270d4: 	_group17(__disp, _state); break;
-        case m2c::kloc_270d7: 	_group17(__disp, _state); break;
-        case m2c::kloc_270e3: 	_group17(__disp, _state); break;
-        case m2c::kloc_270e6: 	_group17(__disp, _state); break;
-        case m2c::kloc_2710a: 	_group17(__disp, _state); break;
-        case m2c::kloc_27110: 	_group17(__disp, _state); break;
-        case m2c::kloc_27159: 	_group17(__disp, _state); break;
-        case m2c::kloc_2716b: 	_group17(__disp, _state); break;
-        case m2c::kloc_2717f: 	_group17(__disp, _state); break;
-        case m2c::kloc_271a7: 	_group17(__disp, _state); break;
-        case m2c::kloc_2721f: 	_group17(__disp, _state); break;
-        case m2c::kloc_27234: 	_group17(__disp, _state); break;
-        case m2c::kloc_27278: 	_group17(__disp, _state); break;
-        case m2c::kloc_27287: 	_group17(__disp, _state); break;
-        case m2c::kloc_27297: 	_group17(__disp, _state); break;
-        case m2c::kloc_272a1: 	_group17(__disp, _state); break;
-        case m2c::kloc_272b6: 	_group17(__disp, _state); break;
-        case m2c::kloc_272c0: 	_group17(__disp, _state); break;
-        case m2c::kloc_272c9: 	_group17(__disp, _state); break;
-        case m2c::kloc_27301: 	_group17(__disp, _state); break;
-        case m2c::kloc_2731e: 	_group17(__disp, _state); break;
-        case m2c::kloc_27320: 	_group17(__disp, _state); break;
-        case m2c::kloc_27339: 	_group17(__disp, _state); break;
-        case m2c::kloc_27358: 	_group17(__disp, _state); break;
-        case m2c::kloc_27362: 	_group17(__disp, _state); break;
-        case m2c::kloc_2736c: 	_group17(__disp, _state); break;
-        case m2c::kloc_27376: 	_group17(__disp, _state); break;
-        case m2c::kloc_27381: 	_group17(__disp, _state); break;
-        case m2c::kloc_273d2: 	_group17(__disp, _state); break;
-        case m2c::kloc_273dc: 	_group17(__disp, _state); break;
-        case m2c::kloc_273ee: 	_group17(__disp, _state); break;
-        case m2c::kloc_273f8: 	_group17(__disp, _state); break;
-        case m2c::kloc_27402: 	_group17(__disp, _state); break;
-        case m2c::kloc_27424: 	_group17(__disp, _state); break;
-        case m2c::kloc_2744c: 	_group17(__disp, _state); break;
-        case m2c::kloc_2746b: 	_group17(__disp, _state); break;
-        case m2c::kloc_27475: 	_group17(__disp, _state); break;
-        case m2c::kloc_274a0: 	_group17(__disp, _state); break;
-        case m2c::kloc_274aa: 	_group17(__disp, _state); break;
-        case m2c::kloc_274bb: 	_group17(__disp, _state); break;
-        case m2c::kloc_274bd: 	_group18(__disp, _state); break;
-        case m2c::kloc_274c9: 	_group18(__disp, _state); break;
-        case m2c::kloc_274f0: 	_group18(__disp, _state); break;
-        case m2c::kloc_2753a: 	_group18(__disp, _state); break;
-        case m2c::kloc_2753c: 	_group18(__disp, _state); break;
-        case m2c::kloc_27542: 	_group18(__disp, _state); break;
-        case m2c::kloc_2758a: 	_group18(__disp, _state); break;
-        case m2c::kloc_27596: 	_group18(__disp, _state); break;
-        case m2c::kloc_275c4: 	_group18(__disp, _state); break;
-        case m2c::kloc_275c6: 	_group18(__disp, _state); break;
-        case m2c::kloc_275f3: 	_group18(__disp, _state); break;
-        case m2c::kloc_27606: 	_group18(__disp, _state); break;
-        case m2c::kloc_27617: 	_group18(__disp, _state); break;
-        case m2c::kloc_2762b: 	_group18(__disp, _state); break;
-        case m2c::kloc_27654: 	_group18(__disp, _state); break;
-        case m2c::kloc_276a8: 	_group18(__disp, _state); break;
-        case m2c::kloc_276b5: 	_group18(__disp, _state); break;
-        case m2c::kloc_276b8: 	_group18(__disp, _state); break;
-        case m2c::kloc_276dc: 	_group18(__disp, _state); break;
-        case m2c::kloc_276de: 	_group18(__disp, _state); break;
-        case m2c::kloc_276e5: 	_group18(__disp, _state); break;
-        case m2c::kloc_276e8: 	_group18(__disp, _state); break;
-        case m2c::kloc_2770d: 	_group18(__disp, _state); break;
-        case m2c::kloc_2770f: 	_group18(__disp, _state); break;
-        case m2c::kloc_27761: 	_group19(__disp, _state); break;
-        case m2c::kloc_27764: 	_group19(__disp, _state); break;
-        case m2c::kloc_27781: 	_group19(__disp, _state); break;
-        case m2c::kloc_27783: 	_group19(__disp, _state); break;
-        case m2c::kloc_2778c: 	_group19(__disp, _state); break;
-        case m2c::kloc_277cb: 	_group19(__disp, _state); break;
-        case m2c::kloc_277d2: 	_group19(__disp, _state); break;
-        case m2c::kloc_277db: 	_group19(__disp, _state); break;
-        case m2c::kloc_277e7: 	_group19(__disp, _state); break;
-        case m2c::kloc_27853: 	_group19(__disp, _state); break;
-        case m2c::kloc_27861: 	_group19(__disp, _state); break;
+        case m2c::kloc_26929: 	_group14(__disp, _state); break;
+        case m2c::kloc_2693b: 	_group14(__disp, _state); break;
+        case m2c::kloc_2694b: 	_group14(__disp, _state); break;
+        case m2c::kloc_26967: 	_group14(__disp, _state); break;
+        case m2c::kloc_26971: 	_group14(__disp, _state); break;
+        case m2c::kloc_26983: 	_group14(__disp, _state); break;
+        case m2c::kloc_2698d: 	_group14(__disp, _state); break;
+        case m2c::kloc_2699f: 	_group14(__disp, _state); break;
+        case m2c::kloc_269ca: 	_group14(__disp, _state); break;
+        case m2c::kloc_269e1: 	_group14(__disp, _state); break;
+        case m2c::kloc_269e7: 	_group14(__disp, _state); break;
+        case m2c::kloc_26a85: 	_group14(__disp, _state); break;
+        case m2c::kloc_26a91: 	_group14(__disp, _state); break;
+        case m2c::kloc_26a94: 	_group14(__disp, _state); break;
+        case m2c::kloc_26abe: 	_group14(__disp, _state); break;
+        case m2c::kloc_26ace: 	_group14(__disp, _state); break;
+        case m2c::kloc_26b48: 	_group14(__disp, _state); break;
+        case m2c::kloc_26b59: 	_group14(__disp, _state); break;
+        case m2c::kloc_26b5c: 	_group14(__disp, _state); break;
+        case m2c::kloc_26b8f: 	_group14(__disp, _state); break;
+        case m2c::kloc_26b99: 	_group14(__disp, _state); break;
+        case m2c::kloc_26ba3: 	_group15(__disp, _state); break;
+        case m2c::kloc_26bb1: 	_group15(__disp, _state); break;
+        case m2c::kloc_26bba: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c0b: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c15: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c25: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c2f: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c41: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c44: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c7b: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c85: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c93: 	_group15(__disp, _state); break;
+        case m2c::kloc_26c9d: 	_group15(__disp, _state); break;
+        case m2c::kloc_26caa: 	_group15(__disp, _state); break;
+        case m2c::kloc_26cc4: 	_group15(__disp, _state); break;
+        case m2c::kloc_26ceb: 	_group15(__disp, _state); break;
+        case m2c::kloc_26cf5: 	_group15(__disp, _state); break;
+        case m2c::kloc_26cfc: 	_group15(__disp, _state); break;
+        case m2c::kloc_26d2a: 	_group15(__disp, _state); break;
+        case m2c::kloc_26d34: 	_group15(__disp, _state); break;
+        case m2c::kloc_26d3b: 	_group15(__disp, _state); break;
+        case m2c::kloc_26d78: 	_group15(__disp, _state); break;
+        case m2c::kloc_26dfa: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e13: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e15: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e23: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e45: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e4b: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e76: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e80: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e93: 	_group15(__disp, _state); break;
+        case m2c::kloc_26e96: 	_group15(__disp, _state); break;
+        case m2c::kloc_26eea: 	_group15(__disp, _state); break;
+        case m2c::kloc_26eec: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f0c: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f41: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f50: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f5c: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f6d: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f74: 	_group15(__disp, _state); break;
+        case m2c::kloc_26f77: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fa6: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fa8: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fb8: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fce: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fd5: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fd8: 	_group15(__disp, _state); break;
+        case m2c::kloc_26fe1: 	_group15(__disp, _state); break;
+        case m2c::kloc_27040: 	_group15(__disp, _state); break;
+        case m2c::kloc_27075: 	_group15(__disp, _state); break;
+        case m2c::kloc_2708f: 	_group15(__disp, _state); break;
+        case m2c::kloc_27099: 	_group15(__disp, _state); break;
+        case m2c::kloc_270d4: 	_group15(__disp, _state); break;
+        case m2c::kloc_270d7: 	_group15(__disp, _state); break;
+        case m2c::kloc_270e3: 	_group15(__disp, _state); break;
+        case m2c::kloc_270e6: 	_group15(__disp, _state); break;
+        case m2c::kloc_2710a: 	_group15(__disp, _state); break;
+        case m2c::kloc_27110: 	_group15(__disp, _state); break;
+        case m2c::kloc_27159: 	_group15(__disp, _state); break;
+        case m2c::kloc_2716b: 	_group15(__disp, _state); break;
+        case m2c::kloc_2717f: 	_group15(__disp, _state); break;
+        case m2c::kloc_271a7: 	_group15(__disp, _state); break;
+        case m2c::kloc_2721f: 	_group15(__disp, _state); break;
+        case m2c::kloc_27234: 	_group15(__disp, _state); break;
+        case m2c::kloc_27278: 	_group15(__disp, _state); break;
+        case m2c::kloc_27287: 	_group15(__disp, _state); break;
+        case m2c::kloc_27297: 	_group15(__disp, _state); break;
+        case m2c::kloc_272a1: 	_group15(__disp, _state); break;
+        case m2c::kloc_272b6: 	_group15(__disp, _state); break;
+        case m2c::kloc_272c0: 	_group15(__disp, _state); break;
+        case m2c::kloc_272c9: 	_group15(__disp, _state); break;
+        case m2c::kloc_27301: 	_group15(__disp, _state); break;
+        case m2c::kloc_2731e: 	_group15(__disp, _state); break;
+        case m2c::kloc_27320: 	_group15(__disp, _state); break;
+        case m2c::kloc_27339: 	_group15(__disp, _state); break;
+        case m2c::kloc_27358: 	_group15(__disp, _state); break;
+        case m2c::kloc_27362: 	_group15(__disp, _state); break;
+        case m2c::kloc_2736c: 	_group15(__disp, _state); break;
+        case m2c::kloc_27376: 	_group15(__disp, _state); break;
+        case m2c::kloc_27381: 	_group15(__disp, _state); break;
+        case m2c::kloc_273d2: 	_group15(__disp, _state); break;
+        case m2c::kloc_273dc: 	_group15(__disp, _state); break;
+        case m2c::kloc_273ee: 	_group15(__disp, _state); break;
+        case m2c::kloc_273f8: 	_group15(__disp, _state); break;
+        case m2c::kloc_27402: 	_group15(__disp, _state); break;
+        case m2c::kloc_27424: 	_group15(__disp, _state); break;
+        case m2c::kloc_2744c: 	_group15(__disp, _state); break;
+        case m2c::kloc_2746b: 	_group15(__disp, _state); break;
+        case m2c::kloc_27475: 	_group15(__disp, _state); break;
+        case m2c::kloc_274a0: 	_group15(__disp, _state); break;
+        case m2c::kloc_274aa: 	_group15(__disp, _state); break;
+        case m2c::kloc_274bb: 	_group15(__disp, _state); break;
+        case m2c::kloc_274c9: 	_group16(__disp, _state); break;
+        case m2c::kloc_274f0: 	_group16(__disp, _state); break;
+        case m2c::kloc_2753a: 	_group16(__disp, _state); break;
+        case m2c::kloc_2753c: 	_group16(__disp, _state); break;
+        case m2c::kloc_27542: 	_group16(__disp, _state); break;
+        case m2c::kloc_2758a: 	_group16(__disp, _state); break;
+        case m2c::kloc_27596: 	_group16(__disp, _state); break;
+        case m2c::kloc_275c4: 	_group16(__disp, _state); break;
+        case m2c::kloc_275c6: 	_group16(__disp, _state); break;
+        case m2c::kloc_275f3: 	_group16(__disp, _state); break;
+        case m2c::kloc_27606: 	_group16(__disp, _state); break;
+        case m2c::kloc_27617: 	_group16(__disp, _state); break;
+        case m2c::kloc_2762b: 	_group16(__disp, _state); break;
+        case m2c::kloc_27654: 	_group16(__disp, _state); break;
+        case m2c::kloc_276a8: 	_group16(__disp, _state); break;
+        case m2c::kloc_276b5: 	_group16(__disp, _state); break;
+        case m2c::kloc_276b8: 	_group16(__disp, _state); break;
+        case m2c::kloc_276dc: 	_group16(__disp, _state); break;
+        case m2c::kloc_276de: 	_group16(__disp, _state); break;
+        case m2c::kloc_276e5: 	_group16(__disp, _state); break;
+        case m2c::kloc_276e8: 	_group16(__disp, _state); break;
+        case m2c::kloc_2770d: 	_group16(__disp, _state); break;
+        case m2c::kloc_2770f: 	_group16(__disp, _state); break;
+        case m2c::kloc_27761: 	_group17(__disp, _state); break;
+        case m2c::kloc_27764: 	_group17(__disp, _state); break;
+        case m2c::kloc_27781: 	_group17(__disp, _state); break;
+        case m2c::kloc_27783: 	_group17(__disp, _state); break;
+        case m2c::kloc_2778c: 	_group17(__disp, _state); break;
+        case m2c::kloc_277cb: 	_group17(__disp, _state); break;
+        case m2c::kloc_277d2: 	_group17(__disp, _state); break;
+        case m2c::kloc_277db: 	_group17(__disp, _state); break;
+        case m2c::kloc_277e7: 	_group17(__disp, _state); break;
+        case m2c::kloc_27853: 	_group17(__disp, _state); break;
+        case m2c::kloc_27861: 	_group17(__disp, _state); break;
         case m2c::kloc_27874: 	sub_27866(__disp, _state); break;
         case m2c::kloc_27877: 	sub_27866(__disp, _state); break;
         case m2c::kloc_2789f: 	sub_27866(__disp, _state); break;
         case m2c::kloc_278a1: 	sub_27866(__disp, _state); break;
-        case m2c::kloc_278b4: 	_group20(__disp, _state); break;
-        case m2c::kloc_278b7: 	_group20(__disp, _state); break;
-        case m2c::kloc_278f0: 	_group20(__disp, _state); break;
-        case m2c::kloc_278f2: 	_group20(__disp, _state); break;
-        case m2c::kloc_278fc: 	_group20(__disp, _state); break;
-        case m2c::kloc_2791e: 	_group20(__disp, _state); break;
-        case m2c::kloc_27928: 	_group20(__disp, _state); break;
-        case m2c::kloc_27932: 	_group20(__disp, _state); break;
-        case m2c::kloc_27a18: 	_group20(__disp, _state); break;
-        case m2c::kloc_27a31: 	_group20(__disp, _state); break;
-        case m2c::kloc_27a6c: 	_group20(__disp, _state); break;
-        case m2c::kloc_27a87: 	_group21(__disp, _state); break;
-        case m2c::kloc_27a8a: 	_group21(__disp, _state); break;
-        case m2c::kloc_27aaf: 	_group21(__disp, _state); break;
-        case m2c::kloc_27aff: 	_group21(__disp, _state); break;
+        case m2c::kloc_278b4: 	_group18(__disp, _state); break;
+        case m2c::kloc_278b7: 	_group18(__disp, _state); break;
+        case m2c::kloc_278f0: 	_group18(__disp, _state); break;
+        case m2c::kloc_278f2: 	_group18(__disp, _state); break;
+        case m2c::kloc_278fc: 	_group18(__disp, _state); break;
+        case m2c::kloc_2791e: 	_group18(__disp, _state); break;
+        case m2c::kloc_27928: 	_group18(__disp, _state); break;
+        case m2c::kloc_27932: 	_group18(__disp, _state); break;
+        case m2c::kloc_27a18: 	_group18(__disp, _state); break;
+        case m2c::kloc_27a31: 	_group18(__disp, _state); break;
+        case m2c::kloc_27a6c: 	_group18(__disp, _state); break;
+        case m2c::kloc_27a87: 	_group19(__disp, _state); break;
+        case m2c::kloc_27a8a: 	_group19(__disp, _state); break;
+        case m2c::kloc_27aaf: 	_group19(__disp, _state); break;
+        case m2c::kloc_27aff: 	_group19(__disp, _state); break;
         case m2c::kloc_27b1b: 	sub_27b05(__disp, _state); break;
         case m2c::kloc_27b22: 	sub_27b05(__disp, _state); break;
         case m2c::kloc_27b69: 	sub_27b26(__disp, _state); break;
@@ -1017,24 +1017,24 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_28006: 	sub_27f9e(__disp, _state); break;
         case m2c::kloc_28021: 	sub_27f9e(__disp, _state); break;
         case m2c::kloc_2803a: 	sub_27f9e(__disp, _state); break;
-        case m2c::kloc_28063: 	_group22(__disp, _state); break;
-        case m2c::kloc_28066: 	_group22(__disp, _state); break;
-        case m2c::kloc_2808f: 	_group22(__disp, _state); break;
-        case m2c::kloc_28091: 	_group22(__disp, _state); break;
-        case m2c::kloc_280ac: 	_group22(__disp, _state); break;
-        case m2c::kloc_280b6: 	_group22(__disp, _state); break;
-        case m2c::kloc_280d7: 	_group22(__disp, _state); break;
-        case m2c::kloc_280e1: 	_group22(__disp, _state); break;
-        case m2c::kloc_280ea: 	_group22(__disp, _state); break;
-        case m2c::kloc_280f1: 	_group22(__disp, _state); break;
-        case m2c::kloc_280fb: 	_group22(__disp, _state); break;
-        case m2c::kloc_2811b: 	_group22(__disp, _state); break;
-        case m2c::kloc_28125: 	_group22(__disp, _state); break;
-        case m2c::kloc_2812c: 	_group22(__disp, _state); break;
-        case m2c::kloc_2813b: 	_group22(__disp, _state); break;
-        case m2c::kloc_28145: 	_group22(__disp, _state); break;
-        case m2c::kloc_28157: 	_group22(__disp, _state); break;
-        case m2c::kloc_28161: 	_group22(__disp, _state); break;
+        case m2c::kloc_28063: 	_group20(__disp, _state); break;
+        case m2c::kloc_28066: 	_group20(__disp, _state); break;
+        case m2c::kloc_2808f: 	_group20(__disp, _state); break;
+        case m2c::kloc_28091: 	_group20(__disp, _state); break;
+        case m2c::kloc_280ac: 	_group20(__disp, _state); break;
+        case m2c::kloc_280b6: 	_group20(__disp, _state); break;
+        case m2c::kloc_280d7: 	_group20(__disp, _state); break;
+        case m2c::kloc_280e1: 	_group20(__disp, _state); break;
+        case m2c::kloc_280ea: 	_group20(__disp, _state); break;
+        case m2c::kloc_280f1: 	_group20(__disp, _state); break;
+        case m2c::kloc_280fb: 	_group20(__disp, _state); break;
+        case m2c::kloc_2811b: 	_group20(__disp, _state); break;
+        case m2c::kloc_28125: 	_group20(__disp, _state); break;
+        case m2c::kloc_2812c: 	_group20(__disp, _state); break;
+        case m2c::kloc_2813b: 	_group20(__disp, _state); break;
+        case m2c::kloc_28145: 	_group20(__disp, _state); break;
+        case m2c::kloc_28157: 	_group20(__disp, _state); break;
+        case m2c::kloc_28161: 	_group20(__disp, _state); break;
         case m2c::kloc_28183: 	sub_2816e(__disp, _state); break;
         case m2c::kloc_28186: 	sub_2816e(__disp, _state); break;
         case m2c::kloc_2818f: 	sub_2816e(__disp, _state); break;
@@ -1051,47 +1051,47 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_283f1: 	sub_283d9(__disp, _state); break;
         case m2c::kloc_284be: 	sub_284a8(__disp, _state); break;
         case m2c::kloc_284c6: 	sub_284a8(__disp, _state); break;
-        case m2c::kloc_28558: 	_group25(__disp, _state); break;
-        case m2c::kloc_2855b: 	_group25(__disp, _state); break;
-        case m2c::kloc_28560: 	_group25(__disp, _state); break;
-        case m2c::kloc_28564: 	_group25(__disp, _state); break;
-        case m2c::kloc_2856e: 	_group25(__disp, _state); break;
-        case m2c::kloc_2857e: 	_group25(__disp, _state); break;
-        case m2c::kloc_28596: 	_group25(__disp, _state); break;
-        case m2c::kloc_285a0: 	_group25(__disp, _state); break;
-        case m2c::kloc_285c4: 	_group25(__disp, _state); break;
-        case m2c::kloc_285ce: 	_group25(__disp, _state); break;
-        case m2c::kloc_285f7: 	_group25(__disp, _state); break;
-        case m2c::kloc_28601: 	_group25(__disp, _state); break;
-        case m2c::kloc_28612: 	_group25(__disp, _state); break;
-        case m2c::kloc_28617: 	_group25(__disp, _state); break;
-        case m2c::kloc_28621: 	_group25(__disp, _state); break;
-        case m2c::kloc_28624: 	_group25(__disp, _state); break;
-        case m2c::kloc_2862e: 	_group25(__disp, _state); break;
-        case m2c::kloc_28638: 	_group25(__disp, _state); break;
-        case m2c::kloc_28641: 	_group25(__disp, _state); break;
-        case m2c::kloc_286b7: 	_group25(__disp, _state); break;
-        case m2c::kloc_286ba: 	_group25(__disp, _state); break;
-        case m2c::kloc_286c3: 	_group25(__disp, _state); break;
-        case m2c::kloc_286da: 	_group25(__disp, _state); break;
-        case m2c::kloc_286f6: 	_group25(__disp, _state); break;
-        case m2c::kloc_28723: 	_group25(__disp, _state); break;
-        case m2c::kloc_28745: 	_group25(__disp, _state); break;
-        case m2c::kloc_2877a: 	_group25(__disp, _state); break;
-        case m2c::kloc_2878a: 	_group25(__disp, _state); break;
-        case m2c::kloc_28795: 	_group25(__disp, _state); break;
-        case m2c::kloc_2879b: 	_group25(__disp, _state); break;
-        case m2c::kloc_287b9: 	_group25(__disp, _state); break;
-        case m2c::kloc_287bc: 	_group25(__disp, _state); break;
-        case m2c::kloc_287d5: 	_group25(__disp, _state); break;
-        case m2c::kloc_28832: 	_group25(__disp, _state); break;
-        case m2c::kloc_28834: 	_group25(__disp, _state); break;
-        case m2c::kloc_2884f: 	_group25(__disp, _state); break;
-        case m2c::kloc_2887c: 	_group25(__disp, _state); break;
-        case m2c::kloc_2887e: 	_group25(__disp, _state); break;
-        case m2c::kloc_288d9: 	_group25(__disp, _state); break;
-        case m2c::kloc_288dc: 	_group25(__disp, _state); break;
-        case m2c::kloc_288df: 	_group25(__disp, _state); break;
+        case m2c::kloc_28558: 	_group23(__disp, _state); break;
+        case m2c::kloc_2855b: 	_group23(__disp, _state); break;
+        case m2c::kloc_28560: 	_group23(__disp, _state); break;
+        case m2c::kloc_28564: 	_group23(__disp, _state); break;
+        case m2c::kloc_2856e: 	_group23(__disp, _state); break;
+        case m2c::kloc_2857e: 	_group23(__disp, _state); break;
+        case m2c::kloc_28596: 	_group23(__disp, _state); break;
+        case m2c::kloc_285a0: 	_group23(__disp, _state); break;
+        case m2c::kloc_285c4: 	_group23(__disp, _state); break;
+        case m2c::kloc_285ce: 	_group23(__disp, _state); break;
+        case m2c::kloc_285f7: 	_group23(__disp, _state); break;
+        case m2c::kloc_28601: 	_group23(__disp, _state); break;
+        case m2c::kloc_28612: 	_group23(__disp, _state); break;
+        case m2c::kloc_28617: 	_group23(__disp, _state); break;
+        case m2c::kloc_28621: 	_group23(__disp, _state); break;
+        case m2c::kloc_28624: 	_group23(__disp, _state); break;
+        case m2c::kloc_2862e: 	_group23(__disp, _state); break;
+        case m2c::kloc_28638: 	_group23(__disp, _state); break;
+        case m2c::kloc_28641: 	_group23(__disp, _state); break;
+        case m2c::kloc_286b7: 	_group23(__disp, _state); break;
+        case m2c::kloc_286ba: 	_group23(__disp, _state); break;
+        case m2c::kloc_286c3: 	_group23(__disp, _state); break;
+        case m2c::kloc_286da: 	_group23(__disp, _state); break;
+        case m2c::kloc_286f6: 	_group23(__disp, _state); break;
+        case m2c::kloc_28723: 	_group23(__disp, _state); break;
+        case m2c::kloc_28745: 	_group23(__disp, _state); break;
+        case m2c::kloc_2877a: 	_group23(__disp, _state); break;
+        case m2c::kloc_2878a: 	_group23(__disp, _state); break;
+        case m2c::kloc_28795: 	_group23(__disp, _state); break;
+        case m2c::kloc_2879b: 	_group23(__disp, _state); break;
+        case m2c::kloc_287b9: 	_group23(__disp, _state); break;
+        case m2c::kloc_287bc: 	_group23(__disp, _state); break;
+        case m2c::kloc_287d5: 	_group23(__disp, _state); break;
+        case m2c::kloc_28832: 	_group23(__disp, _state); break;
+        case m2c::kloc_28834: 	_group23(__disp, _state); break;
+        case m2c::kloc_2884f: 	_group23(__disp, _state); break;
+        case m2c::kloc_2887c: 	_group23(__disp, _state); break;
+        case m2c::kloc_2887e: 	_group23(__disp, _state); break;
+        case m2c::kloc_288d9: 	_group23(__disp, _state); break;
+        case m2c::kloc_288dc: 	_group23(__disp, _state); break;
+        case m2c::kloc_288df: 	_group23(__disp, _state); break;
         case m2c::kloc_288ec: 	sub_288e4(__disp, _state); break;
         case m2c::kloc_288fa: 	sub_288e4(__disp, _state); break;
         case m2c::kloc_28904: 	sub_288e4(__disp, _state); break;
@@ -1105,20 +1105,20 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_28942: 	sub_288e4(__disp, _state); break;
         case m2c::kloc_28950: 	sub_288e4(__disp, _state); break;
         case m2c::kloc_2896a: 	sub_288e4(__disp, _state); break;
-        case m2c::kloc_28980: 	_group26(__disp, _state); break;
-        case m2c::kloc_2899f: 	_group26(__disp, _state); break;
-        case m2c::kloc_289a4: 	_group26(__disp, _state); break;
-        case m2c::kloc_289aa: 	_group26(__disp, _state); break;
-        case m2c::kloc_289bd: 	_group26(__disp, _state); break;
-        case m2c::kloc_289d0: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a09: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a2a: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a41: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a7b: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a8c: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a94: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a9c: 	_group26(__disp, _state); break;
-        case m2c::kloc_28a9e: 	_group26(__disp, _state); break;
+        case m2c::kloc_28980: 	_group24(__disp, _state); break;
+        case m2c::kloc_2899f: 	_group24(__disp, _state); break;
+        case m2c::kloc_289a4: 	_group24(__disp, _state); break;
+        case m2c::kloc_289aa: 	_group24(__disp, _state); break;
+        case m2c::kloc_289bd: 	_group24(__disp, _state); break;
+        case m2c::kloc_289d0: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a09: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a2a: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a41: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a7b: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a8c: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a94: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a9c: 	_group24(__disp, _state); break;
+        case m2c::kloc_28a9e: 	_group24(__disp, _state); break;
         case m2c::kloc_28afd: 	sub_28ac8(__disp, _state); break;
         case m2c::kloc_28b32: 	sub_28ac8(__disp, _state); break;
         case m2c::kloc_28b93: 	sub_28ac8(__disp, _state); break;
@@ -1162,10 +1162,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_29072: 	sub_28eb2(__disp, _state); break;
         case m2c::kloc_29075: 	sub_28eb2(__disp, _state); break;
         case m2c::kloc_2907f: 	sub_28eb2(__disp, _state); break;
-        case m2c::kloc_29098: 	_group28(__disp, _state); break;
-        case m2c::kloc_290e5: 	_group28(__disp, _state); break;
-        case m2c::kloc_2911f: 	_group28(__disp, _state); break;
-        case m2c::kloc_291b8: 	_group28(__disp, _state); break;
+        case m2c::kloc_29098: 	_group26(__disp, _state); break;
+        case m2c::kloc_290e5: 	_group26(__disp, _state); break;
+        case m2c::kloc_2911f: 	_group26(__disp, _state); break;
+        case m2c::kloc_291b8: 	_group26(__disp, _state); break;
         case m2c::kloc_291e5: 	sub_291df(__disp, _state); break;
         case m2c::kloc_291fa: 	sub_291df(__disp, _state); break;
         case m2c::kloc_29220: 	sub_2920a(__disp, _state); break;
@@ -1229,27 +1229,27 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_29ba4: 	sub_29b62(__disp, _state); break;
         case m2c::kloc_29bb0: 	sub_29b62(__disp, _state); break;
         case m2c::kloc_29bc3: 	sub_29b62(__disp, _state); break;
-        case m2c::kloc_29c34: 	_group32(__disp, _state); break;
-        case m2c::kloc_29c37: 	_group32(__disp, _state); break;
-        case m2c::kloc_29c3a: 	_group32(__disp, _state); break;
-        case m2c::kloc_29c8c: 	_group32(__disp, _state); break;
-        case m2c::kloc_29c98: 	_group32(__disp, _state); break;
+        case m2c::kloc_29c34: 	_group31(__disp, _state); break;
+        case m2c::kloc_29c37: 	_group31(__disp, _state); break;
+        case m2c::kloc_29c3a: 	_group31(__disp, _state); break;
+        case m2c::kloc_29c8c: 	_group31(__disp, _state); break;
+        case m2c::kloc_29c98: 	_group31(__disp, _state); break;
         case m2c::kloc_29d04: 	seg2623_3aa8_proc(__disp, _state); break;
         case m2c::kloc_29d08: 	seg2623_3aa8_proc(__disp, _state); break;
         case m2c::kloc_29d46: 	sub_29d1e(__disp, _state); break;
         case m2c::kloc_29d53: 	sub_29d1e(__disp, _state); break;
         case m2c::kloc_29da1: 	seg2623_3b45_proc(__disp, _state); break;
         case m2c::kloc_29dac: 	seg2623_3b45_proc(__disp, _state); break;
-        case m2c::kloc_29e89: 	_group35(__disp, _state); break;
-        case m2c::kloc_29eec: 	_group36(__disp, _state); break;
-        case m2c::kloc_29ef2: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f07: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f1f: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f35: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f67: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f73: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f88: 	_group36(__disp, _state); break;
-        case m2c::kloc_29f96: 	_group36(__disp, _state); break;
+        case m2c::kloc_29e89: 	_group34(__disp, _state); break;
+        case m2c::kloc_29eec: 	_group35(__disp, _state); break;
+        case m2c::kloc_29ef2: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f07: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f1f: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f35: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f67: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f73: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f88: 	_group35(__disp, _state); break;
+        case m2c::kloc_29f96: 	_group35(__disp, _state); break;
         case m2c::kloc_29fc1: 	sub_29f9b(__disp, _state); break;
         case m2c::kloc_29fd5: 	sub_29f9b(__disp, _state); break;
         case m2c::kloc_29fe7: 	sub_29f9b(__disp, _state); break;
@@ -1272,154 +1272,153 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2a100: 	sub_2a0b7(__disp, _state); break;
         case m2c::kloc_2a106: 	sub_2a0b7(__disp, _state); break;
         case m2c::kloc_2a108: 	sub_2a0b7(__disp, _state); break;
-        case m2c::kloc_2a12e: 	_group37(__disp, _state); break;
-        case m2c::kloc_2a1e2: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a1e5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a1ea: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a1f5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a200: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a203: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a206: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a21b: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a227: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a252: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a264: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a26a: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a287: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a29a: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a29d: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a2b6: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a2c7: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a2d7: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a2f0: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a2f5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a31e: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a321: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a333: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a336: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a348: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a379: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a412: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a414: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a41b: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a423: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a42d: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a435: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a43d: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a445: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a447: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a454: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a45c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a464: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a46c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a46e: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a479: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a495: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a4a8: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a4ba: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a4e6: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a4fd: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a514: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a543: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a560: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a599: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5bf: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5cd: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5d3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5dd: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5f5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a5f7: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a680: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a6bc: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a6d0: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a6d3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a70c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a755: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a768: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a782: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a796: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a799: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a7fc: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a824: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a87f: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a934: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a954: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a974: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a97e: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a983: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a988: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a9aa: 	_group38(__disp, _state); break;
-        case m2c::kloc_2a9e3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aa4b: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aa55: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aa6f: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aa72: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aab6: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ab01: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ab88: 	_group38(__disp, _state); break;
-        case m2c::kloc_2abb1: 	_group38(__disp, _state); break;
-        case m2c::kloc_2abb4: 	_group38(__disp, _state); break;
-        case m2c::kloc_2abe1: 	_group38(__disp, _state); break;
-        case m2c::kloc_2abf0: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ac24: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ac37: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ac68: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aca5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ad65: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ad6f: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ad8b: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ad95: 	_group38(__disp, _state); break;
-        case m2c::kloc_2add3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2addd: 	_group38(__disp, _state); break;
-        case m2c::kloc_2adfc: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ae06: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ae24: 	_group38(__disp, _state); break;
-        case m2c::kloc_2ae2e: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aea0: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aefd: 	_group38(__disp, _state); break;
-        case m2c::kloc_2aeff: 	_group38(__disp, _state); break;
-        case m2c::kloc_2af10: 	_group38(__disp, _state); break;
-        case m2c::kloc_2af1e: 	_group38(__disp, _state); break;
-        case m2c::kloc_2af6b: 	_group38(__disp, _state); break;
-        case m2c::kloc_2af75: 	_group38(__disp, _state); break;
-        case m2c::kloc_2afb5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2afce: 	_group38(__disp, _state); break;
-        case m2c::kloc_2afda: 	_group38(__disp, _state); break;
-        case m2c::kloc_2afe4: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b01c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b05d: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b09a: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b0c1: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b0c5: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b0c7: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b0e8: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b0f6: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b111: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b123: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b130: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b135: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b161: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b163: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b170: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b1ff: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b210: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b216: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b224: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b234: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b24c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b25c: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b268: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b273: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b27d: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b2a0: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b2a3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b2e8: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b309: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b30f: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b362: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b3a3: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b3aa: 	_group38(__disp, _state); break;
-        case m2c::kloc_2b423: 	_group38(__disp, _state); break;
+        case m2c::kloc_2a12e: 	_group36(__disp, _state); break;
+        case m2c::kloc_2a1e2: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a1e5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a1ea: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a1f5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a200: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a203: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a206: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a21b: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a227: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a252: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a264: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a26a: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a287: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a29a: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a29d: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a2b6: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a2c7: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a2d7: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a2f0: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a2f5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a31e: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a321: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a333: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a336: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a348: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a379: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a412: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a414: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a41b: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a423: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a42d: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a435: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a43d: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a445: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a447: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a454: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a45c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a464: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a46c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a46e: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a479: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a495: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a4a8: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a4ba: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a4e6: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a4fd: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a514: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a543: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a560: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a599: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5bf: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5cd: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5d3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5dd: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5f5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a5f7: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a680: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a6bc: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a6d0: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a6d3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a70c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a755: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a768: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a782: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a796: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a799: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a7fc: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a824: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a87f: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a934: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a954: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a974: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a97e: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a983: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a988: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a9aa: 	_group37(__disp, _state); break;
+        case m2c::kloc_2a9e3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aa4b: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aa55: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aa6f: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aa72: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aab6: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ab01: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ab88: 	_group37(__disp, _state); break;
+        case m2c::kloc_2abb1: 	_group37(__disp, _state); break;
+        case m2c::kloc_2abb4: 	_group37(__disp, _state); break;
+        case m2c::kloc_2abe1: 	_group37(__disp, _state); break;
+        case m2c::kloc_2abf0: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ac24: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ac37: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ac68: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aca5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ad65: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ad6f: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ad8b: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ad95: 	_group37(__disp, _state); break;
+        case m2c::kloc_2add3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2addd: 	_group37(__disp, _state); break;
+        case m2c::kloc_2adfc: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ae06: 	_group37(__disp, _state); break;
+        case m2c::kloc_2ae24: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aea0: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aefd: 	_group37(__disp, _state); break;
+        case m2c::kloc_2aeff: 	_group37(__disp, _state); break;
+        case m2c::kloc_2af10: 	_group37(__disp, _state); break;
+        case m2c::kloc_2af1e: 	_group37(__disp, _state); break;
+        case m2c::kloc_2af6b: 	_group37(__disp, _state); break;
+        case m2c::kloc_2af75: 	_group37(__disp, _state); break;
+        case m2c::kloc_2afb5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2afce: 	_group37(__disp, _state); break;
+        case m2c::kloc_2afda: 	_group37(__disp, _state); break;
+        case m2c::kloc_2afe4: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b01c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b05d: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b09a: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b0c1: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b0c5: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b0c7: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b0e8: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b0f6: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b111: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b123: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b130: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b135: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b161: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b163: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b170: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b1ff: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b210: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b216: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b224: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b234: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b24c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b25c: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b268: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b273: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b27d: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b2a0: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b2a3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b2e8: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b309: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b30f: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b362: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b3a3: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b3aa: 	_group37(__disp, _state); break;
+        case m2c::kloc_2b423: 	_group37(__disp, _state); break;
         case m2c::kloc_2b43f: 	sub_2b429(__disp, _state); break;
         case m2c::kloc_2b48d: 	sub_2b467(__disp, _state); break;
         case m2c::kloc_2b4bc: 	sub_2b467(__disp, _state); break;
@@ -1504,45 +1503,45 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2bddb: 	sub_2b7db(__disp, _state); break;
         case m2c::kloc_2bdf5: 	sub_2b7db(__disp, _state); break;
         case m2c::kloc_2bdff: 	sub_2b7db(__disp, _state); break;
-        case m2c::kloc_2be10: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be18: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be21: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be29: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be31: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be39: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be41: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be43: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be7a: 	_group39(__disp, _state); break;
-        case m2c::kloc_2be93: 	_group39(__disp, _state); break;
-        case m2c::kloc_2beae: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bec6: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bed1: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bef3: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bf02: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bf80: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bf9c: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bfc6: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bfd2: 	_group39(__disp, _state); break;
-        case m2c::kloc_2bfea: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c00b: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c017: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c01a: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c023: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c035: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c041: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c044: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c04b: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c088: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c094: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c097: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c0a5: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c0ab: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c0d7: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c136: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c1e1: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c1fb: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c200: 	_group39(__disp, _state); break;
-        case m2c::kloc_2c203: 	_group39(__disp, _state); break;
+        case m2c::kloc_2be10: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be18: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be21: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be29: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be31: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be39: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be41: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be43: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be7a: 	_group38(__disp, _state); break;
+        case m2c::kloc_2be93: 	_group38(__disp, _state); break;
+        case m2c::kloc_2beae: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bec6: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bed1: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bef3: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bf02: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bf80: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bf9c: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bfc6: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bfd2: 	_group38(__disp, _state); break;
+        case m2c::kloc_2bfea: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c00b: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c017: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c01a: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c023: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c035: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c041: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c044: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c04b: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c088: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c094: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c097: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c0a5: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c0ab: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c0d7: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c136: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c1e1: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c1fb: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c200: 	_group38(__disp, _state); break;
+        case m2c::kloc_2c203: 	_group38(__disp, _state); break;
         case m2c::kloc_2c218: 	sub_2c20b(__disp, _state); break;
         case m2c::kloc_2c298: 	sub_2c20b(__disp, _state); break;
         case m2c::kloc_2c2a8: 	sub_2c29c(__disp, _state); break;
@@ -1553,28 +1552,28 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2c32c: 	sub_2c303(__disp, _state); break;
         case m2c::kloc_2c35c: 	sub_2c303(__disp, _state); break;
         case m2c::kloc_2c367: 	sub_2c303(__disp, _state); break;
-        case m2c::kloc_2c37c: 	_group40(__disp, _state); break;
-        case m2c::kloc_2c385: 	_group40(__disp, _state); break;
-        case m2c::kloc_2c395: 	_group40(__disp, _state); break;
-        case m2c::kloc_2c3ba: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c3de: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c3e6: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c3f2: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c3f5: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c400: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c441: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c479: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c48a: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c494: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4ac: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4bd: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4c7: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4d1: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4db: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c4e5: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c52c: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c53c: 	sub_2c3a2(__disp, _state); break;
-        case m2c::kloc_2c56c: 	sub_2c3a2(__disp, _state); break;
+        case m2c::kloc_2c37c: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c385: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c395: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c3ba: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c3de: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c3e6: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c3f2: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c3f5: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c400: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c441: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c479: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c48a: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c494: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4ac: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4bd: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4c7: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4d1: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4db: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c4e5: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c52c: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c53c: 	_group39(__disp, _state); break;
+        case m2c::kloc_2c56c: 	_group39(__disp, _state); break;
         case m2c::kloc_2c5b8: 	sub_2c576(__disp, _state); break;
         case m2c::kloc_2c5c5: 	sub_2c576(__disp, _state); break;
         case m2c::kloc_2c5dd: 	sub_2c576(__disp, _state); break;
@@ -1801,33 +1800,33 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2e8c4: 	sub_2e7ee(__disp, _state); break;
         case m2c::kloc_2e8e6: 	sub_2e7ee(__disp, _state); break;
         case m2c::kloc_2e8ef: 	sub_2e7ee(__disp, _state); break;
-        case m2c::kloc_2e941: 	_group41(__disp, _state); break;
-        case m2c::kloc_2e959: 	_group41(__disp, _state); break;
-        case m2c::kloc_2e967: 	_group41(__disp, _state); break;
-        case m2c::kloc_2e9a8: 	_group41(__disp, _state); break;
-        case m2c::kloc_2e9aa: 	_group41(__disp, _state); break;
-        case m2c::kloc_2e9d6: 	_group41(__disp, _state); break;
-        case m2c::kloc_2ea14: 	_group41(__disp, _state); break;
-        case m2c::kloc_2ea43: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ea4c: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ea67: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ea79: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ea95: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eaa8: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eac2: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eac5: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eadf: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eae2: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb0e: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb28: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb3a: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb3d: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb5f: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb71: 	_group42(__disp, _state); break;
-        case m2c::kloc_2eb8f: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ebb5: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ebca: 	_group42(__disp, _state); break;
-        case m2c::kloc_2ebd4: 	_group42(__disp, _state); break;
+        case m2c::kloc_2e941: 	_group40(__disp, _state); break;
+        case m2c::kloc_2e959: 	_group40(__disp, _state); break;
+        case m2c::kloc_2e967: 	_group40(__disp, _state); break;
+        case m2c::kloc_2e9a8: 	_group40(__disp, _state); break;
+        case m2c::kloc_2e9aa: 	_group40(__disp, _state); break;
+        case m2c::kloc_2e9d6: 	_group40(__disp, _state); break;
+        case m2c::kloc_2ea14: 	_group40(__disp, _state); break;
+        case m2c::kloc_2ea43: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ea4c: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ea67: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ea79: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ea95: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eaa8: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eac2: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eac5: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eadf: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eae2: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb0e: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb28: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb3a: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb3d: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb5f: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb71: 	_group41(__disp, _state); break;
+        case m2c::kloc_2eb8f: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ebb5: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ebca: 	_group41(__disp, _state); break;
+        case m2c::kloc_2ebd4: 	_group41(__disp, _state); break;
         case m2c::kloc_2ebf2: 	sub_2ebda(__disp, _state); break;
         case m2c::kloc_2ec08: 	sub_2ebda(__disp, _state); break;
         case m2c::kloc_2ec16: 	sub_2ebda(__disp, _state); break;
@@ -1867,50 +1866,52 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2f01e: 	sub_2ecd6(__disp, _state); break;
         case m2c::kloc_2f045: 	sub_2f024(__disp, _state); break;
         case m2c::kloc_2f055: 	sub_2f024(__disp, _state); break;
-        case m2c::kloc_2f0c6: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f102: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f111: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f11b: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f129: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f1fe: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f23c: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f248: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f24a: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f291: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f2f4: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f2f7: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f345: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f374: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f382: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f3c8: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f3d2: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f432: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f45f: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f462: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f470: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f474: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f4c1: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f4cf: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f505: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f517: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f51e: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f53b: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f559: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f576: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f5f4: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f5ff: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f614: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f61b: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f65a: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f65c: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f66f: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6b0: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6c1: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6c6: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6d6: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6eb: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6f6: 	_group43(__disp, _state); break;
-        case m2c::kloc_2f6fc: 	_group43(__disp, _state); break;
+        case m2c::kloc_2f068: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f080: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f0c6: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f102: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f111: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f11b: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f129: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f1fe: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f23c: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f248: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f24a: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f291: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f2f4: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f2f7: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f345: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f374: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f382: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f3c8: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f3d2: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f432: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f45f: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f462: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f470: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f474: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f4c1: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f4cf: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f505: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f517: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f51e: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f53b: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f559: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f576: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f5f4: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f5ff: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f614: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f61b: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f65a: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f65c: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f66f: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6b0: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6c1: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6c6: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6d6: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6eb: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6f6: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kloc_2f6fc: 	seg2623_8e38_proc(__disp, _state); break;
         case m2c::kloc_2f710: 	sub_2f700(__disp, _state); break;
         case m2c::kloc_2f716: 	sub_2f700(__disp, _state); break;
         case m2c::kloc_2f729: 	sub_2f700(__disp, _state); break;
@@ -1924,6 +1925,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2f7a0: 	sub_2f700(__disp, _state); break;
         case m2c::kloc_2f7a6: 	sub_2f700(__disp, _state); break;
         case m2c::kloc_2f7c1: 	sub_2f7aa(__disp, _state); break;
+        case m2c::kloc_2f7c5: 	seg2623_9595_proc(__disp, _state); break;
         case m2c::kloc_2f810: 	sub_2f7f9(__disp, _state); break;
         case m2c::kloc_2f8ae: 	sub_2f7f9(__disp, _state); break;
         case m2c::kloc_2f8b1: 	sub_2f7f9(__disp, _state); break;
@@ -1966,21 +1968,22 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_2fc8e: 	sub_2fc7d(__disp, _state); break;
         case m2c::kloc_2fd02: 	sub_2fc7d(__disp, _state); break;
         case m2c::kloc_2fd07: 	sub_2fc7d(__disp, _state); break;
-        case m2c::kloc_2fd1d: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fd2e: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fd32: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fd3d: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fd75: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fd81: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fda3: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fdb5: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2fdc4: 	sub_2fd0b(__disp, _state); break;
-        case m2c::kloc_2ff9b: 	_group47(__disp, _state); break;
-        case m2c::kloc_30009: 	_group49(__disp, _state); break;
-        case m2c::kloc_3002e: 	_group49(__disp, _state); break;
-        case m2c::kloc_30030: 	_group49(__disp, _state); break;
-        case m2c::kloc_3005e: 	_group49(__disp, _state); break;
-        case m2c::kloc_30070: 	_group49(__disp, _state); break;
+        case m2c::kloc_2fd0b: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd1d: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd2e: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd32: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd3d: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd75: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fd81: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fda3: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fdb5: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2fdc4: 	seg2623_9adb_proc(__disp, _state); break;
+        case m2c::kloc_2ff9b: 	_group45(__disp, _state); break;
+        case m2c::kloc_30009: 	_group47(__disp, _state); break;
+        case m2c::kloc_3002e: 	_group47(__disp, _state); break;
+        case m2c::kloc_30030: 	_group47(__disp, _state); break;
+        case m2c::kloc_3005e: 	_group47(__disp, _state); break;
+        case m2c::kloc_30070: 	_group47(__disp, _state); break;
         case m2c::kloc_300f3: 	sub_300e6(__disp, _state); break;
         case m2c::kloc_30172: 	sub_300e6(__disp, _state); break;
         case m2c::kloc_301ad: 	seg2623_9f47_proc(__disp, _state); break;
@@ -1993,277 +1996,280 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_30296: 	sub_30260(__disp, _state); break;
         case m2c::kloc_302a5: 	sub_30260(__disp, _state); break;
         case m2c::kloc_302f7: 	sub_30260(__disp, _state); break;
-        case m2c::kloc_30350: 	_group53(__disp, _state); break;
-        case m2c::kloc_30366: 	_group53(__disp, _state); break;
+        case m2c::kloc_30350: 	_group51(__disp, _state); break;
+        case m2c::kloc_30366: 	_group51(__disp, _state); break;
         case m2c::kloc_30410: 	sub_303e1(__disp, _state); break;
         case m2c::kloc_30486: 	sub_30454(__disp, _state); break;
-        case m2c::kloc_304be: 	_group56(__disp, _state); break;
-        case m2c::kloc_304c1: 	_group56(__disp, _state); break;
-        case m2c::kloc_304f6: 	_group56(__disp, _state); break;
-        case m2c::kloc_3051c: 	_group56(__disp, _state); break;
-        case m2c::kloc_30583: 	_group56(__disp, _state); break;
-        case m2c::kloc_30598: 	_group56(__disp, _state); break;
-        case m2c::kloc_305ff: 	_group56(__disp, _state); break;
-        case m2c::kloc_30612: 	_group56(__disp, _state); break;
-        case m2c::kloc_30624: 	_group56(__disp, _state); break;
-        case m2c::kloc_3062e: 	_group56(__disp, _state); break;
-        case m2c::kloc_30646: 	_group56(__disp, _state); break;
-        case m2c::kloc_30667: 	_group56(__disp, _state); break;
-        case m2c::kloc_3068c: 	_group56(__disp, _state); break;
-        case m2c::kloc_306bc: 	_group56(__disp, _state); break;
-        case m2c::kloc_306c8: 	_group56(__disp, _state); break;
-        case m2c::kloc_306e4: 	_group56(__disp, _state); break;
-        case m2c::kloc_306e7: 	_group56(__disp, _state); break;
-        case m2c::kloc_306f2: 	_group56(__disp, _state); break;
-        case m2c::kloc_306fa: 	_group56(__disp, _state); break;
-        case m2c::kloc_306fd: 	_group56(__disp, _state); break;
-        case m2c::kloc_30728: 	_group56(__disp, _state); break;
-        case m2c::kloc_3072b: 	_group56(__disp, _state); break;
-        case m2c::kloc_30732: 	_group56(__disp, _state); break;
-        case m2c::kloc_3074b: 	_group56(__disp, _state); break;
-        case m2c::kloc_3075b: 	_group56(__disp, _state); break;
-        case m2c::kloc_3079e: 	_group56(__disp, _state); break;
-        case m2c::kloc_307a1: 	_group56(__disp, _state); break;
-        case m2c::kloc_307e6: 	_group56(__disp, _state); break;
-        case m2c::kloc_307ec: 	_group56(__disp, _state); break;
-        case m2c::kloc_307f4: 	_group56(__disp, _state); break;
-        case m2c::kloc_30805: 	_group56(__disp, _state); break;
-        case m2c::kloc_3081d: 	_group56(__disp, _state); break;
-        case m2c::kloc_3083e: 	_group56(__disp, _state); break;
-        case m2c::kloc_30867: 	_group56(__disp, _state); break;
-        case m2c::kloc_3087a: 	_group56(__disp, _state); break;
-        case m2c::kloc_3088d: 	_group56(__disp, _state); break;
-        case m2c::kloc_3089d: 	_group56(__disp, _state); break;
-        case m2c::kloc_308a2: 	_group56(__disp, _state); break;
-        case m2c::kloc_308b7: 	_group56(__disp, _state); break;
-        case m2c::kloc_308ba: 	_group56(__disp, _state); break;
-        case m2c::kloc_308c5: 	_group56(__disp, _state); break;
-        case m2c::kloc_308ef: 	_group56(__disp, _state); break;
-        case m2c::kloc_308f6: 	_group56(__disp, _state); break;
-        case m2c::kloc_30905: 	_group56(__disp, _state); break;
-        case m2c::kloc_3090c: 	_group56(__disp, _state); break;
-        case m2c::kloc_3090f: 	_group56(__disp, _state); break;
-        case m2c::kloc_3096a: 	_group56(__disp, _state); break;
+        case m2c::kloc_304be: 	_group54(__disp, _state); break;
+        case m2c::kloc_304c1: 	_group54(__disp, _state); break;
+        case m2c::kloc_304f6: 	_group54(__disp, _state); break;
+        case m2c::kloc_3051c: 	_group54(__disp, _state); break;
+        case m2c::kloc_30583: 	_group54(__disp, _state); break;
+        case m2c::kloc_30598: 	_group54(__disp, _state); break;
+        case m2c::kloc_305ff: 	_group54(__disp, _state); break;
+        case m2c::kloc_30612: 	_group54(__disp, _state); break;
+        case m2c::kloc_30624: 	_group54(__disp, _state); break;
+        case m2c::kloc_3062e: 	_group54(__disp, _state); break;
+        case m2c::kloc_30646: 	_group54(__disp, _state); break;
+        case m2c::kloc_30667: 	_group54(__disp, _state); break;
+        case m2c::kloc_3068c: 	_group54(__disp, _state); break;
+        case m2c::kloc_306bc: 	_group54(__disp, _state); break;
+        case m2c::kloc_306c8: 	_group54(__disp, _state); break;
+        case m2c::kloc_306e4: 	_group54(__disp, _state); break;
+        case m2c::kloc_306e7: 	_group54(__disp, _state); break;
+        case m2c::kloc_306f2: 	_group54(__disp, _state); break;
+        case m2c::kloc_306fa: 	_group54(__disp, _state); break;
+        case m2c::kloc_306fd: 	_group54(__disp, _state); break;
+        case m2c::kloc_30728: 	_group54(__disp, _state); break;
+        case m2c::kloc_3072b: 	_group54(__disp, _state); break;
+        case m2c::kloc_30732: 	_group54(__disp, _state); break;
+        case m2c::kloc_3074b: 	_group54(__disp, _state); break;
+        case m2c::kloc_3075b: 	_group54(__disp, _state); break;
+        case m2c::kloc_3079e: 	_group54(__disp, _state); break;
+        case m2c::kloc_307a1: 	_group54(__disp, _state); break;
+        case m2c::kloc_307e6: 	_group54(__disp, _state); break;
+        case m2c::kloc_307ec: 	_group54(__disp, _state); break;
+        case m2c::kloc_307f4: 	_group54(__disp, _state); break;
+        case m2c::kloc_30805: 	_group54(__disp, _state); break;
+        case m2c::kloc_3081d: 	_group54(__disp, _state); break;
+        case m2c::kloc_3083e: 	_group54(__disp, _state); break;
+        case m2c::kloc_30867: 	_group54(__disp, _state); break;
+        case m2c::kloc_3087a: 	_group54(__disp, _state); break;
+        case m2c::kloc_3088d: 	_group54(__disp, _state); break;
+        case m2c::kloc_3089d: 	_group54(__disp, _state); break;
+        case m2c::kloc_308a2: 	_group54(__disp, _state); break;
+        case m2c::kloc_308b7: 	_group54(__disp, _state); break;
+        case m2c::kloc_308ba: 	_group54(__disp, _state); break;
+        case m2c::kloc_308c5: 	_group54(__disp, _state); break;
+        case m2c::kloc_308ef: 	_group54(__disp, _state); break;
+        case m2c::kloc_308f6: 	_group54(__disp, _state); break;
+        case m2c::kloc_30905: 	_group54(__disp, _state); break;
+        case m2c::kloc_3090c: 	_group54(__disp, _state); break;
+        case m2c::kloc_3090f: 	_group54(__disp, _state); break;
+        case m2c::kloc_3096a: 	_group54(__disp, _state); break;
         case m2c::kloc_30a81: 	sub_309f4(__disp, _state); break;
         case m2c::kloc_30a87: 	sub_309f4(__disp, _state); break;
         case m2c::kloc_30a96: 	sub_309f4(__disp, _state); break;
         case m2c::kloc_30a9c: 	sub_309f4(__disp, _state); break;
-        case m2c::kloc_30b50: 	_group59(__disp, _state); break;
-        case m2c::kloc_30c0a: 	_group62(__disp, _state); break;
-        case m2c::kloc_30c0e: 	_group62(__disp, _state); break;
-        case m2c::kloc_30c75: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30c80: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30c91: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30c9b: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ca5: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30caf: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30cb9: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30cc3: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30cd3: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d0f: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d1a: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d38: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d3e: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d40: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d4b: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d57: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30d5a: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30da9: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30db9: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30dbf: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30dd8: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ddb: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30df0: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30df6: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30df8: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e04: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e0b: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e0e: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e17: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e62: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e6c: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e76: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e80: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e93: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e96: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30e9d: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ea0: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ec6: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ec8: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30ee3: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f33: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f35: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f3a: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f46: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f49: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f54: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f66: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30f7e: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_30fdd: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31001: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31012: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31025: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3102f: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3108f: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3109e: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_310da: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31114: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31117: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3112d: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3114d: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31150: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31162: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3116f: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31176: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31179: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31182: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31194: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_311b0: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_311d3: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_311d6: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_311f3: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_311fd: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31207: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31211: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31228: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31233: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31236: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31253: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31256: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3128a: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3128d: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_3129e: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312a8: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312b1: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312bb: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312c7: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312d1: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312dc: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_312ed: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31371: 	sub_30c28(__disp, _state); break;
-        case m2c::kloc_31392: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31395: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_313ce: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_313d1: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_313ed: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_313ef: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31412: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31415: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31423: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3143c: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314a0: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314a9: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314c4: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314c7: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314f2: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314f9: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_314fc: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31507: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3151c: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3160a: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3160d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31610: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_316a6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_316d6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_316ef: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31711: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3173d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3174d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31759: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31763: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31772: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3177c: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_317eb: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_317ee: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_317f8: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31814: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3182f: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31832: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3183b: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3188e: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_318ab: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_318ef: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_318f2: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31902: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31908: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31912: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3191f: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3192b: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3192e: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31965: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3196f: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31979: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_319da: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_319e4: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_319f0: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_319f2: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a1d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a1f: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a29: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a41: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a53: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31a7d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31aaa: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ad7: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ada: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ae1: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ae3: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ae9: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31aeb: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31afd: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31aff: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b06: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b0c: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b1d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b20: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b2f: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b7a: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31b9b: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31bac: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31bb6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31c94: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31c97: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ce1: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31d23: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31d45: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31d66: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31d89: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31db3: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31dc9: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31de6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31dfd: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31e07: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31e11: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31e36: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31e42: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31e44: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ede: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ee1: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31ee8: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31efd: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31f07: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31f11: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_31f1b: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32010: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3203d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32047: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32062: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_320cc: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_320d6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_320e0: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32100: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32112: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_321a6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_321c6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_321e6: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_321f5: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_321ff: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_3224d: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32288: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_322a7: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_32379: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_323c3: 	sub_31377(__disp, _state); break;
-        case m2c::kloc_323e3: 	sub_31377(__disp, _state); break;
+        case m2c::kloc_30b50: 	_group57(__disp, _state); break;
+        case m2c::kloc_30bec: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c0a: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c0e: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c28: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c75: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c80: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c91: 	_group59(__disp, _state); break;
+        case m2c::kloc_30c9b: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ca5: 	_group59(__disp, _state); break;
+        case m2c::kloc_30caf: 	_group59(__disp, _state); break;
+        case m2c::kloc_30cb9: 	_group59(__disp, _state); break;
+        case m2c::kloc_30cc3: 	_group59(__disp, _state); break;
+        case m2c::kloc_30cd3: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d0f: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d1a: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d38: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d3e: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d40: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d4b: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d57: 	_group59(__disp, _state); break;
+        case m2c::kloc_30d5a: 	_group59(__disp, _state); break;
+        case m2c::kloc_30da9: 	_group59(__disp, _state); break;
+        case m2c::kloc_30db9: 	_group59(__disp, _state); break;
+        case m2c::kloc_30dbf: 	_group59(__disp, _state); break;
+        case m2c::kloc_30dd8: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ddb: 	_group59(__disp, _state); break;
+        case m2c::kloc_30df0: 	_group59(__disp, _state); break;
+        case m2c::kloc_30df6: 	_group59(__disp, _state); break;
+        case m2c::kloc_30df8: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e04: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e0b: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e0e: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e17: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e62: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e6c: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e76: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e80: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e93: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e96: 	_group59(__disp, _state); break;
+        case m2c::kloc_30e9d: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ea0: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ec6: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ec8: 	_group59(__disp, _state); break;
+        case m2c::kloc_30ee3: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f33: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f35: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f3a: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f46: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f49: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f54: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f66: 	_group59(__disp, _state); break;
+        case m2c::kloc_30f7e: 	_group59(__disp, _state); break;
+        case m2c::kloc_30fdd: 	_group59(__disp, _state); break;
+        case m2c::kloc_31001: 	_group59(__disp, _state); break;
+        case m2c::kloc_31012: 	_group59(__disp, _state); break;
+        case m2c::kloc_31025: 	_group59(__disp, _state); break;
+        case m2c::kloc_3102f: 	_group59(__disp, _state); break;
+        case m2c::kloc_3108f: 	_group59(__disp, _state); break;
+        case m2c::kloc_3109e: 	_group59(__disp, _state); break;
+        case m2c::kloc_310da: 	_group59(__disp, _state); break;
+        case m2c::kloc_31114: 	_group59(__disp, _state); break;
+        case m2c::kloc_31117: 	_group59(__disp, _state); break;
+        case m2c::kloc_3112d: 	_group59(__disp, _state); break;
+        case m2c::kloc_3114d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31150: 	_group59(__disp, _state); break;
+        case m2c::kloc_31162: 	_group59(__disp, _state); break;
+        case m2c::kloc_3116f: 	_group59(__disp, _state); break;
+        case m2c::kloc_31176: 	_group59(__disp, _state); break;
+        case m2c::kloc_31179: 	_group59(__disp, _state); break;
+        case m2c::kloc_31182: 	_group59(__disp, _state); break;
+        case m2c::kloc_31194: 	_group59(__disp, _state); break;
+        case m2c::kloc_311b0: 	_group59(__disp, _state); break;
+        case m2c::kloc_311d3: 	_group59(__disp, _state); break;
+        case m2c::kloc_311d6: 	_group59(__disp, _state); break;
+        case m2c::kloc_311f3: 	_group59(__disp, _state); break;
+        case m2c::kloc_311fd: 	_group59(__disp, _state); break;
+        case m2c::kloc_31207: 	_group59(__disp, _state); break;
+        case m2c::kloc_31211: 	_group59(__disp, _state); break;
+        case m2c::kloc_31228: 	_group59(__disp, _state); break;
+        case m2c::kloc_31233: 	_group59(__disp, _state); break;
+        case m2c::kloc_31236: 	_group59(__disp, _state); break;
+        case m2c::kloc_31253: 	_group59(__disp, _state); break;
+        case m2c::kloc_31256: 	_group59(__disp, _state); break;
+        case m2c::kloc_3128a: 	_group59(__disp, _state); break;
+        case m2c::kloc_3128d: 	_group59(__disp, _state); break;
+        case m2c::kloc_3129e: 	_group59(__disp, _state); break;
+        case m2c::kloc_312a8: 	_group59(__disp, _state); break;
+        case m2c::kloc_312b1: 	_group59(__disp, _state); break;
+        case m2c::kloc_312bb: 	_group59(__disp, _state); break;
+        case m2c::kloc_312c7: 	_group59(__disp, _state); break;
+        case m2c::kloc_312d1: 	_group59(__disp, _state); break;
+        case m2c::kloc_312dc: 	_group59(__disp, _state); break;
+        case m2c::kloc_312ed: 	_group59(__disp, _state); break;
+        case m2c::kloc_31371: 	_group59(__disp, _state); break;
+        case m2c::kloc_31377: 	_group59(__disp, _state); break;
+        case m2c::kloc_31392: 	_group59(__disp, _state); break;
+        case m2c::kloc_31395: 	_group59(__disp, _state); break;
+        case m2c::kloc_313ce: 	_group59(__disp, _state); break;
+        case m2c::kloc_313d1: 	_group59(__disp, _state); break;
+        case m2c::kloc_313ed: 	_group59(__disp, _state); break;
+        case m2c::kloc_313ef: 	_group59(__disp, _state); break;
+        case m2c::kloc_31412: 	_group59(__disp, _state); break;
+        case m2c::kloc_31415: 	_group59(__disp, _state); break;
+        case m2c::kloc_31423: 	_group59(__disp, _state); break;
+        case m2c::kloc_3143c: 	_group59(__disp, _state); break;
+        case m2c::kloc_314a0: 	_group59(__disp, _state); break;
+        case m2c::kloc_314a9: 	_group59(__disp, _state); break;
+        case m2c::kloc_314c4: 	_group59(__disp, _state); break;
+        case m2c::kloc_314c7: 	_group59(__disp, _state); break;
+        case m2c::kloc_314f2: 	_group59(__disp, _state); break;
+        case m2c::kloc_314f9: 	_group59(__disp, _state); break;
+        case m2c::kloc_314fc: 	_group59(__disp, _state); break;
+        case m2c::kloc_31507: 	_group59(__disp, _state); break;
+        case m2c::kloc_3151c: 	_group59(__disp, _state); break;
+        case m2c::kloc_3160a: 	_group59(__disp, _state); break;
+        case m2c::kloc_3160d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31610: 	_group59(__disp, _state); break;
+        case m2c::kloc_316a6: 	_group59(__disp, _state); break;
+        case m2c::kloc_316d6: 	_group59(__disp, _state); break;
+        case m2c::kloc_316ef: 	_group59(__disp, _state); break;
+        case m2c::kloc_31711: 	_group59(__disp, _state); break;
+        case m2c::kloc_3173d: 	_group59(__disp, _state); break;
+        case m2c::kloc_3174d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31759: 	_group59(__disp, _state); break;
+        case m2c::kloc_31763: 	_group59(__disp, _state); break;
+        case m2c::kloc_31772: 	_group59(__disp, _state); break;
+        case m2c::kloc_3177c: 	_group59(__disp, _state); break;
+        case m2c::kloc_317eb: 	_group59(__disp, _state); break;
+        case m2c::kloc_317ee: 	_group59(__disp, _state); break;
+        case m2c::kloc_317f8: 	_group59(__disp, _state); break;
+        case m2c::kloc_31814: 	_group59(__disp, _state); break;
+        case m2c::kloc_3182f: 	_group59(__disp, _state); break;
+        case m2c::kloc_31832: 	_group59(__disp, _state); break;
+        case m2c::kloc_3183b: 	_group59(__disp, _state); break;
+        case m2c::kloc_3188e: 	_group59(__disp, _state); break;
+        case m2c::kloc_318ab: 	_group59(__disp, _state); break;
+        case m2c::kloc_318ef: 	_group59(__disp, _state); break;
+        case m2c::kloc_318f2: 	_group59(__disp, _state); break;
+        case m2c::kloc_31902: 	_group59(__disp, _state); break;
+        case m2c::kloc_31908: 	_group59(__disp, _state); break;
+        case m2c::kloc_31912: 	_group59(__disp, _state); break;
+        case m2c::kloc_3191f: 	_group59(__disp, _state); break;
+        case m2c::kloc_3192b: 	_group59(__disp, _state); break;
+        case m2c::kloc_3192e: 	_group59(__disp, _state); break;
+        case m2c::kloc_31965: 	_group59(__disp, _state); break;
+        case m2c::kloc_3196f: 	_group59(__disp, _state); break;
+        case m2c::kloc_31979: 	_group59(__disp, _state); break;
+        case m2c::kloc_319da: 	_group59(__disp, _state); break;
+        case m2c::kloc_319e4: 	_group59(__disp, _state); break;
+        case m2c::kloc_319f0: 	_group59(__disp, _state); break;
+        case m2c::kloc_319f2: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a1d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a1f: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a29: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a41: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a53: 	_group59(__disp, _state); break;
+        case m2c::kloc_31a7d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31aaa: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ad7: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ada: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ae1: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ae3: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ae9: 	_group59(__disp, _state); break;
+        case m2c::kloc_31aeb: 	_group59(__disp, _state); break;
+        case m2c::kloc_31afd: 	_group59(__disp, _state); break;
+        case m2c::kloc_31aff: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b06: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b0c: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b1d: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b20: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b2f: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b7a: 	_group59(__disp, _state); break;
+        case m2c::kloc_31b9b: 	_group59(__disp, _state); break;
+        case m2c::kloc_31bac: 	_group59(__disp, _state); break;
+        case m2c::kloc_31bb6: 	_group59(__disp, _state); break;
+        case m2c::kloc_31c94: 	_group59(__disp, _state); break;
+        case m2c::kloc_31c97: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ce1: 	_group59(__disp, _state); break;
+        case m2c::kloc_31d23: 	_group59(__disp, _state); break;
+        case m2c::kloc_31d45: 	_group59(__disp, _state); break;
+        case m2c::kloc_31d66: 	_group59(__disp, _state); break;
+        case m2c::kloc_31d89: 	_group59(__disp, _state); break;
+        case m2c::kloc_31db3: 	_group59(__disp, _state); break;
+        case m2c::kloc_31dc9: 	_group59(__disp, _state); break;
+        case m2c::kloc_31de6: 	_group59(__disp, _state); break;
+        case m2c::kloc_31dfd: 	_group59(__disp, _state); break;
+        case m2c::kloc_31e07: 	_group59(__disp, _state); break;
+        case m2c::kloc_31e11: 	_group59(__disp, _state); break;
+        case m2c::kloc_31e36: 	_group59(__disp, _state); break;
+        case m2c::kloc_31e42: 	_group59(__disp, _state); break;
+        case m2c::kloc_31e44: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ede: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ee1: 	_group59(__disp, _state); break;
+        case m2c::kloc_31ee8: 	_group59(__disp, _state); break;
+        case m2c::kloc_31efd: 	_group59(__disp, _state); break;
+        case m2c::kloc_31f07: 	_group59(__disp, _state); break;
+        case m2c::kloc_31f11: 	_group59(__disp, _state); break;
+        case m2c::kloc_31f1b: 	_group59(__disp, _state); break;
+        case m2c::kloc_32010: 	_group59(__disp, _state); break;
+        case m2c::kloc_3203d: 	_group59(__disp, _state); break;
+        case m2c::kloc_32047: 	_group59(__disp, _state); break;
+        case m2c::kloc_32062: 	_group59(__disp, _state); break;
+        case m2c::kloc_320cc: 	_group59(__disp, _state); break;
+        case m2c::kloc_320d6: 	_group59(__disp, _state); break;
+        case m2c::kloc_320e0: 	_group59(__disp, _state); break;
+        case m2c::kloc_32100: 	_group59(__disp, _state); break;
+        case m2c::kloc_32112: 	_group59(__disp, _state); break;
+        case m2c::kloc_321a6: 	_group59(__disp, _state); break;
+        case m2c::kloc_321c6: 	_group59(__disp, _state); break;
+        case m2c::kloc_321e6: 	_group59(__disp, _state); break;
+        case m2c::kloc_321f5: 	_group59(__disp, _state); break;
+        case m2c::kloc_321ff: 	_group59(__disp, _state); break;
+        case m2c::kloc_3224d: 	_group59(__disp, _state); break;
+        case m2c::kloc_32288: 	_group59(__disp, _state); break;
+        case m2c::kloc_322a7: 	_group59(__disp, _state); break;
+        case m2c::kloc_32379: 	_group59(__disp, _state); break;
+        case m2c::kloc_323c3: 	_group59(__disp, _state); break;
+        case m2c::kloc_323e3: 	_group59(__disp, _state); break;
         case m2c::kloc_323fa: 	sub_323e9(__disp, _state); break;
         case m2c::kloc_32404: 	sub_323e9(__disp, _state); break;
         case m2c::kloc_32485: 	sub_323e9(__disp, _state); break;
@@ -2325,10 +2331,11 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_32b06: 	sub_32ad4(__disp, _state); break;
         case m2c::kloc_32b08: 	sub_32ad4(__disp, _state); break;
         case m2c::kloc_32b0a: 	sub_32ad4(__disp, _state); break;
-        case m2c::kloc_32b42: 	sub_32b0e(__disp, _state); break;
-        case m2c::kloc_32bb0: 	sub_32b0e(__disp, _state); break;
-        case m2c::kloc_32bbb: 	sub_32b0e(__disp, _state); break;
-        case m2c::kloc_32bf0: 	sub_32b0e(__disp, _state); break;
+        case m2c::kloc_32b0e: 	seg2623_c8de_proc(__disp, _state); break;
+        case m2c::kloc_32b42: 	seg2623_c8de_proc(__disp, _state); break;
+        case m2c::kloc_32bb0: 	seg2623_c8de_proc(__disp, _state); break;
+        case m2c::kloc_32bbb: 	seg2623_c8de_proc(__disp, _state); break;
+        case m2c::kloc_32bf0: 	seg2623_c8de_proc(__disp, _state); break;
         case m2c::kloc_32c20: 	sub_32c02(__disp, _state); break;
         case m2c::kloc_32c23: 	sub_32c02(__disp, _state); break;
         case m2c::kloc_32c9a: 	sub_32c02(__disp, _state); break;
@@ -2396,162 +2403,164 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_333ea: 	seg2623_d1a6_proc(__disp, _state); break;
         case m2c::kloc_33406: 	sub_333f8(__disp, _state); break;
         case m2c::kloc_33412: 	sub_333f8(__disp, _state); break;
-        case m2c::kloc_33425: 	sub_33418(__disp, _state); break;
+        case m2c::kloc_33418: 	seg2623_d1e8_proc(__disp, _state); break;
+        case m2c::kloc_33425: 	seg2623_d1e8_proc(__disp, _state); break;
         case m2c::kloc_33444: 	sub_33430(__disp, _state); break;
         case m2c::kloc_33462: 	sub_3344e(__disp, _state); break;
         case m2c::kloc_3347a: 	sub_3344e(__disp, _state); break;
         case m2c::kloc_3347c: 	sub_3344e(__disp, _state); break;
         case m2c::kloc_33488: 	sub_3344e(__disp, _state); break;
-        case m2c::kloc_334a8: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334ae: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334b4: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334c5: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334ca: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334da: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334ea: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_334fc: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3350c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33527: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3352d: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33533: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33540: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3354d: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3356f: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33579: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3357c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33591: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33594: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33597: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_335d2: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_335e3: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3361c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33654: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3368c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_336aa: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_336ad: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_336b0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_336fc: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3370b: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3370e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33724: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33727: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3373a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33746: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3375a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33760: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33773: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3377f: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33790: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_337c4: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_337d2: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_337df: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_337f0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_337f5: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33801: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3380d: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33821: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33832: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33835: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3384e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33859: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33866: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33869: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33871: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3387a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33883: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3388c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33895: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3389e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338a7: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338b0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338b9: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338c2: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338cb: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338d4: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338dd: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338e6: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_338f0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3394c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33956: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33971: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33977: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3397f: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33984: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_3398c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33996: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339a0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339a8: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339ab: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339b3: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339bb: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339c3: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339cb: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339ce: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339d6: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339e0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339e8: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339f0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339f3: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_339fb: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a03: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a0b: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a13: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a1b: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a1e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a26: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a30: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a3a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a42: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a4a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a4c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a54: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a5c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a64: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a6c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a6e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a76: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a80: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a88: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a90: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a92: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33a9a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33aa2: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33aaa: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33ab2: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33aba: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33abc: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33ac7: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33acd: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33ad3: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33ae0: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33aea: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33af5: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b02: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b0c: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b16: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b23: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b2d: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b37: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b44: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b4e: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b5a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b62: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b6a: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b7b: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b88: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33b93: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bb1: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bbd: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bcc: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bd1: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bd4: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33beb: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bf7: 	sub_33490(__disp, _state); break;
-        case m2c::kloc_33bfa: 	sub_33490(__disp, _state); break;
+        case m2c::kloc_33490: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334a8: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334ae: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334b4: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334c5: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334ca: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334da: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334ea: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_334fc: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3350c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33527: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3352d: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33533: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33540: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3354d: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3356f: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33579: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3357c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33591: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33594: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33597: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_335d2: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_335e3: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3361c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33654: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3368c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_336aa: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_336ad: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_336b0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_336fc: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3370b: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3370e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33724: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33727: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3373a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33746: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3375a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33760: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33773: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3377f: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33790: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_337c4: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_337d2: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_337df: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_337f0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_337f5: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33801: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3380d: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33821: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33832: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33835: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3384e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33859: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33866: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33869: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33871: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3387a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33883: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3388c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33895: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3389e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338a7: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338b0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338b9: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338c2: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338cb: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338d4: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338dd: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338e6: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_338f0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3394c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33956: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33971: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33977: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3397f: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33984: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_3398c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33996: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339a0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339a8: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339ab: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339b3: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339bb: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339c3: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339cb: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339ce: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339d6: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339e0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339e8: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339f0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339f3: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_339fb: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a03: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a0b: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a13: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a1b: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a1e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a26: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a30: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a3a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a42: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a4a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a4c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a54: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a5c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a64: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a6c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a6e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a76: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a80: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a88: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a90: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a92: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33a9a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33aa2: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33aaa: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33ab2: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33aba: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33abc: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33ac7: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33acd: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33ad3: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33ae0: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33aea: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33af5: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b02: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b0c: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b16: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b23: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b2d: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b37: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b44: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b4e: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b5a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b62: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b6a: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b7b: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b88: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33b93: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bb1: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bbd: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bcc: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bd1: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bd4: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33beb: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bf7: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kloc_33bfa: 	seg2623_d260_proc(__disp, _state); break;
         case m2c::kloc_33c3f: 	sub_33c0b(__disp, _state); break;
         case m2c::kloc_33c42: 	sub_33c0b(__disp, _state); break;
-        case m2c::kloc_33c7d: 	_group63(__disp, _state); break;
-        case m2c::kloc_33c88: 	_group63(__disp, _state); break;
+        case m2c::kloc_33c7d: 	_group60(__disp, _state); break;
+        case m2c::kloc_33c88: 	_group60(__disp, _state); break;
         case m2c::kloc_33cb9: 	sub_33c8f(__disp, _state); break;
         case m2c::kloc_33cce: 	sub_33cbd(__disp, _state); break;
         case m2c::kloc_33cd5: 	sub_33cbd(__disp, _state); break;
@@ -2573,27 +2582,27 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_34089: 	sub_3404b(__disp, _state); break;
         case m2c::kloc_34094: 	sub_3404b(__disp, _state); break;
         case m2c::kloc_340bb: 	sub_340a2(__disp, _state); break;
-        case m2c::kloc_340e7: 	_group64(__disp, _state); break;
-        case m2c::kloc_340ef: 	_group64(__disp, _state); break;
-        case m2c::kloc_34115: 	_group64(__disp, _state); break;
-        case m2c::kloc_34146: 	_group64(__disp, _state); break;
-        case m2c::kloc_34165: 	_group64(__disp, _state); break;
-        case m2c::kloc_3417f: 	_group64(__disp, _state); break;
-        case m2c::kloc_341a8: 	_group64(__disp, _state); break;
-        case m2c::kloc_341b0: 	_group64(__disp, _state); break;
-        case m2c::kloc_341b9: 	_group64(__disp, _state); break;
-        case m2c::kloc_341c1: 	_group64(__disp, _state); break;
-        case m2c::kloc_341cb: 	_group64(__disp, _state); break;
-        case m2c::kloc_341e7: 	_group64(__disp, _state); break;
-        case m2c::kloc_34310: 	_group65(__disp, _state); break;
-        case m2c::kloc_34378: 	_group66(__disp, _state); break;
-        case m2c::kloc_343ec: 	_group66(__disp, _state); break;
-        case m2c::kloc_34454: 	_group67(__disp, _state); break;
+        case m2c::kloc_340e7: 	_group61(__disp, _state); break;
+        case m2c::kloc_340ef: 	_group61(__disp, _state); break;
+        case m2c::kloc_34115: 	_group61(__disp, _state); break;
+        case m2c::kloc_34146: 	_group61(__disp, _state); break;
+        case m2c::kloc_34165: 	_group61(__disp, _state); break;
+        case m2c::kloc_3417f: 	_group61(__disp, _state); break;
+        case m2c::kloc_341a8: 	_group61(__disp, _state); break;
+        case m2c::kloc_341b0: 	_group61(__disp, _state); break;
+        case m2c::kloc_341b9: 	_group61(__disp, _state); break;
+        case m2c::kloc_341c1: 	_group61(__disp, _state); break;
+        case m2c::kloc_341cb: 	_group61(__disp, _state); break;
+        case m2c::kloc_341e7: 	_group61(__disp, _state); break;
+        case m2c::kloc_34310: 	_group62(__disp, _state); break;
+        case m2c::kloc_34378: 	_group63(__disp, _state); break;
+        case m2c::kloc_343ec: 	_group63(__disp, _state); break;
+        case m2c::kloc_34454: 	_group64(__disp, _state); break;
         case m2c::kloc_344a5: 	sub_34492(__disp, _state); break;
-        case m2c::kloc_344e8: 	_group68(__disp, _state); break;
-        case m2c::kloc_34500: 	_group68(__disp, _state); break;
-        case m2c::kloc_3451d: 	_group68(__disp, _state); break;
-        case m2c::kloc_3452d: 	_group68(__disp, _state); break;
+        case m2c::kloc_344e8: 	_group65(__disp, _state); break;
+        case m2c::kloc_34500: 	_group65(__disp, _state); break;
+        case m2c::kloc_3451d: 	_group65(__disp, _state); break;
+        case m2c::kloc_3452d: 	_group65(__disp, _state); break;
         case m2c::kloc_34544: 	sub_34539(__disp, _state); break;
         case m2c::kloc_34551: 	sub_34539(__disp, _state); break;
         case m2c::kloc_34565: 	sub_34539(__disp, _state); break;
@@ -2611,23 +2620,23 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_34625: 	sub_345b2(__disp, _state); break;
         case m2c::kloc_3464e: 	sub_345b2(__disp, _state); break;
         case m2c::kloc_3465a: 	sub_345b2(__disp, _state); break;
-        case m2c::kloc_3467e: 	_group69(__disp, _state); break;
-        case m2c::kloc_346f6: 	_group69(__disp, _state); break;
-        case m2c::kloc_34705: 	_group69(__disp, _state); break;
-        case m2c::kloc_34757: 	_group69(__disp, _state); break;
-        case m2c::kloc_34768: 	_group69(__disp, _state); break;
-        case m2c::kloc_34777: 	_group69(__disp, _state); break;
-        case m2c::kloc_34792: 	_group69(__disp, _state); break;
-        case m2c::kloc_3479e: 	_group69(__disp, _state); break;
-        case m2c::kloc_347a4: 	_group69(__disp, _state); break;
-        case m2c::kloc_347a9: 	_group69(__disp, _state); break;
-        case m2c::kloc_347ac: 	_group69(__disp, _state); break;
-        case m2c::kloc_347c2: 	_group69(__disp, _state); break;
-        case m2c::kloc_347f2: 	_group70(__disp, _state); break;
-        case m2c::kloc_34816: 	_group70(__disp, _state); break;
-        case m2c::kloc_3481c: 	_group70(__disp, _state); break;
-        case m2c::kloc_34827: 	_group70(__disp, _state); break;
-        case m2c::kloc_34841: 	_group70(__disp, _state); break;
+        case m2c::kloc_3467e: 	_group66(__disp, _state); break;
+        case m2c::kloc_346f6: 	_group66(__disp, _state); break;
+        case m2c::kloc_34705: 	_group66(__disp, _state); break;
+        case m2c::kloc_34757: 	_group66(__disp, _state); break;
+        case m2c::kloc_34768: 	_group66(__disp, _state); break;
+        case m2c::kloc_34777: 	_group66(__disp, _state); break;
+        case m2c::kloc_34792: 	_group66(__disp, _state); break;
+        case m2c::kloc_3479e: 	_group66(__disp, _state); break;
+        case m2c::kloc_347a4: 	_group66(__disp, _state); break;
+        case m2c::kloc_347a9: 	_group66(__disp, _state); break;
+        case m2c::kloc_347ac: 	_group66(__disp, _state); break;
+        case m2c::kloc_347c2: 	_group66(__disp, _state); break;
+        case m2c::kloc_347f2: 	_group67(__disp, _state); break;
+        case m2c::kloc_34816: 	_group67(__disp, _state); break;
+        case m2c::kloc_3481c: 	_group67(__disp, _state); break;
+        case m2c::kloc_34827: 	_group67(__disp, _state); break;
+        case m2c::kloc_34841: 	_group67(__disp, _state); break;
         case m2c::kloc_34895: 	sub_34884(__disp, _state); break;
         case m2c::kloc_348b1: 	sub_3489a(__disp, _state); break;
         case m2c::kloc_348ba: 	sub_3489a(__disp, _state); break;
@@ -2683,6 +2692,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_34cde: 	sub_34cb2(__disp, _state); break;
         case m2c::kloc_34d1c: 	sub_34cb2(__disp, _state); break;
         case m2c::kloc_34d24: 	sub_34cb2(__disp, _state); break;
+        case m2c::kloc_34d64: 	seg2623_eb34_proc(__disp, _state); break;
         case m2c::kloc_34d80: 	sub_34d72(__disp, _state); break;
         case m2c::kloc_34d8a: 	sub_34d72(__disp, _state); break;
         case m2c::kloc_34d91: 	sub_34d72(__disp, _state); break;
@@ -2820,17 +2830,17 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_35765: 	sub_356c8(__disp, _state); break;
         case m2c::kloc_35767: 	sub_356c8(__disp, _state); break;
         case m2c::kloc_35769: 	sub_356c8(__disp, _state); break;
-        case m2c::kloc_35787: 	_group71(__disp, _state); break;
-        case m2c::kloc_3578d: 	_group71(__disp, _state); break;
-        case m2c::kloc_35796: 	_group71(__disp, _state); break;
-        case m2c::kloc_357a8: 	_group71(__disp, _state); break;
-        case m2c::kloc_357ae: 	_group71(__disp, _state); break;
-        case m2c::kloc_357b4: 	_group71(__disp, _state); break;
-        case m2c::kloc_357b9: 	_group71(__disp, _state); break;
-        case m2c::kloc_357bc: 	_group71(__disp, _state); break;
-        case m2c::kloc_357c8: 	_group71(__disp, _state); break;
-        case m2c::kloc_357d5: 	_group71(__disp, _state); break;
-        case m2c::kloc_357ea: 	_group71(__disp, _state); break;
+        case m2c::kloc_35787: 	_group68(__disp, _state); break;
+        case m2c::kloc_3578d: 	_group68(__disp, _state); break;
+        case m2c::kloc_35796: 	_group68(__disp, _state); break;
+        case m2c::kloc_357a8: 	_group68(__disp, _state); break;
+        case m2c::kloc_357ae: 	_group68(__disp, _state); break;
+        case m2c::kloc_357b4: 	_group68(__disp, _state); break;
+        case m2c::kloc_357b9: 	_group68(__disp, _state); break;
+        case m2c::kloc_357bc: 	_group68(__disp, _state); break;
+        case m2c::kloc_357c8: 	_group68(__disp, _state); break;
+        case m2c::kloc_357d5: 	_group68(__disp, _state); break;
+        case m2c::kloc_357ea: 	_group68(__disp, _state); break;
         case m2c::kloc_357fe: 	sub_357f0(__disp, _state); break;
         case m2c::kloc_3581e: 	sub_35802(__disp, _state); break;
         case m2c::kloc_35838: 	sub_35802(__disp, _state); break;
@@ -2840,23 +2850,22 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_3586c: 	seg2623_f618_proc(__disp, _state); break;
         case m2c::kloc_35886: 	sub_3587a(__disp, _state); break;
         case m2c::kloc_35888: 	sub_3587a(__disp, _state); break;
-        case m2c::kloc_3588c: 	_group72(__disp, _state); break;
-        case m2c::kloc_358a5: 	_group72(__disp, _state); break;
-        case m2c::kloc_358bf: 	_group72(__disp, _state); break;
-        case m2c::kloc_358cf: 	_group72(__disp, _state); break;
-        case m2c::kloc_358d4: 	_group72(__disp, _state); break;
-        case m2c::kloc_358e3: 	_group72(__disp, _state); break;
-        case m2c::kloc_358e7: 	_group72(__disp, _state); break;
-        case m2c::kloc_358ed: 	_group72(__disp, _state); break;
-        case m2c::kloc_358f6: 	_group72(__disp, _state); break;
-        case m2c::kloc_358fd: 	_group72(__disp, _state); break;
-        case m2c::kloc_35917: 	_group72(__disp, _state); break;
-        case m2c::kloc_35922: 	_group72(__disp, _state); break;
-        case m2c::kloc_35936: 	_group72(__disp, _state); break;
-        case m2c::kloc_3593a: 	_group72(__disp, _state); break;
-        case m2c::kloc_35953: 	_group72(__disp, _state); break;
-        case m2c::kloc_3595d: 	_group72(__disp, _state); break;
-        case m2c::kloc_35969: 	_group72(__disp, _state); break;
+        case m2c::kloc_358a5: 	_group69(__disp, _state); break;
+        case m2c::kloc_358bf: 	_group69(__disp, _state); break;
+        case m2c::kloc_358cf: 	_group69(__disp, _state); break;
+        case m2c::kloc_358d4: 	_group69(__disp, _state); break;
+        case m2c::kloc_358e3: 	_group69(__disp, _state); break;
+        case m2c::kloc_358e7: 	_group69(__disp, _state); break;
+        case m2c::kloc_358ed: 	_group69(__disp, _state); break;
+        case m2c::kloc_358f6: 	_group69(__disp, _state); break;
+        case m2c::kloc_358fd: 	_group69(__disp, _state); break;
+        case m2c::kloc_35917: 	_group69(__disp, _state); break;
+        case m2c::kloc_35922: 	_group69(__disp, _state); break;
+        case m2c::kloc_35936: 	_group69(__disp, _state); break;
+        case m2c::kloc_3593a: 	_group69(__disp, _state); break;
+        case m2c::kloc_35953: 	_group69(__disp, _state); break;
+        case m2c::kloc_3595d: 	_group69(__disp, _state); break;
+        case m2c::kloc_35969: 	_group69(__disp, _state); break;
         case m2c::kloc_3597d: 	sub_35972(__disp, _state); break;
         case m2c::kloc_35982: 	sub_35972(__disp, _state); break;
         case m2c::kloc_3598d: 	sub_35972(__disp, _state); break;
@@ -2874,8 +2883,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_35a86: 	sub_35a5c(__disp, _state); break;
         case m2c::kloc_35a9e: 	sub_35a5c(__disp, _state); break;
         case m2c::kloc_35aac: 	sub_35a5c(__disp, _state); break;
-        case m2c::kloc_35aaf: 	sub_35a5c(__disp, _state); break;
-        case m2c::kloc_35ad5: 	_group73(__disp, _state); break;
+        case m2c::kloc_35ad5: 	_group70(__disp, _state); break;
         case m2c::kloc_35b35: 	sub_35b28(__disp, _state); break;
         case m2c::kloc_35b46: 	sub_35b28(__disp, _state); break;
         case m2c::kloc_35b97: 	sub_35b28(__disp, _state); break;
@@ -2927,7 +2935,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_3604a: 	seg35ab_550_proc(__disp, _state); break;
         case m2c::kloc_36069: 	seg35ab_550_proc(__disp, _state); break;
         case m2c::kloc_3606b: 	seg35ab_550_proc(__disp, _state); break;
-        case m2c::kloc_3607f: 	seg35ab_550_proc(__disp, _state); break;
         case m2c::kloc_3609a: 	sub_3608c(__disp, _state); break;
         case m2c::kloc_360af: 	sub_3608c(__disp, _state); break;
         case m2c::kloc_360c6: 	sub_3608c(__disp, _state); break;
@@ -2940,21 +2947,21 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_36106: 	sub_3608c(__disp, _state); break;
         case m2c::kloc_36108: 	sub_3608c(__disp, _state); break;
         case m2c::kloc_36110: 	sub_3608c(__disp, _state); break;
-        case m2c::kloc_36150: 	_group75(__disp, _state); break;
-        case m2c::kloc_3616e: 	_group75(__disp, _state); break;
-        case m2c::kloc_3617b: 	_group75(__disp, _state); break;
-        case m2c::kloc_36184: 	_group75(__disp, _state); break;
-        case m2c::kloc_3622e: 	_group75(__disp, _state); break;
-        case m2c::kloc_36248: 	_group75(__disp, _state); break;
-        case m2c::kloc_36272: 	_group75(__disp, _state); break;
-        case m2c::kloc_36285: 	_group75(__disp, _state); break;
-        case m2c::kloc_362b7: 	_group75(__disp, _state); break;
-        case m2c::kloc_362cc: 	_group75(__disp, _state); break;
-        case m2c::kloc_362e2: 	_group75(__disp, _state); break;
-        case m2c::kloc_362e7: 	_group75(__disp, _state); break;
-        case m2c::kloc_362fd: 	_group75(__disp, _state); break;
-        case m2c::kloc_36302: 	_group75(__disp, _state); break;
-        case m2c::kloc_3632e: 	_group75(__disp, _state); break;
+        case m2c::kloc_36150: 	_group72(__disp, _state); break;
+        case m2c::kloc_3616e: 	_group72(__disp, _state); break;
+        case m2c::kloc_3617b: 	_group72(__disp, _state); break;
+        case m2c::kloc_36184: 	_group72(__disp, _state); break;
+        case m2c::kloc_3622e: 	_group72(__disp, _state); break;
+        case m2c::kloc_36248: 	_group72(__disp, _state); break;
+        case m2c::kloc_36272: 	_group72(__disp, _state); break;
+        case m2c::kloc_36285: 	_group72(__disp, _state); break;
+        case m2c::kloc_362b7: 	_group72(__disp, _state); break;
+        case m2c::kloc_362cc: 	_group72(__disp, _state); break;
+        case m2c::kloc_362e2: 	_group72(__disp, _state); break;
+        case m2c::kloc_362e7: 	_group72(__disp, _state); break;
+        case m2c::kloc_362fd: 	_group72(__disp, _state); break;
+        case m2c::kloc_36302: 	_group72(__disp, _state); break;
+        case m2c::kloc_3632e: 	_group72(__disp, _state); break;
         case m2c::kloc_36390: 	sub_36334(__disp, _state); break;
         case m2c::kloc_3639b: 	sub_36334(__disp, _state); break;
         case m2c::kloc_363ab: 	sub_36334(__disp, _state); break;
@@ -2991,15 +2998,15 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_36901: 	sub_368a4(__disp, _state); break;
         case m2c::kloc_3694b: 	sub_368a4(__disp, _state); break;
         case m2c::kloc_3698f: 	sub_368a4(__disp, _state); break;
-        case m2c::kloc_36a28: 	_group77(__disp, _state); break;
-        case m2c::kloc_36a38: 	_group77(__disp, _state); break;
-        case m2c::kloc_36a42: 	_group77(__disp, _state); break;
-        case m2c::kloc_36b2a: 	_group77(__disp, _state); break;
-        case m2c::kloc_36b2d: 	_group77(__disp, _state); break;
-        case m2c::kloc_36b3b: 	_group77(__disp, _state); break;
-        case m2c::kloc_36b47: 	_group77(__disp, _state); break;
-        case m2c::kloc_36bba: 	_group77(__disp, _state); break;
-        case m2c::kloc_36bc4: 	_group77(__disp, _state); break;
+        case m2c::kloc_36a28: 	_group74(__disp, _state); break;
+        case m2c::kloc_36a38: 	_group74(__disp, _state); break;
+        case m2c::kloc_36a42: 	_group74(__disp, _state); break;
+        case m2c::kloc_36b2a: 	_group74(__disp, _state); break;
+        case m2c::kloc_36b2d: 	_group74(__disp, _state); break;
+        case m2c::kloc_36b3b: 	_group74(__disp, _state); break;
+        case m2c::kloc_36b47: 	_group74(__disp, _state); break;
+        case m2c::kloc_36bba: 	_group74(__disp, _state); break;
+        case m2c::kloc_36bc4: 	_group74(__disp, _state); break;
         case m2c::kloc_36c98: 	sub_36c88(__disp, _state); break;
         case m2c::kloc_36ca6: 	sub_36c88(__disp, _state); break;
         case m2c::kloc_36ce8: 	sub_36c88(__disp, _state); break;
@@ -3012,18 +3019,18 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_37241: 	sub_3721a(__disp, _state); break;
         case m2c::kloc_37276: 	sub_3721a(__disp, _state); break;
         case m2c::kloc_37295: 	sub_3721a(__disp, _state); break;
-        case m2c::kloc_372b8: 	_group78(__disp, _state); break;
-        case m2c::kloc_372d8: 	_group78(__disp, _state); break;
-        case m2c::kloc_372fe: 	_group78(__disp, _state); break;
-        case m2c::kloc_37318: 	_group78(__disp, _state); break;
-        case m2c::kloc_3731e: 	_group78(__disp, _state); break;
-        case m2c::kloc_37324: 	_group78(__disp, _state); break;
-        case m2c::kloc_37340: 	_group78(__disp, _state); break;
-        case m2c::kloc_3735b: 	_group78(__disp, _state); break;
-        case m2c::kloc_3739e: 	_group78(__disp, _state); break;
-        case m2c::kloc_373ad: 	_group78(__disp, _state); break;
-        case m2c::kloc_373b1: 	_group78(__disp, _state); break;
-        case m2c::kloc_373d9: 	_group78(__disp, _state); break;
+        case m2c::kloc_372b8: 	_group75(__disp, _state); break;
+        case m2c::kloc_372d8: 	_group75(__disp, _state); break;
+        case m2c::kloc_372fe: 	_group75(__disp, _state); break;
+        case m2c::kloc_37318: 	_group75(__disp, _state); break;
+        case m2c::kloc_3731e: 	_group75(__disp, _state); break;
+        case m2c::kloc_37324: 	_group75(__disp, _state); break;
+        case m2c::kloc_37340: 	_group75(__disp, _state); break;
+        case m2c::kloc_3735b: 	_group75(__disp, _state); break;
+        case m2c::kloc_3739e: 	_group75(__disp, _state); break;
+        case m2c::kloc_373ad: 	_group75(__disp, _state); break;
+        case m2c::kloc_373b1: 	_group75(__disp, _state); break;
+        case m2c::kloc_373d9: 	_group75(__disp, _state); break;
         case m2c::kloc_3740c: 	sub_373ea(__disp, _state); break;
         case m2c::kloc_37423: 	sub_373ea(__disp, _state); break;
         case m2c::kloc_3743a: 	seg35ab_198a_proc(__disp, _state); break;
@@ -3065,12 +3072,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_37910: 	sub_378f2(__disp, _state); break;
         case m2c::kloc_37923: 	seg35ab_1e63_proc(__disp, _state); break;
         case m2c::kloc_3792c: 	seg35ab_1e63_proc(__disp, _state); break;
-        case m2c::kloc_3799f: 	_group81(__disp, _state); break;
-        case m2c::kloc_379a5: 	_group81(__disp, _state); break;
-        case m2c::kloc_379ab: 	_group81(__disp, _state); break;
-        case m2c::kloc_379b5: 	_group81(__disp, _state); break;
-        case m2c::kloc_379bf: 	_group81(__disp, _state); break;
-        case m2c::kloc_379c9: 	_group81(__disp, _state); break;
+        case m2c::kloc_3799f: 	_group78(__disp, _state); break;
+        case m2c::kloc_379a5: 	_group78(__disp, _state); break;
+        case m2c::kloc_379ab: 	_group78(__disp, _state); break;
+        case m2c::kloc_379b5: 	_group78(__disp, _state); break;
+        case m2c::kloc_379bf: 	_group78(__disp, _state); break;
+        case m2c::kloc_379c9: 	_group78(__disp, _state); break;
         case m2c::kloc_37a06: 	sub_379e4(__disp, _state); break;
         case m2c::kloc_37a28: 	sub_379e4(__disp, _state); break;
         case m2c::kloc_37a35: 	sub_379e4(__disp, _state); break;
@@ -3109,63 +3116,63 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_37c98: 	seg35ab_21d8_proc(__disp, _state); break;
         case m2c::kloc_37c9f: 	seg35ab_21d8_proc(__disp, _state); break;
         case m2c::kloc_37ca1: 	seg35ab_21d8_proc(__disp, _state); break;
-        case m2c::kloc_37d0e: 	_group84(__disp, _state); break;
-        case m2c::kloc_37d2f: 	_group84(__disp, _state); break;
-        case m2c::kloc_37d6f: 	_group84(__disp, _state); break;
-        case m2c::kloc_37da7: 	_group84(__disp, _state); break;
-        case m2c::kloc_37dda: 	_group84(__disp, _state); break;
-        case m2c::kloc_37e41: 	_group84(__disp, _state); break;
-        case m2c::kloc_37e62: 	_group84(__disp, _state); break;
-        case m2c::kloc_37e86: 	_group84(__disp, _state); break;
-        case m2c::kloc_37e99: 	_group84(__disp, _state); break;
-        case m2c::kloc_37eb1: 	_group84(__disp, _state); break;
-        case m2c::kloc_37ebb: 	_group84(__disp, _state); break;
-        case m2c::kloc_37eca: 	_group84(__disp, _state); break;
-        case m2c::kloc_37fc6: 	_group84(__disp, _state); break;
-        case m2c::kloc_37fd0: 	_group84(__disp, _state); break;
-        case m2c::kloc_37fe2: 	_group84(__disp, _state); break;
-        case m2c::kloc_37fe6: 	_group84(__disp, _state); break;
-        case m2c::kloc_37ff1: 	_group84(__disp, _state); break;
-        case m2c::kloc_37ffb: 	_group84(__disp, _state); break;
-        case m2c::kloc_3807c: 	_group84(__disp, _state); break;
-        case m2c::kloc_380fa: 	_group84(__disp, _state); break;
-        case m2c::kloc_3810e: 	_group84(__disp, _state); break;
-        case m2c::kloc_38129: 	_group84(__disp, _state); break;
-        case m2c::kloc_38165: 	_group84(__disp, _state); break;
-        case m2c::kloc_38178: 	_group84(__disp, _state); break;
-        case m2c::kloc_3818c: 	_group84(__disp, _state); break;
-        case m2c::kloc_381a4: 	_group84(__disp, _state); break;
-        case m2c::kloc_381a7: 	_group84(__disp, _state); break;
-        case m2c::kloc_381aa: 	_group84(__disp, _state); break;
-        case m2c::kloc_381ad: 	_group84(__disp, _state); break;
-        case m2c::kloc_38204: 	_group84(__disp, _state); break;
-        case m2c::kloc_3825d: 	_group84(__disp, _state); break;
-        case m2c::kloc_38260: 	_group84(__disp, _state); break;
-        case m2c::kloc_382b9: 	_group84(__disp, _state); break;
-        case m2c::kloc_382bc: 	_group84(__disp, _state); break;
-        case m2c::kloc_382fd: 	_group84(__disp, _state); break;
-        case m2c::kloc_38300: 	_group84(__disp, _state); break;
-        case m2c::kloc_3836f: 	_group84(__disp, _state); break;
-        case m2c::kloc_38372: 	_group84(__disp, _state); break;
-        case m2c::kloc_383e1: 	_group84(__disp, _state); break;
-        case m2c::kloc_38404: 	_group84(__disp, _state); break;
-        case m2c::kloc_3846f: 	_group84(__disp, _state); break;
-        case m2c::kloc_3847a: 	_group84(__disp, _state); break;
-        case m2c::kloc_3849d: 	_group84(__disp, _state); break;
-        case m2c::kloc_384eb: 	_group84(__disp, _state); break;
-        case m2c::kloc_38564: 	_group84(__disp, _state); break;
-        case m2c::kloc_38594: 	_group84(__disp, _state); break;
-        case m2c::kloc_38598: 	_group84(__disp, _state); break;
-        case m2c::kloc_385af: 	_group84(__disp, _state); break;
-        case m2c::kloc_385b3: 	_group84(__disp, _state); break;
-        case m2c::kloc_385f5: 	_group84(__disp, _state); break;
-        case m2c::kloc_385f9: 	_group84(__disp, _state); break;
-        case m2c::kloc_38610: 	_group84(__disp, _state); break;
-        case m2c::kloc_38614: 	_group84(__disp, _state); break;
-        case m2c::kloc_38633: 	_group84(__disp, _state); break;
-        case m2c::kloc_38655: 	_group85(__disp, _state); break;
-        case m2c::kloc_3865f: 	_group85(__disp, _state); break;
-        case m2c::kloc_38775: 	_group85(__disp, _state); break;
+        case m2c::kloc_37d0e: 	_group81(__disp, _state); break;
+        case m2c::kloc_37d2f: 	_group81(__disp, _state); break;
+        case m2c::kloc_37d6f: 	_group81(__disp, _state); break;
+        case m2c::kloc_37da7: 	_group81(__disp, _state); break;
+        case m2c::kloc_37dda: 	_group81(__disp, _state); break;
+        case m2c::kloc_37e41: 	_group81(__disp, _state); break;
+        case m2c::kloc_37e62: 	_group81(__disp, _state); break;
+        case m2c::kloc_37e86: 	_group81(__disp, _state); break;
+        case m2c::kloc_37e99: 	_group81(__disp, _state); break;
+        case m2c::kloc_37eb1: 	_group81(__disp, _state); break;
+        case m2c::kloc_37ebb: 	_group81(__disp, _state); break;
+        case m2c::kloc_37eca: 	_group81(__disp, _state); break;
+        case m2c::kloc_37fc6: 	_group81(__disp, _state); break;
+        case m2c::kloc_37fd0: 	_group81(__disp, _state); break;
+        case m2c::kloc_37fe2: 	_group81(__disp, _state); break;
+        case m2c::kloc_37fe6: 	_group81(__disp, _state); break;
+        case m2c::kloc_37ff1: 	_group81(__disp, _state); break;
+        case m2c::kloc_37ffb: 	_group81(__disp, _state); break;
+        case m2c::kloc_3807c: 	_group81(__disp, _state); break;
+        case m2c::kloc_380fa: 	_group81(__disp, _state); break;
+        case m2c::kloc_3810e: 	_group81(__disp, _state); break;
+        case m2c::kloc_38129: 	_group81(__disp, _state); break;
+        case m2c::kloc_38165: 	_group81(__disp, _state); break;
+        case m2c::kloc_38178: 	_group81(__disp, _state); break;
+        case m2c::kloc_3818c: 	_group81(__disp, _state); break;
+        case m2c::kloc_381a4: 	_group81(__disp, _state); break;
+        case m2c::kloc_381a7: 	_group81(__disp, _state); break;
+        case m2c::kloc_381aa: 	_group81(__disp, _state); break;
+        case m2c::kloc_381ad: 	_group81(__disp, _state); break;
+        case m2c::kloc_38204: 	_group81(__disp, _state); break;
+        case m2c::kloc_3825d: 	_group81(__disp, _state); break;
+        case m2c::kloc_38260: 	_group81(__disp, _state); break;
+        case m2c::kloc_382b9: 	_group81(__disp, _state); break;
+        case m2c::kloc_382bc: 	_group81(__disp, _state); break;
+        case m2c::kloc_382fd: 	_group81(__disp, _state); break;
+        case m2c::kloc_38300: 	_group81(__disp, _state); break;
+        case m2c::kloc_3836f: 	_group81(__disp, _state); break;
+        case m2c::kloc_38372: 	_group81(__disp, _state); break;
+        case m2c::kloc_383e1: 	_group81(__disp, _state); break;
+        case m2c::kloc_38404: 	_group81(__disp, _state); break;
+        case m2c::kloc_3846f: 	_group81(__disp, _state); break;
+        case m2c::kloc_3847a: 	_group81(__disp, _state); break;
+        case m2c::kloc_3849d: 	_group81(__disp, _state); break;
+        case m2c::kloc_384eb: 	_group81(__disp, _state); break;
+        case m2c::kloc_38564: 	_group81(__disp, _state); break;
+        case m2c::kloc_38594: 	_group81(__disp, _state); break;
+        case m2c::kloc_38598: 	_group81(__disp, _state); break;
+        case m2c::kloc_385af: 	_group81(__disp, _state); break;
+        case m2c::kloc_385b3: 	_group81(__disp, _state); break;
+        case m2c::kloc_385f5: 	_group81(__disp, _state); break;
+        case m2c::kloc_385f9: 	_group81(__disp, _state); break;
+        case m2c::kloc_38610: 	_group81(__disp, _state); break;
+        case m2c::kloc_38614: 	_group81(__disp, _state); break;
+        case m2c::kloc_38633: 	_group81(__disp, _state); break;
+        case m2c::kloc_38655: 	_group82(__disp, _state); break;
+        case m2c::kloc_3865f: 	_group82(__disp, _state); break;
+        case m2c::kloc_38775: 	_group82(__disp, _state); break;
         case m2c::kloc_388d0: 	sub_388c1(__disp, _state); break;
         case m2c::kloc_388d2: 	sub_388c1(__disp, _state); break;
         case m2c::kloc_388e3: 	sub_388c1(__disp, _state); break;
@@ -3174,24 +3181,24 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_38925: 	sub_388ee(__disp, _state); break;
         case m2c::kloc_38938: 	sub_388ee(__disp, _state); break;
         case m2c::kloc_38943: 	sub_388ee(__disp, _state); break;
-        case m2c::kloc_3896f: 	_group86(__disp, _state); break;
-        case m2c::kloc_389f8: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a01: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a26: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a31: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a38: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a74: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a76: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a85: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a8d: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a95: 	_group87(__disp, _state); break;
-        case m2c::kloc_38a9d: 	_group87(__disp, _state); break;
-        case m2c::kloc_38aa8: 	_group87(__disp, _state); break;
-        case m2c::kloc_38abd: 	_group87(__disp, _state); break;
-        case m2c::kloc_38acc: 	_group87(__disp, _state); break;
-        case m2c::kloc_38adb: 	_group87(__disp, _state); break;
-        case m2c::kloc_38aee: 	_group87(__disp, _state); break;
-        case m2c::kloc_38af4: 	_group87(__disp, _state); break;
+        case m2c::kloc_3896f: 	_group83(__disp, _state); break;
+        case m2c::kloc_389f8: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a01: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a26: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a31: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a38: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a74: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a76: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a85: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a8d: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a95: 	_group84(__disp, _state); break;
+        case m2c::kloc_38a9d: 	_group84(__disp, _state); break;
+        case m2c::kloc_38aa8: 	_group84(__disp, _state); break;
+        case m2c::kloc_38abd: 	_group84(__disp, _state); break;
+        case m2c::kloc_38acc: 	_group84(__disp, _state); break;
+        case m2c::kloc_38adb: 	_group84(__disp, _state); break;
+        case m2c::kloc_38aee: 	_group84(__disp, _state); break;
+        case m2c::kloc_38af4: 	_group84(__disp, _state); break;
         case m2c::klocret_114fa: 	sub_114de(__disp, _state); break;
         case m2c::klocret_1150f: 	seg001_edb_proc(__disp, _state); break;
         case m2c::klocret_12af3: 	sub_12a70(__disp, _state); break;
@@ -3203,12 +3210,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::klocret_13cda: 	sub_13c8c(__disp, _state); break;
         case m2c::klocret_15fa7: 	sub_15f75(__disp, _state); break;
         case m2c::klocret_15fed: 	sub_15fb1(__disp, _state); break;
-        case m2c::klocret_16037: 	_group9(__disp, _state); break;
+        case m2c::klocret_16037: 	_group8(__disp, _state); break;
         case m2c::klocret_26910: 	sub_268b8(__disp, _state); break;
-        case m2c::klocret_2694a: 	_group16(__disp, _state); break;
+        case m2c::klocret_2694a: 	_group14(__disp, _state); break;
         case m2c::klocret_29db5: 	seg2623_3b45_proc(__disp, _state); break;
-        case m2c::klocret_2a131: 	_group37(__disp, _state); break;
-        case m2c::klocret_34860: 	_group70(__disp, _state); break;
+        case m2c::klocret_2a131: 	_group36(__disp, _state); break;
+        case m2c::klocret_34860: 	_group67(__disp, _state); break;
         case m2c::klocret_3486f: 	sub_34861(__disp, _state); break;
         case m2c::klocret_34882: 	sub_34870(__disp, _state); break;
         case m2c::klocret_34c95: 	sub_34c86(__disp, _state); break;
@@ -3225,33 +3232,33 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::klocret_3666b: 	sub_36610(__disp, _state); break;
         case m2c::klocret_36886: 	sub_36764(__disp, _state); break;
         case m2c::klocret_36a27: 	sub_368a4(__disp, _state); break;
-        case m2c::klocret_36bc3: 	_group77(__disp, _state); break;
+        case m2c::klocret_36bc3: 	_group74(__disp, _state); break;
         case m2c::klocret_36ca5: 	sub_36c88(__disp, _state); break;
         case m2c::klocret_36d31: 	sub_36c88(__disp, _state); break;
         case m2c::klocret_37230: 	sub_3721a(__disp, _state); break;
         case m2c::klocret_37439: 	sub_373ea(__disp, _state); break;
         case m2c::klocret_37497: 	seg35ab_198a_proc(__disp, _state); break;
         case m2c::klocret_37985: 	sub_37950(__disp, _state); break;
-        case m2c::klocret_379d4: 	_group81(__disp, _state); break;
+        case m2c::klocret_379d4: 	_group78(__disp, _state); break;
         case m2c::klocret_37a8d: 	sub_379e4(__disp, _state); break;
         case m2c::klocret_37aca: 	sub_379e4(__disp, _state); break;
         case m2c::kmainproc: 	mainproc(0, _state); break;
-        case m2c::knullsub_2: 	nullsub_2(0, _state); break;
-        case m2c::kprint_line: 	print_line(0, _state); break;
-        case m2c::kret_17c5_15a9: 	_group19(__disp, _state); break;
+        case m2c::knullsub_3: 	nullsub_3(0, _state); break;
+        case m2c::kprint_line: 	_group27(__disp, _state); break;
+        case m2c::kret_17c5_15a9: 	_group17(__disp, _state); break;
         case m2c::kret_17c5_1cf4: 	sub_27e51(__disp, _state); break;
         case m2c::kret_17c5_271e: 	sub_288e4(__disp, _state); break;
-        case m2c::kret_17c5_2849: 	_group26(__disp, _state); break;
+        case m2c::kret_17c5_2849: 	_group24(__disp, _state); break;
         case m2c::kret_17c5_355: 	sub_26564(__disp, _state); break;
         case m2c::kret_17c5_3b54: 	seg2623_3b45_proc(__disp, _state); break;
-        case m2c::kret_17c5_3f02: 	_group37(__disp, _state); break;
-        case m2c::kret_17c5_3f0e: 	_group37(__disp, _state); break;
-        case m2c::kret_17c5_41e9: 	_group38(__disp, _state); break;
-        case m2c::kret_17c5_48b: 	_group15(__disp, _state); break;
+        case m2c::kret_17c5_3f02: 	_group36(__disp, _state); break;
+        case m2c::kret_17c5_3f0e: 	_group36(__disp, _state); break;
+        case m2c::kret_17c5_41e9: 	_group37(__disp, _state); break;
+        case m2c::kret_17c5_48b: 	_group13(__disp, _state); break;
         case m2c::kret_17c5_69b: 	sub_268b8(__disp, _state); break;
-        case m2c::kret_17c5_6f4: 	_group16(__disp, _state); break;
-        case m2c::kret_17c5_9485: 	_group43(__disp, _state); break;
-        case m2c::kret_17c5_94b9: 	_group43(__disp, _state); break;
+        case m2c::kret_17c5_6f4: 	_group14(__disp, _state); break;
+        case m2c::kret_17c5_9485: 	seg2623_8e38_proc(__disp, _state); break;
+        case m2c::kret_17c5_94b9: 	seg2623_8e38_proc(__disp, _state); break;
         case m2c::kret_17c5_9539: 	sub_2f700(__disp, _state); break;
         case m2c::kret_17c5_9564: 	sub_2f700(__disp, _state); break;
         case m2c::kret_17c5_99e1: 	sub_2fb6a(__disp, _state); break;
@@ -3259,21 +3266,21 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kret_17c5_a039: 	sub_30260(__disp, _state); break;
         case m2c::kret_17c5_c796: 	sub_328ee(__disp, _state); break;
         case m2c::kret_17c5_c891: 	sub_32a94(__disp, _state); break;
-        case m2c::kret_17c5_d2ca: 	sub_33490(__disp, _state); break;
-        case m2c::kret_17c5_d524: 	sub_33490(__disp, _state); break;
-        case m2c::kret_17c5_d5ef: 	sub_33490(__disp, _state); break;
-        case m2c::kret_17c5_d744: 	sub_33490(__disp, _state); break;
-        case m2c::kret_17c5_d928: 	sub_33490(__disp, _state); break;
+        case m2c::kret_17c5_d2ca: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kret_17c5_d524: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kret_17c5_d5ef: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kret_17c5_d744: 	seg2623_d260_proc(__disp, _state); break;
+        case m2c::kret_17c5_d928: 	seg2623_d260_proc(__disp, _state); break;
         case m2c::kret_17c5_dc60: 	seg2623_dc00_proc(__disp, _state); break;
         case m2c::kret_17c5_dca6: 	seg2623_dc00_proc(__disp, _state); break;
         case m2c::kret_17c5_dcdc: 	seg2623_dc00_proc(__disp, _state); break;
         case m2c::kret_17c5_dd14: 	seg2623_dc00_proc(__disp, _state); break;
-        case m2c::kret_17c5_deed: 	_group64(__disp, _state); break;
-        case m2c::kret_17c5_df37: 	_group64(__disp, _state); break;
-        case m2c::kret_17c5_dff5: 	_group64(__disp, _state); break;
-        case m2c::kret_17c5_e02b: 	_group64(__disp, _state); break;
-        case m2c::kret_17c5_e061: 	_group64(__disp, _state); break;
-        case m2c::kret_17c5_e184: 	_group66(__disp, _state); break;
+        case m2c::kret_17c5_deed: 	_group61(__disp, _state); break;
+        case m2c::kret_17c5_df37: 	_group61(__disp, _state); break;
+        case m2c::kret_17c5_dff5: 	_group61(__disp, _state); break;
+        case m2c::kret_17c5_e02b: 	_group61(__disp, _state); break;
+        case m2c::kret_17c5_e061: 	_group61(__disp, _state); break;
+        case m2c::kret_17c5_e184: 	_group63(__disp, _state); break;
         case m2c::kret_17c5_ee2a: 	seg2623_ee22_proc(__disp, _state); break;
         case m2c::kret_1a2_1d: 	_group1(__disp, _state); break;
         case m2c::kret_1a2_1e: 	_group1(__disp, _state); break;
@@ -3288,10 +3295,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kret_204_13ad: 	seg001_1115_proc(__disp, _state); break;
         case m2c::kret_204_dd8: 	seg001_d6e_proc(__disp, _state); break;
         case m2c::kret_204_ef0: 	seg001_edb_proc(__disp, _state); break;
-        case m2c::kret_274d_1c35: 	_group79(__disp, _state); break;
+        case m2c::kret_274d_1c35: 	_group76(__disp, _state); break;
         case m2c::kret_274d_5c2: 	seg35ab_550_proc(__disp, _state); break;
-        case m2c::kret_274d_66: 	_group73(__disp, _state); break;
-        case m2c::kret_296c_12: 	_group83(__disp, _state); break;
+        case m2c::kret_274d_66: 	_group70(__disp, _state); break;
+        case m2c::kret_296c_12: 	_group80(__disp, _state); break;
         case m2c::kret_3a50_100d: 	seg48ae_1008_proc(__disp, _state); break;
         case m2c::kret_3a50_1044: 	seg48ae_103f_proc(__disp, _state); break;
         case m2c::kret_3a50_1053: 	seg48ae_104e_proc(__disp, _state); break;
@@ -3339,13 +3346,13 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kret_75b_204: 	seg004_1a3_proc(__disp, _state); break;
         case m2c::kret_75b_216: 	seg004_1a3_proc(__disp, _state); break;
         case m2c::kret_75b_22a: 	seg004_1a3_proc(__disp, _state); break;
-        case m2c::kret_75b_2bb: 	_group5(__disp, _state); break;
-        case m2c::kret_75b_2ce: 	_group6(__disp, _state); break;
-        case m2c::kret_75b_369: 	_group6(__disp, _state); break;
-        case m2c::kret_75b_37d: 	_group6(__disp, _state); break;
-        case m2c::kret_75b_391: 	_group6(__disp, _state); break;
-        case m2c::kret_75b_3a5: 	_group6(__disp, _state); break;
-        case m2c::kret_75b_3b9: 	_group6(__disp, _state); break;
+        case m2c::kret_75b_2bb: 	_group4(__disp, _state); break;
+        case m2c::kret_75b_2ce: 	_group5(__disp, _state); break;
+        case m2c::kret_75b_369: 	_group5(__disp, _state); break;
+        case m2c::kret_75b_37d: 	_group5(__disp, _state); break;
+        case m2c::kret_75b_391: 	_group5(__disp, _state); break;
+        case m2c::kret_75b_3a5: 	_group5(__disp, _state); break;
+        case m2c::kret_75b_3b9: 	_group5(__disp, _state); break;
         case m2c::kret_75b_6bd: 	seg004_6bc_proc(__disp, _state); break;
         case m2c::kret_75b_6c2: 	seg004_6bc_proc(__disp, _state); break;
         case m2c::kret_75b_6c7: 	seg004_6bc_proc(__disp, _state); break;
@@ -3375,17 +3382,17 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kret_75b_a4a: 	seg004_899_proc(__disp, _state); break;
         case m2c::kret_75b_a4b: 	seg004_899_proc(__disp, _state); break;
         case m2c::kret_75b_a4c: 	seg004_899_proc(__disp, _state); break;
-        case m2c::kret_75b_a5c: 	seg004_899_proc(__disp, _state); break;
+        case m2c::kret_75b_a5a: 	seg004_899_proc(__disp, _state); break;
         case m2c::kret_75b_a5f: 	seg004_899_proc(__disp, _state); break;
+        case m2c::kret_809_fb10: 	seg1667_fac0_proc(__disp, _state); break;
         case m2c::kseg001_10dd_proc: 	seg001_10dd_proc(0, _state); break;
         case m2c::kseg001_1115_proc: 	seg001_1115_proc(0, _state); break;
-        case m2c::kseg001_8d4_proc: 	_group2(__disp, _state); break;
         case m2c::kseg001_d6e_proc: 	seg001_d6e_proc(0, _state); break;
         case m2c::kseg001_edb_proc: 	seg001_edb_proc(0, _state); break;
         case m2c::kseg004_1a3_proc: 	seg004_1a3_proc(0, _state); break;
-        case m2c::kseg004_296_proc: 	_group5(__disp, _state); break;
-        case m2c::kseg004_2cd_proc: 	_group6(__disp, _state); break;
-        case m2c::kseg004_2f9_proc: 	_group6(__disp, _state); break;
+        case m2c::kseg004_296_proc: 	_group4(__disp, _state); break;
+        case m2c::kseg004_2cd_proc: 	_group5(__disp, _state); break;
+        case m2c::kseg004_2f9_proc: 	_group5(__disp, _state); break;
         case m2c::kseg004_615_proc: 	seg004_615_proc(0, _state); break;
         case m2c::kseg004_6bc_proc: 	seg004_6bc_proc(0, _state); break;
         case m2c::kseg004_7ca_proc: 	seg004_7ca_proc(0, _state); break;
@@ -3395,100 +3402,101 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kseg127c_39f_proc: 	seg127c_39f_proc(0, _state); break;
         case m2c::kseg127c_797_proc: 	seg127c_797_proc(0, _state); break;
         case m2c::kseg127c_7cc_proc: 	seg127c_7cc_proc(0, _state); break;
-        case m2c::kseg2623_1538_proc: 	_group19(__disp, _state); break;
-        case m2c::kseg2623_16b_proc: 	_group11(__disp, _state); break;
-        case m2c::kseg2623_1705_proc: 	_group20(__disp, _state); break;
-        case m2c::kseg2623_189d_proc: 	_group21(__disp, _state); break;
-        case m2c::kseg2623_194_proc: 	_group11(__disp, _state); break;
-        case m2c::kseg2623_1e8c_proc: 	_group22(__disp, _state); break;
-        case m2c::kseg2623_21c9_proc: 	_group23(__disp, _state); break;
-        case m2c::kseg2623_2203_proc: 	_group24(__disp, _state); break;
-        case m2c::kseg2623_233_proc: 	_group12(__disp, _state); break;
-        case m2c::kseg2623_265e_proc: 	_group25(__disp, _state); break;
-        case m2c::kseg2623_2692_proc: 	_group25(__disp, _state); break;
-        case m2c::kseg2623_2746_proc: 	_group26(__disp, _state); break;
-        case m2c::kseg2623_287a_proc: 	_group27(__disp, _state); break;
-        case m2c::kseg2623_2a8_proc: 	_group13(__disp, _state); break;
-        case m2c::kseg2623_2e7_proc: 	_group14(__disp, _state); break;
-        case m2c::kseg2623_2eba_proc: 	_group28(__disp, _state); break;
-        case m2c::kseg2623_3478_proc: 	_group29(__disp, _state); break;
-        case m2c::kseg2623_3784_proc: 	_group30(__disp, _state); break;
-        case m2c::kseg2623_39b4_proc: 	_group31(__disp, _state); break;
-        case m2c::kseg2623_3a14_proc: 	_group32(__disp, _state); break;
+        case m2c::kseg2623_128d_proc: 	_group16(__disp, _state); break;
+        case m2c::kseg2623_1538_proc: 	_group17(__disp, _state); break;
+        case m2c::kseg2623_16b_proc: 	_group9(__disp, _state); break;
+        case m2c::kseg2623_1705_proc: 	_group18(__disp, _state); break;
+        case m2c::kseg2623_189d_proc: 	_group19(__disp, _state); break;
+        case m2c::kseg2623_194_proc: 	_group9(__disp, _state); break;
+        case m2c::kseg2623_1e8c_proc: 	_group20(__disp, _state); break;
+        case m2c::kseg2623_21c9_proc: 	_group21(__disp, _state); break;
+        case m2c::kseg2623_2203_proc: 	_group22(__disp, _state); break;
+        case m2c::kseg2623_233_proc: 	_group10(__disp, _state); break;
+        case m2c::kseg2623_265e_proc: 	_group23(__disp, _state); break;
+        case m2c::kseg2623_2692_proc: 	_group23(__disp, _state); break;
+        case m2c::kseg2623_2746_proc: 	_group24(__disp, _state); break;
+        case m2c::kseg2623_287a_proc: 	_group25(__disp, _state); break;
+        case m2c::kseg2623_2a8_proc: 	_group11(__disp, _state); break;
+        case m2c::kseg2623_2e7_proc: 	_group12(__disp, _state); break;
+        case m2c::kseg2623_2eba_proc: 	_group26(__disp, _state); break;
+        case m2c::kseg2623_2fa5_proc: 	_group27(__disp, _state); break;
+        case m2c::kseg2623_3478_proc: 	_group28(__disp, _state); break;
+        case m2c::kseg2623_3784_proc: 	_group29(__disp, _state); break;
+        case m2c::kseg2623_39b4_proc: 	_group30(__disp, _state); break;
+        case m2c::kseg2623_3a14_proc: 	_group31(__disp, _state); break;
         case m2c::kseg2623_3aa8_proc: 	seg2623_3aa8_proc(0, _state); break;
         case m2c::kseg2623_3b45_proc: 	seg2623_3b45_proc(0, _state); break;
         case m2c::kseg2623_3c2c_proc: 	seg2623_3c2c_proc(0, _state); break;
-        case m2c::kseg2623_3c42_proc: 	_group34(__disp, _state); break;
-        case m2c::kseg2623_3c4d_proc: 	_group35(__disp, _state); break;
-        case m2c::kseg2623_3ef0_proc: 	_group37(__disp, _state); break;
-        case m2c::kseg2623_469_proc: 	_group15(__disp, _state); break;
-        case m2c::kseg2623_4d16_proc: 	_group38(__disp, _state); break;
-        case m2c::kseg2623_5bde_proc: 	_group39(__disp, _state); break;
-        case m2c::kseg2623_5eee_proc: 	_group39(__disp, _state); break;
-        case m2c::kseg2623_6168_proc: 	_group40(__disp, _state); break;
-        case m2c::kseg2623_65a_proc: 	_group15(__disp, _state); break;
-        case m2c::kseg2623_6e1_proc: 	_group16(__disp, _state); break;
-        case m2c::kseg2623_87cc_proc: 	_group41(__disp, _state); break;
-        case m2c::kseg2623_896d_proc: 	_group42(__disp, _state); break;
-        case m2c::kseg2623_8e5c_proc: 	_group43(__disp, _state); break;
-        case m2c::kseg2623_9bda_proc: 	_group44(__disp, _state); break;
-        case m2c::kseg2623_9c05_proc: 	_group45(__disp, _state); break;
-        case m2c::kseg2623_9c35_proc: 	_group46(__disp, _state); break;
-        case m2c::kseg2623_9ca9_proc: 	_group47(__disp, _state); break;
-        case m2c::kseg2623_9da9_proc: 	_group48(__disp, _state); break;
-        case m2c::kseg2623_9e3d_proc: 	_group49(__disp, _state); break;
-        case m2c::kseg2623_9e75_proc: 	_group50(__disp, _state); break;
-        case m2c::kseg2623_9eaf_proc: 	_group51(__disp, _state); break;
+        case m2c::kseg2623_3c42_proc: 	_group33(__disp, _state); break;
+        case m2c::kseg2623_3c4d_proc: 	_group34(__disp, _state); break;
+        case m2c::kseg2623_3ef0_proc: 	_group36(__disp, _state); break;
+        case m2c::kseg2623_469_proc: 	_group13(__disp, _state); break;
+        case m2c::kseg2623_4d16_proc: 	_group37(__disp, _state); break;
+        case m2c::kseg2623_5bde_proc: 	_group38(__disp, _state); break;
+        case m2c::kseg2623_5eee_proc: 	_group38(__disp, _state); break;
+        case m2c::kseg2623_65a_proc: 	_group13(__disp, _state); break;
+        case m2c::kseg2623_6e1_proc: 	_group14(__disp, _state); break;
+        case m2c::kseg2623_87cc_proc: 	_group40(__disp, _state); break;
+        case m2c::kseg2623_896d_proc: 	_group41(__disp, _state); break;
+        case m2c::kseg2623_9bda_proc: 	_group42(__disp, _state); break;
+        case m2c::kseg2623_9c05_proc: 	_group43(__disp, _state); break;
+        case m2c::kseg2623_9c35_proc: 	_group44(__disp, _state); break;
+        case m2c::kseg2623_9ca9_proc: 	_group45(__disp, _state); break;
+        case m2c::kseg2623_9da9_proc: 	_group46(__disp, _state); break;
+        case m2c::kseg2623_9e3d_proc: 	_group47(__disp, _state); break;
+        case m2c::kseg2623_9e75_proc: 	_group48(__disp, _state); break;
+        case m2c::kseg2623_9eaf_proc: 	_group49(__disp, _state); break;
         case m2c::kseg2623_9f47_proc: 	seg2623_9f47_proc(0, _state); break;
-        case m2c::kseg2623_a0e1_proc: 	_group52(__disp, _state); break;
-        case m2c::kseg2623_a133_proc: 	_group53(__disp, _state); break;
-        case m2c::kseg2623_a17c_proc: 	_group54(__disp, _state); break;
-        case m2c::kseg2623_a1aa_proc: 	_group55(__disp, _state); break;
-        case m2c::kseg2623_a297_proc: 	_group56(__disp, _state); break;
-        case m2c::kseg2623_a767_proc: 	_group57(__disp, _state); break;
-        case m2c::kseg2623_a8_proc: 	_group10(__disp, _state); break;
-        case m2c::kseg2623_a8c3_proc: 	_group58(__disp, _state); break;
-        case m2c::kseg2623_a92e_proc: 	_group59(__disp, _state); break;
-        case m2c::kseg2623_a95d_proc: 	_group60(__disp, _state); break;
-        case m2c::kseg2623_a98b_proc: 	_group61(__disp, _state); break;
-        case m2c::kseg2623_a9f4_proc: 	_group62(__disp, _state); break;
-        case m2c::kseg2623_be0_proc: 	_group17(__disp, _state); break;
+        case m2c::kseg2623_a0e1_proc: 	_group50(__disp, _state); break;
+        case m2c::kseg2623_a133_proc: 	_group51(__disp, _state); break;
+        case m2c::kseg2623_a17c_proc: 	_group52(__disp, _state); break;
+        case m2c::kseg2623_a1aa_proc: 	_group53(__disp, _state); break;
+        case m2c::kseg2623_a297_proc: 	_group54(__disp, _state); break;
+        case m2c::kseg2623_a767_proc: 	_group55(__disp, _state); break;
+        case m2c::kseg2623_a8_proc: 	_group9(__disp, _state); break;
+        case m2c::kseg2623_a8c3_proc: 	_group56(__disp, _state); break;
+        case m2c::kseg2623_a92e_proc: 	_group57(__disp, _state); break;
+        case m2c::kseg2623_a95d_proc: 	_group58(__disp, _state); break;
+        case m2c::kseg2623_a98b_proc: 	_group59(__disp, _state); break;
+        case m2c::kseg2623_be0_proc: 	_group15(__disp, _state); break;
         case m2c::kseg2623_d1a6_proc: 	seg2623_d1a6_proc(0, _state); break;
-        case m2c::kseg2623_da5b_proc: 	_group63(__disp, _state); break;
+        case m2c::kseg2623_da5b_proc: 	_group60(__disp, _state); break;
         case m2c::kseg2623_dbb7_proc: 	seg2623_dbb7_proc(0, _state); break;
         case m2c::kseg2623_dc00_proc: 	seg2623_dc00_proc(0, _state); break;
         case m2c::kseg2623_de93_proc: 	seg2623_de93_proc(0, _state); break;
-        case m2c::kseg2623_dfe3_proc: 	_group64(__disp, _state); break;
-        case m2c::kseg2623_e0cf_proc: 	_group65(__disp, _state); break;
-        case m2c::kseg2623_e139_proc: 	_group66(__disp, _state); break;
-        case m2c::kseg2623_e215_proc: 	_group67(__disp, _state); break;
-        case m2c::kseg2623_e4c2_proc: 	_group69(__disp, _state); break;
+        case m2c::kseg2623_dfe3_proc: 	_group61(__disp, _state); break;
+        case m2c::kseg2623_e0cf_proc: 	_group62(__disp, _state); break;
+        case m2c::kseg2623_e139_proc: 	_group63(__disp, _state); break;
+        case m2c::kseg2623_e215_proc: 	_group64(__disp, _state); break;
+        case m2c::kseg2623_e4c2_proc: 	_group66(__disp, _state); break;
+        case m2c::kseg2623_e4f_proc: 	_group15(__disp, _state); break;
         case m2c::kseg2623_ea66_proc: 	seg2623_ea66_proc(0, _state); break;
         case m2c::kseg2623_f202_proc: 	seg2623_f202_proc(0, _state); break;
         case m2c::kseg2623_f618_proc: 	seg2623_f618_proc(0, _state); break;
+        case m2c::kseg2623_f65c_proc: 	_group69(__disp, _state); break;
         case m2c::kseg35ab_1346_proc: 	seg35ab_1346_proc(0, _state); break;
         case m2c::kseg35ab_14c_proc: 	seg35ab_14c_proc(0, _state); break;
-        case m2c::kseg35ab_1938_proc: 	_group78(__disp, _state); break;
-        case m2c::kseg35ab_1bd1_proc: 	_group79(__disp, _state); break;
+        case m2c::kseg35ab_1938_proc: 	_group75(__disp, _state); break;
+        case m2c::kseg35ab_1bd1_proc: 	_group76(__disp, _state); break;
         case m2c::kseg35ab_1e63_proc: 	seg35ab_1e63_proc(0, _state); break;
-        case m2c::kseg35ab_1e96_proc: 	_group80(__disp, _state); break;
-        case m2c::kseg35ab_1f25_proc: 	_group81(__disp, _state); break;
+        case m2c::kseg35ab_1e96_proc: 	_group77(__disp, _state); break;
+        case m2c::kseg35ab_1f25_proc: 	_group78(__disp, _state); break;
         case m2c::kseg35ab_21d8_proc: 	seg35ab_21d8_proc(0, _state); break;
-        case m2c::kseg35ab_5a_proc: 	_group73(__disp, _state); break;
-        case m2c::kseg35ab_67a_proc: 	_group74(__disp, _state); break;
-        case m2c::kseg35ab_776_proc: 	_group75(__disp, _state); break;
-        case m2c::kseg35ab_a32_proc: 	_group76(__disp, _state); break;
+        case m2c::kseg35ab_5a_proc: 	_group70(__disp, _state); break;
+        case m2c::kseg35ab_67a_proc: 	_group71(__disp, _state); break;
+        case m2c::kseg35ab_776_proc: 	_group72(__disp, _state); break;
+        case m2c::kseg35ab_a32_proc: 	_group73(__disp, _state); break;
         case m2c::kseg35ab_a68_proc: 	seg35ab_a68_proc(0, _state); break;
         case m2c::kseg35ab_bbc_proc: 	seg35ab_bbc_proc(0, _state); break;
         case m2c::kseg35ab_dd7_proc: 	seg35ab_dd7_proc(0, _state); break;
         case m2c::kseg35ab_de2_proc: 	seg35ab_de2_proc(0, _state); break;
         case m2c::kseg35ab_fb_proc: 	seg35ab_fb_proc(0, _state); break;
-        case m2c::kseg37ca_11_proc: 	_group83(__disp, _state); break;
-        case m2c::kseg37ca_9a0_proc: 	_group84(__disp, _state); break;
-        case m2c::kseg37ca_b54_proc: 	_group85(__disp, _state); break;
-        case m2c::kseg37ca_cd1_proc: 	_group86(__disp, _state); break;
-        case m2c::kseg37ca_d_proc: 	_group82(__disp, _state); break;
-        case m2c::kseg3897_70_proc: 	_group87(__disp, _state); break;
+        case m2c::kseg37ca_11_proc: 	_group80(__disp, _state); break;
+        case m2c::kseg37ca_9a0_proc: 	_group81(__disp, _state); break;
+        case m2c::kseg37ca_b54_proc: 	_group82(__disp, _state); break;
+        case m2c::kseg37ca_cd1_proc: 	_group83(__disp, _state); break;
+        case m2c::kseg37ca_d_proc: 	_group79(__disp, _state); break;
+        case m2c::kseg3897_70_proc: 	_group84(__disp, _state); break;
         case m2c::kseg48ae_1008_proc: 	seg48ae_1008_proc(0, _state); break;
         case m2c::kseg48ae_1026_proc: 	seg48ae_1026_proc(0, _state); break;
         case m2c::kseg48ae_1030_proc: 	seg48ae_1030_proc(0, _state); break;
@@ -3507,9 +3515,9 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kseg48ae_fdb_proc: 	seg48ae_fdb_proc(0, _state); break;
         case m2c::kseg48ae_fea_proc: 	seg48ae_fea_proc(0, _state); break;
         case m2c::kseg48ae_ffe_proc: 	seg48ae_ffe_proc(0, _state); break;
-        case m2c::kstart: 	_group69(__disp, _state); break;
+        case m2c::kstart: 	_group66(__disp, _state); break;
         case m2c::ksub_10273: 	_group1(__disp, _state); break;
-        case m2c::ksub_10f7a: 	_group2(__disp, _state); break;
+        case m2c::ksub_10f7a: 	sub_10f7a(0, _state); break;
         case m2c::ksub_10fca: 	sub_10fca(0, _state); break;
         case m2c::ksub_11050: 	sub_11050(0, _state); break;
         case m2c::ksub_110b0: 	sub_110b0(0, _state); break;
@@ -3534,12 +3542,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_12844: 	sub_12844(0, _state); break;
         case m2c::ksub_1285d: 	sub_1285d(0, _state); break;
         case m2c::ksub_12881: 	sub_12881(0, _state); break;
-        case m2c::ksub_128e5: 	_group3(__disp, _state); break;
-        case m2c::ksub_1298e: 	_group3(__disp, _state); break;
+        case m2c::ksub_128e5: 	_group2(__disp, _state); break;
+        case m2c::ksub_1298e: 	_group2(__disp, _state); break;
         case m2c::ksub_12a16: 	sub_12a16(0, _state); break;
-        case m2c::ksub_12a31: 	_group4(__disp, _state); break;
-        case m2c::ksub_12a3b: 	_group4(__disp, _state); break;
-        case m2c::ksub_12a45: 	_group4(__disp, _state); break;
+        case m2c::ksub_12a31: 	_group3(__disp, _state); break;
+        case m2c::ksub_12a3b: 	_group3(__disp, _state); break;
+        case m2c::ksub_12a45: 	_group3(__disp, _state); break;
         case m2c::ksub_12a5e: 	sub_12a5e(0, _state); break;
         case m2c::ksub_12a70: 	sub_12a70(0, _state); break;
         case m2c::ksub_12b08: 	sub_12b08(0, _state); break;
@@ -3553,10 +3561,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_12cbf: 	sub_12cbf(0, _state); break;
         case m2c::ksub_12d6f: 	sub_12d6f(0, _state); break;
         case m2c::ksub_12dce: 	sub_12dce(0, _state); break;
-        case m2c::ksub_12e25: 	_group3(__disp, _state); break;
+        case m2c::ksub_12e25: 	_group2(__disp, _state); break;
         case m2c::ksub_12e41: 	sub_12e41(0, _state); break;
         case m2c::ksub_12e67: 	sub_12e67(0, _state); break;
-        case m2c::ksub_12f09: 	_group3(__disp, _state); break;
+        case m2c::ksub_12f09: 	_group2(__disp, _state); break;
         case m2c::ksub_12f38: 	sub_12f38(0, _state); break;
         case m2c::ksub_12f75: 	sub_12f75(0, _state); break;
         case m2c::ksub_13052: 	sub_13052(0, _state); break;
@@ -3582,56 +3590,56 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_13b8c: 	sub_13b8c(0, _state); break;
         case m2c::ksub_13c8c: 	sub_13c8c(0, _state); break;
         case m2c::ksub_15dd4: 	sub_15dd4(0, _state); break;
-        case m2c::ksub_15dee: 	_group5(__disp, _state); break;
-        case m2c::ksub_15e51: 	_group5(__disp, _state); break;
+        case m2c::ksub_15dee: 	_group4(__disp, _state); break;
+        case m2c::ksub_15e51: 	_group4(__disp, _state); break;
         case m2c::ksub_15e71: 	sub_15e71(0, _state); break;
         case m2c::ksub_15f5d: 	sub_15f5d(0, _state); break;
         case m2c::ksub_15f6c: 	sub_15f6c(0, _state); break;
         case m2c::ksub_15f75: 	sub_15f75(0, _state); break;
-        case m2c::ksub_15fa8: 	_group7(__disp, _state); break;
-        case m2c::ksub_15fab: 	_group7(__disp, _state); break;
+        case m2c::ksub_15fa8: 	_group6(__disp, _state); break;
+        case m2c::ksub_15fab: 	_group6(__disp, _state); break;
         case m2c::ksub_15fb1: 	sub_15fb1(0, _state); break;
-        case m2c::ksub_15ff1: 	_group8(__disp, _state); break;
-        case m2c::ksub_15ff4: 	_group8(__disp, _state); break;
-        case m2c::ksub_15ffa: 	_group9(__disp, _state); break;
-        case m2c::ksub_1614b: 	_group9(__disp, _state); break;
+        case m2c::ksub_15ff1: 	_group7(__disp, _state); break;
+        case m2c::ksub_15ff4: 	_group7(__disp, _state); break;
+        case m2c::ksub_15ffa: 	_group8(__disp, _state); break;
+        case m2c::ksub_1614b: 	_group8(__disp, _state); break;
         case m2c::ksub_1621b: 	sub_1621b(0, _state); break;
         case m2c::ksub_1622d: 	sub_1622d(0, _state); break;
         case m2c::ksub_16236: 	sub_16236(0, _state); break;
         case m2c::ksub_162c6: 	sub_162c6(0, _state); break;
         case m2c::ksub_1636b: 	sub_1636b(0, _state); break;
         case m2c::ksub_1641f: 	sub_1641f(0, _state); break;
-        case m2c::ksub_26240: 	_group10(__disp, _state); break;
-        case m2c::ksub_26377: 	_group11(__disp, _state); break;
-        case m2c::ksub_263b8: 	_group11(__disp, _state); break;
-        case m2c::ksub_26441: 	_group12(__disp, _state); break;
+        case m2c::ksub_26240: 	_group9(__disp, _state); break;
+        case m2c::ksub_26377: 	_group9(__disp, _state); break;
+        case m2c::ksub_263b8: 	_group9(__disp, _state); break;
+        case m2c::ksub_26441: 	_group10(__disp, _state); break;
         case m2c::ksub_264c4: 	sub_264c4(0, _state); break;
         case m2c::ksub_264c7: 	sub_264c7(0, _state); break;
-        case m2c::ksub_264ca: 	_group13(__disp, _state); break;
-        case m2c::ksub_2650a: 	_group13(__disp, _state); break;
-        case m2c::ksub_26512: 	_group14(__disp, _state); break;
-        case m2c::ksub_26530: 	_group14(__disp, _state); break;
+        case m2c::ksub_264ca: 	_group11(__disp, _state); break;
+        case m2c::ksub_2650a: 	_group11(__disp, _state); break;
+        case m2c::ksub_26512: 	_group12(__disp, _state); break;
+        case m2c::ksub_26530: 	_group12(__disp, _state); break;
         case m2c::ksub_26564: 	sub_26564(0, _state); break;
-        case m2c::ksub_26610: 	_group15(__disp, _state); break;
-        case m2c::ksub_26764: 	_group15(__disp, _state); break;
+        case m2c::ksub_26610: 	_group13(__disp, _state); break;
+        case m2c::ksub_26764: 	_group13(__disp, _state); break;
         case m2c::ksub_268b8: 	sub_268b8(0, _state); break;
-        case m2c::ksub_26950: 	_group16(__disp, _state); break;
-        case m2c::ksub_26ba0: 	_group17(__disp, _state); break;
-        case m2c::ksub_26c88: 	_group17(__disp, _state); break;
-        case m2c::ksub_26d32: 	_group17(__disp, _state); break;
-        case m2c::ksub_26dde: 	_group17(__disp, _state); break;
-        case m2c::ksub_27068: 	_group17(__disp, _state); break;
-        case m2c::ksub_2707d: 	_group17(__disp, _state); break;
-        case m2c::ksub_273ea: 	_group17(__disp, _state); break;
-        case m2c::ksub_27674: 	_group18(__disp, _state); break;
+        case m2c::ksub_26950: 	_group14(__disp, _state); break;
+        case m2c::ksub_26ba0: 	_group15(__disp, _state); break;
+        case m2c::ksub_26c88: 	_group15(__disp, _state); break;
+        case m2c::ksub_26d32: 	_group15(__disp, _state); break;
+        case m2c::ksub_26dde: 	_group15(__disp, _state); break;
+        case m2c::ksub_27068: 	_group15(__disp, _state); break;
+        case m2c::ksub_2707d: 	_group15(__disp, _state); break;
+        case m2c::ksub_273ea: 	_group15(__disp, _state); break;
+        case m2c::ksub_27674: 	_group16(__disp, _state); break;
         case m2c::ksub_27718: 	sub_27718(0, _state); break;
-        case m2c::ksub_2772c: 	_group19(__disp, _state); break;
-        case m2c::ksub_2775a: 	_group19(__disp, _state); break;
+        case m2c::ksub_2772c: 	_group17(__disp, _state); break;
+        case m2c::ksub_2775a: 	_group17(__disp, _state); break;
         case m2c::ksub_27866: 	sub_27866(0, _state); break;
-        case m2c::ksub_278a6: 	_group20(__disp, _state); break;
-        case m2c::ksub_2794a: 	_group20(__disp, _state); break;
-        case m2c::ksub_27950: 	_group20(__disp, _state); break;
-        case m2c::ksub_27a71: 	_group21(__disp, _state); break;
+        case m2c::ksub_278a6: 	_group18(__disp, _state); break;
+        case m2c::ksub_2794a: 	_group18(__disp, _state); break;
+        case m2c::ksub_27950: 	_group18(__disp, _state); break;
+        case m2c::ksub_27a71: 	_group19(__disp, _state); break;
         case m2c::ksub_27b05: 	sub_27b05(0, _state); break;
         case m2c::ksub_27b26: 	sub_27b26(0, _state); break;
         case m2c::ksub_27ba1: 	sub_27ba1(0, _state); break;
@@ -3644,41 +3652,41 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_27e51: 	sub_27e51(0, _state); break;
         case m2c::ksub_27f40: 	sub_27f40(0, _state); break;
         case m2c::ksub_27f9e: 	sub_27f9e(0, _state); break;
-        case m2c::ksub_2803e: 	_group22(__disp, _state); break;
+        case m2c::ksub_2803e: 	_group20(__disp, _state); break;
         case m2c::ksub_2816e: 	sub_2816e(0, _state); break;
         case m2c::ksub_28279: 	sub_28279(0, _state); break;
         case m2c::ksub_2829d: 	sub_2829d(0, _state); break;
         case m2c::ksub_2838c: 	sub_2838c(0, _state); break;
         case m2c::ksub_283d9: 	sub_283d9(0, _state); break;
-        case m2c::ksub_283f6: 	_group23(__disp, _state); break;
-        case m2c::ksub_283fa: 	_group24(__disp, _state); break;
+        case m2c::ksub_283f6: 	_group21(__disp, _state); break;
+        case m2c::ksub_283fa: 	_group22(__disp, _state); break;
         case m2c::ksub_284a8: 	sub_284a8(0, _state); break;
         case m2c::ksub_284ca: 	sub_284ca(0, _state); break;
-        case m2c::ksub_284e8: 	_group25(__disp, _state); break;
-        case m2c::ksub_2889b: 	_group25(__disp, _state); break;
+        case m2c::ksub_284e8: 	_group23(__disp, _state); break;
+        case m2c::ksub_2889b: 	_group23(__disp, _state); break;
         case m2c::ksub_288e4: 	sub_288e4(0, _state); break;
-        case m2c::ksub_2896e: 	_group26(__disp, _state); break;
-        case m2c::ksub_28aa4: 	_group27(__disp, _state); break;
+        case m2c::ksub_2896e: 	_group24(__disp, _state); break;
+        case m2c::ksub_28aa4: 	_group25(__disp, _state); break;
         case m2c::ksub_28ac8: 	sub_28ac8(0, _state); break;
         case m2c::ksub_28eb2: 	sub_28eb2(0, _state); break;
-        case m2c::ksub_29084: 	_group28(__disp, _state); break;
+        case m2c::ksub_29084: 	_group26(__disp, _state); break;
         case m2c::ksub_291df: 	sub_291df(0, _state); break;
         case m2c::ksub_2920a: 	sub_2920a(0, _state); break;
         case m2c::ksub_29454: 	sub_29454(0, _state); break;
         case m2c::ksub_29496: 	sub_29496(0, _state); break;
         case m2c::ksub_294ea: 	sub_294ea(0, _state); break;
-        case m2c::ksub_2968e: 	_group29(__disp, _state); break;
+        case m2c::ksub_2968e: 	_group28(__disp, _state); break;
         case m2c::ksub_296dc: 	sub_296dc(0, _state); break;
         case m2c::ksub_29868: 	sub_29868(0, _state); break;
         case m2c::ksub_298c4: 	sub_298c4(0, _state); break;
         case m2c::ksub_29902: 	sub_29902(0, _state); break;
-        case m2c::ksub_2997a: 	_group30(__disp, _state); break;
+        case m2c::ksub_2997a: 	_group29(__disp, _state); break;
         case m2c::ksub_299be: 	sub_299be(0, _state); break;
         case m2c::ksub_29a46: 	sub_29a46(0, _state); break;
         case m2c::ksub_29b52: 	sub_29b52(0, _state); break;
         case m2c::ksub_29b62: 	sub_29b62(0, _state); break;
-        case m2c::ksub_29bda: 	_group31(__disp, _state); break;
-        case m2c::ksub_29bf0: 	_group32(__disp, _state); break;
+        case m2c::ksub_29bda: 	_group30(__disp, _state); break;
+        case m2c::ksub_29bf0: 	_group31(__disp, _state); break;
         case m2c::ksub_29c9c: 	sub_29c9c(0, _state); break;
         case m2c::ksub_29cc0: 	sub_29cc0(0, _state); break;
         case m2c::ksub_29d1e: 	sub_29d1e(0, _state); break;
@@ -3688,21 +3696,21 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_29dd2: 	sub_29dd2(0, _state); break;
         case m2c::ksub_29df1: 	sub_29df1(0, _state); break;
         case m2c::ksub_29df5: 	sub_29df5(0, _state); break;
-        case m2c::ksub_29df9: 	_group33(__disp, _state); break;
-        case m2c::ksub_29dfd: 	_group33(__disp, _state); break;
+        case m2c::ksub_29df9: 	_group32(__disp, _state); break;
+        case m2c::ksub_29dfd: 	_group32(__disp, _state); break;
         case m2c::ksub_29e1c: 	sub_29e1c(0, _state); break;
         case m2c::ksub_29e3f: 	sub_29e3f(0, _state); break;
         case m2c::ksub_29e50: 	sub_29e50(0, _state); break;
-        case m2c::ksub_29e6b: 	_group34(__disp, _state); break;
-        case m2c::ksub_29e77: 	_group35(__disp, _state); break;
-        case m2c::ksub_29ea8: 	_group36(__disp, _state); break;
-        case m2c::ksub_29ee6: 	_group36(__disp, _state); break;
+        case m2c::ksub_29e6b: 	_group33(__disp, _state); break;
+        case m2c::ksub_29e77: 	_group34(__disp, _state); break;
+        case m2c::ksub_29ea8: 	_group35(__disp, _state); break;
+        case m2c::ksub_29ee6: 	_group35(__disp, _state); break;
         case m2c::ksub_29f9b: 	sub_29f9b(0, _state); break;
         case m2c::ksub_2a022: 	sub_2a022(0, _state); break;
         case m2c::ksub_2a0b7: 	sub_2a0b7(0, _state); break;
         case m2c::ksub_2a10c: 	sub_2a10c(0, _state); break;
-        case m2c::ksub_2a113: 	_group37(__disp, _state); break;
-        case m2c::ksub_2a1a2: 	_group38(__disp, _state); break;
+        case m2c::ksub_2a113: 	_group36(__disp, _state); break;
+        case m2c::ksub_2a1a2: 	_group37(__disp, _state); break;
         case m2c::ksub_2b429: 	sub_2b429(0, _state); break;
         case m2c::ksub_2b467: 	sub_2b467(0, _state); break;
         case m2c::ksub_2b641: 	sub_2b641(0, _state); break;
@@ -3711,12 +3719,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_2b770: 	sub_2b770(0, _state); break;
         case m2c::ksub_2b787: 	sub_2b787(0, _state); break;
         case m2c::ksub_2b7db: 	sub_2b7db(0, _state); break;
-        case m2c::ksub_2c015: 	_group39(__disp, _state); break;
+        case m2c::ksub_2c015: 	_group38(__disp, _state); break;
         case m2c::ksub_2c20b: 	sub_2c20b(0, _state); break;
         case m2c::ksub_2c29c: 	sub_2c29c(0, _state); break;
         case m2c::ksub_2c303: 	sub_2c303(0, _state); break;
-        case m2c::ksub_2c36b: 	_group40(__disp, _state); break;
-        case m2c::ksub_2c3a2: 	sub_2c3a2(0, _state); break;
+        case m2c::ksub_2c36b: 	_group39(__disp, _state); break;
+        case m2c::ksub_2c3a2: 	_group39(__disp, _state); break;
         case m2c::ksub_2c576: 	sub_2c576(0, _state); break;
         case m2c::ksub_2c83e: 	sub_2c83e(0, _state); break;
         case m2c::ksub_2c8ee: 	sub_2c8ee(0, _state); break;
@@ -3726,17 +3734,14 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_2da6a: 	sub_2da6a(0, _state); break;
         case m2c::ksub_2dc1e: 	sub_2dc1e(0, _state); break;
         case m2c::ksub_2e7ee: 	sub_2e7ee(0, _state); break;
-        case m2c::ksub_2e928: 	_group41(__disp, _state); break;
-        case m2c::ksub_2ea1a: 	_group42(__disp, _state); break;
+        case m2c::ksub_2e928: 	_group40(__disp, _state); break;
+        case m2c::ksub_2ea1a: 	_group41(__disp, _state); break;
         case m2c::ksub_2ebda: 	sub_2ebda(0, _state); break;
         case m2c::ksub_2ec74: 	sub_2ec74(0, _state); break;
         case m2c::ksub_2ecd6: 	sub_2ecd6(0, _state); break;
         case m2c::ksub_2f024: 	sub_2f024(0, _state); break;
-        case m2c::ksub_2f068: 	sub_2f068(0, _state); break;
-        case m2c::ksub_2f080: 	_group43(__disp, _state); break;
         case m2c::ksub_2f700: 	sub_2f700(0, _state); break;
         case m2c::ksub_2f7aa: 	sub_2f7aa(0, _state); break;
-        case m2c::ksub_2f7c5: 	sub_2f7c5(0, _state); break;
         case m2c::ksub_2f7f9: 	sub_2f7f9(0, _state); break;
         case m2c::ksub_2faa5: 	sub_2faa5(0, _state); break;
         case m2c::ksub_2fae4: 	sub_2fae4(0, _state); break;
@@ -3745,38 +3750,34 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_2fb6a: 	sub_2fb6a(0, _state); break;
         case m2c::ksub_2fc1c: 	sub_2fc1c(0, _state); break;
         case m2c::ksub_2fc7d: 	sub_2fc7d(0, _state); break;
-        case m2c::ksub_2fd0b: 	sub_2fd0b(0, _state); break;
-        case m2c::ksub_2fdc8: 	_group44(__disp, _state); break;
-        case m2c::ksub_2fe11: 	_group45(__disp, _state); break;
-        case m2c::ksub_2fe3c: 	_group46(__disp, _state); break;
-        case m2c::ksub_2feb4: 	_group47(__disp, _state); break;
-        case m2c::ksub_2ffb6: 	_group48(__disp, _state); break;
-        case m2c::ksub_2ffe0: 	_group49(__disp, _state); break;
+        case m2c::ksub_2fdc8: 	_group42(__disp, _state); break;
+        case m2c::ksub_2fe11: 	_group43(__disp, _state); break;
+        case m2c::ksub_2fe3c: 	_group44(__disp, _state); break;
+        case m2c::ksub_2feb4: 	_group45(__disp, _state); break;
+        case m2c::ksub_2ffb6: 	_group46(__disp, _state); break;
+        case m2c::ksub_2ffe0: 	_group47(__disp, _state); break;
         case m2c::ksub_30074: 	sub_30074(0, _state); break;
-        case m2c::ksub_3008d: 	_group50(__disp, _state); break;
-        case m2c::ksub_300c4: 	_group51(__disp, _state); break;
+        case m2c::ksub_3008d: 	_group48(__disp, _state); break;
+        case m2c::ksub_300c4: 	_group49(__disp, _state); break;
         case m2c::ksub_300e6: 	sub_300e6(0, _state); break;
         case m2c::ksub_301dd: 	sub_301dd(0, _state); break;
         case m2c::ksub_301fc: 	sub_301fc(0, _state); break;
         case m2c::ksub_30260: 	sub_30260(0, _state); break;
-        case m2c::ksub_302fb: 	_group52(__disp, _state); break;
-        case m2c::ksub_3032e: 	_group53(__disp, _state); break;
-        case m2c::ksub_3036a: 	_group54(__disp, _state); break;
-        case m2c::ksub_303b3: 	_group55(__disp, _state); break;
+        case m2c::ksub_302fb: 	_group50(__disp, _state); break;
+        case m2c::ksub_3032e: 	_group51(__disp, _state); break;
+        case m2c::ksub_3036a: 	_group52(__disp, _state); break;
+        case m2c::ksub_303b3: 	_group53(__disp, _state); break;
         case m2c::ksub_303e1: 	sub_303e1(0, _state); break;
         case m2c::ksub_30414: 	sub_30414(0, _state); break;
         case m2c::ksub_30434: 	sub_30434(0, _state); break;
         case m2c::ksub_30454: 	sub_30454(0, _state); break;
-        case m2c::ksub_3048c: 	_group56(__disp, _state); break;
-        case m2c::ksub_30970: 	_group57(__disp, _state); break;
+        case m2c::ksub_3048c: 	_group54(__disp, _state); break;
+        case m2c::ksub_30970: 	_group55(__disp, _state); break;
         case m2c::ksub_309f4: 	sub_309f4(0, _state); break;
-        case m2c::ksub_30aa2: 	_group58(__disp, _state); break;
-        case m2c::ksub_30af8: 	_group59(__disp, _state); break;
-        case m2c::ksub_30b64: 	_group60(__disp, _state); break;
-        case m2c::ksub_30b92: 	_group61(__disp, _state); break;
-        case m2c::ksub_30bec: 	_group62(__disp, _state); break;
-        case m2c::ksub_30c28: 	sub_30c28(0, _state); break;
-        case m2c::ksub_31377: 	sub_31377(0, _state); break;
+        case m2c::ksub_30aa2: 	_group56(__disp, _state); break;
+        case m2c::ksub_30af8: 	_group57(__disp, _state); break;
+        case m2c::ksub_30b64: 	_group58(__disp, _state); break;
+        case m2c::ksub_30b92: 	_group59(__disp, _state); break;
         case m2c::ksub_323e9: 	sub_323e9(0, _state); break;
         case m2c::ksub_32528: 	sub_32528(0, _state); break;
         case m2c::ksub_325a1: 	sub_325a1(0, _state); break;
@@ -3790,7 +3791,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_32a5d: 	sub_32a5d(0, _state); break;
         case m2c::ksub_32a94: 	sub_32a94(0, _state); break;
         case m2c::ksub_32ad4: 	sub_32ad4(0, _state); break;
-        case m2c::ksub_32b0e: 	sub_32b0e(0, _state); break;
         case m2c::ksub_32c02: 	sub_32c02(0, _state); break;
         case m2c::ksub_32d72: 	sub_32d72(0, _state); break;
         case m2c::ksub_33162: 	sub_33162(0, _state); break;
@@ -3801,12 +3801,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_333a8: 	sub_333a8(0, _state); break;
         case m2c::ksub_333c0: 	sub_333c0(0, _state); break;
         case m2c::ksub_333f8: 	sub_333f8(0, _state); break;
-        case m2c::ksub_33418: 	sub_33418(0, _state); break;
         case m2c::ksub_33430: 	sub_33430(0, _state); break;
         case m2c::ksub_3344e: 	sub_3344e(0, _state); break;
-        case m2c::ksub_33490: 	sub_33490(0, _state); break;
         case m2c::ksub_33c0b: 	sub_33c0b(0, _state); break;
-        case m2c::ksub_33c65: 	_group63(__disp, _state); break;
+        case m2c::ksub_33c65: 	_group60(__disp, _state); break;
         case m2c::ksub_33c8f: 	sub_33c8f(0, _state); break;
         case m2c::ksub_33cbd: 	sub_33cbd(0, _state); break;
         case m2c::ksub_33cde: 	sub_33cde(0, _state); break;
@@ -3822,20 +3820,20 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_33ff4: 	sub_33ff4(0, _state); break;
         case m2c::ksub_3404b: 	sub_3404b(0, _state); break;
         case m2c::ksub_340a2: 	sub_340a2(0, _state); break;
-        case m2c::ksub_340c4: 	_group64(__disp, _state); break;
-        case m2c::ksub_341ec: 	_group64(__disp, _state); break;
-        case m2c::ksub_342da: 	_group65(__disp, _state); break;
-        case m2c::ksub_3434c: 	_group66(__disp, _state); break;
-        case m2c::ksub_34428: 	_group67(__disp, _state); break;
+        case m2c::ksub_340c4: 	_group61(__disp, _state); break;
+        case m2c::ksub_341ec: 	_group61(__disp, _state); break;
+        case m2c::ksub_342da: 	_group62(__disp, _state); break;
+        case m2c::ksub_3434c: 	_group63(__disp, _state); break;
+        case m2c::ksub_34428: 	_group64(__disp, _state); break;
         case m2c::ksub_34492: 	sub_34492(0, _state); break;
-        case m2c::ksub_344bc: 	_group68(__disp, _state); break;
-        case m2c::ksub_34503: 	_group68(__disp, _state); break;
+        case m2c::ksub_344bc: 	_group65(__disp, _state); break;
+        case m2c::ksub_34503: 	_group65(__disp, _state); break;
         case m2c::ksub_34539: 	sub_34539(0, _state); break;
         case m2c::ksub_345b2: 	sub_345b2(0, _state); break;
-        case m2c::ksub_34714: 	_group69(__disp, _state); break;
-        case m2c::ksub_347d8: 	sub_347d8(0, _state); break;
-        case m2c::ksub_347ef: 	_group70(__disp, _state); break;
-        case m2c::ksub_34834: 	_group70(__disp, _state); break;
+        case m2c::ksub_34714: 	_group66(__disp, _state); break;
+        case m2c::ksub_347d8: 	_group66(__disp, _state); break;
+        case m2c::ksub_347ef: 	_group67(__disp, _state); break;
+        case m2c::ksub_34834: 	_group67(__disp, _state); break;
         case m2c::ksub_34861: 	sub_34861(0, _state); break;
         case m2c::ksub_34870: 	sub_34870(0, _state); break;
         case m2c::ksub_34884: 	sub_34884(0, _state); break;
@@ -3852,7 +3850,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_34cb2: 	sub_34cb2(0, _state); break;
         case m2c::ksub_34d30: 	sub_34d30(0, _state); break;
         case m2c::ksub_34d4e: 	sub_34d4e(0, _state); break;
-        case m2c::ksub_34d64: 	sub_34d64(0, _state); break;
         case m2c::ksub_34d72: 	sub_34d72(0, _state); break;
         case m2c::ksub_34d94: 	sub_34d94(0, _state); break;
         case m2c::ksub_34dc0: 	sub_34dc0(0, _state); break;
@@ -3885,17 +3882,17 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_35524: 	sub_35524(0, _state); break;
         case m2c::ksub_356b7: 	sub_356b7(0, _state); break;
         case m2c::ksub_356c8: 	sub_356c8(0, _state); break;
-        case m2c::ksub_3576e: 	_group71(__disp, _state); break;
+        case m2c::ksub_3576e: 	_group68(__disp, _state); break;
         case m2c::ksub_357f0: 	sub_357f0(0, _state); break;
         case m2c::ksub_35802: 	sub_35802(0, _state); break;
         case m2c::ksub_3587a: 	sub_3587a(0, _state); break;
-        case m2c::ksub_3588f: 	_group72(__disp, _state); break;
+        case m2c::ksub_3588f: 	_group69(__disp, _state); break;
         case m2c::ksub_35972: 	sub_35972(0, _state); break;
         case m2c::ksub_359ac: 	sub_359ac(0, _state); break;
         case m2c::ksub_359ce: 	sub_359ce(0, _state); break;
         case m2c::ksub_359ee: 	sub_359ee(0, _state); break;
         case m2c::ksub_35a5c: 	sub_35a5c(0, _state); break;
-        case m2c::ksub_35ab2: 	_group73(__disp, _state); break;
+        case m2c::ksub_35ab2: 	_group70(__disp, _state); break;
         case m2c::ksub_35b28: 	sub_35b28(0, _state); break;
         case m2c::ksub_35bc3: 	sub_35bc3(0, _state); break;
         case m2c::ksub_35be7: 	sub_35be7(0, _state); break;
@@ -3912,12 +3909,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_35fa2: 	sub_35fa2(0, _state); break;
         case m2c::ksub_35fdd: 	sub_35fdd(0, _state); break;
         case m2c::ksub_3608c: 	sub_3608c(0, _state); break;
-        case m2c::ksub_3611c: 	_group74(__disp, _state); break;
-        case m2c::ksub_3612e: 	_group75(__disp, _state); break;
+        case m2c::ksub_3611c: 	_group71(__disp, _state); break;
+        case m2c::ksub_3612e: 	_group72(__disp, _state); break;
         case m2c::ksub_36334: 	sub_36334(0, _state); break;
         case m2c::ksub_363b8: 	sub_363b8(0, _state); break;
         case m2c::ksub_364b9: 	sub_364b9(0, _state); break;
-        case m2c::ksub_364e6: 	_group76(__disp, _state); break;
+        case m2c::ksub_364e6: 	_group73(__disp, _state); break;
         case m2c::ksub_364f7: 	sub_364f7(0, _state); break;
         case m2c::ksub_3650a: 	sub_3650a(0, _state); break;
         case m2c::ksub_36526: 	sub_36526(0, _state); break;
@@ -3928,7 +3925,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_36764: 	sub_36764(0, _state); break;
         case m2c::ksub_36888: 	sub_36888(0, _state); break;
         case m2c::ksub_368a4: 	sub_368a4(0, _state); break;
-        case m2c::ksub_36ba0: 	_group77(__disp, _state); break;
+        case m2c::ksub_36ba0: 	_group74(__disp, _state); break;
         case m2c::ksub_36c76: 	sub_36c76(0, _state); break;
         case m2c::ksub_36c88: 	sub_36c88(0, _state); break;
         case m2c::ksub_36d32: 	sub_36d32(0, _state); break;
@@ -3940,34 +3937,34 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_3707d: 	sub_3707d(0, _state); break;
         case m2c::ksub_3720c: 	sub_3720c(0, _state); break;
         case m2c::ksub_3721a: 	sub_3721a(0, _state); break;
-        case m2c::ksub_372a5: 	_group78(__disp, _state); break;
+        case m2c::ksub_372a5: 	_group75(__disp, _state); break;
         case m2c::ksub_373ea: 	sub_373ea(0, _state); break;
         case m2c::ksub_37652: 	sub_37652(0, _state); break;
-        case m2c::ksub_37674: 	_group79(__disp, _state); break;
+        case m2c::ksub_37674: 	_group76(__disp, _state); break;
         case m2c::ksub_37756: 	sub_37756(0, _state); break;
         case m2c::ksub_3775a: 	sub_3775a(0, _state); break;
         case m2c::ksub_37766: 	sub_37766(0, _state); break;
         case m2c::ksub_378f2: 	sub_378f2(0, _state); break;
-        case m2c::ksub_37934: 	_group80(__disp, _state); break;
+        case m2c::ksub_37934: 	_group77(__disp, _state); break;
         case m2c::ksub_3794a: 	sub_3794a(0, _state); break;
         case m2c::ksub_37950: 	sub_37950(0, _state); break;
-        case m2c::ksub_37986: 	_group81(__disp, _state); break;
+        case m2c::ksub_37986: 	_group78(__disp, _state); break;
         case m2c::ksub_379e4: 	sub_379e4(0, _state); break;
         case m2c::ksub_37acc: 	sub_37acc(0, _state); break;
         case m2c::ksub_37ad8: 	sub_37ad8(0, _state); break;
-        case m2c::ksub_37caa: 	_group82(__disp, _state); break;
-        case m2c::ksub_37cae: 	_group83(__disp, _state); break;
-        case m2c::ksub_37cb6: 	_group84(__disp, _state); break;
-        case m2c::ksub_38641: 	_group85(__disp, _state); break;
+        case m2c::ksub_37caa: 	_group79(__disp, _state); break;
+        case m2c::ksub_37cae: 	_group80(__disp, _state); break;
+        case m2c::ksub_37cb6: 	_group81(__disp, _state); break;
+        case m2c::ksub_38641: 	_group82(__disp, _state); break;
         case m2c::ksub_3888b: 	sub_3888b(0, _state); break;
         case m2c::ksub_3889b: 	sub_3889b(0, _state); break;
         case m2c::ksub_388ae: 	sub_388ae(0, _state); break;
         case m2c::ksub_388c1: 	sub_388c1(0, _state); break;
         case m2c::ksub_388ee: 	sub_388ee(0, _state); break;
         case m2c::ksub_3894a: 	sub_3894a(0, _state); break;
-        case m2c::ksub_3895e: 	_group86(__disp, _state); break;
-        case m2c::ksub_38976: 	_group87(__disp, _state); break;
-        case m2c::ksub_389c6: 	_group87(__disp, _state); break;
+        case m2c::ksub_3895e: 	_group83(__disp, _state); break;
+        case m2c::ksub_38976: 	_group84(__disp, _state); break;
+        case m2c::ksub_389c6: 	_group84(__disp, _state); break;
         case m2c::ksub_4999e: 	sub_4999e(0, _state); break;
         case m2c::ksub_499a3: 	sub_499a3(0, _state); break;
         case m2c::ksub_499a8: 	sub_499a8(0, _state); break;
@@ -4035,7 +4032,12 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_49bb5: 	sub_49bb5(0, _state); break;
         case m2c::ksub_49bba: 	sub_49bba(0, _state); break;
         case m2c::ksub_49bbf: 	sub_49bbf(0, _state); break;
-        default: m2c::log_error("Don't know how to call to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+        default: m2c::log_error("cs=%x ip=%x Don't know how to call to 0x%x. See " __FILE__ " line %d\n", cs,ip,__disp, __LINE__);
+if (_state->call_source==3) return false;
+m2c::interpret_unknown_callf(__disp>>16,__disp&0xffff,2);
+m2c::shadow_stack.getneedtoskipcallndclean(); // Put inside interpret_unknown_callf??
+m2c::log_debug("doing return2\n");return true;
+//m2c::stackDump(_state); abort();
      };
      return true;
 }
@@ -4325,6 +4327,11 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999[84]={14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,7,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,11,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,12,12,12,12};MYCOPY(dummyf_2866)} // 0204:0755
     {db tmp999[34]={14,14,14,14,14,14,14,14,14,8,8,8,8,8,8,8,8,8,14,14,14,14,14,14,4,4,4,4,8,8,8,8,8,8};MYCOPY(dummyf_28ba)} // 0204:0755
     {db tmp999[56]={10,10,10,10,10,10,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};MYCOPY(dummyf_28dc)} // 0204:0755
+    {db tmp999=8;MYCOPY(byte_10ef4)} // 0204:08d4
+    {db tmp999[32]={8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};MYCOPY(dummyf_2915)} // 0204:08d5
+    {db tmp999[32]={8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};MYCOPY(dummyf_2935)} // 0204:08f5
+    {db tmp999=8;MYCOPY(dummyf_2955)} // 0204:0915
+    {db tmp999=166;MYCOPY(dummyf_2956)} // 0204:0916
     {db tmp999[11]={255,255,255,168,85,200,76,80,96,144,116};MYCOPY(dummyf_2957)} // 0204:0917
     {db tmp999[13]={64,88,64,86,0,75,0,37,1,0,1,0,36};MYCOPY(dummyf_2962)} // 0204:0917
     {db tmp999[14]={0,0,8,30,0,86,66,49,55,0,0,0,0,7};MYCOPY(dummyf_296f)} // 0204:0917
@@ -4410,9 +4417,10 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999=130;MYCOPY(dummyf_3681)} // 0345:0231
     {db tmp999=26;MYCOPY(dummyf_3682)} // 0345:0232
     {db tmp999=21;MYCOPY(dummyf_3683)} // 0345:0233
-    {dd tmp999=m2c::kloc_12a98;MYCOPY(dummyf_3684)} // 0345:0234
-    {db tmp999=255;MYCOPY(byte_11c6a)} // 0345:023a
-    {db tmp999=2;MYCOPY(byte_11c6b)} // 0345:023b
+    {dw tmp999=m2c::kloc_12a98;MYCOPY(dummyf_3684)} // 0345:0234
+    {dw tmp999=seg_offset(seg127c);MYCOPY(dummyf_3686)} // 0345:0236
+    {db tmp999=255;MYCOPY(unk_11c6a)} // 0345:023a
+    {db tmp999=2;MYCOPY(unk_11c6b)} // 0345:023b
     {char tmp999[33]={'N','o',' ','A','d','l','i','b',' ','b','o','a','r','d',' ','p','r','e','s','e','n','t',' ','i','n',' ','s','y','s','t','e','m','$'};MYCOPY(anoadlibboardpr)} // 0345:023c
     {dw tmp999=0;MYCOPY(word_11c8d)} // 0345:025d
     {dw tmp999=65535;MYCOPY(word_11c8f)} // 0345:025f
@@ -4605,13 +4613,13 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999=200;MYCOPY(dummyf_3cc4)} // 0345:0874
     {db tmp999=250;MYCOPY(dummyf_3cc5)} // 0345:0875
     {db tmp999=248;MYCOPY(dummyf_3cc7)} // 0345:0877
-    {db tmp999=252;MYCOPY(unk_122ac)} // 0345:087c
+    {db tmp999=252;MYCOPY(byte_122ac)} // 0345:087c
     {db tmp999=27;MYCOPY(dummyf_3ccd)} // 0345:087d
     {db tmp999=249;MYCOPY(dummyf_3cce)} // 0345:087e
     {db tmp999=45;MYCOPY(dummyf_3ccf)} // 0345:087f
     {db tmp999=4;MYCOPY(dummyf_3cd0)} // 0345:0880
     {db tmp999=60;MYCOPY(dummyf_3cd1)} // 0345:0881
-    {db tmp999=252;MYCOPY(unk_122b4)} // 0345:0884
+    {db tmp999=252;MYCOPY(byte_122b4)} // 0345:0884
     {db tmp999=26;MYCOPY(dummyf_3cd5)} // 0345:0885
     {db tmp999=249;MYCOPY(dummyf_3cd6)} // 0345:0886
     {db tmp999=30;MYCOPY(dummyf_3cd7)} // 0345:0887
@@ -4907,7 +4915,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {dw tmp999=5;MYCOPY(word_127ba)} // 0345:0d8a
     {dw tmp999=13;MYCOPY(word_127bc)} // 0345:0d8c
     {dw tmp999=1452;MYCOPY(word_127be)} // 0345:0d8e
-    {dw tmp999=11480;MYCOPY(seg_127c9)} // 041e:0009
+    {dw tmp999=0x1a2+0x1cd8;MYCOPY(seg_127c9)} // 041e:0009
     {dw tmp999=33460;MYCOPY(word_127cb)} // 041e:000b
     {db tmp999[32]={63,45,38,35,32,29,27,25,24,22,21,20,19,18,17,16,16,15,14,14,13,13,12,12,11,11,10,10,9,9,9,8};MYCOPY(dummyf_41ed)} // 041e:000d
     {db tmp999=8;MYCOPY(dummyf_420d)} // 041e:002d
@@ -5776,7 +5784,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999=144;MYCOPY(dummyf_7d64)} // 075b:07b4
     {db tmp999=144;MYCOPY(dummyf_7f12)} // 075b:0962
     {db tmp999=0;MYCOPY(byte_16542)} // 075b:09b2
-    {dw tmp999=18;MYCOPY(dummyf_800a)} // 075b:0a5a
     {db tmp999=8;MYCOPY(dummyf_8086)} // 075b:0ad6
     {db tmp999=255;MYCOPY(dummyf_8087)} // 075b:0ad7
     {char tmp999[3]={'F','1','5'};MYCOPY(af15)} // 075b:0ad8
@@ -6478,11 +6485,13 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999[32]={10,2,0,0,0,0,0,0,13,14,0,0,0,15,0,0,0,15,0,0,0,0,0,7,7,7,0,0,0,4,0,0};MYCOPY(dummyf_c7dc)} // 0809:474c
     {db tmp999[32]={4,0,0,4,0,0,0,13,13,13,0,0,0,0,0,0,7,0,0,0,0,0,0,7,7,7,0,0,0,0,0,7};MYCOPY(dummyf_c7fc)} // 0809:476c
     {db tmp999[32]={7,15,7,7,0,7,7,7,7,7,7,7,0,7,7,15,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyf_c81c)} // 0809:478c
-    {db tmp999[32]={0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyf_c83c)} // 0809:47ac
-    {db tmp999[32]={0};MYCOPY(dummyf_c85c)} // 0809:47cc
-    {db tmp999[32]={0};MYCOPY(dummyf_c87c)} // 0809:47ec
-    {db tmp999[32]={0};MYCOPY(dummyf_c89c)} // 0809:480c
-    {db tmp999[32]={0};MYCOPY(dummyf_c8bc)} // 0809:482c
+    {db tmp999=15;MYCOPY(dummyf_c841)} // 0809:47b1
+    {db tmp999=15;MYCOPY(dummyf_c84b)} // 0809:47bb
+    {db tmp999=0;MYCOPY(unk_1ae30)} // 0809:47c0
+    {db tmp999[32]={0};MYCOPY(dummyf_c851)} // 0809:47c1
+    {db tmp999[32]={0};MYCOPY(dummyf_c871)} // 0809:47e1
+    {db tmp999[32]={0};MYCOPY(dummyf_c891)} // 0809:4801
+    {db tmp999[32]={0};MYCOPY(dummyf_c8b1)} // 0809:4821
     {db tmp999=0;MYCOPY(unk_1aecc)} // 0809:485c
     {db tmp999[32]={0};MYCOPY(dummyf_c8ed)} // 0809:485d
     {db tmp999[32]={0,0,0,0,0,7,7,7,7,7,0,0,0,0,0,2,10,2,0,0,0,0,13,13,13,0,0,0,0,0,0,15};MYCOPY(dummyf_c90d)} // 0809:487d
@@ -7926,51 +7935,53 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999[32]={0};MYCOPY(dummyf_17a24)} // 0809:f994
     {db tmp999[32]={0};MYCOPY(dummyf_17a44)} // 0809:f9b4
     {db tmp999[32]={0};MYCOPY(dummyf_17a64)} // 0809:f9d4
-    {dd tmp999=m2c::kloc_2ae2e+2;MYCOPY(dummyf_17a8f)} // 0809:f9ff
+    {db tmp999=77;MYCOPY(dummyf_17a90)} // 0809:fa00
+    {dw tmp999=9747;MYCOPY(dummyf_17a91)} // 0809:fa01
     {db tmp999[32]={10,0,0,0,0,70,49,53,0,0,0,0,0,67,79,77,83,80,69,67,61,90,58,92,67,79,77,77,65,78,68,46};MYCOPY(dummyf_17a93)} // 0809:fa03
     {db tmp999[32]={67,79,77,0,66,76,65,83,84,69,82,61,65,50,50,48,32,73,55,32,68,49,32,72,53,32,84,54,0,80,65,84};MYCOPY(dummyf_17ab3)} // 0809:fa23
     {db tmp999[32]={72,61,90,58,92,59,121,58,92,100,111,115,0,0,1,0,67,58,92,69,71,65,77,69,46,69,88,69,0,0,0,0};MYCOPY(dummyf_17ad3)} // 0809:fa43
     {db tmp999[32]={0};MYCOPY(dummyf_17af3)} // 0809:fa63
     {db tmp999[32]={0};MYCOPY(dummyf_17b13)} // 0809:fa83
-    {dd tmp999=m2c::kloc_2ae2e+2;MYCOPY(dummyf_17b3f)} // 0809:faaf
-    {db tmp999[32]={31,118,0,0,0,69,71,65,77,69,0,0,0,205,32,125,157,0,234,255,255,173,222,93,11,76,253,107,7,231,11,40};MYCOPY(dummyf_17b43)} // 0809:fab3
-    {db tmp999=8;MYCOPY(dummyf_17b63)} // 0809:fad3
-    {db tmp999=231;MYCOPY(dummyf_17b64)} // 0809:fad4
-    {db tmp999=11;MYCOPY(dummyf_17b65)} // 0809:fad5
-    {db tmp999=240;MYCOPY(dummyf_17b66)} // 0809:fad6
-    {db tmp999=255;MYCOPY(dummyf_17b67)} // 0809:fad7
-    {db tmp999=1;MYCOPY(unk_26148)} // 0809:fad8
-    {db tmp999=3;MYCOPY(dummyf_17b69)} // 0809:fad9
-    {db tmp999=1;MYCOPY(dummyf_17b6a)} // 0809:fada
-    {db tmp999=2;MYCOPY(dummyf_17b6c)} // 0809:fadc
-    {db tmp999=255;MYCOPY(dummyf_17b6d)} // 0809:fadd
-    {db tmp999=255;MYCOPY(dummyf_17b6e)} // 0809:fade
-    {db tmp999=255;MYCOPY(dummyf_17b6f)} // 0809:fadf
-    {db tmp999=255;MYCOPY(dummyf_17b70)} // 0809:fae0
-    {db tmp999=255;MYCOPY(dummyf_17b71)} // 0809:fae1
-    {db tmp999=255;MYCOPY(dummyf_17b72)} // 0809:fae2
-    {db tmp999=255;MYCOPY(dummyf_17b73)} // 0809:fae3
-    {db tmp999=255;MYCOPY(dummyf_17b74)} // 0809:fae4
-    {db tmp999=255;MYCOPY(dummyf_17b75)} // 0809:fae5
-    {db tmp999=255;MYCOPY(dummyf_17b76)} // 0809:fae6
-    {db tmp999=255;MYCOPY(dummyf_17b77)} // 0809:fae7
-    {db tmp999=255;MYCOPY(dummyf_17b78)} // 0809:fae8
-    {db tmp999=255;MYCOPY(dummyf_17b79)} // 0809:fae9
-    {dd tmp999=m2c::kloc_3607f;MYCOPY(dummyf_17b7a)} // 0809:faea
+    {dw tmp999=offset(seg1667,unk_1ae30)-m2c::kloc_26130;MYCOPY(dummyf_17b3f)} // 0809:faaf
+    {dw tmp999=9747;MYCOPY(dummyf_17b41)} // 0809:fab1
+    {db tmp999=31;MYCOPY(dummyf_17b43)} // 0809:fab3
+    {db tmp999=118;MYCOPY(dummyf_17b44)} // 0809:fab4
+    {db tmp999=69;MYCOPY(dummyf_17b48)} // 0809:fab8
+    {db tmp999=71;MYCOPY(dummyf_17b49)} // 0809:fab9
+    {db tmp999=65;MYCOPY(dummyf_17b4a)} // 0809:faba
+    {db tmp999=77;MYCOPY(dummyf_17b4b)} // 0809:fabb
+    {db tmp999=69;MYCOPY(dummyf_17b4c)} // 0809:fabc
+    {db tmp999=125;MYCOPY(dummyf_17b52)} // 0809:fac2
+    {db tmp999=157;MYCOPY(dummyf_17b53)} // 0809:fac3
+    {db tmp999[32]={93,11,76,253,107,7,231,11,40,8,231,11,240,255,1,3,1,0,2,255,255,255,255,255,255,255,255,255,255,255,255,255};MYCOPY(dummyf_17b5a)} // 0809:faca
+    {dw tmp999=65535;MYCOPY(dummyf_17b7a)} // 0809:faea
+    {dw tmp999=9736;MYCOPY(dummyf_17b7c)} // 0809:faec
     {db tmp999=238;MYCOPY(dummyf_17b7e)} // 0809:faee
     {db tmp999=6;MYCOPY(dummyf_17b7f)} // 0809:faef
     {db tmp999=240;MYCOPY(dummyf_17b80)} // 0809:faf0
     {db tmp999=255;MYCOPY(dummyf_17b81)} // 0809:faf1
     {db tmp999=20;MYCOPY(dummyf_17b82)} // 0809:faf2
-    {dd tmp999=offset(seg1667,unk_26148);MYCOPY(dummyf_17b84)} // 0809:faf4
-    {db tmp999[32]={255,255,255,255,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,205,33,203,0,0,0,0,0};MYCOPY(dummyf_17b88)} // 0809:faf8
-    {db tmp999[32]={0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32};MYCOPY(dummyf_17ba8)} // 0809:fb18
-    {db tmp999[32]={0,0,0,0,0,0,0,0,0,13,47,50,32,115,117,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyf_17bc8)} // 0809:fb38
-    {db tmp999[32]={0};MYCOPY(dummyf_17be8)} // 0809:fb58
-    {db tmp999[32]={0};MYCOPY(dummyf_17c08)} // 0809:fb78
-    {db tmp999[32]={0};MYCOPY(dummyf_17c28)} // 0809:fb98
+    {dw tmp999=24;MYCOPY(dummyf_17b84)} // 0809:faf4
+    {dw tmp999=9747;MYCOPY(dummyf_17b86)} // 0809:faf6
+    {db tmp999=255;MYCOPY(dummyf_17b88)} // 0809:faf8
+    {db tmp999=255;MYCOPY(dummyf_17b89)} // 0809:faf9
+    {db tmp999=255;MYCOPY(dummyf_17b8a)} // 0809:fafa
+    {db tmp999=255;MYCOPY(dummyf_17b8b)} // 0809:fafb
+    {db tmp999=5;MYCOPY(dummyf_17b90)} // 0809:fb00
+    {db tmp999[32]={0,0,0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,32,32,32,32,32,32};MYCOPY(dummyf_17ba3)} // 0809:fb13
+    {db tmp999[32]={32,32,32,32,32,0,0,0,0,0,0,0,0,0,13,47,50,32,115,117,9,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyf_17bc3)} // 0809:fb33
+    {db tmp999[32]={0};MYCOPY(dummyf_17be3)} // 0809:fb53
+    {db tmp999[32]={0};MYCOPY(dummyf_17c03)} // 0809:fb73
+    {db tmp999[32]={0};MYCOPY(dummyf_17c23)} // 0809:fb93
     {db tmp999=11;MYCOPY(dummyf_17c4e)} // 0809:fbbe
     {db tmp999=32;MYCOPY(dummyf_17c4f)} // 0809:fbbf
+    {db tmp999=131;MYCOPY(dummyf_17d90)} // 17c5:0140
+    {db tmp999=196;MYCOPY(dummyf_17d91)} // 17c5:0141
+    {db tmp999=2;MYCOPY(dummyf_17d92)} // 17c5:0142
+    {db tmp999=139;MYCOPY(dummyf_17d93)} // 17c5:0143
+    {db tmp999=229;MYCOPY(dummyf_17d94)} // 17c5:0144
+    {db tmp999=93;MYCOPY(dummyf_17d95)} // 17c5:0145
+    {db tmp999=195;MYCOPY(dummyf_17d96)} // 17c5:0146
     {db tmp999=144;MYCOPY(dummyf_17f31)} // 17c5:02e1
     {db tmp999=144;MYCOPY(dummyf_1800b)} // 17c5:03bb
     {db tmp999=144;MYCOPY(dummyf_18263)} // 17c5:0613
@@ -8015,6 +8026,25 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {dw tmp999=m2c::k__def_2be4e;MYCOPY(dummyf_1d87d)} // 17c5:5c23
     {dw tmp999=m2c::kloc_2ba05;MYCOPY(dummyf_1d87f)} // 17c5:5c23
     {dw tmp999=m2c::kloc_2bdbf;MYCOPY(dummyf_1d881)} // 17c5:5c23
+    {db tmp999=139;MYCOPY(dummyf_1ddb8)} // 17c5:6168
+    {db tmp999=70;MYCOPY(dummyf_1ddb9)} // 17c5:6169
+    {db tmp999=254;MYCOPY(dummyf_1ddba)} // 17c5:616a
+    {db tmp999=163;MYCOPY(dummyf_1ddbb)} // 17c5:616b
+    {db tmp999=90;MYCOPY(dummyf_1ddbc)} // 17c5:616c
+    {db tmp999=80;MYCOPY(dummyf_1ddbd)} // 17c5:616d
+    {db tmp999=139;MYCOPY(dummyf_1ddbe)} // 17c5:616e
+    {db tmp999=229;MYCOPY(dummyf_1ddbf)} // 17c5:616f
+    {db tmp999=93;MYCOPY(dummyf_1ddc0)} // 17c5:6170
+    {db tmp999=195;MYCOPY(dummyf_1ddc1)} // 17c5:6171
+    {db tmp999=199;MYCOPY(dummyf_1ddf2)} // 17c5:61a2
+    {db tmp999=6;MYCOPY(dummyf_1ddf3)} // 17c5:61a3
+    {db tmp999=140;MYCOPY(dummyf_1ddf4)} // 17c5:61a4
+    {db tmp999=150;MYCOPY(dummyf_1ddf5)} // 17c5:61a5
+    {db tmp999=199;MYCOPY(dummyf_1ddf8)} // 17c5:61a8
+    {db tmp999=6;MYCOPY(dummyf_1ddf9)} // 17c5:61a9
+    {db tmp999=142;MYCOPY(dummyf_1ddfa)} // 17c5:61aa
+    {db tmp999=150;MYCOPY(dummyf_1ddfb)} // 17c5:61ab
+    {db tmp999=1;MYCOPY(dummyf_1ddfd)} // 17c5:61ad
     {db tmp999=144;MYCOPY(dummyf_1de05)} // 17c5:61b5
     {db tmp999=144;MYCOPY(dummyf_1e125)} // 17c5:64d5
     {db tmp999=144;MYCOPY(dummyf_1e25d)} // 17c5:660d
@@ -10042,85 +10072,84 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999[32]={0};MYCOPY(dummyf_39ad5)} // 2e7b:b325
     {db tmp999[32]={0};MYCOPY(dummyf_39af5)} // 2e7b:b345
     {db tmp999[32]={0};MYCOPY(dummyf_39b15)} // 2e7b:b365
-    {db tmp999=0;MYCOPY(unk_48118)} // 2e7b:b388
-    {db tmp999[32]={0};MYCOPY(dummyf_39b39)} // 2e7b:b389
-    {db tmp999[32]={0};MYCOPY(dummyf_39b59)} // 2e7b:b3a9
-    {db tmp999[32]={0};MYCOPY(dummyf_39b79)} // 2e7b:b3c9
-    {db tmp999[32]={0};MYCOPY(dummyf_39b99)} // 2e7b:b3e9
-    {db tmp999[32]={0};MYCOPY(dummyf_39bb9)} // 2e7b:b409
-    {db tmp999[32]={0};MYCOPY(dummyf_39bd9)} // 2e7b:b429
-    {db tmp999[32]={0};MYCOPY(dummyf_39bf9)} // 2e7b:b449
-    {db tmp999[32]={0};MYCOPY(dummyf_39c19)} // 2e7b:b469
-    {db tmp999[32]={0};MYCOPY(dummyf_39c39)} // 2e7b:b489
-    {db tmp999[32]={0};MYCOPY(dummyf_39c59)} // 2e7b:b4a9
-    {db tmp999[32]={0};MYCOPY(dummyf_39c79)} // 2e7b:b4c9
-    {db tmp999[32]={0};MYCOPY(dummyf_39c99)} // 2e7b:b4e9
-    {db tmp999[32]={0};MYCOPY(dummyf_39cb9)} // 2e7b:b509
-    {db tmp999[32]={0};MYCOPY(dummyf_39cd9)} // 2e7b:b529
-    {db tmp999[32]={0};MYCOPY(dummyf_39cf9)} // 2e7b:b549
-    {db tmp999[32]={0};MYCOPY(dummyf_39d19)} // 2e7b:b569
-    {db tmp999[32]={0};MYCOPY(dummyf_39d39)} // 2e7b:b589
-    {db tmp999[32]={0};MYCOPY(dummyf_39d59)} // 2e7b:b5a9
-    {db tmp999[32]={0};MYCOPY(dummyf_39d79)} // 2e7b:b5c9
-    {db tmp999[32]={0};MYCOPY(dummyf_39d99)} // 2e7b:b5e9
-    {db tmp999[32]={0};MYCOPY(dummyf_39db9)} // 2e7b:b609
-    {db tmp999[32]={0};MYCOPY(dummyf_39dd9)} // 2e7b:b629
-    {db tmp999[32]={0};MYCOPY(dummyf_39df9)} // 2e7b:b649
-    {db tmp999[32]={0};MYCOPY(dummyf_39e19)} // 2e7b:b669
-    {db tmp999[32]={0};MYCOPY(dummyf_39e39)} // 2e7b:b689
-    {db tmp999[32]={0};MYCOPY(dummyf_39e59)} // 2e7b:b6a9
-    {db tmp999[32]={0};MYCOPY(dummyf_39e79)} // 2e7b:b6c9
-    {db tmp999[32]={0};MYCOPY(dummyf_39e99)} // 2e7b:b6e9
-    {db tmp999[32]={0};MYCOPY(dummyf_39eb9)} // 2e7b:b709
-    {db tmp999[32]={0};MYCOPY(dummyf_39ed9)} // 2e7b:b729
-    {db tmp999[32]={0};MYCOPY(dummyf_39ef9)} // 2e7b:b749
-    {db tmp999[32]={0};MYCOPY(dummyf_39f19)} // 2e7b:b769
-    {db tmp999[32]={0};MYCOPY(dummyf_39f39)} // 2e7b:b789
-    {db tmp999[32]={0};MYCOPY(dummyf_39f59)} // 2e7b:b7a9
-    {db tmp999[32]={0};MYCOPY(dummyf_39f79)} // 2e7b:b7c9
-    {db tmp999[32]={0};MYCOPY(dummyf_39f99)} // 2e7b:b7e9
-    {db tmp999[32]={0};MYCOPY(dummyf_39fb9)} // 2e7b:b809
-    {db tmp999[32]={0};MYCOPY(dummyf_39fd9)} // 2e7b:b829
-    {db tmp999[32]={0};MYCOPY(dummyf_39ff9)} // 2e7b:b849
-    {db tmp999[32]={0};MYCOPY(dummyf_3a019)} // 2e7b:b869
-    {db tmp999[32]={0};MYCOPY(dummyf_3a039)} // 2e7b:b889
-    {db tmp999[32]={0};MYCOPY(dummyf_3a059)} // 2e7b:b8a9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a079)} // 2e7b:b8c9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a099)} // 2e7b:b8e9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a0b9)} // 2e7b:b909
-    {db tmp999[32]={0};MYCOPY(dummyf_3a0d9)} // 2e7b:b929
-    {db tmp999[32]={0};MYCOPY(dummyf_3a0f9)} // 2e7b:b949
-    {db tmp999[32]={0};MYCOPY(dummyf_3a119)} // 2e7b:b969
-    {db tmp999[32]={0};MYCOPY(dummyf_3a139)} // 2e7b:b989
-    {db tmp999[32]={0};MYCOPY(dummyf_3a159)} // 2e7b:b9a9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a179)} // 2e7b:b9c9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a199)} // 2e7b:b9e9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a1b9)} // 2e7b:ba09
-    {db tmp999[32]={0};MYCOPY(dummyf_3a1d9)} // 2e7b:ba29
-    {db tmp999[32]={0};MYCOPY(dummyf_3a1f9)} // 2e7b:ba49
-    {db tmp999[32]={0};MYCOPY(dummyf_3a219)} // 2e7b:ba69
-    {db tmp999[32]={0};MYCOPY(dummyf_3a239)} // 2e7b:ba89
-    {db tmp999[32]={0};MYCOPY(dummyf_3a259)} // 2e7b:baa9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a279)} // 2e7b:bac9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a299)} // 2e7b:bae9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a2b9)} // 2e7b:bb09
-    {db tmp999[32]={0};MYCOPY(dummyf_3a2d9)} // 2e7b:bb29
-    {db tmp999[32]={0};MYCOPY(dummyf_3a2f9)} // 2e7b:bb49
-    {db tmp999[32]={0};MYCOPY(dummyf_3a319)} // 2e7b:bb69
-    {db tmp999[32]={0};MYCOPY(dummyf_3a339)} // 2e7b:bb89
-    {db tmp999[32]={0};MYCOPY(dummyf_3a359)} // 2e7b:bba9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a379)} // 2e7b:bbc9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a399)} // 2e7b:bbe9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a3b9)} // 2e7b:bc09
-    {db tmp999[32]={0};MYCOPY(dummyf_3a3d9)} // 2e7b:bc29
-    {db tmp999[32]={0};MYCOPY(dummyf_3a3f9)} // 2e7b:bc49
-    {db tmp999[32]={0};MYCOPY(dummyf_3a419)} // 2e7b:bc69
-    {db tmp999[32]={0};MYCOPY(dummyf_3a439)} // 2e7b:bc89
-    {db tmp999[32]={0};MYCOPY(dummyf_3a459)} // 2e7b:bca9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a479)} // 2e7b:bcc9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a499)} // 2e7b:bce9
-    {db tmp999[32]={0};MYCOPY(dummyf_3a4b9)} // 2e7b:bd09
-    {db tmp999[32]={0};MYCOPY(dummyf_3a4d9)} // 2e7b:bd29
+    {db tmp999[32]={0};MYCOPY(dummyf_39b35)} // 2e7b:b385
+    {db tmp999[32]={0};MYCOPY(dummyf_39b55)} // 2e7b:b3a5
+    {db tmp999[32]={0};MYCOPY(dummyf_39b75)} // 2e7b:b3c5
+    {db tmp999[32]={0};MYCOPY(dummyf_39b95)} // 2e7b:b3e5
+    {db tmp999[32]={0};MYCOPY(dummyf_39bb5)} // 2e7b:b405
+    {db tmp999[32]={0};MYCOPY(dummyf_39bd5)} // 2e7b:b425
+    {db tmp999[32]={0};MYCOPY(dummyf_39bf5)} // 2e7b:b445
+    {db tmp999[32]={0};MYCOPY(dummyf_39c15)} // 2e7b:b465
+    {db tmp999[32]={0};MYCOPY(dummyf_39c35)} // 2e7b:b485
+    {db tmp999[32]={0};MYCOPY(dummyf_39c55)} // 2e7b:b4a5
+    {db tmp999[32]={0};MYCOPY(dummyf_39c75)} // 2e7b:b4c5
+    {db tmp999[32]={0};MYCOPY(dummyf_39c95)} // 2e7b:b4e5
+    {db tmp999[32]={0};MYCOPY(dummyf_39cb5)} // 2e7b:b505
+    {db tmp999[32]={0};MYCOPY(dummyf_39cd5)} // 2e7b:b525
+    {db tmp999[32]={0};MYCOPY(dummyf_39cf5)} // 2e7b:b545
+    {db tmp999[32]={0};MYCOPY(dummyf_39d15)} // 2e7b:b565
+    {db tmp999[32]={0};MYCOPY(dummyf_39d35)} // 2e7b:b585
+    {db tmp999[32]={0};MYCOPY(dummyf_39d55)} // 2e7b:b5a5
+    {db tmp999[32]={0};MYCOPY(dummyf_39d75)} // 2e7b:b5c5
+    {db tmp999[32]={0};MYCOPY(dummyf_39d95)} // 2e7b:b5e5
+    {db tmp999[32]={0};MYCOPY(dummyf_39db5)} // 2e7b:b605
+    {db tmp999[32]={0};MYCOPY(dummyf_39dd5)} // 2e7b:b625
+    {db tmp999[32]={0};MYCOPY(dummyf_39df5)} // 2e7b:b645
+    {db tmp999[32]={0};MYCOPY(dummyf_39e15)} // 2e7b:b665
+    {db tmp999[32]={0};MYCOPY(dummyf_39e35)} // 2e7b:b685
+    {db tmp999[32]={0};MYCOPY(dummyf_39e55)} // 2e7b:b6a5
+    {db tmp999[32]={0};MYCOPY(dummyf_39e75)} // 2e7b:b6c5
+    {db tmp999[32]={0};MYCOPY(dummyf_39e95)} // 2e7b:b6e5
+    {db tmp999[32]={0};MYCOPY(dummyf_39eb5)} // 2e7b:b705
+    {db tmp999[32]={0};MYCOPY(dummyf_39ed5)} // 2e7b:b725
+    {db tmp999[32]={0};MYCOPY(dummyf_39ef5)} // 2e7b:b745
+    {db tmp999[32]={0};MYCOPY(dummyf_39f15)} // 2e7b:b765
+    {db tmp999[32]={0};MYCOPY(dummyf_39f35)} // 2e7b:b785
+    {db tmp999[32]={0};MYCOPY(dummyf_39f55)} // 2e7b:b7a5
+    {db tmp999[32]={0};MYCOPY(dummyf_39f75)} // 2e7b:b7c5
+    {db tmp999[32]={0};MYCOPY(dummyf_39f95)} // 2e7b:b7e5
+    {db tmp999[32]={0};MYCOPY(dummyf_39fb5)} // 2e7b:b805
+    {db tmp999[32]={0};MYCOPY(dummyf_39fd5)} // 2e7b:b825
+    {db tmp999[32]={0};MYCOPY(dummyf_39ff5)} // 2e7b:b845
+    {db tmp999[32]={0};MYCOPY(dummyf_3a015)} // 2e7b:b865
+    {db tmp999[32]={0};MYCOPY(dummyf_3a035)} // 2e7b:b885
+    {db tmp999[32]={0};MYCOPY(dummyf_3a055)} // 2e7b:b8a5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a075)} // 2e7b:b8c5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a095)} // 2e7b:b8e5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a0b5)} // 2e7b:b905
+    {db tmp999[32]={0};MYCOPY(dummyf_3a0d5)} // 2e7b:b925
+    {db tmp999[32]={0};MYCOPY(dummyf_3a0f5)} // 2e7b:b945
+    {db tmp999[32]={0};MYCOPY(dummyf_3a115)} // 2e7b:b965
+    {db tmp999[32]={0};MYCOPY(dummyf_3a135)} // 2e7b:b985
+    {db tmp999[32]={0};MYCOPY(dummyf_3a155)} // 2e7b:b9a5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a175)} // 2e7b:b9c5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a195)} // 2e7b:b9e5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a1b5)} // 2e7b:ba05
+    {db tmp999[32]={0};MYCOPY(dummyf_3a1d5)} // 2e7b:ba25
+    {db tmp999[32]={0};MYCOPY(dummyf_3a1f5)} // 2e7b:ba45
+    {db tmp999[32]={0};MYCOPY(dummyf_3a215)} // 2e7b:ba65
+    {db tmp999[32]={0};MYCOPY(dummyf_3a235)} // 2e7b:ba85
+    {db tmp999[32]={0};MYCOPY(dummyf_3a255)} // 2e7b:baa5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a275)} // 2e7b:bac5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a295)} // 2e7b:bae5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a2b5)} // 2e7b:bb05
+    {db tmp999[32]={0};MYCOPY(dummyf_3a2d5)} // 2e7b:bb25
+    {db tmp999[32]={0};MYCOPY(dummyf_3a2f5)} // 2e7b:bb45
+    {db tmp999[32]={0};MYCOPY(dummyf_3a315)} // 2e7b:bb65
+    {db tmp999[32]={0};MYCOPY(dummyf_3a335)} // 2e7b:bb85
+    {db tmp999[32]={0};MYCOPY(dummyf_3a355)} // 2e7b:bba5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a375)} // 2e7b:bbc5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a395)} // 2e7b:bbe5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a3b5)} // 2e7b:bc05
+    {db tmp999[32]={0};MYCOPY(dummyf_3a3d5)} // 2e7b:bc25
+    {db tmp999[32]={0};MYCOPY(dummyf_3a3f5)} // 2e7b:bc45
+    {db tmp999[32]={0};MYCOPY(dummyf_3a415)} // 2e7b:bc65
+    {db tmp999[32]={0};MYCOPY(dummyf_3a435)} // 2e7b:bc85
+    {db tmp999[32]={0};MYCOPY(dummyf_3a455)} // 2e7b:bca5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a475)} // 2e7b:bcc5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a495)} // 2e7b:bce5
+    {db tmp999[32]={0};MYCOPY(dummyf_3a4b5)} // 2e7b:bd05
+    {db tmp999[32]={0};MYCOPY(dummyf_3a4d5)} // 2e7b:bd25
     {db tmp999=0;MYCOPY(byte_48ae0)} // 3a50:0000
     {char tmp999[56]={'M','S',' ','R','u','n','-','T','i','m','e',' ','L','i','b','r','a','r','y',' ','-',' ','C','o','p','y','r','i','g','h','t',' ','(','c',')',' ','1','9','8','8',',',' ','M','i','c','r','o','s','o','f','t',' ','C','o','r','p'};MYCOPY(amsruntimelibra)} // 3a50:0008
     {db tmp999=17;MYCOPY(dummyf_3a540)} // 3a50:0040
@@ -11580,12 +11609,18 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {dw tmp999=0;MYCOPY(word_4ec14)} // 3e1c:2474
     {dw tmp999=0;MYCOPY(word_4ec16)} // 3e1c:2476
     {dw tmp999=m2c::ksub_347ef;MYCOPY(off_4ec18)} // 3e1c:2478
-    {dd tmp999=offset(seg48ae,byte_48ae0);MYCOPY(off_4ec1a)} // 3e1c:247a
+    {dw tmp999=0;MYCOPY(word_4ec1a)} // 3e1c:247a
+    {dw tmp999=seg_offset(seg48ae);MYCOPY(dummyf_4063c)} // 3e1c:247c
     {db tmp999[32]={0};MYCOPY(dummyf_4063e)} // 3e1c:247e
     {db tmp999[32]={0};MYCOPY(dummyf_4065e)} // 3e1c:249e
     {char tmp999[15]=":a;C_FILE_INFO";MYCOPY(aacfileinfo)} // 3e1c:24ca
+    {dd tmp999=0;MYCOPY(dword_4ec79)} // 3e1c:24d9
+    {dw tmp999=0;MYCOPY(word_4ec85)} // 3e1c:24e5
+    {dw tmp999=0;MYCOPY(word_4ec87)} // 3e1c:24e7
     {dw tmp999=0;MYCOPY(word_4ec8b)} // 3e1c:24eb
-    {dw tmp999=20;MYCOPY(dummyf_406b2)} // 3e1c:24f2
+    {dw tmp999=0;MYCOPY(word_4ec8d)} // 3e1c:24ed
+    {db tmp999=0;MYCOPY(byte_4ec90)} // 3e1c:24f0
+    {dw tmp999=20;MYCOPY(word_4ec92)} // 3e1c:24f2
     {db tmp999=129;MYCOPY(dummyf_406b4)} // 3e1c:24f4
     {db tmp999=129;MYCOPY(dummyf_406b5)} // 3e1c:24f5
     {db tmp999=129;MYCOPY(dummyf_406b6)} // 3e1c:24f6
@@ -11596,11 +11631,16 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {dw tmp999=0;MYCOPY(word_4ecac)} // 3e1c:250c
     {dd tmp999=offset(seg4c7a,unk_4ecb2);MYCOPY(dummyf_406ce)} // 3e1c:250e
     {db tmp999=67;MYCOPY(unk_4ecb2)} // 3e1c:2512
-    {dw tmp999=41248;MYCOPY(dummyf_406dc)} // 3e1c:251c
+    {db tmp999=0;MYCOPY(byte_4ecb6)} // 3e1c:2516
+    {db tmp999=0;MYCOPY(byte_4ecb7)} // 3e1c:2517
+    {dd tmp999=0;MYCOPY(dword_4ecb8)} // 3e1c:2518
+    {dw tmp999=41248;MYCOPY(word_4ecbc)} // 3e1c:251c
     {db tmp999=92;MYCOPY(dummyf_406de)} // 3e1c:251e
     {db tmp999=92;MYCOPY(dummyf_406e0)} // 3e1c:2520
-    {dw tmp999=65535;MYCOPY(dummyf_406e2)} // 3e1c:2522
-    {dw tmp999=1;MYCOPY(dummyf_406e4)} // 3e1c:2524
+    {dw tmp999=65535;MYCOPY(word_4ecc2)} // 3e1c:2522
+    {dw tmp999=1;MYCOPY(word_4ecc4)} // 3e1c:2524
+    {dw tmp999=0;MYCOPY(word_4ecc6)} // 3e1c:2526
+    {dw tmp999=0;MYCOPY(word_4ecc8)} // 3e1c:2528
     {db tmp999[32]={0,22,2,2,24,13,9,12,12,12,7,8,22,22,255,18,13,18,2,255,42,141,0,0,42,141,1,0,0,0,0,0};MYCOPY(dummyf_406ea)} // 3e1c:252a
     {db tmp999[32]={0,0,2,1,0,0,0,0,0,0,2,2,0,0,0,0,0,0,132,3,0,0,0,0,0,0,2,4,0,0,0,0};MYCOPY(dummyf_4070a)} // 3e1c:254a
     {db tmp999[32]={0};MYCOPY(dummyf_4072a)} // 3e1c:256a
@@ -11610,14 +11650,22 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999[32]={0};MYCOPY(dummyf_407aa)} // 3e1c:25ea
     {db tmp999[32]={0};MYCOPY(dummyf_407ca)} // 3e1c:260a
     {db tmp999[32]={0};MYCOPY(dummyf_407ea)} // 3e1c:262a
-    {dw tmp999=25238;MYCOPY(dummyf_40816)} // 3e1c:2656
+    {dw tmp999=25238;MYCOPY(word_4edf6)} // 3e1c:2656
+    {dw tmp999=0;MYCOPY(word_4edf8)} // 3e1c:2658
+    {dw tmp999=0;MYCOPY(word_4edfa)} // 3e1c:265a
+    {dw tmp999=0;MYCOPY(word_4edfc)} // 3e1c:265c
+    {dw tmp999=0;MYCOPY(word_4ee00)} // 3e1c:2660
+    {db tmp999=0;MYCOPY(byte_4ee05)} // 3e1c:2665
     {dw tmp999=0;MYCOPY(word_4ee06)} // 3e1c:2666
     {dw tmp999=0;MYCOPY(word_4ee0a)} // 3e1c:266a
     {dw tmp999=8192;MYCOPY(word_4ee0c)} // 3e1c:266c
     {db tmp999=0;MYCOPY(byte_4ee10)} // 3e1c:2670
     {db tmp999=0;MYCOPY(unk_4ee14)} // 3e1c:2674
+    {dw tmp999=0;MYCOPY(word_4ee16)} // 3e1c:2676
+    {dd tmp999=0;MYCOPY(dword_4ee18)} // 3e1c:2678
     {dd tmp999=0;MYCOPY(dword_4ee1c)} // 3e1c:267c
-    {dd tmp999=offset(seg3cd9,unk_48118);MYCOPY(off_4ee20)} // 3e1c:2680
+    {dw tmp999=63000;MYCOPY(word_4ee20)} // 3e1c:2680
+    {dw tmp999=seg_offset(seg38b0);MYCOPY(seg_4ee22)} // 3e1c:2682
     {dw tmp999=seg_offset(seg38b0);MYCOPY(seg_4ee24)} // 3e1c:2684
     {dw tmp999=seg_offset(seg38b0);MYCOPY(seg_4ee26)} // 3e1c:2686
     {char tmp999[9]="<<NMSG>>";MYCOPY(anmsg)} // 3e1c:2688

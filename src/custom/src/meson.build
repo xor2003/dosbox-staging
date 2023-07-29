@@ -7,6 +7,7 @@ libsrc_sources = files([
   'f.exe_seg004.cpp',
   'f.exe_seg127c.cpp',
   'f.exe_seg13dd.cpp',
+  'f.exe_seg1667.cpp',
   'f.exe_seg2623.cpp',
   'f.exe_seg35ab.cpp',
   'f.exe_seg37ca.cpp',
