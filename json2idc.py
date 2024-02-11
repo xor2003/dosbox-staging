@@ -34,12 +34,12 @@ def read_segments_map(file_name):
         lines = f.read().splitlines()
         for line in lines:
             m = re.match(
-                r"^\s+(?P<segment>[0-9A-F]{8}):(?P<offset>[0-9A-F]{8})\s+(?P<name>\S+)",
+                r'^\s*MakeName\s*\(\s*(?P<address>[0-9A-Fa-fXx]+)\s*,\s*"(?P<name>\S+)"\s*\)\s*;',
                 line)
             if m:
                 name = m["name"]
-                if all(not name.startswith(x) for x in {"sub_", "loc_", "locret_", "byte_", "word_", "dword_", "start"}):
-                    symbols[name] = (ida_load_seg + int(m["segment"], 16)) * 0x10 + int(m["offset"], 16)
+                if all(not name.startswith(x) for x in {"sub_", "loc_", "locret_", "byte_", "word_", "dword_"}):
+                    symbols[m["address"]] = name
     return symbols
 
 json_fname = sys.argv[1]
