@@ -10,6 +10,7 @@ typedef Bit32u dd;
 
 extern bool collect_rt_info;
 extern bool collect_rt_info_vars;
+extern bool compare_instructions;
 extern Bit32u last_ip;
 
 #include <unordered_set>
@@ -62,7 +63,7 @@ struct _STATE;
 
         void push(_STATE *_state, dd value);
 
-        void pop(_STATE *_state);
+        void pop(_STATE *_state, size_t word_size);
 
         void print(_STATE *_state);
         void print_frame(const Frame& f);

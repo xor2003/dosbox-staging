@@ -120,6 +120,13 @@ typedef int Bits;
 #ifndef NOSDL
 extern struct SDL_Renderer *renderer;
 #endif
+
+namespace m2c{
+typedef dd _offsets;
+    struct _STATE;
+}
+extern  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state);
+
 namespace m2c {
 extern db vgaPalette[256*3];
 
@@ -496,7 +503,7 @@ inline long getdata(const long& s)
 #endif
 
 #ifdef DOSBOX_CUSTOM
-#define PUSH(a) {m2c::PUSH_((dw)a);}  // WARNING !!! Hacking to word
+#define PUSH(a) {m2c::PUSH_(a);}  // WARNING !!! Hacking to word
 #define POP(a) {m2c::POP_(a);}
 
 
@@ -545,7 +552,7 @@ inline long getdata(const long& s)
 {
   X86_REGREF
  #ifdef SHADOW_STACK
-  m2c::shadow_stack.pop(_state);
+  m2c::shadow_stack.pop(_state, sizeof(a));
  #endif
 
  #if M2CDEBUG > 0
@@ -1064,7 +1071,7 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
         AFFECT_CF(false);                                \
         AFFECT_OF(false);                                \
         AFFECT_AF(false);                                \
-    } \
+    } else CPU_Exception(0); \
 }
 
 #define AAM AAM1(10)
@@ -1204,19 +1211,28 @@ AFFECT_CF(((Destination<<m2c::bitsizeof(Destination)+Source) >> (32 - Count)) & 
 }
 
 
-#define IDIV2(op1)                                \
-{                                                            \
-    Bits val=(int16_t)(op1);                            \
-    if (val==0) CPU_Exception(0);                                    \
-    Bits num=(int32_t)((dx<<16)|ax);                    \
-    Bits quo=num/val;                                        \
-    int16_t rem=(int16_t)(num % val);                            \
-    int16_t quo16s=(int16_t)quo;                                \
-    if (quo!=(int32_t)quo16s) CPU_Exception(0);                    \
-    dx=rem;                                                \
-    ax=quo16s;                                            \
-    AFFECT_OF(false);                                    \
+#define IDIV2(op1) m2c::IDIV2_(op1, _state)
+
+
+static   /* MYINLINE*/ void IDIV2_(dw op1, _STATE* _state) {
+        X86_REGREF
+		const auto val = static_cast<int16_t>(op1);
+    if (val==0) {
+log_debug("~~fail1\n");CPU_Exception(0);__dispatch_call((cs<<16)+ip, _state);
 }
+		const auto num = (dx << 16) | ax; 
+		const auto quo = num / val; 
+		const auto rem = num % val; 
+		const auto quo16s = static_cast<int16_t>(quo); 
+		if (quo != quo16s) 
+			{
+log_debug("~~fail2\n");CPU_Exception(0);__dispatch_call((cs<<16)+ip, _state);
+}
+		ax = quo16s; 
+		dx = static_cast<int16_t>(rem); 
+    AFFECT_OF(false);                                    
+	}
+
 
 #define IDIV4(op1)                                \
 {                                                            \

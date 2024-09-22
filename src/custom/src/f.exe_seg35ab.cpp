@@ -133,7 +133,7 @@ cs=0x274d;eip=0x00009a; 	T(MOV(dx, *(dw*)(raddr(ds,bx+0x1A0D))));	// 117114     
 cs=0x274d;eip=0x00009e; 	T(MOV(al, *(raddr(ds,bx+0x1A0F))));	// 117115                  mov     al, [bx+1A0Fh] ;~ 274D:009E
 cs=0x274d;eip=0x0000a2; 	T(CBW);	// 117116                  cbw ;~ 274D:00A2
 cs=0x274d;eip=0x0000a3; 	T(XCHG(ax, dx));	// 117117                  xchg    ax, dx ;~ 274D:00A3
-cs=0x274d;eip=0x0000a4; 	R(IDIV2(cx));	// 117118                  idiv    cx ;~ 274D:00A4
+cs=0x274d;eip=0x0000a4; 	T(IDIV2(cx));	// 117118                  idiv    cx ;~ 274D:00A4
 cs=0x274d;eip=0x0000a6; 	T(CWD);	// 117119                  cwd ;~ 274D:00A6
 cs=0x274d;eip=0x0000a7; 	T(OR(ax, ax));	// 117120                  or      ax, ax ;~ 274D:00A7
 cs=0x274d;eip=0x0000a9; 	T(ADD(ax, word_48bbc));	// 117121                  add     ax, word_48BBC ;~ 274D:00A9

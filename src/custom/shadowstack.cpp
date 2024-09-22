@@ -37,7 +37,7 @@ namespace m2c{
    return m_ss[esp].itwascall;
   }
 
-  void ShadowStack::pop(_STATE * _state)
+  void ShadowStack::pop(_STATE * _state, size_t word_size)
   {
      if (!m_active && !m_forceactive) 
        {
@@ -82,15 +82,15 @@ namespace m2c{
                 }
 //		else log_debug ("m_current %x not initialized\n", m_current);
 
-                m_current += 2; 
+                m_current += word_size; 
 //                  log_debug ("m_current %x\n", m_current);
               }
 
             while (m_current <= esp);
 //log_debug("m_itisret %d m_current %x m_ss.at(m_current-2).itwascall %d\n",m_itisret, m_current, m_ss.at(m_current-2).itwascall);
-           if (m_itisret && m_ss.at(m_current-2).itwascall) {--m_needtoskipcall;log_debug("decreased m_needtoskipcall=%d\n",m_needtoskipcall);}
+           if (m_itisret && m_ss.at(m_current-word_size).itwascall) {--m_needtoskipcall;log_debug("decreased m_needtoskipcall=%d\n",m_needtoskipcall);}
 
-      m_currentdeep = m_ss.at(m_current-2).call_deep;
+      m_currentdeep = m_ss.at(m_current-word_size).call_deep;
                   log_debug ("m2c::counter %x m_deep %d collected m_currentdeep %d m_needtoskipcall %d m_itisret %d\n", counter, m_deep, m_currentdeep,m_needtoskipcall,m_itisret);
           }
       
@@ -108,13 +108,6 @@ log_debug("decreasedeep m_deep=%d ",m_deep);
         bool ShadowStack::needtoskipcalls(){
 /*
 log_debug("ret m_currentdeep=%d ",m_currentdeep);
-m_needtoskipcall=m_currentdeep?m_deep-m_currentdeep:0; 
-if (m_needtoskipcall<0) {m_needtoskipcall=0;}
-//m_deep=m_currentdeep?m_currentdeep-1:m_deep; 
---m_deep;
-log_debug("m_deep=%d ",m_deep);
-m_currentdeep=0;
-log_debug("m_currentdeep=%d\n",m_currentdeep);
 */
 log_debug("m_needtoskipcall=%d\n",m_needtoskipcall);
 return m_needtoskipcall;}

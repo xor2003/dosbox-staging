@@ -154,7 +154,7 @@ void CPU_Push32(Bitu value) {
 
 Bitu CPU_Pop16(void) {
 #ifdef SHADOW_STACK
-        m2c::shadow_stack.pop(0);
+        m2c::shadow_stack.pop(0, 2);
 #endif
 	Bitu val=mem_readw(SegPhys(ss) + (reg_esp & cpu.stack.mask));
 	reg_esp=(reg_esp&cpu.stack.notmask)|((reg_esp+2)&cpu.stack.mask);
@@ -163,7 +163,7 @@ Bitu CPU_Pop16(void) {
 
 Bitu CPU_Pop32(void) {
 #ifdef SHADOW_STACK
-        m2c::shadow_stack.pop(0);
+        m2c::shadow_stack.pop(0, 4);
 #endif
 	Bitu val=mem_readd(SegPhys(ss) + (reg_esp & cpu.stack.mask));
 	reg_esp=(reg_esp&cpu.stack.notmask)|((reg_esp+4)&cpu.stack.mask);

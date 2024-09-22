@@ -168,9 +168,9 @@ void print_instruction_direct(Bit16u newcs, Bit32u newip)
 extern int custom_runs;
 
 Bits CPU_Core_Normal_Run(void) {
-	if (last_ip != 0xffff and last_ip != cpu_regs.ip.dword[0] and custom_runs) {
+	if (compare_instructions && last_ip != 0xffff and last_ip != cpu_regs.ip.dword[0] and custom_runs) {
 		m2c::log_debug("IP changed dbx: %x now: %x\n", last_ip, cpu_regs.ip.dword[0]);
-//		exit(1);
+		exit(1);
 	}
 
 	while (CPU_Cycles-->0) {
