@@ -161,7 +161,7 @@ def main():
         write_idc_footer(outfile)
 
         print("Used code segments and ip range:")
-        for seg, minmax in code_segs.items():
+        for seg, minmax in sorted(code_segs.items()):
             print(f"{seg_dbx2ida(seg):x} {minmax[0]:x}:{minmax[1]:x}")
 
 
