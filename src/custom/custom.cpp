@@ -46,7 +46,7 @@ volatile bool defered_custom_call = false;
 bool from_callf = false;
 volatile bool from_interpreter = false;
 
-volatile bool compare_jump = false;
+volatile bool compare_jump = true;
 volatile bool doing_single_step = false;
 
 static int init_runs = 0;
