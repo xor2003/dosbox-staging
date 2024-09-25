@@ -123,7 +123,7 @@ def process_symbols(symbols, outfile):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Process a .json file and a .map file to generate IDC script.")
+    parser = argparse.ArgumentParser(description="Process a libdosbox run-time info .json file and a .map file to generate IDA Pro IDC script.")
     parser.add_argument('json_file', help='Path to the .json file with run-time data')
     parser.add_argument('map_file', help='Path to the .map file with segment information')
     args = parser.parse_args()
