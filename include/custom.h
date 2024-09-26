@@ -12,6 +12,7 @@ extern bool collect_rt_info;
 extern bool collect_rt_info_vars;
 extern bool compare_instructions;
 extern Bit32u last_ip;
+extern int custom_runs;
 
 #include <unordered_set>
 #include <unordered_map>
