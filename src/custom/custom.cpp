@@ -24,10 +24,10 @@ extern std::string exename;
 } // namespace m2c
 
 bool trace_instructions = true;            // m2c::debug >= 1;
-bool trace_instructions_to_stdout = true; // m2c::debug >= 1;
+bool trace_instructions_to_stdout = false; // m2c::debug >= 1;
 bool compare_instructions = true; // m2c::debug >= 1;// 1 || m2c::debug == 2 ||
                                   // m2c::debug == 3;
-bool complex_self_modifications = false;
+bool complex_self_modifications = true;
 bool collect_rt_info = false;
 bool collect_rt_info_vars = false;
 
@@ -46,7 +46,7 @@ volatile bool defered_custom_call = false;
 bool from_callf = false;
 volatile bool from_interpreter = false;
 
-volatile bool compare_jump = true;
+volatile bool compare_jump = false;
 volatile bool doing_single_step = false;
 
 static int init_runs = 0;
@@ -217,8 +217,8 @@ void custom_init(Section *sec)
 	  my_action.sa_flags = SA_RESTART;
 	  sigaction(SIGFPE, &my_action, NULL);
 	*/
-	R(MOV(ax, 0x3000));
-	R(_INT(0x21));
+//	R(MOV(ax, 0x3000));
+//	R(_INT(0x21));
 	fprintf(stderr, "DOS ver:%d\n", al);
 }
 

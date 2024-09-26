@@ -152,7 +152,7 @@ Bitu Normal_Loop() {
 	while (1) {
 		if (PIC_RunQueue()) {
 
-    if (compare_jump && !doing_single_step) m2c::Jend();
+    if (compare_jump && custom_runs && !doing_single_step) m2c::Jend();
 
 			if (defered_custom_call) {
 //				printf("defered_custom_call = false;\n");
@@ -167,7 +167,7 @@ Bitu Normal_Loop() {
 				}
 				m2c::shadow_stack.m_needtoskipcall = need;
                         } 
-    if (compare_jump && !doing_single_step) m2c::Jend();
+    if (compare_jump && custom_runs && !doing_single_step) m2c::Jend();
 
 			ret = (*cpudecoder)();
 			if (GCC_UNLIKELY(ret<0)) return 1;
