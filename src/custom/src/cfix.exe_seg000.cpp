@@ -13,11 +13,11 @@
     else goto __dispatch_call;
     start:
     _begin:
-cs=0x1a2;eip=0x000000; 	T(CLI);	// 35                  cli ;~ 01A2:0000
+cs=0x1a2;eip=0x000000; 	S(CLI);	// 35                  cli ;~ 01A2:0000
 cs=0x1a2;eip=0x000001; 	T(CLD);	// 36                  cld ;~ 01A2:0001
 cs=0x1a2;eip=0x000002; 	T(ax = seg_offset(seg046););	// 37                  mov     ax, seg seg046 ;~ 01A2:0002
 cs=0x1a2;eip=0x000005; 	S(ss = ax;);	// 38                  mov     ss, ax ;~ 01A2:0005
-cs=0x1a2;eip=0x000007; 	T(sp = 0x0D596;);	// 39                  mov     sp, 0D596h ;~ 01A2:0007
+cs=0x1a2;eip=0x000007; 	R(sp = 0x0D596;);	// 39                  mov     sp, 0D596h ;~ 01A2:0007
 cs=0x1a2;eip=0x00000a; 	T(ax = seg_offset(seg002););	// 40                  mov     ax, seg seg002 ;~ 01A2:000A
 cs=0x1a2;eip=0x00000d; 	T(ds = ax;);	// 41                  mov     ds, ax ;~ 01A2:000D
 cs=0x1a2;eip=0x00000f; 	T(es = ax;);	// 43                  mov     es, ax ;~ 01A2:000F
@@ -30902,7 +30902,7 @@ cs=0x1a2;eip=0x00b3fb; 	X(POP(es));	// 28065                  pop     es ;~ 01A2
 cs=0x1a2;eip=0x00b3fc; 	J(JC(loc_1b40e));	// 28066                  jb      short loc_1B40E ;~ 01A2:B3FC
 cs=0x1a2;eip=0x00b3fe; 	T(ah = 0x3E;);	// 28067                  mov     ah, 3Eh ;~ 01A2:B3FE
 cs=0x1a2;eip=0x00b400; 	S(_INT(0x21));	// 28068                  int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:B400
-cs=0x1a2;eip=0x00b402; 	J(CALL(__dispatch_call,off_11494));	// 28070                  call    cs:off_11494 ;~ 01A2:B402
+cs=0x1a2;eip=0x00b402; 	J(CALLF(__dispatch_call,off_11494));	// 28070                  call    cs:off_11494 ;~ 01A2:B402
 cs=0x1a2;eip=0x00b407; 	T(OR(al, al));	// 28071                  or      al, al ;~ 01A2:B407
 cs=0x1a2;eip=0x00b409; 	J(JZ(loc_1b412));	// 28072                  jz      short loc_1B412 ;~ 01A2:B409
 cs=0x1a2;eip=0x00b40b; 	T(XOR(ax, ax));	// 28073                  xor     ax, ax ;~ 01A2:B40B

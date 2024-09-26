@@ -840,7 +840,7 @@ cs=0x20b8;eip=0x00042c; 	J(CALL(sub_2f5bf,0));	// 104454                  call  
 cs=0x20b8;eip=0x00042f; 	T(cx = 0x12C;);	// 104455                  mov     cx, 12Ch ;~ 20B8:042F
 loc_2f592:
 	// 6622 
-cs=0x20b8;eip=0x000432; 	J(LOOP(loc_2f592));	// 104458                  loop    loc_2F592 ;~ 20B8:0432
+cs=0x20b8;eip=0x000432; 	S(LOOP(loc_2f592));	// 104458                  loop    loc_2F592 ;~ 20B8:0432
 cs=0x20b8;eip=0x000434; 	S(IN(al, dx));	// 104459                  in      al, dx ;~ 20B8:0434
 cs=0x20b8;eip=0x000435; 	X(PUSH(ax));	// 104460                  push    ax ;~ 20B8:0435
 cs=0x20b8;eip=0x000436; 	T(ax = 0x6004;);	// 104461                  mov     ax, 6004h ;~ 20B8:0436
