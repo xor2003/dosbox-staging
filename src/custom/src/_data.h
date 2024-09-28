@@ -1480,7 +1480,8 @@ db dummyd_11328;
 db dummyd_11329;
 db dummyd_1132a;
 db dummyd_1132b;
-dd dword_1f90c; // 10d6:05cc
+dw word_1f90c; // 10d6:05cc
+dw word_1f90e; // 10d6:05ce
 dw word_1f910; // 10d6:05d0
 dw word_1f912; // 10d6:05d2
 dw word_1f914; // 10d6:05d4
@@ -17124,8 +17125,8 @@ db dummyd_5e238; // 5daa:0798
 db dummyd_5e239; // 5daa:0799
 db dummyd_5e23a; // 5daa:079a
 db dummyd_5e23b; // 5daa:079b
-dw word_6c81c; // 5daa:079c
-dw word_6c81e; // 5daa:079e
+dw dummyd_5e23c; // 5daa:079c
+dw dummyd_5e23e; // 5daa:079e
 db dummyd_5e240[32]; // 5daa:07a0
 db dummyd_5e260[32]; // 5daa:07c0
 db dummyd_5e280[32]; // 5daa:07e0
