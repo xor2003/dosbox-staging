@@ -15,18 +15,10 @@
 #include <unistd.h>
 #include <sstream>
 
-extern Bitu DasmI386(char *buffer, PhysPt pc, Bitu cur_ip, bool bit32);
-
-namespace m2c {
-extern size_t debug;
-extern void load_drivers();
-extern std::string exename;
-} // namespace m2c
-
 // -- configuration start
 
-bool trace_instructions = true;       // write instruction trace to circular buffer
-bool trace_instructions_to_stdout = true; // write instrucitons to stdout (slow)
+bool trace_instructions = false;       // write instruction trace to circular buffer
+bool trace_instructions_to_stdout = false; // write instrucitons to stdout (slow)
 bool compare_instructions = false; // compare emulated and translated instructions
 
 bool complex_self_modifications = false;  // handle complex self-modified code
@@ -34,6 +26,14 @@ bool collect_rt_info = false;  // Collect run-time info
 bool collect_rt_info_vars = false;  // Collect vars too
 
 // -- configuration end
+
+extern Bitu DasmI386(char *buffer, PhysPt pc, Bitu cur_ip, bool bit32);
+
+namespace m2c {
+extern size_t debug;
+extern void load_drivers();
+extern std::string exename;
+} // namespace m2c
 
 static const size_t COMPARE_SIZE = 0xf0000;
 
