@@ -612,7 +612,7 @@ void CPU_Interrupt(Bitu num,Bitu type,Bitu oldeip) {
 		cpu.code.big=false;
 
 	last_ip = cpu_regs.ip.dword[0];
-		m2c::log_debug("Saved cs:ip. Will execute interrupt %x now\n",num);
+		m2c::log_debug("Saved ip:%x to last_ip. Will execute interrupt %x now\n",cpu_regs.ip.dword[0],num);
 		defered_custom_call=true;
 		CPU_CycleLeft=CPU_Cycles;
 		CPU_Cycles=0;

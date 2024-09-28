@@ -23,13 +23,17 @@ extern void load_drivers();
 extern std::string exename;
 } // namespace m2c
 
-bool trace_instructions = true;            // m2c::debug >= 1;
-bool trace_instructions_to_stdout = false; // m2c::debug >= 1;
-bool compare_instructions = true; // m2c::debug >= 1;// 1 || m2c::debug == 2 ||
-                                  // m2c::debug == 3;
-bool complex_self_modifications = true;
-bool collect_rt_info = false;
-bool collect_rt_info_vars = false;
+// -- configuration start
+
+bool trace_instructions = true;       // write instruction trace to circular buffer
+bool trace_instructions_to_stdout = false; // write instrucitons to stdout (slow)
+bool compare_instructions = true; // compare emulated and translated instructions
+
+bool complex_self_modifications = false;  // handle complex self-modified code
+bool collect_rt_info = false;  // Collect run-time info
+bool collect_rt_info_vars = false;  // Collect vars too
+
+// -- configuration end
 
 static const size_t COMPARE_SIZE = 0xf0000;
 
