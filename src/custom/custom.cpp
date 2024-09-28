@@ -25,7 +25,7 @@ extern std::string exename;
 
 // -- configuration start
 
-bool trace_instructions = false;       // write instruction trace to circular buffer
+bool trace_instructions = true;       // write instruction trace to circular buffer
 bool trace_instructions_to_stdout = true; // write instrucitons to stdout (slow)
 bool compare_instructions = false; // compare emulated and translated instructions
 
