@@ -183,7 +183,14 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state){
     X86_REGREF
     if ((__i>>16) == 0) {__i |= ((dd)cs) << 16;}
+
     __disp=__i;
+    if ((__disp >> 16) == 0xf000)
+	{m2c::log_debug("Calling BIOS %x\n",__disp);
+/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
+if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
+m2c::log_debug("doing return1\n");
+m2c::shadow_stack.noneedreturn();return true;}
     switch (__i) {
         case m2c::kloc_1003b: 	start(__disp, _state); break;
         case m2c::kloc_10040: 	start(__disp, _state); break;
@@ -376,6 +383,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_11259: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_11261: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_114e2: 	sub_114c8(__disp, _state); break;
+        case m2c::kloc_114e5: 	_group3(__disp, _state); break;
         case m2c::kloc_1150a: 	_group3(__disp, _state); break;
         case m2c::kloc_1154d: 	_group3(__disp, _state); break;
         case m2c::kloc_11564: 	_group3(__disp, _state); break;
@@ -527,7 +535,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_11fdf: 	sub_11eb5(__disp, _state); break;
         case m2c::kloc_11ffd: 	sub_11eb5(__disp, _state); break;
         case m2c::kloc_12016: 	sub_11eb5(__disp, _state); break;
-        case m2c::kloc_12022: 	_group7(__disp, _state); break;
         case m2c::kloc_12031: 	_group7(__disp, _state); break;
         case m2c::kloc_12036: 	_group7(__disp, _state); break;
         case m2c::kloc_12042: 	_group7(__disp, _state); break;
@@ -1433,6 +1440,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kloc_184bc: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_18505: 	_group23(__disp, _state); break;
         case m2c::kloc_18519: 	_group23(__disp, _state); break;
+        case m2c::kloc_1853b: 	_group23(__disp, _state); break;
         case m2c::kloc_1855d: 	_group23(__disp, _state); break;
         case m2c::kloc_18571: 	_group23(__disp, _state); break;
         case m2c::kloc_1857f: 	_group23(__disp, _state); break;
@@ -2494,9 +2502,9 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kret_f9f_4c5: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kseg000_117d_proc: 	_group2(__disp, _state); break;
         case m2c::kseg000_11e9_proc: 	seg000_11e9_proc(0, _state); break;
-        case m2c::kseg000_14e5_proc: 	_group3(__disp, _state); break;
         case m2c::kseg000_16a1_proc: 	seg000_16a1_proc(0, _state); break;
         case m2c::kseg000_1d61_proc: 	seg000_1d61_proc(0, _state); break;
+        case m2c::kseg000_2022_proc: 	_group7(__disp, _state); break;
         case m2c::kseg000_299d_proc: 	_group10(__disp, _state); break;
         case m2c::kseg000_2e40_proc: 	seg000_2e40_proc(0, _state); break;
         case m2c::kseg000_2ef2_proc: 	seg000_2ef2_proc(0, _state); break;
@@ -2514,7 +2522,6 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::kseg000_80e5_proc: 	_group21(__disp, _state); break;
         case m2c::kseg000_824c_proc: 	_group22(__disp, _state); break;
         case m2c::kseg000_8294_proc: 	seg000_8294_proc(0, _state); break;
-        case m2c::kseg000_853b_proc: 	_group23(__disp, _state); break;
         case m2c::kseg000_86b1_proc: 	seg000_86b1_proc(0, _state); break;
         case m2c::kseg000_885f_proc: 	_group25(__disp, _state); break;
         case m2c::kseg000_887a_proc: 	_group26(__disp, _state); break;
@@ -2938,7 +2945,9 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         case m2c::ksub_4a993: 	sub_4a993(0, _state); break;
         case m2c::ksub_4a9be: 	sub_4a9be(0, _state); break;
         case m2c::ksub_4ab70: 	sub_4ab70(0, _state); break;
-        default: m2c::log_error("Don't know how to call to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
+        default: m2c::log_error("cs=%x ip=%x Don't know how to call to 0x%x. See " __FILE__ " line %d\n", cs,ip,__disp, __LINE__);
+if (_state->call_source==3) return false;
+m2c::stackDump(_state); abort();
      };
      return true;
 }
@@ -4016,7 +4025,8 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {dw tmp999=0;MYCOPY(word_1f8fc)} // 10d6:05bc
     {dd tmp999=m2c::ksub_16019;MYCOPY(off_1f8fe)} // 10d6:05be
     {dw tmp999=0;MYCOPY(word_1f902)} // 10d6:05c2
-    {dd tmp999=4249291990;MYCOPY(dword_1f90c)} // 10d6:05cc
+    {dw tmp999=3286;MYCOPY(word_1f90c)} // 10d6:05cc
+    {dw tmp999=64839;MYCOPY(word_1f90e)} // 10d6:05ce
     {dw tmp999=64152;MYCOPY(word_1f910)} // 10d6:05d0
     {dw tmp999=2088;MYCOPY(word_1f912)} // 10d6:05d2
     {dw tmp999=0;MYCOPY(word_1f914)} // 10d6:05d4
@@ -16114,8 +16124,8 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
     {db tmp999=177;MYCOPY(dummyd_5e239)} // 5daa:0799
     {db tmp999=78;MYCOPY(dummyd_5e23a)} // 5daa:079a
     {db tmp999=80;MYCOPY(dummyd_5e23b)} // 5daa:079b
-    {dw tmp999=34132;MYCOPY(word_6c81c)} // 5daa:079c
-    {dw tmp999=45073;MYCOPY(word_6c81e)} // 5daa:079e
+    {dw tmp999=34132;MYCOPY(dummyd_5e23c)} // 5daa:079c
+    {dw tmp999=45073;MYCOPY(dummyd_5e23e)} // 5daa:079e
     {db tmp999[32]={0,100,245,91,24,81,76,109,33,70,72,84,200,20,64,0,80,129,91,28,241,19,109,4,143,80,80,212,109,147,213,0};MYCOPY(dummyd_5e240)} // 5daa:07a0
     {db tmp999[32]={80,129,91,28,241,19,108,53,82,21,182,79,85,38,208,61,50,79,56,0,80,128,84,109,112,83,109,66,5,108,192,83};MYCOPY(dummyd_5e260)} // 5daa:07c0
     {db tmp999[32]={81,177,15,76,80,0,100,245,91,92,20,212,20,70,212,32,21,27,77,1,76,48,0,80,129,91,16,243,210,108,148,219};MYCOPY(dummyd_5e280)} // 5daa:07e0
