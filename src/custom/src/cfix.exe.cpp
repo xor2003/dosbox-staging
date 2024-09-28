@@ -30,21 +30,23 @@
 
  bool seg000_887a_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group26(m2c::kseg000_887a_proc, _state);}
 
- bool seg000_a81e_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::kseg000_a81e_proc, _state);}
+ bool seg000_a0d5_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::kseg000_a0d5_proc, _state);}
 
- bool seg000_c745_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::kseg000_c745_proc, _state);}
+ bool seg000_a75d_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::kseg000_a75d_proc, _state);}
 
- bool seg000_da59_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::kseg000_da59_proc, _state);}
+ bool seg000_c745_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::kseg000_c745_proc, _state);}
 
- bool seg000_df98_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::kseg000_df98_proc, _state);}
+ bool seg000_da59_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::kseg000_da59_proc, _state);}
 
- bool seg000_dfd2_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::kseg000_dfd2_proc, _state);}
+ bool seg000_df98_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::kseg000_df98_proc, _state);}
 
- bool seg001_caa_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::kseg001_caa_proc, _state);}
+ bool seg000_dfd2_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::kseg000_dfd2_proc, _state);}
 
- bool seg001_d10_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::kseg001_d10_proc, _state);}
+ bool seg001_caa_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::kseg001_caa_proc, _state);}
 
- bool seg015_490_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::kseg015_490_proc, _state);}
+ bool seg001_d10_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::kseg001_d10_proc, _state);}
+
+ bool seg015_490_proc(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::kseg015_490_proc, _state);}
 
  bool sub_10247(m2c::_offsets, struct m2c::_STATE* _state){return _group1(m2c::ksub_10247, _state);}
 
@@ -140,41 +142,45 @@
 
  bool sub_19ddc(m2c::_offsets, struct m2c::_STATE* _state){return _group28(m2c::ksub_19ddc, _state);}
 
- bool sub_1a372(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::ksub_1a372, _state);}
+ bool sub_1a05a(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::ksub_1a05a, _state);}
 
- bool sub_1a621(m2c::_offsets, struct m2c::_STATE* _state){return _group29(m2c::ksub_1a621, _state);}
+ bool sub_1a372(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::ksub_1a372, _state);}
 
- bool sub_1a91c(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::ksub_1a91c, _state);}
+ bool sub_1a621(m2c::_offsets, struct m2c::_STATE* _state){return _group30(m2c::ksub_1a621, _state);}
 
- bool sub_1ab13(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::ksub_1ab13, _state);}
+ bool sub_1a91c(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::ksub_1a91c, _state);}
 
- bool sub_1adb4(m2c::_offsets, struct m2c::_STATE* _state){return _group31(m2c::ksub_1adb4, _state);}
+ bool sub_1ab13(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_1ab13, _state);}
 
- bool sub_1add0(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_1add0, _state);}
+ bool sub_1adb4(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_1adb4, _state);}
 
- bool sub_1b012(m2c::_offsets, struct m2c::_STATE* _state){return _group32(m2c::ksub_1b012, _state);}
+ bool sub_1add0(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_1add0, _state);}
 
- bool sub_1c72f(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_1c72f, _state);}
+ bool sub_1b012(m2c::_offsets, struct m2c::_STATE* _state){return _group33(m2c::ksub_1b012, _state);}
 
- bool sub_1da60(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::ksub_1da60, _state);}
+ bool sub_1c72f(m2c::_offsets, struct m2c::_STATE* _state){return _group34(m2c::ksub_1c72f, _state);}
 
- bool sub_1df94(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::ksub_1df94, _state);}
+ bool sub_1da60(m2c::_offsets, struct m2c::_STATE* _state){return _group35(m2c::ksub_1da60, _state);}
 
- bool sub_1dfa3(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::ksub_1dfa3, _state);}
+ bool sub_1df94(m2c::_offsets, struct m2c::_STATE* _state){return _group36(m2c::ksub_1df94, _state);}
 
- bool sub_2f199(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::ksub_2f199, _state);}
+ bool sub_1dfa3(m2c::_offsets, struct m2c::_STATE* _state){return _group37(m2c::ksub_1dfa3, _state);}
 
- bool sub_2f19f(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::ksub_2f19f, _state);}
+ bool sub_1ecd3(m2c::_offsets, struct m2c::_STATE* _state){return _group38(m2c::ksub_1ecd3, _state);}
 
- bool sub_2f371(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2f371, _state);}
+ bool sub_2f199(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2f199, _state);}
 
- bool sub_2f37c(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2f37c, _state);}
+ bool sub_2f19f(m2c::_offsets, struct m2c::_STATE* _state){return _group39(m2c::ksub_2f19f, _state);}
 
- bool sub_2f544(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2f544, _state);}
+ bool sub_2f371(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2f371, _state);}
 
- bool sub_2f54d(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2f54d, _state);}
+ bool sub_2f37c(m2c::_offsets, struct m2c::_STATE* _state){return _group40(m2c::ksub_2f37c, _state);}
 
- bool sub_4a915(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::ksub_4a915, _state);}
+ bool sub_2f544(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::ksub_2f544, _state);}
+
+ bool sub_2f54d(m2c::_offsets, struct m2c::_STATE* _state){return _group41(m2c::ksub_2f54d, _state);}
+
+ bool sub_4a915(m2c::_offsets, struct m2c::_STATE* _state){return _group42(m2c::ksub_4a915, _state);}
 
 namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
         
@@ -383,7 +389,6 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_11259: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_11261: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_114e2: 	sub_114c8(__disp, _state); break;
-        case m2c::kloc_114e5: 	_group3(__disp, _state); break;
         case m2c::kloc_1150a: 	_group3(__disp, _state); break;
         case m2c::kloc_1154d: 	_group3(__disp, _state); break;
         case m2c::kloc_11564: 	_group3(__disp, _state); break;
@@ -535,6 +540,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_11fdf: 	sub_11eb5(__disp, _state); break;
         case m2c::kloc_11ffd: 	sub_11eb5(__disp, _state); break;
         case m2c::kloc_12016: 	sub_11eb5(__disp, _state); break;
+        case m2c::kloc_12022: 	_group7(__disp, _state); break;
         case m2c::kloc_12031: 	_group7(__disp, _state); break;
         case m2c::kloc_12036: 	_group7(__disp, _state); break;
         case m2c::kloc_12042: 	_group7(__disp, _state); break;
@@ -635,6 +641,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_12979: 	sub_12967(__disp, _state); break;
         case m2c::kloc_12986: 	sub_12967(__disp, _state); break;
         case m2c::kloc_12998: 	sub_12967(__disp, _state); break;
+        case m2c::kloc_1299d: 	_group10(__disp, _state); break;
         case m2c::kloc_129b2: 	_group10(__disp, _state); break;
         case m2c::kloc_129ba: 	sub_129b8(__disp, _state); break;
         case m2c::kloc_129c7: 	sub_129b8(__disp, _state); break;
@@ -1052,6 +1059,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_158e6: 	sub_1577a(__disp, _state); break;
         case m2c::kloc_159b3: 	sub_1595c(__disp, _state); break;
         case m2c::kloc_15a05: 	sub_1595c(__disp, _state); break;
+        case m2c::kloc_15a21: 	_group18(__disp, _state); break;
         case m2c::kloc_15a34: 	sub_15a31(__disp, _state); break;
         case m2c::kloc_15b0a: 	sub_15a61(__disp, _state); break;
         case m2c::kloc_15b23: 	sub_15a61(__disp, _state); break;
@@ -1349,54 +1357,117 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_176e8: 	sub_17634(__disp, _state); break;
         case m2c::kloc_176ec: 	sub_17634(__disp, _state); break;
         case m2c::kloc_176f5: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17736: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17742: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17755: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17758: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17768: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17778: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_1777b: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_1778f: 	sub_17634(__disp, _state); break;
         case m2c::kloc_1779f: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_177a2: 	sub_17634(__disp, _state); break;
         case m2c::kloc_177b8: 	sub_17634(__disp, _state); break;
         case m2c::kloc_177d8: 	sub_17634(__disp, _state); break;
         case m2c::kloc_177df: 	sub_17634(__disp, _state); break;
         case m2c::kloc_177e7: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_177ec: 	sub_17634(__disp, _state); break;
         case m2c::kloc_177fa: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_177fd: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_17804: 	sub_17634(__disp, _state); break;
         case m2c::kloc_17807: 	sub_17634(__disp, _state); break;
+        case m2c::kloc_178d5: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_178de: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_178fe: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17903: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17914: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17937: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_1795c: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17984: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17997: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_1799a: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_179b1: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_179bb: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_179c2: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_179f4: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a15: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a1a: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17a1d: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17a43: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17a4c: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a56: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a5b: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17a5e: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a77: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17a82: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17a94: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17aa3: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17ac7: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17adf: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17af7: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b0f: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b33: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b37: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17b5e: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b69: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b79: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17b8b: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17ba1: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17bab: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17bbd: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17bc6: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17be3: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17bf8: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17bfd: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c0b: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c20: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c29: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c32: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c3b: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17c42: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17c48: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17c62: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17c70: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17c83: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17c9f: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17caa: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17caf: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17cb5: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17cc5: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17cd5: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17ce6: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17cf6: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17d06: 	seg000_78d5_proc(__disp, _state); break;
+        case m2c::kloc_17d16: 	seg000_78d5_proc(__disp, _state); break;
         case m2c::kloc_17d2d: 	sub_17d26(__disp, _state); break;
+        case m2c::kloc_17d39: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d3f: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17d4c: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d52: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d61: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d70: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d7f: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d88: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17d94: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17d97: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17da8: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17db0: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17db6: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17ddc: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17de1: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17e1c: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17e53: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17e5f: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17e75: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17e7f: 	seg000_7d39_proc(__disp, _state); break;
+        case m2c::kloc_17e99: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17ea9: 	seg000_7d39_proc(__disp, _state); break;
         case m2c::kloc_17f00: 	sub_17eee(__disp, _state); break;
+        case m2c::kloc_17f3c: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_17f81: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_17fb0: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_17ffc: 	seg000_7f3c_proc(__disp, _state); break;
+        case m2c::kloc_18003: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_1801a: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_18024: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_18035: 	seg000_7f3c_proc(__disp, _state); break;
@@ -1404,18 +1475,27 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1807f: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_1808e: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_180a0: 	seg000_7f3c_proc(__disp, _state); break;
+        case m2c::kloc_180ab: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_180c5: 	seg000_7f3c_proc(__disp, _state); break;
         case m2c::kloc_180dd: 	sub_180cc(__disp, _state); break;
         case m2c::kloc_180e1: 	sub_180cc(__disp, _state); break;
         case m2c::kloc_180ff: 	_group21(__disp, _state); break;
+        case m2c::kloc_18106: 	_group21(__disp, _state); break;
         case m2c::kloc_18125: 	_group21(__disp, _state); break;
         case m2c::kloc_1812b: 	_group21(__disp, _state); break;
+        case m2c::kloc_18130: 	_group21(__disp, _state); break;
+        case m2c::kloc_1813c: 	_group21(__disp, _state); break;
+        case m2c::kloc_18148: 	_group21(__disp, _state); break;
         case m2c::kloc_1815c: 	_group21(__disp, _state); break;
         case m2c::kloc_1816c: 	_group21(__disp, _state); break;
         case m2c::kloc_1816f: 	_group21(__disp, _state); break;
         case m2c::kloc_18175: 	_group21(__disp, _state); break;
         case m2c::kloc_1817b: 	_group21(__disp, _state); break;
         case m2c::kloc_1817f: 	_group21(__disp, _state); break;
+        case m2c::kloc_18185: 	_group21(__disp, _state); break;
+        case m2c::kloc_18193: 	_group21(__disp, _state); break;
+        case m2c::kloc_181ba: 	_group21(__disp, _state); break;
+        case m2c::kloc_181c3: 	_group21(__disp, _state); break;
         case m2c::kloc_181e2: 	_group21(__disp, _state); break;
         case m2c::kloc_181ea: 	_group21(__disp, _state); break;
         case m2c::kloc_181fc: 	_group21(__disp, _state); break;
@@ -1423,20 +1503,45 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_18227: 	_group21(__disp, _state); break;
         case m2c::kloc_18230: 	_group21(__disp, _state); break;
         case m2c::kloc_18240: 	_group21(__disp, _state); break;
+        case m2c::kloc_1824c: 	_group22(__disp, _state); break;
         case m2c::kloc_18251: 	_group22(__disp, _state); break;
         case m2c::kloc_18257: 	_group22(__disp, _state); break;
+        case m2c::kloc_1825a: 	_group22(__disp, _state); break;
         case m2c::kloc_18265: 	_group22(__disp, _state); break;
+        case m2c::kloc_1826d: 	_group22(__disp, _state); break;
         case m2c::kloc_18285: 	_group22(__disp, _state); break;
         case m2c::kloc_1828e: 	_group22(__disp, _state); break;
+        case m2c::kloc_18294: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_182e8: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_182eb: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_182ee: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_182f4: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_182ff: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18312: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1832f: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_1834d: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_1834f: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18353: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1837d: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1838d: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1839d: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_183b6: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183ba: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183c2: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183c9: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183d9: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183e8: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_183f7: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_18401: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18404: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_1840d: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18429: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1842d: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18448: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_18457: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_1845a: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18469: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::kloc_18480: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_184bc: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kloc_18505: 	_group23(__disp, _state); break;
         case m2c::kloc_18519: 	_group23(__disp, _state); break;
@@ -1462,6 +1567,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1865e: 	_group23(__disp, _state); break;
         case m2c::kloc_18684: 	_group23(__disp, _state); break;
         case m2c::kloc_1868b: 	seg000_868b_proc(__disp, _state); break;
+        case m2c::kloc_186b1: 	seg000_86b1_proc(__disp, _state); break;
         case m2c::kloc_186cb: 	seg000_86b1_proc(__disp, _state); break;
         case m2c::kloc_186d5: 	sub_186d1(__disp, _state); break;
         case m2c::kloc_186da: 	sub_186d1(__disp, _state); break;
@@ -1657,110 +1763,149 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_19e93: 	seg000_9e93_proc(__disp, _state); break;
         case m2c::kloc_19eba: 	seg000_9e93_proc(__disp, _state); break;
         case m2c::kloc_19ec2: 	seg000_9e93_proc(__disp, _state); break;
-        case m2c::kloc_1a3a5: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3a9: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3b3: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3bb: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3d7: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3df: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a3f9: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a414: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a41e: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a426: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a442: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a44a: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a464: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a47f: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a489: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a491: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4ad: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4b5: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4cf: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4ea: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4f4: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a4fc: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a518: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a520: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a53a: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a54c: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a550: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a558: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a581: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a589: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a5b2: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a5ba: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a5e3: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a5eb: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a609: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a623: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a628: 	_group29(__disp, _state); break;
-        case m2c::kloc_1a635: 	_group29(__disp, _state); break;
+        case m2c::kloc_19f16: 	sub_19efa(__disp, _state); break;
+        case m2c::kloc_19f2c: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19f47: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19f72: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19f9d: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19fc8: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19fe5: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_19ffb: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_1a015: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_1a02f: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_1a049: 	sub_19f24(__disp, _state); break;
+        case m2c::kloc_1a074: 	_group29(__disp, _state); break;
+        case m2c::kloc_1a07c: 	_group29(__disp, _state); break;
+        case m2c::kloc_1a0ac: 	sub_1a0a4(__disp, _state); break;
+        case m2c::kloc_1a0d5: 	_group29(__disp, _state); break;
+        case m2c::kloc_1a100: 	sub_1a0f8(__disp, _state); break;
+        case m2c::kloc_1a129: 	seg000_a129_proc(__disp, _state); break;
+        case m2c::kloc_1a154: 	sub_1a14c(__disp, _state); break;
+        case m2c::kloc_1a17d: 	seg000_a17d_proc(__disp, _state); break;
+        case m2c::kloc_1a1a6: 	sub_1a1a0(__disp, _state); break;
+        case m2c::kloc_1a1c4: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a1de: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a221: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a264: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a2a7: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a2dd: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a2f5: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a317: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a339: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a35b: 	sub_1a1bc(__disp, _state); break;
+        case m2c::kloc_1a3a5: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3a9: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3b3: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3bb: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3d7: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3df: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a3f9: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a414: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a41e: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a426: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a442: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a44a: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a464: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a47f: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a489: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a491: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4ad: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4b5: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4cf: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4ea: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4f4: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a4fc: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a518: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a520: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a53a: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a54c: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a550: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a558: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a581: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a589: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a5b2: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a5ba: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a5e3: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a5eb: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a609: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a623: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a628: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a635: 	_group30(__disp, _state); break;
         case m2c::kloc_1a667: 	sub_1a643(__disp, _state); break;
         case m2c::kloc_1a68d: 	sub_1a643(__disp, _state); break;
         case m2c::kloc_1a6a7: 	sub_1a643(__disp, _state); break;
         case m2c::kloc_1a6e3: 	sub_1a6c0(__disp, _state); break;
         case m2c::kloc_1a720: 	sub_1a6c0(__disp, _state); break;
         case m2c::kloc_1a73a: 	sub_1a6c0(__disp, _state); break;
-        case m2c::kloc_1a81e: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a837: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a851: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a85b: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a863: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a884: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a88c: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a8ab: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a8bd: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a8d7: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a8df: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a902: 	_group30(__disp, _state); break;
-        case m2c::kloc_1a92a: 	_group30(__disp, _state); break;
+        case m2c::kloc_1a780: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a7d3: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a7ed: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a81e: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a837: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a851: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a85b: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a863: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a884: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a88c: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a8ab: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a8bd: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a8d7: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a8df: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a902: 	_group31(__disp, _state); break;
+        case m2c::kloc_1a92a: 	_group31(__disp, _state); break;
         case m2c::kloc_1a95c: 	seg000_a938_proc(__disp, _state); break;
         case m2c::kloc_1a982: 	seg000_a938_proc(__disp, _state); break;
         case m2c::kloc_1a99c: 	seg000_a938_proc(__disp, _state); break;
-        case m2c::kloc_1ab4e: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ab52: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ab5a: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ab9d: 	_group31(__disp, _state); break;
-        case m2c::kloc_1aba5: 	_group31(__disp, _state); break;
-        case m2c::kloc_1abda: 	_group31(__disp, _state); break;
-        case m2c::kloc_1abe2: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac17: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac1f: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac54: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac5c: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac82: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac86: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ac8e: 	_group31(__disp, _state); break;
-        case m2c::kloc_1accc: 	_group31(__disp, _state); break;
-        case m2c::kloc_1acd4: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad04: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad0c: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad3c: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad44: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad74: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad7c: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ad9a: 	_group31(__disp, _state); break;
-        case m2c::kloc_1adc2: 	_group31(__disp, _state); break;
-        case m2c::kloc_1ae0b: 	_group32(__disp, _state); break;
-        case m2c::kloc_1ae29: 	_group32(__disp, _state); break;
-        case m2c::kloc_1ae31: 	_group32(__disp, _state); break;
-        case m2c::kloc_1ae66: 	_group32(__disp, _state); break;
-        case m2c::kloc_1ae6e: 	_group32(__disp, _state); break;
-        case m2c::kloc_1aea3: 	_group32(__disp, _state); break;
-        case m2c::kloc_1aeab: 	_group32(__disp, _state); break;
-        case m2c::kloc_1aee0: 	_group32(__disp, _state); break;
-        case m2c::kloc_1aee8: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af0e: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af2c: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af34: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af64: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af6c: 	_group32(__disp, _state); break;
-        case m2c::kloc_1af9c: 	_group32(__disp, _state); break;
-        case m2c::kloc_1afa4: 	_group32(__disp, _state); break;
-        case m2c::kloc_1afd4: 	_group32(__disp, _state); break;
-        case m2c::kloc_1afdc: 	_group32(__disp, _state); break;
-        case m2c::kloc_1affa: 	_group32(__disp, _state); break;
-        case m2c::kloc_1b01f: 	_group32(__disp, _state); break;
+        case m2c::kloc_1a9d8: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1aa15: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1aa2f: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1aa75: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1aac8: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1aae2: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kloc_1ab4e: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ab52: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ab5a: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ab9d: 	_group32(__disp, _state); break;
+        case m2c::kloc_1aba5: 	_group32(__disp, _state); break;
+        case m2c::kloc_1abda: 	_group32(__disp, _state); break;
+        case m2c::kloc_1abe2: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac17: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac1f: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac54: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac5c: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac82: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac86: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ac8e: 	_group32(__disp, _state); break;
+        case m2c::kloc_1accc: 	_group32(__disp, _state); break;
+        case m2c::kloc_1acd4: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad04: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad0c: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad3c: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad44: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad74: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad7c: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ad9a: 	_group32(__disp, _state); break;
+        case m2c::kloc_1adc2: 	_group32(__disp, _state); break;
+        case m2c::kloc_1ae0b: 	_group33(__disp, _state); break;
+        case m2c::kloc_1ae29: 	_group33(__disp, _state); break;
+        case m2c::kloc_1ae31: 	_group33(__disp, _state); break;
+        case m2c::kloc_1ae66: 	_group33(__disp, _state); break;
+        case m2c::kloc_1ae6e: 	_group33(__disp, _state); break;
+        case m2c::kloc_1aea3: 	_group33(__disp, _state); break;
+        case m2c::kloc_1aeab: 	_group33(__disp, _state); break;
+        case m2c::kloc_1aee0: 	_group33(__disp, _state); break;
+        case m2c::kloc_1aee8: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af0e: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af2c: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af34: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af64: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af6c: 	_group33(__disp, _state); break;
+        case m2c::kloc_1af9c: 	_group33(__disp, _state); break;
+        case m2c::kloc_1afa4: 	_group33(__disp, _state); break;
+        case m2c::kloc_1afd4: 	_group33(__disp, _state); break;
+        case m2c::kloc_1afdc: 	_group33(__disp, _state); break;
+        case m2c::kloc_1affa: 	_group33(__disp, _state); break;
+        case m2c::kloc_1b01f: 	_group33(__disp, _state); break;
         case m2c::kloc_1b051: 	sub_1b02d(__disp, _state); break;
         case m2c::kloc_1b073: 	sub_1b02d(__disp, _state); break;
         case m2c::kloc_1b08d: 	sub_1b02d(__disp, _state); break;
@@ -1955,7 +2100,9 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1c8b5: 	sub_1c7d1(__disp, _state); break;
         case m2c::kloc_1c92d: 	sub_1c7d1(__disp, _state); break;
         case m2c::kloc_1c95d: 	sub_1c934(__disp, _state); break;
+        case m2c::kloc_1c964: 	seg000_c964_proc(__disp, _state); break;
         case m2c::kloc_1c987: 	seg000_c964_proc(__disp, _state); break;
+        case m2c::kloc_1d1a0: 	seg000_d193_proc(__disp, _state); break;
         case m2c::kloc_1d1b4: 	sub_1d1b0(__disp, _state); break;
         case m2c::kloc_1d1e9: 	sub_1d1b0(__disp, _state); break;
         case m2c::kloc_1d1f4: 	sub_1d1b0(__disp, _state); break;
@@ -2031,37 +2178,37 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1d969: 	seg000_d900_proc(__disp, _state); break;
         case m2c::kloc_1d9f0: 	seg000_d9f0_proc(__disp, _state); break;
         case m2c::kloc_1da38: 	sub_1da1f(__disp, _state); break;
-        case m2c::kloc_1da8a: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dacf: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dad9: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dade: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db0a: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db17: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db26: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db42: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db4f: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db5f: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db78: 	_group34(__disp, _state); break;
-        case m2c::kloc_1db8f: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbab: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbb0: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbbf: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbdf: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbe4: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbf0: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dbf6: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dc02: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dc46: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dc8d: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dc95: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dcb3: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dcb6: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dcd4: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dcd8: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dd11: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dd1f: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dd2a: 	_group34(__disp, _state); break;
-        case m2c::kloc_1dd35: 	_group34(__disp, _state); break;
+        case m2c::kloc_1da8a: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dacf: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dad9: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dade: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db0a: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db17: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db26: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db42: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db4f: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db5f: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db78: 	_group35(__disp, _state); break;
+        case m2c::kloc_1db8f: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbab: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbb0: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbbf: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbdf: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbe4: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbf0: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dbf6: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dc02: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dc46: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dc8d: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dc95: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dcb3: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dcb6: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dcd4: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dcd8: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dd11: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dd1f: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dd2a: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dd35: 	_group35(__disp, _state); break;
         case m2c::kloc_1dd5a: 	sub_1dd40(__disp, _state); break;
         case m2c::kloc_1dd64: 	sub_1dd40(__disp, _state); break;
         case m2c::kloc_1dd7c: 	sub_1dd40(__disp, _state); break;
@@ -2087,7 +2234,8 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1df45: 	sub_1df1d(__disp, _state); break;
         case m2c::kloc_1df4b: 	seg000_df4b_proc(__disp, _state); break;
         case m2c::kloc_1df77: 	sub_1df68(__disp, _state); break;
-        case m2c::kloc_1dfa1: 	_group35(__disp, _state); break;
+        case m2c::kloc_1dfa1: 	_group36(__disp, _state); break;
+        case m2c::kloc_1e42a: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kloc_1e489: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kloc_1e49f: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kloc_1e4a6: 	seg001_45a_proc(__disp, _state); break;
@@ -2176,13 +2324,15 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1ec56: 	sub_1ebed(__disp, _state); break;
         case m2c::kloc_1ec60: 	sub_1ebed(__disp, _state); break;
         case m2c::kloc_1ec75: 	sub_1ebed(__disp, _state); break;
-        case m2c::kloc_1ed11: 	_group37(__disp, _state); break;
-        case m2c::kloc_1ed19: 	_group37(__disp, _state); break;
-        case m2c::kloc_1ed37: 	_group37(__disp, _state); break;
-        case m2c::kloc_1ed4b: 	_group37(__disp, _state); break;
-        case m2c::kloc_1edbf: 	_group37(__disp, _state); break;
-        case m2c::kloc_1edc3: 	_group37(__disp, _state); break;
-        case m2c::kloc_1edc6: 	_group37(__disp, _state); break;
+        case m2c::kloc_1ec7a: 	_group38(__disp, _state); break;
+        case m2c::kloc_1ece0: 	_group38(__disp, _state); break;
+        case m2c::kloc_1ed11: 	_group38(__disp, _state); break;
+        case m2c::kloc_1ed19: 	_group38(__disp, _state); break;
+        case m2c::kloc_1ed37: 	_group38(__disp, _state); break;
+        case m2c::kloc_1ed4b: 	_group38(__disp, _state); break;
+        case m2c::kloc_1edbf: 	_group38(__disp, _state); break;
+        case m2c::kloc_1edc3: 	_group38(__disp, _state); break;
+        case m2c::kloc_1edc6: 	_group38(__disp, _state); break;
         case m2c::kloc_1eddf: 	sub_1edcd(__disp, _state); break;
         case m2c::kloc_1edec: 	sub_1edcd(__disp, _state); break;
         case m2c::kloc_1ee02: 	sub_1edcd(__disp, _state); break;
@@ -2221,35 +2371,43 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1f13d: 	sub_1f0f7(__disp, _state); break;
         case m2c::kloc_1f142: 	sub_1f0f7(__disp, _state); break;
         case m2c::kloc_1f152: 	sub_1f0f7(__disp, _state); break;
-        case m2c::kloc_2f1f5: 	_group38(__disp, _state); break;
+        case m2c::kloc_2f1f5: 	_group39(__disp, _state); break;
         case m2c::kloc_2f214: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f21f: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f221: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f233: 	sub_2f1fe(__disp, _state); break;
+        case m2c::kloc_2f23d: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f245: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f259: 	sub_2f1fe(__disp, _state); break;
+        case m2c::kloc_2f260: 	sub_2f1fe(__disp, _state); break;
         case m2c::kloc_2f2ad: 	sub_2f1fe(__disp, _state); break;
-        case m2c::kloc_2f3a7: 	_group39(__disp, _state); break;
-        case m2c::kloc_2f3af: 	_group39(__disp, _state); break;
+        case m2c::kloc_2f3a7: 	_group40(__disp, _state); break;
+        case m2c::kloc_2f3af: 	_group40(__disp, _state); break;
         case m2c::kloc_2f3db: 	sub_2f3d5(__disp, _state); break;
-        case m2c::kloc_2f458: 	seg008_2f8_proc(__disp, _state); break;
+        case m2c::kloc_2f422: 	seg008_2c2_proc(__disp, _state); break;
+        case m2c::kloc_2f433: 	seg008_2c2_proc(__disp, _state); break;
+        case m2c::kloc_2f447: 	seg008_2c2_proc(__disp, _state); break;
+        case m2c::kloc_2f450: 	seg008_2c2_proc(__disp, _state); break;
+        case m2c::kloc_2f458: 	seg008_2c2_proc(__disp, _state); break;
         case m2c::kloc_2f487: 	sub_2f47a(__disp, _state); break;
         case m2c::kloc_2f49f: 	sub_2f47a(__disp, _state); break;
         case m2c::kloc_2f4c3: 	sub_2f47a(__disp, _state); break;
         case m2c::kloc_2f4e3: 	sub_2f47a(__disp, _state); break;
         case m2c::kloc_2f51f: 	sub_2f50c(__disp, _state); break;
         case m2c::kloc_2f52b: 	sub_2f50c(__disp, _state); break;
-        case m2c::kloc_2f55c: 	_group40(__disp, _state); break;
-        case m2c::kloc_2f564: 	_group40(__disp, _state); break;
+        case m2c::kloc_2f55c: 	_group41(__disp, _state); break;
+        case m2c::kloc_2f564: 	_group41(__disp, _state); break;
         case m2c::kloc_2f592: 	sub_2f56b(__disp, _state); break;
         case m2c::kloc_2f5b8: 	sub_2f56b(__disp, _state); break;
-        case m2c::kloc_4a50a: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a536: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a54f: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a55f: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a561: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a5a5: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::kloc_4a5a8: 	seg015_9d_proc(__disp, _state); break;
+        case m2c::kloc_4a4f5: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a50a: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a536: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a54f: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a55f: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a561: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a579: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a5a5: 	seg015_81_proc(__disp, _state); break;
+        case m2c::kloc_4a5a8: 	seg015_81_proc(__disp, _state); break;
         case m2c::kloc_4a62c: 	seg015_1a6_proc(__disp, _state); break;
         case m2c::kloc_4a687: 	seg015_217_proc(__disp, _state); break;
         case m2c::kloc_4a68a: 	seg015_217_proc(__disp, _state); break;
@@ -2262,7 +2420,8 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_4a83f: 	sub_4a811(__disp, _state); break;
         case m2c::kloc_4a847: 	sub_4a811(__disp, _state); break;
         case m2c::kloc_4a87a: 	sub_4a876(__disp, _state); break;
-        case m2c::kloc_4a91c: 	_group41(__disp, _state); break;
+        case m2c::kloc_4a8f0: 	_group42(__disp, _state); break;
+        case m2c::kloc_4a91c: 	_group42(__disp, _state); break;
         case m2c::kloc_4a9fc: 	sub_4a9be(__disp, _state); break;
         case m2c::kloc_4aa14: 	sub_4a9be(__disp, _state); break;
         case m2c::kloc_4aa22: 	sub_4a9be(__disp, _state); break;
@@ -2344,11 +2503,13 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::klocret_18205: 	_group21(__disp, _state); break;
         case m2c::klocret_1838c: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_1839c: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::klocret_183c1: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_183d8: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_183e7: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_18428: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_18468: 	seg000_8294_proc(__disp, _state); break;
         case m2c::klocret_1847f: 	seg000_8294_proc(__disp, _state); break;
+        case m2c::klocret_186ca: 	seg000_86b1_proc(__disp, _state); break;
         case m2c::klocret_18867: 	_group25(__disp, _state); break;
         case m2c::klocret_19c63: 	seg000_9c4f_proc(__disp, _state); break;
         case m2c::klocret_1ba26: 	sub_1b568(__disp, _state); break;
@@ -2357,6 +2518,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::klocret_1c237: 	sub_1c1ab(__disp, _state); break;
         case m2c::klocret_1c62b: 	sub_1c5dd(__disp, _state); break;
         case m2c::klocret_1c697: 	sub_1c658(__disp, _state); break;
+        case m2c::klocret_1d1af: 	seg000_d193_proc(__disp, _state); break;
         case m2c::klocret_1d1f9: 	sub_1d1b0(__disp, _state); break;
         case m2c::klocret_1d2c4: 	sub_1d1fa(__disp, _state); break;
         case m2c::klocret_1d36a: 	sub_1d335(__disp, _state); break;
@@ -2369,13 +2531,13 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::klocret_1dec7: 	sub_1de82(__disp, _state); break;
         case m2c::klocret_1df7b: 	sub_1df68(__disp, _state); break;
         case m2c::klocret_2f220: 	sub_2f1fe(__disp, _state); break;
-        case m2c::klocret_2f3d4: 	_group39(__disp, _state); break;
+        case m2c::klocret_2f3d4: 	_group40(__disp, _state); break;
         case m2c::klocret_2f40b: 	sub_2f3f1(__disp, _state); break;
         case m2c::klocret_2f50b: 	sub_2f47a(__disp, _state); break;
         case m2c::klocret_2f52a: 	sub_2f50c(__disp, _state); break;
-        case m2c::klocret_2f56a: 	_group40(__disp, _state); break;
-        case m2c::klocret_4a5b7: 	seg015_9d_proc(__disp, _state); break;
-        case m2c::klocret_4a5f1: 	seg015_9d_proc(__disp, _state); break;
+        case m2c::klocret_2f56a: 	_group41(__disp, _state); break;
+        case m2c::klocret_4a5b7: 	seg015_81_proc(__disp, _state); break;
+        case m2c::klocret_4a5f1: 	seg015_81_proc(__disp, _state); break;
         case m2c::klocret_4a6b7: 	seg015_217_proc(__disp, _state); break;
         case m2c::klocret_4a7ff: 	sub_4a7e0(__disp, _state); break;
         case m2c::kmainproc: 	mainproc(0, _state); break;
@@ -2395,117 +2557,31 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kret_1a2_7196: 	_group20(__disp, _state); break;
         case m2c::kret_1a2_71a8: 	_group20(__disp, _state); break;
         case m2c::kret_1a2_71ae: 	_group20(__disp, _state); break;
-        case m2c::kret_1a2_779d: 	sub_17634(__disp, _state); break;
-        case m2c::kret_1a2_77a2: 	sub_17634(__disp, _state); break;
-        case m2c::kret_1a2_77ec: 	sub_17634(__disp, _state); break;
-        case m2c::kret_1a2_77fd: 	sub_17634(__disp, _state); break;
-        case m2c::kret_1a2_7903: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_799a: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_79b1: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_79bb: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_79f4: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a15: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a1a: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a56: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a5b: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a77: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7a82: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7aa3: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7ac7: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7adf: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7af7: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b0f: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b33: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b37: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b69: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b79: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7b8b: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7bc6: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7be3: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7bfd: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c0b: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c20: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c29: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c32: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c3b: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7c9f: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7cb5: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7cc5: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7cd5: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7ce6: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7cf6: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d06: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d16: 	seg000_78d5_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d3f: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d52: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d61: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d70: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d7f: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d88: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7d97: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7db6: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7e7f: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_7e99: 	seg000_7d39_proc(__disp, _state); break;
-        case m2c::kret_1a2_8003: 	seg000_7f3c_proc(__disp, _state); break;
-        case m2c::kret_1a2_80ab: 	seg000_7f3c_proc(__disp, _state); break;
-        case m2c::kret_1a2_8106: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_8130: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_813c: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_8148: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_8185: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_8193: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_81ba: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_81c3: 	_group21(__disp, _state); break;
-        case m2c::kret_1a2_825a: 	_group22(__disp, _state); break;
-        case m2c::kret_1a2_826d: 	_group22(__disp, _state); break;
-        case m2c::kret_1a2_82f4: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_82ff: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8312: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_832f: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8353: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_837d: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_838d: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_839d: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83ba: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83c1: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83c2: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83c9: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83d9: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83e8: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_83f7: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8404: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8429: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_842d: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8448: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_845a: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8469: 	seg000_8294_proc(__disp, _state); break;
-        case m2c::kret_1a2_8480: 	seg000_8294_proc(__disp, _state); break;
         case m2c::kret_1a2_879f: 	sub_18738(__disp, _state); break;
         case m2c::kret_1a2_87ea: 	sub_18738(__disp, _state); break;
         case m2c::kret_1a2_9baa: 	sub_19ba0(__disp, _state); break;
         case m2c::kret_1a2_9c21: 	seg000_9c1e_proc(__disp, _state); break;
+        case m2c::kret_1a2_a9b5: 	seg000_a938_proc(__disp, _state); break;
+        case m2c::kret_1a2_aa52: 	seg000_a938_proc(__disp, _state); break;
         case m2c::kret_1a2_ad2: 	_group1(__disp, _state); break;
         case m2c::kret_1a2_c3e7: 	seg000_c3e6_proc(__disp, _state); break;
         case m2c::kret_1a2_c8fb: 	sub_1c7d1(__disp, _state); break;
         case m2c::kret_1a2_d911: 	seg000_d900_proc(__disp, _state); break;
         case m2c::kret_1a2_d912: 	seg000_d900_proc(__disp, _state); break;
         case m2c::kret_1a2_d923: 	seg000_d900_proc(__disp, _state); break;
-        case m2c::kret_20b8_100: 	sub_2f1fe(__disp, _state); break;
         case m2c::kret_20b8_12bd: 	seg008_494_proc(__disp, _state); break;
         case m2c::kret_20b8_1442: 	seg008_494_proc(__disp, _state); break;
         case m2c::kret_20b8_69b: 	seg008_494_proc(__disp, _state); break;
         case m2c::kret_20b8_8bc: 	seg008_494_proc(__disp, _state); break;
         case m2c::kret_20b8_a0c: 	seg008_494_proc(__disp, _state); break;
         case m2c::kret_20b8_adc: 	seg008_494_proc(__disp, _state); break;
-        case m2c::kret_20b8_dd: 	sub_2f1fe(__disp, _state); break;
-        case m2c::kret_3be8_158: 	seg015_9d_proc(__disp, _state); break;
+        case m2c::kret_3be8_158: 	seg015_81_proc(__disp, _state); break;
         case m2c::kret_f9f_4c5: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kseg000_117d_proc: 	_group2(__disp, _state); break;
         case m2c::kseg000_11e9_proc: 	seg000_11e9_proc(0, _state); break;
+        case m2c::kseg000_14e5_proc: 	_group3(__disp, _state); break;
         case m2c::kseg000_16a1_proc: 	seg000_16a1_proc(0, _state); break;
         case m2c::kseg000_1d61_proc: 	seg000_1d61_proc(0, _state); break;
-        case m2c::kseg000_2022_proc: 	_group7(__disp, _state); break;
-        case m2c::kseg000_299d_proc: 	_group10(__disp, _state); break;
         case m2c::kseg000_2e40_proc: 	seg000_2e40_proc(0, _state); break;
         case m2c::kseg000_2ef2_proc: 	seg000_2ef2_proc(0, _state); break;
         case m2c::kseg000_3381_proc: 	seg000_3381_proc(0, _state); break;
@@ -2513,39 +2589,29 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kseg000_4191_proc: 	seg000_4191_proc(0, _state); break;
         case m2c::kseg000_437b_proc: 	seg000_437b_proc(0, _state); break;
         case m2c::kseg000_43f2_proc: 	seg000_43f2_proc(0, _state); break;
-        case m2c::kseg000_5a21_proc: 	_group18(__disp, _state); break;
         case m2c::kseg000_5daa_proc: 	seg000_5daa_proc(0, _state); break;
         case m2c::kseg000_6d3f_proc: 	_group20(__disp, _state); break;
-        case m2c::kseg000_78d5_proc: 	seg000_78d5_proc(0, _state); break;
-        case m2c::kseg000_7d39_proc: 	seg000_7d39_proc(0, _state); break;
-        case m2c::kseg000_7f3c_proc: 	seg000_7f3c_proc(0, _state); break;
         case m2c::kseg000_80e5_proc: 	_group21(__disp, _state); break;
-        case m2c::kseg000_824c_proc: 	_group22(__disp, _state); break;
-        case m2c::kseg000_8294_proc: 	seg000_8294_proc(0, _state); break;
-        case m2c::kseg000_86b1_proc: 	seg000_86b1_proc(0, _state); break;
         case m2c::kseg000_885f_proc: 	_group25(__disp, _state); break;
         case m2c::kseg000_887a_proc: 	_group26(__disp, _state); break;
         case m2c::kseg000_890a_proc: 	seg000_890a_proc(0, _state); break;
         case m2c::kseg000_9b78_proc: 	seg000_9b78_proc(0, _state); break;
         case m2c::kseg000_9ce7_proc: 	seg000_9ce7_proc(0, _state); break;
+        case m2c::kseg000_a75d_proc: 	_group31(__disp, _state); break;
         case m2c::kseg000_a938_proc: 	seg000_a938_proc(0, _state); break;
         case m2c::kseg000_c3e6_proc: 	seg000_c3e6_proc(0, _state); break;
         case m2c::kseg000_c6e5_proc: 	seg000_c6e5_proc(0, _state); break;
-        case m2c::kseg000_c745_proc: 	_group33(__disp, _state); break;
-        case m2c::kseg000_c964_proc: 	seg000_c964_proc(0, _state); break;
+        case m2c::kseg000_c745_proc: 	_group34(__disp, _state); break;
+        case m2c::kseg000_d193_proc: 	seg000_d193_proc(0, _state); break;
         case m2c::kseg000_d8bc_proc: 	seg000_d8bc_proc(0, _state); break;
         case m2c::kseg000_d900_proc: 	seg000_d900_proc(0, _state); break;
-        case m2c::kseg000_da59_proc: 	_group34(__disp, _state); break;
-        case m2c::kseg000_df98_proc: 	_group35(__disp, _state); break;
-        case m2c::kseg000_dfd2_proc: 	_group36(__disp, _state); break;
-        case m2c::kseg001_45a_proc: 	seg001_45a_proc(0, _state); break;
-        case m2c::kseg001_caa_proc: 	_group37(__disp, _state); break;
-        case m2c::kseg001_d10_proc: 	_group37(__disp, _state); break;
+        case m2c::kseg000_da59_proc: 	_group35(__disp, _state); break;
+        case m2c::kseg000_df98_proc: 	_group36(__disp, _state); break;
+        case m2c::kseg000_dfd2_proc: 	_group37(__disp, _state); break;
         case m2c::kseg008_494_proc: 	seg008_494_proc(0, _state); break;
         case m2c::kseg015_1a6_proc: 	seg015_1a6_proc(0, _state); break;
         case m2c::kseg015_217_proc: 	seg015_217_proc(0, _state); break;
-        case m2c::kseg015_490_proc: 	_group41(__disp, _state); break;
-        case m2c::kseg015_9d_proc: 	seg015_9d_proc(0, _state); break;
+        case m2c::kseg015_81_proc: 	seg015_81_proc(0, _state); break;
         case m2c::kstart: 	start(0, _state); break;
         case m2c::ksub_10247: 	_group1(__disp, _state); break;
         case m2c::ksub_10b61: 	_group1(__disp, _state); break;
@@ -2813,15 +2879,23 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_19ddc: 	_group28(__disp, _state); break;
         case m2c::ksub_19e30: 	sub_19e30(0, _state); break;
         case m2c::ksub_19e5f: 	sub_19e5f(0, _state); break;
-        case m2c::ksub_1a372: 	_group29(__disp, _state); break;
-        case m2c::ksub_1a621: 	_group29(__disp, _state); break;
+        case m2c::ksub_19efa: 	sub_19efa(0, _state); break;
+        case m2c::ksub_19f24: 	sub_19f24(0, _state); break;
+        case m2c::ksub_1a05a: 	_group29(__disp, _state); break;
+        case m2c::ksub_1a0a4: 	sub_1a0a4(0, _state); break;
+        case m2c::ksub_1a0f8: 	sub_1a0f8(0, _state); break;
+        case m2c::ksub_1a14c: 	sub_1a14c(0, _state); break;
+        case m2c::ksub_1a1a0: 	sub_1a1a0(0, _state); break;
+        case m2c::ksub_1a1bc: 	sub_1a1bc(0, _state); break;
+        case m2c::ksub_1a372: 	_group30(__disp, _state); break;
+        case m2c::ksub_1a621: 	_group30(__disp, _state); break;
         case m2c::ksub_1a643: 	sub_1a643(0, _state); break;
         case m2c::ksub_1a6c0: 	sub_1a6c0(0, _state); break;
-        case m2c::ksub_1a91c: 	_group30(__disp, _state); break;
-        case m2c::ksub_1ab13: 	_group31(__disp, _state); break;
-        case m2c::ksub_1adb4: 	_group31(__disp, _state); break;
-        case m2c::ksub_1add0: 	_group32(__disp, _state); break;
-        case m2c::ksub_1b012: 	_group32(__disp, _state); break;
+        case m2c::ksub_1a91c: 	_group31(__disp, _state); break;
+        case m2c::ksub_1ab13: 	_group32(__disp, _state); break;
+        case m2c::ksub_1adb4: 	_group32(__disp, _state); break;
+        case m2c::ksub_1add0: 	_group33(__disp, _state); break;
+        case m2c::ksub_1b012: 	_group33(__disp, _state); break;
         case m2c::ksub_1b02d: 	sub_1b02d(0, _state); break;
         case m2c::ksub_1b0a4: 	sub_1b0a4(0, _state); break;
         case m2c::ksub_1b2c6: 	sub_1b2c6(0, _state); break;
@@ -2852,12 +2926,13 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_1c566: 	sub_1c566(0, _state); break;
         case m2c::ksub_1c5dd: 	sub_1c5dd(0, _state); break;
         case m2c::ksub_1c658: 	sub_1c658(0, _state); break;
-        case m2c::ksub_1c72f: 	_group33(__disp, _state); break;
+        case m2c::ksub_1c72f: 	_group34(__disp, _state); break;
         case m2c::ksub_1c75a: 	sub_1c75a(0, _state); break;
         case m2c::ksub_1c77c: 	sub_1c77c(0, _state); break;
         case m2c::ksub_1c7ad: 	sub_1c7ad(0, _state); break;
         case m2c::ksub_1c7d1: 	sub_1c7d1(0, _state); break;
         case m2c::ksub_1c934: 	sub_1c934(0, _state); break;
+        case m2c::ksub_1d182: 	sub_1d182(0, _state); break;
         case m2c::ksub_1d1b0: 	sub_1d1b0(0, _state); break;
         case m2c::ksub_1d1fa: 	sub_1d1fa(0, _state); break;
         case m2c::ksub_1d2c5: 	sub_1d2c5(0, _state); break;
@@ -2880,7 +2955,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_1d996: 	sub_1d996(0, _state); break;
         case m2c::ksub_1d9c3: 	sub_1d9c3(0, _state); break;
         case m2c::ksub_1da1f: 	sub_1da1f(0, _state); break;
-        case m2c::ksub_1da60: 	_group34(__disp, _state); break;
+        case m2c::ksub_1da60: 	_group35(__disp, _state); break;
         case m2c::ksub_1dd40: 	sub_1dd40(0, _state); break;
         case m2c::ksub_1dd80: 	sub_1dd80(0, _state); break;
         case m2c::ksub_1dd92: 	sub_1dd92(0, _state); break;
@@ -2893,8 +2968,8 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_1df58: 	sub_1df58(0, _state); break;
         case m2c::ksub_1df68: 	sub_1df68(0, _state); break;
         case m2c::ksub_1df7c: 	sub_1df7c(0, _state); break;
-        case m2c::ksub_1df94: 	_group35(__disp, _state); break;
-        case m2c::ksub_1dfa3: 	_group36(__disp, _state); break;
+        case m2c::ksub_1df94: 	_group36(__disp, _state); break;
+        case m2c::ksub_1dfa3: 	_group37(__disp, _state); break;
         case m2c::ksub_1e052: 	sub_1e052(0, _state); break;
         case m2c::ksub_1e572: 	sub_1e572(0, _state); break;
         case m2c::ksub_1e830: 	sub_1e830(0, _state); break;
@@ -2903,7 +2978,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_1eba2: 	sub_1eba2(0, _state); break;
         case m2c::ksub_1ebca: 	sub_1ebca(0, _state); break;
         case m2c::ksub_1ebed: 	sub_1ebed(0, _state); break;
-        case m2c::ksub_1ecd3: 	sub_1ecd3(0, _state); break;
+        case m2c::ksub_1ecd3: 	_group38(__disp, _state); break;
         case m2c::ksub_1edcd: 	sub_1edcd(0, _state); break;
         case m2c::ksub_1ee98: 	sub_1ee98(0, _state); break;
         case m2c::ksub_1efd6: 	sub_1efd6(0, _state); break;
@@ -2912,11 +2987,11 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_1f0f7: 	sub_1f0f7(0, _state); break;
         case m2c::ksub_2f160: 	sub_2f160(0, _state); break;
         case m2c::ksub_2f164: 	sub_2f164(0, _state); break;
-        case m2c::ksub_2f199: 	_group38(__disp, _state); break;
-        case m2c::ksub_2f19f: 	_group38(__disp, _state); break;
+        case m2c::ksub_2f199: 	_group39(__disp, _state); break;
+        case m2c::ksub_2f19f: 	_group39(__disp, _state); break;
         case m2c::ksub_2f1fe: 	sub_2f1fe(0, _state); break;
-        case m2c::ksub_2f371: 	_group39(__disp, _state); break;
-        case m2c::ksub_2f37c: 	_group39(__disp, _state); break;
+        case m2c::ksub_2f371: 	_group40(__disp, _state); break;
+        case m2c::ksub_2f37c: 	_group40(__disp, _state); break;
         case m2c::ksub_2f3d5: 	sub_2f3d5(0, _state); break;
         case m2c::ksub_2f3f1: 	sub_2f3f1(0, _state); break;
         case m2c::ksub_2f467: 	sub_2f467(0, _state); break;
@@ -2924,8 +2999,8 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_2f475: 	sub_2f475(0, _state); break;
         case m2c::ksub_2f47a: 	sub_2f47a(0, _state); break;
         case m2c::ksub_2f50c: 	sub_2f50c(0, _state); break;
-        case m2c::ksub_2f544: 	_group40(__disp, _state); break;
-        case m2c::ksub_2f54d: 	_group40(__disp, _state); break;
+        case m2c::ksub_2f544: 	_group41(__disp, _state); break;
+        case m2c::ksub_2f54d: 	_group41(__disp, _state); break;
         case m2c::ksub_2f56b: 	sub_2f56b(0, _state); break;
         case m2c::ksub_2f5bf: 	sub_2f5bf(0, _state); break;
         case m2c::ksub_4a470: 	sub_4a470(0, _state); break;
@@ -2941,13 +3016,11 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::ksub_4a861: 	sub_4a861(0, _state); break;
         case m2c::ksub_4a867: 	sub_4a867(0, _state); break;
         case m2c::ksub_4a876: 	sub_4a876(0, _state); break;
-        case m2c::ksub_4a915: 	_group41(__disp, _state); break;
+        case m2c::ksub_4a915: 	_group42(__disp, _state); break;
         case m2c::ksub_4a993: 	sub_4a993(0, _state); break;
         case m2c::ksub_4a9be: 	sub_4a9be(0, _state); break;
         case m2c::ksub_4ab70: 	sub_4ab70(0, _state); break;
-        default: m2c::log_error("cs=%x ip=%x Don't know how to call to 0x%x. See " __FILE__ " line %d\n", cs,ip,__disp, __LINE__);
-if (_state->call_source==3) return false;
-m2c::stackDump(_state); abort();
+        default: m2c::log_error("Don't know how to call to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
      };
      return true;
 }
@@ -3087,45 +3160,130 @@ m2c::stackDump(_state); abort();
     {db tmp999=3;MYCOPY(dummyd_8f3f)} // 01a2:751f
     {db tmp999=111;MYCOPY(dummyd_8f41)} // 01a2:7521
     {db tmp999=5;MYCOPY(dummyd_8f42)} // 01a2:7522
-    {db tmp999=159;MYCOPY(byte_176fc)} // 01a2:76fc
-    {db tmp999[32]={119,66,119,85,119,159,119,143,119,159,119,159,119,159,119,4,120,123,119,104,119,159,119,253,119,253,119,159,119,88,119,236};MYCOPY(dummyd_911d)} // 01a2:76fd
-    {db tmp999[32]={119,88,119,123,119,253,119,253,119,159,119,159,119,162,119,54,119,159,119,123,119,159,119,159,119,138,22,40,2,172,58,208};MYCOPY(dummyd_913d)} // 01a2:771d
-    {db tmp999[32]={116,96,176,255,195,139,22,40,2,232,54,201,138,69,12,50,228,3,248,172,58,5,116,74,176,255,195,172,58,6,40,2};MYCOPY(dummyd_915d)} // 01a2:773d
-    {db tmp999[32]={117,246,161,178,0,163,156,0,50,192,195,172,138,20,70,58,6,50,2,117,227,58,22,40,2,117,221,50,192,195,80,173};MYCOPY(dummyd_917d)} // 01a2:775d
-    {db tmp999[32]={134,196,139,208,88,11,210,120,242,59,22,40,2,116,236,176,255,195,80,173,134,196,139,208,88,59,22,40,2,116,3,176};MYCOPY(dummyd_919d)} // 01a2:777d
-    {db tmp999=213;MYCOPY(byte_17819)} // 01a2:7819
-    {db tmp999[32]={120,3,121,177,121,187,121,244,121,26,122,91,122,119,122,130,122,147,129,139,123,227,123,253,123,11,124,59,124,159,124,159};MYCOPY(dummyd_923a)} // 01a2:781a
-    {db tmp999[32]={124,181,124,197,124,213,124,230,124,246,124,202,134,202,134,6,125,22,125,154,121,198,123,177,134,57,125,63,125,82,125,97};MYCOPY(dummyd_925a)} // 01a2:783a
-    {db tmp999[32]={125,112,125,136,125,182,125,153,126,60,127,48,129,60,129,72,129,36,128,186,129,151,125,28,126,195,129,2,121,76,130,32};MYCOPY(dummyd_927a)} // 01a2:785a
-    {db tmp999[32]={124,109,130,163,122,15,123,51,123,55,123,105,123,121,123,148,130,244,130,50,124,41,124,18,131,255,130,171,128,229,128,6};MYCOPY(dummyd_929a)} // 01a2:787a
-    {db tmp999[32]={129,47,131,83,131,125,131,141,131,157,131,186,131,193,131,128,132,3,128,223,122,247,122,90,130,201,131,217,131,232,131,247};MYCOPY(dummyd_92ba)} // 01a2:789a
-    {db tmp999=131;MYCOPY(dummyd_92da)} // 01a2:78ba
-    {db tmp999=133;MYCOPY(dummyd_92db)} // 01a2:78bb
-    {db tmp999=129;MYCOPY(dummyd_92dc)} // 01a2:78bc
-    {db tmp999=4;MYCOPY(dummyd_92dd)} // 01a2:78bd
-    {db tmp999=132;MYCOPY(dummyd_92de)} // 01a2:78be
-    {db tmp999=41;MYCOPY(dummyd_92df)} // 01a2:78bf
-    {db tmp999=132;MYCOPY(dummyd_92e0)} // 01a2:78c0
-    {db tmp999=127;MYCOPY(dummyd_92e1)} // 01a2:78c1
-    {db tmp999=126;MYCOPY(dummyd_92e2)} // 01a2:78c2
-    {db tmp999=21;MYCOPY(dummyd_92e3)} // 01a2:78c3
-    {db tmp999=122;MYCOPY(dummyd_92e4)} // 01a2:78c4
-    {db tmp999=86;MYCOPY(dummyd_92e5)} // 01a2:78c5
-    {db tmp999=122;MYCOPY(dummyd_92e6)} // 01a2:78c6
-    {db tmp999=194;MYCOPY(dummyd_92e7)} // 01a2:78c7
-    {db tmp999=131;MYCOPY(dummyd_92e8)} // 01a2:78c8
-    {db tmp999=127;MYCOPY(dummyd_92e9)} // 01a2:78c9
-    {db tmp999=125;MYCOPY(dummyd_92ea)} // 01a2:78ca
-    {db tmp999=199;MYCOPY(dummyd_92eb)} // 01a2:78cb
-    {db tmp999=122;MYCOPY(dummyd_92ec)} // 01a2:78cc
-    {db tmp999=45;MYCOPY(dummyd_92ed)} // 01a2:78cd
-    {db tmp999=132;MYCOPY(dummyd_92ee)} // 01a2:78ce
-    {db tmp999=72;MYCOPY(dummyd_92ef)} // 01a2:78cf
-    {db tmp999=132;MYCOPY(dummyd_92f0)} // 01a2:78d0
-    {db tmp999=90;MYCOPY(dummyd_92f1)} // 01a2:78d1
-    {db tmp999=132;MYCOPY(dummyd_92f2)} // 01a2:78d2
-    {db tmp999=105;MYCOPY(dummyd_92f3)} // 01a2:78d3
-    {db tmp999=132;MYCOPY(dummyd_92f4)} // 01a2:78d4
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(off_176fc)} // 01a2:76fc
+    {dw tmp999=m2c::kloc_17742;MYCOPY(dummyd_911e)} // 01a2:76fe
+    {dw tmp999=m2c::kloc_17755;MYCOPY(dummyd_9120)} // 01a2:7700
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9122)} // 01a2:7702
+    {dw tmp999=m2c::kloc_1778f;MYCOPY(dummyd_9124)} // 01a2:7704
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9126)} // 01a2:7706
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9128)} // 01a2:7708
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_912a)} // 01a2:770a
+    {dw tmp999=m2c::kloc_17804;MYCOPY(dummyd_912c)} // 01a2:770c
+    {dw tmp999=m2c::kloc_1777b;MYCOPY(dummyd_912e)} // 01a2:770e
+    {dw tmp999=m2c::kloc_17768;MYCOPY(dummyd_9130)} // 01a2:7710
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9132)} // 01a2:7712
+    {dw tmp999=m2c::kloc_177fd;MYCOPY(dummyd_9134)} // 01a2:7714
+    {dw tmp999=m2c::kloc_177fd;MYCOPY(dummyd_9136)} // 01a2:7716
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9138)} // 01a2:7718
+    {dw tmp999=m2c::kloc_17758;MYCOPY(dummyd_913a)} // 01a2:771a
+    {dw tmp999=m2c::kloc_177ec;MYCOPY(dummyd_913c)} // 01a2:771c
+    {dw tmp999=m2c::kloc_17758;MYCOPY(dummyd_913e)} // 01a2:771e
+    {dw tmp999=m2c::kloc_1777b;MYCOPY(dummyd_9140)} // 01a2:7720
+    {dw tmp999=m2c::kloc_177fd;MYCOPY(dummyd_9142)} // 01a2:7722
+    {dw tmp999=m2c::kloc_177fd;MYCOPY(dummyd_9144)} // 01a2:7724
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9146)} // 01a2:7726
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9148)} // 01a2:7728
+    {dw tmp999=m2c::kloc_177a2;MYCOPY(dummyd_914a)} // 01a2:772a
+    {dw tmp999=m2c::kloc_17736;MYCOPY(dummyd_914c)} // 01a2:772c
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_914e)} // 01a2:772e
+    {dw tmp999=m2c::kloc_1777b;MYCOPY(dummyd_9150)} // 01a2:7730
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9152)} // 01a2:7732
+    {dw tmp999=m2c::kloc_1779f;MYCOPY(dummyd_9154)} // 01a2:7734
+    {db tmp999=176;MYCOPY(dummyd_91bc)} // 01a2:779c
+    {dw tmp999=m2c::kloc_178d5;MYCOPY(off_17819)} // 01a2:7819
+    {dw tmp999=m2c::kloc_17903;MYCOPY(dummyd_923b)} // 01a2:781b
+    {dw tmp999=m2c::kloc_179b1;MYCOPY(dummyd_923d)} // 01a2:781d
+    {dw tmp999=m2c::kloc_179bb;MYCOPY(dummyd_923f)} // 01a2:781f
+    {dw tmp999=m2c::kloc_179f4;MYCOPY(dummyd_9241)} // 01a2:7821
+    {dw tmp999=m2c::kloc_17a1a;MYCOPY(dummyd_9243)} // 01a2:7823
+    {dw tmp999=m2c::kloc_17a5b;MYCOPY(dummyd_9245)} // 01a2:7825
+    {dw tmp999=m2c::kloc_17a77;MYCOPY(dummyd_9247)} // 01a2:7827
+    {dw tmp999=m2c::kloc_17a82;MYCOPY(dummyd_9249)} // 01a2:7829
+    {dw tmp999=m2c::kloc_18193;MYCOPY(dummyd_924b)} // 01a2:782b
+    {dw tmp999=m2c::kloc_17b8b;MYCOPY(dummyd_924d)} // 01a2:782d
+    {dw tmp999=m2c::kloc_17be3;MYCOPY(dummyd_924f)} // 01a2:782f
+    {dw tmp999=m2c::kloc_17bfd;MYCOPY(dummyd_9251)} // 01a2:7831
+    {dw tmp999=m2c::kloc_17c0b;MYCOPY(dummyd_9253)} // 01a2:7833
+    {dw tmp999=m2c::kloc_17c3b;MYCOPY(dummyd_9255)} // 01a2:7835
+    {dw tmp999=m2c::kloc_17c9f;MYCOPY(dummyd_9257)} // 01a2:7837
+    {dw tmp999=m2c::kloc_17c9f;MYCOPY(dummyd_9259)} // 01a2:7839
+    {dw tmp999=m2c::kloc_17cb5;MYCOPY(dummyd_925b)} // 01a2:783b
+    {dw tmp999=m2c::kloc_17cc5;MYCOPY(dummyd_925d)} // 01a2:783d
+    {dw tmp999=m2c::kloc_17cd5;MYCOPY(dummyd_925f)} // 01a2:783f
+    {dw tmp999=m2c::kloc_17ce6;MYCOPY(dummyd_9261)} // 01a2:7841
+    {dw tmp999=m2c::kloc_17cf6;MYCOPY(dummyd_9263)} // 01a2:7843
+    {dw tmp999=m2c::klocret_186ca;MYCOPY(dummyd_9265)} // 01a2:7845
+    {dw tmp999=m2c::klocret_186ca;MYCOPY(dummyd_9267)} // 01a2:7847
+    {dw tmp999=m2c::kloc_17d06;MYCOPY(dummyd_9269)} // 01a2:7849
+    {dw tmp999=m2c::kloc_17d16;MYCOPY(dummyd_926b)} // 01a2:784b
+    {dw tmp999=m2c::kloc_1799a;MYCOPY(dummyd_926d)} // 01a2:784d
+    {dw tmp999=m2c::kloc_17bc6;MYCOPY(dummyd_926f)} // 01a2:784f
+    {dw tmp999=m2c::kloc_186b1;MYCOPY(dummyd_9271)} // 01a2:7851
+    {dw tmp999=m2c::kloc_17d39;MYCOPY(dummyd_9273)} // 01a2:7853
+    {dw tmp999=m2c::kloc_17d3f;MYCOPY(dummyd_9275)} // 01a2:7855
+    {dw tmp999=m2c::kloc_17d52;MYCOPY(dummyd_9277)} // 01a2:7857
+    {dw tmp999=m2c::kloc_17d61;MYCOPY(dummyd_9279)} // 01a2:7859
+    {dw tmp999=m2c::kloc_17d70;MYCOPY(dummyd_927b)} // 01a2:785b
+    {dw tmp999=m2c::kloc_17d88;MYCOPY(dummyd_927d)} // 01a2:785d
+    {dw tmp999=m2c::kloc_17db6;MYCOPY(dummyd_927f)} // 01a2:785f
+    {dw tmp999=m2c::kloc_17e99;MYCOPY(dummyd_9281)} // 01a2:7861
+    {dw tmp999=m2c::kloc_17f3c;MYCOPY(dummyd_9283)} // 01a2:7863
+    {dw tmp999=m2c::kloc_18130;MYCOPY(dummyd_9285)} // 01a2:7865
+    {dw tmp999=m2c::kloc_1813c;MYCOPY(dummyd_9287)} // 01a2:7867
+    {dw tmp999=m2c::kloc_18148;MYCOPY(dummyd_9289)} // 01a2:7869
+    {dw tmp999=m2c::kloc_18024;MYCOPY(dummyd_928b)} // 01a2:786b
+    {dw tmp999=m2c::kloc_181ba;MYCOPY(dummyd_928d)} // 01a2:786d
+    {dw tmp999=m2c::kloc_17d97;MYCOPY(dummyd_928f)} // 01a2:786f
+    {dw tmp999=m2c::kloc_17e1c;MYCOPY(dummyd_9291)} // 01a2:7871
+    {dw tmp999=m2c::kloc_181c3;MYCOPY(dummyd_9293)} // 01a2:7873
+    {dw tmp999=m2c::klocret_17902;MYCOPY(dummyd_9295)} // 01a2:7875
+    {dw tmp999=m2c::kloc_1824c;MYCOPY(dummyd_9297)} // 01a2:7877
+    {dw tmp999=m2c::kloc_17c20;MYCOPY(dummyd_9299)} // 01a2:7879
+    {dw tmp999=m2c::kloc_1826d;MYCOPY(dummyd_929b)} // 01a2:787b
+    {dw tmp999=m2c::kloc_17aa3;MYCOPY(dummyd_929d)} // 01a2:787d
+    {dw tmp999=m2c::kloc_17b0f;MYCOPY(dummyd_929f)} // 01a2:787f
+    {dw tmp999=m2c::kloc_17b33;MYCOPY(dummyd_92a1)} // 01a2:7881
+    {dw tmp999=m2c::kloc_17b37;MYCOPY(dummyd_92a3)} // 01a2:7883
+    {dw tmp999=m2c::kloc_17b69;MYCOPY(dummyd_92a5)} // 01a2:7885
+    {dw tmp999=m2c::kloc_17b79;MYCOPY(dummyd_92a7)} // 01a2:7887
+    {dw tmp999=m2c::kloc_18294;MYCOPY(dummyd_92a9)} // 01a2:7889
+    {dw tmp999=m2c::kloc_182f4;MYCOPY(dummyd_92ab)} // 01a2:788b
+    {dw tmp999=m2c::kloc_17c32;MYCOPY(dummyd_92ad)} // 01a2:788d
+    {dw tmp999=m2c::kloc_17c29;MYCOPY(dummyd_92af)} // 01a2:788f
+    {dw tmp999=m2c::kloc_18312;MYCOPY(dummyd_92b1)} // 01a2:7891
+    {dw tmp999=m2c::kloc_182ff;MYCOPY(dummyd_92b3)} // 01a2:7893
+    {dw tmp999=m2c::kloc_180ab;MYCOPY(dummyd_92b5)} // 01a2:7895
+    {dw tmp999=m2c::kloc_180e5;MYCOPY(dummyd_92b7)} // 01a2:7897
+    {dw tmp999=m2c::kloc_18106;MYCOPY(dummyd_92b9)} // 01a2:7899
+    {dw tmp999=m2c::kloc_1832f;MYCOPY(dummyd_92bb)} // 01a2:789b
+    {dw tmp999=m2c::kloc_18353;MYCOPY(dummyd_92bd)} // 01a2:789d
+    {dw tmp999=m2c::kloc_1837d;MYCOPY(dummyd_92bf)} // 01a2:789f
+    {dw tmp999=m2c::kloc_1838d;MYCOPY(dummyd_92c1)} // 01a2:78a1
+    {dw tmp999=m2c::kloc_1839d;MYCOPY(dummyd_92c3)} // 01a2:78a3
+    {dw tmp999=m2c::kloc_183ba;MYCOPY(dummyd_92c5)} // 01a2:78a5
+    {dw tmp999=m2c::klocret_183c1;MYCOPY(dummyd_92c7)} // 01a2:78a7
+    {dw tmp999=m2c::kloc_18480;MYCOPY(dummyd_92c9)} // 01a2:78a9
+    {dw tmp999=m2c::kloc_18003;MYCOPY(dummyd_92cb)} // 01a2:78ab
+    {dw tmp999=m2c::kloc_17adf;MYCOPY(dummyd_92cd)} // 01a2:78ad
+    {dw tmp999=m2c::kloc_17af7;MYCOPY(dummyd_92cf)} // 01a2:78af
+    {dw tmp999=m2c::kloc_1825a;MYCOPY(dummyd_92d1)} // 01a2:78b1
+    {dw tmp999=m2c::kloc_183c9;MYCOPY(dummyd_92d3)} // 01a2:78b3
+    {dw tmp999=m2c::kloc_183d9;MYCOPY(dummyd_92d5)} // 01a2:78b5
+    {dw tmp999=m2c::kloc_183e8;MYCOPY(dummyd_92d7)} // 01a2:78b7
+    {dw tmp999=m2c::kloc_183f7;MYCOPY(dummyd_92d9)} // 01a2:78b9
+    {dw tmp999=m2c::kloc_18185;MYCOPY(dummyd_92db)} // 01a2:78bb
+    {dw tmp999=m2c::kloc_18404;MYCOPY(dummyd_92dd)} // 01a2:78bd
+    {dw tmp999=m2c::kloc_18429;MYCOPY(dummyd_92df)} // 01a2:78bf
+    {dw tmp999=m2c::kloc_17e7f;MYCOPY(dummyd_92e1)} // 01a2:78c1
+    {dw tmp999=m2c::kloc_17a15;MYCOPY(dummyd_92e3)} // 01a2:78c3
+    {dw tmp999=m2c::kloc_17a56;MYCOPY(dummyd_92e5)} // 01a2:78c5
+    {dw tmp999=m2c::kloc_183c2;MYCOPY(dummyd_92e7)} // 01a2:78c7
+    {dw tmp999=m2c::kloc_17d7f;MYCOPY(dummyd_92e9)} // 01a2:78c9
+    {dw tmp999=m2c::kloc_17ac7;MYCOPY(dummyd_92eb)} // 01a2:78cb
+    {dw tmp999=m2c::kloc_1842d;MYCOPY(dummyd_92ed)} // 01a2:78cd
+    {dw tmp999=m2c::kloc_18448;MYCOPY(dummyd_92ef)} // 01a2:78cf
+    {dw tmp999=m2c::kloc_1845a;MYCOPY(dummyd_92f1)} // 01a2:78d1
+    {dw tmp999=m2c::kloc_18469;MYCOPY(dummyd_92f3)} // 01a2:78d3
     {db tmp999=144;MYCOPY(dummyd_a070)} // 01a2:8650
     {db tmp999[12]={129,142,128,144,255,146,2,150,2,150,2,150};MYCOPY(dummyd_a87d)} // 01a2:8e5d
     {db tmp999[8]={2,150,2,150,2,150,2,150};MYCOPY(dummyd_a889)} // 01a2:8e69
@@ -3141,121 +3299,21 @@ m2c::stackDump(_state); abort();
     {dw tmp999=m2c::kloc_19e93;MYCOPY(dummyd_b7f6)} // 01a2:9dd6
     {dw tmp999=m2c::kloc_19e93;MYCOPY(dummyd_b7f8)} // 01a2:9dd8
     {dw tmp999=m2c::kloc_19e93;MYCOPY(dummyd_b7fa)} // 01a2:9dda
-    {db tmp999[10]={36,159,90,160,188,161,114,163,114,163};MYCOPY(byte_19ee2)} // 01a2:9ee2
-    {db tmp999[10]={114,163,114,163,114,163,114,163,114,163};MYCOPY(dummyd_b90c)} // 01a2:9eec
-    {db tmp999[11]={114,163,114,163,30,142,30,90,7,142,197};MYCOPY(dummyd_b916)} // 01a2:9ef6
-    {db tmp999[10]={138,197,50,228,246,226,209,224,3,240};MYCOPY(dummyd_b921)} // 01a2:9f01
-    {db tmp999[12]={54,3,54,22,59,246,193,8,116,1,71,50};MYCOPY(dummyd_b92b)} // 01a2:9f0b
-    {db tmp999[10]={246,209,226,187,224,158,3,218,46,139};MYCOPY(dummyd_b937)} // 01a2:9f17
-    {db tmp999[11]={7,255,224,128,225,7,117,3,233,185,0};MYCOPY(dummyd_b941)} // 01a2:9f21
-    {db tmp999[11]={186,196,3,184,2,1,239,186,206,3,184};MYCOPY(dummyd_b94c)} // 01a2:9f2c
-    {db tmp999[12]={5,0,239,184,3,0,239,139,239,187,0,255};MYCOPY(dummyd_b957)} // 01a2:9f37
-    {db tmp999[9]={211,235,138,245,173,211,200,138,208};MYCOPY(dummyd_b963)} // 01a2:9f43
-    {db tmp999[10]={34,199,34,211,171,38,136,21,131,199};MYCOPY(dummyd_b96c)} // 01a2:9f4c
-    {db tmp999[10]={38,254,206,117,236,139,253,54,3,54};MYCOPY(dummyd_b976)} // 01a2:9f56
-    {db tmp999[10]={22,59,186,196,3,184,2,2,239,139};MYCOPY(dummyd_b980)} // 01a2:9f60
-    {db tmp999[10]={239,187,0,255,211,235,138,245,173,211};MYCOPY(dummyd_b98a)} // 01a2:9f6a
-    {db tmp999[10]={200,138,208,34,199,34,211,171,38,136};MYCOPY(dummyd_b994)} // 01a2:9f74
-    {db tmp999[10]={21,131,199,38,254,206,117,236,139,253};MYCOPY(dummyd_b99e)} // 01a2:9f7e
-    {db tmp999[12]={54,3,54,22,59,186,196,3,184,2,4,239};MYCOPY(dummyd_b9a8)} // 01a2:9f88
-    {db tmp999[10]={139,239,187,0,255,211,235,138,245,173};MYCOPY(dummyd_b9b4)} // 01a2:9f94
-    {db tmp999[10]={211,200,138,208,34,199,34,211,171,38};MYCOPY(dummyd_b9be)} // 01a2:9f9e
-    {db tmp999[10]={136,21,131,199,38,254,206,117,236,139};MYCOPY(dummyd_b9c8)} // 01a2:9fa8
-    {db tmp999[11]={253,54,3,54,22,59,186,196,3,184,2};MYCOPY(dummyd_b9d2)} // 01a2:9fb2
-    {db tmp999[10]={8,239,139,239,187,0,255,211,235,138};MYCOPY(dummyd_b9dd)} // 01a2:9fbd
-    {db tmp999[10]={245,173,211,200,138,208,34,199,34,211};MYCOPY(dummyd_b9e7)} // 01a2:9fc7
-    {db tmp999[10]={171,38,136,21,131,199,38,254,206,117};MYCOPY(dummyd_b9f1)} // 01a2:9fd1
-    {db tmp999[11]={236,139,253,54,3,54,22,59,31,195,186};MYCOPY(dummyd_b9fb)} // 01a2:9fdb
-    {db tmp999[12]={196,3,184,2,1,239,186,206,3,184,5,0};MYCOPY(dummyd_ba06)} // 01a2:9fe6
-    {db tmp999[10]={239,184,3,0,239,139,239,138,221,165};MYCOPY(dummyd_ba12)} // 01a2:9ff2
-    {db tmp999[10]={131,199,38,254,203,117,248,139,253,54};MYCOPY(dummyd_ba1c)} // 01a2:9ffc
-    {db tmp999[11]={3,54,22,59,186,196,3,184,2,2,239};MYCOPY(dummyd_ba26)} // 01a2:a006
-    {db tmp999[10]={139,239,138,221,165,131,199,38,254,203};MYCOPY(dummyd_ba31)} // 01a2:a011
-    {db tmp999[11]={117,248,139,253,54,3,54,22,59,186,196};MYCOPY(dummyd_ba3b)} // 01a2:a01b
-    {db tmp999[11]={3,184,2,4,239,139,239,138,221,165,131};MYCOPY(dummyd_ba46)} // 01a2:a026
-    {db tmp999[10]={199,38,254,203,117,248,139,253,54,3};MYCOPY(dummyd_ba51)} // 01a2:a031
-    {db tmp999[11]={54,22,59,186,196,3,184,2,8,239,139};MYCOPY(dummyd_ba5b)} // 01a2:a03b
-    {db tmp999[10]={239,138,221,165,131,199,38,254,203,117};MYCOPY(dummyd_ba66)} // 01a2:a046
-    {db tmp999[11]={248,139,253,54,3,54,22,59,31,195,186};MYCOPY(dummyd_ba70)} // 01a2:a050
-    {db tmp999[12]={196,3,184,2,1,239,186,206,3,184,5,0};MYCOPY(dummyd_ba7b)} // 01a2:a05b
-    {db tmp999[11]={239,184,3,0,239,128,225,7,117,3,233};MYCOPY(dummyd_ba87)} // 01a2:a067
-    {db tmp999[12]={9,1,128,249,6,117,3,233,173,0,128,249};MYCOPY(dummyd_ba92)} // 01a2:a072
-    {db tmp999[12]={4,116,84,232,32,0,186,196,3,184,2,2};MYCOPY(dummyd_ba9e)} // 01a2:a07e
-    {db tmp999[11]={239,232,22,0,186,196,3,184,2,4,239};MYCOPY(dummyd_baaa)} // 01a2:a08a
-    {db tmp999[11]={232,12,0,186,196,3,184,2,8,239,232};MYCOPY(dummyd_bab5)} // 01a2:a095
-    {db tmp999[11]={2,0,31,195,81,139,239,187,0,255,211};MYCOPY(dummyd_bac0)} // 01a2:a0a0
-    {db tmp999[10]={235,173,211,200,138,208,34,199,34,211};MYCOPY(dummyd_bacb)} // 01a2:a0ab
-    {db tmp999[10]={171,173,211,200,138,240,34,199,34,243};MYCOPY(dummyd_bad5)} // 01a2:a0b5
-    {db tmp999[10]={10,194,171,38,136,53,131,199,36,254};MYCOPY(dummyd_badf)} // 01a2:a0bf
-    {db tmp999[11]={205,117,224,89,139,253,54,3,54,22,59};MYCOPY(dummyd_bae9)} // 01a2:a0c9
-    {db tmp999[11]={195,232,32,0,186,196,3,184,2,2,239};MYCOPY(dummyd_baf4)} // 01a2:a0d4
-    {db tmp999[7]={232,22,0,186,196,3,184};MYCOPY(dummyd_baff)} // 01a2:a0df
-    {db tmp999[12]={2,4,239,232,12,0,186,196,3,184,2,8};MYCOPY(dummyd_bb06)} // 01a2:a0e6
-    {db tmp999[11]={239,232,2,0,31,195,81,139,239,187,0};MYCOPY(dummyd_bb12)} // 01a2:a0f2
-    {db tmp999[9]={255,211,235,173,211,200,138,208,34};MYCOPY(dummyd_bb1d)} // 01a2:a0fd
-    {db tmp999[9]={199,34,211,171,173,211,200,138,240};MYCOPY(dummyd_bb26)} // 01a2:a106
-    {db tmp999[10]={34,199,34,243,10,194,171,38,136,53};MYCOPY(dummyd_bb2f)} // 01a2:a10f
-    {db tmp999[10]={131,199,36,254,205,117,224,89,139,253};MYCOPY(dummyd_bb39)} // 01a2:a119
-    {db tmp999[11]={54,3,54,22,59,195,232,32,0,186,196};MYCOPY(dummyd_bb43)} // 01a2:a123
-    {db tmp999[11]={3,184,2,2,239,232,22,0,186,196,3};MYCOPY(dummyd_bb4e)} // 01a2:a12e
-    {db tmp999[11]={184,2,4,239,232,12,0,186,196,3,184};MYCOPY(dummyd_bb59)} // 01a2:a139
-    {db tmp999[12]={2,8,239,232,2,0,31,195,81,139,239,187};MYCOPY(dummyd_bb64)} // 01a2:a144
-    {db tmp999[10]={0,255,211,235,173,211,200,138,208,34};MYCOPY(dummyd_bb70)} // 01a2:a150
-    {db tmp999[9]={199,34,211,171,173,211,200,138,240};MYCOPY(dummyd_bb7a)} // 01a2:a15a
-    {db tmp999[10]={34,199,34,243,10,194,171,38,136,53};MYCOPY(dummyd_bb83)} // 01a2:a163
-    {db tmp999[10]={131,199,36,254,205,117,224,89,139,253};MYCOPY(dummyd_bb8d)} // 01a2:a16d
-    {db tmp999[11]={54,3,54,22,59,195,232,32,0,186,196};MYCOPY(dummyd_bb97)} // 01a2:a177
-    {db tmp999[11]={3,184,2,2,239,232,22,0,186,196,3};MYCOPY(dummyd_bba2)} // 01a2:a182
-    {db tmp999[11]={184,2,4,239,232,12,0,186,196,3,184};MYCOPY(dummyd_bbad)} // 01a2:a18d
-    {db tmp999[12]={2,8,239,232,2,0,31,195,139,209,139,239};MYCOPY(dummyd_bbb8)} // 01a2:a198
-    {db tmp999[11]={138,221,185,2,0,243,165,131,199,36,254};MYCOPY(dummyd_bbc4)} // 01a2:a1a4
-    {db tmp999[11]={203,117,244,139,253,54,3,54,22,59,139};MYCOPY(dummyd_bbcf)} // 01a2:a1af
-    {db tmp999[11]={202,195,128,225,7,117,3,233,25,1,186};MYCOPY(dummyd_bbda)} // 01a2:a1ba
-    {db tmp999[12]={196,3,184,2,1,239,186,206,3,184,5,0};MYCOPY(dummyd_bbe5)} // 01a2:a1c5
-    {db tmp999[11]={239,184,3,0,239,81,139,239,187,0,255};MYCOPY(dummyd_bbf1)} // 01a2:a1d1
-    {db tmp999[9]={211,235,173,211,200,138,208,34,199};MYCOPY(dummyd_bbfc)} // 01a2:a1dc
-    {db tmp999[10]={34,211,171,173,211,200,138,240,34,199};MYCOPY(dummyd_bc05)} // 01a2:a1e5
-    {db tmp999[10]={34,243,10,194,171,173,211,200,138,208};MYCOPY(dummyd_bc0f)} // 01a2:a1ef
-    {db tmp999[10]={34,199,34,211,10,198,171,38,136,21};MYCOPY(dummyd_bc19)} // 01a2:a1f9
-    {db tmp999[10]={131,199,34,254,205,117,212,89,139,253};MYCOPY(dummyd_bc23)} // 01a2:a203
-    {db tmp999[11]={54,3,54,22,59,186,196,3,184,2,2};MYCOPY(dummyd_bc2d)} // 01a2:a20d
-    {db tmp999[10]={239,81,139,239,187,0,255,211,235,173};MYCOPY(dummyd_bc38)} // 01a2:a218
-    {db tmp999[10]={211,200,138,208,34,199,34,211,171,173};MYCOPY(dummyd_bc42)} // 01a2:a222
-    {db tmp999[10]={211,200,138,240,34,199,34,243,10,194};MYCOPY(dummyd_bc4c)} // 01a2:a22c
-    {db tmp999[10]={171,173,211,200,138,208,34,199,34,211};MYCOPY(dummyd_bc56)} // 01a2:a236
-    {db tmp999[10]={10,198,171,38,136,21,131,199,34,254};MYCOPY(dummyd_bc60)} // 01a2:a240
-    {db tmp999[11]={205,117,212,89,139,253,54,3,54,22,59};MYCOPY(dummyd_bc6a)} // 01a2:a24a
-    {db tmp999[11]={186,196,3,184,2,4,239,81,139,239,187};MYCOPY(dummyd_bc75)} // 01a2:a255
-    {db tmp999[10]={0,255,211,235,173,211,200,138,208,34};MYCOPY(dummyd_bc80)} // 01a2:a260
-    {db tmp999[9]={199,34,211,171,173,211,200,138,240};MYCOPY(dummyd_bc8a)} // 01a2:a26a
-    {db tmp999[10]={34,199,34,243,10,194,171,173,211,200};MYCOPY(dummyd_bc93)} // 01a2:a273
-    {db tmp999[10]={138,208,34,199,34,211,10,198,171,38};MYCOPY(dummyd_bc9d)} // 01a2:a27d
-    {db tmp999[10]={136,21,131,199,34,254,205,117,212,89};MYCOPY(dummyd_bca7)} // 01a2:a287
-    {db tmp999[11]={139,253,54,3,54,22,59,186,196,3,184};MYCOPY(dummyd_bcb1)} // 01a2:a291
-    {db tmp999[11]={2,8,239,81,139,239,187,0,255,211,235};MYCOPY(dummyd_bcbc)} // 01a2:a29c
-    {db tmp999[10]={173,211,200,138,208,34,199,34,211,171};MYCOPY(dummyd_bcc7)} // 01a2:a2a7
-    {db tmp999[10]={173,211,200,138,240,34,199,34,243,10};MYCOPY(dummyd_bcd1)} // 01a2:a2b1
-    {db tmp999[9]={194,171,173,211,200,138,208,34,199};MYCOPY(dummyd_bcdb)} // 01a2:a2bb
-    {db tmp999[10]={34,211,10,198,171,38,136,21,131,199};MYCOPY(dummyd_bce4)} // 01a2:a2c4
-    {db tmp999[10]={34,254,205,117,212,89,139,253,54,3};MYCOPY(dummyd_bcee)} // 01a2:a2ce
-    {db tmp999[11]={54,22,59,31,195,186,196,3,184,2,1};MYCOPY(dummyd_bcf8)} // 01a2:a2d8
-    {db tmp999[6]={239,186,206,3,184,5};MYCOPY(dummyd_bd03)} // 01a2:a2e3
-    {db tmp999[32]={0,239,184,3,0,239,139,209,139,239,138,221,185,3,0,243,165,131,199,34,254,203,117,244,139,253,54,3,54,22,59,139};MYCOPY(dummyd_bd09)} // 01a2:a2e9
-    {db tmp999[32]={202,186,196,3,184,2,2,239,139,209,139,239,138,221,185,3,0,243,165,131,199,34,254,203,117,244,139,253,54,3,54,22};MYCOPY(dummyd_bd29)} // 01a2:a309
-    {db tmp999[32]={59,139,202,186,196,3,184,2,4,239,139,209,139,239,138,221,185,3,0,243,165,131,199,34,254,203,117,244,139,253,54,3};MYCOPY(dummyd_bd49)} // 01a2:a329
-    {db tmp999[32]={54,22,59,139,202,186,196,3,184,2,8,239,139,209,139,239,138,221,185,3,0,243,165,131,199,34,254,203,117,244,139,253};MYCOPY(dummyd_bd69)} // 01a2:a349
-    {db tmp999=54;MYCOPY(dummyd_bd89)} // 01a2:a369
-    {db tmp999=3;MYCOPY(dummyd_bd8a)} // 01a2:a36a
-    {db tmp999=54;MYCOPY(dummyd_bd8b)} // 01a2:a36b
-    {db tmp999=22;MYCOPY(dummyd_bd8c)} // 01a2:a36c
-    {db tmp999=59;MYCOPY(dummyd_bd8d)} // 01a2:a36d
-    {db tmp999=139;MYCOPY(dummyd_bd8e)} // 01a2:a36e
-    {db tmp999=202;MYCOPY(dummyd_bd8f)} // 01a2:a36f
-    {db tmp999=31;MYCOPY(dummyd_bd90)} // 01a2:a370
-    {db tmp999=195;MYCOPY(dummyd_bd91)} // 01a2:a371
+    {dw tmp999=m2c::ksub_19f24;MYCOPY(dummyd_b902)} // 01a2:9ee2
+    {dw tmp999=m2c::ksub_1a05a;MYCOPY(dummyd_b904)} // 01a2:9ee4
+    {dw tmp999=m2c::ksub_1a1bc;MYCOPY(dummyd_b906)} // 01a2:9ee6
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b908)} // 01a2:9ee8
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b90a)} // 01a2:9eea
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b90c)} // 01a2:9eec
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b90e)} // 01a2:9eee
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b910)} // 01a2:9ef0
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b912)} // 01a2:9ef2
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b914)} // 01a2:9ef4
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b916)} // 01a2:9ef6
+    {dw tmp999=m2c::ksub_1a372;MYCOPY(dummyd_b918)} // 01a2:9ef8
     {dw tmp999=m2c::ksub_1a643;MYCOPY(dummyd_c02b)} // 01a2:a60b
     {dw tmp999=m2c::ksub_1a6c0;MYCOPY(dummyd_c02d)} // 01a2:a60d
-    {dw tmp999=offset(seg000,byte_1a75d);MYCOPY(dummyd_c02f)} // 01a2:a60f
+    {dw tmp999=m2c::kloc_1a75d;MYCOPY(dummyd_c02f)} // 01a2:a60f
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c031)} // 01a2:a611
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c033)} // 01a2:a613
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c035)} // 01a2:a615
@@ -3264,13 +3322,6 @@ m2c::stackDump(_state); abort();
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c03b)} // 01a2:a61b
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c03d)} // 01a2:a61d
     {dw tmp999=m2c::kloc_1a81e;MYCOPY(dummyd_c03f)} // 01a2:a61f
-    {db tmp999=128;MYCOPY(byte_1a75d)} // 01a2:a75d
-    {db tmp999[32]={225,7,116,113,186,196,3,184,2,15,239,186,206,3,184,5,8,239,184,3,8,239,184,7,0,239,81,139,239,187,0,255};MYCOPY(dummyd_c17e)} // 01a2:a75e
-    {db tmp999[32]={211,235,38,173,211,200,138,208,34,199,34,211,247,208,32,5,32,101,1,131,199,2,38,173,211,200,138,240,34,199,34,243};MYCOPY(dummyd_c19e)} // 01a2:a77e
-    {db tmp999[32]={10,194,247,208,32,5,32,101,1,131,199,2,38,173,211,200,138,208,34,199,34,211,10,198,247,208,32,5,32,101,1,246};MYCOPY(dummyd_c1be)} // 01a2:a79e
-    {db tmp999[32]={210,32,85,2,131,199,36,254,205,117,183,89,139,253,54,3,54,22,59,31,195,186,196,3,184,2,15,239,186,206,3,184};MYCOPY(dummyd_c1de)} // 01a2:a7be
-    {db tmp999[32]={5,8,239,184,3,8,239,184,7,0,239,139,239,138,205,38,173,247,208,32,5,32,101,1,131,199,2,38,173,247,208,32};MYCOPY(dummyd_c1fe)} // 01a2:a7de
-    {db tmp999[32]={5,32,101,1,131,199,2,38,173,247,208,32,5,32,101,1,131,199,36,254,201,117,216,139,253,54,3,54,22,59,31,195};MYCOPY(dummyd_c21e)} // 01a2:a7fe
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c324)} // 01a2:a904
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c326)} // 01a2:a906
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c328)} // 01a2:a908
@@ -3283,46 +3334,6 @@ m2c::stackDump(_state); abort();
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c336)} // 01a2:a916
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c338)} // 01a2:a918
     {dw tmp999=m2c::ksub_1ab13;MYCOPY(dummyd_c33a)} // 01a2:a91a
-    {db tmp999[32]={128,225,7,116,91,186,196,3,184,2,15,239,186,206,3,184,5,8,239,184,3,8,239,184,7,0,239,81,139,239,187,0};MYCOPY(dummyd_c3d5)} // 01a2:a9b5
-    {db tmp999[32]={255,211,235,38,173,211,200,138,208,34,199,34,211,247,208,32,5,32,101,1,131,199,2,38,173,211,200,138,240,34,199,34};MYCOPY(dummyd_c3f5)} // 01a2:a9d5
-    {db tmp999[32]={243,10,194,247,208,32,5,32,101,1,246,214,32,117,2,131,199,38,254,205,117,205,89,139,253,54,3,54,22,59,31,195};MYCOPY(dummyd_c415)} // 01a2:a9f5
-    {db tmp999[32]={186,196,3,184,2,15,239,186,206,3,184,5,8,239,184,3,8,239,184,7,0,239,139,239,138,213,38,173,247,208,32,5};MYCOPY(dummyd_c435)} // 01a2:aa15
-    {db tmp999[32]={32,101,1,38,173,247,208,32,69,2,32,101,3,131,199,40,254,202,117,230,139,253,54,3,54,22,59,31,195,128,225,7};MYCOPY(dummyd_c455)} // 01a2:aa35
-    {db tmp999[32]={116,113,186,196,3,184,2,15,239,186,206,3,184,5,8,239,184,3,8,239,184,7,0,239,81,139,239,187,0,255,211,235};MYCOPY(dummyd_c475)} // 01a2:aa55
-    {db tmp999[32]={38,173,211,200,138,208,34,199,34,211,247,208,32,5,32,101,1,131,199,2,38,173,211,200,138,240,34,199,34,243,10,194};MYCOPY(dummyd_c495)} // 01a2:aa75
-    {db tmp999[32]={247,208,32,5,32,101,1,131,199,2,38,173,211,200,138,208,34,199,34,211,10,198,247,208,32,5,32,101,1,246,210,32};MYCOPY(dummyd_c4b5)} // 01a2:aa95
-    {db tmp999[32]={85,2,131,199,36,254,205,117,183,89,139,253,54,3,54,22,59,31,195,186,196,3,184,2,15,239,186,206,3,184,5,8};MYCOPY(dummyd_c4d5)} // 01a2:aab5
-    {db tmp999[32]={239,184,3,8,239,184,7,0,239,139,239,138,205,38,173,247,208,32,5,32,101,1,131,199,2,38,173,247,208,32,5,32};MYCOPY(dummyd_c4f5)} // 01a2:aad5
-    {db tmp999=101;MYCOPY(dummyd_c515)} // 01a2:aaf5
-    {db tmp999=1;MYCOPY(dummyd_c516)} // 01a2:aaf6
-    {db tmp999=131;MYCOPY(dummyd_c517)} // 01a2:aaf7
-    {db tmp999=199;MYCOPY(dummyd_c518)} // 01a2:aaf8
-    {db tmp999=2;MYCOPY(dummyd_c519)} // 01a2:aaf9
-    {db tmp999=38;MYCOPY(dummyd_c51a)} // 01a2:aafa
-    {db tmp999=173;MYCOPY(dummyd_c51b)} // 01a2:aafb
-    {db tmp999=247;MYCOPY(dummyd_c51c)} // 01a2:aafc
-    {db tmp999=208;MYCOPY(dummyd_c51d)} // 01a2:aafd
-    {db tmp999=32;MYCOPY(dummyd_c51e)} // 01a2:aafe
-    {db tmp999=5;MYCOPY(dummyd_c51f)} // 01a2:aaff
-    {db tmp999=32;MYCOPY(dummyd_c520)} // 01a2:ab00
-    {db tmp999=101;MYCOPY(dummyd_c521)} // 01a2:ab01
-    {db tmp999=1;MYCOPY(dummyd_c522)} // 01a2:ab02
-    {db tmp999=131;MYCOPY(dummyd_c523)} // 01a2:ab03
-    {db tmp999=199;MYCOPY(dummyd_c524)} // 01a2:ab04
-    {db tmp999=36;MYCOPY(dummyd_c525)} // 01a2:ab05
-    {db tmp999=254;MYCOPY(dummyd_c526)} // 01a2:ab06
-    {db tmp999=201;MYCOPY(dummyd_c527)} // 01a2:ab07
-    {db tmp999=117;MYCOPY(dummyd_c528)} // 01a2:ab08
-    {db tmp999=216;MYCOPY(dummyd_c529)} // 01a2:ab09
-    {db tmp999=139;MYCOPY(dummyd_c52a)} // 01a2:ab0a
-    {db tmp999=253;MYCOPY(dummyd_c52b)} // 01a2:ab0b
-    {db tmp999=54;MYCOPY(dummyd_c52c)} // 01a2:ab0c
-    {db tmp999=3;MYCOPY(dummyd_c52d)} // 01a2:ab0d
-    {db tmp999=54;MYCOPY(dummyd_c52e)} // 01a2:ab0e
-    {db tmp999=22;MYCOPY(dummyd_c52f)} // 01a2:ab0f
-    {db tmp999=59;MYCOPY(dummyd_c530)} // 01a2:ab10
-    {db tmp999=31;MYCOPY(dummyd_c531)} // 01a2:ab11
-    {db tmp999=195;MYCOPY(dummyd_c532)} // 01a2:ab12
     {dw tmp999=m2c::ksub_1add0;MYCOPY(dummyd_c7bc)} // 01a2:ad9c
     {dw tmp999=m2c::ksub_1add0;MYCOPY(dummyd_c7be)} // 01a2:ad9e
     {dw tmp999=m2c::ksub_1add0;MYCOPY(dummyd_c7c0)} // 01a2:ada0
@@ -3421,36 +3432,21 @@ m2c::stackDump(_state); abort();
     {db tmp999[32]={70,72,117,249,139,244,54,128,116,11,3,54,246,68,11,1,117,52,197,54,0,0,139,68,254,247,208,209,192,51,4,60};MYCOPY(dummyd_eb33)} // 01a2:d113
     {db tmp999[32]={204,116,2,135,4,31,94,88,207,5,176,170,226,205,64,114,40,59,202,0,0,117,188,2,9,48,47,64,205,252,121,252};MYCOPY(dummyd_eb53)} // 01a2:d133
     {db tmp999[32]={196,52,140,228,117,12,202,59,140,250,117,188,2,9,48,47,64,207,252,226,205,64,114,40,119,202,0,0,113,250,254,0};MYCOPY(dummyd_eb73)} // 01a2:d153
-    {db tmp999[32]={225,162,168,49,115,26,65,131,249,2,116,3,233,249,247,191,124,255,176,15,232,65,140,232,59,13,232,84,13,233,209,247};MYCOPY(dummyd_eb93)} // 01a2:d173
-    {db tmp999=61;MYCOPY(dummyd_ebb3)} // 01a2:d193
-    {db tmp999=109;MYCOPY(dummyd_ebb4)} // 01a2:d194
-    {db tmp999=64;MYCOPY(dummyd_ebb5)} // 01a2:d195
-    {db tmp999=116;MYCOPY(dummyd_ebb6)} // 01a2:d196
-    {db tmp999=8;MYCOPY(dummyd_ebb7)} // 01a2:d197
-    {db tmp999=61;MYCOPY(dummyd_ebb8)} // 01a2:d198
-    {db tmp999=28;MYCOPY(dummyd_ebb9)} // 01a2:d199
-    {db tmp999=88;MYCOPY(dummyd_ebba)} // 01a2:d19a
-    {db tmp999=116;MYCOPY(dummyd_ebbb)} // 01a2:d19b
-    {db tmp999=3;MYCOPY(dummyd_ebbc)} // 01a2:d19c
-    {db tmp999=233;MYCOPY(dummyd_ebbd)} // 01a2:d19d
-    {db tmp999=196;MYCOPY(dummyd_ebbe)} // 01a2:d19e
-    {db tmp999=247;MYCOPY(dummyd_ebbf)} // 01a2:d19f
-    {db tmp999=129;MYCOPY(dummyd_ebc0)} // 01a2:d1a0
-    {db tmp999=251;MYCOPY(dummyd_ebc1)} // 01a2:d1a1
-    {db tmp999=13;MYCOPY(dummyd_ebc2)} // 01a2:d1a2
-    {db tmp999=190;MYCOPY(dummyd_ebc3)} // 01a2:d1a3
-    {db tmp999=116;MYCOPY(dummyd_ebc4)} // 01a2:d1a4
-    {db tmp999=9;MYCOPY(dummyd_ebc5)} // 01a2:d1a5
-    {db tmp999=129;MYCOPY(dummyd_ebc6)} // 01a2:d1a6
-    {db tmp999=251;MYCOPY(dummyd_ebc7)} // 01a2:d1a7
-    {db tmp999=242;MYCOPY(dummyd_ebc8)} // 01a2:d1a8
-    {db tmp999=169;MYCOPY(dummyd_ebc9)} // 01a2:d1a9
-    {db tmp999=116;MYCOPY(dummyd_ebca)} // 01a2:d1aa
-    {db tmp999=3;MYCOPY(dummyd_ebcb)} // 01a2:d1ab
-    {db tmp999=233;MYCOPY(dummyd_ebcc)} // 01a2:d1ac
-    {db tmp999=181;MYCOPY(dummyd_ebcd)} // 01a2:d1ad
-    {db tmp999=247;MYCOPY(dummyd_ebce)} // 01a2:d1ae
-    {db tmp999=195;MYCOPY(dummyd_ebcf)} // 01a2:d1af
+    {db tmp999=225;MYCOPY(dummyd_eb93)} // 01a2:d173
+    {db tmp999=162;MYCOPY(dummyd_eb94)} // 01a2:d174
+    {db tmp999=168;MYCOPY(dummyd_eb95)} // 01a2:d175
+    {db tmp999=49;MYCOPY(dummyd_eb96)} // 01a2:d176
+    {db tmp999=115;MYCOPY(dummyd_eb97)} // 01a2:d177
+    {db tmp999=26;MYCOPY(dummyd_eb98)} // 01a2:d178
+    {db tmp999=65;MYCOPY(dummyd_eb99)} // 01a2:d179
+    {db tmp999=131;MYCOPY(dummyd_eb9a)} // 01a2:d17a
+    {db tmp999=249;MYCOPY(dummyd_eb9b)} // 01a2:d17b
+    {db tmp999=2;MYCOPY(dummyd_eb9c)} // 01a2:d17c
+    {db tmp999=116;MYCOPY(dummyd_eb9d)} // 01a2:d17d
+    {db tmp999=3;MYCOPY(dummyd_eb9e)} // 01a2:d17e
+    {db tmp999=233;MYCOPY(dummyd_eb9f)} // 01a2:d17f
+    {db tmp999=249;MYCOPY(dummyd_eba0)} // 01a2:d180
+    {db tmp999=247;MYCOPY(dummyd_eba1)} // 01a2:d181
     {dw tmp999=seg_offset(seg045);MYCOPY(seg_1dfd3)} // 0f9f:0003
     {db tmp999[32]={0,0,0,80,75,87,65,82,69,32,68,97,116,97,32,67,111,109,112,114,101,115,115,105,111,110,32,76,105,98,114,97};MYCOPY(dummyd_f9f5)} // 0f9f:0005
     {db tmp999[32]={114,121,40,116,109,41,13,10,67,111,112,121,114,105,103,104,116,32,49,57,57,48,45,57,49,32,80,75,87,65,82,69};MYCOPY(dummyd_fa15)} // 0f9f:0025
@@ -3538,8 +3534,7 @@ m2c::stackDump(_state); abort();
     {db tmp999=16;MYCOPY(dummyd_fe47)} // 0f9f:0457
     {db tmp999=154;MYCOPY(dummyd_feb1)} // 0f9f:04c1
     {db tmp999=184;MYCOPY(dummyd_feb2)} // 0f9f:04c2
-    {db tmp999=253;MYCOPY(dummyd_feb3)} // 0f9f:04c3
-    {db tmp999=29;MYCOPY(dummyd_feb4)} // 0f9f:04c4
+    {dw tmp999=seg_offset(seg001);MYCOPY(dummyd_feb3)} // 0f9f:04c3
     {db tmp999=129;MYCOPY(dummyd_febe)} // 0f9f:04ce
     {db tmp999=234;MYCOPY(dummyd_fef4)} // 0f9f:0504
     {db tmp999=199;MYCOPY(dummyd_ff91)} // 0f9f:05a1
@@ -4040,31 +4035,28 @@ m2c::stackDump(_state); abort();
     {char tmp999[2]="N";MYCOPY(an)} // 10d6:0622
     {char tmp999[8]="O 9 OR ";MYCOPY(ao9or)} // 10d6:0624
     {char tmp999[41]="SC TO START AT THE BEGINNING OF THE GAME";MYCOPY(asctostartatthe)} // 10d6:062c
-    {db tmp999[32]={32,73,110,115,101,114,116,13,10,49,56,44,54,56,56,32,80,97,103,101,32,85,112,13,10,50,49,44,50,52,56,32};MYCOPY(dummyd_113b5)} // 10d6:0655
-    {db tmp999[32]={68,101,108,101,116,101,13,10,50,48,44,55,51,54,32,80,97,103,101,32,68,111,119,110,13,10,50,48,44,50,50,52};MYCOPY(dummyd_113d5)} // 10d6:0675
-    {db tmp999[32]={32,69,110,100,13,10,48,48,48,48,48,32,69,110,100,13,10,48,48,0,0,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyd_113f5)} // 10d6:0695
-    {db tmp999[32]={0};MYCOPY(dummyd_11415)} // 10d6:06b5
-    {db tmp999[32]={0};MYCOPY(dummyd_11435)} // 10d6:06d5
-    {db tmp999[32]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,154,4,220,5,30,7,96,8,162};MYCOPY(dummyd_11455)} // 10d6:06f5
-    {db tmp999[32]={9,228,10,38,12,104,13,170,14,236,15,216,5,26,7,92,8,158,9,224,10,34,12,100,13,166,14,232,15,42,17,22};MYCOPY(dummyd_11475)} // 10d6:0715
-    {db tmp999[32]={7,88,8,154,9,220,10,30,12,96,13,162,14,228,15,38,17,104,18,84,8,150,9,216,10,26,12,92,13,158,14,224};MYCOPY(dummyd_11495)} // 10d6:0735
-    {db tmp999[32]={15,34,17,100,18,166,19,146,9,212,10,22,12,88,13,154,14,220,15,30,17,96,18,162,19,228,20,208,10,18,12,84};MYCOPY(dummyd_114b5)} // 10d6:0755
-    {db tmp999[32]={13,150,14,216,15,26,17,92,18,158,19,224,20,34,22,14,12,80,13,146,14,212,15,22,17,88,18,154,19,220,20,30};MYCOPY(dummyd_114d5)} // 10d6:0775
-    {db tmp999[32]={22,96,23,76,13,142,14,208,15,18,17,84,18,150,19,216,20,26,22,92,23,158,24,138,14,204,15,14,17,80,18,146};MYCOPY(dummyd_114f5)} // 10d6:0795
-    {db tmp999[32]={19,212,20,22,22,88,23,154,24,220,25,200,15,10,17,76,18,142,19,208,20,18,22,84,23,150,24,216,25,26,27,0};MYCOPY(dummyd_11515)} // 10d6:07b5
-    {db tmp999[32]={41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0};MYCOPY(dummyd_11535)} // 10d6:07d5
-    {db tmp999[32]={56,0,57,0,0,0,0,0,0,0,0,0,0,0,24,0,23,0,22,0,0,0,0,0,0,0,0,0,0,0,29,0};MYCOPY(dummyd_11555)} // 10d6:07f5
-    {db tmp999[32]={28,0,16,0,26,0,0,0,0,0,0,0,0,0,13,0,7,0,16,0,8,0,15,0,0,0,0,0,0,0,14,0};MYCOPY(dummyd_11575)} // 10d6:0815
-    {db tmp999[32]={16,0,16,0,10,0,14,0,16,0,0,0,0,0,10,0,16,0,9,0,11,0,15,0,16,0,0,0,0,0,11,0};MYCOPY(dummyd_11595)} // 10d6:0835
-    {db tmp999[32]={6,0,5,0,5,0,6,0,16,0,0,0,0,0,65,0,66,0,17,0,16,0,62,0,61,0,0,0,0,0,198,0};MYCOPY(dummyd_115b5)} // 10d6:0855
-    {db tmp999=134;MYCOPY(dummyd_115d5)} // 10d6:0875
-    {db tmp999=134;MYCOPY(dummyd_115d7)} // 10d6:0877
-    {db tmp999=60;MYCOPY(dummyd_115d9)} // 10d6:0879
-    {db tmp999=21;MYCOPY(dummyd_115db)} // 10d6:087b
-    {db tmp999=20;MYCOPY(dummyd_115dd)} // 10d6:087d
-    {db tmp999=134;MYCOPY(dummyd_115e3)} // 10d6:0883
-    {db tmp999=134;MYCOPY(dummyd_115e5)} // 10d6:0885
-    {db tmp999=134;MYCOPY(dummyd_115e7)} // 10d6:0887
+    {char tmp999[9]={' ','I','n','s','e','r','t','\r','\n'};MYCOPY(ainsert18688pag)} // 10d6:0655
+    {char tmp999[16]={'1','8',',','6','8','8',' ','P','a','g','e',' ','U','p','\r','\n'};MYCOPY(dummyd_113be)} // 10d6:065e
+    {char tmp999[15]={'2','1',',','2','4','8',' ','D','e','l','e','t','e','\r','\n'};MYCOPY(dummyd_113ce)} // 10d6:066e
+    {char tmp999[18]={'2','0',',','7','3','6',' ','P','a','g','e',' ','D','o','w','n','\r','\n'};MYCOPY(dummyd_113dd)} // 10d6:067d
+    {char tmp999[12]={'2','0',',','2','2','4',' ','E','n','d','\r','\n'};MYCOPY(dummyd_113ef)} // 10d6:068f
+    {char tmp999[11]={'0','0','0','0','0',' ','E','n','d','\r','\n'};MYCOPY(dummyd_113fb)} // 10d6:069b
+    {char tmp999[3]="00";MYCOPY(dummyd_11406)} // 10d6:06a6
+    {db tmp999[32]={0};MYCOPY(dummyd_11409)} // 10d6:06a9
+    {db tmp999[32]={0};MYCOPY(dummyd_11429)} // 10d6:06c9
+    {db tmp999[32]={0};MYCOPY(dummyd_11449)} // 10d6:06e9
+    {db tmp999[32]={0,0,0,154,4,220,5,30,7,96,8,162,9,228,10,38,12,104,13,170,14,236,15,216,5,26,7,92,8,158,9,224};MYCOPY(dummyd_11469)} // 10d6:0709
+    {db tmp999[32]={10,34,12,100,13,166,14,232,15,42,17,22,7,88,8,154,9,220,10,30,12,96,13,162,14,228,15,38,17,104,18,84};MYCOPY(dummyd_11489)} // 10d6:0729
+    {db tmp999[32]={8,150,9,216,10,26,12,92,13,158,14,224,15,34,17,100,18,166,19,146,9,212,10,22,12,88,13,154,14,220,15,30};MYCOPY(dummyd_114a9)} // 10d6:0749
+    {db tmp999[32]={17,96,18,162,19,228,20,208,10,18,12,84,13,150,14,216,15,26,17,92,18,158,19,224,20,34,22,14,12,80,13,146};MYCOPY(dummyd_114c9)} // 10d6:0769
+    {db tmp999[32]={14,212,15,22,17,88,18,154,19,220,20,30,22,96,23,76,13,142,14,208,15,18,17,84,18,150,19,216,20,26,22,92};MYCOPY(dummyd_114e9)} // 10d6:0789
+    {db tmp999[32]={23,158,24,138,14,204,15,14,17,80,18,146,19,212,20,22,22,88,23,154,24,220,25,200,15,10,17,76,18,142,19,208};MYCOPY(dummyd_11509)} // 10d6:07a9
+    {db tmp999[32]={20,18,22,84,23,150,24,216,25,26,27,0,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};MYCOPY(dummyd_11529)} // 10d6:07c9
+    {db tmp999[32]={0,0,0,0,0,0,0,0,0,0,55,0,56,0,57,0,0,0,0,0,0,0,0,0,0,0,24,0,23,0,22,0};MYCOPY(dummyd_11549)} // 10d6:07e9
+    {db tmp999[32]={0,0,0,0,0,0,0,0,0,0,29,0,28,0,16,0,26,0,0,0,0,0,0,0,0,0,13,0,7,0,16,0};MYCOPY(dummyd_11569)} // 10d6:0809
+    {db tmp999[32]={8,0,15,0,0,0,0,0,0,0,14,0,16,0,16,0,10,0,14,0,16,0,0,0,0,0,10,0,16,0,9,0};MYCOPY(dummyd_11589)} // 10d6:0829
+    {db tmp999[32]={11,0,15,0,16,0,0,0,0,0,11,0,6,0,5,0,5,0,6,0,16,0,0,0,0,0,65,0,66,0,17,0};MYCOPY(dummyd_115a9)} // 10d6:0849
+    {db tmp999[32]={16,0,62,0,61,0,0,0,0,0,198,0,134,0,134,0,60,0,21,0,20,0,0,0,0,0,134,0,134,0,134,0};MYCOPY(dummyd_115c9)} // 10d6:0869
     {db tmp999=13;MYCOPY(dummyd_115eb)} // 10d6:088b
     {db tmp999=25;MYCOPY(dummyd_115ed)} // 10d6:088d
     {dw tmp999=16708;MYCOPY(word_1fbd2)} // 10d6:0892
@@ -7059,19 +7051,17 @@ m2c::stackDump(_state); abort();
     {db tmp999=57;MYCOPY(dummyd_20bb6)} // 20b8:0036
     {db tmp999=57;MYCOPY(dummyd_20bb7)} // 20b8:0037
     {db tmp999=49;MYCOPY(dummyd_20bb8)} // 20b8:0038
-    {db tmp999[32]={211,2,221,0,211,0,117,2,231,2,248,2,7,3,14,3,0,1,240,2,21,3,139,31,139,15,67,67,137,93,10,137};MYCOPY(dummyd_20e2c)} // 20b8:02ac
-    {db tmp999[32]={77,12,139,217,233,238,253,139,93,10,139,15,67,67,227,230,137,93,10,137,77,12,139,217,233,218,253,138,7,67,136,69};MYCOPY(dummyd_20e4c)} // 20b8:02cc
-    {db tmp999=18;MYCOPY(dummyd_20e6c)} // 20b8:02ec
-    {db tmp999=233;MYCOPY(dummyd_20e6d)} // 20b8:02ed
-    {db tmp999=209;MYCOPY(dummyd_20e6e)} // 20b8:02ee
-    {db tmp999=253;MYCOPY(dummyd_20e6f)} // 20b8:02ef
-    {db tmp999=138;MYCOPY(dummyd_20e70)} // 20b8:02f0
-    {db tmp999=7;MYCOPY(dummyd_20e71)} // 20b8:02f1
-    {db tmp999=67;MYCOPY(dummyd_20e72)} // 20b8:02f2
-    {db tmp999=50;MYCOPY(dummyd_20e73)} // 20b8:02f3
-    {db tmp999=228;MYCOPY(dummyd_20e74)} // 20b8:02f4
-    {db tmp999=163;MYCOPY(dummyd_20e75)} // 20b8:02f5
-    {db tmp999=8;MYCOPY(dummyd_20e76)} // 20b8:02f6
+    {dw tmp999=m2c::kloc_2f433;MYCOPY(dummyd_20e2c)} // 20b8:02ac
+    {dw tmp999=m2c::kloc_2f23d;MYCOPY(dummyd_20e2e)} // 20b8:02ae
+    {dw tmp999=m2c::kloc_2f233;MYCOPY(dummyd_20e30)} // 20b8:02b0
+    {dw tmp999=m2c::ksub_2f3d5;MYCOPY(dummyd_20e32)} // 20b8:02b2
+    {dw tmp999=m2c::kloc_2f447;MYCOPY(dummyd_20e34)} // 20b8:02b4
+    {dw tmp999=m2c::kloc_2f458;MYCOPY(dummyd_20e36)} // 20b8:02b6
+    {dw tmp999=m2c::ksub_2f467;MYCOPY(dummyd_20e38)} // 20b8:02b8
+    {dw tmp999=m2c::ksub_2f46e;MYCOPY(dummyd_20e3a)} // 20b8:02ba
+    {dw tmp999=m2c::kloc_2f260;MYCOPY(dummyd_20e3c)} // 20b8:02bc
+    {dw tmp999=m2c::kloc_2f450;MYCOPY(dummyd_20e3e)} // 20b8:02be
+    {dw tmp999=m2c::ksub_2f475;MYCOPY(dummyd_20e40)} // 20b8:02c0
     {db tmp999=3;MYCOPY(dummyd_21022)} // 20b8:04a2
     {db tmp999=176;MYCOPY(dummyd_21024)} // 20b8:04a4
     {db tmp999[4]={0};MYCOPY(dummyd_21030)} // 20b8:04b0
@@ -10821,22 +10811,20 @@ m2c::stackDump(_state); abort();
     {db tmp999=0;MYCOPY(byte_4a460)} // 3be8:0000
     {db tmp999=124;MYCOPY(byte_4a48c)} // 3be8:002c
     {db tmp999[32]={0,220,6,30,8,63,12,109,13,2,0,24,0,0,0,255,255,0,0,255,255,0,0,255,255,0,0,255,255,0,0,255};MYCOPY(dummyd_3bead)} // 3be8:002d
-    {db tmp999[32]={255,0,0,255,255,0,0,127,0,0,0,88,1,0,0,146,1,0,0,159,1,162,1,118,2,0,0,21,2,0,0,6};MYCOPY(dummyd_3becd)} // 3be8:004d
-    {db tmp999[32]={2,18,2,127,2,0,0,167,2,0,0,127,2,130,2,2,0,195,217,0,232,28,3,139,214,62,128,126,15,0,116,8};MYCOPY(dummyd_3beed)} // 3be8:006d
-    {db tmp999=62;MYCOPY(dummyd_3bf0d)} // 3be8:008d
-    {db tmp999=198;MYCOPY(dummyd_3bf0e)} // 3be8:008e
-    {db tmp999=70;MYCOPY(dummyd_3bf0f)} // 3be8:008f
-    {db tmp999=15;MYCOPY(dummyd_3bf10)} // 3be8:0090
-    {db tmp999=233;MYCOPY(dummyd_3bf12)} // 3be8:0092
-    {db tmp999=132;MYCOPY(dummyd_3bf13)} // 3be8:0093
-    {db tmp999=62;MYCOPY(dummyd_3bf15)} // 3be8:0095
-    {db tmp999=131;MYCOPY(dummyd_3bf16)} // 3be8:0096
-    {db tmp999=126;MYCOPY(dummyd_3bf17)} // 3be8:0097
-    {db tmp999=10;MYCOPY(dummyd_3bf18)} // 3be8:0098
+    {db tmp999=255;MYCOPY(dummyd_3becd)} // 3be8:004d
+    {db tmp999=255;MYCOPY(dummyd_3bed0)} // 3be8:0050
+    {db tmp999=255;MYCOPY(dummyd_3bed1)} // 3be8:0051
+    {db tmp999=127;MYCOPY(dummyd_3bed4)} // 3be8:0054
+    {db tmp999=88;MYCOPY(dummyd_3bed8)} // 3be8:0058
+    {db tmp999=1;MYCOPY(dummyd_3bed9)} // 3be8:0059
+    {dw tmp999=offset(seg015,byte_4a5f2);MYCOPY(dummyd_3bedc)} // 3be8:005c
+    {db tmp999[32]={0,0,159,1,162,1,118,2,0,0,21,2,0,0,6,2,18,2,127,2,0,0,167,2,0,0,127,2,130,2,2,0};MYCOPY(dummyd_3bede)} // 3be8:005e
+    {db tmp999=195;MYCOPY(dummyd_3befe)} // 3be8:007e
+    {db tmp999=217;MYCOPY(dummyd_3beff)} // 3be8:007f
     {db tmp999=117;MYCOPY(dummyd_3bf1a)} // 3be8:009a
     {db tmp999=3;MYCOPY(dummyd_3bf1b)} // 3be8:009b
     {db tmp999=233;MYCOPY(dummyd_3bf1c)} // 3be8:009c
-    {db tmp999=13;MYCOPY(dummyd_3c012)} // 3be8:0192
+    {db tmp999=13;MYCOPY(byte_4a5f2)} // 3be8:0192
     {db tmp999=190;MYCOPY(dummyd_3c014)} // 3be8:0194
     {db tmp999=237;MYCOPY(dummyd_3c015)} // 3be8:0195
     {db tmp999=2;MYCOPY(dummyd_3c016)} // 3be8:0196
