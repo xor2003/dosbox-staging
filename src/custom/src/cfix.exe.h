@@ -4,7 +4,7 @@
 #ifndef __M2C_CFIX_EXE_STUBS_H__
 #define __M2C_CFIX_EXE_STUBS_H__
 
-#include "../asm.h"
+#include "asm.h"
 
 
 

@@ -189,14 +189,7 @@ namespace m2c{ m2cf* _ENTRY_POINT_ = &start;}
  bool __dispatch_call(m2c::_offsets __i, struct m2c::_STATE* _state){
     X86_REGREF
     if ((__i>>16) == 0) {__i |= ((dd)cs) << 16;}
-
     __disp=__i;
-    if ((__disp >> 16) == 0xf000)
-	{m2c::log_debug("Calling BIOS %x\n",__disp);
-/*cs=0xf000;eip=__disp&0xffff;*/m2c::fix_segs();
-if (from_callf) m2c::interpret_unknown_callf(0xf000,eip=__disp&0xffff,1);
-m2c::log_debug("doing return1\n");
-m2c::shadow_stack.noneedreturn();return true;}
     switch (__i) {
         case m2c::kloc_1003b: 	start(__disp, _state); break;
         case m2c::kloc_10040: 	start(__disp, _state); break;
@@ -389,6 +382,7 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_11259: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_11261: 	seg000_11e9_proc(__disp, _state); break;
         case m2c::kloc_114e2: 	sub_114c8(__disp, _state); break;
+        case m2c::kloc_114e5: 	_group3(__disp, _state); break;
         case m2c::kloc_1150a: 	_group3(__disp, _state); break;
         case m2c::kloc_1154d: 	_group3(__disp, _state); break;
         case m2c::kloc_11564: 	_group3(__disp, _state); break;
@@ -2324,8 +2318,6 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_1ec56: 	sub_1ebed(__disp, _state); break;
         case m2c::kloc_1ec60: 	sub_1ebed(__disp, _state); break;
         case m2c::kloc_1ec75: 	sub_1ebed(__disp, _state); break;
-        case m2c::kloc_1ec7a: 	_group38(__disp, _state); break;
-        case m2c::kloc_1ece0: 	_group38(__disp, _state); break;
         case m2c::kloc_1ed11: 	_group38(__disp, _state); break;
         case m2c::kloc_1ed19: 	_group38(__disp, _state); break;
         case m2c::kloc_1ed37: 	_group38(__disp, _state); break;
@@ -2420,7 +2412,6 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kloc_4a83f: 	sub_4a811(__disp, _state); break;
         case m2c::kloc_4a847: 	sub_4a811(__disp, _state); break;
         case m2c::kloc_4a87a: 	sub_4a876(__disp, _state); break;
-        case m2c::kloc_4a8f0: 	_group42(__disp, _state); break;
         case m2c::kloc_4a91c: 	_group42(__disp, _state); break;
         case m2c::kloc_4a9fc: 	sub_4a9be(__disp, _state); break;
         case m2c::kloc_4aa14: 	sub_4a9be(__disp, _state); break;
@@ -2579,7 +2570,6 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kret_f9f_4c5: 	seg001_45a_proc(__disp, _state); break;
         case m2c::kseg000_117d_proc: 	_group2(__disp, _state); break;
         case m2c::kseg000_11e9_proc: 	seg000_11e9_proc(0, _state); break;
-        case m2c::kseg000_14e5_proc: 	_group3(__disp, _state); break;
         case m2c::kseg000_16a1_proc: 	seg000_16a1_proc(0, _state); break;
         case m2c::kseg000_1d61_proc: 	seg000_1d61_proc(0, _state); break;
         case m2c::kseg000_2e40_proc: 	seg000_2e40_proc(0, _state); break;
@@ -2608,9 +2598,12 @@ m2c::shadow_stack.noneedreturn();return true;}
         case m2c::kseg000_da59_proc: 	_group35(__disp, _state); break;
         case m2c::kseg000_df98_proc: 	_group36(__disp, _state); break;
         case m2c::kseg000_dfd2_proc: 	_group37(__disp, _state); break;
+        case m2c::kseg001_caa_proc: 	_group38(__disp, _state); break;
+        case m2c::kseg001_d10_proc: 	_group38(__disp, _state); break;
         case m2c::kseg008_494_proc: 	seg008_494_proc(0, _state); break;
         case m2c::kseg015_1a6_proc: 	seg015_1a6_proc(0, _state); break;
         case m2c::kseg015_217_proc: 	seg015_217_proc(0, _state); break;
+        case m2c::kseg015_490_proc: 	_group42(__disp, _state); break;
         case m2c::kseg015_81_proc: 	seg015_81_proc(0, _state); break;
         case m2c::kstart: 	start(0, _state); break;
         case m2c::ksub_10247: 	_group1(__disp, _state); break;

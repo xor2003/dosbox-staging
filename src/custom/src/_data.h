@@ -1,7 +1,7 @@
 
 #ifndef ___DATA_H__
 #define ___DATA_H__
-#include "../asm.h"
+#include "asm.h"
 
 
 #pragma pack(push, 1)

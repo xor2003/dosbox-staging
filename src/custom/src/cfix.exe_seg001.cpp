@@ -1582,15 +1582,15 @@ cs=0xf9f;eip=0x000df9; 	J(RETF(0x0C));	// 38248                  retf    0Ch ;~ 
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_1ec7a: 	goto loc_1ec7a;
-        case m2c::kloc_1ece0: 	goto loc_1ece0;
-        case m2c::kloc_1ed11: 	goto loc_1ed11;
+                case m2c::kloc_1ed11: 	goto loc_1ed11;
         case m2c::kloc_1ed19: 	goto loc_1ed19;
         case m2c::kloc_1ed37: 	goto loc_1ed37;
         case m2c::kloc_1ed4b: 	goto loc_1ed4b;
         case m2c::kloc_1edbf: 	goto loc_1edbf;
         case m2c::kloc_1edc3: 	goto loc_1edc3;
         case m2c::kloc_1edc6: 	goto loc_1edc6;
+        case m2c::kseg001_caa_proc: 	goto seg001_caa_proc;
+        case m2c::kseg001_d10_proc: 	goto seg001_d10_proc;
         case m2c::ksub_1ecd3: 	goto sub_1ecd3;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };

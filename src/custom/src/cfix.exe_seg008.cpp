@@ -559,11 +559,11 @@ cs=0x20b8;eip=0x000306; 	J(RETN(0));	// 104479                  retn ;~ 20B8:030
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_2f422: 	goto loc_2f422;
-        case m2c::kloc_2f433: 	goto loc_2f433;
+                case m2c::kloc_2f433: 	goto loc_2f433;
         case m2c::kloc_2f447: 	goto loc_2f447;
         case m2c::kloc_2f450: 	goto loc_2f450;
         case m2c::kloc_2f458: 	goto loc_2f458;
+        case m2c::kseg008_2c2_proc: 	goto seg008_2c2_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -877,7 +877,7 @@ cs=0x20b8;eip=0x00042c; 	J(CALL(sub_2f5bf,0));	// 104680                  call  
 cs=0x20b8;eip=0x00042f; 	T(cx = 0x12C;);	// 104681                  mov     cx, 12Ch ;~ 20B8:042F
 loc_2f592:
 	// 6689 
-cs=0x20b8;eip=0x000432; 	S(LOOP(loc_2f592));	// 104684                  loop    loc_2F592 ;~ 20B8:0432
+cs=0x20b8;eip=0x000432; 	J(LOOP(loc_2f592));	// 104684                  loop    loc_2F592 ;~ 20B8:0432
 cs=0x20b8;eip=0x000434; 	S(IN(al, dx));	// 104685                  in      al, dx ;~ 20B8:0434
 cs=0x20b8;eip=0x000435; 	X(PUSH(ax));	// 104686                  push    ax ;~ 20B8:0435
 cs=0x20b8;eip=0x000436; 	T(ax = 0x6004;);	// 104687                  mov     ax, 6004h ;~ 20B8:0436
