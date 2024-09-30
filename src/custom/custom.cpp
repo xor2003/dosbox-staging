@@ -18,12 +18,12 @@
 // -- configuration start
 
 bool trace_instructions = false;       // write instruction trace to circular buffer
-bool trace_instructions_to_stdout = false; // write instrucitons to stdout (slow)
+bool trace_instructions_to_stdout = false; // write instructions to stdout (slow)
 bool compare_instructions = false; // compare emulated and translated instructions
 
-bool complex_self_modifications = false;  // handle complex self-modified code
-bool collect_rt_info = false;  // Collect run-time info
-bool collect_rt_info_vars = false;  // Collect vars too
+bool complex_self_modifications = false;  // handle complex self-modified code (slow)
+bool collect_rt_info = false;  // Collect run-time info like code address and segment values
+bool collect_rt_info_vars = false;  // Collect memory accessed and sizes too (slower)
 
 // -- configuration end
 
@@ -828,7 +828,7 @@ void Jend()
 		bool regs_ch = memcmp(&cpu_regs, &dbx_result_regs, sizeof(CPU_Regs));
 		bool segs_ch = memcmp(&Segs, &dbx_result_segs, sizeof(Segments));
 		bool mem_ch = memcmp(&m, rm, COMPARE_SIZE);
-		printf("before ");
+		printf("before instr ");
 		log_regs_dbx_direct(0, "", 0, 0, instr, oldcpu_regs, oldSegs);
 		printf("/j-------------Error-during-jump-or-call-result-was-different-to-dosbox-interpreter-------------\\\n");
 		//        cpu_regs.ip.word[0] = oldip;
@@ -851,7 +851,7 @@ void Jend()
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
 
-		printf("~dbx ");
+		printf("\n~dbx result ");
 		log_regs_dbx_direct(0, "", 0, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -862,7 +862,7 @@ void Jend()
 			hexDump(&Segs, sizeof(Segments));
 		}
 		if (mem_ch) {
-			printf("~mem m2c / dbx\n");
+			printf("~memory diff m2c/dbx\n");
 			cmpHexDump(&m, rm, COMPARE_SIZE);
 		}
 		printf("\\j-----------------------------Error-----------------------------------------/\n");
@@ -978,7 +978,7 @@ void Tend(const char *file, int line, const char *instr)
 		trace_instructions = true;
 		bool regs_ch = memcmp(&cpu_regs, &dbx_result_regs, sizeof(CPU_Regs));
 		bool segs_ch = memcmp(&Segs, &dbx_result_segs, sizeof(Segments));
-		printf("before ");
+		printf("before instr ");
 		log_regs_dbx_direct(0, "", line, 0, instr, oldcpu_regs, oldSegs);
 		printf("/t-----------------Error-results-of-instruction-was-different-within-regs-if-compare-with-dosbox-interpreter------\\\n");
 		//        cpu_regs.ip.word[0] = oldip;
@@ -1001,7 +1001,7 @@ void Tend(const char *file, int line, const char *instr)
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
 
-		printf("~dbx ");
+		printf("\n~dbx result ");
 		log_regs_dbx_direct(0, file, line, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1096,14 +1096,14 @@ void Xend(const char *file, int line, const char *instr)
 		bool regs_ch = memcmp(&cpu_regs, &dbx_result_regs, sizeof(CPU_Regs));
 		bool segs_ch = memcmp(&Segs, &dbx_result_segs, sizeof(Segments));
 		bool mem_ch = memcmp(&m, rm, COMPARE_SIZE);
-		printf("before ");
+		printf("before instr ");
 		log_regs_dbx_direct(0, "", line, 0, instr, oldcpu_regs, oldSegs);
 		printf("/x------Error-results-of-instruction-was-different-within-regs--or-memory-if-compare-with-dosbox-interpreter------\\\n");
 		//        cpu_regs.ip.word[0] = oldip;
-		printf("cs:ip: ");
+		printf("dbx disas: ");
 		::print_instruction_direct(oldSegs.val[1], oldip);
 		hexDump(raddr(Segs.val[1], oldip), 8);
-		printf("~m2c ");
+		printf("\n~m2c result ");
 		log_regs_dbx_direct(0, file, line, 0, instr, cpu_regs, Segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1116,7 +1116,7 @@ void Xend(const char *file, int line, const char *instr)
 
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
-		printf("~dbx ");
+		printf("\n~dbx result ");
 		log_regs_dbx_direct(0, file, line, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1127,7 +1127,7 @@ void Xend(const char *file, int line, const char *instr)
 			hexDump(&Segs, sizeof(Segments));
 		}
 		if (mem_ch) {
-			printf("~mem m2c / dbx\n");
+			printf("~memory diff m2c/dbx\n");
 			cmpHexDump(&m, rm, COMPARE_SIZE);
 		}
 		printf("\\x-----------------------------Error-----------------------------------------/\n");
