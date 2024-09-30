@@ -31,7 +31,7 @@ cs=0x1a2;eip=0x000027; 	X(word_1f210 = 0x0A800;);	// 51                  mov    
 cs=0x1a2;eip=0x00002d; 	J(CALL(sub_10d69,0));	// 52                  call    sub_10D69 ;~ 01A2:002D
 cs=0x1a2;eip=0x000030; 	J(CALL(sub_1b2c6,0));	// 53                  call    sub_1B2C6 ;~ 01A2:0030
 cs=0x1a2;eip=0x000033; 	T(CMP(ax, 0));	// 54                  cmp     ax, 0 ;~ 01A2:0033
-cs=0x1a2;eip=0x000036; 	J(JMP(loc_10040));	// 55                  jns     short loc_1003B ;~ 01A2:0036
+cs=0x1a2;eip=0x000036; 	J(JMP(loc_1003b));	// 55                  jns     short loc_1003B ;~ 01A2:0036
 cs=0x1a2;eip=0x000038; 	J(return _group2(m2c::kloc_11190, _state););	// 56                  jmp     loc_11190 ;~ 01A2:0038
 loc_1003b:
 	// 4369 

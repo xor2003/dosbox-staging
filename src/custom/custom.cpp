@@ -851,7 +851,7 @@ void Jend()
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
 
-		printf("\n~dbx result ");
+		printf("\n~dbx res state ");
 		log_regs_dbx_direct(0, "", 0, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1001,7 +1001,7 @@ void Tend(const char *file, int line, const char *instr)
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
 
-		printf("\n~dbx result ");
+		printf("\n~dbx res state ");
 		log_regs_dbx_direct(0, file, line, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1104,7 +1104,7 @@ void Xend(const char *file, int line, const char *instr)
 		::print_instruction_direct(oldSegs.val[1], oldip);
 		hexDump(raddr(oldSegs.val[1], oldip), 8);
 
-		printf("\n~m2c result ");
+		printf("\n~m2c res state ");
 		log_regs_dbx_direct(0, file, line, 0, instr, cpu_regs, Segs);
 		if (regs_ch) {
 			printf("reg ");
@@ -1117,7 +1117,7 @@ void Xend(const char *file, int line, const char *instr)
 
 		Segs = dbx_result_segs;
 		cpu_regs = dbx_result_regs;
-		printf("\n~dbx result ");
+		printf("\n~dbx res state ");
 		log_regs_dbx_direct(0, file, line, 0, instr, dbx_result_regs, dbx_result_segs);
 		if (regs_ch) {
 			printf("reg ");
