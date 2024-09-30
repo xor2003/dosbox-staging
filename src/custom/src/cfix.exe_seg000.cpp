@@ -13,11 +13,11 @@
     else goto __dispatch_call;
     start:
     _begin:
-cs=0x1a2;eip=0x000000; 	T(CLI);	// 35                  cli ;~ 01A2:0000
+cs=0x1a2;eip=0x000000; 	S(CLI);	// 35                  cli ;~ 01A2:0000
 cs=0x1a2;eip=0x000001; 	T(CLD);	// 36                  cld ;~ 01A2:0001
 cs=0x1a2;eip=0x000002; 	T(ax = seg_offset(seg046););	// 37                  mov     ax, seg seg046 ;~ 01A2:0002
 cs=0x1a2;eip=0x000005; 	S(ss = ax;);	// 38                  mov     ss, ax ;~ 01A2:0005
-cs=0x1a2;eip=0x000007; 	T(sp = 0x0D596;);	// 39                  mov     sp, 0D596h ;~ 01A2:0007
+cs=0x1a2;eip=0x000007; 	R(sp = 0x0D596;);	// 39                  mov     sp, 0D596h ;~ 01A2:0007
 cs=0x1a2;eip=0x00000a; 	T(ax = seg_offset(seg002););	// 40                  mov     ax, seg seg002 ;~ 01A2:000A
 cs=0x1a2;eip=0x00000d; 	T(ds = ax;);	// 41                  mov     ds, ax ;~ 01A2:000D
 cs=0x1a2;eip=0x00000f; 	T(es = ax;);	// 43                  mov     es, ax ;~ 01A2:000F
@@ -31,11 +31,11 @@ cs=0x1a2;eip=0x000027; 	X(word_1f210 = 0x0A800;);	// 51                  mov    
 cs=0x1a2;eip=0x00002d; 	J(CALL(sub_10d69,0));	// 52                  call    sub_10D69 ;~ 01A2:002D
 cs=0x1a2;eip=0x000030; 	J(CALL(sub_1b2c6,0));	// 53                  call    sub_1B2C6 ;~ 01A2:0030
 cs=0x1a2;eip=0x000033; 	T(CMP(ax, 0));	// 54                  cmp     ax, 0 ;~ 01A2:0033
-cs=0x1a2;eip=0x000036; 	J(JNS(loc_1003b));	// 55                  jns     short loc_1003B ;~ 01A2:0036
+cs=0x1a2;eip=0x000036; 	J(JMP(loc_1003b));	// 55                  jns     short loc_1003B ;~ 01A2:0036
 cs=0x1a2;eip=0x000038; 	J(return _group2(m2c::kloc_11190, _state););	// 56                  jmp     loc_11190 ;~ 01A2:0038
 loc_1003b:
 	// 4369 
-cs=0x1a2;eip=0x00003b; 	J(JZ(loc_10040));	// 60                  jz      short loc_10040 ;~ 01A2:003B
+cs=0x1a2;eip=0x00003b; 	J(JMP(loc_10040));	// 60                  jz      short loc_10040 ;~ 01A2:003B
 cs=0x1a2;eip=0x00003d; 	J(return _group2(m2c::kloc_111a4, _state););	// 61                  jmp     loc_111A4 ;~ 01A2:003D
 loc_10040:
 	// 4370 
@@ -2742,7 +2742,7 @@ cs=0x1a2;eip=0x0014f7; 	T(ax = seg_offset(seg002););	// 3124                  mo
 cs=0x1a2;eip=0x0014fa; 	T(ds = ax;);	// 3125                  mov     ds, ax ;~ 01A2:14FA
 cs=0x1a2;eip=0x0014fc; 	X(POP(ax));	// 3127                  pop     ax ;~ 01A2:14FC
 cs=0x1a2;eip=0x0014fd; 	X(PUSH(word_1f180));	// 3128                  push    word_1F180 ;~ 01A2:14FD
-cs=0x1a2;eip=0x001501; 	J(CALL(__dispatch_call,off_11490));	// 3129                  call    cs:off_11490 ;~ 01A2:1501
+cs=0x1a2;eip=0x001501; 	J(CALLF(__dispatch_call,off_11490));	// 3129                  call    cs:off_11490 ;~ 01A2:1501
 cs=0x1a2;eip=0x001506; 	X(POP(word_1f180));	// 3130                  pop     word_1F180 ;~ 01A2:1506
 loc_1150a:
 	// 4565 
@@ -2796,10 +2796,10 @@ cs=0x1a2;eip=0x001567; __disp=dword_1148c;
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_114e5: 	goto loc_114e5;
-        case m2c::kloc_1150a: 	goto loc_1150a;
+                case m2c::kloc_1150a: 	goto loc_1150a;
         case m2c::kloc_1154d: 	goto loc_1154d;
         case m2c::kloc_11564: 	goto loc_11564;
+        case m2c::kseg000_14e5_proc: 	goto seg000_14e5_proc;
         case m2c::ksub_1149c: 	goto sub_1149c;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
@@ -4979,7 +4979,7 @@ cs=0x1a2;eip=0x001f09; 	T(SHL(ax, 1));	// 4876                  shl     ax, 1 ;~
 cs=0x1a2;eip=0x001f0b; 	T(ADD(bx, ax));	// 4877                  add     bx, ax ;~ 01A2:1F0B
 cs=0x1a2;eip=0x001f0d; 	T(MOV(dx, *(dw*)(raddr(es,bx))));	// 4878                  mov     dx, es:[bx] ;~ 01A2:1F0D
 cs=0x1a2;eip=0x001f10; 	X(word_1f8fc = dx;);	// 4879                  mov     ds:word_1F8FC, dx ;~ 01A2:1F10
-cs=0x1a2;eip=0x001f14; 	J(CALL(__dispatch_call,off_1f8f8));	// 4880                  call    ds:off_1F8F8 ;~ 01A2:1F14
+cs=0x1a2;eip=0x001f14; 	J(CALLF(__dispatch_call,off_1f8f8));	// 4880                  call    ds:off_1F8F8 ;~ 01A2:1F14
 cs=0x1a2;eip=0x001f18; 	X(POP(es));	// 4881                  pop     es ;~ 01A2:1F18
 cs=0x1a2;eip=0x001f19; 	X(POP(cx));	// 4882                  pop     cx ;~ 01A2:1F19
 cs=0x1a2;eip=0x001f1a; 	X(POP(ax));	// 4883                  pop     ax ;~ 01A2:1F1A
@@ -8448,7 +8448,7 @@ cs=0x1a2;eip=0x003344; 	T(MOV(si, *(dw*)(raddr(es,bx+si))));	// 7839            
 cs=0x1a2;eip=0x003347; 	X(POP(bx));	// 7840                  pop     bx ;~ 01A2:3347
 cs=0x1a2;eip=0x003348; 	X(POP(es));	// 7841                  pop     es ;~ 01A2:3348
 cs=0x1a2;eip=0x003349; 	X(word_1f8fc = si;);	// 7843                  mov     ds:word_1F8FC, si ;~ 01A2:3349
-cs=0x1a2;eip=0x00334d; 	J(CALL(__dispatch_call,off_1f8f8));	// 7844                  call    ds:off_1F8F8 ;~ 01A2:334D
+cs=0x1a2;eip=0x00334d; 	J(CALLF(__dispatch_call,off_1f8f8));	// 7844                  call    ds:off_1F8F8 ;~ 01A2:334D
 cs=0x1a2;eip=0x003351; 	J(RETN(0));	// 7845                  retn ;~ 01A2:3351
 loc_13352:
 	// 4909 
@@ -10415,7 +10415,7 @@ cs=0x1a2;eip=0x003c9d; 	J(RETN(0));	// 9329                  retn ;~ 01A2:3C9D
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kseg000_3c91_proc: 	goto seg000_3c91_proc;
+                case m2c::kloc_13c91: 	goto loc_13c91;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -10562,8 +10562,8 @@ cs=0x1a2;eip=0x003cdc; 	J(RETN(0));	// 9386                  retn ;~ 01A2:3CDC
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_13cc8: 	goto loc_13cc8;
-        case m2c::kloc_13cd2: 	goto loc_13cd2;
+                case m2c::kloc_13cd2: 	goto loc_13cd2;
+        case m2c::kseg000_3cc8_proc: 	goto seg000_3cc8_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -10719,7 +10719,7 @@ cs=0x1a2;eip=0x003d5f; 	J(return sub_13ce7(m2c::kloc_13d10, _state););	// 9470  
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_13d4b: 	goto loc_13d4b;
+                case m2c::kseg000_3d4b_proc: 	goto seg000_3d4b_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -17313,7 +17313,7 @@ cs=0x1a2;eip=0x005fb0; 	T(ADD(bp, ax));	// 14825                  add     bp, ax
 cs=0x1a2;eip=0x005fb2; 	X(PUSH(*(dw*)(((db*)&off_1f736)+2)));	// 14826                  push    word ptr ds:off_1F736+2 ;~ 01A2:5FB2
 cs=0x1a2;eip=0x005fb6; 	X(PUSH(si));	// 14827                  push    si ;~ 01A2:5FB6
 cs=0x1a2;eip=0x005fb7; 	X(word_1f8fc = cx;);	// 14828                  mov     ds:word_1F8FC, cx ;~ 01A2:5FB7
-cs=0x1a2;eip=0x005fbb; 	J(CALL(__dispatch_call,off_1f8f8));	// 14829                  call    ds:off_1F8F8 ;~ 01A2:5FBB
+cs=0x1a2;eip=0x005fbb; 	J(CALLF(__dispatch_call,off_1f8f8));	// 14829                  call    ds:off_1F8F8 ;~ 01A2:5FBB
 cs=0x1a2;eip=0x005fbf; 	X(POP(si));	// 14830                  pop     si ;~ 01A2:5FBF
 cs=0x1a2;eip=0x005fc0; 	X(POP(*(dw*)(((db*)&off_1f736)+2)));	// 14831                  pop     word ptr ds:off_1F736+2 ;~ 01A2:5FC0
 cs=0x1a2;eip=0x005fc4; 	X(DEC(*(dw*)(((db*)&off_1f736)+2)));	// 14832                  dec     word ptr ds:off_1F736+2 ;~ 01A2:5FC4
@@ -17431,7 +17431,7 @@ cs=0x1a2;eip=0x006032; 	T(ADD(si, 2));	// 14905                  add     si, 2 ;
 cs=0x1a2;eip=0x006035; 	X(POP(bx));	// 14906                  pop     bx ;~ 01A2:6035
 cs=0x1a2;eip=0x006036; 	X(POP(es));	// 14907                  pop     es ;~ 01A2:6036
 cs=0x1a2;eip=0x006037; 	X(word_1f8fc = si;);	// 14909                  mov     ds:word_1F8FC, si ;~ 01A2:6037
-cs=0x1a2;eip=0x00603b; 	J(CALL(__dispatch_call,off_1f8f8));	// 14910                  call    ds:off_1F8F8 ;~ 01A2:603B
+cs=0x1a2;eip=0x00603b; 	J(CALLF(__dispatch_call,off_1f8f8));	// 14910                  call    ds:off_1F8F8 ;~ 01A2:603B
 cs=0x1a2;eip=0x00603f; 	X(POP(si));	// 14911                  pop     si ;~ 01A2:603F
 cs=0x1a2;eip=0x006040; 	J(RETN(0));	// 14912                  retn ;~ 01A2:6040
 
@@ -19124,7 +19124,7 @@ cs=0x1a2;eip=0x006966; 	X(POP(bx));	// 16343                  pop     bx ;~ 01A2
 cs=0x1a2;eip=0x006967; 	X(POP(es));	// 16344                  pop     es ;~ 01A2:6967
 cs=0x1a2;eip=0x006968; 	X(PUSH(bx));	// 16345                  push    bx ;~ 01A2:6968
 cs=0x1a2;eip=0x006969; 	X(word_1f8fc = di;);	// 16346                  mov     ds:word_1F8FC, di ;~ 01A2:6969
-cs=0x1a2;eip=0x00696d; 	J(CALL(__dispatch_call,off_1f8f8));	// 16347                  call    ds:off_1F8F8 ;~ 01A2:696D
+cs=0x1a2;eip=0x00696d; 	J(CALLF(__dispatch_call,off_1f8f8));	// 16347                  call    ds:off_1F8F8 ;~ 01A2:696D
 cs=0x1a2;eip=0x006971; 	X(POP(bx));	// 16348                  pop     bx ;~ 01A2:6971
 cs=0x1a2;eip=0x006972; 	J(JMP(loc_169a1));	// 16349                  jmp     short loc_169A1 ;~ 01A2:6972
 loc_16974:
@@ -19405,7 +19405,8 @@ cs=0x1a2;eip=0x006b01; 	J(RETN(0));	// 16585                  retn ;~ 01A2:6B01
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_16a67: 	goto loc_16a67;
+                case m2c::kloc_16a37: 	goto loc_16a37;
+        case m2c::kloc_16a67: 	goto loc_16a67;
         case m2c::kloc_16a8a: 	goto loc_16a8a;
         case m2c::kloc_16a91: 	goto loc_16a91;
         case m2c::kloc_16a96: 	goto loc_16a96;
@@ -19414,7 +19415,6 @@ cs=0x1a2;eip=0x006b01; 	J(RETN(0));	// 16585                  retn ;~ 01A2:6B01
         case m2c::kloc_16ac9: 	goto loc_16ac9;
         case m2c::kloc_16af6: 	goto loc_16af6;
         case m2c::klocret_16b01: 	goto locret_16b01;
-        case m2c::kseg000_6a37_proc: 	goto seg000_6a37_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -19676,9 +19676,9 @@ cs=0x1a2;eip=0x006c53; 	J(RETN(0));	// 16789                  retn ;~ 01A2:6C53
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_16c3f: 	goto loc_16c3f;
-        case m2c::kloc_16c49: 	goto loc_16c49;
+                case m2c::kloc_16c49: 	goto loc_16c49;
         case m2c::kloc_16c50: 	goto loc_16c50;
+        case m2c::kseg000_6c3f_proc: 	goto seg000_6c3f_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -20569,7 +20569,7 @@ cs=0x1a2;eip=0x0072b1; 	T(MUL1_2(dx));	// 17737                  mul     dx ;~ 0
 cs=0x1a2;eip=0x0072b3; 	T(ADD(bx, ax));	// 17738                  add     bx, ax ;~ 01A2:72B3
 cs=0x1a2;eip=0x0072b5; 	T(MOV(ax, *(dw*)(raddr(es,bx))));	// 17739                  mov     ax, es:[bx] ;~ 01A2:72B5
 cs=0x1a2;eip=0x0072b8; 	X(word_1f8fc = ax;);	// 17740                  mov     ds:word_1F8FC, ax ;~ 01A2:72B8
-cs=0x1a2;eip=0x0072bb; 	J(CALL(__dispatch_call,off_1f8f8));	// 17741                  call    ds:off_1F8F8 ;~ 01A2:72BB
+cs=0x1a2;eip=0x0072bb; 	J(CALLF(__dispatch_call,off_1f8f8));	// 17741                  call    ds:off_1F8F8 ;~ 01A2:72BB
 cs=0x1a2;eip=0x0072bf; 	X(POP(ds));	// 17742                  pop     ds ;~ 01A2:72BF
 cs=0x1a2;eip=0x0072c0; 	X(POP(es));	// 17744                  pop     es ;~ 01A2:72C0
 cs=0x1a2;eip=0x0072c1; 	X(POP(di));	// 17745                  pop     di ;~ 01A2:72C1
@@ -22926,7 +22926,8 @@ cs=0x1a2;eip=0x0080cb; 	J(RETN(0));	// 20007                  retn ;~ 01A2:80CB
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_17f81: 	goto loc_17f81;
+                case m2c::kloc_17f3c: 	goto loc_17f3c;
+        case m2c::kloc_17f81: 	goto loc_17f81;
         case m2c::kloc_17fb0: 	goto loc_17fb0;
         case m2c::kloc_17ffc: 	goto loc_17ffc;
         case m2c::kloc_18003: 	goto loc_18003;
@@ -22939,7 +22940,6 @@ cs=0x1a2;eip=0x0080cb; 	J(RETN(0));	// 20007                  retn ;~ 01A2:80CB
         case m2c::kloc_180a0: 	goto loc_180a0;
         case m2c::kloc_180ab: 	goto loc_180ab;
         case m2c::kloc_180c5: 	goto loc_180c5;
-        case m2c::kseg000_7f3c_proc: 	goto seg000_7f3c_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -23702,7 +23702,8 @@ cs=0x1a2;eip=0x0084d8; 	J(RETN(0));	// 20714                  retn ;~ 01A2:84D8
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_182e8: 	goto loc_182e8;
+                case m2c::kloc_18294: 	goto loc_18294;
+        case m2c::kloc_182e8: 	goto loc_182e8;
         case m2c::kloc_182eb: 	goto loc_182eb;
         case m2c::kloc_182ee: 	goto loc_182ee;
         case m2c::kloc_182f4: 	goto loc_182f4;
@@ -23741,7 +23742,6 @@ cs=0x1a2;eip=0x0084d8; 	J(RETN(0));	// 20714                  retn ;~ 01A2:84D8
         case m2c::klocret_18428: 	goto locret_18428;
         case m2c::klocret_18468: 	goto locret_18468;
         case m2c::klocret_1847f: 	goto locret_1847f;
-        case m2c::kseg000_8294_proc: 	goto seg000_8294_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -24073,7 +24073,7 @@ cs=0x1a2;eip=0x008690; 	T(ADD(bx, ax));	// 20976                  add     bx, ax
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_1868b: 	goto loc_1868b;
+                case m2c::kseg000_868b_proc: 	goto seg000_868b_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -24120,9 +24120,9 @@ cs=0x1a2;eip=0x0086cf; 	J(return sub_186d1(m2c::kloc_186d5, _state););	// 21024 
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_186b1: 	goto loc_186b1;
-        case m2c::kloc_186cb: 	goto loc_186cb;
+                case m2c::kloc_186cb: 	goto loc_186cb;
         case m2c::klocret_186ca: 	goto locret_186ca;
+        case m2c::kseg000_86b1_proc: 	goto seg000_86b1_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -24937,7 +24937,7 @@ cs=0x1a2;eip=0x00899c; 	J(return sub_1899e(m2c::kloc_189a9, _state););	// 21571 
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_18991: 	goto loc_18991;
+                case m2c::kseg000_8991_proc: 	goto seg000_8991_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -28444,6 +28444,8 @@ cs=0x1a2;eip=0x009d44; 	X(POP(dx));	// 24820                  pop     dx ;~ 01A2
 cs=0x1a2;eip=0x009d45; 	X(POP(cx));	// 24821                  pop     cx ;~ 01A2:9D45
 cs=0x1a2;eip=0x009d46; 	X(POP(bx));	// 24822                  pop     bx ;~ 01A2:9D46
 cs=0x1a2;eip=0x009d47; 	X(POP(ax));	// 24823                  pop     ax ;~ 01A2:9D47
+byte_1f886 = 2;
+JMP(loc_19d70);
 cs=0x1a2;eip=0x009d48; 	J(JNZ(loc_19d70));	// 24824                  jnz     short loc_19D70 ;~ 01A2:9D48
 cs=0x1a2;eip=0x009d4a; 	X(PUSH(ax));	// 24825                  push    ax ;~ 01A2:9D4A
 cs=0x1a2;eip=0x009d4b; 	X(PUSH(ax));	// 24826                  push    ax ;~ 01A2:9D4B
@@ -28458,6 +28460,7 @@ cs=0x1a2;eip=0x009d53; 	X(PUSH(ds));	// 24834                  push    ds ;~ 01A
 cs=0x1a2;eip=0x009d54; 	J(CALL(sub_1c566,0));	// 24835                  call    sub_1C566 ;~ 01A2:9D54
 cs=0x1a2;eip=0x009d57; 	J(JNZ(loc_19d5f));	// 24836                  jnz     short loc_19D5F ;~ 01A2:9D57
 cs=0x1a2;eip=0x009d59; 	J(CALL(sub_1c5dd,0));	// 24837                  call    sub_1C5DD ;~ 01A2:9D59
+al=2; //language
 cs=0x1a2;eip=0x009d5c; 	X(byte_1f886 = al;);	// 24838                  mov     ds:byte_1F886, al ;~ 01A2:9D5C
 loc_19d5f:
 	// 6007 
@@ -29292,7 +29295,7 @@ cs=0x1a2;eip=0x00a14b; 	J(RETN(0));	// 25559                  retn ;~ 01A2:A14B
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_1a129: 	goto loc_1a129;
+                case m2c::kseg000_a129_proc: 	goto seg000_a129_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -30907,14 +30910,14 @@ cs=0x1a2;eip=0x00ab56; 	X(byte_6fb93 = al;);	// 27102                  mov     s
 loc_1ab5a:
 	// 6125 
 cs=0x1a2;eip=0x00ab5a; 	T(LODSW);	// 27105                  lodsw ;~ 01A2:AB5A
-cs=0x1a2;eip=0x00ab5b; 	X(OR(*(raddr(es,di)), al));	// 27106                  or      es:[di], al ;~ 01A2:AB5B
+cs=0x1a2;eip=0x00ab5b; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27106                  or      es:[di], al ;~ 01A2:AB5B
 cs=0x1a2;eip=0x00ab5e; 	T(INC(di));	// 27107                  inc     di ;~ 01A2:AB5E
-cs=0x1a2;eip=0x00ab5f; 	X(OR(*(raddr(es,di)), ah));	// 27108                  or      es:[di], ah ;~ 01A2:AB5F
+cs=0x1a2;eip=0x00ab5f; 	S( m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | ah));	// 27108                  or      es:[di], ah ;~ 01A2:AB5F
 cs=0x1a2;eip=0x00ab62; 	T(INC(di));	// 27109                  inc     di ;~ 01A2:AB62
 cs=0x1a2;eip=0x00ab63; 	X(DEC(byte_6fb93));	// 27110                  dec     ss:byte_6FB93 ;~ 01A2:AB63
 cs=0x1a2;eip=0x00ab68; 	J(JNZ(loc_1ab5a));	// 27111                  jnz     short loc_1AB5A ;~ 01A2:AB68
 cs=0x1a2;eip=0x00ab6a; 	T(MOV(al, *(raddr(ds,si))));	// 27112                  mov     al, [si] ;~ 01A2:AB6A
-cs=0x1a2;eip=0x00ab6c; 	X(OR(*(raddr(es,di)), al));	// 27113                  or      es:[di], al ;~ 01A2:AB6C
+cs=0x1a2;eip=0x00ab6c; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27113                  or      es:[di], al ;~ 01A2:AB6C
 cs=0x1a2;eip=0x00ab6f; 	T(ADD(si, *(dw*)(&unk_6fb94)));	// 27114                  add     si, word ptr ss:unk_6FB94 ;~ 01A2:AB6F
 cs=0x1a2;eip=0x00ab74; 	T(ADD(di, *(dw*)(&unk_6fb94)));	// 27115                  add     di, word ptr ss:unk_6FB94 ;~ 01A2:AB74
 cs=0x1a2;eip=0x00ab79; 	T(DEC(bl));	// 27116                  dec     bl ;~ 01A2:AB79
@@ -30943,12 +30946,12 @@ cs=0x1a2;eip=0x00aba1; 	X(byte_6fb93 = al;);	// 27153                  mov     s
 loc_1aba5:
 	// 6127 
 cs=0x1a2;eip=0x00aba5; 	T(LODSW);	// 27156                  lodsw ;~ 01A2:ABA5
-cs=0x1a2;eip=0x00aba6; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27157                  or      es:[di], ax ;~ 01A2:ABA6
+cs=0x1a2;eip=0x00aba6; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27157                  or      es:[di], ax ;~ 01A2:ABA6
 cs=0x1a2;eip=0x00aba9; 	T(ADD(di, 2));	// 27158                  add     di, 2 ;~ 01A2:ABA9
 cs=0x1a2;eip=0x00abac; 	X(DEC(byte_6fb93));	// 27159                  dec     ss:byte_6FB93 ;~ 01A2:ABAC
 cs=0x1a2;eip=0x00abb1; 	J(JNZ(loc_1aba5));	// 27160                  jnz     short loc_1ABA5 ;~ 01A2:ABB1
 cs=0x1a2;eip=0x00abb3; 	T(MOV(al, *(raddr(ds,si))));	// 27161                  mov     al, [si] ;~ 01A2:ABB3
-cs=0x1a2;eip=0x00abb5; 	X(OR(*(raddr(es,di)), al));	// 27162                  or      es:[di], al ;~ 01A2:ABB5
+cs=0x1a2;eip=0x00abb5; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27162                  or      es:[di], al ;~ 01A2:ABB5
 cs=0x1a2;eip=0x00abb8; 	T(ADD(si, *(dw*)(&unk_6fb94)));	// 27163                  add     si, word ptr ss:unk_6FB94 ;~ 01A2:ABB8
 cs=0x1a2;eip=0x00abbd; 	T(ADD(di, *(dw*)(&unk_6fb94)));	// 27164                  add     di, word ptr ss:unk_6FB94 ;~ 01A2:ABBD
 cs=0x1a2;eip=0x00abc2; 	T(DEC(dl));	// 27165                  dec     dl ;~ 01A2:ABC2
@@ -30971,12 +30974,12 @@ cs=0x1a2;eip=0x00abde; 	X(byte_6fb93 = al;);	// 27183                  mov     s
 loc_1abe2:
 	// 6129 
 cs=0x1a2;eip=0x00abe2; 	T(LODSW);	// 27186                  lodsw ;~ 01A2:ABE2
-cs=0x1a2;eip=0x00abe3; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27187                  or      es:[di], ax ;~ 01A2:ABE3
+cs=0x1a2;eip=0x00abe3; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27187                  or      es:[di], ax ;~ 01A2:ABE3
 cs=0x1a2;eip=0x00abe6; 	T(ADD(di, 2));	// 27188                  add     di, 2 ;~ 01A2:ABE6
 cs=0x1a2;eip=0x00abe9; 	X(DEC(byte_6fb93));	// 27189                  dec     ss:byte_6FB93 ;~ 01A2:ABE9
 cs=0x1a2;eip=0x00abee; 	J(JNZ(loc_1abe2));	// 27190                  jnz     short loc_1ABE2 ;~ 01A2:ABEE
 cs=0x1a2;eip=0x00abf0; 	T(MOV(al, *(raddr(ds,si))));	// 27191                  mov     al, [si] ;~ 01A2:ABF0
-cs=0x1a2;eip=0x00abf2; 	X(OR(*(raddr(es,di)), al));	// 27192                  or      es:[di], al ;~ 01A2:ABF2
+cs=0x1a2;eip=0x00abf2; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27192                  or      es:[di], al ;~ 01A2:ABF2
 cs=0x1a2;eip=0x00abf5; 	T(ADD(si, *(dw*)(&unk_6fb94)));	// 27193                  add     si, word ptr ss:unk_6FB94 ;~ 01A2:ABF5
 cs=0x1a2;eip=0x00abfa; 	T(ADD(di, *(dw*)(&unk_6fb94)));	// 27194                  add     di, word ptr ss:unk_6FB94 ;~ 01A2:ABFA
 cs=0x1a2;eip=0x00abff; 	T(DEC(dl));	// 27195                  dec     dl ;~ 01A2:ABFF
@@ -30999,12 +31002,12 @@ cs=0x1a2;eip=0x00ac1b; 	X(byte_6fb93 = al;);	// 27213                  mov     s
 loc_1ac1f:
 	// 6131 
 cs=0x1a2;eip=0x00ac1f; 	T(LODSW);	// 27216                  lodsw ;~ 01A2:AC1F
-cs=0x1a2;eip=0x00ac20; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27217                  or      es:[di], ax ;~ 01A2:AC20
+cs=0x1a2;eip=0x00ac20; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27217                  or      es:[di], ax ;~ 01A2:AC20
 cs=0x1a2;eip=0x00ac23; 	T(ADD(di, 2));	// 27218                  add     di, 2 ;~ 01A2:AC23
 cs=0x1a2;eip=0x00ac26; 	X(DEC(byte_6fb93));	// 27219                  dec     ss:byte_6FB93 ;~ 01A2:AC26
 cs=0x1a2;eip=0x00ac2b; 	J(JNZ(loc_1ac1f));	// 27220                  jnz     short loc_1AC1F ;~ 01A2:AC2B
 cs=0x1a2;eip=0x00ac2d; 	T(MOV(al, *(raddr(ds,si))));	// 27221                  mov     al, [si] ;~ 01A2:AC2D
-cs=0x1a2;eip=0x00ac2f; 	X(OR(*(raddr(es,di)), al));	// 27222                  or      es:[di], al ;~ 01A2:AC2F
+cs=0x1a2;eip=0x00ac2f; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27222                  or      es:[di], al ;~ 01A2:AC2F
 cs=0x1a2;eip=0x00ac32; 	T(ADD(si, *(dw*)(&unk_6fb94)));	// 27223                  add     si, word ptr ss:unk_6FB94 ;~ 01A2:AC32
 cs=0x1a2;eip=0x00ac37; 	T(ADD(di, *(dw*)(&unk_6fb94)));	// 27224                  add     di, word ptr ss:unk_6FB94 ;~ 01A2:AC37
 cs=0x1a2;eip=0x00ac3c; 	T(DEC(dl));	// 27225                  dec     dl ;~ 01A2:AC3C
@@ -31027,12 +31030,12 @@ cs=0x1a2;eip=0x00ac58; 	X(byte_6fb93 = al;);	// 27243                  mov     s
 loc_1ac5c:
 	// 6133 
 cs=0x1a2;eip=0x00ac5c; 	T(LODSW);	// 27246                  lodsw ;~ 01A2:AC5C
-cs=0x1a2;eip=0x00ac5d; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27247                  or      es:[di], ax ;~ 01A2:AC5D
+cs=0x1a2;eip=0x00ac5d; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27247                  or      es:[di], ax ;~ 01A2:AC5D
 cs=0x1a2;eip=0x00ac60; 	T(ADD(di, 2));	// 27248                  add     di, 2 ;~ 01A2:AC60
 cs=0x1a2;eip=0x00ac63; 	X(DEC(byte_6fb93));	// 27249                  dec     ss:byte_6FB93 ;~ 01A2:AC63
 cs=0x1a2;eip=0x00ac68; 	J(JNZ(loc_1ac5c));	// 27250                  jnz     short loc_1AC5C ;~ 01A2:AC68
 cs=0x1a2;eip=0x00ac6a; 	T(MOV(al, *(raddr(ds,si))));	// 27251                  mov     al, [si] ;~ 01A2:AC6A
-cs=0x1a2;eip=0x00ac6c; 	X(OR(*(raddr(es,di)), al));	// 27252                  or      es:[di], al ;~ 01A2:AC6C
+cs=0x1a2;eip=0x00ac6c; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27252                  or      es:[di], al ;~ 01A2:AC6C
 cs=0x1a2;eip=0x00ac6f; 	T(ADD(si, *(dw*)(&unk_6fb94)));	// 27253                  add     si, word ptr ss:unk_6FB94 ;~ 01A2:AC6F
 cs=0x1a2;eip=0x00ac74; 	T(ADD(di, *(dw*)(&unk_6fb94)));	// 27254                  add     di, word ptr ss:unk_6FB94 ;~ 01A2:AC74
 cs=0x1a2;eip=0x00ac79; 	T(DEC(dl));	// 27255                  dec     dl ;~ 01A2:AC79
@@ -31052,9 +31055,9 @@ cs=0x1a2;eip=0x00ac8a; 	X(byte_6fb93 = al;);	// 27269                  mov     s
 loc_1ac8e:
 	// 6136 
 cs=0x1a2;eip=0x00ac8e; 	T(LODSW);	// 27272                  lodsw ;~ 01A2:AC8E
-cs=0x1a2;eip=0x00ac8f; 	X(OR(*(raddr(es,di)), al));	// 27273                  or      es:[di], al ;~ 01A2:AC8F
+cs=0x1a2;eip=0x00ac8f; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | al));	// 27273                  or      es:[di], al ;~ 01A2:AC8F
 cs=0x1a2;eip=0x00ac92; 	T(INC(di));	// 27274                  inc     di ;~ 01A2:AC92
-cs=0x1a2;eip=0x00ac93; 	X(OR(*(raddr(es,di)), ah));	// 27275                  or      es:[di], ah ;~ 01A2:AC93
+cs=0x1a2;eip=0x00ac93; 	S(m2c::setdata(m2c::raddr_(es,di), m2c::getdata(*m2c::raddr_(es,di)) | ah));	// 27275                  or      es:[di], ah ;~ 01A2:AC93
 cs=0x1a2;eip=0x00ac96; 	T(INC(di));	// 27276                  inc     di ;~ 01A2:AC96
 cs=0x1a2;eip=0x00ac97; 	X(DEC(byte_6fb93));	// 27277                  dec     ss:byte_6FB93 ;~ 01A2:AC97
 cs=0x1a2;eip=0x00ac9c; 	J(JNZ(loc_1ac8e));	// 27278                  jnz     short loc_1AC8E ;~ 01A2:AC9C
@@ -31086,7 +31089,7 @@ cs=0x1a2;eip=0x00acd0; 	X(byte_6fb93 = al;);	// 27318                  mov     s
 loc_1acd4:
 	// 6138 
 cs=0x1a2;eip=0x00acd4; 	T(LODSW);	// 27321                  lodsw ;~ 01A2:ACD4
-cs=0x1a2;eip=0x00acd5; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27322                  or      es:[di], ax ;~ 01A2:ACD5
+cs=0x1a2;eip=0x00acd5; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27322                  or      es:[di], ax ;~ 01A2:ACD5
 cs=0x1a2;eip=0x00acd8; 	T(ADD(di, 2));	// 27323                  add     di, 2 ;~ 01A2:ACD8
 cs=0x1a2;eip=0x00acdb; 	X(DEC(byte_6fb93));	// 27324                  dec     ss:byte_6FB93 ;~ 01A2:ACDB
 cs=0x1a2;eip=0x00ace0; 	J(JNZ(loc_1acd4));	// 27325                  jnz     short loc_1ACD4 ;~ 01A2:ACE0
@@ -31112,7 +31115,7 @@ cs=0x1a2;eip=0x00ad08; 	X(byte_6fb93 = al;);	// 27346                  mov     s
 loc_1ad0c:
 	// 6140 
 cs=0x1a2;eip=0x00ad0c; 	T(LODSW);	// 27349                  lodsw ;~ 01A2:AD0C
-cs=0x1a2;eip=0x00ad0d; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27350                  or      es:[di], ax ;~ 01A2:AD0D
+cs=0x1a2;eip=0x00ad0d; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27350                  or      es:[di], ax ;~ 01A2:AD0D
 cs=0x1a2;eip=0x00ad10; 	T(ADD(di, 2));	// 27351                  add     di, 2 ;~ 01A2:AD10
 cs=0x1a2;eip=0x00ad13; 	X(DEC(byte_6fb93));	// 27352                  dec     ss:byte_6FB93 ;~ 01A2:AD13
 cs=0x1a2;eip=0x00ad18; 	J(JNZ(loc_1ad0c));	// 27353                  jnz     short loc_1AD0C ;~ 01A2:AD18
@@ -31138,7 +31141,7 @@ cs=0x1a2;eip=0x00ad40; 	X(byte_6fb93 = al;);	// 27374                  mov     s
 loc_1ad44:
 	// 6142 
 cs=0x1a2;eip=0x00ad44; 	T(LODSW);	// 27377                  lodsw ;~ 01A2:AD44
-cs=0x1a2;eip=0x00ad45; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27378                  or      es:[di], ax ;~ 01A2:AD45
+cs=0x1a2;eip=0x00ad45; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27378                  or      es:[di], ax ;~ 01A2:AD45
 cs=0x1a2;eip=0x00ad48; 	T(ADD(di, 2));	// 27379                  add     di, 2 ;~ 01A2:AD48
 cs=0x1a2;eip=0x00ad4b; 	X(DEC(byte_6fb93));	// 27380                  dec     ss:byte_6FB93 ;~ 01A2:AD4B
 cs=0x1a2;eip=0x00ad50; 	J(JNZ(loc_1ad44));	// 27381                  jnz     short loc_1AD44 ;~ 01A2:AD50
@@ -31164,7 +31167,7 @@ cs=0x1a2;eip=0x00ad78; 	X(byte_6fb93 = al;);	// 27402                  mov     s
 loc_1ad7c:
 	// 6144 
 cs=0x1a2;eip=0x00ad7c; 	T(LODSW);	// 27405                  lodsw ;~ 01A2:AD7C
-cs=0x1a2;eip=0x00ad7d; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27406                  or      es:[di], ax ;~ 01A2:AD7D
+cs=0x1a2;eip=0x00ad7d; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27406                  or      es:[di], ax ;~ 01A2:AD7D
 cs=0x1a2;eip=0x00ad80; 	T(ADD(di, 2));	// 27407                  add     di, 2 ;~ 01A2:AD80
 cs=0x1a2;eip=0x00ad83; 	X(DEC(byte_6fb93));	// 27408                  dec     ss:byte_6FB93 ;~ 01A2:AD83
 cs=0x1a2;eip=0x00ad88; 	J(JNZ(loc_1ad7c));	// 27409                  jnz     short loc_1AD7C ;~ 01A2:AD88
@@ -31296,7 +31299,7 @@ cs=0x1a2;eip=0x00ae2d; 	X(byte_6fb93 = al;);	// 27536                  mov     s
 loc_1ae31:
 	// 6149 
 cs=0x1a2;eip=0x00ae31; 	T(LODSW);	// 27539                  lodsw ;~ 01A2:AE31
-cs=0x1a2;eip=0x00ae32; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27540                  or      es:[di], ax ;~ 01A2:AE32
+cs=0x1a2;eip=0x00ae32; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27540                  or      es:[di], ax ;~ 01A2:AE32
 cs=0x1a2;eip=0x00ae35; 	T(ADD(di, 2));	// 27541                  add     di, 2 ;~ 01A2:AE35
 cs=0x1a2;eip=0x00ae38; 	X(DEC(byte_6fb93));	// 27542                  dec     ss:byte_6FB93 ;~ 01A2:AE38
 cs=0x1a2;eip=0x00ae3d; 	J(JNZ(loc_1ae31));	// 27543                  jnz     short loc_1AE31 ;~ 01A2:AE3D
@@ -31324,7 +31327,7 @@ cs=0x1a2;eip=0x00ae6a; 	X(byte_6fb93 = al;);	// 27566                  mov     s
 loc_1ae6e:
 	// 6151 
 cs=0x1a2;eip=0x00ae6e; 	T(LODSW);	// 27569                  lodsw ;~ 01A2:AE6E
-cs=0x1a2;eip=0x00ae6f; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27570                  or      es:[di], ax ;~ 01A2:AE6F
+cs=0x1a2;eip=0x00ae6f; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27570                  or      es:[di], ax ;~ 01A2:AE6F
 cs=0x1a2;eip=0x00ae72; 	T(ADD(di, 2));	// 27571                  add     di, 2 ;~ 01A2:AE72
 cs=0x1a2;eip=0x00ae75; 	X(DEC(byte_6fb93));	// 27572                  dec     ss:byte_6FB93 ;~ 01A2:AE75
 cs=0x1a2;eip=0x00ae7a; 	J(JNZ(loc_1ae6e));	// 27573                  jnz     short loc_1AE6E ;~ 01A2:AE7A
@@ -31352,7 +31355,7 @@ cs=0x1a2;eip=0x00aea7; 	X(byte_6fb93 = al;);	// 27596                  mov     s
 loc_1aeab:
 	// 6153 
 cs=0x1a2;eip=0x00aeab; 	T(LODSW);	// 27599                  lodsw ;~ 01A2:AEAB
-cs=0x1a2;eip=0x00aeac; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27600                  or      es:[di], ax ;~ 01A2:AEAC
+cs=0x1a2;eip=0x00aeac; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27600                  or      es:[di], ax ;~ 01A2:AEAC
 cs=0x1a2;eip=0x00aeaf; 	T(ADD(di, 2));	// 27601                  add     di, 2 ;~ 01A2:AEAF
 cs=0x1a2;eip=0x00aeb2; 	X(DEC(byte_6fb93));	// 27602                  dec     ss:byte_6FB93 ;~ 01A2:AEB2
 cs=0x1a2;eip=0x00aeb7; 	J(JNZ(loc_1aeab));	// 27603                  jnz     short loc_1AEAB ;~ 01A2:AEB7
@@ -31380,7 +31383,7 @@ cs=0x1a2;eip=0x00aee4; 	X(byte_6fb93 = al;);	// 27626                  mov     s
 loc_1aee8:
 	// 6155 
 cs=0x1a2;eip=0x00aee8; 	T(LODSW);	// 27629                  lodsw ;~ 01A2:AEE8
-cs=0x1a2;eip=0x00aee9; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27630                  or      es:[di], ax ;~ 01A2:AEE9
+cs=0x1a2;eip=0x00aee9; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27630                  or      es:[di], ax ;~ 01A2:AEE9
 cs=0x1a2;eip=0x00aeec; 	T(ADD(di, 2));	// 27631                  add     di, 2 ;~ 01A2:AEEC
 cs=0x1a2;eip=0x00aeef; 	X(DEC(byte_6fb93));	// 27632                  dec     ss:byte_6FB93 ;~ 01A2:AEEF
 cs=0x1a2;eip=0x00aef4; 	J(JNZ(loc_1aee8));	// 27633                  jnz     short loc_1AEE8 ;~ 01A2:AEF4
@@ -31417,7 +31420,7 @@ cs=0x1a2;eip=0x00af30; 	X(byte_6fb93 = al;);	// 27679                  mov     s
 loc_1af34:
 	// 6158 
 cs=0x1a2;eip=0x00af34; 	T(LODSW);	// 27682                  lodsw ;~ 01A2:AF34
-cs=0x1a2;eip=0x00af35; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27683                  or      es:[di], ax ;~ 01A2:AF35
+cs=0x1a2;eip=0x00af35; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27683                  or      es:[di], ax ;~ 01A2:AF35
 cs=0x1a2;eip=0x00af38; 	T(ADD(di, 2));	// 27684                  add     di, 2 ;~ 01A2:AF38
 cs=0x1a2;eip=0x00af3b; 	X(DEC(byte_6fb93));	// 27685                  dec     ss:byte_6FB93 ;~ 01A2:AF3B
 cs=0x1a2;eip=0x00af40; 	J(JNZ(loc_1af34));	// 27686                  jnz     short loc_1AF34 ;~ 01A2:AF40
@@ -31443,7 +31446,7 @@ cs=0x1a2;eip=0x00af68; 	X(byte_6fb93 = al;);	// 27707                  mov     s
 loc_1af6c:
 	// 6160 
 cs=0x1a2;eip=0x00af6c; 	T(LODSW);	// 27710                  lodsw ;~ 01A2:AF6C
-cs=0x1a2;eip=0x00af6d; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27711                  or      es:[di], ax ;~ 01A2:AF6D
+cs=0x1a2;eip=0x00af6d; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27711                  or      es:[di], ax ;~ 01A2:AF6D
 cs=0x1a2;eip=0x00af70; 	T(ADD(di, 2));	// 27712                  add     di, 2 ;~ 01A2:AF70
 cs=0x1a2;eip=0x00af73; 	X(DEC(byte_6fb93));	// 27713                  dec     ss:byte_6FB93 ;~ 01A2:AF73
 cs=0x1a2;eip=0x00af78; 	J(JNZ(loc_1af6c));	// 27714                  jnz     short loc_1AF6C ;~ 01A2:AF78
@@ -31469,7 +31472,7 @@ cs=0x1a2;eip=0x00afa0; 	X(byte_6fb93 = al;);	// 27735                  mov     s
 loc_1afa4:
 	// 6162 
 cs=0x1a2;eip=0x00afa4; 	T(LODSW);	// 27738                  lodsw ;~ 01A2:AFA4
-cs=0x1a2;eip=0x00afa5; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27739                  or      es:[di], ax ;~ 01A2:AFA5
+cs=0x1a2;eip=0x00afa5; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27739                  or      es:[di], ax ;~ 01A2:AFA5
 cs=0x1a2;eip=0x00afa8; 	T(ADD(di, 2));	// 27740                  add     di, 2 ;~ 01A2:AFA8
 cs=0x1a2;eip=0x00afab; 	X(DEC(byte_6fb93));	// 27741                  dec     ss:byte_6FB93 ;~ 01A2:AFAB
 cs=0x1a2;eip=0x00afb0; 	J(JNZ(loc_1afa4));	// 27742                  jnz     short loc_1AFA4 ;~ 01A2:AFB0
@@ -31495,7 +31498,7 @@ cs=0x1a2;eip=0x00afd8; 	X(byte_6fb93 = al;);	// 27763                  mov     s
 loc_1afdc:
 	// 6164 
 cs=0x1a2;eip=0x00afdc; 	T(LODSW);	// 27766                  lodsw ;~ 01A2:AFDC
-cs=0x1a2;eip=0x00afdd; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 27767                  or      es:[di], ax ;~ 01A2:AFDD
+cs=0x1a2;eip=0x00afdd; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 27767                  or      es:[di], ax ;~ 01A2:AFDD
 cs=0x1a2;eip=0x00afe0; 	T(ADD(di, 2));	// 27768                  add     di, 2 ;~ 01A2:AFE0
 cs=0x1a2;eip=0x00afe3; 	X(DEC(byte_6fb93));	// 27769                  dec     ss:byte_6FB93 ;~ 01A2:AFE3
 cs=0x1a2;eip=0x00afe8; 	J(JNZ(loc_1afdc));	// 27770                  jnz     short loc_1AFDC ;~ 01A2:AFE8
@@ -32139,7 +32142,7 @@ cs=0x1a2;eip=0x00b3fb; 	X(POP(es));	// 28388                  pop     es ;~ 01A2
 cs=0x1a2;eip=0x00b3fc; 	J(JC(loc_1b40e));	// 28389                  jb      short loc_1B40E ;~ 01A2:B3FC
 cs=0x1a2;eip=0x00b3fe; 	T(ah = 0x3E;);	// 28390                  mov     ah, 3Eh ;~ 01A2:B3FE
 cs=0x1a2;eip=0x00b400; 	S(_INT(0x21));	// 28391                  int     21h             ; DOS - 2+ - CLOSE A FILE WITH HANDLE ;~ 01A2:B400
-cs=0x1a2;eip=0x00b402; 	J(CALL(__dispatch_call,off_11494));	// 28393                  call    cs:off_11494 ;~ 01A2:B402
+cs=0x1a2;eip=0x00b402; 	J(CALLF(__dispatch_call,off_11494));	// 28393                  call    cs:off_11494 ;~ 01A2:B402
 cs=0x1a2;eip=0x00b407; 	T(OR(al, al));	// 28394                  or      al, al ;~ 01A2:B407
 cs=0x1a2;eip=0x00b409; 	J(JZ(loc_1b412));	// 28395                  jz      short loc_1B412 ;~ 01A2:B409
 cs=0x1a2;eip=0x00b40b; 	T(XOR(ax, ax));	// 28396                  xor     ax, ax ;~ 01A2:B40B
@@ -34089,7 +34092,7 @@ cs=0x1a2;eip=0x00bf5a; 	X(*(dw*)(&off_1f8f8) = 0x10;);	// 30175                 
 cs=0x1a2;eip=0x00bf60; 	T(di = 0x0F832;);	// 30176                  mov     di, 0F832h ;~ 01A2:BF60
 cs=0x1a2;eip=0x00bf63; 	T(ax = ds;);	// 30177                  mov     ax, ds ;~ 01A2:BF63
 cs=0x1a2;eip=0x00bf65; 	T(es = ax;);	// 30178                  mov     es, ax ;~ 01A2:BF65
-cs=0x1a2;eip=0x00bf67; 	J(CALL(__dispatch_call,off_1f8f8));	// 30179                  call    ds:off_1F8F8 ;~ 01A2:BF67
+cs=0x1a2;eip=0x00bf67; 	J(CALLF(__dispatch_call,off_1f8f8));	// 30179                  call    ds:off_1F8F8 ;~ 01A2:BF67
 cs=0x1a2;eip=0x00bf6b; 	X(*(dw*)(&off_1f8f8) = bx;);	// 30180                  mov     word ptr ds:off_1F8F8, bx ;~ 01A2:BF6B
 cs=0x1a2;eip=0x00bf6f; 	X(*(dw*)(&off_1f88a) = ax;);	// 30181                  mov     word ptr ds:off_1F88A, ax ;~ 01A2:BF6F
 loc_1bf72:
@@ -36060,7 +36063,8 @@ cs=0x1a2;eip=0x00c98c; 	T(CMP(si, 0x14));	// 31848                  cmp     si, 
 cs=0x1a2;eip=0x00c98f; 	J(JNZ(loc_1c987));	// 31849                  jnz     short loc_1C987 ;~ 01A2:C98F
 cs=0x1a2;eip=0x00c991; 	X(PUSHF);	// 31850                  pushf ;~ 01A2:C991
 cs=0x1a2;eip=0x00c992; 	T(CLI);	// 31851                  cli ;~ 01A2:C992
-cs=0x1a2;eip=0x00c993; 	J(CALL(__dispatch_call,$+3));	// 31852                  call    $+3 ;~ 01A2:C993
+assert(0);
+//cs=0x1a2;eip=0x00c993; 	J(CALL(__dispatch_call,$+3));	// 31852                  call    $+3 ;~ 01A2:C993
 cs=0x1a2;eip=0x00c996; 	X(POP(*(dw*)(raddr(ds,0x0C))));	// 31853                  pop     word ptr ds:0Ch ;~ 01A2:C996
 cs=0x1a2;eip=0x00c99a; 	X(ADD(*(dw*)(raddr(ds,0x0C)), 0x75A));	// 31854                  add     word ptr ds:0Ch, 75Ah ;~ 01A2:C99A
 cs=0x1a2;eip=0x00c9a0; 	X(PUSH(cs));	// 31855                  push    cs ;~ 01A2:C9A0
@@ -36085,8 +36089,8 @@ cs=0x1a2;eip=0x00c9b2; 	J(RETF(0));	// 31869                  retf ;~ 01A2:C9B2
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_1c964: 	goto loc_1c964;
-        case m2c::kloc_1c987: 	goto loc_1c987;
+                case m2c::kloc_1c987: 	goto loc_1c987;
+        case m2c::kseg000_c964_proc: 	goto seg000_c964_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -36841,8 +36845,8 @@ cs=0x1a2;eip=0x00d49f; 	J(RETN(0));	// 34441                  retn ;~ 01A2:D49F
         #endif
             if ((__disp>>16) == 0) {__disp |= ((dd)cs) << 16;}
             switch (__disp) {
-                case m2c::kloc_1d468: 	goto loc_1d468;
-        case m2c::kloc_1d48e: 	goto loc_1d48e;
+                case m2c::kloc_1d48e: 	goto loc_1d48e;
+        case m2c::kseg000_d468_proc: 	goto seg000_d468_proc;
         default: m2c::log_error("Don't know how to jump to 0x%x. See " __FILE__ " line %d\n", __disp, __LINE__);m2c::stackDump(); abort();
     };
 }
@@ -37123,7 +37127,7 @@ cs=0x1a2;eip=0x00d60d; 	T(ax = 4;);	// 34715                  mov     ax, 4 ;~ 0
 cs=0x1a2;eip=0x00d610; 	S(OUT(dx, ax));	// 34716                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D610
 cs=0x1a2;eip=0x00d611; 	T(ADD(si, *(dw*)(&unk_7009a)));	// 34719                  add     si, word ptr ss:unk_7009A ;~ 01A2:D611
 cs=0x1a2;eip=0x00d616; 	T(LODSW);	// 34720                  lodsw ;~ 01A2:D616
-cs=0x1a2;eip=0x00d617; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34721                  or      es:[di], ax ;~ 01A2:D617
+cs=0x1a2;eip=0x00d617; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34721                  or      es:[di], ax ;~ 01A2:D617
 cs=0x1a2;eip=0x00d61a; 	T(dx = 0x3CE;);	// 34722                  mov     dx, 3CEh ;~ 01A2:D61A
 cs=0x1a2;eip=0x00d61d; 	T(ax = 0x104;);	// 34723                  mov     ax, 104h ;~ 01A2:D61D
 cs=0x1a2;eip=0x00d620; 	S(OUT(dx, ax));	// 34724                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D620
@@ -37131,7 +37135,7 @@ cs=0x1a2;eip=0x00d621; 	T(dx = 0x3C4;);	// 34726                  mov     dx, 3C
 cs=0x1a2;eip=0x00d624; 	T(ax = 0x202;);	// 34727                  mov     ax, 202h ;~ 01A2:D624
 cs=0x1a2;eip=0x00d627; 	S(OUT(dx, ax));	// 34728                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D627
 cs=0x1a2;eip=0x00d628; 	T(LODSW);	// 34730                  lodsw ;~ 01A2:D628
-cs=0x1a2;eip=0x00d629; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34731                  or      es:[di], ax ;~ 01A2:D629
+cs=0x1a2;eip=0x00d629; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34731                  or      es:[di], ax ;~ 01A2:D629
 cs=0x1a2;eip=0x00d62c; 	T(dx = 0x3CE;);	// 34732                  mov     dx, 3CEh ;~ 01A2:D62C
 cs=0x1a2;eip=0x00d62f; 	T(ax = 0x204;);	// 34733                  mov     ax, 204h ;~ 01A2:D62F
 cs=0x1a2;eip=0x00d632; 	S(OUT(dx, ax));	// 34734                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D632
@@ -37139,7 +37143,7 @@ cs=0x1a2;eip=0x00d633; 	T(dx = 0x3C4;);	// 34736                  mov     dx, 3C
 cs=0x1a2;eip=0x00d636; 	T(ax = 0x402;);	// 34737                  mov     ax, 402h ;~ 01A2:D636
 cs=0x1a2;eip=0x00d639; 	S(OUT(dx, ax));	// 34738                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D639
 cs=0x1a2;eip=0x00d63a; 	T(LODSW);	// 34740                  lodsw ;~ 01A2:D63A
-cs=0x1a2;eip=0x00d63b; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34741                  or      es:[di], ax ;~ 01A2:D63B
+cs=0x1a2;eip=0x00d63b; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34741                  or      es:[di], ax ;~ 01A2:D63B
 cs=0x1a2;eip=0x00d63e; 	T(dx = 0x3CE;);	// 34742                  mov     dx, 3CEh ;~ 01A2:D63E
 cs=0x1a2;eip=0x00d641; 	T(ax = 0x304;);	// 34743                  mov     ax, 304h ;~ 01A2:D641
 cs=0x1a2;eip=0x00d644; 	S(OUT(dx, ax));	// 34744                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D644
@@ -37147,7 +37151,7 @@ cs=0x1a2;eip=0x00d645; 	T(dx = 0x3C4;);	// 34746                  mov     dx, 3C
 cs=0x1a2;eip=0x00d648; 	T(ax = 0x802;);	// 34747                  mov     ax, 802h ;~ 01A2:D648
 cs=0x1a2;eip=0x00d64b; 	S(OUT(dx, ax));	// 34748                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D64B
 cs=0x1a2;eip=0x00d64c; 	T(LODSW);	// 34750                  lodsw ;~ 01A2:D64C
-cs=0x1a2;eip=0x00d64d; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34751                  or      es:[di], ax ;~ 01A2:D64D
+cs=0x1a2;eip=0x00d64d; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34751                  or      es:[di], ax ;~ 01A2:D64D
 cs=0x1a2;eip=0x00d650; 	T(ADD(di, 2));	// 34752                  add     di, 2 ;~ 01A2:D650
 cs=0x1a2;eip=0x00d653; 	T(ADD(di, *(dw*)(&unk_7009e)));	// 34753                  add     di, word ptr ss:unk_7009E ;~ 01A2:D653
 cs=0x1a2;eip=0x00d658; 	T(SUB(si, *(dw*)(&unk_7009a)));	// 34754                  sub     si, word ptr ss:unk_7009A ;~ 01A2:D658
@@ -37182,7 +37186,7 @@ cs=0x1a2;eip=0x00d69b; 	T(ax = 4;);	// 34799                  mov     ax, 4 ;~ 0
 cs=0x1a2;eip=0x00d69e; 	S(OUT(dx, ax));	// 34800                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D69E
 cs=0x1a2;eip=0x00d69f; 	T(ADD(si, *(dw*)(&unk_7009c)));	// 34803                  add     si, word ptr ss:unk_7009C ;~ 01A2:D69F
 cs=0x1a2;eip=0x00d6a4; 	T(LODSW);	// 34804                  lodsw ;~ 01A2:D6A4
-cs=0x1a2;eip=0x00d6a5; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34805                  or      es:[di], ax ;~ 01A2:D6A5
+cs=0x1a2;eip=0x00d6a5; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34805                  or      es:[di], ax ;~ 01A2:D6A5
 cs=0x1a2;eip=0x00d6a8; 	T(dx = 0x3CE;);	// 34806                  mov     dx, 3CEh ;~ 01A2:D6A8
 cs=0x1a2;eip=0x00d6ab; 	T(ax = 0x104;);	// 34807                  mov     ax, 104h ;~ 01A2:D6AB
 cs=0x1a2;eip=0x00d6ae; 	S(OUT(dx, ax));	// 34808                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D6AE
@@ -37190,7 +37194,7 @@ cs=0x1a2;eip=0x00d6af; 	T(dx = 0x3C4;);	// 34810                  mov     dx, 3C
 cs=0x1a2;eip=0x00d6b2; 	T(ax = 0x202;);	// 34811                  mov     ax, 202h ;~ 01A2:D6B2
 cs=0x1a2;eip=0x00d6b5; 	S(OUT(dx, ax));	// 34812                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D6B5
 cs=0x1a2;eip=0x00d6b6; 	T(LODSW);	// 34814                  lodsw ;~ 01A2:D6B6
-cs=0x1a2;eip=0x00d6b7; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34815                  or      es:[di], ax ;~ 01A2:D6B7
+cs=0x1a2;eip=0x00d6b7; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34815                  or      es:[di], ax ;~ 01A2:D6B7
 cs=0x1a2;eip=0x00d6ba; 	T(dx = 0x3CE;);	// 34816                  mov     dx, 3CEh ;~ 01A2:D6BA
 cs=0x1a2;eip=0x00d6bd; 	T(ax = 0x204;);	// 34817                  mov     ax, 204h ;~ 01A2:D6BD
 cs=0x1a2;eip=0x00d6c0; 	S(OUT(dx, ax));	// 34818                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D6C0
@@ -37198,7 +37202,7 @@ cs=0x1a2;eip=0x00d6c1; 	T(dx = 0x3C4;);	// 34820                  mov     dx, 3C
 cs=0x1a2;eip=0x00d6c4; 	T(ax = 0x402;);	// 34821                  mov     ax, 402h ;~ 01A2:D6C4
 cs=0x1a2;eip=0x00d6c7; 	S(OUT(dx, ax));	// 34822                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D6C7
 cs=0x1a2;eip=0x00d6c8; 	T(LODSW);	// 34824                  lodsw ;~ 01A2:D6C8
-cs=0x1a2;eip=0x00d6c9; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34825                  or      es:[di], ax ;~ 01A2:D6C9
+cs=0x1a2;eip=0x00d6c9; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34825                  or      es:[di], ax ;~ 01A2:D6C9
 cs=0x1a2;eip=0x00d6cc; 	T(dx = 0x3CE;);	// 34826                  mov     dx, 3CEh ;~ 01A2:D6CC
 cs=0x1a2;eip=0x00d6cf; 	T(ax = 0x304;);	// 34827                  mov     ax, 304h ;~ 01A2:D6CF
 cs=0x1a2;eip=0x00d6d2; 	S(OUT(dx, ax));	// 34828                  out     dx, ax          ; EGA: graph 1 and 2 addr reg: ;~ 01A2:D6D2
@@ -37206,7 +37210,7 @@ cs=0x1a2;eip=0x00d6d3; 	T(dx = 0x3C4;);	// 34830                  mov     dx, 3C
 cs=0x1a2;eip=0x00d6d6; 	T(ax = 0x802;);	// 34831                  mov     ax, 802h ;~ 01A2:D6D6
 cs=0x1a2;eip=0x00d6d9; 	S(OUT(dx, ax));	// 34832                  out     dx, ax          ; EGA: sequencer address reg ;~ 01A2:D6D9
 cs=0x1a2;eip=0x00d6da; 	T(LODSW);	// 34834                  lodsw ;~ 01A2:D6DA
-cs=0x1a2;eip=0x00d6db; 	X(OR(*(dw*)(raddr(es,di)), ax));	// 34835                  or      es:[di], ax ;~ 01A2:D6DB
+cs=0x1a2;eip=0x00d6db; 	S(m2c::setdata((dw*)m2c::raddr_(es,di), m2c::getdata(*(dw*)m2c::raddr_(es,di)) | ax));	// 34835                  or      es:[di], ax ;~ 01A2:D6DB
 cs=0x1a2;eip=0x00d6de; 	T(ADD(di, 2));	// 34836                  add     di, 2 ;~ 01A2:D6DE
 cs=0x1a2;eip=0x00d6e1; 	T(SUB(si, *(dw*)(&unk_7009c)));	// 34837                  sub     si, word ptr ss:unk_7009C ;~ 01A2:D6E1
 cs=0x1a2;eip=0x00d6e6; 	J(JMP(loc_1d6eb));	// 34838                  jmp     short loc_1D6EB ;~ 01A2:D6E6
