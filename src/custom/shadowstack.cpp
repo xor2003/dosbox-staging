@@ -123,9 +123,9 @@ return m_needtoskipcall;}
     if (m2c::debug)
       {
         X86_REGREF 
-        printf ("\n Shadow Stack memory dump (incl left garbage):\n");
+        printf ("\n~Shadow Stack memory dump (incl left garbage):\n");
         if (!m_ss.empty ())
-        printf ("%4s %8s %8s %4s:%4s %7s %4s %6s\n", "Call", "Alloc", "Dealloc", "cs", "ip", "sp", "Value", "Current value");
+          printf ("%4s %8s %8s %4s:%4s %7s %4s %6s\n", "Call", "Alloc", "Dealloc", "cs", "ip", "sp", "Value", "Current value");
         for (int i = m_ss.size () - 1; i >= 0; i--)
           {
             Frame f = m_ss.at(i);
@@ -138,7 +138,7 @@ return m_needtoskipcall;}
             else
               printf ("\n");
           }
-        printf (" Shadow Stack memory dump end.\n");
+        printf ("Shadow Stack memory dump end.\n");
       }
   }
 

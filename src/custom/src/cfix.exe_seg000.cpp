@@ -31,7 +31,7 @@ cs=0x1a2;eip=0x000027; 	X(word_1f210 = 0x0A800;);	// 51                  mov    
 cs=0x1a2;eip=0x00002d; 	J(CALL(sub_10d69,0));	// 52                  call    sub_10D69 ;~ 01A2:002D
 cs=0x1a2;eip=0x000030; 	J(CALL(sub_1b2c6,0));	// 53                  call    sub_1B2C6 ;~ 01A2:0030
 cs=0x1a2;eip=0x000033; 	T(CMP(ax, 0));	// 54                  cmp     ax, 0 ;~ 01A2:0033
-cs=0x1a2;eip=0x000036; 	J(JMP(loc_1003b));	// 55                  jns     short loc_1003B ;~ 01A2:0036
+cs=0x1a2;eip=0x000036; 	J(JMP(loc_10040));	// 55                  jns     short loc_1003B ;~ 01A2:0036
 cs=0x1a2;eip=0x000038; 	J(return _group2(m2c::kloc_11190, _state););	// 56                  jmp     loc_11190 ;~ 01A2:0038
 loc_1003b:
 	// 4369 
@@ -28444,8 +28444,8 @@ cs=0x1a2;eip=0x009d44; 	X(POP(dx));	// 24820                  pop     dx ;~ 01A2
 cs=0x1a2;eip=0x009d45; 	X(POP(cx));	// 24821                  pop     cx ;~ 01A2:9D45
 cs=0x1a2;eip=0x009d46; 	X(POP(bx));	// 24822                  pop     bx ;~ 01A2:9D46
 cs=0x1a2;eip=0x009d47; 	X(POP(ax));	// 24823                  pop     ax ;~ 01A2:9D47
-byte_1f886 = 2;
-JMP(loc_19d70);
+//byte_1f886 = 2;
+//JMP(loc_19d70);
 cs=0x1a2;eip=0x009d48; 	J(JNZ(loc_19d70));	// 24824                  jnz     short loc_19D70 ;~ 01A2:9D48
 cs=0x1a2;eip=0x009d4a; 	X(PUSH(ax));	// 24825                  push    ax ;~ 01A2:9D4A
 cs=0x1a2;eip=0x009d4b; 	X(PUSH(ax));	// 24826                  push    ax ;~ 01A2:9D4B
@@ -28460,7 +28460,7 @@ cs=0x1a2;eip=0x009d53; 	X(PUSH(ds));	// 24834                  push    ds ;~ 01A
 cs=0x1a2;eip=0x009d54; 	J(CALL(sub_1c566,0));	// 24835                  call    sub_1C566 ;~ 01A2:9D54
 cs=0x1a2;eip=0x009d57; 	J(JNZ(loc_19d5f));	// 24836                  jnz     short loc_19D5F ;~ 01A2:9D57
 cs=0x1a2;eip=0x009d59; 	J(CALL(sub_1c5dd,0));	// 24837                  call    sub_1C5DD ;~ 01A2:9D59
-al=2; //language
+//al=2; //language
 cs=0x1a2;eip=0x009d5c; 	X(byte_1f886 = al;);	// 24838                  mov     ds:byte_1F886, al ;~ 01A2:9D5C
 loc_19d5f:
 	// 6007 
