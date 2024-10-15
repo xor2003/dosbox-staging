@@ -10,7 +10,7 @@ typedef Bit32u dd;
 
 extern bool collect_rt_info;
 extern bool collect_rt_info_vars;
-extern bool compare_instructions;
+extern bool compare_mode;
 extern Bit32u last_ip;
 extern int custom_runs;
 
@@ -20,6 +20,8 @@ extern int custom_runs;
 #include <json.hpp>
 
 namespace m2c {
+
+extern std::string exename;
 
 extern void Jend();
 

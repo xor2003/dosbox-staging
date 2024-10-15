@@ -526,7 +526,7 @@ bool DOS_Execute(char * name,PhysPt block_pt,Bit8u flags) {
 		/* Started from debug.com, then set breakpoint at start */
 		DEBUG_CheckExecuteBreakpoint(RealSeg(csip),RealOff(csip));
 #endif
-	printf("\n~Binary loaded to entry point cs=%x eip=%x\n",RealSeg(csip),RealOff(csip));
+	printf("\n~Binary entry point cs=%x eip=%x\n",RealSeg(csip),RealOff(csip));
 		custom_init_entrypoint(name,loadseg);
 
 		return true;

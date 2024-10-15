@@ -62,7 +62,7 @@ extern bool trace_instructions;
 extern bool collect_rt_info;
 extern volatile bool compare_jump;
 
-extern bool compare_instructions;
+extern bool compare_mode;
 extern bool complex_self_modifications;
 
 void increaseticks();
@@ -1607,7 +1607,7 @@ throw StackPop(skip);
 //        m2c::MWORDSIZE averytemporary8 = 'xy';
         m2c::MWORDSIZE return_addr = ip;
 #if DOSBOX_CUSTOM
-        if (compare_instructions) eip+=inst_size(cs,eip);
+        if (compare_mode) eip+=inst_size(cs,eip);
 #endif
         dw oldsp=sp;
         PUSH(return_addr);

@@ -9,6 +9,7 @@
 #include "custom.h"
 #include "custom_hooks.h"
 #include "utils.h"
+#include "dumpexe.h"
 
 #include "asm.h"
 
@@ -23,7 +24,7 @@ bool trace_instructions = false;
 // Enable/disable instruction tracing to stdout (can be slow).
 bool trace_instructions_to_stdout = false;
 // Enable/disable instruction comparison between emulated and translated code.
-bool compare_instructions = true;
+bool compare_mode = false;
 
 // Enable/disable handling of complex self-modified code (can be slow).
 bool complex_self_modifications = false;
@@ -42,7 +43,6 @@ extern Bitu DasmI386(char *buffer, PhysPt pc, Bitu cur_ip, bool bit32);
 namespace m2c {
 extern size_t debug;
 extern void load_drivers();
-extern std::string exename;
 } // namespace m2c
 
 // Size of the memory region to compare for instruction tracing.
@@ -92,6 +92,7 @@ namespace m2c {
 extern void Initializer();
 // Class to manage shadow memory for run-time information.
 ShadowMemory shadow_memory;
+
 } // namespace m2c
 
 void masm2c_exit(unsigned char exit)
@@ -107,26 +108,27 @@ void masm2c_exit(unsigned char exit)
         @src:	pathname to a file
         @dst:	string where the filename shoukld be stored
 */
-void init_get_fname(char *dst, char *src)
-{
-	char *initial_dst = dst;
-	char *p = NULL;
-	char *c = src;
+void init_get_fname(char *executable_name_out, char *source_path) { // Clearer variable names for readability
+    char *current_position = executable_name_out;  // Store starting point of output buffer
+    const char *filename_start = nullptr;         // Initialize pointer to track file name start
+    const char *character = (const char *) source_path;           // Iterate through source path
 
-	while (*c != '\0') {
-		if (*c == '\\')
-			p = c + 1;
-		c++;
-	}
+    while (*character != '\0') { // Loop until end of source path is reached
+        if (*character == '\\') {  // Identify directory character ('\')
+            filename_start = character + 1; // Mark the start of the escaped section
+        }
+        character++; 
+    }
 
-	/* No backslash in src */
-	if (p == NULL)
-		p = src;
+    if (filename_start == nullptr) { // If no escape sequence found, use the entire source path
+        filename_start = (char *)source_path; 
+    }
 
-	while ((*dst++ = tolower(*p++)))
-		;
-	*dst = '\0';
-	m2c::exename = initial_dst;
+    while ((*current_position++ = tolower( * (filename_start++) )) != '\0')  
+        ; // Copy characters from filename section to output, converting to lowercase
+    *current_position = '\0';  // Null-terminate the resulting executable name
+
+    m2c::exename = executable_name_out; // Update global variable with the processed name
 }
 
 namespace m2c {
@@ -232,12 +234,20 @@ void custom_init(Section *sec)
 	fprintf(stderr, "Masm2c/DOSBOX lib, build date %s\n", __DATE__);
 
 	// Unused variable.
-	X86_REGREF m2c::_STATE *_state = 0;
+	X86_REGREF 
+        m2c::_STATE *_state = 0;
+
+	MAPPER_AddHandler(m2c::DumpExe1, SDL_SCANCODE_F2, PRIMARY_MOD, "dumpexe1",
+	                  "Dumpexe1");
+	//MAPPER_AddHandler(DumpExe2, SDL_SCANCODE_F3, PRIMARY_MOD, "dumpexe1",
+	//                  "Dumpexe1");
 }
 
 // Custom initialization function for the entry point.
-void custom_init_entrypoint(char *name, Bit16u relocate)
+void custom_init_entrypoint(char *name, Bit16u loadseg)
 {
+	m2c::dumpexe_start_hook(loadseg);
+
 	// Check if it's a target binary and if initialization is complete.
 	if (!custom_runs)
 		return;
@@ -245,9 +255,10 @@ void custom_init_entrypoint(char *name, Bit16u relocate)
 	// Reset last_ip.
 	last_ip = 0xffff;
 
+
 	// Initialize the entry point for translated code.
 	if (init_runs) {
-		init_entrypoint(relocate);
+		init_entrypoint(loadseg);
 	}
 }
 
@@ -466,7 +477,7 @@ void mycopy(db *d, db *s, size_t size, const char *name)
 		hexDump(s, size);
 		printf("memory ");
 		hexDump(d, size);
-	}
+        }
 #else
 	//      printf("Init %zx %zd\n", d - ((db*)&m), size);
 	// Copy memory contents in non-debug mode.
@@ -723,7 +734,7 @@ bool Jstart(const char *file, int line, const char *instr)
 	log_regs_dbx(file, line, instr, cpu_regs, Segs);
 
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return true;
 
 	// Store the old instruction pointer.
@@ -734,7 +745,7 @@ bool Jstart(const char *file, int line, const char *instr)
 	dw seg = Segs.val[1];
 
 	// Check if the instruction should be compared.
-	bool compare(compare_instructions && !already_checked[(seg << 4) + ip1]);
+	bool compare(compare_mode && !already_checked[(seg << 4) + ip1]);
 
 	// Store the old CPU state.
 	oldSegs = Segs;
@@ -788,7 +799,7 @@ void Jend()
 {
 	// Return early if instruction comparison is disabled or not in a jump
 	// comparison.
-	if (!compare_instructions || !compare_jump)
+	if (!compare_mode || !compare_jump)
 		return;
 
 	// Get the current instruction string.
@@ -877,7 +888,7 @@ bool Sstart(const char *file, int line, const char *instr)
 	log_regs_dbx(file, line, instr, cpu_regs, Segs);
 
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return true;
 
 	// Store the old instruction pointer.
@@ -888,7 +899,7 @@ bool Sstart(const char *file, int line, const char *instr)
 	dw seg = Segs.val[1];
 
 	// Check if the instruction should be compared.
-	bool compare(compare_instructions && !already_checked[(seg << 4) + ip1]);
+	bool compare(compare_mode && !already_checked[(seg << 4) + ip1]);
 
 	// Execute a single step using the DOSBox interpreter.
 	dbx_single_step();
@@ -933,7 +944,7 @@ bool Tstart(const char *file, int line, const char *instr)
 	log_regs_dbx(file, line, instr, cpu_regs, Segs);
 
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return true;
 
 	// Store the old instruction pointer.
@@ -944,7 +955,7 @@ bool Tstart(const char *file, int line, const char *instr)
 	dw seg = Segs.val[1];
 
 	// Check if the instruction should be compared.
-	bool compare(compare_instructions && !already_checked[(seg << 4) + ip1]);
+	bool compare(compare_mode && !already_checked[(seg << 4) + ip1]);
 
 	// Store the old CPU state if comparison is enabled.
 	if (compare) {
@@ -996,7 +1007,7 @@ bool Tstart(const char *file, int line, const char *instr)
 void Tend(const char *file, int line, const char *instr)
 {
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return;
 
 	// Fix segment registers.
@@ -1072,7 +1083,7 @@ bool Xstart(const char *file, int line, const char *instr)
 	log_regs_dbx(file, line, instr, cpu_regs, Segs);
 
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return true;
 
 	// Store the old instruction pointer.
@@ -1084,7 +1095,7 @@ bool Xstart(const char *file, int line, const char *instr)
 
 	// Check if the instruction should be compared.
 	bool already = !already_checked[(seg << 4) + ip1];
-	bool compare(compare_instructions && !already);
+	bool compare(compare_mode && !already);
 
 	// Store the old CPU state and memory contents if comparison is enabled.
 	if (compare) {
@@ -1146,7 +1157,7 @@ bool Xstart(const char *file, int line, const char *instr)
 void Xend(const char *file, int line, const char *instr)
 {
 	// Return early if instruction comparison is disabled.
-	if (!compare_instructions)
+	if (!compare_mode)
 		return;
 
 	// Fix segment registers.
@@ -1500,6 +1511,7 @@ void init_entrypoint(Bit16u relocate)
 	fclose(file_to_write);
 }
 */
+
 	// Create a new masm2c state and call the entry point.
 	m2c::_STATE _state;
 	(*m2c::_ENTRY_POINT_)(0, &_state);
